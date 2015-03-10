@@ -1,0 +1,461 @@
+<?xml version="1.0"?>
+<PropertyList>
+  <sim>
+    <description>C-17 Globemaster III (Rembrandt)(YASIM)</description>
+    <status>BETA</status>
+	<author>StuartC (FDM), Adam Fothergill (Model)</author>
+	<aircraft-version>2.9.5</aircraft-version>
+    <flight-model>yasim</flight-model>
+    <aero>C-17-yasim</aero>
+	<fuel-fraction>1.0</fuel-fraction>
+	
+	<rating>
+	  <FDM type="int">2</FDM>
+	  <systems type="int">1</systems>
+	  <cockpit type="int">1</cockpit>
+	  <model type="int">4</model>
+	</rating>
+	
+	<!-- Splash Screen -->	
+	
+	<startup>
+	  <splash-texture>Aircraft/C-17/C-17Splash1.png</splash-texture>
+	</startup>
+	
+	<systems>
+	<!--
+  <electrical>
+      <path>Aircraft/Generic/generic-electrical.xml</path>
+    </electrical>  -->
+	<autopilot>
+                <path>Aircraft/C-17/Systems/autopilotV4.xml</path>
+            </autopilot>
+<refuel>
+<type>boom</type>
+<serviceable type="bool">true</serviceable>
+</refuel>
+</systems> 
+
+    <mp-systems>
+      <radar-enabled type="bool">true</radar-enabled>
+      <ecm-rwr-enabled type="bool">true</ecm-rwr-enabled>
+      <combat-enabled type="bool">true</combat-enabled>
+    </mp-systems>	
+	
+	
+	
+	<sound>
+		<path>Aircraft/C-17/Sounds/C-17-sound.xml</path>
+	</sound>
+    
+	<!-- 3D Model Converted With Permission From X-Plane C-17 v1.2, Authors Adam Fathergill/Dave Austin -->	
+	<model>
+      <path>Aircraft/C-17/Models/C-17_GlobemasterIII.xml</path>
+	  	  
+	  <livery>
+		<file type="string">CC-177703</file>
+	  </livery>
+	</model>
+		
+	<hud>
+   <path n="1">Aircraft/C-17/Hud/hud.xml</path>
+   <visibility n="1">true</visibility>
+   <palette>
+    <color n="0">
+     <alpha type="float">0.85</alpha>
+     <antialiased type="bool">true</antialiased>
+     <brightness type="float">0.85</brightness>
+     <transparent type="bool">true</transparent>
+     <red type="float">0.38</red>
+     <green type="float">1.0</green>
+     <blue type="float">0.22</blue>
+    </color>
+    <color n="1">
+     <alpha type="float">0.85</alpha>
+     <antialiased type="bool">true</antialiased>
+     <brightness type="float">0.85</brightness>
+     <transparent type="bool">true</transparent>
+     <red type="float">1.0</red>
+     <green type="float">0.2</green>
+     <blue type="float">0.0</blue>
+    </color>
+   </palette>
+   
+  </hud>
+	
+	<airport>
+        <runways>
+            <start-offset-m>50</start-offset-m>
+        </runways>
+    </airport>
+	
+<chase-distance-m>-100</chase-distance-m>
+	
+		<view n="0">
+            <name>Pilot View</name>
+            <type>lookfrom</type>
+            <internal type="bool">true</internal>
+            <config>
+                <x-offset-m type="double">-0.47</x-offset-m>	<!-- Negative Moves view Left -->
+                <y-offset-m type="double">1.68</y-offset-m>		<!-- Positive Moves view Up -->
+                <z-offset-m type="double">2.7</z-offset-m>	<!-- Negative Moves view Forward -->
+                <pitch-offset-deg>0</pitch-offset-deg>
+                <default-field-of-view-deg>75.3</default-field-of-view-deg>
+            </config>
+        </view>
+		
+	<view n="100">
+   <name>Tail view</name>
+   <type>lookfrom</type>
+   <internal type="bool">false</internal>
+   <config>
+    <from-model type="bool">true</from-model>
+    <from-model-idx type="int">0</from-model-idx>
+    <ground-level-nearplane-m type="double">6f</ground-level-nearplane-m>
+    <x-offset-m type="double">0.00</x-offset-m>
+    <y-offset-m type="double">13.20</y-offset-m>
+    <z-offset-m type="double">35.55</z-offset-m>
+    <pitch-offset-deg>-10</pitch-offset-deg>
+	
+    <default-field-of-view-deg type="double">75.0</default-field-of-view-deg>
+   </config>
+   <dynamic>
+    <enabled type="bool">false</enabled>
+   </dynamic>
+  </view>
+  
+ 
+		
+<view n="102">
+<name>Co-Pilot</name>
+<internal archive="y">true</internal>
+<type>lookfrom</type>
+<config>
+<from-model type="bool">true</from-model>
+<from-model-idx type="int">0</from-model-idx>
+<x-offset-m type="double">0.47</x-offset-m>	<!-- Negative Moves view Left -->
+<y-offset-m type="double">1.68</y-offset-m>		<!-- Positive Moves view Up -->
+<z-offset-m type="double">2.7</z-offset-m>	<!-- Negative Moves view Forward -->
+<pitch-offset-deg>0</pitch-offset-deg>
+ <default-field-of-view-deg>75.3</default-field-of-view-deg>
+</config>
+</view>
+
+
+<view n="101">
+<name>Loadmaster</name>
+<internal archive="y">true</internal>
+<type>lookfrom</type>
+<config>
+<from-model type="bool">true</from-model>
+<from-model-idx type="int">0</from-model-idx>
+<x-offset-m type="double">0.75</x-offset-m>	<!-- Negative Moves view Left -->
+<y-offset-m type="double">0.1</y-offset-m>		<!-- Positive Moves view Up -->
+<z-offset-m type="double">25.7</z-offset-m>	<!-- Negative Moves view Forward -->
+<pitch-offset-deg>0</pitch-offset-deg>
+ <default-field-of-view-deg>45.3</default-field-of-view-deg>
+</config>
+</view>
+
+<!-- Shift the camera target point back -->
+    <view n="1">
+      <config>
+        <target-z-offset-m archive="y" type="double">15.0</target-z-offset-m>
+		<pitch-offset-deg archive="y">15</pitch-offset-deg>
+      </config>
+    </view>
+
+    <view n="2">
+      <config>
+         <target-z-offset-m archive="y" type="double">15.0</target-z-offset-m>
+		<pitch-offset-deg archive="y">15</pitch-offset-deg>
+      </config>
+    </view>
+
+    <view n="3">
+      <config>
+         <target-z-offset-m archive="y" type="double">15.0</target-z-offset-m>
+		<pitch-offset-deg archive="y">15</pitch-offset-deg>
+      </config>
+    </view>
+
+		<limits>
+			<max-flap-extension-speed>
+				<flaps>0.167</flaps>
+				<speed>260</speed>
+			</max-flap-extension-speed>
+			<max-flap-extension-speed>
+				<flaps>0.333</flaps>
+				<speed>240</speed>
+			</max-flap-extension-speed>
+			<max-flap-extension-speed>
+				<flaps>0.667</flaps>
+				<speed>230</speed>
+			</max-flap-extension-speed>
+			<max-flap-extension-speed>
+				<flaps>0.833</flaps>
+				<speed>205</speed>
+			</max-flap-extension-speed>
+			<max-flap-extension-speed>
+				<flaps>1.000</flaps>
+				<speed>180</speed>
+			</max-flap-extension-speed>
+ 
+		<vne>600</vne>
+ 
+			<max-gear-extension-speed>270</max-gear-extension-speed>
+ 
+			<max-positive-g>4.4</max-positive-g>
+			<max-negative-g>-1.76</max-negative-g>
+ 
+		</limits>
+	
+<!-- Menu Bar  -->
+		<menubar>
+		  <default>
+		  <menu n="100">
+                    <label>C-17 Globemaster III</label>
+                    <enabled type="bool">true</enabled>
+                    <item>
+                        <label>Autostart</label>
+                        <binding>
+                            <command>property-toggle</command>
+                            <property>sim/model/start-idling</property>
+                        </binding>
+                    </item>
+                    <item>
+                        <label>Select Livery</label>
+                        <binding>
+                            <command>nasal</command>
+                            <script>aircraft.livery.dialog.open()</script>
+                        </binding>
+                    </item>
+          </menu>
+		  <!--
+			<menu n="10">				
+			<label>C-17 Globemaster III</label>
+			<enabled type="bool">true</enabled>
+			<item>
+			  <label>Select Livery</label>
+			  <binding>
+			  <command>nasal</command>
+			  <script>aircraft.livery.dialog.toggle()</script>
+			  </binding>
+			</item>
+			</menu>	
+-->			
+		  </default>	
+		</menubar>
+		
+<!-- Submodel (Paratroopers) -->
+<submodels>
+ <serviceable type="bool">true</serviceable>
+ <path>Aircraft/C-17/Submodels/submodels.xml</path>
+  <path>Aircraft/C-17/Models/payload/loads.xml</path>
+</submodels>
+<instrumentation>
+    <path>Aircraft/C-17/Systems/instrumentation.xml</path>
+  </instrumentation>
+ 
+<!-- Payload options -->
+ 
+  <weight n="0">
+<name>Cargobay</name>
+<weight-lb>0</weight-lb>
+<selected>none</selected>
+<opt>
+<name>none</name>
+<lbs>0</lbs>
+</opt>
+<opt>
+<name>1x Hummer</name>
+<lbs>5700</lbs>
+</opt>
+
+<opt>
+<name>CH-47</name>
+<lbs>23400</lbs>
+</opt>
+
+<opt>
+<name>M1 Abrams</name>
+<lbs>122800</lbs>
+</opt>
+</weight>
+  
+	
+  </sim>
+  
+  <systems>
+  <electrical>
+      <path>Aircraft/Generic/generic-electrical.xml</path>
+    </electrical>
+<refuel>
+<type>boom</type>
+<serviceable type="bool">true</serviceable>
+</refuel>
+</systems> 
+
+
+
+
+<environment>
+    <turbulence>
+      <use-cloud-turbulence>true</use-cloud-turbulence>
+    </turbulence>
+  </environment>
+  
+    <consumables>
+	  <fuel>
+		<tank n="0"><name>Center</name></tank>
+		<tank n="1"><name>Inboard Left</name></tank>
+		<tank n="2"><name>Inboard Right</name></tank>
+		<tank n="3"><name>Outboard Left</name></tank>
+		<tank n="4"><name>Outboard Right</name></tank>
+	  </fuel>
+	</consumables>
+    	
+	<engines>
+	  
+    <engine n="0">
+      <engine-num type="int">0</engine-num>
+      <running>true</running>
+    </engine>
+	 <engine n="1">
+      <engine-num type="int">0</engine-num>
+      <running>true</running>
+    </engine>
+	 <engine n="2">
+      <engine-num type="int">0</engine-num>
+      <running>true</running>
+    </engine>
+   <engine n="3">
+      <engine-num type="int">0</engine-num>
+      <running>true</running>
+    </engine>
+	  
+	</engines>
+	
+
+ <engines>
+  <engine n="0">
+   <reverser-position type="double">0.000000</reverser-position>
+  </engine>     
+  <engine n="1">
+   <reverser-position type="double">0.000000</reverser-position>
+  </engine> 
+  <engine n="2">
+   <reverser-position type="double">0.000000</reverser-position>
+  </engine>
+  <engine n="3">
+   <reverser-position type="double">0.000000</reverser-position>
+  </engine>
+ </engines>
+
+ 
+	<controls>
+	
+      <gear>
+		<brake-parking>1</brake-parking>
+      </gear>
+	  <armament>
+			<station n="0">
+				<release type="bool">false</release>
+			</station>
+	   </armament>	
+	  
+    </controls>
+	
+	<input>
+       <keyboard include="Nasal/keyboard.xml"/>
+	    
+	</input>
+
+
+	
+<ai>
+ <submodels>
+  <trigger type="bool">false</trigger>
+ </submodels>
+</ai>
+
+	
+ <fdm>
+  <jsbsim>
+   <systems>
+    <NWS>
+      <engaged type="double">0</engaged>
+    </NWS>
+    </systems> 
+  </jsbsim>
+ </fdm>
+
+	<nasal>
+	
+        <C-17>
+            <!-- <file>Aircraft/Generic/limits.nas</file> -->
+			<file>Aircraft/C-17/Nasal/liveries.nas</file>
+			<file>Aircraft/C-17/Systems/air-ground.nas</file> 
+			<file>Aircraft/C-17/Nasal/doors.nas</file>
+			<file>Aircraft/C-17/Nasal/light.nas</file>
+			<file>Aircraft/C-17/Nasal/tyresmoke.nas</file>
+			<file>Aircraft/C-17/Systems/TEST.nas</file> 
+            <file>Aircraft/C-17/Systems/systems.nas</file>
+            <file>Aircraft/C-17/Systems/Electrical.nas</file>			
+		</C-17>
+		<starship>
+           <file>Aircraft/C-17/Nasal/doors.nas</file>
+        </starship> 
+		<reversethrust>
+		<file>Aircraft/C-17/Nasal/reverse-thrust.nas</file>
+		</reversethrust>
+		
+		
+		<aar>
+<file>Aircraft/Generic/aar.nas</file>
+</aar>
+		
+    </nasal>
+	<instrumentation>
+                <radar>
+            <switch type="string" archive="y">on</switch>
+            <mode-control type="int" archive="y">1</mode-control>
+            <display-mode>plan</display-mode>
+            <display-controls>
+                <WX type="bool" archive="y">false</WX>
+                <pos type="bool" archive="y">true</pos>
+                <data type="bool" archive="y">true</data>
+                <symbol type="bool" archive="y">true</symbol>
+                <rotate type="bool" archive="y">true</rotate>
+            </display-controls>
+            <serviceable type="bool">true</serviceable>
+            <range type="int" archive="y">10</range>
+            <reference-range-nm type="double" archive="y">640</reference-range-nm>
+            <mode type="string" archive="y">WX</mode>
+            <font>
+                <color>
+                    <red type="float">0.7</red>
+                    <green type="float">0.7</green>
+                    <blue type="float">0.7</blue>
+                    <alpha type="float">1</alpha>
+                </color>
+                <name type="string" archive="y">helvetica_bold.txf</name>
+                <size type="float">8I think all</size>
+                <line-spacing type="float">0.2</line-spacing>
+            </font>
+            <lightning type="bool" archive="y">true</lightning>
+            <display-mode type="string" archive="y">arc</display-mode>
+            <radar-texture-path type="string" archive="y">Aircraft/C-17/Panels/Instruments/MFD/od_wxradar.png</radar-texture-path>
+            <echo-texture-path type="string" archive="y">Aircraft/C-17/Panels/Instruments/MFD/wxecho.png</echo-texture-path>
+            <minimized type="bool" archive="y">false</minimized>
+            <heading-marker type="bool" archive="y">true</heading-marker>
+            <limit-deg type="int">360</limit-deg>
+        </radar>
+          
+		<dme>
+			<switch-position>1</switch-position>
+		</dme>                
+ 
+	</instrumentation>
+				
+</PropertyList>

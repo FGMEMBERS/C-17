@@ -1,0 +1,532 @@
+<?xml version="1.0"?>
+
+<PropertyList>
+
+<fx>
+
+<!-- External Sounds -->
+ 
+<engine>
+      <name>engine-start-outside0</name>
+      <mode>once</mode>
+      <path>Aircraft/C-17/Sounds/rb211-startup.wav</path>
+      <condition>
+<and>
+ 
+<greater-than>  
+   <property>engines/engine[0]/rpm</property>
+   <value>0.5</value>
+   
+  </greater-than>
+  <less-than>
+                <property>velocities/groundspeed-kt</property>
+                <value>1</value>
+            </less-than>
+  <not>
+   <property>sim/current-view/internal</property>
+  </not>
+</and>
+</condition>
+
+      <volume>
+        <property>engines/engine[0]/n2</property>
+        <factor> 0.09 </factor>
+        <min> 0.3 </min>
+        <max> 0.9 </max>
+      </volume>
+      <pitch>
+        <property>engines/engine[0]/n2</property>
+        <factor> 0.01 </factor>
+	<min> 0.0 </min>
+	<max> 0.9 </max>
+      </pitch>
+      <reference-dist>100</reference-dist>
+      <max-dist>1000</max-dist>
+    </engine>
+
+	
+	  <engine>
+      <name>engine-start-outside1</name>
+      <mode>once</mode>
+      <path>Aircraft/C-17/Sounds/rb211-startup.wav</path>
+      <condition>
+<and>
+ 
+<greater-than>  
+   <property>engines/engine[1]/rpm</property>
+   <value>0.5</value>
+   
+  </greater-than>
+  <less-than>
+                <property>velocities/groundspeed-kt</property>
+                <value>1</value>
+            </less-than>
+  <not>
+   <property>sim/current-view/internal</property>
+  </not>
+</and>
+</condition>
+
+      <volume>
+        <property>engines/engine[1]/n2</property>
+        <factor> 0.09 </factor>
+        <min> 0.3 </min>
+        <max> 0.9 </max>
+      </volume>
+      <pitch>
+        <property>engines/engine[1]/n2</property>
+        <factor> 0.01 </factor>
+	<min> 0.0 </min>
+	<max> 0.9 </max>
+      </pitch>
+      <reference-dist>100</reference-dist>
+      <max-dist>1000</max-dist>
+    </engine>
+
+	
+	  <engine>
+      <name>engine-start-outside2</name>
+      <mode>once</mode>
+      <path>Aircraft/C-17/Sounds/rb211-startup.wav</path>
+      <condition>
+<and>
+ 
+<greater-than>  
+   <property>engines/engine[2]/rpm</property>
+   <value>0.5</value>
+   
+  </greater-than>
+  <less-than>
+                <property>velocities/groundspeed-kt</property>
+                <value>1</value>
+            </less-than>
+  <not>
+   <property>sim/current-view/internal</property>
+  </not>
+</and>
+</condition>
+
+      <volume>
+        <property>engines/engine[2]/n2</property>
+        <factor> 0.09 </factor>
+        <min> 0.3 </min>
+        <max> 0.9 </max>
+      </volume>
+      <pitch>
+        <property>engines/engine[2]/n2</property>
+        <factor> 0.01 </factor>
+	<min> 0.0 </min>
+	<max> 0.9 </max>
+      </pitch>
+      <reference-dist>100</reference-dist>
+      <max-dist>1000</max-dist>
+    </engine>
+	
+	
+	  <engine>
+      <name>engine-start-outside3</name>
+      <mode>once</mode>
+      <path>Aircraft/C-17/Sounds/rb211-startup.wav</path>
+      <condition>
+<and>
+ 
+<greater-than>  
+   <property>engines/engine[3]/rpm</property>
+   <value>0.5</value>
+   
+  </greater-than>
+  <less-than>
+                <property>velocities/groundspeed-kt</property>
+                <value>1</value>
+            </less-than>
+  <not>
+   <property>sim/current-view/internal</property>
+  </not>
+</and>
+</condition>
+
+      <volume>
+        <property>engines/engine[3]/n2</property>
+        <factor> 0.09 </factor>
+        <min> 0.3 </min>
+        <max> 0.9 </max>
+      </volume>
+      <pitch>
+        <property>engines/engine[3]/n2</property>
+        <factor> 0.01 </factor>
+	<min> 0.0 </min>
+	<max> 0.9 </max>
+      </pitch>
+      <reference-dist>100</reference-dist>
+      <max-dist>1000</max-dist>
+    </engine>
+ 
+  <engine>
+      <name>whine0</name>
+      <path>Aircraft/C-17/Sounds/rb211-whine.wav</path>
+      <mode>looped</mode>
+      <condition>
+        <property>/engines/engine[0]/running</property>
+		<not>
+        	<property>sim/current-view/internal</property>
+		
+     	</not>
+      </condition>
+      <volume>
+        <property>/engines/engine[0]/n2</property>
+        <factor type="double">0.0025</factor>
+      </volume>
+      <pitch>
+        <property>/engines/engine[0]/n2</property>
+        <factor>0.02</factor>
+        <offset>-0.1</offset>
+      </pitch>
+    </engine>
+	
+	<engine>
+      <name>whine1</name>
+      <path>Aircraft/C-17/Sounds/rb211-whine.wav</path>
+      <mode>looped</mode>
+      <condition>
+        <property>engines/engine[1]/running</property>
+		<not>
+        	<property>sim/current-view/internal</property>
+		
+     	</not>
+      </condition>
+      <volume>
+        <property>/engines/engine[1]/n2</property>
+        <factor type="double">0.0025</factor>
+      </volume>
+      <pitch>
+        <property>/engines/engine[1]/n2</property>
+        <factor>0.02</factor>
+        <offset>-0.1</offset>
+      </pitch>
+    </engine>
+
+<engine>
+      <name>whine2</name>
+      <path>Aircraft/C-17/Sounds/rb211-whine.wav</path>
+      <mode>looped</mode>
+      <condition>
+        <property>engines/engine[2]/running</property>
+		<not>
+        	<property>sim/current-view/internal</property>
+		
+     	</not>
+      </condition>
+      <volume>
+        <property>/engines/engine[2]/n2</property>
+        <factor type="double">0.0025</factor>
+      </volume>
+      <pitch>
+        <property>/engines/engine[2]/n2</property>
+        <factor>0.02</factor>
+        <offset>-0.1</offset>
+      </pitch>
+    </engine>
+	
+	
+	<engine>
+      <name>whine3</name>
+      <path>Aircraft/C-17/Sounds/rb211-whine.wav</path>
+      <mode>looped</mode>
+      <condition>
+        <property>engines/engine[3]/running</property>
+		<not>
+        	<property>sim/current-view/internal</property>
+		
+     	</not>
+      </condition>
+      <volume>
+        <property>/engines/engine[3]/n2</property>
+        <factor type="double">0.0025</factor>
+      </volume>
+      <pitch>
+        <property>/engines/engine[3]/n2</property>
+        <factor>0.02</factor>
+        <offset>-0.1</offset>
+      </pitch>
+    </engine>
+   
+    <engine>
+      <name>engine</name>
+      <path>Aircraft/C-17/Sounds/jet-blast.wav</path>
+      <mode>looped</mode>
+      <condition>
+        <property>engines/engine[0]/running</property>
+		<not>
+        	<property>sim/current-view/internal</property>
+		
+     	</not>
+      </condition>
+      <volume>
+        <property>engines/engine[0]/prop-thrust</property>
+        <factor type="double">0.00013</factor>
+      </volume>
+       <pitch>
+        <property>engines/engine[0]/n1</property>
+        <factor>0.2</factor>
+      </pitch>
+    </engine>
+	
+	<engine>
+      <name>engine1</name>
+      <path>Aircraft/C-17/Sounds/jet-blast.wav</path>
+      <mode>looped</mode>
+      <condition>
+        <property>engines/engine[1]/running</property>
+		<not>
+        	<property>sim/current-view/internal</property>
+		
+     	</not>
+      </condition>
+      <volume>
+        <property>engines/engine[1]/prop-thrust</property>
+        <factor type="double">0.00013</factor>
+      </volume>
+       <pitch>
+        <property>engines/engine[0]/n1</property>
+        <factor>0.2</factor>
+      </pitch>
+    </engine>
+
+	<engine>
+      <name>engine2</name>
+      <path>Aircraft/C-17/Sounds/jet-blast.wav</path>
+      <mode>looped</mode>
+      <condition>
+        <property>engines/engine[2]/running</property>
+		<not>
+        	<property>sim/current-view/internal</property>
+		
+     	</not>
+      </condition>
+      <volume>
+        <property>engines/engine[2]/prop-thrust</property>
+        <factor type="double">0.00013</factor>
+      </volume>
+       <pitch>
+        <property>engines/engine[0]/n1</property>
+        <factor>0.2</factor>
+      </pitch>
+    </engine>
+
+	
+	<engine>
+      <name>engine3</name>
+      <path>Aircraft/C-17/Sounds/jet-blast.wav</path>
+      <mode>looped</mode>
+      <condition>
+        <property>engines/engine[3]/running</property>
+		<not>
+        	<property>sim/current-view/internal</property>
+		
+     	</not>
+      </condition>
+      <volume>
+        <property>engines/engine[3]/prop-thrust</property>
+        <factor type="double">0.00013</factor>
+      </volume>
+       <pitch>
+        <property>engines/engine[0]/n1</property>
+        <factor>0.2</factor>
+      </pitch>
+    </engine>
+
+  <!-- Engines reverse thrust-->
+ <!-- Left side -->
+    
+  
+   <engine>
+    <name>left outer engine reverser1</name>
+        <path>Aircraft/C-17/Sounds/reverser.wav</path>
+        <mode>looped</mode>
+   <condition>
+     <not>
+          <property>sim/current-view/internal</property>
+	  
+     </not>
+   </condition>
+   <position>
+            <x>15</x>
+            <y>15</y>
+            <z>-3</z>
+        </position>
+   <orientation>
+	<x>-90.0</x>
+    	<y>0</y>
+    	<z>0</z>
+    	<inner-angle>110.0</inner-angle>
+    	<outer-angle>180.0</outer-angle>
+    	<outer-gain>0.4</outer-gain>
+   </orientation>
+  <volume>
+            <property>surface-positions/reverser-norm[0]</property>
+        </volume>
+   <pitch>
+    	<property>engines/engine/n2</property>
+	<factor>0.05</factor>
+	<min>0.0</min>
+	<max>1.0</max>
+   </pitch>
+    <reference-dist>600.0</reference-dist>
+        <max-dist>6000.0</max-dist>
+  </engine>
+  
+  
+  
+  
+  <engine>
+    <name>left inner engine reverser1</name>
+        <path>Aircraft/C-17/Sounds/reverser.wav</path>
+        <mode>looped</mode>
+   <condition>
+     <not>
+          <property>sim/current-view/internal</property>
+	  
+     </not>
+   </condition>
+   <position>
+            <x>12</x>
+            <y>7.5</y>
+            <z>-3</z>
+        </position>
+   <orientation>
+	<x>-90.0</x>
+    	<y>0</y>
+    	<z>0</z>
+    	<inner-angle>110.0</inner-angle>
+    	<outer-angle>180.0</outer-angle>
+    	<outer-gain>0.4</outer-gain>
+   </orientation>
+   <volume>
+            <property>surface-positions/reverser-norm[0]</property>
+        </volume>
+   <pitch>
+    	<property>engines/engine/n2</property>
+	<factor>0.05</factor>
+	<min>0.0</min>
+	<max>1.0</max>
+   </pitch>
+    <reference-dist>600.0</reference-dist>
+        <max-dist>6000.0</max-dist>
+  </engine>
+  
+  
+  
+  
+  
+  
+  <!-- Right side -->
+  
+  
+   <engine>
+    <name>right outer engine reverser1</name>
+        <path>Aircraft/C-17/Sounds/reverser.wav</path>
+        <mode>looped</mode>
+   <condition>
+     <not>
+          <property>sim/current-view/internal</property>
+	  
+     </not>
+   </condition>
+   <position>
+            <x>15</x>
+            <y>-15</y>
+            <z>-3</z>
+        </position>
+   <orientation>
+	<x>-90.0</x>
+    	<y>0</y>
+    	<z>0</z>
+    	<inner-angle>110.0</inner-angle>
+    	<outer-angle>180.0</outer-angle>
+    	<outer-gain>0.4</outer-gain>
+   </orientation>
+   <volume>
+            <property>surface-positions/reverser-norm[0]</property>
+        </volume>
+   <pitch>
+    	<property>engines/engine/n2</property>
+	<factor>0.05</factor>
+	<min>0.0</min>
+	<max>1.0</max>
+   </pitch>
+    <reference-dist>600.0</reference-dist>
+        <max-dist>6000.0</max-dist>
+  </engine>
+  
+  
+  
+  
+  <engine>
+    <name>right inner engine reverser1</name>
+        <path>Aircraft/C-17/Sounds/reverser.wav</path>
+        <mode>looped</mode>
+   <condition>
+     <not>
+          <property>sim/current-view/internal</property>
+	  
+     </not>
+   </condition>
+   <position>
+            <x>12</x>
+            <y>-7.5</y>
+            <z>-3</z>
+        </position>
+   <orientation>
+	<x>-90.0</x>
+    	<y>0</y>
+    	<z>0</z>
+    	<inner-angle>110.0</inner-angle>
+    	<outer-angle>180.0</outer-angle>
+    	<outer-gain>0.4</outer-gain>
+   </orientation>
+   <volume>
+            <property>surface-positions/reverser-norm[0]</property>
+        </volume>
+   <pitch>
+    	<property>engines/engine/n2</property>
+	<factor>0.05</factor>
+	<min>0.0</min>
+	<max>1.0</max>
+   </pitch>
+    <reference-dist>600.0</reference-dist>
+        <max-dist>6000.0</max-dist>
+  </engine>
+   
+  
+
+<!-- flyby -->
+		<flyby>
+			<name>fly-by</name>
+			<mode>once</mode>
+			<path>Aircraft/C-17/Sounds/flyby2.wav</path>
+			<condition>
+				<and>
+	    <greater-than>
+	     	<property>velocities/mach</property>
+	     	<value>0.3</value>
+	    </greater-than>
+				<equals>
+					<property>sim/current-view/view-number</property>
+					<value>6</value>
+				</equals>
+				</and>
+				<not>
+         	<property>sim/current-view/internal</property>
+	 	
+     	</not>
+		</condition>
+			<volume>
+				<property>velocities/airspeed-kt</property>
+				<factor>0.001</factor>
+			</volume>
+			
+		</flyby>
+</fx>
+
+
+</PropertyList>

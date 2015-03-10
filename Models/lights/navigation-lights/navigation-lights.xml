@@ -1,0 +1,36 @@
+
+<PropertyList>
+
+ <path>null.ac</path>
+ 
+  <model>
+    <name>Port Light</name>
+    <path>port.xml</path>
+    <offsets>
+      <x-m> 21.65 </x-m>
+      <y-m> -16.38 </y-m>
+      <z-m> 2.3209 </z-m>
+    </offsets>
+ </model>
+ 
+  <model>
+    <name>Starboard Light</name>
+    <path>starboard.xml</path>
+    <offsets>
+      <x-m> 21.65 </x-m>
+      <y-m> 16.38 </y-m>
+      <z-m> 2.3209 </z-m>
+    </offsets>
+ </model>
+ 
+   <model>
+    <name>Tail Light</name>
+    <path>tail.xml</path>
+    <offsets>
+      <x-m> 32.85 </x-m>
+      <y-m> -0.360 </y-m>
+      <z-m> 7.02 </z-m>
+    </offsets>
+ </model>
+
+</PropertyList>

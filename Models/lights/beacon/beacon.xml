@@ -1,0 +1,116 @@
+
+<PropertyList>
+
+ <path>beacon.ac</path>
+ 
+  <effect>
+   <inherits-from>Effects/model-transparent</inherits-from>
+   <condition>
+    <property>sim/rendering/rembrandt/enabled</property>
+   </condition>
+  <object-name>lens</object-name>
+  </effect>
+ 
+ <model>
+  <name>Beam 1</name>
+  <path>beacon-beam.xml</path>
+  <offsets>
+   <x-m>0.002</x-m>
+   <heading-deg>-90</heading-deg>
+  </offsets>
+ </model>
+ 
+  <model>
+  <name>Beam 2</name>
+  <path>beacon-beam.xml</path>
+  <offsets>
+   <x-m>0.065</x-m>
+   <heading-deg>90</heading-deg>
+  </offsets>
+ </model>
+ 
+ <animation>
+  <object-name>Beam 1</object-name>
+  <type>rotate</type>
+  <property>sim/model/lights/beacon/rotation</property>
+  <interpolation>
+   <entry>
+    <ind>0</ind>
+    <dep>0</dep>
+   </entry>
+   <entry>
+    <ind>0.1</ind>
+    <dep>5</dep>
+   </entry>
+   <entry>
+    <ind>0.2</ind>
+    <dep>15</dep>
+   </entry>
+   <entry>
+    <ind> 0.8</ind>
+    <dep> 160</dep>
+   </entry>
+   <entry>
+    <ind> 0.9</ind>
+    <dep> 175</dep>
+   </entry>
+   <entry>
+    <ind> 1.0</ind>
+    <dep> 180</dep>
+   </entry>
+  </interpolation>
+  <center>
+   <x-m>0</x-m>
+   <y-m>0</y-m>
+   <z-m>0</z-m>
+  </center>
+  <axis>
+   <x>0</x>
+   <y>0</y>
+   <z>1</z>
+  </axis>
+ </animation>
+ 
+ <animation>
+  <object-name>Beam 2</object-name>
+  <type>rotate</type>
+  <property>sim/model/lights/beacon/rotation</property>
+  <interpolation>
+   <entry>
+    <ind>0</ind>
+    <dep>0</dep>
+   </entry>
+   <entry>
+    <ind>0.1</ind>
+    <dep>5</dep>
+   </entry>
+   <entry>
+    <ind>0.2</ind>
+    <dep>15</dep>
+   </entry>
+   <entry>
+    <ind> 0.8</ind>
+    <dep> 160</dep>
+   </entry>
+   <entry>
+    <ind> 0.9</ind>
+    <dep> 175</dep>
+   </entry>
+   <entry>
+    <ind> 1.0</ind>
+    <dep> 180</dep>
+   </entry>
+  </interpolation>
+  <center>
+   <x-m>0.065</x-m>
+   <y-m>0   </y-m>
+   <z-m>0</z-m>
+  </center>
+  <axis>
+   <x>0</x>
+   <y>0</y>
+   <z>1</z>
+  </axis>
+ </animation>
+ 
+</PropertyList>

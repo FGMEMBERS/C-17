@@ -1,0 +1,103 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<PropertyList>
+
+ 
+		 <key n="68">
+    <name>D</name>
+    <desc>Passenger door</desc>
+    <binding>
+     <command>nasal</command>
+     <script>doors.doorsystem.passengerexport();</script>
+    </binding>
+   </key>
+
+   <key n="100">
+    <name>d</name>
+    <desc>Crew door</desc>
+    <binding>
+     <command>nasal</command>
+     <script>doors.doorsystem.crewexport();</script>
+    </binding>
+   </key>
+
+		<key n="127">
+		<name>Delete</name>
+		<desc>Toggle Reversers</desc>
+		<binding>
+			<command>nasal</command>
+			<script>reversethrust.togglereverser()</script>
+		</binding>
+		</key>	
+
+		<key n="109">
+		<name>m</name>
+		<desc>engage nose wheel steering</desc>
+		<binding>
+			<command>property-assign</command>
+			<property>fdm/jsbsim/systems/NWS/engaged</property>
+		<value>1</value> 
+		</binding>
+		<mod-up>
+		<binding>
+			<command>property-assign</command>
+			<property>fdm/jsbsim/systems/NWS/engaged</property>
+        <value>0</value> 
+		</binding>
+		</mod-up>
+		</key>
+
+		 <key n="10">
+     <name>Ctrl-j</name>
+     <desc>Jump signal</desc>
+     <binding>
+      <command>property-toggle</command>
+      <property>ai/submodels/submodel/parachutist</property>
+      <value type="bool">true</value>
+     </binding>
+     <mod-up>
+      <binding>
+       <command>property-assign</command>
+      <property>ai/submodels/submodel/parachutist</property>
+       <value type="bool">false</value>
+      </binding>
+     </mod-up>
+   </key>
+		
+	<key n="102">
+    <name>f</name>
+     <desc>Trigger flare release</desc>
+     <binding>
+      <command>property-toggle</command>
+      <property>ai/submodels/submodel/flare-release</property>
+      <value type="bool">true</value>
+     </binding>
+     <mod-up>
+      <binding>
+       <command>property-assign</command>
+      <property>ai/submodels/submodel/flare-release</property>
+       <value type="bool">false</value>
+      </binding>
+     </mod-up>
+    </key>
+	
+	 <key n="123">
+     <name>}</name>
+     <desc>Engine Autostop</desc>
+    <binding>
+        <command>nasal</command>
+        <script>emu.autostop();</script>
+    </binding>
+  </key>
+  
+   <key n="125">
+     <name>}</name>
+     <desc>Engine Autostart</desc>
+    <binding>
+        <command>nasal</command>
+        <script>emu.autostart();</script>
+    </binding>
+  </key>
+
+</PropertyList>
+

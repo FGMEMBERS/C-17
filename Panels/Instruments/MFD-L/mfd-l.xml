@@ -1,0 +1,41 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<PropertyList>
+
+
+  
+
+<model>
+    <path>EFIS3.ac</path>
+	<offsets>
+      <x-m> 0 </x-m>
+      <y-m>0 </y-m>
+      <z-m>0 </z-m>
+    </offsets>
+  </model>
+  
+  <model>
+    <path>Aircraft/a400m/Models/Interior/Instruments/MFD-L/terrain-map-pixel.xml</path>
+	<offsets>
+      <x-m> 0 </x-m>
+      <y-m>0 </y-m>
+      <z-m>0.005 </z-m>
+	  <pitch-offset>-13</pitch-offset>
+    </offsets>
+  </model>
+  <!--
+  <model>
+    <path>Aircraft/F-23C/Models/Interior/Panel/Instruments2/MFD-L/situana.xml</path>
+	<offsets>
+      <x-m> 0.068 </x-m>
+      <y-m>0.01 </y-m>
+      <z-m>-0.02 </z-m>
+	  <pitch-offset>-13</pitch-offset>
+    </offsets>
+  </model>
+ -->
+
+
+
+</PropertyList>
+
