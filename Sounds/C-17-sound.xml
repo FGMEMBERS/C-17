@@ -765,7 +765,7 @@
 
 <squeal0>
         <name>squeal</name>
-        <path>/Aircraft/C-17/Sounds/touchdown.wav</path>
+        <path>Aircraft/C-17/Sounds/touchdown.wav</path>
         <condition>
             <or>
                 <property>/gear/gear[0]/wow</property>
@@ -884,7 +884,7 @@
     <stall>
         <name>stall</name>
         <mode>looped</mode>
-        <path>/Aircraft/C-17/Sounds/stall.wav</path>
+        <path>Aircraft/C-17/Sounds/stall.wav</path>
         <condition>
             <less-than>
                 <property>velocities/airspeed-kt</property>
@@ -913,7 +913,7 @@
     <stall>
         <name>stall</name>
         <mode>looped</mode>
-        <path>/Aircraft/C-17/Sounds/stall.wav</path>
+        <path>Aircraft/C-17/Sounds/stall.wav</path>
         <condition>
             <less-than>
                 <property>velocities/airspeed-kt</property>
@@ -941,7 +941,7 @@
     <stall>
         <name>stall</name>
         <mode>looped</mode>
-        <path>/Aircraft/C-17/Sounds/stall.wav</path>
+        <path>Aircraft/C-17/Sounds/stall.wav</path>
         <condition>
             <less-than>
                 <property>velocities/airspeed-kt</property>
