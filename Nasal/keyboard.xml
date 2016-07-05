@@ -2,24 +2,14 @@
 
 <PropertyList>
 
- 
-		 <key n="68">
-    <name>D</name>
-    <desc>Passenger door</desc>
-    <binding>
-     <command>nasal</command>
-     <script>doors.doorsystem.passengerexport();</script>
-    </binding>
-   </key>
-
-   <key n="100">
-    <name>d</name>
-    <desc>Crew door</desc>
-    <binding>
-     <command>nasal</command>
-     <script>doors.doorsystem.crewexport();</script>
-    </binding>
-   </key>
+ <key n="4">
+				<name>Ctrl-d</name>
+				<desc>Open/close Ramp</desc>
+				<binding>
+					<command>nasal</command>
+					<script>doors.doorsystem.rampexport();</script>
+				</binding>
+			</key>
 
 		<key n="127">
 		<name>Delete</name>
@@ -47,18 +37,18 @@
 		</mod-up>
 		</key>
 
-		 <key n="10">
-     <name>Ctrl-j</name>
+	   <key n="108">
+	 <name>l</name>
      <desc>Jump signal</desc>
      <binding>
       <command>property-toggle</command>
-      <property>ai/submodels/submodel/parachutist</property>
+      <property>instrumentation/paras/trigger</property>
       <value type="bool">true</value>
      </binding>
      <mod-up>
       <binding>
        <command>property-assign</command>
-      <property>ai/submodels/submodel/parachutist</property>
+      <property>instrumentation/paras/trigger</property>
        <value type="bool">false</value>
       </binding>
      </mod-up>

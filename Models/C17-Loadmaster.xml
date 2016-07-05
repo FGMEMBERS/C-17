@@ -1,0 +1,23 @@
+<?xml version="1.0"?>
+
+<PropertyList>
+
+	<path>null.ac</path>
+	
+	<!-- Pilot stuff -->
+
+  
+  <!-- Pilot invisible from internally -->
+
+    <animation>
+        <type>select</type>
+        <object-name>pilot1</object-name>
+		 <object-name>pilot2</object-name>
+		<condition>
+<not>
+            <property>sim/current-view/internal</property>
+</not>
+        </condition>
+    </animation>	
+	
+	</PropertyList>

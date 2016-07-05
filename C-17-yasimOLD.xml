@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 
 <!-- C-17 Globemaster III-->
-<airplane mass="282500" version="YASIM_VERSION_CURRENT">
+<airplane mass="282500">
 
 <!-- Approach configuration -->
 <approach speed="130" aoa="8" fuel="0.1">
@@ -16,7 +16,7 @@
 </approach>
 
 <!-- Cruise configuration -->
-<cruise speed="570" alt="39000"  fuel="0.3">
+<cruise speed="450" alt="39000"  fuel="0.3">
 <control-setting axis="/controls/engines/engine[0]/throttle" value="1"/>
   <control-setting axis="/controls/engines/engine[1]/throttle" value="1"/>
   <control-setting axis="/controls/engines/engine[2]/throttle" value="1"/>
@@ -58,33 +58,31 @@
 <mstab x="-16.5" y="0" z="3" length="3.5" chord="13.0" sweep="45"
       taper="0.6" dihedral="-7" camber="0.005" incidence="4.5" twist="-1">
 <stall aoa="15" width="8" peak="1.5"/>
-<flap0 start="0" end=".56" lift="1.6" drag="10.8"/>
+<flap0 start="0" end=".56" lift="1.6" drag="1.8"/>
 <control-input axis="/controls/flight/speedbrake" control="FLAP0"/>
 <control-output control="FLAP0" prop="/surface-positions/speedbrake-pos-norm"/>
 <control-speed control="FLAP0" transition-time="4"/>
 </mstab>
 
 <wing x="-18.7" y="2.4" z="2.5" length="24.0" chord="9.0" sweep="18"
-      taper="0.28" dihedral="-4" camber="0.15" incidence="2.6" twist="-0.5">
-  <stall aoa="19" width="19" peak="1.9"/>
-  <flap0 start="0.0" end="0.47" lift="1.48" drag="2.0"/>
-  <flap1 start=".64" end="0.88" lift="1.95" drag="1.1"/>
-  <slat start="0.1" end="1" aoa="2" drag="1.2" lift="1.9" />
+      taper="0.28" dihedral="-4" camber="0.1" incidence="2.6" twist="-0.5">
+  <stall aoa="15" width="8" peak="1.5"/>
+  <flap0 start="0.0" end="0.47" lift="1.4" drag="1.8"/>
+  <flap1 start=".64" end=".88" lift="1.7" drag="1.1"/>
+  <slat start="0" end="1" aoa="2" drag="1.2"/>
   <spoiler start="0.2" end="0.6" lift="0.3" drag="3.0"/>
-  
-  <control-input axis ="/orientation/alpha-deg" control="SLAT" square="false" src0="4.5" src1="12" dst0="0.0" dst1="1.0"/>
   <control-input axis="/controls/flight/flaps" control="FLAP0"/>
-  
-  <control-input axis="/controls/flight/speedbrake" control="SPOILER"/>
-  <control-output control="SPOILER" prop="/surface-positions/speedbrake-norm"/>
-  <control-speed control="SPOILER" transition-time="5"/>
-  <control-speed control="FLAP0" transition-time="15"/>
-  <control-speed control="SLAT" transition-time="1.4"/>
+  <control-input axis="/surface-positions/flap-pos-norm" control="SLAT"/>
+   <control-output control="FLAP0" prop="/surface-positions/slats"/>
+  <control-speed control="FLAP0" transition-time="10"/>
 
-  <control-input axis="/controls/flight/aileron" control="FLAP1" split="true"/>
+  <control-input axis="/controls/flight/speedbrake" control="SPOILER"/>
+<control-output control="SPOILER" prop="/surface-positions/speedbrake-norm"/>
+  <control-speed control="SPOILER" transition-time="5"/>
+<control-speed control="FLAP0" transition-time="15"/>
+    <control-input axis="/controls/flight/aileron" control="FLAP1" split="true"/>
   <control-input axis="/controls/flight/aileron-trim" control="FLAP1" split="true"/>
   
-  <control-output control="SLAT" prop="/surface-positions/slat-pos-norm"/>
   <control-output control="FLAP0" prop="/surface-positions/flap-pos-norm"/>
   <control-output control="FLAP1" side="left"
 		  prop="/surface-positions/left-aileron-pos-norm"/>
@@ -95,23 +93,21 @@
 
 <hstab x="-48" y="0.2" z="10.9" chord="5.80" length="9.8" taper=".35"
        sweep="20.5" dihedral="-2">
-  <stall aoa="15" width="15" peak="1.5"/>
+  <stall aoa="15" width="2" peak="1.5"/>
   <flap0 start="0" end="1" lift="1.6" drag="1.2"/>
   <control-input axis="/controls/flight/elevator" control="FLAP0"/>
   <control-input axis="/controls/flight/elevator-trim" control="FLAP0"/>
   <control-output control="FLAP0" prop="/surface-positions/elevator-pos-norm"/>
-  <control-speed control="FLAP0" transition-time="1.5"/>
 </hstab>
 
 <vstab x="-41.5" y="0.00" z="4.0" chord="9.2" length="11.9" taper="1.0"
        sweep="42">
-  <stall aoa="15" width="22" peak="1.5"/>
+  <stall aoa="15" width="2" peak="1.5"/>
   <flap0 start="0" end="1" lift="1.55" drag="1.2"/>
   <control-input axis="/controls/flight/rudder" control="FLAP0" invert="true"/>
   <control-input axis="/controls/flight/rudder-trim" control="FLAP0" invert="true"/>
   <control-output control="FLAP0" prop="/surface-positions/rudder-pos-norm"
 		  min="1" max="-1"/>
-  <control-speed control="FLAP0" transition-time="1.5"/>	  
 </vstab>
 
 
@@ -119,7 +115,7 @@
 <!-- P&W F117-PW-100 -->
 
 <jet x="-13.3" y="14.0"  z="0.5" mass="11000" thrust="40440" spool-time="3"
-egt="840" tsfc="0.576" exhaust-speed="9850" n1-idle="45" n1-max="105" n2-idle="70" n2-max="108">
+egt="840" tsfc="0.576" exhaust-speed="7850" n1-idle="45" n1-max="105" n2-idle="70" n2-max="108">
   <control-input axis="/controls/engines/engine[0]/throttle" control="THROTTLE"/>
   <control-input axis="/controls/engines/engine[0]/mixture" control="MIXTURE"/>
   <control-input axis="/controls/engines/engine[0]/reverser" control="REVERSE_THRUST"/>
@@ -129,7 +125,7 @@ egt="840" tsfc="0.576" exhaust-speed="9850" n1-idle="45" n1-max="105" n2-idle="7
 </jet>
 
 <jet x="-10.5" y="7.5"  z="0.5" mass="11000" thrust="40440" spool-time="3"
-egt="840" tsfc="0.576" exhaust-speed="9850" n1-idle="45" n1-max="105" n2-idle="70" n2-max="108">
+egt="840" tsfc="0.576" exhaust-speed="7850" n1-idle="45" n1-max="105" n2-idle="70" n2-max="108">
   <control-input axis="/controls/engines/engine[1]/throttle" control="THROTTLE"/>
   <control-input axis="/controls/engines/engine[0]/mixture" control="MIXTURE"/>
   <control-input axis="/controls/engines/engine[1]/reverser" control="REVERSE_THRUST"/>
@@ -139,7 +135,7 @@ egt="840" tsfc="0.576" exhaust-speed="9850" n1-idle="45" n1-max="105" n2-idle="7
 </jet>
 
 <jet x="-10.5" y="-7.5"  z="0.5" mass="11000" thrust="40440"  spool-time="3"
-egt="840" tsfc="0.576" exhaust-speed="9850" n1-idle="45" n1-max="105" n2-idle="70" n2-max="108">
+egt="840" tsfc="0.576" exhaust-speed="7850" n1-idle="45" n1-max="105" n2-idle="70" n2-max="108">
   <control-input axis="/controls/engines/engine[2]/throttle" control="THROTTLE"/>
   <control-input axis="/controls/engines/engine[0]/mixture" control="MIXTURE"/>
   <control-input axis="/controls/engines/engine[2]/reverser" control="REVERSE_THRUST"/>
@@ -152,7 +148,7 @@ egt="840" tsfc="0.576" exhaust-speed="9850" n1-idle="45" n1-max="105" n2-idle="7
 
 
 <jet x="-13.3" y="-14.0"  z="0.5" mass="11000" thrust="40440" spool-time="3"
-egt="840" tsfc="0.576" exhaust-speed="9850" n1-idle="45" n1-max="105" n2-idle="70" n2-max="108">
+egt="840" tsfc="0.576" exhaust-speed="7850" n1-idle="45" n1-max="105" n2-idle="70" n2-max="108">
   <control-input axis="/controls/engines/engine[3]/throttle" control="THROTTLE"/>
   <control-input axis="/controls/engines/engine[0]/mixture" control="MIXTURE"/>
   <control-input axis="/controls/engines/engine[3]/reverser" control="REVERSE_THRUST"/>
@@ -206,7 +202,7 @@ egt="840" tsfc="0.576" exhaust-speed="9850" n1-idle="45" n1-max="105" n2-idle="7
 <!-- ballast -->
 
 
-<ballast x="-3" y="0" z="1.8" mass="39000"/>
+<ballast x="-3" y="0" z="1.8" mass="40000"/>
 
 <!-- Payload weight point -->
 <weight x="-18" y="0.0" z="-2" size="0" mass-prop="sim/weight[0]/weight-lb"/>

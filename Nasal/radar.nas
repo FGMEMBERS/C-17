@@ -2,6 +2,7 @@
 # Multiplayer Quirks
 # =======================
 
+
 var RadarStandby      = props.globals.getNode("instrumentation/radar/radar-standby");
 
 MPjoin = func(n) {
@@ -22,10 +23,14 @@ MPleave= func(n) {
 
 #need to copy the properties so that we never try to access a non-existent property in XML
 MPradarProperties = func {
+   #print("t0tO dans les bois");
    var Estado = RadarStandby.getValue();
    if ( Estado != 1 ) {
       targetList = props.globals.getNode("ai/models/").getChildren("multiplayer");
       foreach (d; props.globals.getNode("ai/models/").getChildren("aircraft")) {
+         append(targetList,d);
+      }
+      foreach (d; props.globals.getNode("ai/models/").getChildren("tanker")) {
          append(targetList,d);
       }
       foreach (m; targetList) {
@@ -97,6 +102,9 @@ boreSightLock = func {
 
       targetList= props.globals.getNode("ai/models/").getChildren("multiplayer");
       foreach (d; props.globals.getNode("ai/models/").getChildren("aircraft")) {
+         append(targetList,d);
+      }
+      foreach (d; props.globals.getNode("ai/models/").getChildren("tanker")) {
          append(targetList,d);
       }
 

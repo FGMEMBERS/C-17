@@ -951,13 +951,7 @@
 			 <property>position/altitude-agl-ft</property>
                   <value>30</value>
 			</greater-than>
-            <not>
-                <property>/gear/gear[0]/wow</property>
-                <property>/gear/gear[1]/wow</property>
-                <property>/gear/gear[2]/wow</property>
-                <property>/surface-positions/flap-pos-norm</property>
-				
-            </not>
+           
         </condition>
         <volume>
             <max>0.5</max>

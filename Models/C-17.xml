@@ -38,31 +38,42 @@
 	<!-- 	NASAL Code for Liveries 		-->	
 	<nasal>
       <load>
+        var self = cmdarg();
         var livery_update = aircraft.livery_update.new("Aircraft/C-17/Models/Liveries", 10);
 		
-		  var root = cmdarg();
-		  
-		   var float_0 = self.getNode("sim/multiplay/generic/float[0]", 1);
-      var float_1 = self.getNode("sim/multiplay/generic/float[1]", 1);
-      
-      var crew_door = self.getNode("instrumentation/doors/crew/position-norm", 1);
-      var passenger_door = self.getNode("instrumentation/doors/passenger/position-norm", 1);
-    
-      crew_door.alias(float_0);
-      passenger_door.alias(float_1);
+		
+		var float_0 = self.getNode("sim/multiplay/generic/float[0]", 1);
+		var float_1 = self.getNode("sim/multiplay/generic/float[1]", 1);
+		
 
+		 var ramp_door = self.getNode("instrumentation/doors/ramp/position-norm", 1);
+		  var para = self.getNode("instrumentation/paras/trigger", 1);
+		 
+		 
+		 ramp_door.alias(float_1);
+		 print("BOOOOYAHHH - We got another multiplayer aircraft..");
 
+		 var rootindex =  root.getIndex();
+		 print(rootindex);
 
 var power_path = "sim/signals/fdm-initialized"; # Path to 28V DC supply
 var rotate_path = "sim/model/lights/beacon"; # Path to beacon rotation property for animation
 var strobe_path = "sim/model/lights/strobe"; # Path to strobe
 var anim_path = "sim/model/lights/beacon/rotation";
 
-var rootindex =  root.getIndex();
-print(rootindex);
+
 var fullpath = "/ai/models/multiplayer["~ rootindex ~"]";
 fullpathrot = fullpath~"/"~rotate_path;
 fullpathstr = fullpath~"/"~strobe_path;
+fullpathint1 = fullpath~"/"~"instrumentation/paras/trigger";
+var int_1 = self.getNode("sim/multiplay/generic/int[1]", 1);
+para.alias(int_1);
+
+var onInt1Triggered = func {
+	print("INt1 TRIGGERED!!");
+}
+setlistener(int_1, onInt1Triggered);
+print("set Listener on property: "~fullpathint1);
 
 var mplights = func {
 
@@ -111,10 +122,10 @@ settimer(init, 1);
       </load>
       <unload>
           livery_update.stop();
-      crew_door.unalias();
+     para.unalias();
       passenger_door.unalias();
       </unload>
-   </nasal>				
+   </nasal>		
 
  <!-- MP sound call -->
   <sound><path>Aircraft/C-17/Sounds/mp-sound.xml</path></sound>   
@@ -915,17 +926,15 @@ settimer(init, 1);
 				
 	</animation>
 	
-	<!-- Rambo Animations -->
-
-<!--
+<!-- CARGO RAMP/DOOR  -->	
 	<animation>
 		<type>rotate</type>
 		<object-name>CargoRamp</object-name>
 		<object-name>CargoRamp2</object-name>
-		<property>instrumentation/doors/passenger/position-norm</property>
+         <property>instrumentation/doors/ramp/position-norm</property>
 		<interpolation>
 		<entry><ind> 0 </ind><dep>   0 </dep></entry>
-		<entry><ind> 1 </ind><dep> -17 </dep></entry>
+		<entry><ind> 1 </ind><dep> -19 </dep></entry>
 		</interpolation> 
  		<axis>
   			<x1-m>26.5296</x1-m>
@@ -936,36 +945,16 @@ settimer(init, 1);
   			<z2-m>-2.88574</z2-m>
  		</axis>
 	</animation>
-	-->
-	
-	 <animation>
-    <type>rotate</type>
-   <object-name>CargoRamp</object-name>
-		<object-name>CargoRamp2</object-name>
-    <property>instrumentation/doors/passenger/position-norm</property>
-    <factor> 15 </factor>
-    <center>
-      <x-m>26.5296</x-m>
-      <y-m>  0.000 </y-m>
-      <z-m>-2.88556</z-m>
-    </center>
-    <axis>
-      <x> 0 </x>
-      <y> 1 </y>
-      <z> 0 </z>
-    </axis>
-  </animation>
-	
 		
 	<animation>
 		<type>rotate</type>
 		<object-name>CargoRamp2</object-name>
-		<property>instrumentation/doors/passenger/position-norm</property>
+		  <property>instrumentation/doors/ramp/position-norm</property>
 		<interpolation>
 			<entry><ind>0.0</ind><dep>0.0</dep></entry>
 			<entry><ind>0.2</ind><dep>0.0</dep></entry>
 			<entry><ind>0.8</ind><dep>-92.0</dep></entry>
-			<entry><ind>1.0</ind><dep>-80.0</dep></entry>
+			<entry><ind>1.0</ind><dep>-92.0</dep></entry>
 		</interpolation> 
 		
 		<!--
@@ -982,21 +971,21 @@ settimer(init, 1);
  		</axis>
 	</animation>
 	
-<!--
+
 	<animation>
 		<type>rotate</type>
 		<object-name>CargoDoor</object-name>
-		<property>instrumentation/doors/cargodoor/position-norm</property>
-		<interpolation>
+		  <property>instrumentation/doors/ramp/position-norm</property>
+		<!-- <interpolation>
 		<entry><ind> 0 </ind><dep> 0 </dep></entry>
 		<entry><ind> 1 </ind><dep> 25 </dep></entry>
-		</interpolation>
+		</interpolation> -->
 		
 		<factor>20</factor>
-		
+		<!--
 		42.5833	0.474942	-0.949815     LEFT
 		42.6053	0.467277	0.782652	RIGHT
-		
+		-->	
  		<axis>
   			<x1-m>42.5833</x1-m>
   			<y1-m>-0.949815</y1-m>
@@ -1006,23 +995,6 @@ settimer(init, 1);
   			<z2-m>0.467277</z2-m>
  		</axis>
 	</animation>
-	-->
-	 <animation>
-    <type>rotate</type>
-    <object-name>CargoDoor</object-name>
-    <property>instrumentation/doors/passenger/position-norm</property>
-    <factor> 22.52</factor>
-    <center>
-      <x-m>42.5833</x-m>
-      <y-m>  0.000 </y-m>
-      <z-m>0.474942</z-m>
-    </center>
-    <axis>
-      <x> 0 </x>
-      <y> 1 </y>
-      <z> 0 </z>
-    </axis>
-  </animation>
 	
 	
 <!-- GEAR -->

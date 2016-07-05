@@ -3,12 +3,6 @@
 <PropertyList>
 	
 	
-<animation>
-        <type>range</type>
-        <min-m>0</min-m>
-        <max-m>500</max-m>
-    </animation>
-
 <model>
 		<name>Pylons</name>
 		<path>Aircraft/C-17/Models/payload/pylons.xml</path>
@@ -19,6 +13,7 @@
 			<pitch-deg>0.0</pitch-deg>
 		</offsets>
 	</model>	
+
 
 
 <!-- Cargobay -->
@@ -37,11 +32,16 @@
     <type>select</type>
     <object-name>1x Hummer</object-name>      
     <condition>
-      <equals>
-          <property>sim/multiplay/generic/string[1]</property>
+      <and>
+        <equals>
+          <property>sim/weight[0]/selected</property>
           <value>1x Hummer</value>
         </equals>
-       
+        <equals>
+          <property>controls/armament/station[0]/release</property>
+          <value>false</value>
+        </equals>
+      </and>
     </condition>
   </animation>			
 
@@ -59,12 +59,16 @@
     <type>select</type>
     <object-name>CH-47</object-name>      
     <condition>
-     
+      <and>
         <equals>
-          <property>sim/multiplay/generic/string[1]</property>
+          <property>sim/weight[0]/selected</property>
           <value>CH-47</value>
         </equals>
-       
+        <equals>
+          <property>controls/armament/station[0]/release</property>
+          <value>false</value>
+        </equals>
+      </and>
     </condition>
   </animation>	
 
@@ -83,12 +87,16 @@
     <type>select</type>
     <object-name>M1 Abrams</object-name>      
     <condition>
-     
+      <and>
         <equals>
-          <property>sim/multiplay/generic/string[1]</property>
+          <property>sim/weight[0]/selected</property>
           <value>M1 Abrams</value>
         </equals>
-       
+        <equals>
+          <property>controls/armament/station[0]/release</property>
+          <value>false</value>
+        </equals>
+      </and>
     </condition>
   </animation>	
 
@@ -106,12 +114,16 @@
     <type>select</type>
     <object-name>2xHummer</object-name>      
     <condition>
-      
+      <and>
         <equals>
-          <property>sim/multiplay/generic/string[1]</property>
+          <property>sim/weight[0]/selected</property>
           <value>2x Hummer</value>
         </equals>
-       
+        <equals>
+          <property>controls/armament/station[0]/release</property>
+          <value>false</value>
+        </equals>
+      </and>
     </condition>
   </animation>		
   
@@ -129,12 +141,16 @@
     <type>select</type>
     <object-name>1xwmik</object-name>      
     <condition>
-    
+      <and>
         <equals>
-          <property>sim/multiplay/generic/string[1]</property>
+          <property>sim/weight[0]/selected</property>
           <value>1x LandRover WMIK</value>
         </equals>
-       
+        <equals>
+          <property>controls/armament/station[0]/release</property>
+          <value>false</value>
+        </equals>
+      </and>
     </condition>
   </animation>	
   
@@ -152,12 +168,16 @@
     <type>select</type>
     <object-name>2xwmik</object-name>      
     <condition>
-     
+      <and>
         <equals>
-          <property>sim/multiplay/generic/string[1]</property>
+          <property>sim/weight[0]/selected</property>
           <value>2x LandRover WMIK</value>
         </equals>
-       
+        <equals>
+          <property>controls/armament/station[0]/release</property>
+          <value>false</value>
+        </equals>
+      </and>
     </condition>
   </animation>	
   
@@ -176,12 +196,16 @@
     <type>select</type>
     <object-name>4xwmik</object-name>      
     <condition>
-     
+      <and>
         <equals>
-          <property>sim/multiplay/generic/string[1]</property>
+          <property>sim/weight[0]/selected</property>
           <value>4x LandRover WMIK</value>
         </equals>
-      
+        <equals>
+          <property>controls/armament/station[0]/release</property>
+          <value>false</value>
+        </equals>
+      </and>
     </condition>
   </animation>	
 
@@ -199,12 +223,16 @@
     <type>select</type>
     <object-name>1xjackal</object-name>      
     <condition>
-     
+      <and>
         <equals>
-          <property>sim/multiplay/generic/string[1]</property>
+          <property>sim/weight[0]/selected</property>
           <value>1x Jackal</value>
         </equals>
-       
+        <equals>
+          <property>controls/armament/station[0]/release</property>
+          <value>false</value>
+        </equals>
+      </and>
     </condition>
   </animation>
 
@@ -222,12 +250,16 @@
     <type>select</type>
     <object-name>2xJackal</object-name>      
     <condition>
-     
+      <and>
         <equals>
-          <property>sim/multiplay/generic/string[1]</property>
+          <property>sim/weight[0]/selected</property>
           <value>2x Jackal</value>
         </equals>
-       
+        <equals>
+          <property>controls/armament/station[0]/release</property>
+          <value>false</value>
+        </equals>
+      </and>
     </condition>
   </animation>	  
 
@@ -245,12 +277,16 @@
     <type>select</type>
     <object-name>MTVR1</object-name>      
     <condition>
-     
+      <and>
         <equals>
-          <property>sim/multiplay/generic/string[1]</property>
+          <property>sim/weight[0]/selected</property>
           <value>MTVR</value>
         </equals>
-       
+        <equals>
+          <property>controls/armament/station[0]/release</property>
+          <value>false</value>
+        </equals>
+      </and>
     </condition>
   </animation>	
   
@@ -268,12 +304,16 @@
     <type>select</type>
     <object-name>viking</object-name>      
     <condition>
-     
+      <and>
         <equals>
-          <property>sim/multiplay/generic/string[1]</property>
+          <property>sim/weight[0]/selected</property>
           <value>BVS10-Viking</value>
         </equals>
-      
+        <equals>
+          <property>controls/armament/station[0]/release</property>
+          <value>false</value>
+        </equals>
+      </and>
     </condition>
   </animation>	
   
@@ -292,12 +332,16 @@
     <type>select</type>
     <object-name>bradle</object-name>      
     <condition>
-      
+      <and>
         <equals>
-          <property>sim/multiplay/generic/string[1]</property>
+          <property>sim/weight[0]/selected</property>
           <value>M2-Bradle</value>
         </equals>
-       
+        <equals>
+          <property>controls/armament/station[0]/release</property>
+          <value>false</value>
+        </equals>
+      </and>
     </condition>
   </animation>	
   
@@ -315,12 +359,16 @@
     <type>select</type>
     <object-name>mlrs</object-name>      
     <condition>
-     
+      <and>
         <equals>
-          <property>sim/multiplay/generic/string[1]</property>
+          <property>sim/weight[0]/selected</property>
           <value>MLRS</value>
         </equals>
-       
+        <equals>
+          <property>controls/armament/station[0]/release</property>
+          <value>false</value>
+        </equals>
+      </and>
     </condition>
   </animation>	
   
@@ -338,12 +386,16 @@
     <type>select</type>
     <object-name>buffalo</object-name>      
     <condition>
-     
+      <and>
         <equals>
-          <property>sim/multiplay/generic/string[1]</property>
+          <property>sim/weight[0]/selected</property>
           <value>Buffalo</value>
         </equals>
-       
+        <equals>
+          <property>controls/armament/station[0]/release</property>
+          <value>false</value>
+        </equals>
+      </and>
     </condition>
   </animation>	
   
@@ -361,12 +413,16 @@
     <type>select</type>
     <object-name>stryker</object-name>      
     <condition>
-      
+      <and>
         <equals>
-          <property>sim/multiplay/generic/string[1]</property>
+          <property>sim/weight[0]/selected</property>
           <value>Stryker</value>
         </equals>
-      
+        <equals>
+          <property>controls/armament/station[0]/release</property>
+          <value>false</value>
+        </equals>
+      </and>
     </condition>
   </animation>	
   
@@ -384,12 +440,16 @@
     <type>select</type>
     <object-name>Scimiter</object-name>      
     <condition>
-      
+      <and>
         <equals>
-          <property>sim/multiplay/generic/string[1]</property>
+          <property>sim/weight[0]/selected</property>
           <value>FV107</value>
         </equals>
-       
+        <equals>
+          <property>controls/armament/station[0]/release</property>
+          <value>false</value>
+        </equals>
+      </and>
     </condition>
   </animation>	
   
@@ -408,97 +468,17 @@
     <type>select</type>
     <object-name>warrior</object-name>      
     <condition>
-     
+      <and>
         <equals>
-          <property>sim/multiplay/generic/string[1]</property>
+          <property>sim/weight[0]/selected</property>
           <value>FV510</value>
         </equals>
-       
+        <equals>
+          <property>controls/armament/station[0]/release</property>
+          <value>false</value>
+        </equals>
+      </and>
     </condition>
   </animation>	
-  
-  
-  <animation>
-  <type>select</type>
-  <object-name>pylon.C</object-name>  
-  <condition>
-  <or>
-   <equals>
-    <property>sim/multiplay/generic/string[1]</property>
-    <value>1x Hummer</value>
-   </equals>
-   <equals>
-    <property>sim/multiplay/generic/string[1]</property>
-    <value>CH-47</value>
-   </equals>
-   <equals>
-    <property>sim/multiplay/generic/string[1]</property>
-    <value>M1 Abrams</value>
-   </equals>
-   <equals>
-    <property>sim/multiplay/generic/string[1]</property>
-    <value>2x Hummer</value>
-   </equals>
-    <equals>
-    <property>sim/multiplay/generic/string[1]</property>
-    <value>1x LandRover WMIK</value>
-   </equals>
-    <equals>
-    <property>sim/multiplay/generic/string[1]</property>
-    <value>2x LandRover WMIK</value>
-   </equals>
-    <equals>
-    <property>sim/multiplay/generic/string[1]</property>
-    <value>4x LandRover WMIK</value>
-   </equals>
-    <equals>
-    <property>sim/multiplay/generic/string[1]</property>
-    <value>1x Jackal</value>
-   </equals>
-    <equals>
-    <property>sim/multiplay/generic/string[1]</property>
-    <value>2x Jackal</value>
-   </equals>
-    <equals>
-    <property>sim/multiplay/generic/string[1]</property>
-    <value>MTVR</value>
-   </equals>
-    <equals>
-    <property>sim/multiplay/generic/string[1]</property>
-    <value>BVS10-Viking</value>
-   </equals>
-    <equals>
-    <property>sim/multiplay/generic/string[1]</property>
-    <value>M2-Bradle</value>
-   </equals>
-    <equals>
-    <property>sim/multiplay/generic/string[1]</property>
-    <value>MLRS</value>
-   </equals>
-    <equals>
-    <property>sim/multiplay/generic/string[1]</property>
-    <value>BVS10-Viking</value>
-   </equals>
-    <equals>
-    <property>sim/multiplay/generic/string[1]</property>
-    <value>Buffalo</value>
-   </equals>
-    <equals>
-    <property>sim/multiplay/generic/string[1]</property>
-    <value>Stryker</value>
-   </equals>
-    <equals>
-    <property>sim/multiplay/generic/string[1]</property>
-    <value>Scimiter</value>
-   </equals>
-    <equals>
-    <property>sim/multiplay/generic/string[1]</property>
-    <value>FV510</value>
-   </equals>
-   
-   
-  </or>
-  </condition>
- </animation>
 
 </PropertyList>
