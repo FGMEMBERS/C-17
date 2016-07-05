@@ -494,6 +494,9 @@
 	  <soundhelper>
       <file>Aircraft/C-17/Nasal/soundhelper.nas</file>
     </soundhelper>
+    <damage>
+    	<file>Aircraft/C-17/Nasal/damage.nas</file>
+    </damage>
 	
     </nasal>
 	<instrumentation>
