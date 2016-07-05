@@ -1,0 +1,13 @@
+<?xml version="1.0"?>
+
+<PropertyList>
+  <sim>
+    <model>
+      <livery>
+        <name type="string">Default - USAF 62nd AW</name>
+        <texture>Liveries/default/C-17-0174.jpg</texture>
+	  </livery>
+	  	  
+    </model>
+  </sim>
+</PropertyList>

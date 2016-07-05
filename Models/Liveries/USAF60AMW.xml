@@ -1,0 +1,13 @@
+<?xml version="1.0"?>
+
+<PropertyList>
+  <sim>
+    <model>
+      <livery>
+        <name type="string">USAF 60 AMW, Travis</name>
+        <texture>Liveries/USAF60AMW/C-17-60.jpg</texture>
+	  </livery>
+	  	  
+    </model>
+  </sim>
+</PropertyList>
