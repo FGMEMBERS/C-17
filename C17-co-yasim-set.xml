@@ -397,6 +397,9 @@
 		 <doors>
       <file>Aircraft/C-17/Nasal/doors.nas</file>
     </doors>
+    <damage>
+    	<file>Aircraft/C-17/Nasal/damage.nas</file>
+    </damage>
   
  </nasal>
 
