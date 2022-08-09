@@ -21,12 +21,8 @@
 	
 	
 	<flight-model>jsb</flight-model>
-    <aero>C-17</aero>
-	
-	<flight-model>yasim</flight-model>
-    <aero>C17-yasim</aero>
-	
-	
+	<aero>C-17</aero>
+		
 	<systems>
 
   <electrical>
