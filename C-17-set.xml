@@ -282,15 +282,23 @@
 		<menubar>
 		  <default>
 			<menu n="100">				
-			<label>C-17 Globemaster III</label>
-			<enabled type="bool">true</enabled>
-			<item>
-			  <label>Select Livery</label>
-			  <binding>
-			  <command>nasal</command>
-			  <script>aircraft.livery.dialog.open()</script>
-			  </binding>
-			</item>
+			  <label>Globemaster III</label>
+			  <enabled type="bool">true</enabled>
+			  <item>
+			    <label>Select Livery</label>
+			    <binding>
+			      <command>nasal</command>
+			      <script>aircraft.livery.dialog.open()</script>
+			    </binding>
+			  </item>
+			  <item>
+			    <label>Auto Start</label>
+			    <binding>
+			      <command>nasal</command>
+			      <script>
+			        autostart.StartUp();</script>
+			    </binding>
+			  </item>
 			</menu>		
 		  </default>	
 		</menubar>
@@ -381,16 +389,16 @@
     	
 	<engines>
 	  <engine n="0">
-		<running>true</running>
+		<running>false</running>
 	  </engine>
 	  <engine n="1">
-		<running>true</running>
+		<running>false</running>
 	  </engine>
 	  <engine n="2">
-		<running>true</running>
+		<running>false</running>
 	  </engine>
 	  <engine n="3">
-		<running>true</running>
+		<running>false</running>
 	  </engine>
 	</engines>
 	
@@ -442,59 +450,58 @@
   </jsbsim>
  </fdm>
 	
-	<nasal>
-	
-        <C-17>
-            <!-- <file>Aircraft/Generic/limits.nas</file> -->
-			<file>Aircraft/C-17/Nasal/liveries.nas</file>
-			<file>Aircraft/C-17/Systems/air-ground.nas</file> 
-			
-			<!-- <file>Aircraft/C-17/Nasal/light.nas</file> -->
-			<file>Aircraft/C-17/Nasal/tyresmoke.nas</file>
-			<file>Aircraft/C-17/Systems/TEST.nas</file> 
-            <file>Aircraft/C-17/Systems/systems.nas</file>
-           <!-- <file>Aircraft/C-17/Systems/Electrical.nas</file>	-->		
-		</C-17>
-		 
-		 <doors>
-          <file>Aircraft/C-17/Nasal/doors.nas</file>
-         </doors>
-		<reversethrust>
-		<file>Aircraft/C-17/Nasal/reverse-thrust.nas</file>
-		</reversethrust>
-		<lights>
-		   <file>Aircraft/C-17/Nasal/lights.nas</file>
-		</lights>
-		<rwr>
-         <file>Aircraft/C-17/Nasal/rwr.nas</file>
-        </rwr> 
-       <radardist>
-         <file>Aircraft/Instruments-3d/radardist/radardist.nas</file>
-        </radardist>
-        <enav>
-         <file>Aircraft/C-17/Nasal/enav.nas</file>
-        </enav>
-        <radar>
-         <file>Aircraft/C-17/Nasal/radar.nas</file> 
-        </radar>
-       <radar2>
-<file>Aircraft/Instruments-3d/radar2/radar2.nas</file>
-</radar2>
-		
-		<aar>
-<file>Aircraft/Generic/aar.nas</file>
-</aar>
-		 <terrain-map>
-          <file>Aircraft/C-17/Nasal/terrain-map.nas</file>
-    </terrain-map>
-	  <soundhelper>
-      <file>Aircraft/C-17/Nasal/soundhelper.nas</file>
-    </soundhelper>
-    <damage>
-    	<file>Aircraft/C-17/Nasal/damage.nas</file>
-    </damage>
-	
-    </nasal>
+ <nasal>
+   <autostart>
+     <file>Aircraft/C-17/Nasal/autostart.nas</file> 	
+   </autostart>
+   <C-17>
+     <!-- <file>Aircraft/Generic/limits.nas</file> -->
+     <file>Aircraft/C-17/Nasal/liveries.nas</file>
+     <file>Aircraft/C-17/Systems/air-ground.nas</file> 
+     <!-- <file>Aircraft/C-17/Nasal/light.nas</file> -->
+     <file>Aircraft/C-17/Nasal/tyresmoke.nas</file>
+     <file>Aircraft/C-17/Systems/TEST.nas</file> 
+     <file>Aircraft/C-17/Systems/systems.nas</file>
+     <!-- <file>Aircraft/C-17/Systems/Electrical.nas</file>	-->		
+   </C-17>
+   <doors>
+     <file>Aircraft/C-17/Nasal/doors.nas</file>
+   </doors>
+   <reversethrust>
+     <file>Aircraft/C-17/Nasal/reverse-thrust.nas</file>
+   </reversethrust>
+   <lights>
+     <file>Aircraft/C-17/Nasal/lights.nas</file>
+   </lights>
+   <rwr>
+     <file>Aircraft/C-17/Nasal/rwr.nas</file>
+   </rwr> 
+   <radardist>
+     <file>Aircraft/Instruments-3d/radardist/radardist.nas</file>
+   </radardist>
+   <enav>
+     <file>Aircraft/C-17/Nasal/enav.nas</file>
+   </enav>
+   <!--radar>
+       <file>Aircraft/C-17/Nasal/radar.nas</file> 
+   </radar-->
+   <radar2>
+     <file>Aircraft/Instruments-3d/radar2/radar2.nas</file>
+   </radar2>
+   <aar>
+     <file>Aircraft/Generic/aar.nas</file>
+   </aar>
+   <terrain-map>
+     <file>Aircraft/C-17/Nasal/terrain-map.nas</file>
+   </terrain-map>
+   <soundhelper>
+     <file>Aircraft/C-17/Nasal/soundhelper.nas</file>
+   </soundhelper>
+   <damage>
+     <file>Aircraft/C-17/Nasal/damage.nas</file>
+   </damage>
+ </nasal>
+ 
 	<instrumentation>
                 <radar>
             <switch type="string" archive="y">on</switch>
