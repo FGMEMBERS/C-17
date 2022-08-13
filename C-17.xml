@@ -1,13 +1,13 @@
 <?xml version="1.0"?>
 <?xml-stylesheet href="JSBSim.xsl" type="application/xml"?>
-<fdm_config name="C-17 Globemaster III" version="2.1" release="BETA">
+<fdm_config name="C-17 Globemaster III" version="2.0" release="BETA">
 
   <fileheader>
     <author>Jon Bourgeois(FDM), Adam Fothergill(Model), Israel Hernandez and D. Waggoner</author>
     <email>jonbourg@yahoo.com</email>
     <filecreationdate>2008-12-12</filecreationdate>
     <description>C-17 USAF Strategic Airlifter</description>
-    <version>2.1</version>
+    <version>2.0</version>
   </fileheader>
   <!--
       File:     C-17A Globemaster III.xml
