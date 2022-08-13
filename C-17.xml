@@ -33,10 +33,6 @@
     K:             0.042
 
 -->
-<output name="/home/shared/Research/c-17-output.csv" type="CSV" rate="10">
-  <propulsion>ON</propulsion>
-</output>
-
     <metrics>
         <wingarea unit="FT2"> 3800 </wingarea>
         <wingspan unit="FT"> 169.8 </wingspan>
