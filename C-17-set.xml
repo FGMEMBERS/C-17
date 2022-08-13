@@ -5,18 +5,33 @@
     <status>BETA</status>
     <author>Jon Bourgeois (FDM), Adam Fothergill (Model), Geed (sound), IH-COL and D. Wagonner (Updates)</author>
     <aircraft-version>3.1.1</aircraft-version>
-    
+    <minimum-fg-version>2020.2.0</minimum-fg-version>    
+
     <rating>
       <FDM type="int">1</FDM>
       <systems type="int">1</systems>
       <cockpit type="int">1</cockpit>
       <model type="int">2</model>
     </rating>
-    
-    <!-- Splash Screen -->	
-    <startup>
-      <splash-texture>Aircraft/C-17/C-17Splash4.png</splash-texture>
-    </startup>
+
+    <!-- Splash screens. One is randomly chosen when FlightGear starts -->
+    <previews>
+      <preview>
+        <type>exterior</type>
+        <path>Previews/C-17-preview1.png</path>
+        <splash type="bool">true</splash>
+      </preview>
+      <preview>
+        <type>exterior</type>
+        <path>Previews/C-17-preview2.png</path>
+        <splash type="bool">true</splash>
+      </preview>
+      <preview>
+        <type>exterior</type>
+        <path>Previews/C-17-preview3.png</path>
+        <splash type="bool">true</splash>
+      </preview>
+    </previews>
     
     <flight-model>jsb</flight-model>
     <aero>C-17</aero>
