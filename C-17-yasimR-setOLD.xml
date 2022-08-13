@@ -17,9 +17,8 @@
 	</rating>
 	
 	<!-- Splash Screen -->	
-	
 	<startup>
-	  <splash-texture>Aircraft/C-17/C-17Splash1.png</splash-texture>
+	  <splash-texture>Aircraft/C-17/Previews/C-17-preview1.png</splash-texture>
 	</startup>
 	
 	<systems>
