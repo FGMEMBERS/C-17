@@ -33,8 +33,8 @@
     K:             0.042
 
 -->
-<output name="/home/shared/fg-logs-outputs/c-17-output.csv" type="CSV" rate="10">
-  <velocities> ON </velocities>
+<output name="/home/shared/Research/c-17-output.csv" type="CSV" rate="10">
+  <propulsion>ON</propulsion>
 </output>
 
     <metrics>
@@ -59,7 +59,7 @@
         <location name="VRP" unit="FT">
             <x> 75.26 </x>
             <y> 0 </y>
-            <z> -2.1105 </z>
+            <z> -3.45 </z>
         </location>
     </metrics>
 
@@ -114,9 +114,9 @@
     <ground_reactions>
         <contact type="BOGEY" name="NOSE">
             <location unit="FT">
-                <x> 10.3 </x>
-                <y> 0 </y>
-                <z> -12.4 </z>
+                <x>10.3</x>
+                <y>0</y>
+                <z>-13.80</z>
             </location>
             <static_friction> 0.8 </static_friction>
             <dynamic_friction> 0.5 </dynamic_friction>
