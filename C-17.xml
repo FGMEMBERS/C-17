@@ -33,6 +33,10 @@
     K:             0.042
 
 -->
+<output name="/home/shared/fg-logs-outputs/c-17-output.csv" type="CSV" rate="10">
+  <velocities> ON </velocities>
+</output>
+
     <metrics>
         <wingarea unit="FT2"> 3800 </wingarea>
         <wingspan unit="FT"> 169.8 </wingspan>
@@ -55,7 +59,7 @@
         <location name="VRP" unit="FT">
             <x> 75.26 </x>
             <y> 0 </y>
-            <z> 0 </z>
+            <z> -2.1105 </z>
         </location>
     </metrics>
 
@@ -66,14 +70,47 @@
         <ixz unit="SLUG*FT2">0</ixz>
         <iyz unit="SLUG*FT2">0</iyz>
         <ixy unit="SLUG*FT2">0</ixy>
-        <emptywt unit="LBS">277000</emptywt>
+        <emptywt unit="LBS">254100</emptywt>
         <location name="CG" unit="FT">
-            <x>74.0</x>
+            <x>62.51682</x>
             <y>0</y>
-            <z>0</z>
+            <z>7.415492</z>
         </location>
     </mass_balance>
 
+    <pointmass name="Engine0">
+      <location unit="FT">
+	<x>53.43</x>
+	<y>-45.9</y>
+	<z>0</z>
+      </location>
+      <weight unit="LBS">7100</weight>
+    </pointmass>
+    <pointmass name="Engine1">
+      <location unit="FT">
+	<x>41.1</x>
+	<y>-25.35</y>
+	<z>0.68</z>
+      </location>
+      <weight unit="LBS">7100</weight>
+    </pointmass>
+    <pointmass name="Engine2">
+      <location unit="FT">
+	<x>41.1</x>
+	<y>25.35</y>
+	<z>0.68</z>
+      </location>
+      <weight unit="LBS">7100</weight>
+    </pointmass>
+    <pointmass name="Engine3">
+      <location unit="FT">
+	<x>53.43</x>
+	<y>45.9</y>
+	<z>0</z>
+      </location>
+      <weight unit="LBS">7100</weight>
+    </pointmass>
+    
     <ground_reactions>
         <contact type="BOGEY" name="NOSE">
             <location unit="FT">
