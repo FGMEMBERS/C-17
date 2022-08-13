@@ -55,7 +55,7 @@
         <location name="VRP" unit="FT">
             <x> 75.26 </x>
             <y> 0 </y>
-            <z> 0 </z>
+            <z> -3.45 </z>
         </location>
     </metrics>
 
@@ -66,20 +66,53 @@
         <ixz unit="SLUG*FT2">0</ixz>
         <iyz unit="SLUG*FT2">0</iyz>
         <ixy unit="SLUG*FT2">0</ixy>
-        <emptywt unit="LBS">277000</emptywt>
+        <emptywt unit="LBS">254100</emptywt>
         <location name="CG" unit="FT">
-            <x>74.0</x>
+            <x>62.51682</x>
             <y>0</y>
-            <z>0</z>
+            <z>7.415492</z>
         </location>
     </mass_balance>
 
+    <pointmass name="Engine0">
+      <location unit="FT">
+	<x>53.43</x>
+	<y>-45.9</y>
+	<z>0</z>
+      </location>
+      <weight unit="LBS">7100</weight>
+    </pointmass>
+    <pointmass name="Engine1">
+      <location unit="FT">
+	<x>41.1</x>
+	<y>-25.35</y>
+	<z>0.68</z>
+      </location>
+      <weight unit="LBS">7100</weight>
+    </pointmass>
+    <pointmass name="Engine2">
+      <location unit="FT">
+	<x>41.1</x>
+	<y>25.35</y>
+	<z>0.68</z>
+      </location>
+      <weight unit="LBS">7100</weight>
+    </pointmass>
+    <pointmass name="Engine3">
+      <location unit="FT">
+	<x>53.43</x>
+	<y>45.9</y>
+	<z>0</z>
+      </location>
+      <weight unit="LBS">7100</weight>
+    </pointmass>
+    
     <ground_reactions>
         <contact type="BOGEY" name="NOSE">
             <location unit="FT">
-                <x> 10.3 </x>
-                <y> 0 </y>
-                <z> -12.4 </z>
+                <x>10.3</x>
+                <y>0</y>
+                <z>-13.80</z>
             </location>
             <static_friction> 0.8 </static_friction>
             <dynamic_friction> 0.5 </dynamic_friction>
