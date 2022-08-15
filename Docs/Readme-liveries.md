@@ -2,7 +2,7 @@
 
 :airplane: 
 
-You will find a folder called `PNG Graphics` in the models folder. this contains the master liveries in `PNG` format at `4096x4094`.
+You will find a folder called `PNG_Graphics` in the Sources folder. this contains the master liveries in `PNG` format at `4096x4094`.
 
 Use this `PNG` file to create  further liveries but _DO NOT SAVE OVER IT_. When saving your new liveries  use _SAVE AS_ and save your new livery as a compressed  `JPEG` at `1024x1024`.
 
