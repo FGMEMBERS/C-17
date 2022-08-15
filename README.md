@@ -6,20 +6,19 @@ FGUK's Boeing C-17 Globemaster III
 <img src="https://upload.wikimedia.org/wikipedia/commons/3/36/C17_aircraft_alt.jpg"  width="600">
 
 ***
+
 ### Authors
 
-* @IAHM-COL - Updates
-* @DrDavid  - Updates
+* [@IAHM-COL](https://github.com/IAHM-COL) - Updates
+* [@DrDavid](https://github.com/DrDavid)  - Updates
 * Jon Bourgeois - JSBSim Flight Data Model
 * Dave Austin, Adam Fothergill - 3D Aircraft Model and Textures, converted from X-Plane
 
-**** 
-This aircraft requires the FGUK payloads Package V1.6 or better. Available [HERE](http://fguk.eu/index.php/hangar/download/10-other-objects-and-vehicles/162-fguk-payloads-package)
+****
 
-![FGUK Image](http://www.fguk.eu/images/jdownloads/screenshots/fgfs-screen-104.png)
+This aircraft requires the FGUK payloads Package V1.6 or better. Available [HERE](https://github.com/FGMEMBERS/fgukpayloads)
 
-Release Notes:
--------------
+### Release Notes:
 
 V3.1
 ----
