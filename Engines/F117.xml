@@ -1,60 +1,62 @@
 <?xml version="1.0"?>
 <!--
-  File:     F117.xml
-  Author:   Aero-Matic v 0.81
+    File:     F117.xml
+    Author:   Modified by IH-COL
 
-  Inputs:
-    name:           F117-PW-100
-    type:           turbine
-    thrust:         40440 lb
-    augmented?      no
-    injected?       no
+Inputs:
+name:           F117-PW-100
+type:           Turbine
+thrust:         40440 lb
+augmented?:     no
+injected?:      no
 -->
 
 <turbine_engine name="F117">
-  <milthrust> 40440.0 </milthrust>
-  <bypassratio>     5.9 </bypassratio>
-  <tsfc>            0.33 </tsfc>
-  <bleed>           0.03</bleed>
-  <idlen1>         30.0 </idlen1>
-  <idlen2>         60.0 </idlen2>
-  <maxn1>         100.0 </maxn1>
-  <maxn2>         100.0 </maxn2>
-  <augmented>         0 </augmented>
-  <injected>          0 </injected>
+  <milthrust>40440.0</milthrust>
+  <bypassratio>5.9</bypassratio>
+  <tsfc>0.33</tsfc>
+  <bleed>0.03</bleed>
+  <idlen1>30.0</idlen1>
+  <idlen2>60.0</idlen2>
+  <maxn1>100.0</maxn1>
+  <maxn2>100.0</maxn2>
+  <augmented>0</augmented>
+  <injected>0</injected>
 
   <function name="IdleThrust">
-   <table>
-    <independentVar lookup="row">velocities/mach</independentVar>
-    <independentVar lookup="column">atmosphere/density-altitude</independentVar>
-    <tableData>
-         -10000     0     10000   20000   30000   40000   50000
-     0.0  0.0430  0.0488  0.0528  0.0694  0.0899  0.1183  0.1467
-     0.2  0.0500  0.0501  0.0335  0.0544  0.0797  0.1049  0.1342
-     0.4  0.0040  0.0047  0.0020  0.0272  0.0595  0.0891  0.1203
-     0.6  0.0     0.0     0.0     0.0     0.0276  0.0718  0.1073
-     0.8  0.0     0.0     0.0     0.0     0.0474  0.0868  0.0900
-     1.0  0.0     0.0     0.0     0.0     0.0     0.0552  0.0800
-    </tableData>
-   </table>
+    <table>
+      <independentVar lookup="row">velocities/mach</independentVar>
+      <independentVar lookup="column">atmosphere/density-altitude</independentVar>
+      <tableData>
+		-10000	0	10000	20000	30000	36000	40000	50000
+	0	0.05190	0.04880	0.04570	0.04265	0.03950	0.03802	0.03127	0.01448
+	0.2	0.04778	0.04575	0.04371	0.04135	0.03872	0.03724	0.03081	0.01420
+	0.4	0.04681	0.04515	0.04348	0.04135	0.03881	0.03733	0.03090	0.01429
+	0.6	0.04824	0.04653	0.04482	0.04256	0.03978	0.03830	0.03159	0.01471
+	0.8	0.05181	0.04973	0.04764	0.04487	0.04158	0.04010	0.03284	0.01545
+	1	0.05694	0.05435	0.05176	0.04806	0.04427	0.04279	0.03469	0.01661
+	1.2	0.06231	0.05944	0.05657	0.05236	0.04750	0.04602	0.03696	0.01799
+	1.4	0.06735	0.06453	0.06171	0.05703	0.05134	0.04986	0.03973	0.01975
+      </tableData>
+    </table>
   </function>
 
   <function name="MilThrust">
-   <table>
-    <independentVar lookup="row">velocities/mach</independentVar>
-    <independentVar lookup="column">atmosphere/density-altitude</independentVar>
-    <tableData>
-          -10000       0   10000   20000   30000   40000   50000
-     0.0   1.2600  1.0000  0.7400  0.5340  0.3720  0.2410  0.1490
-     0.2   1.1710  0.9340  0.6970  0.5060  0.3550  0.2310  0.1430
-     0.4   1.1500  0.9210  0.6920  0.5060  0.3570  0.2330  0.1450
-     0.6   1.1810  0.9510  0.7210  0.5320  0.3780  0.2480  0.1540
-     0.8   1.2580  1.0200  0.7820  0.5820  0.4170  0.2750  0.1700
-     1.0   1.3690  1.1200  0.8710  0.6510  0.4750  0.3150  0.1950
-     1.2   1.4850  1.2300  0.9750  0.7440  0.5450  0.3640  0.2250
-     1.4   1.5941  1.3400  1.0860  0.8450  0.6280  0.4240  0.2630
-    </tableData>
-   </table>
+    <table>
+      <independentVar lookup="row">velocities/mach</independentVar>
+      <independentVar lookup="column">atmosphere/density-altitude</independentVar>
+      <tableData>
+	        -10000	0	10000	20000	30000	36000	40000	50000
+	0.0	1.122	1.055	0.988	0.922	0.854	0.822	0.676	0.313
+	0.2	1.033	0.989	0.945	0.894	0.837	0.805	0.666	0.307
+	0.4	1.012	0.976	0.940	0.894	0.839	0.807	0.668	0.309
+	0.6	1.043	1.006	0.969	0.920	0.860	0.828	0.683	0.318
+	0.8	1.120	1.075	1.030	0.970	0.899	0.867	0.710	0.334
+	1.0	1.231	1.175	1.119	1.039	0.957	0.925	0.750	0.359
+	1.2	1.347	1.285	1.223	1.132	1.027	0.995	0.799	0.389
+	1.4	1.456	1.395	1.334	1.233	1.110	1.078	0.859	0.427
+      </tableData>
+    </table>
   </function>
 
 </turbine_engine>
