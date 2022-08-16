@@ -1,5 +1,5 @@
-FGUK's Boeing C-17 Globemaster III
-==================================
+Boeing C-17 Globemaster III
+==========================
 
 ### [Wikipedia Page](https://en.wikipedia.org/wiki/Boeing_C-17_Globemaster_III)
 
@@ -22,6 +22,8 @@ This aircraft requires the FGUK payloads Package V1.6 or better. Available [HERE
 
 V3.1
 ----
+
+V3.1 originally obtained from [fguk](https://sites.google.com/view/fgukhangar/flightgear-uk-home-page/hangar/jets/c17-globemaster-iii?authuser=0)
 
 Both versions:
 
