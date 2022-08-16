@@ -34,7 +34,7 @@
     </previews>
     
     <flight-model>jsb</flight-model>
-    <aero>C-17</aero>
+    <aero>Aero/C-17</aero>
     
     <systems>
       <electrical>
