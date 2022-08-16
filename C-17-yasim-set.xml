@@ -6,7 +6,7 @@
     <author>StuartC (FDM), Adam Fothergill (Model) Geed ( sound )</author>
     <aircraft-version>3.1</aircraft-version>
     <flight-model>yasim</flight-model>
-    <aero>C-17-yasim</aero>
+    <aero>Aero/C-17-yasim</aero>
     <fuel-fraction>1.0</fuel-fraction>
     <rating>
       <FDM type="int">4</FDM>
