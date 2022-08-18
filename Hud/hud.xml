@@ -54,7 +54,7 @@
         <enable-energy-worm>true</enable-energy-worm>
         <enable-waypoint-marker>false</enable-waypoint-marker>
     </ladder>
-<!--
+
     <tape>
         <name>Altitude-MSL</name>
         <x>31</x>
@@ -114,7 +114,7 @@
         <enable-pointer>true</enable-pointer>
         <pointer-type>fixed</pointer-type>
     </tape>
--->
+
 
     <tape>
         <name>Gyrocompass</name>
@@ -318,7 +318,7 @@
 		</arc-stop-input>
 
 		<x>-14</x>
-  <y>-27</y>
+  		<y>-27</y>
 		<width>10</width>
 		<height>10</height>
 		<compression-factor>10</compression-factor>
@@ -361,46 +361,46 @@
  
  <!-- waypoint -->
  
- <label>
-		<width>2</width>
-		<height>2</height>
-		<x>20</x>
+    <label>
+	<width>2</width>
+	<height>2</height>
+	<x>20</x>
         <y>-20</y>
-		<format>%4.1f :WYPT1</format>
-		<halign>left</halign>
-		<input>
-			<property>/instrumentation/gps/wp/wp[1]/distance-nm</property>
-		</input>
-	</label>
+	<format>%4.1f :WYPT1</format>
+	<halign>left</halign>
+	<input>
+		<property>/instrumentation/gps/wp/wp[1]/distance-nm</property>
+	</input>
+    </label>
  
  
- <!-- heading 
+ <!-- heading -->
 
     <label>
 	<x>60</x>
-    <y>-50</y> 
-		<width>60</width>
-		<height>10</height>
-		<box>true</box>
-		<format>ROLL</format>
-		<halign>left</halign>
+    	<y>-50</y> 
+	<width>60</width>
+	<height>10</height>
+	<box>true</box>
+	<format>ROLL</format>
+	<halign>left</halign>
 		<condition>
 			<equals>
 				<property>/autopilot/locks/heading</property>
 				<value>wing-leveler</value>
 			</equals>
 		</condition>
-	</label>
+    </label>
     
 
-	<label>
+    <label>
 	<x>60</x>
-    <y>-50</y> 
-		<width>60</width>
-		<height>10</height>
-		<box>true</box>
-		<format>HDG %03d</format>
-		<halign>left</halign>
+    	<y>-50</y> 
+	<width>60</width>
+	<height>10</height>
+	<box>true</box>
+	<format>HDG %03d</format>
+	<halign>left</halign>
 		<input>
 			<property>/autopilot/settings/heading-bug-deg</property>
 		</input>
@@ -410,16 +410,16 @@
 				<value>dg-heading-hold</value>
 			</equals>
 		</condition>
-	</label>
+    </label>
 
-	<label>
+    <label>
 	<x>60</x>
-    <y>-50</y> 
-		<width>60</width>
-		<height>10</height>
-		<box>true</box>
-		<format>HDG %03d</format>
-		<halign>left</halign>
+    	<y>-50</y> 
+	<width>60</width>
+	<height>10</height>
+	<box>true</box>
+	<format>HDG %03d</format>
+	<halign>left</halign>
 		<input>
 			<property>/autopilot/settings/true-heading-deg</property>
 		</input>
@@ -429,10 +429,10 @@
 				<value>true-heading-hold</value>
 			</equals>
 		</condition>
-	</label>
--->
+    </label>
 
-	<!-- altitude
+
+	<!-- altitude -->
 
 	<label>
 	<x>60</x>
@@ -512,8 +512,8 @@
 			</equals>
 		</condition>
 	</label>
--->
-    <!-- speed 
+
+    <!-- speed -->
     <label>
 	<x>60</x>
     <y>-70</y>
@@ -573,5 +573,5 @@
 			</equals>
 		</condition>
 	</label>
-	-->
+
 </PropertyList>

@@ -21,7 +21,7 @@
    <longitude>false</longitude>
   </kias>
 
-<alt>
+  <alt>
    <name>altitude</name>
    <x>250</x>
    <y>180</y>
@@ -117,7 +117,7 @@
   </heading>
 
 
-<lat>
+  <lat>
    <name>lattitude</name>
    <x>354</x>
    <y>180</y>
@@ -155,7 +155,7 @@
    <longitude>true</longitude>
   </lon>
 
-<alpha>
+  <alpha>
    <name>alpha</name>
    <x>354</x>
    <y>160</y>
