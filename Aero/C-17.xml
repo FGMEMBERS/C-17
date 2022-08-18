@@ -55,7 +55,7 @@
     <location name="VRP" unit="FT">
       <x>75.26</x>
       <y>0</y>
-      <z>-3.45</z>
+      <z>-4.0</z>
     </location>
   </metrics>
 
@@ -110,9 +110,9 @@
   <ground_reactions>
     <contact type="BOGEY" name="NOSE">
       <location unit="FT">
-	<x>10.3</x>
+	<x>10.6908</x>
 	<y>0</y>
-	<z>-13.80</z>
+	<z>-14.3229</z>
       </location>
       <static_friction>0.8</static_friction>
       <dynamic_friction>0.5</dynamic_friction>
@@ -125,9 +125,9 @@
     </contact>
     <contact type="BOGEY" name="Left Forward Main">
       <location unit="FT">
-	<x>68.23</x>
-	<y>-12.74</y>
-	<z>-12.4</z>
+	<x>67.0364</x>
+	<y>-10.3836</y>
+	<z>-13.2278</z>
       </location>
       <static_friction>0.8</static_friction>
       <dynamic_friction>0.5</dynamic_friction>
@@ -140,9 +140,9 @@
     </contact>
     <contact type="BOGEY" name="Left Rear Main">
       <location unit="FT">
-	<x>76.13</x>
-	<y>-12.74</y>
-	<z>-12.4</z>
+	<x>75.4012</x>
+	<y>-10.3836</y>
+	<z>-13.2278</z>
       </location>
       <static_friction>0.8</static_friction>
       <dynamic_friction>0.5</dynamic_friction>
@@ -155,9 +155,9 @@
     </contact>
     <contact type="BOGEY" name="Right Forward Main">
       <location unit="FT">
-	<x>68.23</x>
-	<y>12.74</y>
-	<z>-12.4</z>
+	<x>67.0364</x>
+	<y>10.3836</y>
+	<z>-13.2278</z>
       </location>
       <static_friction>0.8</static_friction>
       <dynamic_friction>0.5</dynamic_friction>
@@ -170,9 +170,9 @@
     </contact>
     <contact type="BOGEY" name="Right Rear Main">
       <location unit="FT">
-	<x>76.13</x>
-	<y>12.74</y>
-	<z>-12.4</z>
+	<x>75.4012</x>
+	<y>10.3836</y>
+	<z>-13.2278</z>
       </location>
       <static_friction>0.8</static_friction>
       <dynamic_friction>0.5</dynamic_friction>
