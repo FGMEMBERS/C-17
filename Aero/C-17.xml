@@ -34,18 +34,25 @@
 
   -->
   <metrics>
+    <length unit="FT">173.92</length>
+    <diameter unit="FT">33.67</diameter>
     <wingarea unit="FT2">3800</wingarea>
-    <wingspan unit="FT">169.8</wingspan>
+    <wingspan unit="FT">170.75</wingspan>
     <chord unit="FT">25.9</chord>
-    <wing_incidence unit="">0</wing_incidence>
+    <wing_incidence unit="DEG">3.0</wing_incidence>
+    <wing_sweep unit="DEG">25.0</wing_sweep>
+    <wing_anhedral unit="DEG">3.0</wing_anhedral>
     <htailarea unit="FT2">845</htailarea>
     <htailarm unit="FT">94.48</htailarm>
-    <vtailarea unit="FT2">1145</vtailarea>
+    <ht_sweep unit="DEG">27.0</ht_sweep>
+    <ht_anhedral unit="DEG">3.0</ht_anhedral>
+    <vtailarea unit="FT2">685</vtailarea>
     <vtailarm unit="FT">67.25</vtailarm>
+    <vt_sweep unit="DEG">41.0</vt_sweep>
     <location name="AERORP" unit="FT">
-      <x>75.26</x>
+      <x>73.00</x>
       <y>0</y>
-      <z>0</z>
+      <z>7.415492</z>
     </location>
     <location name="EYEPOINT" unit="FT">
       <x>7.54</x>
