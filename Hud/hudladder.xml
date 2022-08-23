@@ -1,7 +1,5 @@
 <PropertyList>
-
   <ladders>
-
     <l1>
       <name>Pitch Ladder</name>
       <x>304</x>
@@ -29,7 +27,5 @@
       <enable_waypoint_marker>false</enable_waypoint_marker>
       <working>true</working>
     </l1>
-
   </ladders> 
-
 </PropertyList>

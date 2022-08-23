@@ -1,7 +1,5 @@
 <PropertyList>
-
   <labels>
-
     <kias>
       <name>KIAS</name>
       <x>250</x>
@@ -116,7 +114,6 @@
       <longitude>false</longitude>
     </heading>
 
-
     <lat>
       <name>lattitude</name>
       <x>354</x>
@@ -173,7 +170,5 @@
       <latitude>false</latitude>
       <longitude>false</longitude>
     </alpha>
-
   </labels>
-
 </PropertyList>

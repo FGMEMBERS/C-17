@@ -1,7 +1,5 @@
 <PropertyList>
-
   <tbis>
-
     <f1>
       <name>fgTBI_Instrument</name>
       <x>283</x>
@@ -15,7 +13,5 @@
       <gap_width>5</gap_width>
       <working>true</working>
     </f1>
-
   </tbis>
-
 </PropertyList>
