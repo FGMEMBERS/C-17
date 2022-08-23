@@ -3,12 +3,13 @@
 <fdm_config name="C-17 Globemaster III" version="2.0" release="BETA">
 
   <fileheader>
-    <author>Jon Bourgeois(FDM), Adam Fothergill(Model), Israel Hernandez and D. Waggoner</author>
-    <email>jonbourg@yahoo.com</email>
-    <filecreationdate>2008-12-12</filecreationdate>
+    <author>IH-COL, D. Waggoner, Jon Bourgeois, Adam Fothergill</author>
+    <email>iahmcol@thejabberwocky.net</email>
+    <filecreationdate>2022-08-22</filecreationdate>
     <description>C-17 USAF Strategic Airlifter</description>
     <version>2.0</version>
   </fileheader>
+  <!-- GPL version 2.0 or higher -->
   <!--
       File:     C-17A Globemaster III.xml
       Inputs:
@@ -25,8 +26,8 @@
       engine layout: wings
       yaw damper?    yes
       Outputs:
-      wing loading:  153.95 lb/sq-ft
-      CL-alpha:      4.4 per radian
+      wing loading:  153.95 lb/sq-ft  
+      CL-alpha:      5.0446 per radian
       CL-0:          0.2
       CL-max:        1.2
       CD-0:          0.017
@@ -121,12 +122,12 @@
 	<y>0</y>
 	<z>-14.3229</z>
       </location>
-      <static_friction>0.8</static_friction>
+      <static_friction>0.85</static_friction>
       <dynamic_friction>0.5</dynamic_friction>
       <rolling_friction>0.02</rolling_friction>
       <spring_coeff unit="LBS/FT">125000</spring_coeff>
       <damping_coeff unit="LBS/FT/SEC">25000</damping_coeff>
-      <max_steer unit="DEG">70</max_steer>
+      <max_steer unit="DEG">85</max_steer> 
       <brake_group>NONE</brake_group>
       <retractable>1</retractable>
     </contact>

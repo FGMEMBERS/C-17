@@ -67,7 +67,7 @@
         <int alias="/controls/lighting/landing-lights" n="17"/>
         <int alias="/controls/lighting/landing-lights[1]" n="18"/>
         <int alias="/controls/lighting/cabin-lights" n="19"/>
-        <!-- Don't work because FlightGear is limited at 18 MP properties :( -->
+        <!-- Doesn't work because FlightGear is limited at 18 MP properties :( -->
         <float alias="/instrumentation/doors/ramp/position-norm" n="1"/>
         <float alias="/position/gear-agl-m" n="2">0 </float>
         <!-- 11 altitude for MP shadow -->
