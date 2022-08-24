@@ -1,11 +1,11 @@
 <?xml version="1.0"?>
 
 <PropertyList>
-<!--
-  <electrical>
-    <path></path>
-  </electrical>
--->
+  <!--
+      <electrical>
+      <path></path>
+      </electrical>
+  -->
   <pitot>
     <name>pitot</name>
     <number>0</number>
