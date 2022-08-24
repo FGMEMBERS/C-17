@@ -272,7 +272,7 @@
           <label>C-17 Globemaster III</label>
           <enabled type="bool">true</enabled>
           <!--
-           <item><label>Autostart</label><binding><command>property-toggle</command><property>sim/model/start-idling</property></binding></item>-->
+              <item><label>Autostart</label><binding><command>property-toggle</command><property>sim/model/start-idling</property></binding></item>-->
           <item>
             <label>Select Livery</label>
             <binding>
@@ -282,7 +282,7 @@
           </item>
         </menu>
         <!--
-      <menu n="10"><label>C-17 Globemaster III</label><enabled type="bool">true</enabled><item><label>Select Livery</label><binding><command>nasal</command><script>aircraft.livery.dialog.toggle()</script></binding></item></menu>-->
+	    <menu n="10"><label>C-17 Globemaster III</label><enabled type="bool">true</enabled><item><label>Select Livery</label><binding><command>nasal</command><script>aircraft.livery.dialog.toggle()</script></binding></item></menu>-->
       </default>
     </menubar>
     <!-- Submodel (Paratroopers) -->
