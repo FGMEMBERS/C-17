@@ -2,7 +2,7 @@
 <!-- Airbus A340-600 Sound Effects by Liam Gathercole -->
 
 <PropertyList>
- <!-- cockpit x=22.5 y=0 z=0.78   -->
+ <!-- cockpit x=22.5 y=0 z=0.78 -->
  <fx>
    <!-- Engines -->
    <!-- inernal -->
@@ -217,6 +217,7 @@
 	 </not>
 	</and>
      </condition>
+
      <volume>
        <property>engines/engine[0]/n2</property>
        <factor>0.09</factor>
@@ -252,6 +253,7 @@
 	 </not>
 	</and>
      </condition>
+
      <volume>
        <property>engines/engine[1]/n2</property>
        <factor>0.09</factor>
@@ -267,7 +269,7 @@
      <reference-dist>100</reference-dist>
      <max-dist>1000</max-dist>
    </engine>
-
+    
    <engine>
      <name>engine-start-outside2</name>
      <mode>once</mode>
@@ -338,7 +340,7 @@
      <reference-dist>100</reference-dist>
      <max-dist>1000</max-dist>
    </engine>
-
+    
    <engine>
      <name>whine0</name>
      <path>Aircraft/C-17/Sounds/rb211-whine.wav</path>
@@ -426,7 +428,7 @@
        <offset>-0.1</offset>
      </pitch>
    </engine>
-    
+
    <engine>
      <name>engine</name>
      <path>Aircraft/C-17/Sounds/jet-blast.wav</path>
@@ -723,7 +725,7 @@
 
    <squeal0>
      <name>squeal</name>
-     <path>Aircraft/C-17/Sounds/touchdown.wav</path>
+     <path>/Aircraft/C-17/Sounds/touchdown.wav</path>
      <condition>
        <or>
          <property>/gear/gear[0]/wow</property>
@@ -841,7 +843,7 @@
    <stall>
      <name>stall</name>
      <mode>looped</mode>
-     <path>Aircraft/C-17/Sounds/stall.wav</path>
+     <path>/Aircraft/C-17/Sounds/stall.wav</path>
      <condition>
        <less-than>
          <property>velocities/airspeed-kt</property>
@@ -870,7 +872,7 @@
    <stall>
      <name>stall</name>
      <mode>looped</mode>
-     <path>Aircraft/C-17/Sounds/stall.wav</path>
+     <path>/Aircraft/C-17/Sounds/stall.wav</path>
      <condition>
        <less-than>
          <property>velocities/airspeed-kt</property>
@@ -898,7 +900,7 @@
    <stall>
      <name>stall</name>
      <mode>looped</mode>
-     <path>Aircraft/C-17/Sounds/stall.wav</path>
+     <path>/Aircraft/C-17/Sounds/stall.wav</path>
      <condition>
        <less-than>
          <property>velocities/airspeed-kt</property>
@@ -908,12 +910,6 @@
 	 <property>position/altitude-agl-ft</property>
          <value>30</value>
 	</greater-than>
-       <not>
-         <property>/gear/gear[0]/wow</property>
-         <property>/gear/gear[1]/wow</property>
-         <property>/gear/gear[2]/wow</property>
-         <property>/surface-positions/flap-pos-norm</property>
-       </not>
      </condition>
      <volume>
        <max>0.5</max>
@@ -1149,7 +1145,6 @@
        <z>0</z>
      </position>
    </altitude6>
-
    <altitude7>
      <name>alt-200</name>
      <reference-dist>1.0</reference-dist>
