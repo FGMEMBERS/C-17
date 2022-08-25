@@ -109,10 +109,10 @@
      <reference-dist>100</reference-dist>
      <max-dist>1000</max-dist>
    </engine>
-    
+   
    <engine>
      <name>whine-int</name>
-     <path>Aircraft/C-17/Sounds/f16-engine-int.wav</path>
+     <path>Aircraft/C-17/Sounds/757_inside.wav</path>
      <mode>looped</mode>
      <condition>
        <property>/engines/engine[0]/running</property>
@@ -131,10 +131,10 @@
        <offset>-0.1</offset>
      </pitch>
    </engine>
-    
+     
    <engine>
      <name>whine-int1</name>
-     <path>Aircraft/C-17/Sounds/f16-engine-int.wav</path>
+     <path>Aircraft/C-17/Sounds/757_inside.wav</path>
      <mode>looped</mode>
      <condition>
        <property>/engines/engine[1]/running</property>
@@ -153,10 +153,10 @@
        <offset>-0.1</offset>
      </pitch>
    </engine>
-    
+
    <engine>
      <name>whine-int2</name>
-     <path>Aircraft/C-17/Sounds/f16-engine-int.wav</path>
+     <path>Aircraft/C-17/Sounds/757_inside.wav</path>
      <mode>looped</mode>
      <condition>
        <property>/engines/engine[2]/running</property>
@@ -175,10 +175,10 @@
        <offset>-0.1</offset>
      </pitch>
    </engine>
-    
+
    <engine>
      <name>whine-int3</name>
-     <path>Aircraft/C-17/Sounds/f16-engine-int.wav</path>
+     <path>Aircraft/C-17/Sounds/757_inside.wav</path>
      <mode>looped</mode>
      <condition>
        <property>/engines/engine[3]/running</property>
@@ -197,6 +197,7 @@
        <offset>-0.1</offset>
      </pitch>
    </engine>
+   
    <!-- engine external sounds -->
    <engine>
      <name>engine-start-outside0</name>
