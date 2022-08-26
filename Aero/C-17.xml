@@ -300,11 +300,6 @@
 
   <propulsion>
     <engine file="F117">
-      <location unit="FT">
-	<x>53.43</x>
-	<y>-45.9</y>
-	<z>0</z>
-      </location>
       <orient unit="DEG">
 	<roll>0</roll>
 	<pitch>0</pitch>
@@ -325,12 +320,8 @@
 	</orient>
       </thruster>
     </engine>
+
     <engine file="F117">
-      <location unit="FT">
-	<x>41.1</x>
-	<y>-25.35</y>
-	<z>0.68</z>
-      </location>
       <orient unit="DEG">
 	<roll>0</roll>
 	<pitch>0</pitch>
@@ -351,12 +342,8 @@
 	</orient>
       </thruster>
     </engine>
+
     <engine file="F117">
-      <location unit="FT">
-	<x>41.1</x>
-	<y>25.35</y>
-	<z>0.68</z>
-      </location>
       <orient unit="DEG">
 	<roll>0</roll>
 	<pitch>0</pitch>
@@ -377,12 +364,8 @@
 	</orient>
       </thruster>
     </engine>
+
     <engine file="F117">
-      <location unit="FT">
-	<x>53.43</x>
-	<y>45.9</y>
-	<z>0</z>
-      </location>
       <orient unit="DEG">
 	<roll>0</roll>
 	<pitch>0</pitch>
@@ -403,6 +386,7 @@
 	</orient>
       </thruster>
     </engine>
+
     <tank type="FUEL" number="0">
       <location unit="FT">
 	<x>52.06</x>
@@ -412,6 +396,7 @@
       <capacity unit="LBS">65280</capacity>
       <contents unit="LBS">65280</contents>
     </tank>
+
     <tank type="FUEL" number="1">
       <location unit="FT">
 	<x>62.34</x>
@@ -421,6 +406,7 @@
       <capacity unit="LBS">53992</capacity>
       <contents unit="LBS">53992</contents>
     </tank>
+
     <tank type="FUEL" number="2">
       <location unit="FT">
 	<x>62.34</x>
@@ -430,6 +416,7 @@
       <capacity unit="LBS">53992</capacity>
       <contents unit="LBS">53992</contents>
     </tank>
+
     <tank type="FUEL" number="3">
       <location unit="FT">
 	<x>77.41</x>
@@ -439,6 +426,7 @@
       <capacity unit="LBS">38100.4</capacity>
       <contents unit="LBS">38100.4</contents>
     </tank>
+
     <tank type="FUEL" number="4">
       <location unit="FT">
 	<x>77.41</x>
