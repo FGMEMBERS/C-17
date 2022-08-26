@@ -112,7 +112,7 @@
    
    <engine>
      <name>whine-int</name>
-     <path>Aircraft/C-17/Sounds/757_inside.wav</path>
+     <path>Aircraft/C-17/Sounds/C-17-internal-whine.wav</path>
      <mode>looped</mode>
      <condition>
        <property>/engines/engine[0]/running</property>
@@ -134,7 +134,7 @@
      
    <engine>
      <name>whine-int1</name>
-     <path>Aircraft/C-17/Sounds/757_inside.wav</path>
+     <path>Aircraft/C-17/Sounds/C-17-internal-whine.wav</path>
      <mode>looped</mode>
      <condition>
        <property>/engines/engine[1]/running</property>
@@ -156,7 +156,7 @@
 
    <engine>
      <name>whine-int2</name>
-     <path>Aircraft/C-17/Sounds/757_inside.wav</path>
+     <path>Aircraft/C-17/Sounds/C-17-internal-whine.wav</path>
      <mode>looped</mode>
      <condition>
        <property>/engines/engine[2]/running</property>
@@ -178,7 +178,7 @@
 
    <engine>
      <name>whine-int3</name>
-     <path>Aircraft/C-17/Sounds/757_inside.wav</path>
+     <path>Aircraft/C-17/Sounds/C-17-internal-whine.wav</path>
      <mode>looped</mode>
      <condition>
        <property>/engines/engine[3]/running</property>
