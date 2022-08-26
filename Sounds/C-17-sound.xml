@@ -430,7 +430,7 @@
     
    <engine>
      <name>engine</name>
-     <path>Aircraft/C-17/Sounds/jet-blast.wav</path>
+     <path>Aircraft/C-17/Sounds/C-17-jet-blast.wav</path>
      <mode>looped</mode>
      <condition>
        <property>engines/engine[0]/running</property>
@@ -451,7 +451,7 @@
     
    <engine>
      <name>engine1</name>
-     <path>Aircraft/C-17/Sounds/jet-blast.wav</path>
+     <path>Aircraft/C-17/Sounds/C-17-jet-blast.wav</path>
      <mode>looped</mode>
      <condition>
        <property>engines/engine[1]/running</property>
@@ -472,7 +472,7 @@
 
    <engine>
      <name>engine2</name>
-     <path>Aircraft/C-17/Sounds/jet-blast.wav</path>
+     <path>Aircraft/C-17/Sounds/C-17-jet-blast.wav</path>
      <mode>looped</mode>
      <condition>
        <property>engines/engine[2]/running</property>
@@ -493,7 +493,7 @@
     
    <engine>
      <name>engine3</name>
-     <path>Aircraft/C-17/Sounds/jet-blast.wav</path>
+     <path>Aircraft/C-17/Sounds/C-17-jet-blast.wav</path>
      <mode>looped</mode>
      <condition>
        <property>engines/engine[3]/running</property>
@@ -516,7 +516,7 @@
    <!-- Left side -->
    <engine>
      <name>left outer engine reverser1</name>
-     <path>Aircraft/C-17/Sounds/reverser.wav</path>
+     <path>Aircraft/C-17/Sounds/C-17-reverser.wav</path>
      <mode>looped</mode>
      <condition>
 	<not>
@@ -552,7 +552,7 @@
     
    <engine>
      <name>left inner engine reverser1</name>
-     <path>Aircraft/C-17/Sounds/reverser.wav</path>
+     <path>Aircraft/C-17/Sounds/C-17-reverser.wav</path>
      <mode>looped</mode>
      <condition>
 	<not>
@@ -589,7 +589,7 @@
    <!-- Right side -->
    <engine>
      <name>right outer engine reverser1</name>
-     <path>Aircraft/C-17/Sounds/reverser.wav</path>
+     <path>Aircraft/C-17/Sounds/C-17-reverser.wav</path>
      <mode>looped</mode>
      <condition>
 	<not>
@@ -625,7 +625,7 @@
     
    <engine>
      <name>right inner engine reverser1</name>
-     <path>Aircraft/C-17/Sounds/reverser.wav</path>
+     <path>Aircraft/C-17/Sounds/C-17-reverser.wav</path>
      <mode>looped</mode>
      <condition>
 	<not>
@@ -987,7 +987,7 @@
    <engines>
      <name>left reverse-thrust</name>
      <mode>looped</mode>
-     <path>Aircraft/C-17/Sounds/reverser.wav</path>
+     <path>Aircraft/C-17/Sounds/C-17-reverser.wav</path>
      <condition>
        <property>engines/engine[0]/running</property>
      </condition>
@@ -1006,7 +1006,7 @@
    <engines>
      <name>right reverse-thrust</name>
      <mode>looped</mode>
-     <path>Aircraft/C-17/Sounds/reverser.wav</path>
+     <path>Aircraft/C-17/Sounds/C-17-reverser.wav</path>
      <condition>
        <property>engines/engine[1]/running</property>
      </condition>
@@ -1250,7 +1250,7 @@
    <flyby>
      <name>fly-by</name>
      <mode>once</mode>
-     <path>Aircraft/C-17/Sounds/flyby2.wav</path>
+     <path>Aircraft/C-17/Sounds/C-17-flyby.wav</path>
      <condition>
 	<and>
 	 <greater-than>
