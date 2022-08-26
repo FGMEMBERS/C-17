@@ -309,9 +309,9 @@
       <feed>3</feed>
       <thruster file="direct">
 	<location unit="FT">
-          <x>53.43</x>
-          <y>-45.9</y>
-          <z>0</z>
+          <x>46.8814</x>
+          <y>-45.6968</y>
+          <z>-1.04424</z>
 	</location>
 	<orient unit="DEG">
           <roll>0</roll>
@@ -331,9 +331,9 @@
       <feed>1</feed>
       <thruster file="direct">
 	<location unit="FT">
-          <x>41.1</x>
-          <y>-25.35</y>
-          <z>0.68</z>
+          <x>36.2611</x>
+          <y>-24.5226</y>
+          <z>1.41359</z>
 	</location>
 	<orient unit="DEG">
           <roll>0</roll>
@@ -353,9 +353,9 @@
       <feed>2</feed>
       <thruster file="direct">
 	<location unit="FT">
-          <x>41.1</x>
-          <y>25.35</y>
-          <z>0.68</z>
+	  <x>36.2611</x>
+          <y>24.5226</y>
+          <z>1.41359</z>
 	</location>
 	<orient unit="DEG">
           <roll>0</roll>
@@ -375,9 +375,9 @@
       <feed>4</feed>
       <thruster file="direct">
 	<location unit="FT">
-          <x>53.43</x>
-          <y>45.9</y>
-          <z>0</z>
+	  <x>46.8814</x>
+          <y>45.6968</y>
+          <z>-1.04424</z>
 	</location>
 	<orient unit="DEG">
           <roll>0</roll>
