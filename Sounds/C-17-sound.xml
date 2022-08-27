@@ -9,7 +9,7 @@
    <engine>
      <name>engine-start-inside</name>
      <mode>once</mode>
-     <path>Aircraft/C-17/Sounds/turbine_start_in.wav</path>
+     <path>Sounds/turbine_start_in.wav</path>
      <condition>
        <and>
          <property>/controls/engines/engine[0]/starter</property>
@@ -35,7 +35,7 @@
    <engine>
      <name>engine-start-inside1</name>
      <mode>once</mode>
-     <path>Aircraft/C-17/Sounds/turbine_start_in.wav</path>
+     <path>Sounds/turbine_start_in.wav</path>
      <condition>
        <and>
          <property>/controls/engines/engine[0]/starter</property>
@@ -61,7 +61,7 @@
    <engine>
      <name>engine-start-inside2</name>
      <mode>once</mode>
-     <path>Aircraft/C-17/Sounds/turbine_start_in.wav</path>
+     <path>Sounds/turbine_start_in.wav</path>
      <condition>
        <and>
          <property>/controls/engines/engine[0]/starter</property>
@@ -87,7 +87,7 @@
    <engine>
      <name>engine-start-inside3</name>
      <mode>once</mode>
-     <path>Aircraft/C-17/Sounds/turbine_start_in.wav</path>
+     <path>Sounds/turbine_start_in.wav</path>
      <condition>
        <and>
          <property>/controls/engines/engine[0]/starter</property>
@@ -112,7 +112,7 @@
    
    <engine>
      <name>whine-int</name>
-     <path>Aircraft/C-17/Sounds/C-17-internal-whine.wav</path>
+     <path>Sounds/C-17-internal-whine.wav</path>
      <mode>looped</mode>
      <condition>
        <property>/engines/engine[0]/running</property>
@@ -134,7 +134,7 @@
      
    <engine>
      <name>whine-int1</name>
-     <path>Aircraft/C-17/Sounds/C-17-internal-whine.wav</path>
+     <path>Sounds/C-17-internal-whine.wav</path>
      <mode>looped</mode>
      <condition>
        <property>/engines/engine[1]/running</property>
@@ -156,7 +156,7 @@
 
    <engine>
      <name>whine-int2</name>
-     <path>Aircraft/C-17/Sounds/C-17-internal-whine.wav</path>
+     <path>Sounds/C-17-internal-whine.wav</path>
      <mode>looped</mode>
      <condition>
        <property>/engines/engine[2]/running</property>
@@ -178,7 +178,7 @@
 
    <engine>
      <name>whine-int3</name>
-     <path>Aircraft/C-17/Sounds/C-17-internal-whine.wav</path>
+     <path>Sounds/C-17-internal-whine.wav</path>
      <mode>looped</mode>
      <condition>
        <property>/engines/engine[3]/running</property>
@@ -202,7 +202,7 @@
    <engine>
      <name>engine-start-outside0</name>
      <mode>once</mode>
-     <path>Aircraft/C-17/Sounds/C-17-startup-whine.wav</path>
+     <path>Sounds/C-17-startup-whine.wav</path>
      <condition>
 	<and>
 	 <greater-than> 
@@ -237,7 +237,7 @@
    <engine>
      <name>engine-start-outside1</name>
      <mode>once</mode>
-     <path>Aircraft/C-17/Sounds/C-17-startup-whine.wav</path>
+     <path>Sounds/C-17-startup-whine.wav</path>
      <condition>
 	<and>
 	 <greater-than> 
@@ -272,7 +272,7 @@
    <engine>
      <name>engine-start-outside2</name>
      <mode>once</mode>
-     <path>Aircraft/C-17/Sounds/C-17-startup-whine.wav</path>
+     <path>Sounds/C-17-startup-whine.wav</path>
      <condition>
 	<and>
 	 <greater-than> 
@@ -307,7 +307,7 @@
    <engine>
      <name>engine-start-outside3</name>
      <mode>once</mode>
-     <path>Aircraft/C-17/Sounds/C-17-startup-whine.wav</path>
+     <path>Sounds/C-17-startup-whine.wav</path>
      <condition>
 	<and>
 	 <greater-than> 
@@ -342,7 +342,7 @@
 
    <engine>
      <name>whine0</name>
-     <path>Aircraft/C-17/Sounds/C-17-whine.wav</path>
+     <path>Sounds/C-17-whine.wav</path>
      <mode>looped</mode>
      <condition>
        <property>/engines/engine[0]/running</property>
@@ -364,7 +364,7 @@
     
    <engine>
      <name>whine1</name>
-     <path>Aircraft/C-17/Sounds/C-17-whine.wav</path>
+     <path>Sounds/C-17-whine.wav</path>
      <mode>looped</mode>
      <condition>
        <property>/engines/engine[1]/running</property>
@@ -386,7 +386,7 @@
 
    <engine>
      <name>whine2</name>
-     <path>Aircraft/C-17/Sounds/C-17-whine.wav</path>
+     <path>Sounds/C-17-whine.wav</path>
      <mode>looped</mode>
      <condition>
        <property>/engines/engine[2]/running</property>
@@ -408,7 +408,7 @@
     
    <engine>
      <name>whine3</name>
-     <path>Aircraft/C-17/Sounds/C-17-whine.wav</path>
+     <path>Sounds/C-17-whine.wav</path>
      <mode>looped</mode>
      <condition>
        <property>/engines/engine[3]/running</property>
@@ -430,7 +430,7 @@
     
    <engine>
      <name>engine</name>
-     <path>Aircraft/C-17/Sounds/C-17-jet-blast.wav</path>
+     <path>Sounds/C-17-jet-blast.wav</path>
      <mode>looped</mode>
      <condition>
        <property>engines/engine[0]/running</property>
@@ -451,7 +451,7 @@
     
    <engine>
      <name>engine1</name>
-     <path>Aircraft/C-17/Sounds/C-17-jet-blast.wav</path>
+     <path>Sounds/C-17-jet-blast.wav</path>
      <mode>looped</mode>
      <condition>
        <property>engines/engine[1]/running</property>
@@ -472,7 +472,7 @@
 
    <engine>
      <name>engine2</name>
-     <path>Aircraft/C-17/Sounds/C-17-jet-blast.wav</path>
+     <path>Sounds/C-17-jet-blast.wav</path>
      <mode>looped</mode>
      <condition>
        <property>engines/engine[2]/running</property>
@@ -493,7 +493,7 @@
     
    <engine>
      <name>engine3</name>
-     <path>Aircraft/C-17/Sounds/C-17-jet-blast.wav</path>
+     <path>Sounds/C-17-jet-blast.wav</path>
      <mode>looped</mode>
      <condition>
        <property>engines/engine[3]/running</property>
@@ -516,7 +516,7 @@
    <!-- Left side -->
    <engine>
      <name>left outer engine reverser1</name>
-     <path>Aircraft/C-17/Sounds/C-17-reverser.wav</path>
+     <path>Sounds/C-17-reverser.wav</path>
      <mode>looped</mode>
      <condition>
 	<not>
@@ -552,7 +552,7 @@
     
    <engine>
      <name>left inner engine reverser1</name>
-     <path>Aircraft/C-17/Sounds/C-17-reverser.wav</path>
+     <path>Sounds/C-17-reverser.wav</path>
      <mode>looped</mode>
      <condition>
 	<not>
@@ -589,7 +589,7 @@
    <!-- Right side -->
    <engine>
      <name>right outer engine reverser1</name>
-     <path>Aircraft/C-17/Sounds/C-17-reverser.wav</path>
+     <path>Sounds/C-17-reverser.wav</path>
      <mode>looped</mode>
      <condition>
 	<not>
@@ -625,7 +625,7 @@
     
    <engine>
      <name>right inner engine reverser1</name>
-     <path>Aircraft/C-17/Sounds/C-17-reverser.wav</path>
+     <path>Sounds/C-17-reverser.wav</path>
      <mode>looped</mode>
      <condition>
 	<not>
@@ -688,7 +688,7 @@
    <gear1>
      <name>gear</name>
      <mode>in-transit</mode>
-     <path>Aircraft/C-17/Sounds/gear.wav</path>
+     <path>Sounds/gear.wav</path>
      <property>/gear/gear[0]/position-norm</property>
      <pitch>
        <internal>dt_play</internal>
@@ -724,7 +724,7 @@
 
    <squeal0>
      <name>squeal</name>
-     <path>Aircraft/C-17/Sounds/touchdown.wav</path>
+     <path>Sounds/touchdown.wav</path>
      <condition>
        <or>
          <property>/gear/gear[0]/wow</property>
@@ -764,7 +764,7 @@
 
    <squeal1>
      <name>squeal</name>
-     <path>Aircraft/C-17/Sounds/touch.wav</path>
+     <path>Sounds/touch.wav</path>
      <condition>
        <property>/gear/gear[0]/wow</property>
      </condition>
@@ -793,7 +793,7 @@
    <flap>
      <name>flaps</name>
      <mode>in-transit</mode>
-     <path>Aircraft/C-17/Sounds/Flaps.wav</path>
+     <path>Sounds/Flaps.wav</path>
      <property>/surface-positions/flap-pos-norm</property>
      <volume>
        <factor>0.45</factor>
@@ -842,7 +842,7 @@
    <stall>
      <name>stall</name>
      <mode>looped</mode>
-     <path>Aircraft/C-17/Sounds/stall.wav</path>
+     <path>Sounds/stall.wav</path>
      <condition>
        <less-than>
          <property>velocities/airspeed-kt</property>
@@ -871,7 +871,7 @@
    <stall>
      <name>stall</name>
      <mode>looped</mode>
-     <path>Aircraft/C-17/Sounds/stall.wav</path>
+     <path>Sounds/stall.wav</path>
      <condition>
        <less-than>
          <property>velocities/airspeed-kt</property>
@@ -899,7 +899,7 @@
    <stall>
      <name>stall</name>
      <mode>looped</mode>
-     <path>Aircraft/C-17/Sounds/stall.wav</path>
+     <path>Sounds/stall.wav</path>
      <condition>
        <less-than>
          <property>velocities/airspeed-kt</property>
@@ -931,7 +931,7 @@
    <switch>
      <name>click on</name>
      <mode>once</mode>
-     <path>Aircraft/C-17/Sounds/click.wav</path>
+     <path>Sounds/click.wav</path>
      <condition>
        <property>/sim/sound/switch</property>
      </condition>
@@ -950,7 +950,7 @@
    <switch>
      <name>click off</name>
      <mode>once</mode>
-     <path>Aircraft/C-17/Sounds/click.wav</path>
+     <path>Sounds/click.wav</path>
      <condition>
        <not>
          <property>/sim/sound/switch</property>
@@ -971,7 +971,7 @@
    <speedbrake>
      <name>speedbrake</name>
      <mode>in-transit</mode>
-     <path>Aircraft/C-17/Sounds/whine.wav</path>
+     <path>Sounds/whine.wav</path>
      <volume>
        <factor>0.45</factor>
      </volume>
@@ -987,7 +987,7 @@
    <engines>
      <name>left reverse-thrust</name>
      <mode>looped</mode>
-     <path>Aircraft/C-17/Sounds/C-17-reverser.wav</path>
+     <path>Sounds/C-17-reverser.wav</path>
      <condition>
        <property>engines/engine[0]/running</property>
      </condition>
@@ -1006,7 +1006,7 @@
    <engines>
      <name>right reverse-thrust</name>
      <mode>looped</mode>
-     <path>Aircraft/C-17/Sounds/C-17-reverser.wav</path>
+     <path>Sounds/C-17-reverser.wav</path>
      <condition>
        <property>engines/engine[1]/running</property>
      </condition>
@@ -1042,7 +1042,7 @@
      <reference-dist>1.0</reference-dist>
      <max-dist>2.0</max-dist>
      <mode>once</mode>
-     <path>Aircraft/C-17/Sounds/altitude-10.wav</path>
+     <path>Sounds/altitude-10.wav</path>
      <condition>
 	<less-than-equals>
          <property>position/altitude-agl-ft</property>
@@ -1061,7 +1061,7 @@
      <reference-dist>1.0</reference-dist>
      <max-dist>2.0</max-dist>
      <mode>once</mode>
-     <path>Aircraft/C-17/Sounds/altitude-20.wav</path>
+     <path>Sounds/altitude-20.wav</path>
      <condition>
 	<less-than-equals>
          <property>position/altitude-agl-ft</property>
@@ -1080,7 +1080,7 @@
      <reference-dist>1.0</reference-dist>
      <max-dist>2.0</max-dist>
      <mode>once</mode>
-     <path>Aircraft/C-17/Sounds/altitude-30.wav</path>
+     <path>Sounds/altitude-30.wav</path>
      <condition>
 	<less-than-equals>
          <property>position/altitude-agl-ft</property>
@@ -1099,7 +1099,7 @@
      <reference-dist>1.0</reference-dist>
      <max-dist>2.0</max-dist>
      <mode>once</mode>
-     <path>Aircraft/C-17/Sounds/altitude-40.wav</path>
+     <path>Sounds/altitude-40.wav</path>
      <condition>
 	<less-than-equals>
          <property>position/altitude-agl-ft</property>
@@ -1118,7 +1118,7 @@
      <reference-dist>1.0</reference-dist>
      <max-dist>2.0</max-dist>
      <mode>once</mode>
-     <path>Aircraft/C-17/Sounds/altitude-50.wav</path>
+     <path>Sounds/altitude-50.wav</path>
      <condition>
 	<less-than-equals>
          <property>position/altitude-agl-ft</property>
@@ -1137,7 +1137,7 @@
      <reference-dist>1.0</reference-dist>
      <max-dist>2.0</max-dist>
      <mode>once</mode>
-     <path>Aircraft/C-17/Sounds/altitude-100.wav</path>
+     <path>Sounds/altitude-100.wav</path>
      <condition>
 	<less-than-equals>
          <property>position/altitude-agl-ft</property>
@@ -1156,7 +1156,7 @@
      <reference-dist>1.0</reference-dist>
      <max-dist>2.0</max-dist>
      <mode>once</mode>
-     <path>Aircraft/C-17/Sounds/altitude-200.wav</path>
+     <path>Sounds/altitude-200.wav</path>
      <condition>
 	<less-than-equals>
          <property>position/altitude-agl-ft</property>
@@ -1175,7 +1175,7 @@
      <reference-dist>1.0</reference-dist>
      <max-dist>2.0</max-dist>
      <mode>once</mode>
-     <path>Aircraft/C-17/Sounds/altitude-300.wav</path>
+     <path>Sounds/altitude-300.wav</path>
      <condition>
 	<less-than-equals>
          <property>position/altitude-agl-ft</property>
@@ -1194,7 +1194,7 @@
      <reference-dist>1.0</reference-dist>
      <max-dist>2.0</max-dist>
      <mode>once</mode>
-     <path>Aircraft/C-17/Sounds/altitude-400.wav</path>
+     <path>Sounds/altitude-400.wav</path>
      <condition>
 	<less-than-equals>
          <property>position/altitude-agl-ft</property>
@@ -1213,7 +1213,7 @@
      <reference-dist>1.0</reference-dist>
      <max-dist>2.0</max-dist>
      <mode>once</mode>
-     <path>Aircraft/C-17/Sounds/altitude-500.wav</path>
+     <path>Sounds/altitude-500.wav</path>
      <condition>
 	<less-than-equals>
          <property>position/altitude-agl-ft</property>
@@ -1232,7 +1232,7 @@
      <reference-dist>1.0</reference-dist>
      <max-dist>2.0</max-dist>
      <mode>once</mode>
-     <path>Aircraft/C-17/Sounds/altitude-1000.wav</path>
+     <path>Sounds/altitude-1000.wav</path>
      <condition>
 	<less-than-equals>
          <property>position/altitude-agl-ft</property>
@@ -1250,7 +1250,7 @@
    <flyby>
      <name>fly-by</name>
      <mode>once</mode>
-     <path>Aircraft/C-17/Sounds/C-17-flyby.wav</path>
+     <path>Sounds/C-17-flyby.wav</path>
      <condition>
 	<and>
 	 <greater-than>
