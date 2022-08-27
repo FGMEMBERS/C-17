@@ -455,11 +455,6 @@
 
   <propulsion>
     <engine file="F117">
-      <orient unit="DEG">
-	<roll>0</roll>
-	<pitch>0</pitch>
-	<yaw>0</yaw>
-      </orient>
       <feed>1</feed>
       <feed>3</feed>
       <thruster file="direct">
@@ -477,11 +472,6 @@
     </engine>
 
     <engine file="F117">
-      <orient unit="DEG">
-	<roll>0</roll>
-	<pitch>0</pitch>
-	<yaw>0</yaw>
-      </orient>
       <feed>0</feed>
       <feed>1</feed>
       <thruster file="direct">
@@ -499,11 +489,6 @@
     </engine>
     
     <engine file="F117">
-      <orient unit="DEG">
-	<roll>0</roll>
-	<pitch>0</pitch>
-	<yaw>0</yaw>
-      </orient>
       <feed>0</feed>
       <feed>2</feed>
       <thruster file="direct">
@@ -521,11 +506,6 @@
     </engine>
 
     <engine file="F117">
-      <orient unit="DEG">
-	<roll>0</roll>
-	<pitch>0</pitch>
-	<yaw>0</yaw>
-      </orient>
       <feed>2</feed>
       <feed>4</feed>
       <thruster file="direct">
