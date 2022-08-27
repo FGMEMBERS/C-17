@@ -202,7 +202,7 @@
    <engine>
      <name>engine-start-outside0</name>
      <mode>once</mode>
-     <path>Aircraft/C-17/Sounds/rb211-startup.wav</path>
+     <path>Aircraft/C-17/Sounds/C-17-startup-whine.wav</path>
      <condition>
 	<and>
 	 <greater-than> 
@@ -237,7 +237,7 @@
    <engine>
      <name>engine-start-outside1</name>
      <mode>once</mode>
-     <path>Aircraft/C-17/Sounds/rb211-startup.wav</path>
+     <path>Aircraft/C-17/Sounds/C-17-startup-whine.wav</path>
      <condition>
 	<and>
 	 <greater-than> 
@@ -272,7 +272,7 @@
    <engine>
      <name>engine-start-outside2</name>
      <mode>once</mode>
-     <path>Aircraft/C-17/Sounds/rb211-startup.wav</path>
+     <path>Aircraft/C-17/Sounds/C-17-startup-whine.wav</path>
      <condition>
 	<and>
 	 <greater-than> 
@@ -307,7 +307,7 @@
    <engine>
      <name>engine-start-outside3</name>
      <mode>once</mode>
-     <path>Aircraft/C-17/Sounds/rb211-startup.wav</path>
+     <path>Aircraft/C-17/Sounds/C-17-startup-whine.wav</path>
      <condition>
 	<and>
 	 <greater-than> 
@@ -342,7 +342,7 @@
 
    <engine>
      <name>whine0</name>
-     <path>Aircraft/C-17/Sounds/rb211-whine.wav</path>
+     <path>Aircraft/C-17/Sounds/C-17-whine.wav</path>
      <mode>looped</mode>
      <condition>
        <property>/engines/engine[0]/running</property>
@@ -364,7 +364,7 @@
     
    <engine>
      <name>whine1</name>
-     <path>Aircraft/C-17/Sounds/rb211-whine.wav</path>
+     <path>Aircraft/C-17/Sounds/C-17-whine.wav</path>
      <mode>looped</mode>
      <condition>
        <property>/engines/engine[1]/running</property>
@@ -386,7 +386,7 @@
 
    <engine>
      <name>whine2</name>
-     <path>Aircraft/C-17/Sounds/rb211-whine.wav</path>
+     <path>Aircraft/C-17/Sounds/C-17-whine.wav</path>
      <mode>looped</mode>
      <condition>
        <property>/engines/engine[2]/running</property>
@@ -408,7 +408,7 @@
     
    <engine>
      <name>whine3</name>
-     <path>Aircraft/C-17/Sounds/rb211-whine.wav</path>
+     <path>Aircraft/C-17/Sounds/C-17-whine.wav</path>
      <mode>looped</mode>
      <condition>
        <property>/engines/engine[3]/running</property>
