@@ -120,7 +120,7 @@
       <location unit="FT">
 	<x>10.6908</x>
 	<y>0</y>
-	<z>-14.3229</z>
+	<z>-13.2129</z>
       </location>
       <static_friction>0.85</static_friction>
       <dynamic_friction>0.5</dynamic_friction>
