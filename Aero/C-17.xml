@@ -131,6 +131,7 @@
       <brake_group>NONE</brake_group>
       <retractable>1</retractable>
     </contact>
+
     <contact type="BOGEY" name="Left Forward Main">
       <location unit="FT">
 	<x>67.0364</x>
@@ -146,6 +147,7 @@
       <brake_group>LEFT</brake_group>
       <retractable>1</retractable>
     </contact>
+
     <contact type="BOGEY" name="Left Rear Main">
       <location unit="FT">
 	<x>75.4012</x>
@@ -161,6 +163,7 @@
       <brake_group>LEFT</brake_group>
       <retractable>1</retractable>
     </contact>
+
     <contact type="BOGEY" name="Right Forward Main">
       <location unit="FT">
 	<x>67.0364</x>
@@ -176,6 +179,7 @@
       <brake_group>RIGHT</brake_group>
       <retractable>1</retractable>
     </contact>
+
     <contact type="BOGEY" name="Right Rear Main">
       <location unit="FT">
 	<x>75.4012</x>
@@ -191,7 +195,8 @@
       <brake_group>RIGHT</brake_group>
       <retractable>1</retractable>
     </contact>
-    <contact type="BOGEY" name="FuseBottomFWD">
+
+    <contact type="STRUCTURE" name="FuseBottomFWD">
       <location unit="M">
 	<x>10.0348</x>
 	<y>-0.00325208</y>
@@ -206,7 +211,8 @@
       <brake_group>NONE</brake_group>
       <retractable>0</retractable>
     </contact>
-    <contact type="BOGEY" name="FuselageLeftBelly">
+
+    <contact type="STRUCTURE" name="FuselageLeftBelly">
       <location unit="M">
 	<x>21.1818</x>
 	<y>-3.08425</y>
@@ -221,7 +227,8 @@
       <brake_group>NONE</brake_group>
       <retractable>0</retractable>
     </contact>
-    <contact type="BOGEY" name="FuselageRightBelly">
+
+    <contact type="STRUCTURE" name="FuselageRightBelly">
       <location unit="M">
 	<x>21.1818</x>
 	<y>3.07775</y>
@@ -236,7 +243,8 @@
       <brake_group>NONE</brake_group>
       <retractable>0</retractable>
     </contact>
-    <contact type="BOGEY" name="Nose">
+
+    <contact type="STRUCTURE" name="Nose">
       <location unit="M">
 	<x>0</x>
 	<y>0</y>
@@ -251,7 +259,8 @@
       <brake_group>NONE</brake_group>
       <retractable>0</retractable>
     </contact>
-    <contact type="BOGEY" name="WingTipLeft">
+
+    <contact type="STRUCTURE" name="WingTipLeft">
       <location unit="M">
 	<x>25.3968</x>
 	<y>-25.3202</y>
@@ -266,7 +275,8 @@
       <brake_group>NONE</brake_group>
       <retractable>0</retractable>
     </contact>
-    <contact type="BOGEY" name="WingTipRight">
+
+    <contact type="STRUCTURE" name="WingTipRight">
       <location unit="M">
 	<x>25.3968</x>
 	<y>25.3137</y>
@@ -281,7 +291,8 @@
       <brake_group>NONE</brake_group>
       <retractable>0</retractable>
     </contact>
-    <contact type="BOGEY" name="FuselageBottomRWD">
+
+    <contact type="STRUCTURE" name="FuselageBottomRWD">
       <location unit="M">
 	<x>36.5577</x>
 	<y>0</y>
