@@ -197,10 +197,10 @@
     </contact>
 
     <contact type="STRUCTURE" name="FuseBottomFWD">
-      <location unit="M">
-	<x>10.0348</x>
-	<y>-0.00325208</y>
-	<z>3.03406</z>
+      <location unit="FT">
+	<x>14.1923</x>
+	<y>0.00</y>
+	<z>-8.17606</z>
       </location>
       <static_friction>0.8</static_friction>
       <dynamic_friction>0.5</dynamic_friction>
@@ -213,10 +213,10 @@
     </contact>
 
     <contact type="STRUCTURE" name="FuselageLeftBelly">
-      <location unit="M">
-	<x>21.1818</x>
-	<y>-3.08425</y>
-	<z>3.44106</z>
+      <location unit="FT">
+	<x>61.9580</x>
+	<y>-12.3368</y>
+	<z>-10.6629</z>
       </location>
       <static_friction>0.8</static_friction>
       <dynamic_friction>0.5</dynamic_friction>
@@ -229,10 +229,10 @@
     </contact>
 
     <contact type="STRUCTURE" name="FuselageRightBelly">
-      <location unit="M">
-	<x>21.1818</x>
-	<y>3.07775</y>
-	<z>3.44106</z>
+      <location unit="FT">
+	<x>61.9580</x>
+	<y>-12.3368</y>
+	<z>-10.6629</z>
       </location>
       <static_friction>0.8</static_friction>
       <dynamic_friction>0.5</dynamic_friction>
@@ -245,7 +245,7 @@
     </contact>
 
     <contact type="STRUCTURE" name="Nose">
-      <location unit="M">
+      <location unit="FT">
 	<x>0</x>
 	<y>0</y>
 	<z>0</z>
@@ -260,11 +260,59 @@
       <retractable>0</retractable>
     </contact>
 
+    <contact type="STRUCTURE" name="TailTip">
+      <location unit="FT">
+	<x>158.995</x>
+	<y>0.00</y>
+	<z>8.31735</z>
+      </location>
+      <static_friction>0.8</static_friction>
+      <dynamic_friction>0.5</dynamic_friction>
+      <rolling_friction>0.02</rolling_friction>
+      <spring_coeff unit="LBS/FT">1.5e+06</spring_coeff>
+      <damping_coeff unit="LBS/FT/SEC">60000</damping_coeff>
+      <max_steer unit="DEG">0</max_steer>
+      <brake_group>NONE</brake_group>
+      <retractable>0</retractable>
+    </contact>
+
+    <contact type="STRUCTURE" name="FuselageTopFWD">
+      <location unit="FT">
+	<x>9.67421</x>
+	<y>0.00</y>
+	<z>8.8058</z>
+      </location>
+      <static_friction>0.8</static_friction>
+      <dynamic_friction>0.5</dynamic_friction>
+      <rolling_friction>0.02</rolling_friction>
+      <spring_coeff unit="LBS/FT">1.5e+06</spring_coeff>
+      <damping_coeff unit="LBS/FT/SEC">60000</damping_coeff>
+      <max_steer unit="DEG">0</max_steer>
+      <brake_group>NONE</brake_group>
+      <retractable>0</retractable>
+    </contact>
+
+    <contact type="STRUCTURE" name="VStabTopREAR">
+      <location unit="FT">
+	<x>153.667</x>
+	<y>0.00</y>
+	<z>41.5747</z>
+      </location>
+      <static_friction>0.8</static_friction>
+      <dynamic_friction>0.5</dynamic_friction>
+      <rolling_friction>0.02</rolling_friction>
+      <spring_coeff unit="LBS/FT">1.5e+06</spring_coeff>
+      <damping_coeff unit="LBS/FT/SEC">60000</damping_coeff>
+      <max_steer unit="DEG">0</max_steer>
+      <brake_group>NONE</brake_group>
+      <retractable>0</retractable>
+    </contact>
+    
     <contact type="STRUCTURE" name="WingTipLeft">
-      <location unit="M">
-	<x>25.3968</x>
-	<y>-25.3202</y>
-	<z>0.41844</z>
+      <location unit="FT">
+	<x>79.8281</x>
+	<y>-83.5394</y>
+	<z>2.01827</z>
       </location>
       <static_friction>0.8</static_friction>
       <dynamic_friction>0.5</dynamic_friction>
@@ -277,10 +325,10 @@
     </contact>
 
     <contact type="STRUCTURE" name="WingTipRight">
-      <location unit="M">
-	<x>25.3968</x>
-	<y>25.3137</y>
-	<z>0.41844</z>
+      <location unit="FT">
+	<x>79.8281</x>
+	<y>-83.5394</y>
+	<z>2.01827</z>
       </location>
       <static_friction>0.8</static_friction>
       <dynamic_friction>0.5</dynamic_friction>
@@ -292,11 +340,11 @@
       <retractable>0</retractable>
     </contact>
 
-    <contact type="STRUCTURE" name="FuselageBottomRWD">
-      <location unit="M">
-	<x>36.5577</x>
-	<y>0</y>
-	<z>-1.37358</z>
+    <contact type="STRUCTURE" name="HStabLeftTip">
+      <location unit="FT">
+	<x>164.680</x>
+	<y>-29.4253</y>
+	<z>35.4397</z>
       </location>
       <static_friction>0.8</static_friction>
       <dynamic_friction>0.5</dynamic_friction>
@@ -307,6 +355,102 @@
       <brake_group>NONE</brake_group>
       <retractable>0</retractable>
     </contact>
+
+    <contact type="STRUCTURE" name="HStabRightTip">
+      <location unit="FT">
+	<x>164.680</x>
+	<y>29.4253</y>
+	<z>35.4397</z>
+      </location>
+      <static_friction>0.8</static_friction>
+      <dynamic_friction>0.5</dynamic_friction>
+      <rolling_friction>0.02</rolling_friction>
+      <spring_coeff unit="LBS/FT">1.5e+06</spring_coeff>
+      <damping_coeff unit="LBS/FT/SEC">60000</damping_coeff>
+      <max_steer unit="DEG">0</max_steer>
+      <brake_group>NONE</brake_group>
+      <retractable>0</retractable>
+    </contact>
+    
+    <contact type="STRUCTURE" name="FuselageBottomRWD">
+      <location unit="FT">
+	<x>139.772</x>
+	<y>0.00</y>
+	<z>1.31936</z>
+      </location>
+      <static_friction>0.8</static_friction>
+      <dynamic_friction>0.5</dynamic_friction>
+      <rolling_friction>0.02</rolling_friction>
+      <spring_coeff unit="LBS/FT">1.5e+06</spring_coeff>
+      <damping_coeff unit="LBS/FT/SEC">60000</damping_coeff>
+      <max_steer unit="DEG">0</max_steer>
+      <brake_group>NONE</brake_group>
+      <retractable>0</retractable>
+    </contact>
+
+    <contact type="STRUCTURE" name="Engine0Bottom">
+      <location unit="FT">
+	<x>47.7367</x>
+	<y>45.7608</y>
+	<z>-5.6694</z>
+      </location>
+      <static_friction>0.8</static_friction>
+      <dynamic_friction>0.5</dynamic_friction>
+      <rolling_friction>0.02</rolling_friction>
+      <spring_coeff unit="LBS/FT">1.5e+06</spring_coeff>
+      <damping_coeff unit="LBS/FT/SEC">60000</damping_coeff>
+      <max_steer unit="DEG">0</max_steer>
+      <brake_group>NONE</brake_group>
+      <retractable>0</retractable>
+    </contact>
+
+    <contact type="STRUCTURE" name="Engine1Bottom">
+      <location unit="FT">
+	<x>35.2781</x>
+	<y>24.5218</y>
+	<z>-2.92671</z>
+      </location>
+      <static_friction>0.8</static_friction>
+      <dynamic_friction>0.5</dynamic_friction>
+      <rolling_friction>0.02</rolling_friction>
+      <spring_coeff unit="LBS/FT">1.5e+06</spring_coeff>
+      <damping_coeff unit="LBS/FT/SEC">60000</damping_coeff>
+      <max_steer unit="DEG">0</max_steer>
+      <brake_group>NONE</brake_group>
+      <retractable>0</retractable>
+    </contact>
+
+    <contact type="STRUCTURE" name="Engine2Bottom">
+      <location unit="FT">
+	<x>35.2781</x>
+	<y>-24.5218</y>
+	<z>-2.92671</z>
+      </location>
+      <static_friction>0.8</static_friction>
+      <dynamic_friction>0.5</dynamic_friction>
+      <rolling_friction>0.02</rolling_friction>
+      <spring_coeff unit="LBS/FT">1.5e+06</spring_coeff>
+      <damping_coeff unit="LBS/FT/SEC">60000</damping_coeff>
+      <max_steer unit="DEG">0</max_steer>
+      <brake_group>NONE</brake_group>
+      <retractable>0</retractable>
+    </contact>
+
+    <contact type="STRUCTURE" name="Engine3Bottom">
+      <location unit="FT">
+	<x>47.7367</x>
+	<y>-45.7608</y>
+	<z>-5.6694</z>
+      </location>
+      <static_friction>0.8</static_friction>
+      <dynamic_friction>0.5</dynamic_friction>
+      <rolling_friction>0.02</rolling_friction>
+      <spring_coeff unit="LBS/FT">1.5e+06</spring_coeff>
+      <damping_coeff unit="LBS/FT/SEC">60000</damping_coeff>
+      <max_steer unit="DEG">0</max_steer>
+      <brake_group>NONE</brake_group>
+      <retractable>0</retractable>
+    </contact>   
   </ground_reactions>
 
   <propulsion>
