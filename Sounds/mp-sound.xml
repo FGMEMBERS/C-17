@@ -552,7 +552,7 @@
    </gear1>
    <squeal0>
      <name>squeal</name>
-     <path>/Aircraft/C-17/Sounds/touchdown.wav</path>
+     <path>Aircraft/C-17/Sounds/touchdown.wav</path>
      <condition>
        <or>
          <property>/gear/gear[0]/wow</property>
