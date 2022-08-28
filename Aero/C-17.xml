@@ -63,7 +63,7 @@
     <location name="VRP" unit="FT">
       <x>75.26</x>
       <y>0</y>
-      <z>-4.0</z>
+      <z>-2.0</z>
     </location>
   </metrics>
 
@@ -132,6 +132,22 @@
       <retractable>1</retractable>
     </contact>
 
+    <contact type="STRUCTURE" name="NoseGearStrut">
+      <location unit="FT">
+	<x>10.6933</x>
+	<y>0.00</y>
+	<z>-12.5529</z>
+      </location>
+      <static_friction>0.8</static_friction>
+      <dynamic_friction>0.5</dynamic_friction>
+      <rolling_friction>0.02</rolling_friction>
+      <spring_coeff unit="LBS/FT">1.5e+06</spring_coeff>
+      <damping_coeff unit="LBS/FT/SEC">60000</damping_coeff>
+      <max_steer unit="DEG">0</max_steer>
+      <brake_group>NONE</brake_group>
+      <retractable>0</retractable>
+    </contact>
+    
     <contact type="BOGEY" name="Left Forward Main">
       <location unit="FT">
 	<x>67.0364</x>
@@ -148,6 +164,22 @@
       <retractable>1</retractable>
     </contact>
 
+    <contact type="STRUCTURE" name="LeftForwardMainGearStrut">
+      <location unit="FT">
+	<x>67.0364</x>
+	<y>-10.3836</y>
+	<z>-12.3878</z>
+      </location>
+      <static_friction>0.8</static_friction>
+      <dynamic_friction>0.5</dynamic_friction>
+      <rolling_friction>0.02</rolling_friction>
+      <spring_coeff unit="LBS/FT">1.5e+06</spring_coeff>
+      <damping_coeff unit="LBS/FT/SEC">60000</damping_coeff>
+      <max_steer unit="DEG">0</max_steer>
+      <brake_group>NONE</brake_group>
+      <retractable>0</retractable>
+    </contact>
+    
     <contact type="BOGEY" name="Left Rear Main">
       <location unit="FT">
 	<x>75.4012</x>
@@ -164,6 +196,22 @@
       <retractable>1</retractable>
     </contact>
 
+    <contact type="STRUCTURE" name="LeftRearMainGearStrut">
+      <location unit="FT">
+	<x>76.0847</x>
+	<y>-10.3836</y>
+	<z>-12.3878</z>
+      </location>
+      <static_friction>0.8</static_friction>
+      <dynamic_friction>0.5</dynamic_friction>
+      <rolling_friction>0.02</rolling_friction>
+      <spring_coeff unit="LBS/FT">1.5e+06</spring_coeff>
+      <damping_coeff unit="LBS/FT/SEC">60000</damping_coeff>
+      <max_steer unit="DEG">0</max_steer>
+      <brake_group>NONE</brake_group>
+      <retractable>0</retractable>
+    </contact>
+    
     <contact type="BOGEY" name="Right Forward Main">
       <location unit="FT">
 	<x>67.0364</x>
@@ -180,6 +228,22 @@
       <retractable>1</retractable>
     </contact>
 
+    <contact type="STRUCTURE" name="RightForwardMainGearStrut">
+      <location unit="FT">
+	<x>67.0364</x>
+	<y>10.3836</y>
+	<z>-12.3878</z>
+      </location>
+      <static_friction>0.8</static_friction>
+      <dynamic_friction>0.5</dynamic_friction>
+      <rolling_friction>0.02</rolling_friction>
+      <spring_coeff unit="LBS/FT">1.5e+06</spring_coeff>
+      <damping_coeff unit="LBS/FT/SEC">60000</damping_coeff>
+      <max_steer unit="DEG">0</max_steer>
+      <brake_group>NONE</brake_group>
+      <retractable>0</retractable>
+    </contact>
+
     <contact type="BOGEY" name="Right Rear Main">
       <location unit="FT">
 	<x>75.4012</x>
@@ -194,6 +258,22 @@
       <max_steer unit="DEG">0</max_steer>
       <brake_group>RIGHT</brake_group>
       <retractable>1</retractable>
+    </contact>
+
+    <contact type="STRUCTURE" name="LeftRearMainGearStrut">
+      <location unit="FT">
+	<x>76.0847</x>
+	<y>10.3836</y>
+	<z>-12.3878</z>
+      </location>
+      <static_friction>0.8</static_friction>
+      <dynamic_friction>0.5</dynamic_friction>
+      <rolling_friction>0.02</rolling_friction>
+      <spring_coeff unit="LBS/FT">1.5e+06</spring_coeff>
+      <damping_coeff unit="LBS/FT/SEC">60000</damping_coeff>
+      <max_steer unit="DEG">0</max_steer>
+      <brake_group>NONE</brake_group>
+      <retractable>0</retractable>
     </contact>
 
     <contact type="STRUCTURE" name="FuseBottomFWD">
