@@ -5,12 +5,12 @@
   <path>C-17.ac</path>
   <!-- 3D Model Orientation  -->
   <offsets>
-    <pitch-deg>-2.1</pitch-deg> 
-    <heading-deg>0</heading-deg>
-    <roll-deg>0</roll-deg>
+    <pitch-deg>0.00</pitch-deg> 
+    <heading-deg>0.00</heading-deg>
+    <roll-deg>0.00</roll-deg>
     <x-m>-53</x-m>
-    <y-m>0</y-m>
-    <z-m>-0.03</z-m>
+    <y-m>0.00</y-m>
+    <z-m>0.00</z-m>
   </offsets>
   
   <!-- Disabling the ambient animation, as FG2020 cannot launch the aircraft
