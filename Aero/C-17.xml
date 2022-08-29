@@ -198,7 +198,7 @@
 
     <contact type="BOGEY" name="LeftForwardMain2">
       <location unit="FT">
-	<x>67.7199</x>
+	<x>66.353</x>
 	<y>-7.222</y>
 	<z>-13.2278</z>
       </location>
@@ -262,7 +262,7 @@
 
     <contact type="BOGEY" name="LeftRearMain2">
       <location unit="FT">
-	<x>76.0847</x>
+	<x>74.7178</x>
 	<y>-7.222</y>
 	<z>-13.2278</z>
       </location>
@@ -326,7 +326,7 @@
 
     <contact type="BOGEY" name="RightForwardMain2">
       <location unit="FT">
-	<x>67.7199</x>
+	<x>66.353</x>
 	<y>7.222</y>
 	<z>-13.2278</z>
       </location>
@@ -390,7 +390,7 @@
 
     <contact type="BOGEY" name="RightRearMain2">
       <location unit="FT">
-	<x>76.0847</x>
+	<x>74.7178</x>
 	<y>7.222</y>
 	<z>-13.2278</z>
       </location>
