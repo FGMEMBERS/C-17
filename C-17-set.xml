@@ -3,8 +3,8 @@
   <sim>
     <description>C-17 Globemaster III</description>
     <status>BETA</status>
-    <author>Jon Bourgeois (FDM), Adam Fothergill (Model), Geed (sound), IH-COL and D. Waggoner (Updates)</author>
-    <aircraft-version>3.1.1</aircraft-version>
+    <author>IH-COL, D. Waggoner, Jon Bourgeois, Adam Fothergill, Geed</author>
+    <aircraft-version>3.1.2</aircraft-version>
     <minimum-fg-version>2020.2.0</minimum-fg-version>    
 
     <rating>
@@ -79,7 +79,7 @@
 	<int n="17" alias="/controls/lighting/landing-lights"/>
 	<int n="18" alias="/controls/lighting/landing-lights[1]"/>
 	<int n="19" alias="/controls/lighting/cabin-lights"/>
-	<!-- Don't work because FlightGear is limited at 18 MP properties :( -->
+	<!-- This does not work, because FlightGear limits MP properties to 18 -->
 
 	<float n="1" alias="/instrumentation/doors/ramp/position-norm"/>
 	<float n="2" alias="/position/gear-agl-m">0</float><!-- 11 altitude for MP shadow -->
@@ -107,7 +107,8 @@
       <path>Aircraft/C-17/Sounds/C-17-sound.xml</path>
     </sound>
     
-    <!-- 3D Model Converted With Permission From X-Plane C-17 v1.2, Authors Adam Fathergill/Dave Austin -->	
+    <!-- 3D Model Converted With Permission From X-Plane C-17 v1.2, Authors
+	 Adam Fathergill / Dave Austin -->	
     <model>
       <path>Aircraft/C-17/Models/C-17.xml</path>
       
@@ -116,7 +117,7 @@
       </livery>
     </model>
     
-    <!-- Submodel -->
+    <!-- Submodels -->
     <submodels>
       <serviceable type="bool">true</serviceable>
       <path>Aircraft/C-17/Submodels/submodels.xml</path>
@@ -337,7 +338,6 @@
     </menubar>
     
     <!-- Payload options -->
-    
     <weight n="0">
       <name>Cargobay</name>
       <weight-lb>0</weight-lb>
@@ -436,16 +436,16 @@
   
   <engines>
     <engine n="0">
-      <reverser-position type="double">0.00</reverser-position>
+      <reverser-position type="int">0</reverser-position>
     </engine>    
     <engine n="1">
-      <reverser-position type="double">0.00</reverser-position>
+      <reverser-position type="int">0</reverser-position>
     </engine>
     <engine n="2">
-      <reverser-position type="double">0.00</reverser-position>
+      <reverser-position type="int">0</reverser-position>
     </engine>
     <engine n="3">
-      <reverser-position type="double">0.00</reverser-position>
+      <reverser-position type="int">0</reverser-position>
     </engine>
   </engines>
   
@@ -514,7 +514,7 @@
     </enav>
     <!--radar>
 	<file>Aircraft/C-17/Nasal/radar.nas</file>
-	</radar-->
+    </radar-->
     <radar2>
       <file>Aircraft/Instruments-3d/radar2/radar2.nas</file>
     </radar2>

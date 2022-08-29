@@ -3,7 +3,7 @@ Boeing C-17 Globemaster III
 
 ### [Wikipedia Page](https://en.wikipedia.org/wiki/Boeing_C-17_Globemaster_III)
 
-<img src="https://upload.wikimedia.org/wikipedia/commons/3/36/C17_aircraft_alt.jpg"  width="600">
+<img src="https://upload.wikimedia.org/wikipedia/commons/3/36/C17_aircraft_alt.jpg"  width="800">
 
 ***
 
@@ -13,6 +13,7 @@ Boeing C-17 Globemaster III
 * [@DrDavid](https://github.com/DrDavid)  - Updates
 * Jon Bourgeois - JSBSim Flight Data Model
 * Dave Austin, Adam Fothergill - 3D Aircraft Model and Textures, converted from X-Plane
+* [@J. Maverick](https://github.com/JMaverick16) - Damage code
 
 ****
 

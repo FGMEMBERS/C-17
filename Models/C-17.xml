@@ -1,11 +1,15 @@
 <?xml version="1.0"?>
 <PropertyList>
-  <!-- 3D Model Converted From X-Plane, C-17 3D Authors Adam Fothergill/Dave Austin -->	
+  <!-- 
+       3D Model Converted From X-Plane, C-17 3D 
+       authors: :copyright: Adam Fothergill and Dave Austin
+       Used with permission under GPL2 or later license 
+  -->	
   
   <path>C-17.ac</path>
   <!-- 3D Model Orientation  -->
   <offsets>
-    <pitch-deg>0.00</pitch-deg> 
+    <pitch-deg>0.00</pitch-deg>
     <heading-deg>0.00</heading-deg>
     <roll-deg>0.00</roll-deg>
     <x-m>-53</x-m>
@@ -15,24 +19,24 @@
   
   <!-- Disabling the ambient animation, as FG2020 cannot launch the aircraft
        when this animation is present
-  <animation> 				
-    <type>material</type> 
-    <object-name></object-name>
-    <property-base>sim/model/C-17</property-base>
-    <rgb>
-      <red>0.93</red>
-      <green>0.93</green>
-      <blue>0.93</blue>
-    </rgb>
-    <ambient>
-      <red>0.93</red>
-      <green>0.93</green>
-      <blue>0.93</blue>
-    </ambient>
-  </animation>
+       <animation>				
+       <type>material</type>
+       <object-name></object-name>
+       <property-base>sim/model/C-17</property-base>
+       <rgb>
+       <red>0.93</red>
+       <green>0.93</green>
+       <blue>0.93</blue>
+       </rgb>
+       <ambient>
+       <red>0.93</red>
+       <green>0.93</green>
+       <blue>0.93</blue>
+       </ambient>
+       </animation>
   -->
   
-  <!-- 	NASAL Code for Liveries -->	
+  <!-- NASAL Code for Liveries -->	
   <nasal>
     <load>
       var self = cmdarg();
@@ -42,7 +46,7 @@
       var ramp_door = self.getNode("instrumentation/doors/ramp/position-norm", 1);
       var para = self.getNode("instrumentation/paras/trigger", 1);
       ramp_door.alias(float_1);
-      print("BOOOOYAHHH - We got another multiplayer aircraft..");
+
       var rootindex =  root.getIndex();
       print(rootindex);
       var power_path = "sim/signals/fdm-initialized"; # Path to 28V DC supply
@@ -56,10 +60,10 @@
       var int_1 = self.getNode("sim/multiplay/generic/int[1]", 1);
       para.alias(int_1);
       var onInt1Triggered = func {
-      print("INt1 TRIGGERED!!");
+      print("Int1 Triggered!");
       }
       setlistener(int_1, onInt1Triggered);
-      print("set Listener on property: "~fullpathint1);
+      print("set listener on property: "~fullpathint1);
       var mplights = func {
       root.initNode(rotate_path, 0, "DOUBLE");
       root.initNode(anim_path, 0, "DOUBLE");
@@ -107,7 +111,7 @@
   </nasal>		
 
   <!-- MP sound call -->
-  <sound><path>Aircraft/C-17/Sounds/mp-sound.xml</path></sound>   
+  <sound><path>Aircraft/C-17/Sounds/mp-sound.xml</path></sound>  
 
   <animation>
     <type>material</type>
@@ -273,12 +277,14 @@
     <object-name>Nacelle2</object-name>
     <object-name>Nacelle3</object-name>
     <object-name>Nacelle4</object-name>
-    <!--object-name>MainGear1.Dr1</object-name>
-	<object-name>MainGear1.Dr2</object-name>
-	<object-name>MainGear1.Dr3</object-name>
-	<object-name>MainGear2.Dr1</object-name>
-	<object-name>MainGear2.Dr2</object-name>
-	<object-name>MainGear2.Dr3</object-name-->
+    <!--   
+	 <object-name>MainGear1.Dr1</object-name>
+	 <object-name>MainGear1.Dr2</object-name>
+	 <object-name>MainGear1.Dr3</object-name>
+	 <object-name>MainGear2.Dr1</object-name>
+	 <object-name>MainGear2.Dr2</object-name>
+	 <object-name>MainGear2.Dr3</object-name>
+    -->
     <object-name>NoseGearDr1</object-name>
     <object-name>NoseGearDr2</object-name>
     <object-name>NoseGearDr3</object-name>
@@ -286,16 +292,6 @@
     <object-name>CargoRamp</object-name>
     <object-name>CargoRamp2</object-name>
     <object-name>CargoDoor</object-name>
-    <!--object-name></object-name>
-	<object-name></object-name>
-	<object-name></object-name>
-	<object-name></object-name>
-	<object-name></object-name>
-	<object-name></object-name>
-	<object-name></object-name>
-	<object-name></object-name>
-	<object-name></object-name>
-	<object-name></object-name-->
   </effect>
 
   <!-- Transparent Surfaces for Rembrandt rendering -->
@@ -389,22 +385,24 @@
     <object-name>NoseGearDr2</object-name>
     <object-name>MainGear2.Dr3</object-name>
     <object-name>MainGear1.Dr3</object-name>
-  </animation> 
+  </animation>
   
   <model>
-    <path>Aircraft/C-17/Panels/C-17-cockpit.xml</path> 
-    <!--<offsets> 
-	<x-m> 2.30278 </x-m>
-	<y-m> 0.00375307 </y-m>
-	<z-m> 1.39794 </z-m>
-	</offsets> -->
+    <path>Aircraft/C-17/Panels/C-17-cockpit.xml</path>
+    <!--    
+	 <offsets>
+	 <x-m>2.30278</x-m>
+	 <y-m>0.00375307</y-m>
+	 <z-m>1.39794</z-m>
+	 </offsets>
+    -->
   </model>
 
   <model>
-    <path>Aircraft/C-17/Models/C-17-cargobay.xml</path> 
-    <offsets> 
-      <x-m> 0 </x-m>
-      <y-m> 0</y-m>
+    <path>Aircraft/C-17/Models/C-17-cargobay.xml</path>
+    <offsets>
+      <x-m>0</x-m>
+      <y-m>0</y-m>
       <z-m>0</z-m>
     </offsets>
   </model>
@@ -423,9 +421,9 @@
     <axis>
       <x>1.0</x>
       <y>0.0</y>
-      <z>0</z>
+      <z>0.0</z>
     </axis>
-  </animation> 
+  </animation>
 
   <animation>
     <type>translate</type>
@@ -438,9 +436,9 @@
     <axis>
       <x>1.0</x>
       <y>0.0</y>
-      <z>0</z>
+      <z>0.0</z>
     </axis>
-  </animation> 
+  </animation>
 
   <animation>
     <type>translate</type>
@@ -455,7 +453,7 @@
       <y>0.0</y>
       <z>0</z>
     </axis>
-  </animation> 
+  </animation>
 
   <animation>
     <type>translate</type>
@@ -468,12 +466,12 @@
     <axis>
       <x>1.0</x>
       <y>0.0</y>
-      <z>0</z>
+      <z>0.0</z>
     </axis>
-  </animation> 
+  </animation>
 
   <!-- Engine Fandisk Animations -->
-  <animation>			<!-- Engine1 -->
+  <animation><!-- Engine1 -->
     <type>spin</type>
     <object-name>FanDisk1</object-name>
     <object-name>FanHub1</object-name>
@@ -487,11 +485,11 @@
     <axis>
       <x>1</x>
       <y>0</y>
-      <z>0</z>
+      <z>0.0</z>
     </axis>
   </animation>
 
-  <animation>			<!-- Engine2 -->
+  <animation> <!-- Engine2 -->
     <type>spin</type>
     <object-name>FanDisk2</object-name>
     <object-name>FanHub2</object-name>
@@ -505,11 +503,11 @@
     <axis>
       <x>1</x>
       <y>0</y>
-      <z>0</z>
+      <z>0.0</z>
     </axis>
   </animation>
   
-  <animation>			<!-- Engine2 -->
+  <animation><!-- Engine3 -->
     <type>spin</type>
     <object-name>FanDisk3</object-name>
     <object-name>FanHub3</object-name>
@@ -523,11 +521,11 @@
     <axis>
       <x>1</x>
       <y>0</y>
-      <z>0</z>
+      <z>0.0</z>
     </axis>
   </animation>
 
-  <animation>			<!-- Engine4 -->
+  <animation><!-- Engine4 -->
     <type>spin</type>
     <object-name>FanDisk4</object-name>
     <object-name>FanHub4</object-name>
@@ -541,7 +539,7 @@
     <axis>
       <x>1</x>
       <y>0</y>
-      <z>0</z>
+      <z>0.0</z>
     </axis>
   </animation>
   
@@ -558,13 +556,13 @@
       <entry><ind>0.5</ind><dep>17.5</dep></entry>
       <entry><ind>1.0</ind><dep>35.0</dep></entry>
     </interpolation>
-    <axis>   
-      <x1-m> 43.4673</x1-m>
-      <y1-m> 0</y1-m>
-      <z1-m> 3.78921</z1-m>
-      <x2-m> 48.3583</x2-m>
-      <y2-m> 0</y2-m>
-      <z2-m> 10.5156</z2-m>
+    <axis>  
+      <x1-m>43.4673</x1-m>
+      <y1-m>0</y1-m>
+      <z1-m>3.78921</z1-m>
+      <x2-m>48.3583</x2-m>
+      <y2-m>0</y2-m>
+      <z2-m>10.5156</z2-m>
     </axis>
   </animation>
   
@@ -716,8 +714,8 @@
       <entry><ind>1</ind><dep>0.45</dep></entry>
     </interpolation>
     <axis>
-      <x> 1.00</x>
-      <y> 0.00</y>
+      <x>1.00</x>
+      <y>0.00</y>
       <z>-0.05</z>
     </axis>
   </animation>
@@ -748,8 +746,8 @@
       <entry><ind>1</ind><dep>0.45</dep></entry>
     </interpolation>
     <axis>
-      <x> 1.00</x>
-      <y> 0.00</y>
+      <x>1.00</x>
+      <y>0.00</y>
       <z>-0.05</z>
     </axis>
   </animation>
@@ -767,7 +765,7 @@
     </center>
     <axis>
       <y>1</y>
-    </axis> 
+    </axis>
   </animation>
   
   <animation>
@@ -782,7 +780,7 @@
     </center>
     <axis>
       <y>1</y>
-    </axis> 
+    </axis>
   </animation>
   
   <animation>
@@ -797,7 +795,7 @@
     </center>
     <axis>
       <y>1</y>
-    </axis> 
+    </axis>
   </animation>
   
   <animation>
@@ -812,7 +810,7 @@
     </center>
     <axis>
       <y>1</y>
-    </axis> 
+    </axis>
   </animation>
   
   <animation>
@@ -827,7 +825,7 @@
     </center>
     <axis>
       <y>1</y>
-    </axis> 
+    </axis>
   </animation>
   
   <animation>
@@ -842,7 +840,7 @@
     </center>
     <axis>
       <y>1</y>
-    </axis> 
+    </axis>
   </animation>
   
   <animation>
@@ -857,7 +855,7 @@
     </center>
     <axis>
       <y>1</y>
-    </axis> 
+    </axis>
   </animation>
   
   <animation>
@@ -872,7 +870,7 @@
     </center>
     <axis>
       <y>1</y>
-    </axis> 
+    </axis>
   </animation>
   
   <!-- CARGO RAMP/DOOR  -->	
@@ -882,12 +880,12 @@
     <object-name>CargoRamp2</object-name>
     <property>instrumentation/doors/ramp/position-norm</property>
     <interpolation>
-      <entry><ind> 0 </ind><dep>   0 </dep></entry>
-      <entry><ind> 1 </ind><dep> -19 </dep></entry>
-    </interpolation> 
+      <entry><ind>0</ind><dep>  0</dep></entry>
+      <entry><ind>1</ind><dep>-19</dep></entry>
+    </interpolation>
     <axis>
       <x1-m>26.5296</x1-m>
-      <y1-m>2.567 </y1-m>
+      <y1-m>2.567</y1-m>
       <z1-m>-2.88556</z1-m>
       <x2-m>26.5289</x2-m>
       <y2-m>-2.55957</y2-m>
@@ -904,15 +902,14 @@
       <entry><ind>0.2</ind><dep>0.0</dep></entry>
       <entry><ind>0.8</ind><dep>-92.0</dep></entry>
       <entry><ind>1.0</ind><dep>-92.0</dep></entry>
-    </interpolation> 
-    
+    </interpolation>
     <!--
 	33.1215	-1.5748	2.31984
 	33.1215	-1.5748	2.20398
     -->
     <axis>
       <x1-m>33.1215</x1-m>
-      <y1-m>2.31984 </y1-m>
+      <y1-m>2.31984</y1-m>
       <z1-m>-1.5748</z1-m>
       <x2-m>33.1215</x2-m>
       <y2-m>2.20398</y2-m>
@@ -924,11 +921,12 @@
     <type>rotate</type>
     <object-name>CargoDoor</object-name>
     <property>instrumentation/doors/ramp/position-norm</property>
-    <!-- <interpolation>
-	 <entry><ind> 0 </ind><dep> 0 </dep></entry>
-	 <entry><ind> 1 </ind><dep> 25 </dep></entry>
-	 </interpolation> -->
-    
+    <!-- 
+	 <interpolation>
+	 <entry><ind>0</ind><dep>0</dep></entry>
+	 <entry><ind>1</ind><dep>25</dep></entry>
+	 </interpolation>
+    -->
     <factor>20</factor>
     <!--
 	42.5833	0.474942	-0.949815     LEFT
@@ -976,7 +974,7 @@
       <entry><ind>0.2</ind><dep>103.0</dep></entry>
       <entry><ind>0.8</ind><dep>0.0</dep></entry>
       <entry><ind>1.0</ind><dep>0.0</dep></entry>
-    </interpolation> 
+    </interpolation>
     <center>
       <x-m>3.27358</x-m>
       <y-m>0</y-m>
@@ -993,17 +991,17 @@
     <object-name>NGStrut2</object-name>
     <object-name>NGStrut3</object-name>
     <object-name>NGTires</object-name>
-    <property>gear/gear/position-norm</property> 
+    <property>gear/gear/position-norm</property>
     <interpolation>
       <entry><ind>0.0</ind><dep>0.85</dep></entry>
       <entry><ind>0.2</ind><dep>0.85</dep></entry>
       <entry><ind>0.8</ind><dep>0.0</dep></entry>
       <entry><ind>1.0</ind><dep>0.0</dep></entry>
-    </interpolation> 
+    </interpolation>
     <axis>
-      <x> 0.00</x>
-      <y> 0.00</y>
-      <z> 1.00</z>
+      <x>0.00</x>
+      <y>0.00</y>
+      <z>1.00</z>
     </axis>
   </animation>
 
@@ -1024,7 +1022,7 @@
     </center>
     <axis>
       <z>1</z>
-    </axis> 
+    </axis>
   </animation>
   
   <animation>
@@ -1043,7 +1041,7 @@
     </center>
     <axis>
       <z>1</z>
-    </axis> 
+    </axis>
   </animation>
   
   <animation>
@@ -1052,17 +1050,17 @@
     <object-name>MainGear1.FrontTires</object-name>
     <object-name>MainGear1.RearStrut</object-name>
     <object-name>MainGear1.RearTires</object-name>
-    <property>gear/gear[0]/position-norm</property> 
+    <property>gear/gear[0]/position-norm</property>
     <interpolation>
       <entry><ind>0.0</ind><dep>0.85</dep></entry>
       <entry><ind>1</ind><dep>0.0</dep></entry>
-    </interpolation> 
+    </interpolation>
     <axis>
-      <x> 0.00</x>
-      <y> 0.00</y>
-      <z> 1.00</z>
+      <x>0.00</x>
+      <y>0.00</y>
+      <z>1.00</z>
     </axis>
-  </animation> 
+  </animation>
   
   <!-- Right Main -->
   <animation>
@@ -1081,7 +1079,7 @@
     </center>
     <axis>
       <z>1</z>
-    </axis> 
+    </axis>
   </animation>
   
   <animation>
@@ -1100,7 +1098,7 @@
     </center>
     <axis>
       <z>1</z>
-    </axis> 
+    </axis>
   </animation>
   
   <animation>
@@ -1109,17 +1107,17 @@
     <object-name>MainGear2.FrontTires</object-name>
     <object-name>MainGear2.RearStrut</object-name>
     <object-name>MainGear2.RearTires</object-name>
-    <property>gear/gear[0]/position-norm</property> 
+    <property>gear/gear[0]/position-norm</property>
     <interpolation>
       <entry><ind>0.0</ind><dep>0.85</dep></entry>
       <entry><ind>1</ind><dep>0.0</dep></entry>
-    </interpolation> 
+    </interpolation>
     <axis>
-      <x> 0.00</x>
-      <y> 0.00</y>
-      <z> 1.00</z>
+      <x>0.00</x>
+      <y>0.00</y>
+      <z>1.00</z>
     </axis>
-  </animation> 
+  </animation>
 
   <!-- Landing Gear Doors -->
   <!-- NoseGear Doors -->
@@ -1171,7 +1169,7 @@
       <entry><ind>0.2</ind><dep>-90.0</dep></entry>
       <entry><ind>0.8</ind><dep>-90.0</dep></entry>
       <entry><ind>1.0</ind><dep>0.0</dep></entry>
-    </interpolation>  
+    </interpolation> 
     <axis>
       <x1-m>1.2579</x1-m>
       <y1-m>-0.662005</y1-m>
@@ -1190,7 +1188,7 @@
       <entry><ind>0.2</ind><dep>90.0</dep></entry>
       <entry><ind>0.8</ind><dep>90.0</dep></entry>
       <entry><ind>1.0</ind><dep>0.0</dep></entry>
-    </interpolation> 
+    </interpolation>
     <axis>
       <x1-m>1.2579</x1-m>
       <y1-m>0.6642</y1-m>
@@ -1281,41 +1279,41 @@
 
   <model>
     <path>Aircraft/C-17/Models/lights/GreenLight.xml</path>
-    <name>Greenlight</name>     
+    <name>Greenlight</name>    
     <offsets>
-      <x-m> 24.0</x-m>
-      <y-m> 25.0</y-m>
-      <z-m>  0.7</z-m>       
+      <x-m>24.0</x-m>
+      <y-m>25.0</y-m>
+      <z-m> 0.7</z-m>      
     </offsets>
   </model>
 
   <model>
     <path>Aircraft/C-17/Models/lights/RedLight.xml</path>
-    <name>Redlight</name>     
+    <name>Redlight</name>    
     <offsets>
-      <x-m> 24.0</x-m>
-      <y-m> -25.0</y-m>
-      <z-m>  0.7</z-m>       
+      <x-m>24.0</x-m>
+      <y-m>-25.0</y-m>
+      <z-m> 0.7</z-m>      
     </offsets>
   </model>
 
   <model>
     <path>Aircraft/C-17/Models/lights/StrobeWhite.xml</path>
-    <name>flashright</name>     
+    <name>flashright</name>    
     <offsets>
-      <x-m> 24.2</x-m>
-      <y-m> 25.5</y-m>
-      <z-m>  0.7</z-m>        
+      <x-m>24.2</x-m>
+      <y-m>25.5</y-m>
+      <z-m> 0.7</z-m>       
     </offsets>
   </model>
 
   <model>
     <path>Aircraft/C-17/Models/lights/StrobeWhite.xml</path>
-    <name>flashleft</name>     
+    <name>flashleft</name>    
     <offsets>
-      <x-m> 24.2</x-m>
-      <y-m> -25.5</y-m>
-      <z-m>  0.7</z-m>       
+      <x-m>24.2</x-m>
+      <y-m>-25.5</y-m>
+      <z-m> 0.7</z-m>      
     </offsets>
   </model>
 
@@ -1325,9 +1323,9 @@
     <offsets>
       <x-m>14.8</x-m>
       <y-m>-3.50</y-m>
-      <z-m>-2.2</z-m> 
-      <pitch-deg>   -10.000 </pitch-deg>
-      <heading-deg> 10 </heading-deg>
+      <z-m>-2.2</z-m>
+      <pitch-deg>  -10.000</pitch-deg>
+      <heading-deg>10</heading-deg>
     </offsets>
   </model>
 
@@ -1337,30 +1335,30 @@
     <offsets>
       <x-m>14.8</x-m>
       <y-m>3.50</y-m>
-      <z-m>-2.2</z-m> 
-      <pitch-deg>   -10.000 </pitch-deg>
-      <heading-deg> -10 </heading-deg>
+      <z-m>-2.2</z-m>
+      <pitch-deg>  -10.000</pitch-deg>
+      <heading-deg>-10</heading-deg>
     </offsets>
   </model>
 
   <model>
     <path>Aircraft/C-17/Models/lights/beacon.xml</path>
-    <name>Beaconlight.top</name>     
+    <name>Beaconlight.top</name>    
     <offsets>
       <x-m>45.40</x-m>
       <y-m>0.000</y-m>
-      <z-m>12.6</z-m>      
+      <z-m>12.6</z-m>     
     </offsets>
   </model>
 
   <model>
     <path>Aircraft/C-17/Models/lights/beacon.xml</path>
-    <name>Beaconlight.bottom</name>     
+    <name>Beaconlight.bottom</name>    
     <offsets>
       <x-m>12.213</x-m>
-      <y-m> 0.000</y-m>
-      <z-m>-3.05</z-m>   
-      <roll-deg>180</roll-deg>   
+      <y-m>0.000</y-m>
+      <z-m>-3.05</z-m>  
+      <roll-deg>180</roll-deg>  
     </offsets>
   </model>
   <!-- Tyre Smoke -->
@@ -1399,72 +1397,72 @@
   <model>
     <path>Aircraft/C-17/Models/effects/smoke/smokeL.xml</path>
     <offsets>
-      <x-m> 14 </x-m>
-      <y-m> -7.5 </y-m>
-      <z-m> 0.5 </z-m>
+      <x-m>14</x-m>
+      <y-m>-7.5</y-m>
+      <z-m>0.5</z-m>
     </offsets>
   </model>
   
   <model>
     <path>Aircraft/C-17/Models/effects/trail/trailL.xml</path>
     <offsets>
-      <x-m> 14 </x-m>
-      <y-m> -7.5 </y-m>
-      <z-m> 0.5 </z-m>
+      <x-m>14</x-m>
+      <y-m>-7.5</y-m>
+      <z-m>0.5</z-m>
     </offsets>
   </model>
   
   <model>
     <path>Aircraft/C-17/Models/effects/smoke/smokeL.xml</path>
     <offsets>
-      <x-m> 14 </x-m>
-      <y-m> -14 </y-m>
-      <z-m> -0.3 </z-m>
+      <x-m>14</x-m>
+      <y-m>-14</y-m>
+      <z-m>-0.3</z-m>
     </offsets>
   </model>
   
   <model>
     <path>Aircraft/C-17/Models/effects/trail/trailL.xml</path>
     <offsets>
-      <x-m> 14 </x-m>
-      <y-m> -14 </y-m>
-      <z-m> -0.3 </z-m>
+      <x-m>14</x-m>
+      <y-m>-14</y-m>
+      <z-m>-0.3</z-m>
     </offsets>
   </model>
   
   <model>
     <path>Aircraft/C-17/Models/effects/smoke/smokeR.xml</path>
     <offsets>
-      <x-m> 14 </x-m>
-      <y-m> 7.5 </y-m>
-      <z-m> 0.5</z-m>
+      <x-m>14</x-m>
+      <y-m>7.5</y-m>
+      <z-m>0.5</z-m>
     </offsets>
   </model>
   
   <model>
     <path>Aircraft/C-17/Models/effects/trail/trailR.xml</path>
     <offsets>
-      <x-m> 14 </x-m>
-      <y-m> 7.5 </y-m>
-      <z-m> 0.5</z-m>
+      <x-m>14</x-m>
+      <y-m>7.5</y-m>
+      <z-m>0.5</z-m>
     </offsets>
   </model>
   
   <model>
     <path>Aircraft/C-17/Models/effects/smoke/smokeR.xml</path>
     <offsets>
-      <x-m> 14 </x-m>
-      <y-m> 14 </y-m>
-      <z-m> -0.3 </z-m>
+      <x-m>14</x-m>
+      <y-m>14</y-m>
+      <z-m>-0.3</z-m>
     </offsets>
   </model>
   
   <model>
     <path>Aircraft/C-17/Models/effects/trail/trailR.xml</path>
     <offsets>
-      <x-m> 14 </x-m>
-      <y-m> 14 </y-m>
-      <z-m> -0.3 </z-m>
+      <x-m>14</x-m>
+      <y-m>14</y-m>
+      <z-m>-0.3</z-m>
     </offsets>
   </model>
   
@@ -1472,27 +1470,27 @@
   <model>
     <path>Aircraft/C-17/Models/effects/tiptrail/tiptrail.xml</path>
     <offsets>
-      <x-m> 24.2</x-m>
-      <y-m> -25.8</y-m>
-      <z-m>  0.7</z-m>
+      <x-m>24.2</x-m>
+      <y-m>-25.8</y-m>
+      <z-m>0.7</z-m>
     </offsets>
   </model>
   
   <model>
     <path>Aircraft/C-17/Models/effects/tiptrail/tiptrail.xml</path>
     <offsets>
-      <x-m> 24.2</x-m>
-      <y-m> 25.8</y-m>
-      <z-m>  0.7</z-m>
+      <x-m>24.2</x-m>
+      <y-m>25.8</y-m>
+      <z-m>0.7</z-m>
     </offsets>
   </model>
   
   <!-- payloads -->
   <model><path>Aircraft/C-17/Models/payload/loads.xml</path>
   <offsets>
-    <x-m> 0 </x-m>
-    <y-m> 0 </y-m>
-    <z-m> 0 </z-m>
+    <x-m>0</x-m>
+    <y-m>0</y-m>
+    <z-m>0</z-m>
   </offsets>
-  </model> 
+  </model>
 </PropertyList>

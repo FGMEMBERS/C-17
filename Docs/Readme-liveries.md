@@ -2,13 +2,15 @@
 
 :airplane: 
 
-You will find a folder called `PNG_Graphics` in the Sources folder. this contains the master liveries in `PNG` format at `4096x4094`.
+You will find a folder called `Paintkit` in the Sources folder, to create High resolution liveries.
 
-Use this `PNG` file to create  further liveries but _DO NOT SAVE OVER IT_. When saving your new liveries  use _SAVE AS_ and save your new livery as a compressed  `JPEG` at `1024x1024`.
+Alternatively, You will find a folder called `PNG_Graphics` in the Sources folder. this contains the master liveries in `PNG` format at `4096x4094`.
+
+Use this `PNG` file to create  further liveries but _DO NOT SAVE OVER IT_. When saving your new liveries  use _SAVE AS_ and save your new livery as a compressed  `JPEG` at `1024 x 1024`.
 
 By doing this you still have the high resolution details  in your livery and have actual livery files with a tiny file size which will load fast even on low end  machines.
 
-Creating new liveries as `PNG` files  at the full `4096x4096` resolution will result is older PC's and Mac ether suffering very low frame rates or not loading at all.
+Creating new liveries as `PNG` files  at the full `4096 x 4096` resolution will result is older PC's and Mac ether suffering very low frame rates or not loading at all.
 
 ### EDITING LIVERIES 
 
