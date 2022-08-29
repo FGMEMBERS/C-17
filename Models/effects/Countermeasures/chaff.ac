@@ -5,7 +5,7 @@ OBJECT world
 kids 1
 OBJECT poly
 name "chaff"
-texture "chaff.rgb"
+texture "chaff.png"
 crease 52.5000000000002
 numvert 48
 -0.073435 -0.000330 -0.017460

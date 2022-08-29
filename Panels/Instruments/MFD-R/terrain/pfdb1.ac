@@ -7,7 +7,7 @@ OBJECT poly
 name "AI"
 data 8
 Mesh.064
-texture "ati.rgb"
+texture "ati.png"
 texrep 1 1
 crease 30.000000
 numvert 4
@@ -28,7 +28,7 @@ OBJECT poly
 name "Alt10"
 data 8
 Mesh.054
-texture "digits.rgb"
+texture "digits.png"
 texrep 1 1
 crease 30.000000
 numvert 4
@@ -49,7 +49,7 @@ OBJECT poly
 name "Alt10.001"
 data 8
 Mesh.065
-texture "digits.rgb"
+texture "digits.png"
 texrep 1 1
 crease 30.000000
 numvert 4
@@ -70,7 +70,7 @@ OBJECT poly
 name "Alt100"
 data 8
 Mesh.066
-texture "digits.rgb"
+texture "digits.png"
 texrep 1 1
 crease 30.000000
 numvert 4
@@ -91,7 +91,7 @@ OBJECT poly
 name "Alt1000"
 data 8
 Mesh.049
-texture "digits.rgb"
+texture "digits.png"
 texrep 1 1
 crease 30.000000
 numvert 4
@@ -112,7 +112,7 @@ OBJECT poly
 name "Alt10000"
 data 8
 Mesh.069
-texture "digits.rgb"
+texture "digits.png"
 texrep 1 1
 crease 30.000000
 numvert 4
@@ -133,7 +133,7 @@ OBJECT poly
 name "Asitext"
 data 8
 Mesh.070
-texture "digits.rgb"
+texture "digits.png"
 texrep 1 1
 crease 30.000000
 numvert 4
@@ -154,7 +154,7 @@ OBJECT poly
 name "Asitext.001"
 data 8
 Mesh.087
-texture "digits.rgb"
+texture "digits.png"
 texrep 1 1
 crease 30.000000
 numvert 4
@@ -175,7 +175,7 @@ OBJECT poly
 name "Asitext.002"
 data 8
 Mesh.088
-texture "digits.rgb"
+texture "digits.png"
 texrep 1 1
 crease 30.000000
 numvert 4
@@ -196,7 +196,7 @@ OBJECT poly
 name "FDbars"
 data 8
 Mesh.089
-texture "ati.rgb"
+texture "ati.png"
 texrep 1 1
 crease 30.000000
 numvert 8
@@ -228,7 +228,7 @@ OBJECT poly
 name "GSneedle"
 data 8
 Mesh.090
-texture "ati.rgb"
+texture "ati.png"
 texrep 1 1
 crease 30.000000
 numvert 4
@@ -249,7 +249,7 @@ OBJECT poly
 name "GSscale"
 data 8
 Mesh.091
-texture "ati.rgb"
+texture "ati.png"
 texrep 1 1
 crease 30.000000
 numvert 4
@@ -270,7 +270,7 @@ OBJECT poly
 name "HDGface"
 data 8
 Mesh.060
-texture "digits.rgb"
+texture "digits.png"
 texrep 1 1
 crease 30.000000
 numvert 18
@@ -394,7 +394,7 @@ OBJECT poly
 name "HDGfacebg"
 data 8
 Mesh.083
-texture "ati.rgb"
+texture "ati.png"
 texrep 1 1
 crease 30.000000
 numvert 18
@@ -518,7 +518,7 @@ OBJECT poly
 name "LOCneedle"
 data 8
 Mesh.092
-texture "ati.rgb"
+texture "ati.png"
 texrep 1 1
 crease 30.000000
 numvert 4
@@ -539,7 +539,7 @@ OBJECT poly
 name "LOCscale"
 data 8
 Mesh.062
-texture "ati.rgb"
+texture "ati.png"
 texrep 1 1
 crease 30.000000
 numvert 12
@@ -582,7 +582,7 @@ OBJECT poly
 name "Omarker"
 data 8
 Mesh.093
-texture "ati.rgb"
+texture "ati.png"
 texrep 1 1
 crease 30.000000
 numvert 4
@@ -603,7 +603,7 @@ OBJECT poly
 name "PFDscreen"
 data 8
 Mesh.094
-texture "cp.rgb"
+texture "cp.png"
 texrep 1 1
 crease 30.000000
 numvert 36
@@ -845,7 +845,7 @@ OBJECT poly
 name "bugtxt"
 data 8
 Mesh.047
-texture "digits.rgb"
+texture "digits.png"
 texrep 1 1
 crease 30.000000
 numvert 4
@@ -866,7 +866,7 @@ OBJECT poly
 name "bugtxt.001"
 data 8
 Mesh.095
-texture "digits.rgb"
+texture "digits.png"
 texrep 1 1
 crease 30.000000
 numvert 4
@@ -887,7 +887,7 @@ OBJECT poly
 name "bugtxt.002"
 data 8
 Mesh.096
-texture "digits.rgb"
+texture "digits.png"
 texrep 1 1
 crease 30.000000
 numvert 4
@@ -908,7 +908,7 @@ OBJECT poly
 name "dmetxt"
 data 8
 Mesh.041
-texture "pfd2.rgb"
+texture "pfd2.png"
 texrep 1 1
 crease 30.000000
 numvert 4
@@ -929,7 +929,7 @@ OBJECT poly
 name "dmetxt.001"
 data 8
 Mesh.097
-texture "pfd2.rgb"
+texture "pfd2.png"
 texrep 1 1
 crease 30.000000
 numvert 4
@@ -950,7 +950,7 @@ OBJECT poly
 name "dmetxt.002"
 data 8
 Mesh.098
-texture "pfd2.rgb"
+texture "pfd2.png"
 texrep 1 1
 crease 30.000000
 numvert 4
@@ -971,7 +971,7 @@ OBJECT poly
 name "dmetxt.003"
 data 8
 Mesh.099
-texture "pfd2.rgb"
+texture "pfd2.png"
 texrep 1 1
 crease 30.000000
 numvert 4
@@ -992,7 +992,7 @@ OBJECT poly
 name "dmetxt.004"
 data 8
 Mesh.100
-texture "pfd2.rgb"
+texture "pfd2.png"
 texrep 1 1
 crease 30.000000
 numvert 4
@@ -1013,7 +1013,7 @@ OBJECT poly
 name "mach.001"
 data 8
 Mesh.059
-texture "pfd2.rgb"
+texture "pfd2.png"
 texrep 1 1
 crease 30.000000
 numvert 4
@@ -1034,7 +1034,7 @@ OBJECT poly
 name "mach.002"
 data 8
 Mesh.057
-texture "pfd2.rgb"
+texture "pfd2.png"
 texrep 1 1
 crease 30.000000
 numvert 4
@@ -1055,7 +1055,7 @@ OBJECT poly
 name "mach.003"
 data 8
 Mesh.058
-texture "pfd2.rgb"
+texture "pfd2.png"
 texrep 1 1
 crease 30.000000
 numvert 4
@@ -1076,7 +1076,7 @@ OBJECT poly
 name "pointer"
 data 8
 Mesh.101
-texture "ati.rgb"
+texture "ati.png"
 texrep 1 1
 crease 30.000000
 numvert 20
@@ -1148,7 +1148,7 @@ OBJECT poly
 name "pointer.001"
 data 8
 Mesh.102
-texture "ati.rgb"
+texture "ati.png"
 texrep 1 1
 crease 30.000000
 numvert 6
@@ -1178,7 +1178,7 @@ OBJECT poly
 name "pointer.002"
 data 8
 Mesh.103
-texture "ati.rgb"
+texture "ati.png"
 texrep 1 1
 crease 30.000000
 numvert 6
@@ -1208,7 +1208,7 @@ OBJECT poly
 name "pointer.003"
 data 8
 Mesh.104
-texture "ati.rgb"
+texture "ati.png"
 texrep 1 1
 crease 30.000000
 numvert 6
@@ -1238,7 +1238,7 @@ OBJECT poly
 name "pointer.004"
 data 8
 Mesh.105
-texture "ati.rgb"
+texture "ati.png"
 texrep 1 1
 crease 30.000000
 numvert 6
@@ -1268,7 +1268,7 @@ OBJECT poly
 name "pointer.005"
 data 8
 Mesh.106
-texture "ati.rgb"
+texture "ati.png"
 texrep 1 1
 crease 30.000000
 numvert 6
@@ -1298,7 +1298,7 @@ OBJECT poly
 name "pointer.006"
 data 8
 Mesh.085
-texture "ati.rgb"
+texture "ati.png"
 texrep 1 1
 crease 30.000000
 numvert 6
@@ -1328,7 +1328,7 @@ OBJECT poly
 name "pointer.007"
 data 8
 Mesh.086
-texture "ati.rgb"
+texture "ati.png"
 texrep 1 1
 crease 30.000000
 numvert 6
@@ -1358,7 +1358,7 @@ OBJECT poly
 name "rollptr"
 data 8
 Mesh.107
-texture "ati.rgb"
+texture "ati.png"
 texrep 1 1
 crease 30.000000
 numvert 3
@@ -1377,7 +1377,7 @@ OBJECT poly
 name "s0"
 data 8
 Mesh.108
-texture "ati.rgb"
+texture "ati.png"
 texrep 1 1
 crease 30.000000
 numvert 4
@@ -1398,7 +1398,7 @@ OBJECT poly
 name "s1"
 data 8
 Mesh.109
-texture "ati.rgb"
+texture "ati.png"
 texrep 1 1
 crease 30.000000
 numvert 4
@@ -1419,7 +1419,7 @@ OBJECT poly
 name "s10"
 data 8
 Mesh.110
-texture "ati.rgb"
+texture "ati.png"
 texrep 1 1
 crease 30.000000
 numvert 4
@@ -1440,7 +1440,7 @@ OBJECT poly
 name "s11"
 data 8
 Mesh.111
-texture "ati.rgb"
+texture "ati.png"
 texrep 1 1
 crease 30.000000
 numvert 4
@@ -1461,7 +1461,7 @@ OBJECT poly
 name "s12"
 data 8
 Mesh.112
-texture "ati.rgb"
+texture "ati.png"
 texrep 1 1
 crease 30.000000
 numvert 4
@@ -1482,7 +1482,7 @@ OBJECT poly
 name "s13"
 data 8
 Mesh.113
-texture "ati.rgb"
+texture "ati.png"
 texrep 1 1
 crease 30.000000
 numvert 4
@@ -1503,7 +1503,7 @@ OBJECT poly
 name "s14"
 data 8
 Mesh.114
-texture "ati.rgb"
+texture "ati.png"
 texrep 1 1
 crease 30.000000
 numvert 4
@@ -1524,7 +1524,7 @@ OBJECT poly
 name "s15"
 data 8
 Mesh.115
-texture "ati.rgb"
+texture "ati.png"
 texrep 1 1
 crease 30.000000
 numvert 4
@@ -1545,7 +1545,7 @@ OBJECT poly
 name "s16"
 data 8
 Mesh.118
-texture "ati.rgb"
+texture "ati.png"
 texrep 1 1
 crease 30.000000
 numvert 4
@@ -1566,7 +1566,7 @@ OBJECT poly
 name "s17"
 data 8
 Mesh.117
-texture "ati.rgb"
+texture "ati.png"
 texrep 1 1
 crease 30.000000
 numvert 4
@@ -1587,7 +1587,7 @@ OBJECT poly
 name "s18"
 data 8
 Mesh.119
-texture "ati.rgb"
+texture "ati.png"
 texrep 1 1
 crease 30.000000
 numvert 4
@@ -1608,7 +1608,7 @@ OBJECT poly
 name "s19"
 data 8
 Mesh.116
-texture "ati.rgb"
+texture "ati.png"
 texrep 1 1
 crease 30.000000
 numvert 4
@@ -1629,7 +1629,7 @@ OBJECT poly
 name "s2"
 data 8
 Mesh.120
-texture "ati.rgb"
+texture "ati.png"
 texrep 1 1
 crease 30.000000
 numvert 4
@@ -1650,7 +1650,7 @@ OBJECT poly
 name "s20"
 data 8
 Mesh.121
-texture "ati.rgb"
+texture "ati.png"
 texrep 1 1
 crease 30.000000
 numvert 4
@@ -1671,7 +1671,7 @@ OBJECT poly
 name "s21"
 data 8
 Mesh.122
-texture "ati.rgb"
+texture "ati.png"
 texrep 1 1
 crease 30.000000
 numvert 4
@@ -1692,7 +1692,7 @@ OBJECT poly
 name "s22"
 data 8
 Mesh.123
-texture "ati.rgb"
+texture "ati.png"
 texrep 1 1
 crease 30.000000
 numvert 4
@@ -1713,7 +1713,7 @@ OBJECT poly
 name "s23"
 data 8
 Mesh.124
-texture "ati.rgb"
+texture "ati.png"
 texrep 1 1
 crease 30.000000
 numvert 4
@@ -1734,7 +1734,7 @@ OBJECT poly
 name "s24"
 data 8
 Mesh.125
-texture "ati.rgb"
+texture "ati.png"
 texrep 1 1
 crease 30.000000
 numvert 4
@@ -1755,7 +1755,7 @@ OBJECT poly
 name "s25"
 data 8
 Mesh.126
-texture "ati.rgb"
+texture "ati.png"
 texrep 1 1
 crease 30.000000
 numvert 4
@@ -1776,7 +1776,7 @@ OBJECT poly
 name "s26"
 data 8
 Mesh.127
-texture "ati.rgb"
+texture "ati.png"
 texrep 1 1
 crease 30.000000
 numvert 4
@@ -1797,7 +1797,7 @@ OBJECT poly
 name "s27"
 data 8
 Mesh.128
-texture "ati.rgb"
+texture "ati.png"
 texrep 1 1
 crease 30.000000
 numvert 4
@@ -1818,7 +1818,7 @@ OBJECT poly
 name "s28"
 data 8
 Mesh.129
-texture "ati.rgb"
+texture "ati.png"
 texrep 1 1
 crease 30.000000
 numvert 4
@@ -1839,7 +1839,7 @@ OBJECT poly
 name "s29"
 data 8
 Mesh.130
-texture "ati.rgb"
+texture "ati.png"
 texrep 1 1
 crease 30.000000
 numvert 4
@@ -1860,7 +1860,7 @@ OBJECT poly
 name "s3"
 data 8
 Mesh.131
-texture "ati.rgb"
+texture "ati.png"
 texrep 1 1
 crease 30.000000
 numvert 4
@@ -1881,7 +1881,7 @@ OBJECT poly
 name "s30"
 data 8
 Mesh.132
-texture "ati.rgb"
+texture "ati.png"
 texrep 1 1
 crease 30.000000
 numvert 4
@@ -1902,7 +1902,7 @@ OBJECT poly
 name "s31"
 data 8
 Mesh.133
-texture "ati.rgb"
+texture "ati.png"
 texrep 1 1
 crease 30.000000
 numvert 4
@@ -1923,7 +1923,7 @@ OBJECT poly
 name "s32"
 data 8
 Mesh.134
-texture "ati.rgb"
+texture "ati.png"
 texrep 1 1
 crease 30.000000
 numvert 4
@@ -1944,7 +1944,7 @@ OBJECT poly
 name "s33"
 data 8
 Mesh.135
-texture "ati.rgb"
+texture "ati.png"
 texrep 1 1
 crease 30.000000
 numvert 4
@@ -1965,7 +1965,7 @@ OBJECT poly
 name "s34"
 data 8
 Mesh.136
-texture "ati.rgb"
+texture "ati.png"
 texrep 1 1
 crease 30.000000
 numvert 4
@@ -1986,7 +1986,7 @@ OBJECT poly
 name "s35"
 data 8
 Mesh.137
-texture "ati.rgb"
+texture "ati.png"
 texrep 1 1
 crease 30.000000
 numvert 4
@@ -2007,7 +2007,7 @@ OBJECT poly
 name "s36"
 data 8
 Mesh.138
-texture "ati.rgb"
+texture "ati.png"
 texrep 1 1
 crease 30.000000
 numvert 4
@@ -2028,7 +2028,7 @@ OBJECT poly
 name "s37"
 data 8
 Mesh.139
-texture "ati.rgb"
+texture "ati.png"
 texrep 1 1
 crease 30.000000
 numvert 4
@@ -2049,7 +2049,7 @@ OBJECT poly
 name "s38"
 data 8
 Mesh.140
-texture "ati.rgb"
+texture "ati.png"
 texrep 1 1
 crease 30.000000
 numvert 4
@@ -2070,7 +2070,7 @@ OBJECT poly
 name "s39"
 data 8
 Mesh.141
-texture "ati.rgb"
+texture "ati.png"
 texrep 1 1
 crease 30.000000
 numvert 4
@@ -2091,7 +2091,7 @@ OBJECT poly
 name "s4"
 data 8
 Mesh.142
-texture "ati.rgb"
+texture "ati.png"
 texrep 1 1
 crease 30.000000
 numvert 4
@@ -2112,7 +2112,7 @@ OBJECT poly
 name "s40"
 data 8
 Mesh.143
-texture "ati.rgb"
+texture "ati.png"
 texrep 1 1
 crease 30.000000
 numvert 4
@@ -2133,7 +2133,7 @@ OBJECT poly
 name "s41"
 data 8
 Mesh.144
-texture "ati.rgb"
+texture "ati.png"
 texrep 1 1
 crease 30.000000
 numvert 4
@@ -2154,7 +2154,7 @@ OBJECT poly
 name "s42"
 data 8
 Mesh.145
-texture "ati.rgb"
+texture "ati.png"
 texrep 1 1
 crease 30.000000
 numvert 4
@@ -2175,7 +2175,7 @@ OBJECT poly
 name "s43"
 data 8
 Mesh.146
-texture "ati.rgb"
+texture "ati.png"
 texrep 1 1
 crease 30.000000
 numvert 4
@@ -2196,7 +2196,7 @@ OBJECT poly
 name "s44"
 data 8
 Mesh.147
-texture "ati.rgb"
+texture "ati.png"
 texrep 1 1
 crease 30.000000
 numvert 4
@@ -2217,7 +2217,7 @@ OBJECT poly
 name "s45"
 data 8
 Mesh.148
-texture "ati.rgb"
+texture "ati.png"
 texrep 1 1
 crease 30.000000
 numvert 4
@@ -2238,7 +2238,7 @@ OBJECT poly
 name "s46"
 data 8
 Mesh.149
-texture "ati.rgb"
+texture "ati.png"
 texrep 1 1
 crease 30.000000
 numvert 4
@@ -2259,7 +2259,7 @@ OBJECT poly
 name "s47"
 data 8
 Mesh.150
-texture "ati.rgb"
+texture "ati.png"
 texrep 1 1
 crease 30.000000
 numvert 4
@@ -2280,7 +2280,7 @@ OBJECT poly
 name "s48"
 data 8
 Mesh.151
-texture "ati.rgb"
+texture "ati.png"
 texrep 1 1
 crease 30.000000
 numvert 4
@@ -2301,7 +2301,7 @@ OBJECT poly
 name "s49"
 data 8
 Mesh.152
-texture "ati.rgb"
+texture "ati.png"
 texrep 1 1
 crease 30.000000
 numvert 4
@@ -2322,7 +2322,7 @@ OBJECT poly
 name "s5"
 data 8
 Mesh.153
-texture "ati.rgb"
+texture "ati.png"
 texrep 1 1
 crease 30.000000
 numvert 4
@@ -2343,7 +2343,7 @@ OBJECT poly
 name "s6"
 data 8
 Mesh.154
-texture "ati.rgb"
+texture "ati.png"
 texrep 1 1
 crease 30.000000
 numvert 4
@@ -2364,7 +2364,7 @@ OBJECT poly
 name "s7"
 data 8
 Mesh.155
-texture "ati.rgb"
+texture "ati.png"
 texrep 1 1
 crease 30.000000
 numvert 4
@@ -2385,7 +2385,7 @@ OBJECT poly
 name "s8"
 data 8
 Mesh.156
-texture "ati.rgb"
+texture "ati.png"
 texrep 1 1
 crease 30.000000
 numvert 4
@@ -2406,7 +2406,7 @@ OBJECT poly
 name "s9"
 data 8
 Mesh.157
-texture "ati.rgb"
+texture "ati.png"
 texrep 1 1
 crease 30.000000
 numvert 4
@@ -2427,7 +2427,7 @@ OBJECT poly
 name "side_d"
 data 8
 Mesh.079
-texture "ati.rgb"
+texture "ati.png"
 texrep 1 1
 crease 30.000000
 numvert 4
@@ -2448,7 +2448,7 @@ OBJECT poly
 name "side_d.001"
 data 8
 Mesh.080
-texture "ati.rgb"
+texture "ati.png"
 texrep 1 1
 crease 30.000000
 numvert 4
@@ -2469,7 +2469,7 @@ OBJECT poly
 name "side_d.002"
 data 8
 Mesh.081
-texture "ati.rgb"
+texture "ati.png"
 texrep 1 1
 crease 30.000000
 numvert 4
@@ -2490,7 +2490,7 @@ OBJECT poly
 name "side_d.003"
 data 8
 Mesh.082
-texture "ati.rgb"
+texture "ati.png"
 texrep 1 1
 crease 30.000000
 numvert 4
