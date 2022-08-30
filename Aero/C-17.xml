@@ -1364,18 +1364,22 @@
 	</product>
       </function>
 
-      <function name="aero/coefficient/CDmach">
+      <function name="aero/coefficient/CDMach">
 	<description>Induced_Drag</description>
 	<product>
-          <property>aero/qbar-psf</property>
-          <property>metrics/Sw-sqft</property>
+	  <property>metrics/Sw-sqft</property>
           <table>
             <independentVar>velocities/mach</independentVar>
             <tableData>
-              0             0           
-              0.7           0           
-              1.1           0.023       
-              1.8           0.015       
+	      0.1    0.536256037
+	      0.2    0.359463171
+	      0.4    0.161517214
+	      0.6    0.072574363
+	      0.8    0.032609763
+	      1.0    0.014652511
+	      1.2    0.006583798
+	      1.4    0.002958291
+	      1.6    0.001329246
             </tableData>
           </table>
 	</product>
