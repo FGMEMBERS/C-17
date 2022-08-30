@@ -1175,6 +1175,7 @@
 	<product>
           <property>aero/qbar-psf</property>
           <property>metrics/Sh-sqft</property>
+          <value>-1.0</value>
           <table>
             <independentVar>aero/alpha-deg</independentVar>
             <tableData>
