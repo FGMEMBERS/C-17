@@ -51,7 +51,7 @@
     <vtailarm unit="FT">67.25</vtailarm>
     <vt_sweep unit="DEG">41.0</vt_sweep>
     <location name="AERORP" unit="FT">
-      <x>61.96903</x>
+      <x>63.21503</x>
       <y>0</y>
       <z>7.392472</z>
     </location>
