@@ -1912,9 +1912,7 @@
 	<description>Pitch_moment_due_to_alpha_HS</description>
 	<product>
 	  <value>-1.000</value>
-	  <value>0.400</value> <!-- Skyboat; here play with force of HS
-	  momentum. find a value between 0 and 1, that helps
-	  balancing the pitch moments  -->
+	  <value>0.325</value>
           <property>aero/qbar-psf</property>
           <property>metrics/Sh-sqft</property>
           <property>metrics/lh-ft</property>
@@ -2096,24 +2094,26 @@
       <function name="aero/coefficient/Cmq">
 	<description>Pitch_moment_due_to_pitch_rate</description>
 	<product>
+	  <value>-1.000</value>
           <property>aero/qbar-psf</property>
           <property>metrics/Sw-sqft</property>
           <property>metrics/cbarw-ft</property>
           <property>aero/ci2vel</property>
           <property>velocities/q-aero-rad_sec</property>
-          <value>-9</value>
+          <value>200</value>
 	</product>
       </function>
 
       <function name="aero/coefficient/Cmadot">
 	<description>Pitch_moment_due_to_alpha_rate</description>
 	<product>
+	  <value>-1.000</value>
           <property>aero/qbar-psf</property>
           <property>metrics/Sw-sqft</property>
           <property>metrics/cbarw-ft</property>
           <property>aero/ci2vel</property>
           <property>aero/alphadot-rad_sec</property>
-          <value>-12</value>
+          <value>12</value>
 	</product>
       </function>
     </axis>
