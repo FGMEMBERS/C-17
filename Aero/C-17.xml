@@ -1175,7 +1175,7 @@
 	<product>
           <property>aero/qbar-psf</property>
           <property>metrics/Sh-sqft</property>
-          <value>-1.0</value>
+	  <value>-1.000</value>
           <table>
             <independentVar>aero/alpha-deg</independentVar>
             <tableData>
@@ -1911,9 +1911,10 @@
       <function name="aero/coefficient/Cmalpha_HS">
 	<description>Pitch_moment_due_to_alpha_HS</description>
 	<product>
-	  <value>-1.000</value> <!-- Skyboat; here play with force of HS
-	  momentum. find a value between 0 and 1, 0 NOT included, that helps
-	  you have the pitch up momentum of the wing balanced out -->
+	  <value>-1.000</value>
+	  <value>0.400</value> <!-- Skyboat; here play with force of HS
+	  momentum. find a value between 0 and 1, that helps
+	  balancing the pitch moments  -->
           <property>aero/qbar-psf</property>
           <property>metrics/Sh-sqft</property>
           <property>metrics/lh-ft</property>
