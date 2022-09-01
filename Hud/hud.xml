@@ -65,7 +65,7 @@
       <min>-100</min>
     </input>
     <major-divisions>1</major-divisions>
-    <minor-divisions>0.01</minor-divisions>
+    <minor-divisions>0.1</minor-divisions>
     <display-span>2.0</display-span>
     <option>right</option>
     <option>vertical</option>
@@ -86,7 +86,7 @@
     <name>KIAS</name>
     <x>-58</x>
     <y>-50</y>
-    <width>20</width>
+    <width>10</width>
     <height>130</height>
     <input>
       <property>/velocities/airspeed-kt</property>
@@ -95,7 +95,7 @@
       <min>0</min>
     </input>
     <major-divisions>1</major-divisions>
-    <minor-divisions>0.01</minor-divisions>
+    <minor-divisions>0.1</minor-divisions>
     <display-span>2.0</display-span>
     <option>left</option>
     <option>vertical</option>
