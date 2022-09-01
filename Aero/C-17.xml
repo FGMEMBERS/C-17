@@ -1912,7 +1912,7 @@
 	<description>Pitch_moment_due_to_alpha_HS</description>
 	<product>
 	  <value>-1.000</value>
-	  <value>0.325</value>
+	  <value>0.360</value>
           <property>aero/qbar-psf</property>
           <property>metrics/Sh-sqft</property>
           <property>metrics/lh-ft</property>
