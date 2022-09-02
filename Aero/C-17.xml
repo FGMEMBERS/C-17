@@ -1730,17 +1730,6 @@
           </table>
 	</product>
       </function>
-
-      <function name="aero/coefficient/Cldr">
-	<description>Roll_moment_due_to_rudder</description>
-	<product>
-          <property>aero/qbar-psf</property>
-          <property>metrics/Sw-sqft</property>
-          <property>metrics/bw-ft</property>
-          <property>fcs/rudder-pos-rad</property>
-          <value>0.01</value>
-	</product>
-      </function>
     </axis>
 
     <axis name="PITCH" unit="LBS*FT">
@@ -2127,8 +2116,7 @@
       <function name="aero/coefficient/Cnb">
 	<description>Yaw_moment_due_to_beta</description>
 	<product>
-	  <value>0.12</value>
-	  <value>5.5474</value>
+	  <value>0.6657</value>
           <property>aero/qbar-psf</property>
           <property>metrics/Sh-sqft</property>
           <property>metrics/bw-ft</property>
@@ -2136,25 +2124,55 @@
 	</product>
       </function>
 
-      <function name="aero/coefficient/Cndr">
+      <function  name="aero/coefficient/Cndr">
 	<description>Yaw_moment_due_to_rudder</description>
 	<product>
 	  <value>-1.000</value>
-          <value>0.03</value>
-	  <value>5.5474</value>
+	  <value>3.250</value><!-- Rudder deflection power factor -->
           <property>aero/qbar-psf</property>
           <property>metrics/Sv-sqft</property>
           <property>metrics/bw-ft</property>
-          <property>fcs/rudder-pos-rad</property>
+	  <table>
+	    <independentVar lookup="row">aero/beta-deg</independentVar>
+	    <independentVar lookup="column">fcs/rudder-pos-rad</independentVar>
+	    <tableData>
+	      -0.314	-0.244	-0.209	-0.070	0.000	0.070	0.209	0.244	0.314
+	      -30	0.0065	0.0065	0.0170	0.0588	0.0795	0.1002	0.1420	0.1524	0.1524
+	      -25	0.0115	0.0115	0.0213	0.0602	0.0794	0.0987	0.1377	0.1474	0.1474
+	      -20	-0.0109	-0.0109	0.0004	0.0450	0.0671	0.0892	0.1338	0.1450	0.1450
+	      -15	-0.0035	-0.0035	0.0062	0.0449	0.0641	0.0833	0.1220	0.1317	0.1317
+	      -10	-0.0607	-0.0607	-0.0479	0.0032	0.0286	0.0539	0.1051	0.1178	0.1178
+	      -5	-0.0779	-0.0779	-0.0650	-0.0137	0.0118	0.0373	0.0887	0.1016	0.1016
+	      0 	-0.0853	-0.0853	-0.0731	-0.0243	0.0000	0.0243	0.0731	0.0853	0.0853
+	      5	        -0.0927	-0.0927	-0.0812	-0.0349	-0.0118	0.0113	0.0575	0.0691	0.0691
+	      10	-0.1100	-0.1100	-0.0983	-0.0518	-0.0286	-0.0053	0.0412	0.0528	0.0528
+	      15	-0.1671	-0.1671	-0.1524	-0.0935	-0.0641	-0.0347	0.0242	0.0390	0.0390
+	      20	-0.1598	-0.1598	-0.1466	-0.0936	-0.0671	-0.0406	0.0125	0.0257	0.0257
+	      25	-0.1821	-0.1821	-0.1675	-0.1088	-0.0794	-0.0501	0.0086	0.0233	0.0233
+	      30	-0.1772	-0.1772	-0.1632	-0.1074	-0.0795	-0.0516	0.0043	0.0182	0.0182
+            </tableData>
+          </table>
 	</product>
       </function>
-      
+
+      <function name="aero/coefficient/Cnbdot">
+	<description>Yaw_moment_due_to_beta_rate</description>
+	<product>
+	  <value>-1.000</value>
+	  <value>2.000</value>
+          <property>aero/qbar-psf</property>
+          <property>metrics/Sv-sqft</property>
+          <property>metrics/bw-ft</property>
+          <property>aero/ci2vel</property>
+          <property>aero/betadot-rad_sec</property>
+	</product>
+      </function>
+    
       <function name="aero/coefficient/Cnr">
 	<description>Yaw_moment_due_to_yaw_rate</description>
 	<product>
 	  <value>-1.000</value>
-          <value>0.150</value>
-	  <value>5.5474</value>
+	  <value>0.8321</value>
           <property>aero/qbar-psf</property>
           <property>metrics/Sv-sqft</property>
           <property>metrics/bw-ft</property>
@@ -2167,8 +2185,7 @@
 	<description>Adverse_yaw</description>
 	<product>
 	  <value>-1.000</value>
-	  <value>0.020</value>
-	  <value>5.5474</value>
+	  <value>0.1109</value>
           <property>aero/qbar-psf</property>
           <property>metrics/Sv-sqft</property>
           <property>metrics/bw-ft</property>
