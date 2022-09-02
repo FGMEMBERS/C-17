@@ -2127,45 +2127,52 @@
       <function name="aero/coefficient/Cnb">
 	<description>Yaw_moment_due_to_beta</description>
 	<product>
+	  <value>0.12</value>
+	  <value>5.5474</value>
           <property>aero/qbar-psf</property>
-          <property>metrics/Sw-sqft</property>
+          <property>metrics/Sh-sqft</property>
           <property>metrics/bw-ft</property>
           <property>aero/beta-rad</property>
-          <value>0.12</value>
-	</product>
-      </function>
-
-      <function name="aero/coefficient/Cnr">
-	<description>Yaw_moment_due_to_yaw_rate</description>
-	<product>
-          <property>aero/qbar-psf</property>
-          <property>metrics/Sw-sqft</property>
-          <property>metrics/bw-ft</property>
-          <property>aero/bi2vel</property>
-          <property>velocities/r-aero-rad_sec</property>
-          <value>-0.15</value>
 	</product>
       </function>
 
       <function name="aero/coefficient/Cndr">
 	<description>Yaw_moment_due_to_rudder</description>
 	<product>
+	  <value>-1.000</value>
+          <value>0.03</value>
+	  <value>5.5474</value>
           <property>aero/qbar-psf</property>
-          <property>metrics/Sw-sqft</property>
+          <property>metrics/Sv-sqft</property>
           <property>metrics/bw-ft</property>
           <property>fcs/rudder-pos-rad</property>
-          <value>-0.03</value>
+	</product>
+      </function>
+      
+      <function name="aero/coefficient/Cnr">
+	<description>Yaw_moment_due_to_yaw_rate</description>
+	<product>
+	  <value>-1.000</value>
+          <value>0.150</value>
+	  <value>5.5474</value>
+          <property>aero/qbar-psf</property>
+          <property>metrics/Sv-sqft</property>
+          <property>metrics/bw-ft</property>
+          <property>aero/bi2vel</property>
+          <property>velocities/r-aero-rad_sec</property>
 	</product>
       </function>
 
       <function name="aero/coefficient/Cnda">
 	<description>Adverse_yaw</description>
 	<product>
+	  <value>-1.000</value>
+	  <value>0.020</value>
+	  <value>5.5474</value>
           <property>aero/qbar-psf</property>
-          <property>metrics/Sw-sqft</property>
+          <property>metrics/Sv-sqft</property>
           <property>metrics/bw-ft</property>
           <property>fcs/left-aileron-pos-rad</property>
-          <value>-0.02</value>
 	</product>
       </function>
     </axis>
