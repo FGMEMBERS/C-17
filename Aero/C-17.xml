@@ -2360,7 +2360,7 @@
       <function name="aero/coefficient/Cmde">
 	<description>Pitch_moment_due_to_elevator</description>
 	<product>
-	  <value>1.35</value><!-- Elevator deflection power factor -->
+	  <value>1.65</value><!-- Elevator deflection power factor -->
           <property>aero/qbar-psf</property>
           <property>metrics/Sh-sqft</property>
           <property>metrics/lh-ft</property>
