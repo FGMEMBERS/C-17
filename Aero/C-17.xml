@@ -1783,6 +1783,29 @@
 	</product>
       </function>
 
+      <function name="aero/coefficient/CDMachW">
+	<description>Induced_Drag_Suppression_by_Winglets</description>
+	<product>
+	  <value>-2.000</value><!-- Drag suppression, 2 winglets -->
+	  <value>26.76</value><!-- Area of each winglet -->
+	  <value>0.08</value> <!-- 8 % suppressed per winglet -->
+          <table>
+            <independentVar>velocities/mach</independentVar>
+            <tableData>
+	      0.1    0.536256037
+	      0.2    0.359463171
+	      0.4    0.161517214
+	      0.6    0.072574363
+	      0.8    0.032609763
+	      1.0    0.014652511
+	      1.2    0.006583798
+	      1.4    0.002958291
+	      1.6    0.001329246
+            </tableData>
+          </table>
+	</product>
+      </function>
+      
       <function name="aero/coefficient/CDflap">
 	<description>Drag_due_to_flaps</description>
 	<product>
@@ -1983,35 +2006,37 @@
       <function name="aero/coefficient/Clb">
 	<description>Roll_moment_due_to_beta</description>
 	<product>
+	  <value>-1.000</value>
+	  <value>0.100</value>
           <property>aero/qbar-psf</property>
           <property>metrics/Sw-sqft</property>
           <property>metrics/bw-ft</property>
           <property>aero/beta-rad</property>
-          <value>-0.1</value>
 	</product>
       </function>
 
       <function name="aero/coefficient/Clp">
 	<description>Roll_moment_due_to_roll_rate</description>
 	<product>
+	  <value>-1.000</value>
+	  <value>0.400</value>
           <property>aero/qbar-psf</property>
           <property>metrics/Sw-sqft</property>
           <property>metrics/bw-ft</property>
           <property>aero/bi2vel</property>
           <property>velocities/p-aero-rad_sec</property>
-          <value>-0.4</value>
 	</product>
       </function>
 
       <function name="aero/coefficient/Clr">
 	<description>Roll_moment_due_to_yaw_rate</description>
 	<product>
+	  <value>0.150</value>
           <property>aero/qbar-psf</property>
           <property>metrics/Sw-sqft</property>
           <property>metrics/bw-ft</property>
           <property>aero/bi2vel</property>
           <property>velocities/r-aero-rad_sec</property>
-          <value>0.15</value>
 	</product>
       </function>
 
@@ -2418,6 +2443,7 @@
 	<description>Yaw_moment_due_to_beta</description>
 	<product>
 	  <value>1.000</value>
+	  <value>5.218</value>
           <property>aero/qbar-psf</property>
           <property>metrics/Sh-sqft</property>
           <property>metrics/bw-ft</property>
