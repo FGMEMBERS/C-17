@@ -1846,7 +1846,7 @@
       <function name="aero/coefficient/CDMach">
 	<description>Induced_Drag</description>
 	<product>
-	  <value>3.875</value>
+	  <value>4.875</value>
 	  <property>metrics/Sw-sqft</property>
           <table>
             <independentVar>velocities/mach</independentVar>
@@ -1891,30 +1891,30 @@
       <function name="aero/coefficient/CDflap">
 	<description>Drag_due_to_flaps</description>
 	<product>
+	  <value>0.0008</value>
           <property>aero/qbar-psf</property>
           <property>metrics/Sw-sqft</property>
           <property>fcs/flap-pos-deg</property>
-          <value>0.0008</value>
 	</product>
       </function>
 
       <function name="aero/coefficient/CDsb">
 	<description>Drag_due_to_speedbrakes</description>
 	<product>
+	  <value>0.012</value>
           <property>aero/qbar-psf</property>
           <property>metrics/Sw-sqft</property>
           <property>fcs/speedbrake-pos-norm</property>
-          <value>0.012</value>
 	</product>
       </function>
       
       <function name="aero/coefficient/CDde">
 	<description>Drag_due_to_Elevator_Deflection</description>
 	<product>
+	  <value>0.04</value>
           <property>aero/qbar-psf</property>
           <property>metrics/Sw-sqft</property>
           <abs><property>fcs/elevator-pos-norm</property></abs>
-          <value>0.04</value>
 	</product>
       </function>
     </axis>
@@ -1923,9 +1923,8 @@
       <function name="aero/coefficient/CYb">
 	<description>Side_force_due_to_beta</description>
 	<product>
-	  <value>2.228</value>
-	  <value>5.5474</value>
 	  <value>-1.000</value>
+	  <value>12.3596</value>
           <property>aero/qbar-psf</property>
           <property>metrics/Sv-sqft</property>
           <table>
@@ -2208,7 +2207,6 @@
       <function name="aero/coefficient/Clda">
 	<description>Roll_moment_due_to_aileron</description>
 	<product>
-	  <value>-1.000</value>
 	  <value>0.500</value> <!-- Aileron power on Roll -->
           <property>aero/qbar-psf</property>
           <property>metrics/Sw-sqft</property>
@@ -2216,19 +2214,19 @@
           <table>
             <independentVar>fcs/left-aileron-pos-rad</independentVar>
             <tableData>
-	      -0.5236	0.0487
-	      -0.4363	0.0449
-	      -0.3491	0.0398
-	      -0.2618	0.0302
-	      -0.1745	0.0197
-	      -0.0873	0.0094
+	      -0.5236	-0.0487
+	      -0.4363	-0.0449
+	      -0.3491	-0.0398
+	      -0.2618	-0.0302
+	      -0.1745	-0.0197
+	      -0.0873	-0.0094
 	      0.0000	0.0000
-	      0.0873	-0.0094
-	      0.1745	-0.0197
-	      0.2618	-0.0302
-	      0.3491	-0.0398
-	      0.4363	-0.0449
-	      0.5236	-0.0487
+	      0.0873	0.0094
+	      0.1745	0.0197
+	      0.2618	0.0302
+	      0.3491	0.0398
+	      0.4363	0.0449
+	      0.5236	0.0487
 	    </tableData>
           </table>
 	</product>
@@ -2239,6 +2237,7 @@
       <function name="aero/coefficient/Cmalpha">
 	<description>Pitch_moment_due_to_alpha</description>
 	<product>
+	  <value>0.950</value>
           <property>aero/qbar-psf</property>
           <property>metrics/Sw-sqft</property>
           <property>metrics/cbarw-ft</property>
@@ -2404,7 +2403,7 @@
 	<description>Pitch_moment_due_to_alpha_HS</description>
 	<product>
 	  <value>-1.000</value>
-	  <value>0.360</value>
+	  <value>0.455</value> <!-- Pitch up moment tampers here -->
           <property>aero/qbar-psf</property>
           <property>metrics/Sh-sqft</property>
           <property>metrics/lh-ft</property>
@@ -2592,12 +2591,12 @@
 	<description>Pitch_moment_due_to_pitch_rate</description>
 	<product>
 	  <value>-1.000</value>
+	  <value>125</value>
           <property>aero/qbar-psf</property>
           <property>metrics/Sw-sqft</property>
           <property>metrics/cbarw-ft</property>
           <property>aero/ci2vel</property>
           <property>velocities/q-aero-rad_sec</property>
-          <value>100</value>
 	</product>
       </function>
 
@@ -2605,12 +2604,12 @@
 	<description>Pitch_moment_due_to_alpha_rate</description>
 	<product>
 	  <value>-1.000</value>
+	  <value>18</value>
           <property>aero/qbar-psf</property>
           <property>metrics/Sw-sqft</property>
           <property>metrics/cbarw-ft</property>
           <property>aero/ci2vel</property>
           <property>aero/alphadot-rad_sec</property>
-          <value>12</value>
 	</product>
       </function>
     </axis>
@@ -2619,7 +2618,6 @@
       <function name="aero/coefficient/Cnb">
 	<description>Yaw_moment_due_to_beta</description>
 	<product>
-	  <value>1.000</value>
 	  <value>5.218</value>
           <property>aero/qbar-psf</property>
           <property>metrics/Sh-sqft</property>
@@ -2922,7 +2920,6 @@
       <function name="aero/coefficient/Cnda">
 	<description>Yaw_moment_due_to_aileron</description>
 	<product>
-	  <value>-1.000</value>
 	  <value>0.300</value> <!-- Aileron power on yaw  -->
           <property>aero/qbar-psf</property>
           <property>metrics/Sv-sqft</property>
@@ -2930,19 +2927,19 @@
 	  <table>
             <independentVar>fcs/left-aileron-pos-rad</independentVar>
             <tableData>
-	      -0.5236	0.3027
-	      -0.4363	0.2394
-	      -0.3491	0.1792
-	      -0.2618	0.1324
-	      -0.1745	0.0858
-	      -0.0873	0.0436
+	      -0.5236	-0.3027
+	      -0.4363	-0.2394
+	      -0.3491	-0.1792
+	      -0.2618	-0.1324
+	      -0.1745	-0.0858
+	      -0.0873	-0.0436
 	      0.0000	0.0000
-	      0.0873	-0.0436
-	      0.1745	-0.0858
-	      0.2618	-0.1324
-	      0.3491	-0.1792
-	      0.4363	-0.2394
-	      0.5236	-0.3027
+	      0.0873	0.0436
+	      0.1745	0.0858
+	      0.2618	0.1324
+	      0.3491	0.1792
+	      0.4363	0.2394
+	      0.5236	0.3027
 	    </tableData>
           </table>
 	</product>
