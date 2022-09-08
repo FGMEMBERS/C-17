@@ -2208,16 +2208,28 @@
       <function name="aero/coefficient/Clda">
 	<description>Roll_moment_due_to_aileron</description>
 	<product>
+	  <value>-1.000</value>
+	  <value>0.500</value> <!-- Aileron power on Roll -->
           <property>aero/qbar-psf</property>
           <property>metrics/Sw-sqft</property>
           <property>metrics/bw-ft</property>
-          <property>fcs/left-aileron-pos-rad</property>
           <table>
-            <independentVar>velocities/mach</independentVar>
+            <independentVar>fcs/left-aileron-pos-rad</independentVar>
             <tableData>
-              0             0.06        
-              2             0.02        
-            </tableData>
+	      -0.5236	0.0487
+	      -0.4363	0.0449
+	      -0.3491	0.0398
+	      -0.2618	0.0302
+	      -0.1745	0.0197
+	      -0.0873	0.0094
+	      0.0000	0.0000
+	      0.0873	-0.0094
+	      0.1745	-0.0197
+	      0.2618	-0.0302
+	      0.3491	-0.0398
+	      0.4363	-0.0449
+	      0.5236	-0.0487
+	    </tableData>
           </table>
 	</product>
       </function>
@@ -2908,14 +2920,31 @@
       </function>
 
       <function name="aero/coefficient/Cnda">
-	<description>Adverse_yaw</description>
+	<description>Yaw_moment_due_to_aileron</description>
 	<product>
 	  <value>-1.000</value>
-	  <value>0.1109</value>
+	  <value>0.300</value> <!-- Aileron power on yaw  -->
           <property>aero/qbar-psf</property>
           <property>metrics/Sv-sqft</property>
           <property>metrics/bw-ft</property>
-          <property>fcs/left-aileron-pos-rad</property>
+	  <table>
+            <independentVar>fcs/left-aileron-pos-rad</independentVar>
+            <tableData>
+	      -0.5236	0.3027
+	      -0.4363	0.2394
+	      -0.3491	0.1792
+	      -0.2618	0.1324
+	      -0.1745	0.0858
+	      -0.0873	0.0436
+	      0.0000	0.0000
+	      0.0873	-0.0436
+	      0.1745	-0.0858
+	      0.2618	-0.1324
+	      0.3491	-0.1792
+	      0.4363	-0.2394
+	      0.5236	-0.3027
+	    </tableData>
+          </table>
 	</product>
       </function>
     </axis>
