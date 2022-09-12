@@ -2207,7 +2207,7 @@
       <function name="aero/coefficient/Clda">
 	<description>Roll_moment_due_to_aileron</description>
 	<product>
-	  <value>0.300</value> <!-- Aileron power on roll -->
+	  <value>0.400</value> <!-- Aileron power on roll -->
           <property>aero/qbar-psf</property>
           <property>metrics/Sw-sqft</property>
           <property>metrics/bw-ft</property>
@@ -2237,7 +2237,7 @@
       <function name="aero/coefficient/Cmalpha">
 	<description>Pitch_moment_due_to_alpha</description>
 	<product>
-	  <!--<value>-1.000</value>-->
+	  <value>-1.000</value>
 	  <value>0.950</value>
           <property>aero/qbar-psf</property>
           <property>metrics/Sw-sqft</property>
@@ -2403,8 +2403,8 @@
       <function name="aero/coefficient/Cmalpha_HS">
 	<description>Pitch_moment_due_to_alpha_HS</description>
 	<product>
-	  <value>-1.000</value>
-	  <value>0.455</value> <!-- Pitch up moment tampers here -->
+	  <value>1.000</value>
+	  <value>3.850</value> <!-- Pitch up moment tampers here -->
           <property>aero/qbar-psf</property>
           <property>metrics/Sh-sqft</property>
           <property>metrics/lh-ft</property>
@@ -2577,12 +2577,12 @@
 	    <independentVar lookup="row">aero/alpha-deg</independentVar>
 	    <independentVar lookup="column">fcs/elevator-pos-rad</independentVar>
 	    <tableData>
-	                -0.0873	0.0000	0.0873	0.1745	0.2618
-	      -25.0	-0.3440	-0.3644	-0.4158	-0.4853	-0.5821
-	      -15.0	-0.1256	-0.1618	-0.2066	-0.2843	-0.4158
-	      0.0	0.1852	0.1627	0.0985	0.0000	-0.1501
-	      10.0	0.3880	0.3639	0.2840	0.1903	0.0568
-	      20.0	0.6152	0.5902	0.4859	0.3882	0.2455
+	                -0.2618	-0.1745	-0.0873	0.0000	0.0873	0.1745	0.2618
+	      -25.0	-0.1777	-0.2745	-0.3440	-0.3644	-0.4158	-0.4853	-0.5821
+	      -15.0	0.0836	-0.0479	-0.1256	-0.1618	-0.2066	-0.2843	-0.4158
+	      0.0	0.4338	0.2837	0.1852	0.1627	0.0985	0.0000	-0.1501
+	      10.0	0.6152	0.4817	0.3880	0.3639	0.2840	0.1903	0.0568
+	      20.0	0.8556	0.7129	0.6152	0.5902	0.4859	0.3882	0.2455
             </tableData>
           </table>
 	</product>
