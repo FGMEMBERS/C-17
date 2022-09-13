@@ -2165,7 +2165,7 @@
 	<description>Roll_moment_due_to_roll_rate</description>
 	<product>
 	  <value>-1.000</value>
-	  <value>0.400</value>
+	  <value>0.485</value>
           <property>aero/qbar-psf</property>
           <property>metrics/Sw-sqft</property>
           <property>metrics/bw-ft</property>
@@ -2177,7 +2177,7 @@
       <function name="aero/coefficient/Clr">
 	<description>Roll_moment_due_to_yaw_rate</description>
 	<product>
-	  <value>0.150</value>
+	  <value>0.166</value>
           <property>aero/qbar-psf</property>
           <property>metrics/Sw-sqft</property>
           <property>metrics/bw-ft</property>
