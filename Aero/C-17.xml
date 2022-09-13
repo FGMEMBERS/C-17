@@ -2207,7 +2207,7 @@
       <function name="aero/coefficient/Clda">
 	<description>Roll_moment_due_to_aileron</description>
 	<product>
-	  <value>0.400</value> <!-- Aileron power on roll -->
+	  <value>0.480</value> <!-- Aileron power on roll -->
           <property>aero/qbar-psf</property>
           <property>metrics/Sw-sqft</property>
           <property>metrics/bw-ft</property>
