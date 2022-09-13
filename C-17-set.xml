@@ -473,6 +473,8 @@
   <fdm>
     <jsbsim>
       <systems>
+	<drag-multiplier type="double">1.000</drag-multiplier>
+	<lift-multiplier type="double">1.000</lift-multiplier>
 	<NWS>
 	  <engaged type="double">0</engaged>
 	</NWS>
