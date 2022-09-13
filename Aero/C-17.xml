@@ -2238,7 +2238,7 @@
 	<description>Pitch_moment_due_to_alpha</description>
 	<product>
 	  <value>-1.000</value>
-	  <value>0.950</value>
+	  <value>1.256</value>
           <property>aero/qbar-psf</property>
           <property>metrics/Sw-sqft</property>
           <property>metrics/cbarw-ft</property>
@@ -2403,8 +2403,7 @@
       <function name="aero/coefficient/Cmalpha_HS">
 	<description>Pitch_moment_due_to_alpha_HS</description>
 	<product>
-	  <value>1.000</value>
-	  <value>3.850</value> <!-- Pitch up moment tampers here -->
+	  <value>4.823</value> <!-- Pitch up moment tampers here -->
           <property>aero/qbar-psf</property>
           <property>metrics/Sh-sqft</property>
           <property>metrics/lh-ft</property>
