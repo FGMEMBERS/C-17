@@ -6,12 +6,12 @@
     <author>IH-COL, D. Waggoner, Jon Bourgeois, Adam Fothergill</author>
     <email>iahmcol@thejabberwocky.net</email>
     <filecreationdate>2022-08-22</filecreationdate>
-    <description>C-17 USAF Strategic Airlifter</description>
+    <description>C-17 Globemaster III: USAF Strategic Airlifter</description>
     <version>2.0</version>
   </fileheader>
   <!-- GPL version 2.0 or higher -->
   <!--
-      File:     C-17A Globemaster III.xml
+      File:     C-17.xml
       Inputs:
       name:          C-17A Globemaster III
       type:          four-engine transonic transport
@@ -1260,16 +1260,6 @@
           <value>-0.05</value>
 	</product>
       </function>
-
-      <function name="aero/coefficient/CLde">
-	<description>Lift_due_to_Elevator_Deflection</description>
-	<product>
-	  <value>1.1148</value>
-          <property>aero/qbar-psf</property>
-          <property>metrics/Sh-sqft</property>
-          <property>fcs/elevator-pos-rad</property>
-	</product>
-      </function>
     </axis>
 
     <axis name="DRAG" unit="LBS">
@@ -1905,16 +1895,6 @@
           <property>aero/qbar-psf</property>
           <property>metrics/Sw-sqft</property>
           <property>fcs/speedbrake-pos-norm</property>
-	</product>
-      </function>
-      
-      <function name="aero/coefficient/CDde">
-	<description>Drag_due_to_Elevator_Deflection</description>
-	<product>
-	  <value>0.22296</value>
-          <property>aero/qbar-psf</property>
-          <property>metrics/Sh-sqft</property>
-          <abs><property>fcs/elevator-pos-norm</property></abs>
 	</product>
       </function>
     </axis>
