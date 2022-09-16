@@ -1010,8 +1010,7 @@
       <function name="aero/coefficient/CLalpha">
 	<description>Lift_due_to_alpha</description>
 	<product>
-	  <value>0.85223221</value>
-	  <property>systems/lift-multiplier</property>
+	  <value>3.6910</value>
           <property>aero/qbar-psf</property>
           <property>metrics/Sw-sqft</property>
           <table>
@@ -1175,10 +1174,11 @@
       <function name="aero/coefficient/CLalpha_HS">
 	<description>Lift_due_to_alpha_HS</description>
 	<product>
-	  <value>1.430</value>
+	  <value>-1.000</value>
+	  <value>2.430</value>
+	  <property>systems/lift-multiplier</property>
           <property>aero/qbar-psf</property>
           <property>metrics/Sh-sqft</property>
-	  <value>-1.000</value>
           <table>
             <independentVar>aero/alpha-deg</independentVar>
             <tableData>
@@ -1267,7 +1267,7 @@
       <function name="aero/coefficient/CD0">
 	<description>Drag_due_to_alpha</description>
 	<product>
-	  <value>10.5818775</value>
+	  <value>13.22735</value>
 	  <property>systems/drag-multiplier</property>
           <property>aero/qbar-psf</property>
           <property>metrics/Sw-sqft</property>
@@ -2385,7 +2385,7 @@
       <function name="aero/coefficient/Cmalpha_HS">
 	<description>Pitch_moment_due_to_alpha_HS</description>
 	<product>
-	  <value>4.823</value> <!-- Pitch up moment tampers here -->
+	  <value>5.11238</value> <!-- Pitch up moment tampers here -->
           <property>aero/qbar-psf</property>
           <property>metrics/Sh-sqft</property>
           <property>metrics/lh-ft</property>
@@ -2550,7 +2550,7 @@
       <function name="aero/coefficient/Cmde">
 	<description>Pitch_moment_due_to_elevator</description>
 	<product>
-	  <value>1.65</value><!-- Elevator deflection power factor -->
+	  <value>2.0625</value><!-- Elevator deflection power factor -->
           <property>aero/qbar-psf</property>
           <property>metrics/Sh-sqft</property>
           <property>metrics/lh-ft</property>
