@@ -2385,7 +2385,7 @@
       <function name="aero/coefficient/Cmalpha_HS">
 	<description>Pitch_moment_due_to_alpha_HS</description>
 	<product>
-	  <value>5.11238</value> <!-- Pitch up moment tampers here -->
+	  <value>5.214628</value> <!-- Pitch up moment tampers here -->
           <property>aero/qbar-psf</property>
           <property>metrics/Sh-sqft</property>
           <property>metrics/lh-ft</property>
@@ -2847,6 +2847,7 @@
 	<product>
 	  <value>-1.000</value>
 	  <value>3.250</value><!-- Rudder deflection power factor -->
+	  <property>systems/rudder-yaw-multiplier</property>
           <property>aero/qbar-psf</property>
           <property>metrics/Sv-sqft</property>
           <property>metrics/bw-ft</property>
