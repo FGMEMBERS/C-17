@@ -2846,7 +2846,7 @@
 	<description>Yaw_moment_due_to_rudder</description>
 	<product>
 	  <value>-1.000</value>
-	  <value>3.250</value><!-- Rudder deflection power factor -->
+	  <value>1.6575</value><!-- Rudder deflection power factor -->
 	  <property>systems/rudder-yaw-multiplier</property>
           <property>aero/qbar-psf</property>
           <property>metrics/Sv-sqft</property>
