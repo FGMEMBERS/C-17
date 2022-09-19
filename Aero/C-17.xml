@@ -1431,7 +1431,7 @@
       <function name="aero/coefficient/CD0_HS">
 	<description>Drag_due_to_alpha_HS</description>
 	<product>
-	  <value>4.525</value>
+	  <value>4.225</value>
           <property>aero/qbar-psf</property>
           <property>metrics/Sh-sqft</property>
           <table>
@@ -1595,7 +1595,7 @@
       <function name="aero/coefficient/CDbeta">
 	<description>Drag_due_to_sideslip_VStab</description>
 	<product>
-	  <value>4.525</value>
+	  <value>4.425</value>
 	  <property>aero/qbar-psf</property>
           <property>metrics/Sv-sqft</property>
           <table>
@@ -2387,7 +2387,7 @@
 	<description>Pitch_moment_due_to_alpha_HS</description>
 	<product>
 	  <value>5.084262</value> <!-- Pitch up moment tampers here -->
-	  <property>systems/hstab-multiplier</property>
+          <property>systems/hstab-multiplier</property>
           <property>aero/qbar-psf</property>
           <property>metrics/Sh-sqft</property>
           <property>metrics/lh-ft</property>
@@ -2844,11 +2844,11 @@
 	</product>
       </function>
       
-      <function name="aero/coefficient/Cndr">
+      <function  name="aero/coefficient/Cndr">
 	<description>Yaw_moment_due_to_rudder</description>
 	<product>
 	  <value>-1.000</value>
-	  <value>2.8857</value><!-- Rudder deflection power factor -->
+	  <value>2.850</value><!-- Rudder deflection power factor -->
 	  <property>systems/rudder-yaw-multiplier</property>
           <property>aero/qbar-psf</property>
           <property>metrics/Sv-sqft</property>
