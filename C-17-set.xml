@@ -476,6 +476,8 @@
 	<drag-multiplier type="double">1.000</drag-multiplier>
 	<lift-multiplier type="double">1.000</lift-multiplier>
 	<rudder-yaw-multiplier type="double">1.000</rudder-yaw-multiplier>
+	<side-multiplier type="double">1.000</side-multiplier>
+	<hstab-multiplier type="double">1.000</hstab-multiplier>
 	<NWS>
 	  <engaged type="double">0</engaged>
 	</NWS>
