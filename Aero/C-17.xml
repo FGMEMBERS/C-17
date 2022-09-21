@@ -2386,7 +2386,7 @@
       <function name="aero/coefficient/Cmalpha_HS">
 	<description>Pitch_moment_due_to_alpha_HS</description>
 	<product>
-	  <value>5.084262</value> <!-- Pitch up moment tampers here -->
+	  <value>4.753785</value> <!-- Pitch up moment tampers here -->
           <property>systems/hstab-multiplier</property>
           <property>aero/qbar-psf</property>
           <property>metrics/Sh-sqft</property>
@@ -2844,7 +2844,7 @@
 	</product>
       </function>
       
-      <function  name="aero/coefficient/Cndr">
+      <function name="aero/coefficient/Cndr">
 	<description>Yaw_moment_due_to_rudder</description>
 	<product>
 	  <value>-1.000</value>
