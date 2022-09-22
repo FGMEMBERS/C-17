@@ -1011,7 +1011,6 @@
 	<description>Lift_due_to_alpha</description>
 	<product>
 	  <value>3.6910</value>
-	  <property>systems/lift-multiplier</property>
           <property>aero/qbar-psf</property>
           <property>metrics/Sw-sqft</property>
           <table>
@@ -1268,7 +1267,6 @@
 	<description>Drag_due_to_alpha</description>
 	<product>
 	  <value>13.22735</value>
-	  <property>systems/drag-multiplier</property>
           <property>aero/qbar-psf</property>
           <property>metrics/Sw-sqft</property>
           <table>
@@ -1907,7 +1905,6 @@
 	<product>
 	  <value>-1.000</value>
 	  <value>12.3596</value>
-	  <property>systems/side-multiplier</property>
           <property>aero/qbar-psf</property>
           <property>metrics/Sv-sqft</property>
           <table>
@@ -2387,7 +2384,6 @@
 	<description>Pitch_moment_due_to_alpha_HS</description>
 	<product>
 	  <value>4.753785</value> <!-- Pitch up moment tampers here -->
-          <property>systems/hstab-multiplier</property>
           <property>aero/qbar-psf</property>
           <property>metrics/Sh-sqft</property>
           <property>metrics/lh-ft</property>
@@ -2849,7 +2845,6 @@
 	<product>
 	  <value>-1.000</value>
 	  <value>2.850</value><!-- Rudder deflection power factor -->
-	  <property>systems/rudder-yaw-multiplier</property>
           <property>aero/qbar-psf</property>
           <property>metrics/Sv-sqft</property>
           <property>metrics/bw-ft</property>
