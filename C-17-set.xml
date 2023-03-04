@@ -122,7 +122,73 @@
       <serviceable type="bool">true</serviceable>
       <path>Aircraft/C-17/Submodels/submodels.xml</path>
       <path>Aircraft/C-17/Models/payload/loads.xml</path>
+      <!-- <path>Aircraft/C-17/Models/payload/loads.xml</path> -->
     </submodels>
+    
+     <instrumentation>
+      <path>Aircraft/C-17/Systems/instrumentation.xml</path>
+    </instrumentation>
+      
+    <!-- Payload options -->
+    
+    <weight n="0">
+      <name>Cargobay</name>
+      <weight-lb>0</weight-lb>
+      <selected>none</selected>
+      <opt>
+	<name>none</name>
+	<lbs>0</lbs>
+      </opt>
+      <opt>
+	<name>1x Hummer</name>
+	<lbs>5700</lbs>
+      </opt>
+
+      <opt>
+	<name>CH-47</name>
+	<lbs>23400</lbs>
+      </opt>
+
+      <opt>
+	<name>M1 Abrams</name>
+	<lbs>122800</lbs>
+      </opt>
+
+      <opt>
+	<name>2x Hummer</name>
+	<lbs>11400</lbs>
+      </opt>
+
+      <opt>
+	<name>1x LandRover WMIK</name>
+	<lbs>9020</lbs>
+      </opt>
+
+      <opt>
+	<name>2x LandRover WMIK</name>
+	<lbs>18040</lbs>
+      </opt>
+
+      <opt>
+	<name>1x Jackal</name>
+	<lbs>14896</lbs>
+      </opt>
+
+      <opt>
+	<name>2x Jackal</name>
+	<lbs>29792</lbs>
+      </opt>
+
+      <opt>
+	<name>MTVR</name>
+	<lbs>27900</lbs>
+      </opt>
+
+      <opt>
+	<name>BVS10-Viking</name>
+	<lbs>19040</lbs>
+      </opt>
+    </weight>
 
   <hud>
       <path n="1">Aircraft/C-17/Hud/hud.xml</path>
@@ -148,10 +214,6 @@
         </color>
       </palette>
     </hud>
-
-    <instrumentation>
-      <path>Aircraft/C-17/Systems/instrumentation.xml</path>
-    </instrumentation>
     
     <help>
       <title>C-17</title>
@@ -337,65 +399,7 @@
       </default>	
     </menubar>
     
-    <!-- Payload options -->
-    <weight n="0">
-      <name>Cargobay</name>
-      <weight-lb>0</weight-lb>
-      <selected>none</selected>
-      <opt>
-	<name>none</name>
-	<lbs>0</lbs>
-      </opt>
-      <opt>
-	<name>1x Hummer</name>
-	<lbs>5700</lbs>
-      </opt>
-
-      <opt>
-	<name>CH-47</name>
-	<lbs>23400</lbs>
-      </opt>
-
-      <opt>
-	<name>M1 Abrams</name>
-	<lbs>122800</lbs>
-      </opt>
-
-      <opt>
-	<name>2x Hummer</name>
-	<lbs>11400</lbs>
-      </opt>
-
-      <opt>
-	<name>1x LandRover WMIK</name>
-	<lbs>9020</lbs>
-      </opt>
-
-      <opt>
-	<name>2x LandRover WMIK</name>
-	<lbs>18040</lbs>
-      </opt>
-
-      <opt>
-	<name>1x Jackal</name>
-	<lbs>14896</lbs>
-      </opt>
-
-      <opt>
-	<name>2x Jackal</name>
-	<lbs>29792</lbs>
-      </opt>
-
-      <opt>
-	<name>MTVR</name>
-	<lbs>27900</lbs>
-      </opt>
-
-      <opt>
-	<name>BVS10-Viking</name>
-	<lbs>19040</lbs>
-      </opt>
-    </weight>
+    
     
     
   </sim>
@@ -485,6 +489,7 @@
       <file>Aircraft/C-17/Nasal/autostart.nas</file>	
     </autostart>
     <C-17>
+      <file>Aircraft/C-17/Nasal/Fuel-And-Payload.nas</file>
       <!--<file>Aircraft/Generic/limits.nas</file>-->
       <file>Aircraft/C-17/Nasal/liveries.nas</file>
       <file>Aircraft/C-17/Systems/air-ground.nas</file>

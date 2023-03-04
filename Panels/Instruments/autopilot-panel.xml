@@ -352,7 +352,7 @@
     </animation> 
 
     <!--EFIS Animations-->
-<!--
+
       <animation>
         <type>rotate</type>
         <object-name>BARO.knob</object-name>
@@ -370,7 +370,7 @@
             <z>0</z>
         </axis>
     </animation>
-    -->
+    
     <animation>
         <type>rotate</type>
         <object-name>Range.knob</object-name>
@@ -396,7 +396,7 @@
             <z>0</z>
         </axis>
     </animation>
-    <!--
+    
     <animation>
         <type>rotate</type>
         <object-name>MINS.knob</object-name>
@@ -437,7 +437,7 @@
             <z>0</z>
         </axis>
     </animation>
-     -->
+    
     <animation>
         <type>translate</type>
         <object-name>Lvor.toggle</object-name>
