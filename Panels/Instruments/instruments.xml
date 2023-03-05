@@ -1,65 +1,72 @@
 <?xml version="1.0"?>
 
-
 <PropertyList>
-   
+  <animation>
+    <type>select</type>
+    <object-name>PFD1</object-name>
+    <condition>
+      <property>sim/current-view/internal</property>
+    </condition>
+  </animation>    
 
-     <animation>
-        <type>select</type>
-        <object-name>PFD1</object-name>
-        <condition>
-            <property>sim/current-view/internal</property>
-        </condition>
-    </animation>    
+  <model>
+    <path>Aircraft/C-17/Panels/Instruments/MFD-L/mfd-l.xml</path>
+    <offsets>
+      <x-m>0.41</x-m>
+      <y-m>-0.12</y-m>
+      <z-m>0.89</z-m>
+      <pitch-deg>-6</pitch-deg>
+    </offsets>
+  </model>
 
-      <model>
-        <path>Aircraft/C-17/Panels/Instruments/MFD-L/mfd-l.xml</path>
-        
-        <offsets>
-            <x-m>0.41</x-m>
-            <y-m>-0.12</y-m>
-            <z-m>0.89</z-m>
-            <pitch-deg>-6</pitch-deg>
-        </offsets>
-      </model>
+  <!-- temporary install a turn coordinator -->
+  <model>
+    <path>Aircraft/Instruments-3d/tc/tc.xml</path>
+    <offsets>
+      <x-m>0.47</x-m>
+      <y-m>-0.30</y-m>
+      <z-m>0.85</z-m>
+      <pitch-deg>-6</pitch-deg>
+    </offsets>
+  </model>
+  
+  <animation>
+    <type>select</type>
+    <object-name>PFD2</object-name>
+    <condition>
+      <property>sim/current-view/internal</property>
+    </condition>
+  </animation>
 
-      <animation>
-        <type>select</type>
-        <object-name>PFD2</object-name>
-        <condition>
-            <property>sim/current-view/internal</property>
-        </condition>
-    </animation>
+  <model>
+    <path>Aircraft/C-17/Panels/Instruments/blank/blankmfd.ac</path>
+    <offsets>
+      <x-m>0.41</x-m>
+      <y-m>0.08</y-m>
+      <z-m>0.89</z-m>
+      <pitch-deg>-6</pitch-deg>
+    </offsets>
+  </model> 
 
-     <model>
-        
-         <path>Aircraft/C-17/Panels/Instruments/blank/blankmfd.ac</path>
-        <offsets>
-            <x-m>0.41</x-m>
-            <y-m>0.08</y-m>
-            <z-m>0.89</z-m>
-            <pitch-deg>-6</pitch-deg>
-			</offsets>
-      </model> 
-<!--
-      <animation>
-        <type>select</type>
-        <object-name>ND1</object-name>
-        <condition>
-            <property>sim/current-view/internal</property>
-        </condition>
-    </animation>
--->  
-   <model>
-        <path>Aircraft/C-17/Panels/Instruments/MFD-R/mfd-r.xml</path>
-        
-        <offsets>
-            <x-m>0.415</x-m>
-            <y-m>-0.51</y-m>
-            <z-m>0.82</z-m>
-            <pitch-deg>-6</pitch-deg>
-        </offsets>
-    </model>
+  <!--
+  <animation>
+    <type>select</type>
+    <object-name>ND1</object-name>
+    <condition>
+      <property>sim/current-view/internal</property>
+    </condition>
+  </animation>
+  -->  
+
+  <model>
+    <path>Aircraft/C-17/Panels/Instruments/MFD-R/mfd-r.xml</path>
+    <offsets>
+      <x-m>0.415</x-m>
+      <y-m>-0.51</y-m>
+      <z-m>0.82</z-m>
+      <pitch-deg>-6</pitch-deg>
+    </offsets>
+  </model>
 <!--
     <animation>
         <type>select</type>
