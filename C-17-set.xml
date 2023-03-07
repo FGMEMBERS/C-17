@@ -397,7 +397,6 @@
       </opt>
     </weight>
     
-    
   </sim>
   <systems>
     <electrical>
@@ -462,6 +461,9 @@
   
   <input>
     <keyboard include="Nasal/keyboard.xml"/>
+    <joysticks>
+      <js n="1" include="Nasal/joysticks.xml"/>
+    </joysticks>
   </input>
   
   <ai>
@@ -476,6 +478,9 @@
 	<NWS>
 	  <engaged type="double">0</engaged>
 	</NWS>
+	<multipliers>
+	  <rudder-yaw type="double">1.000</rudder-yaw>
+	</multipliers>
       </systems>
     </jsbsim>
   </fdm>

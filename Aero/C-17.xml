@@ -891,16 +891,17 @@
 	<input>fcs/rudder-cmd-norm</input>
 	<input>fcs/yaw-trim-cmd-norm</input>
 	<clipto>
-          <min>-0.35</min>
-          <max>0.35</max>
+          <min>-0.836332</min>
+          <max>0.836332</max>
 	</clipto>
+	<output>fcs/rudder-command-sum</output>
       </summer>
 
       <aerosurface_scale name="Rudder Control">
 	<input>fcs/rudder-command-sum</input>
 	<range>
-          <min>-0.35</min>
-          <max>0.35</max>
+          <min>-0.836332</min>
+          <max>0.836332</max>
 	</range>
 	<output>fcs/rudder-pos-rad</output>
       </aerosurface_scale>
@@ -908,8 +909,8 @@
       <aerosurface_scale name="rudder normalization">
 	<input>fcs/rudder-pos-rad</input>
 	<domain>
-          <min>-0.35</min>
-          <max>0.35</max>
+          <min>-0.836332</min>
+          <max>0.836332</max>
 	</domain>
 	<range>
           <min>-1</min>
@@ -2845,6 +2846,7 @@
 	<product>
 	  <value>-1.000</value>
 	  <value>2.850</value><!-- Rudder deflection power factor -->
+	  <property>systems/multipliers/rudder-yaw</property>
           <property>aero/qbar-psf</property>
           <property>metrics/Sv-sqft</property>
           <property>metrics/bw-ft</property>
