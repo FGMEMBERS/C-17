@@ -461,9 +461,6 @@
   
   <input>
     <keyboard include="Nasal/keyboard.xml"/>
-    <joysticks>
-      <js n="1" include="Nasal/joysticks.xml"/>
-    </joysticks>
   </input>
   
   <ai>
