@@ -1363,7 +1363,7 @@
 	<value>-1.000</value>
 	<value>2.850</value><!-- Rudder deflection power factor -->
 	<property>systems/multipliers/rudder-yaw</property>
-y	<property>aero/qbar-psf</property>
+	<property>aero/qbar-psf</property>
 	<property>metrics/Sv-sqft</property>
 	<property>metrics/bw-ft</property>
 	<table>
