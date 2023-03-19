@@ -9,7 +9,7 @@
 
   <model>
     <name>Pylons</name>
-    <path>Aircraft/C-17/Models/payload/pylons.xml</path>
+    <path>Aircraft/C-17/Models/payload/pylons/pylons.xml</path>
     <offsets>
       <x-m>0</x-m>
       <y-m>0</y-m>
@@ -21,7 +21,7 @@
   <!-- Cargobay -->
   <model>
     <name>1x Hummer</name>
-    <path>Aircraft/fgukpayloads/hummvee/Hummer.xml</path>
+    <path>Aircraft/C-17/hummvee/Hummer.xml</path>
     <offsets>
       <x-m>18</x-m>
       <y-m>0</y-m>
@@ -42,7 +42,7 @@
 
   <model>
     <name>CH-47</name>
-    <path>Aircraft/fgukpayloads/ch-47/ch-47.xml</path>
+    <path>Aircraft/C-17/ch-47/ch-47.xml</path>
     <offsets>
       <x-m>17</x-m>
       <y-m>0</y-m>
@@ -63,7 +63,7 @@
 
   <model>
     <name>M1 Abrams</name>
-    <path>Aircraft/fgukpayloads/M1-abrams/m1.xml</path>
+    <path>Aircraft/C-17/M1-abrams/m1.xml</path>
     <offsets>
       <x-m>18</x-m>
       <y-m>0</y-m>
@@ -85,7 +85,7 @@
 
   <model>
     <name>2xHummer</name>
-    <path>Aircraft/C-17/Models/payload/2xhummer.xml</path>
+    <path>Aircraft/C-17/Models/payload/hummvee/2xhummer.xml</path>
     <offsets>
       <x-m>18</x-m>
       <y-m>0</y-m>
@@ -106,7 +106,7 @@
   
   <model>
     <name>1xwmik</name>
-    <path>Aircraft/fgukpayloads/landrover/wmik.xml</path>
+    <path>Aircraft/C-17/landrover/wmik.xml</path>
     <offsets>
       <x-m>18</x-m>
       <y-m>0</y-m>
@@ -127,7 +127,7 @@
   
   <model>
     <name>2xwmik</name>
-    <path>Aircraft/C-17/Models/payload/2xwmik.xml</path>
+    <path>Aircraft/C-17/Models/payload/wmik/2xwmik.xml</path>
     <offsets>
       <x-m>18</x-m>
       <y-m>0</y-m>
@@ -148,7 +148,7 @@
   
   <model>
     <name>4xwmik</name>
-    <path>Aircraft/C-17/Models/payload/4xwmik.xml</path>
+    <path>Aircraft/C-17/Models/payload/wmik/4xwmik.xml</path>
     <offsets>
       <x-m>18</x-m>
       <y-m>0</y-m>
@@ -169,7 +169,7 @@
 
   <model>
     <name>1xjackal</name>
-    <path>Aircraft/fgukpayloads/Jackal/jackal.xml</path>
+    <path>Aircraft/C-17/jackal/jackal.xml</path>
     <offsets>
       <x-m>18</x-m>
       <y-m>0</y-m>
@@ -190,7 +190,7 @@
 
   <model>
     <name>2xJackal</name>
-    <path>Aircraft/C-17/Models/payload/2xjackal.xml</path>
+    <path>Aircraft/C-17/Models/payload/jackal/2xjackal.xml</path>
     <offsets>
       <x-m>18</x-m>
       <y-m>0</y-m>
@@ -211,7 +211,7 @@
 
   <model>
     <name>MTVR1</name>
-    <path>Aircraft/fgukpayloads/MTVR/mtvr.xml</path>
+    <path>Aircraft/C-17/MTVR/mtvr.xml</path>
     <offsets>
       <x-m>18</x-m>
       <y-m>0</y-m>
@@ -232,7 +232,7 @@
   
   <model>
     <name>viking</name>
-    <path>Aircraft/fgukpayloads/viking/viking.xml</path>
+    <path>Aircraft/C-17/viking/viking.xml</path>
     <offsets>
       <x-m>18</x-m>
       <y-m>0</y-m>
@@ -253,7 +253,7 @@
   
   <model>
     <name>bradle</name>
-    <path>Aircraft/fgukpayloads/Bradle/m2.xml</path>
+    <path>Aircraft/C-17/bradle/m2.xml</path>
     <offsets>
       <x-m>18</x-m>
       <y-m>0</y-m>
@@ -274,7 +274,7 @@
   
   <model>
     <name>mlrs</name>
-    <path>Aircraft/fgukpayloads/M270/mlrs.xml</path>
+    <path>Aircraft/C-17/M270/mlrs.xml</path>
     <offsets>
       <x-m>18</x-m>
       <y-m>0</y-m>
@@ -295,7 +295,7 @@
   
   <model>
     <name>buffalo</name>
-    <path>Aircraft/fgukpayloads/buffalo/mrap-buffalo.xml</path>
+    <path>Aircraft/C-17/buffalo/mrap-buffalo.xml</path>
     <offsets>
       <x-m>18</x-m>
       <y-m>0</y-m>
@@ -316,7 +316,7 @@
   
   <model>
     <name>stryker</name>
-    <path>Aircraft/fgukpayloads/stryker/stryker.xml</path>
+    <path>Aircraft/C-17/stryker/stryker.xml</path>
     <offsets>
       <x-m>18</x-m>
       <y-m>0</y-m>
@@ -337,7 +337,7 @@
   
   <model>
     <name>Scimiter</name>
-    <path>Aircraft/fgukpayloads/FV107/fv107.xml</path>
+    <path>Aircraft/C-17/FV107/fv107.xml</path>
     <offsets>
       <x-m>18</x-m>
       <y-m>0</y-m>
@@ -358,7 +358,7 @@
   
   <model>
     <name>warrior</name>
-    <path>Aircraft/fgukpayloads/FV510/fv510.xml</path>
+    <path>Aircraft/C-17/FV510/fv510.xml</path>
     <offsets>
       <x-m>18</x-m>
       <y-m>0</y-m>

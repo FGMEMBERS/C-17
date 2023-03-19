@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<PropertyList>
+
+  <path>pylon.ac</path>
+ <animation>
+    
+    <object-name>Cargobay</object-name>
+    
+  </animation>
+
+
+  <animation>
+    <type>select</type>
+    <object-name>Cargobay</object-name>      
+    <condition>
+      <not-equals>
+        <property>sim/weight[0]/selected</property>
+        <value>none</value>
+      </not-equals>
+    </condition>
+  </animation>
+
+  
+  
+ 
+		
+
+</PropertyList>

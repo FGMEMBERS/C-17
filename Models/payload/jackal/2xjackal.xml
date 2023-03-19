@@ -1,0 +1,31 @@
+<?xml version="1.0"?>
+
+<PropertyList>
+	
+	
+
+<model>
+<path>Aircraft/fgukpayloads/Jackal/jackal.xml</path>
+    
+<offsets>
+<x-m>-5</x-m>
+<y-m>0</y-m>
+<z-m>0</z-m>       
+ <heading-deg>180</heading-deg>     
+</offsets>
+</model>
+
+<model>
+<path>Aircraft/fgukpayloads/Jackal/jackal.xml</path>
+    
+<offsets>
+<x-m>1</x-m>
+<y-m>0</y-m>
+<z-m>0</z-m>       
+   <heading-deg>180</heading-deg>   
+</offsets>
+</model>
+  
+
+
+</PropertyList>
