@@ -122,7 +122,6 @@
       <serviceable type="bool">true</serviceable>
       <path>Aircraft/C-17/Submodels/submodels.xml</path>
       <path>Aircraft/C-17/Models/payload/loads.xml</path>
-      <!-- <path>Aircraft/C-17/Models/payload/loads.xml</path> -->
     </submodels>
     
      <instrumentation>
@@ -130,15 +129,16 @@
     </instrumentation>
       
     <!-- Payload options -->
-    
     <weight n="0">
       <name>Cargobay</name>
       <weight-lb>0</weight-lb>
       <selected>none</selected>
+
       <opt>
 	<name>none</name>
 	<lbs>0</lbs>
       </opt>
+
       <opt>
 	<name>1x Hummer</name>
 	<lbs>5700</lbs>

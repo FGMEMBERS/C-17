@@ -1,504 +1,460 @@
 <?xml version="1.0"?>
 
 <PropertyList>
-	
-	
-<animation>
-        <type>range</type>
-        <min-m>0</min-m>
-        <max-m>500</max-m>
-    </animation>
+  <animation>
+    <type>range</type>
+    <min-m>0</min-m>
+    <max-m>500</max-m>
+  </animation>
 
-<model>
-		<name>Pylons</name>
-		<path>Aircraft/C-17/Models/payload/pylons.xml</path>
-		<offsets>
-			<x-m>0</x-m>
-			<y-m>0</y-m>
-			<z-m>0</z-m>
-			<pitch-deg>0.0</pitch-deg>
-		</offsets>
-	</model>	
+  <model>
+    <name>Pylons</name>
+    <path>Aircraft/C-17/Models/payload/pylons.xml</path>
+    <offsets>
+      <x-m>0</x-m>
+      <y-m>0</y-m>
+      <z-m>0</z-m>
+      <pitch-deg>0.0</pitch-deg>
+    </offsets>
+  </model>	
 
-
-<!-- Cargobay -->
-
-	<model>
-		<name>1x Hummer</name>
-		<path>Aircraft/fgukpayloads/hummvee/Hummer.xml</path>
-		<offsets>
-			<x-m>18</x-m>
-			<y-m>0</y-m>
-			<z-m>-2.2</z-m>
-			<pitch-deg>0</pitch-deg>
-		</offsets>
-	</model>
+  <!-- Cargobay -->
+  <model>
+    <name>1x Hummer</name>
+    <path>Aircraft/fgukpayloads/hummvee/Hummer.xml</path>
+    <offsets>
+      <x-m>18</x-m>
+      <y-m>0</y-m>
+      <z-m>-2.2</z-m>
+      <pitch-deg>0</pitch-deg>
+    </offsets>
+  </model>
   <animation>
     <type>select</type>
     <object-name>1x Hummer</object-name>      
     <condition>
       <equals>
-          <property>sim/multiplay/generic/string[1]</property>
-          <value>1x Hummer</value>
-        </equals>
-       
+        <property>sim/multiplay/generic/string[1]</property>
+        <value>1x Hummer</value>
+      </equals>
     </condition>
   </animation>			
 
   <model>
-		<name>CH-47</name>
-		<path>Aircraft/fgukpayloads/ch-47/ch-47.xml</path>
-		<offsets>
-			<x-m>17</x-m>
-			<y-m>0</y-m>
-			<z-m>-0.2</z-m>
-			<pitch-deg>0</pitch-deg>
-		</offsets>
-	</model>
+    <name>CH-47</name>
+    <path>Aircraft/fgukpayloads/ch-47/ch-47.xml</path>
+    <offsets>
+      <x-m>17</x-m>
+      <y-m>0</y-m>
+      <z-m>-0.2</z-m>
+      <pitch-deg>0</pitch-deg>
+    </offsets>
+  </model>
   <animation>
     <type>select</type>
     <object-name>CH-47</object-name>      
     <condition>
-     
-        <equals>
-          <property>sim/multiplay/generic/string[1]</property>
-          <value>CH-47</value>
-        </equals>
-       
+      <equals>
+        <property>sim/multiplay/generic/string[1]</property>
+        <value>CH-47</value>
+      </equals>
     </condition>
   </animation>	
 
   <model>
-		<name>M1 Abrams</name>
-		<path>Aircraft/fgukpayloads/M1-abrams/m1.xml</path>
-		<offsets>
-			<x-m>18</x-m>
-			<y-m>0</y-m>
-			<z-m>-1.1</z-m>
-			<pitch-deg>0</pitch-deg>
-			<heading-deg>180</heading-deg>
-		</offsets>
-	</model>
+    <name>M1 Abrams</name>
+    <path>Aircraft/fgukpayloads/M1-abrams/m1.xml</path>
+    <offsets>
+      <x-m>18</x-m>
+      <y-m>0</y-m>
+      <z-m>-1.1</z-m>
+      <pitch-deg>0</pitch-deg>
+      <heading-deg>180</heading-deg>
+    </offsets>
+  </model>
   <animation>
     <type>select</type>
     <object-name>M1 Abrams</object-name>      
     <condition>
-     
-        <equals>
-          <property>sim/multiplay/generic/string[1]</property>
-          <value>M1 Abrams</value>
-        </equals>
-       
+      <equals>
+        <property>sim/multiplay/generic/string[1]</property>
+        <value>M1 Abrams</value>
+      </equals>
     </condition>
   </animation>	
 
-<model>
-		<name>2xHummer</name>
-		<path>Aircraft/C-17/Models/payload/2xhummer.xml</path>
-		<offsets>
-			<x-m>18</x-m>
-			<y-m>0</y-m>
-			<z-m>-2.2</z-m>
-			<yaw-deg>180</yaw-deg>
-		</offsets>
-	</model>
+  <model>
+    <name>2xHummer</name>
+    <path>Aircraft/C-17/Models/payload/2xhummer.xml</path>
+    <offsets>
+      <x-m>18</x-m>
+      <y-m>0</y-m>
+      <z-m>-2.2</z-m>
+      <yaw-deg>180</yaw-deg>
+    </offsets>
+  </model>
   <animation>
     <type>select</type>
     <object-name>2xHummer</object-name>      
     <condition>
-      
-        <equals>
-          <property>sim/multiplay/generic/string[1]</property>
-          <value>2x Hummer</value>
-        </equals>
-       
+      <equals>
+        <property>sim/multiplay/generic/string[1]</property>
+        <value>2x Hummer</value>
+      </equals>
     </condition>
   </animation>		
   
   <model>
-		<name>1xwmik</name>
-		<path>Aircraft/fgukpayloads/landrover/wmik.xml</path>
-		<offsets>
-			<x-m>18</x-m>
-			<y-m>0</y-m>
-			<z-m>-2.3</z-m>
-			<heading-deg>180</heading-deg>
-		</offsets>
-	</model>
+    <name>1xwmik</name>
+    <path>Aircraft/fgukpayloads/landrover/wmik.xml</path>
+    <offsets>
+      <x-m>18</x-m>
+      <y-m>0</y-m>
+      <z-m>-2.3</z-m>
+      <heading-deg>180</heading-deg>
+    </offsets>
+  </model>
   <animation>
     <type>select</type>
     <object-name>1xwmik</object-name>      
     <condition>
-    
-        <equals>
-          <property>sim/multiplay/generic/string[1]</property>
-          <value>1x LandRover WMIK</value>
-        </equals>
-       
+      <equals>
+        <property>sim/multiplay/generic/string[1]</property>
+        <value>1x LandRover WMIK</value>
+      </equals>
     </condition>
   </animation>	
   
-   <model>
-		<name>2xwmik</name>
-		<path>Aircraft/C-17/Models/payload/2xwmik.xml</path>
-		<offsets>
-			<x-m>18</x-m>
-			<y-m>0</y-m>
-			<z-m>-2.3</z-m>
-			<yaw-deg>180</yaw-deg>
-		</offsets>
-	</model>
+  <model>
+    <name>2xwmik</name>
+    <path>Aircraft/C-17/Models/payload/2xwmik.xml</path>
+    <offsets>
+      <x-m>18</x-m>
+      <y-m>0</y-m>
+      <z-m>-2.3</z-m>
+      <yaw-deg>180</yaw-deg>
+    </offsets>
+  </model>
   <animation>
     <type>select</type>
     <object-name>2xwmik</object-name>      
     <condition>
-     
-        <equals>
-          <property>sim/multiplay/generic/string[1]</property>
-          <value>2x LandRover WMIK</value>
-        </equals>
-       
+      <equals>
+        <property>sim/multiplay/generic/string[1]</property>
+        <value>2x LandRover WMIK</value>
+      </equals>
     </condition>
   </animation>	
   
-  
-    <model>
-		<name>4xwmik</name>
-		<path>Aircraft/C-17/Models/payload/4xwmik.xml</path>
-		<offsets>
-			<x-m>18</x-m>
-			<y-m>0</y-m>
-			<z-m>-2.3</z-m>
-			<yaw-deg>180</yaw-deg>
-		</offsets>
-	</model>
+  <model>
+    <name>4xwmik</name>
+    <path>Aircraft/C-17/Models/payload/4xwmik.xml</path>
+    <offsets>
+      <x-m>18</x-m>
+      <y-m>0</y-m>
+      <z-m>-2.3</z-m>
+      <yaw-deg>180</yaw-deg>
+    </offsets>
+  </model>
   <animation>
     <type>select</type>
     <object-name>4xwmik</object-name>      
     <condition>
-     
-        <equals>
-          <property>sim/multiplay/generic/string[1]</property>
-          <value>4x LandRover WMIK</value>
-        </equals>
-      
+      <equals>
+        <property>sim/multiplay/generic/string[1]</property>
+        <value>4x LandRover WMIK</value>
+      </equals>
     </condition>
   </animation>	
 
-<model>
-		<name>1xjackal</name>
-		<path>Aircraft/fgukpayloads/Jackal/jackal.xml</path>
-		<offsets>
-			<x-m>18</x-m>
-			<y-m>0</y-m>
-			<z-m>-2.3</z-m>
-			<heading-deg>180</heading-deg>
-		</offsets>
-	</model>
+  <model>
+    <name>1xjackal</name>
+    <path>Aircraft/fgukpayloads/Jackal/jackal.xml</path>
+    <offsets>
+      <x-m>18</x-m>
+      <y-m>0</y-m>
+      <z-m>-2.3</z-m>
+      <heading-deg>180</heading-deg>
+    </offsets>
+  </model>
   <animation>
     <type>select</type>
     <object-name>1xjackal</object-name>      
     <condition>
-     
-        <equals>
-          <property>sim/multiplay/generic/string[1]</property>
-          <value>1x Jackal</value>
-        </equals>
-       
+      <equals>
+        <property>sim/multiplay/generic/string[1]</property>
+        <value>1x Jackal</value>
+      </equals>
     </condition>
   </animation>
 
- <model>
-		<name>2xJackal</name>
-		<path>Aircraft/C-17/Models/payload/2xjackal.xml</path>
-		<offsets>
-			<x-m>18</x-m>
-			<y-m>0</y-m>
-			<z-m>-2.3</z-m>
-			<yaw-deg>180</yaw-deg>
-		</offsets>
-	</model>
+  <model>
+    <name>2xJackal</name>
+    <path>Aircraft/C-17/Models/payload/2xjackal.xml</path>
+    <offsets>
+      <x-m>18</x-m>
+      <y-m>0</y-m>
+      <z-m>-2.3</z-m>
+      <yaw-deg>180</yaw-deg>
+    </offsets>
+  </model>
   <animation>
     <type>select</type>
     <object-name>2xJackal</object-name>      
     <condition>
-     
-        <equals>
-          <property>sim/multiplay/generic/string[1]</property>
-          <value>2x Jackal</value>
-        </equals>
-       
+      <equals>
+        <property>sim/multiplay/generic/string[1]</property>
+        <value>2x Jackal</value>
+      </equals>
     </condition>
   </animation>	  
 
-   <model>
-		<name>MTVR1</name>
-		<path>Aircraft/fgukpayloads/MTVR/mtvr.xml</path>
-		<offsets>
-			<x-m>18</x-m>
-			<y-m>0</y-m>
-			<z-m>-2.3</z-m>
-			<heading-deg>180</heading-deg>
-		</offsets>
-	</model>
+  <model>
+    <name>MTVR1</name>
+    <path>Aircraft/fgukpayloads/MTVR/mtvr.xml</path>
+    <offsets>
+      <x-m>18</x-m>
+      <y-m>0</y-m>
+      <z-m>-2.3</z-m>
+      <heading-deg>180</heading-deg>
+    </offsets>
+  </model>
   <animation>
     <type>select</type>
     <object-name>MTVR1</object-name>      
     <condition>
-     
-        <equals>
-          <property>sim/multiplay/generic/string[1]</property>
-          <value>MTVR</value>
-        </equals>
-       
+      <equals>
+        <property>sim/multiplay/generic/string[1]</property>
+        <value>MTVR</value>
+      </equals>
     </condition>
   </animation>	
   
-   <model>
-		<name>viking</name>
-		<path>Aircraft/fgukpayloads/viking/viking.xml</path>
-		<offsets>
-			<x-m>18</x-m>
-			<y-m>0</y-m>
-			<z-m>-2.3</z-m>
-			<heading-deg>180</heading-deg>
-		</offsets>
-	</model>
+  <model>
+    <name>viking</name>
+    <path>Aircraft/fgukpayloads/viking/viking.xml</path>
+    <offsets>
+      <x-m>18</x-m>
+      <y-m>0</y-m>
+      <z-m>-2.3</z-m>
+      <heading-deg>180</heading-deg>
+    </offsets>
+  </model>
   <animation>
     <type>select</type>
     <object-name>viking</object-name>      
     <condition>
-     
-        <equals>
-          <property>sim/multiplay/generic/string[1]</property>
-          <value>BVS10-Viking</value>
-        </equals>
-      
+      <equals>
+        <property>sim/multiplay/generic/string[1]</property>
+        <value>BVS10-Viking</value>
+      </equals>
     </condition>
   </animation>	
   
-  
-    <model>
-		<name>bradle</name>
-		<path>Aircraft/fgukpayloads/Bradle/m2.xml</path>
-		<offsets>
-			<x-m>18</x-m>
-			<y-m>0</y-m>
-			<z-m>-2.3</z-m>
-			<heading-deg>180</heading-deg>
-		</offsets>
-	</model>
+  <model>
+    <name>bradle</name>
+    <path>Aircraft/fgukpayloads/Bradle/m2.xml</path>
+    <offsets>
+      <x-m>18</x-m>
+      <y-m>0</y-m>
+      <z-m>-2.3</z-m>
+      <heading-deg>180</heading-deg>
+    </offsets>
+  </model>
   <animation>
     <type>select</type>
     <object-name>bradle</object-name>      
     <condition>
-      
-        <equals>
-          <property>sim/multiplay/generic/string[1]</property>
-          <value>M2-Bradle</value>
-        </equals>
-       
+      <equals>
+        <property>sim/multiplay/generic/string[1]</property>
+        <value>M2-Bradle</value>
+      </equals>
     </condition>
   </animation>	
   
   <model>
-		<name>mlrs</name>
-		<path>Aircraft/fgukpayloads/M270/mlrs.xml</path>
-		<offsets>
-			<x-m>18</x-m>
-			<y-m>0</y-m>
-			<z-m>-2.3</z-m>
-			<heading-deg>180</heading-deg>
-		</offsets>
-	</model>
+    <name>mlrs</name>
+    <path>Aircraft/fgukpayloads/M270/mlrs.xml</path>
+    <offsets>
+      <x-m>18</x-m>
+      <y-m>0</y-m>
+      <z-m>-2.3</z-m>
+      <heading-deg>180</heading-deg>
+    </offsets>
+  </model>
   <animation>
     <type>select</type>
     <object-name>mlrs</object-name>      
     <condition>
-     
-        <equals>
-          <property>sim/multiplay/generic/string[1]</property>
-          <value>MLRS</value>
-        </equals>
-       
+      <equals>
+        <property>sim/multiplay/generic/string[1]</property>
+        <value>MLRS</value>
+      </equals>
     </condition>
   </animation>	
   
-   <model>
-		<name>buffalo</name>
-		<path>Aircraft/fgukpayloads/buffalo/mrap-buffalo.xml</path>
-		<offsets>
-			<x-m>18</x-m>
-			<y-m>0</y-m>
-			<z-m>-2.3</z-m>
-			<heading-deg>180</heading-deg>
-		</offsets>
-	</model>
+  <model>
+    <name>buffalo</name>
+    <path>Aircraft/fgukpayloads/buffalo/mrap-buffalo.xml</path>
+    <offsets>
+      <x-m>18</x-m>
+      <y-m>0</y-m>
+      <z-m>-2.3</z-m>
+      <heading-deg>180</heading-deg>
+    </offsets>
+  </model>
   <animation>
     <type>select</type>
     <object-name>buffalo</object-name>      
     <condition>
-     
-        <equals>
-          <property>sim/multiplay/generic/string[1]</property>
-          <value>Buffalo</value>
-        </equals>
-       
+      <equals>
+        <property>sim/multiplay/generic/string[1]</property>
+        <value>Buffalo</value>
+      </equals>
     </condition>
   </animation>	
   
   <model>
-		<name>stryker</name>
-		<path>Aircraft/fgukpayloads/stryker/stryker.xml</path>
-		<offsets>
-			<x-m>18</x-m>
-			<y-m>0</y-m>
-			<z-m>-2.3</z-m>
-			<heading-deg>180</heading-deg>
-		</offsets>
-	</model>
+    <name>stryker</name>
+    <path>Aircraft/fgukpayloads/stryker/stryker.xml</path>
+    <offsets>
+      <x-m>18</x-m>
+      <y-m>0</y-m>
+      <z-m>-2.3</z-m>
+      <heading-deg>180</heading-deg>
+    </offsets>
+  </model>
   <animation>
     <type>select</type>
     <object-name>stryker</object-name>      
     <condition>
-      
-        <equals>
-          <property>sim/multiplay/generic/string[1]</property>
-          <value>Stryker</value>
-        </equals>
-      
+      <equals>
+        <property>sim/multiplay/generic/string[1]</property>
+        <value>Stryker</value>
+      </equals>
     </condition>
   </animation>	
   
-   <model>
-		<name>Scimiter</name>
-		<path>Aircraft/fgukpayloads/FV107/fv107.xml</path>
-		<offsets>
-			<x-m>18</x-m>
-			<y-m>0</y-m>
-			<z-m>-2.3</z-m>
-			<heading-deg>180</heading-deg>
-		</offsets>
-	</model>
+  <model>
+    <name>Scimiter</name>
+    <path>Aircraft/fgukpayloads/FV107/fv107.xml</path>
+    <offsets>
+      <x-m>18</x-m>
+      <y-m>0</y-m>
+      <z-m>-2.3</z-m>
+      <heading-deg>180</heading-deg>
+    </offsets>
+  </model>
   <animation>
     <type>select</type>
     <object-name>Scimiter</object-name>      
     <condition>
-      
-        <equals>
-          <property>sim/multiplay/generic/string[1]</property>
-          <value>FV107</value>
-        </equals>
-       
+      <equals>
+        <property>sim/multiplay/generic/string[1]</property>
+        <value>FV107</value>
+      </equals>
     </condition>
   </animation>	
   
-  
   <model>
-		<name>warrior</name>
-		<path>Aircraft/fgukpayloads/FV510/fv510.xml</path>
-		<offsets>
-			<x-m>18</x-m>
-			<y-m>0</y-m>
-			<z-m>-2.3</z-m>
-			<heading-deg>180</heading-deg>
-		</offsets>
-	</model>
+    <name>warrior</name>
+    <path>Aircraft/fgukpayloads/FV510/fv510.xml</path>
+    <offsets>
+      <x-m>18</x-m>
+      <y-m>0</y-m>
+      <z-m>-2.3</z-m>
+      <heading-deg>180</heading-deg>
+    </offsets>
+  </model>
   <animation>
     <type>select</type>
     <object-name>warrior</object-name>      
     <condition>
-     
-        <equals>
-          <property>sim/multiplay/generic/string[1]</property>
-          <value>FV510</value>
-        </equals>
-       
+      <equals>
+        <property>sim/multiplay/generic/string[1]</property>
+        <value>FV510</value>
+      </equals>
     </condition>
   </animation>	
   
-  
   <animation>
-  <type>select</type>
-  <object-name>pylon.C</object-name>  
-  <condition>
-  <or>
-   <equals>
-    <property>sim/multiplay/generic/string[1]</property>
-    <value>1x Hummer</value>
-   </equals>
-   <equals>
-    <property>sim/multiplay/generic/string[1]</property>
-    <value>CH-47</value>
-   </equals>
-   <equals>
-    <property>sim/multiplay/generic/string[1]</property>
-    <value>M1 Abrams</value>
-   </equals>
-   <equals>
-    <property>sim/multiplay/generic/string[1]</property>
-    <value>2x Hummer</value>
-   </equals>
-    <equals>
-    <property>sim/multiplay/generic/string[1]</property>
-    <value>1x LandRover WMIK</value>
-   </equals>
-    <equals>
-    <property>sim/multiplay/generic/string[1]</property>
-    <value>2x LandRover WMIK</value>
-   </equals>
-    <equals>
-    <property>sim/multiplay/generic/string[1]</property>
-    <value>4x LandRover WMIK</value>
-   </equals>
-    <equals>
-    <property>sim/multiplay/generic/string[1]</property>
-    <value>1x Jackal</value>
-   </equals>
-    <equals>
-    <property>sim/multiplay/generic/string[1]</property>
-    <value>2x Jackal</value>
-   </equals>
-    <equals>
-    <property>sim/multiplay/generic/string[1]</property>
-    <value>MTVR</value>
-   </equals>
-    <equals>
-    <property>sim/multiplay/generic/string[1]</property>
-    <value>BVS10-Viking</value>
-   </equals>
-    <equals>
-    <property>sim/multiplay/generic/string[1]</property>
-    <value>M2-Bradle</value>
-   </equals>
-    <equals>
-    <property>sim/multiplay/generic/string[1]</property>
-    <value>MLRS</value>
-   </equals>
-    <equals>
-    <property>sim/multiplay/generic/string[1]</property>
-    <value>BVS10-Viking</value>
-   </equals>
-    <equals>
-    <property>sim/multiplay/generic/string[1]</property>
-    <value>Buffalo</value>
-   </equals>
-    <equals>
-    <property>sim/multiplay/generic/string[1]</property>
-    <value>Stryker</value>
-   </equals>
-    <equals>
-    <property>sim/multiplay/generic/string[1]</property>
-    <value>Scimiter</value>
-   </equals>
-    <equals>
-    <property>sim/multiplay/generic/string[1]</property>
-    <value>FV510</value>
-   </equals>
-   
-   
-  </or>
-  </condition>
- </animation>
-
+    <type>select</type>
+    <object-name>pylon.C</object-name>  
+    <condition>
+      <or>
+	<equals>
+	  <property>sim/multiplay/generic/string[1]</property>
+	  <value>1x Hummer</value>
+	</equals>
+	<equals>
+	  <property>sim/multiplay/generic/string[1]</property>
+	  <value>CH-47</value>
+	</equals>
+	<equals>
+	  <property>sim/multiplay/generic/string[1]</property>
+	  <value>M1 Abrams</value>
+	</equals>
+	<equals>
+	  <property>sim/multiplay/generic/string[1]</property>
+	  <value>2x Hummer</value>
+	</equals>
+	<equals>
+	  <property>sim/multiplay/generic/string[1]</property>
+	  <value>1x LandRover WMIK</value>
+	</equals>
+	<equals>
+	  <property>sim/multiplay/generic/string[1]</property>
+	  <value>2x LandRover WMIK</value>
+	</equals>
+	<equals>
+	  <property>sim/multiplay/generic/string[1]</property>
+	  <value>4x LandRover WMIK</value>
+	</equals>
+	<equals>
+	  <property>sim/multiplay/generic/string[1]</property>
+	  <value>1x Jackal</value>
+	</equals>
+	<equals>
+	  <property>sim/multiplay/generic/string[1]</property>
+	  <value>2x Jackal</value>
+	</equals>
+	<equals>
+	  <property>sim/multiplay/generic/string[1]</property>
+	  <value>MTVR</value>
+	</equals>
+	<equals>
+	  <property>sim/multiplay/generic/string[1]</property>
+	  <value>BVS10-Viking</value>
+	</equals>
+	<equals>
+	  <property>sim/multiplay/generic/string[1]</property>
+	  <value>M2-Bradle</value>
+	</equals>
+	<equals>
+	  <property>sim/multiplay/generic/string[1]</property>
+	  <value>MLRS</value>
+	</equals>
+	<equals>
+	  <property>sim/multiplay/generic/string[1]</property>
+	  <value>BVS10-Viking</value>
+	</equals>
+	<equals>
+	  <property>sim/multiplay/generic/string[1]</property>
+	  <value>Buffalo</value>
+	</equals>
+	<equals>
+	  <property>sim/multiplay/generic/string[1]</property>
+	  <value>Stryker</value>
+	</equals>
+	<equals>
+	  <property>sim/multiplay/generic/string[1]</property>
+	  <value>Scimiter</value>
+	</equals>
+	<equals>
+	  <property>sim/multiplay/generic/string[1]</property>
+	  <value>FV510</value>
+	</equals>
+      </or>
+    </condition>
+  </animation>
 </PropertyList>
