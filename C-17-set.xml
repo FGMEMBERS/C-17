@@ -120,7 +120,7 @@
     <!-- Submodels -->
     <submodels>
       <serviceable type="bool">true</serviceable>
-      <path>Aircraft/C-17/Submodels/submodels.xml</path>
+      <path>Aircraft/C-17/Models/Submodels/submodels.xml</path>
       <path>Aircraft/C-17/Models/payload/loads.xml</path>
     </submodels>
     

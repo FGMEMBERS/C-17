@@ -1,13 +1,13 @@
 <?xml version="1.0"?>
 <!-- $Id$ -->
 <!--
-MD500 multiplayer passenger view.
+C-17 multiplayer passenger view.
 
-Copyright (C) 2009  Anders Gidenstam  (anders(at)gidenstam.org)
+Copyright (C) 2009  Anders Gidenstam  (anders@gidenstam.org)
 This file is licensed under the GPL license version 2 or later.
 -->
 <!--
-Usage: fgfs - -prop:/sim/remote/pilot-callsign="remote pilot callsign" - -aircraft=Fi-156-passenger
+Usage: fgfs --prop:/sim/remote/pilot-callsign="remote pilot callsign" --aircraft=C-17-co-yasim
 -->
 <PropertyList>
   <sim>
@@ -26,7 +26,7 @@ Usage: fgfs - -prop:/sim/remote/pilot-callsign="remote pilot callsign" - -aircra
     <!-- Submodel (Paratroopers) -->
     <submodels>
       <serviceable type="bool">true</serviceable>
-      <path>Aircraft/C-17/Submodels/submodels.xml</path>
+      <path>Aircraft/C-17/Models/Submodels/submodels.xml</path>
       <path>Aircraft/C-17/Models/payload/loads.xml</path>
     </submodels>
     <instrumentation>
