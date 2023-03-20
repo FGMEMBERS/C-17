@@ -127,7 +127,7 @@
   
   <model>
     <name>2xwmik</name>
-    <path>Models/payload/wmik/2xwmik.xml</path>
+    <path>Models/payload/landrover/2xwmik.xml</path>
     <offsets>
       <x-m>18</x-m>
       <y-m>0</y-m>
@@ -148,7 +148,7 @@
   
   <model>
     <name>4xwmik</name>
-    <path>Models/payload/wmik/4xwmik.xml</path>
+    <path>Models/payload/landrover/4xwmik.xml</path>
     <offsets>
       <x-m>18</x-m>
       <y-m>0</y-m>
