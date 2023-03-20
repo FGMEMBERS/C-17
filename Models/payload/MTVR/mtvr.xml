@@ -1,9 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 
 <PropertyList>
-
   <path>mtvr.ac</path>
-  
  
  <!--
  
@@ -38,5 +36,4 @@ Width
 Height
 144.0 in (3,658 mm) 
 -->
-
 </PropertyList>

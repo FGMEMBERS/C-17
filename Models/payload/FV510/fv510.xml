@@ -1,7 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
 
 <PropertyList>
-
   <path>fv510.ac</path>
   
   <!--
@@ -64,8 +63,4 @@ Operational  range:  410 miles (660 km)
 Speed: 46 mph (75 km/h) on road, 31 mph (50 km/h) off road[2] 
 
 -->
-  
-
- 
-
 </PropertyList>

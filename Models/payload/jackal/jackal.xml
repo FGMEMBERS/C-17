@@ -1,7 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
 
 <PropertyList>
-
   <path>jackal.ac</path>
   
   <!--
@@ -49,5 +48,4 @@ Independent double wishbone, air operated springs and external bypass shock abso
 Speed: 130 km/h (81 mph) 
 
 -->
-
 </PropertyList>

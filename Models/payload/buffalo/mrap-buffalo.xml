@@ -1,10 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 
 <PropertyList>
-
   <path>buffalo.ac</path>
-  
- 
  <!--
  MRAP Buffalo
 
@@ -50,11 +47,9 @@ Ground clearance: 15 in (410 mm)
 
 Fuel capacity: 85 gal 
 
-
 Operational range:  300 mi (483 km) 
 
 Speed: 65 mph (105 km/h) 
 
 -->
-
 </PropertyList>

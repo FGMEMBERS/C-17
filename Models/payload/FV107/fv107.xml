@@ -1,7 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
 
 <PropertyList>
-
   <path>scimitar.ac</path>
   
   <!--
@@ -53,7 +52,4 @@ Operational range:  450 km
 Speed: 50 mph (80.5 km/h 
 
 -->
-
- 
-
 </PropertyList>

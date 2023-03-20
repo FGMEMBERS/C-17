@@ -1,9 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 
 <PropertyList>
-
   <path>viking.ac</path>
-  
   
 <!--
 
@@ -49,6 +47,4 @@ Speed:
 65 km/h (roads)
  5 km/h (water) 
 -->
- 
-
 </PropertyList>

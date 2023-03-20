@@ -1,9 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 
 <PropertyList>
-
   <path>stryker.ac</path>
-  
  
  <!--
  M1126 Stryker
@@ -42,5 +40,4 @@ Operational range:  500 km (310 mi)
 Speed: 100 km/h (62 mph) 
 
 -->
-
 </PropertyList>

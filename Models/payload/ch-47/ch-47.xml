@@ -1,7 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
 
 <PropertyList>
-
   <path>ch47hc2.ac</path>
 
   <!--
@@ -42,6 +41,4 @@ Developed from: Vertol Model 107
 Variants: Boeing Chinook (UK variants) 
 
   -->
-  
-  
 </PropertyList>

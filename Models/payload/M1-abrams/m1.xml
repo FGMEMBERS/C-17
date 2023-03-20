@@ -1,7 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
 
 <PropertyList>
-
   <path>m1.ac</path>
 
  <!--
@@ -128,5 +127,4 @@ M1A1: Road 45 mph (72 km/h) (governed);
  M1A2: Road 42 mph (67 km/h) (governed);
  Off-road: 25 mph (40 km/h) 
 -->
- 
 </PropertyList>

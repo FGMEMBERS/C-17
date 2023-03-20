@@ -1,14 +1,10 @@
 <?xml version="1.0" encoding="UTF-8"?>
 
 <PropertyList>
-
   <path>pylon.ac</path>
- <animation>
-    
+  <animation>
     <object-name>Cargobay</object-name>
-    
   </animation>
-
 
   <animation>
     <type>select</type>
@@ -20,10 +16,4 @@
       </not-equals>
     </condition>
   </animation>
-
-  
-  
- 
-		
-
 </PropertyList>
