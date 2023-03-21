@@ -79,10 +79,9 @@
 	<int n="17" alias="/controls/lighting/landing-lights"/>
 	<int n="18" alias="/controls/lighting/landing-lights[1]"/>
 	<int n="19" alias="/controls/lighting/cabin-lights"/>
+	<int n="20" alias="/fdm/jsbsim/systems/payload/cargo-id"/>
 	<!-- This does not work, because FlightGear limits MP properties to 18 -->
-
 	<float n="1" alias="/instrumentation/doors/ramp/position-norm"/>
-	<float n="2" alias="/position/gear-agl-m">0</float><!-- 11 altitude for MP shadow -->
 	<float n="3" alias="/surface-positions/flap-pos-norm"/>
 	<float n="4" alias="/controls/flight/elevator-trim"/>
 	<float n="5" alias="/controls/flight/rudder"/>
@@ -90,13 +89,11 @@
 	<float n="7" alias="/controls/flight/aileron"/>
 	<float n="8" alias="/controls/engines/engine[0]/throttle"/>
 	<float n="9" alias="/controls/engines/engine[1]/throttle"/>
-	
 	<float n="14" alias="/controls/gear/brake-left"/>
 	<float n="15" alias="/controls/gear/brake-right"/>
 	<float n="16" alias="/gear/gear[0]/position-norm"/>
 	<float n="17" alias="/controls/flight/rudder-trim"/>
 	<float n="18" alias="/controls/flight/aileron-trim"/>
-        
 	<string n="0" type="string"></string><!-- RESERVED FOR DUAL CONTROL (Analog Switch - TDM)-->
 	<!--<string n="1" type"string"/>RESERVED FOR MODE WHEELS/AMPHIBIOUS -->
 	<string alias="/sim/weight[0]/selected" n="1"/><!-- Payload over multiplayer -->
@@ -128,67 +125,6 @@
       <path>Aircraft/C-17/Systems/instrumentation.xml</path>
     </instrumentation>
       
-    <!-- Payload options -->
-    <weight n="0">
-      <name>Cargobay</name>
-      <weight-lb>0</weight-lb>
-      <selected>none</selected>
-
-      <opt>
-	<name>none</name>
-	<lbs>0</lbs>
-      </opt>
-
-      <opt>
-	<name>1x Hummer</name>
-	<lbs>5700</lbs>
-      </opt>
-
-      <opt>
-	<name>CH-47</name>
-	<lbs>23400</lbs>
-      </opt>
-
-      <opt>
-	<name>M1 Abrams</name>
-	<lbs>122800</lbs>
-      </opt>
-
-      <opt>
-	<name>2x Hummer</name>
-	<lbs>11400</lbs>
-      </opt>
-
-      <opt>
-	<name>1x LandRover WMIK</name>
-	<lbs>9020</lbs>
-      </opt>
-
-      <opt>
-	<name>2x LandRover WMIK</name>
-	<lbs>18040</lbs>
-      </opt>
-
-      <opt>
-	<name>1x Jackal</name>
-	<lbs>14896</lbs>
-      </opt>
-
-      <opt>
-	<name>2x Jackal</name>
-	<lbs>29792</lbs>
-      </opt>
-
-      <opt>
-	<name>MTVR</name>
-	<lbs>27900</lbs>
-      </opt>
-
-      <opt>
-	<name>BVS10-Viking</name>
-	<lbs>19040</lbs>
-      </opt>
-    </weight>
 
   <hud>
       <path n="1">Aircraft/C-17/Hud/hud.xml</path>
@@ -398,11 +334,12 @@
 	</menu>		
       </default>	
     </menubar>
-    
-    
-    
-    
+
+    <aircraft-data>
+      <path>fdm/jsbsim/systems/payload/cargo-id</path>
+    </aircraft-data>
   </sim>
+
   <systems>
     <electrical>
       <path>Aircraft/Generic/generic-electrical.xml</path>
@@ -426,33 +363,22 @@
   <engines>
     <engine n="0">
       <running>false</running>
+      <reverser-position type="int">0</reverser-position>
     </engine>
     <engine n="1">
       <running>false</running>
-    </engine>
-    <engine n="2">
-      <running>false</running>
-    </engine>
-    <engine n="3">
-      <running>false</running>
-    </engine>
-  </engines>
-  
-  <engines>
-    <engine n="0">
-      <reverser-position type="int">0</reverser-position>
-    </engine>    
-    <engine n="1">
       <reverser-position type="int">0</reverser-position>
     </engine>
     <engine n="2">
+      <running>false</running>
       <reverser-position type="int">0</reverser-position>
     </engine>
     <engine n="3">
+      <running>false</running>
       <reverser-position type="int">0</reverser-position>
     </engine>
   </engines>
-  
+    
   <controls>
     <gear>
       <brake-parking>1</brake-parking>
@@ -476,11 +402,7 @@
   
   <fdm>
     <jsbsim>
-      <systems>
-	<NWS>
-	  <engaged type="double">0</engaged>
-	</NWS>
-      </systems>
+      <systems include="Systems/fdm-systems-initialization.xml"/>
     </jsbsim>
   </fdm>
   

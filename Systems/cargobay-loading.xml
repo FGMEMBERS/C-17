@@ -1,0 +1,70 @@
+<?xml version="1.0"?>
+<?xml-stylesheet href="JSBSim.xsl" type="application/xml"?>
+
+<system>
+    <channel name="Weight of Payload in Lbs">
+      <switch name="systems/payload/weight-lbs">
+	<default value="systems/payload/weight/empty"/>
+	<test value="systems/payload/weight/empty">
+	  systems/payload/cargo-id == systems/payload/item-id/empty
+	</test>
+	<test value="systems/payload/weight/CH-47">
+	  systems/payload/cargo-id == systems/payload/item-id/CH-47
+	</test>
+	<test value="systems/payload/weight/M1Abrams">
+	  systems/payload/cargo-id == systems/payload/item-id/M1Abrams
+	</test>
+	<test value="systems/payload/weight/Hummer1x">
+	  systems/payload/cargo-id == systems/payload/item-id/Hummer1x
+	</test>
+	<test value="systems/payload/weight/Hummer2x">
+	  systems/payload/cargo-id == systems/payload/item-id/Hummer2x
+	</test>
+	<test value="systems/payload/weight/LandRover1x">
+	  systems/payload/cargo-id == systems/payload/item-id/LandRover1x
+	</test>
+	<test value="systems/payload/weight/LandRover2x">
+	  systems/payload/cargo-id == systems/payload/item-id/LandRover2x
+	</test>
+	<test value="systems/payload/weight/LandRover4x">
+	  systems/payload/cargo-id == systems/payload/item-id/LandRover4x
+	</test>
+	<test value="systems/payload/weight/Jackal1x">
+	  systems/payload/cargo-id == systems/payload/item-id/Jackal1x
+	</test>
+	<test value="systems/payload/weight/Jackal2x">
+	  systems/payload/cargo-id == systems/payload/item-id/Jackal2x
+	</test>
+	<test value="systems/payload/weight/MTVR">
+	  systems/payload/cargo-id == systems/payload/item-id/MTVR
+	</test>
+	<test value="systems/payload/weight/viking">
+	  systems/payload/cargo-id == systems/payload/item-id/viking
+	</test>
+	<test value="systems/payload/weight/bradle">
+	  systems/payload/cargo-id == systems/payload/item-id/bradle
+	</test>
+	<test value="systems/payload/weight/MLRS">
+	  systems/payload/cargo-id == systems/payload/item-id/MLRS
+	</test>
+	<test value="systems/payload/weight/stryker">
+	  systems/payload/cargo-id == systems/payload/item-id/stryker
+	</test>
+	<test value="systems/payload/weight/FV107">
+	  systems/payload/cargo-id == systems/payload/item-id/FV107
+	</test>
+	<test value="systems/payload/weight/FV510">
+	  systems/payload/cargo-id == systems/payload/item-id/FV510
+	</test>
+	<test value="systems/payload/weight/buffalo">
+	  systems/payload/cargo-id == systems/payload/item-id/buffalo
+	</test>
+      </switch>
+    </channel>
+
+    <channel name="Cargo Item pointmass Loading">
+      <switch name="inertia/pointmass-weight-lbs[4]">
+	<default value="systems/payload/weight-lbs"/>
+      </switch>
+    </channel>
+</system>
