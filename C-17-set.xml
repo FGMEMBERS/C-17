@@ -284,30 +284,31 @@
 	<flaps>0.167</flaps>
 	<speed>260</speed>
       </max-flap-extension-speed>
+
       <max-flap-extension-speed>
 	<flaps>0.333</flaps>
 	<speed>240</speed>
       </max-flap-extension-speed>
+
       <max-flap-extension-speed>
 	<flaps>0.667</flaps>
 	<speed>230</speed>
       </max-flap-extension-speed>
+
       <max-flap-extension-speed>
 	<flaps>0.833</flaps>
 	<speed>205</speed>
       </max-flap-extension-speed>
+
       <max-flap-extension-speed>
 	<flaps>1.000</flaps>
 	<speed>180</speed>
       </max-flap-extension-speed>
-      
+
       <vne>600</vne>
-      
       <max-gear-extension-speed>270</max-gear-extension-speed>
-      
       <max-positive-g>4.4</max-positive-g>
       <max-negative-g>-1.76</max-negative-g>
-      
     </limits>
     
     <!-- Menu Bar  -->
@@ -329,6 +330,16 @@
 	      <command>nasal</command>
 	      <script>
 	      autostart.StartUp();</script>
+	    </binding>
+	  </item>
+	  <item>
+	    <label>Cargobay loading</label>
+	    <binding>
+	      <command>nasal</command>
+	      <script>
+		var cargobay = gui.Dialog.new("sim/gui/dialogs/Cargobay/dialog", "Dialogs/Cargobay.xml");
+		cargobay.open();
+	      </script>
 	    </binding>
 	  </item>
 	</menu>		
