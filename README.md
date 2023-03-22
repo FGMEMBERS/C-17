@@ -1,5 +1,5 @@
 Boeing C-17 Globemaster III
-==========================
+===========================
 
 ### [Wikipedia Page](https://en.wikipedia.org/wiki/Boeing_C-17_Globemaster_III)
 
@@ -16,8 +16,6 @@ Boeing C-17 Globemaster III
 * [@J. Maverick](https://github.com/JMaverick16) - Damage code
 
 ****
-
-This aircraft requires the FGUK payloads Package V1.6 or better. Available [HERE](https://github.com/FGMEMBERS/fgukpayloads)
 
 ### Release Notes:
 

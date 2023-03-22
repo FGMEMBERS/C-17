@@ -3,7 +3,7 @@
   <sim>
     <description>C-17 Globemaster III(YASIM)</description>
     <status>BETA</status>
-    <author>StuartC (FDM), Adam Fothergill (Model) Geed ( sound )</author>
+    <author>StuartC (FDM), Adam Fothergill (Model), Geed (Sound)</author>
     <aircraft-version>3.1</aircraft-version>
     <flight-model>yasim</flight-model>
     <aero>Aero/C-17-yasim</aero>
@@ -288,7 +288,7 @@
     <!-- Submodel (Paratroopers) -->
     <submodels>
       <serviceable type="bool">true</serviceable>
-      <path>Aircraft/C-17/Submodels/submodels.xml</path>
+      <path>Aircraft/C-17/Models/Submodels/submodels.xml</path>
       <path>Aircraft/C-17/Models/payload/loads.xml</path>
     </submodels>
     <instrumentation>

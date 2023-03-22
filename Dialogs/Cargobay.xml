@@ -1,0 +1,297 @@
+<?xml version="1.0"?>
+
+<PropertyList>
+  <name>Cargobay loading</name>
+  <layout>vbox</layout>
+
+  <group>
+    <layout>hbox</layout>
+    <empty><stretch>1</stretch></empty>
+
+    <text>
+      <label>Cargobay Loading</label>
+    </text>
+
+    <empty><stretch>1</stretch></empty>
+    
+    <button>
+      <pref-width>16</pref-width>
+      <pref-height>16</pref-height>
+      <legend></legend>
+      <default>1</default>
+      <keynum>27</keynum>
+      <border>2</border>
+      <binding>
+	<command>dialog-close</command>
+      </binding>
+      <binding>
+	<command>dialog-apply</command>
+      </binding>
+    </button>
+  </group>
+
+  <hrule/>
+
+  <group>
+    <layout>hbox</layout>
+    <default-padding>8</default-padding>
+
+    <combo>
+      <name>load-item-id</name>
+      <pref-width>150</pref-width>
+      <pref-height>25</pref-height>
+      <live>true</live>
+      <property>/sim/multiplay/generic/string[1]</property>
+      <value>Empty</value>
+      <value>CH-47</value>
+      <value>M1 Abrams</value>
+      <value>1x Hummer</value>
+      <value>2x Hummer</value>
+      <value>1x LandRover WMIK</value>
+      <value>2x LandRover WMIK</value>
+      <value>4x LandRover WMIK</value>
+      <value>1x Jackal</value>
+      <value>2x Jackal</value>
+      <value>MTVR</value>
+      <value>BVS10-Viking</value>
+      <value>M2-Bradle</value>
+      <value>MLRS</value>
+      <value>Buffalo</value>
+      <value>Stryker</value>
+      <value>Scimiter</value>
+      <value>FV510</value>
+      <binding>
+	<command>dialog-apply</command>
+	<object-name>load-item-id</object-name>
+      </binding>
+
+      <binding>
+	<condition>
+	  <equals>
+	    <property>/sim/multiplay/generic/string[1]</property>
+	    <value>Empty</value>
+	  </equals>
+	</condition>
+	<command>property-assign</command>
+	<property>fdm/jsbsim/systems/payload/cargo-id</property>
+	<property>fdm/jsbsim/systems/payload/item-id/empty</property>
+      </binding>
+
+      <binding>
+	<condition>
+	  <equals>
+	    <property>/sim/multiplay/generic/string[1]</property>
+	    <value>CH-47</value>
+	  </equals>
+	</condition>
+	<command>property-assign</command>
+	<property>fdm/jsbsim/systems/payload/cargo-id</property>
+	<property>fdm/jsbsim/systems/payload/item-id/CH-47</property>
+      </binding>
+
+      <binding>
+	<condition>
+	  <equals>
+	    <property>/sim/multiplay/generic/string[1]</property>
+	    <value>M1 Abrams</value>
+	  </equals>
+	</condition>
+	<command>property-assign</command>
+	<property>fdm/jsbsim/systems/payload/cargo-id</property>
+	<property>fdm/jsbsim/systems/payload/item-id/M1Abrams</property>
+      </binding>
+
+      <binding>
+	<condition>
+	  <equals>
+	    <property>/sim/multiplay/generic/string[1]</property>
+	    <value>1x Hummer</value>
+	  </equals>
+	</condition>
+	<command>property-assign</command>
+	<property>fdm/jsbsim/systems/payload/cargo-id</property>
+	<property>fdm/jsbsim/systems/payload/item-id/Hummer1x</property>
+      </binding>
+
+      <binding>
+	<condition>
+	  <equals>
+	    <property>/sim/multiplay/generic/string[1]</property>
+	    <value>2x Hummer</value>
+	  </equals>
+	</condition>
+	<command>property-assign</command>
+	<property>fdm/jsbsim/systems/payload/cargo-id</property>
+	<property>fdm/jsbsim/systems/payload/item-id/Hummer2x</property>
+      </binding>
+      
+      <binding>
+	<condition>
+	  <equals>
+	    <property>/sim/multiplay/generic/string[1]</property>
+	    <value>1x LandRover WMIK</value>
+	  </equals>
+	</condition>
+	<command>property-assign</command>
+	<property>fdm/jsbsim/systems/payload/cargo-id</property>
+	<property>fdm/jsbsim/systems/payload/item-id/LandRover1x</property>
+      </binding>
+
+      <binding>
+	<condition>
+	  <equals>
+	    <property>/sim/multiplay/generic/string[1]</property>
+	    <value>2x LandRover WMIK</value>
+	  </equals>
+	</condition>
+	<command>property-assign</command>
+	<property>fdm/jsbsim/systems/payload/cargo-id</property>
+	<property>fdm/jsbsim/systems/payload/item-id/LandRover2x</property>
+      </binding>
+
+      <binding>
+	<condition>
+	  <equals>
+	    <property>/sim/multiplay/generic/string[1]</property>
+	    <value>4x LandRover WMIK</value>
+	  </equals>
+	</condition>
+	<command>property-assign</command>
+	<property>fdm/jsbsim/systems/payload/cargo-id</property>
+	<property>fdm/jsbsim/systems/payload/item-id/LandRover4x</property>
+      </binding>
+
+      <binding>
+	<condition>
+	  <equals>
+	    <property>/sim/multiplay/generic/string[1]</property>
+	    <value>1x Jackal</value>
+	  </equals>
+	</condition>
+	<command>property-assign</command>
+	<property>fdm/jsbsim/systems/payload/cargo-id</property>
+	<property>fdm/jsbsim/systems/payload/item-id/Jackal1x</property>
+      </binding>
+
+      <binding>
+	<condition>
+	  <equals>
+	    <property>/sim/multiplay/generic/string[1]</property>
+	    <value>2x Jackal</value>
+	  </equals>
+	</condition>
+	<command>property-assign</command>
+	<property>fdm/jsbsim/systems/payload/cargo-id</property>
+	<property>fdm/jsbsim/systems/payload/item-id/Jackal2x</property>
+      </binding>
+
+      <binding>
+	<condition>
+	  <equals>
+	    <property>/sim/multiplay/generic/string[1]</property>
+	    <value>MTVR</value>
+	  </equals>
+	</condition>
+	<command>property-assign</command>
+	<property>fdm/jsbsim/systems/payload/cargo-id</property>
+	<property>fdm/jsbsim/systems/payload/item-id/MTVR</property>
+      </binding>
+
+      <binding>
+	<condition>
+	  <equals>
+	    <property>/sim/multiplay/generic/string[1]</property>
+	    <value>BVS10-Viking</value>
+	  </equals>
+	</condition>
+	<command>property-assign</command>
+	<property>fdm/jsbsim/systems/payload/cargo-id</property>
+	<property>fdm/jsbsim/systems/payload/item-id/viking</property>
+      </binding>
+
+      <binding>
+	<condition>
+	  <equals>
+	    <property>/sim/multiplay/generic/string[1]</property>
+	    <value>M2-Bradle</value>
+	  </equals>
+	</condition>
+	<command>property-assign</command>
+	<property>fdm/jsbsim/systems/payload/cargo-id</property>
+	<property>fdm/jsbsim/systems/payload/item-id/bradle</property>
+      </binding>
+
+      <binding>
+	<condition>
+	  <equals>
+	    <property>/sim/multiplay/generic/string[1]</property>
+	    <value>MLRS</value>
+	  </equals>
+	</condition>
+	<command>property-assign</command>
+	<property>fdm/jsbsim/systems/payload/cargo-id</property>
+	<property>fdm/jsbsim/systems/payload/item-id/MLRS</property>
+      </binding>
+
+      <binding>
+	<condition>
+	  <equals>
+	    <property>/sim/multiplay/generic/string[1]</property>
+	    <value>Buffalo</value>
+	  </equals>
+	</condition>
+	<command>property-assign</command>
+	<property>fdm/jsbsim/systems/payload/cargo-id</property>
+	<property>fdm/jsbsim/systems/payload/item-id/buffalo</property>
+      </binding>
+
+      <binding>
+	<condition>
+	  <equals>
+	    <property>/sim/multiplay/generic/string[1]</property>
+	    <value>Stryker</value>
+	  </equals>
+	</condition>
+	<command>property-assign</command>
+	<property>fdm/jsbsim/systems/payload/cargo-id</property>
+	<property>fdm/jsbsim/systems/payload/item-id/stryker</property>
+      </binding>
+
+      <binding>
+	<condition>
+	  <equals>
+	    <property>/sim/multiplay/generic/string[1]</property>
+	    <value>Scimiter</value>
+	  </equals>
+	</condition>
+	<command>property-assign</command>
+	<property>fdm/jsbsim/systems/payload/cargo-id</property>
+	<property>fdm/jsbsim/systems/payload/item-id/FV107</property>
+      </binding>
+
+      <binding>
+	<condition>
+	  <equals>
+	    <property>/sim/multiplay/generic/string[1]</property>
+	    <value>FV510</value>
+	  </equals>
+	</condition>
+	<command>property-assign</command>
+	<property>fdm/jsbsim/systems/payload/cargo-id</property>
+	<property>fdm/jsbsim/systems/payload/item-id/FV510</property>
+      </binding>
+     
+    </combo>
+  </group>
+  <hrule/>
+
+  <button>
+    <legend>Close</legend>
+    <default>true</default>
+    <key>Esc</key>
+    <binding>
+      <command>dialog-close</command>
+    </binding>
+  </button>
+
+</PropertyList>
