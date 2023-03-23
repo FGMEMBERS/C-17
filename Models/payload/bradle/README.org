@@ -1,0 +1,9 @@
+* *M2 Bradley*
+
+** [[https://en.wikipedia.org/wiki/M2_Bradley][Wikipedia]]
+** Specifications
+   
+   - Weight: 27.6  tonnes (30.4  short tons)
+   - Length: 6.55 m 
+   - Width: 3.6 m 
+   - Height: 2.98 m 

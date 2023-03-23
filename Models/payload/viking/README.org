@@ -1,0 +1,39 @@
+* BvS 10 Viking
+
+** [[https://en.wikipedia.org/wiki/BvS_10][Wikipedia]]
+  
+** Type
+   Amphibious armoured vehicle
+
+** Place of origin
+   Sweden, United Kingdom
+      
+** Service history
+   - Used by:
+     + United Kingdom 
+     + Netherlands 
+     + Sweden 
+     + France 
+      
+** Production history
+   Designer: BAE Systems, Land Systems Hagglunds 
+      
+** Specifications
+   - Weight:
+     + 5.0 tonnes (front car)
+     + 3.5 tonnes (rear car, APC version) 
+   - Length: 7.6 m 
+   - Width: 2.34 m 
+   - Height
+     + 2.2 m (front car)
+     + 2.1 m (rear car) 
+   - Crew: driver + 4 passengers (front car), 8 passengers (rear car) 
+   - Armor: Steel, additional modular bolt-on plates 
+   - Main armament:  heavy machine gun on ring mount 
+   - Secondary armament: smoke grenade launchers (front), mortars (back) 
+   - Engine
+     + Cummins 5.9 litre in-line six-cylinder turbocharged diesel
+     + 202 kW (275 hp)
+   - Speed
+     + 65 km/h (roads)
+     + 5 km/h (water) 

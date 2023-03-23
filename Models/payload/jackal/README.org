@@ -1,0 +1,30 @@
+* Jackal 2
+
+** [[https://en.wikipedia.org/wiki/Jackal_(vehicle)][Wikipedia]]
+
+** Type
+   Armoured Wheeled Vehicle
+      
+* National origin
+  United Kingdom
+      
+** Production history
+   Designer: Supacat 
+      
+** Specifications
+   - Weight: 6.650 long tons (6.757 t) 
+   - Length: 5.39 m (17 ft 8 in) 
+   - Width: 2.00 m (6 ft 7 in) 
+   - Height: 1.97 m (6 ft 6 in) (not including weapon system) 
+   - Crew: 4+1
+   - Armour: Additional composite armour kit 
+   - Main armament 
+     + 12.7 mm heavy machine gun, or
+     + Heckler & Koch GMG
+   - Secondary armament
+     +7.62 mm general purpose machine gun 
+   - Engine
+     + 5.9 l Cummins ISBe Euro3
+     + 185 bhp (134 kW) 
+   - Suspension: Independent double wishbone, air operated springs and external bypass shock absorbers (2 per wheel station) with variable ride height 
+   - Speed: 130 km/h (81 mph) 
