@@ -1,5 +1,8 @@
 * Jackal 2
 
+#+NAME: Jackal 2
+[[thumbnail.png]]
+  
 ** [[https://en.wikipedia.org/wiki/Jackal_(vehicle)][Wikipedia]]
 
 ** Type

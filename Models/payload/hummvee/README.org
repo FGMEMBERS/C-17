@@ -1,5 +1,8 @@
 * Humvee
 
+#+NAME: Humvee
+[[thumbnail.png]]
+
 ** [[https://en.wikipedia.org/wiki/Humvee][Wikipedia]]
    
 ** Type

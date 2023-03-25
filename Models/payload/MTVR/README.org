@@ -1,5 +1,8 @@
 * MTVR
 
+#+NAME: MTVR Buffalo
+[[thumbnail.png]]
+  
 ** [[https://en.wikipedia.org/wiki/Medium_Tactical_Vehicle_Replacement][Wikipedia]]
   
 ** Manufacturer

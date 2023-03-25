@@ -1,5 +1,8 @@
 * M1126 Stryker
 
+#+NAME: M1126 Stryker
+[[thumbnail.png]]
+  
 ** [[https://en.wikipedia.org/wiki/M1126_Infantry_Carrier_Vehicle][Wikipedia]]
    
 ** Specifications   

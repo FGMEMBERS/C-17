@@ -1,5 +1,9 @@
 *  CH-47
 
+#+NAME: CH-47
+[[thumbnail.png]]
+
+  
 ** [[https://en.wikipedia.org/wiki/Boeing_CH-47_Chinook][Wikipedia]]
    
 ** Role

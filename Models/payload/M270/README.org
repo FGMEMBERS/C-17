@@ -1,5 +1,8 @@
 * M270 MLRS
 
+#+NAME: M270 MLRS
+[[thumbnail.png]]
+  
 ** [[https://en.wikipedia.org/wiki/M270_Multiple_Launch_Rocket_System][Wikipedia]]
   
 ** Specifications

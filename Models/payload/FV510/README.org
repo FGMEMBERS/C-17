@@ -1,5 +1,9 @@
 * FV-510 Warrior
 
+#+NAME: FV-510 Warrior
+[[thumbnail.png]]
+
+  
 ** [[https://en.wikipedia.org/wiki/Warrior_tracked_armoured_vehicle][Wikipedia]]
   
 ** Type

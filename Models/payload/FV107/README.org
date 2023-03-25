@@ -1,5 +1,8 @@
 *  FV-107 Scimitar
       
+#+NAME: FV-107 Scimitar
+[[thumbnail.png]]
+
 ** [[https://en.wikipedia.org/wiki/FV107_Scimitar][Wikipedia]]
 
 ** Type

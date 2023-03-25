@@ -1,5 +1,8 @@
 * BvS 10 Viking
 
+#+NAME: BvS 10 Viking
+[[thumbnail.png]]
+  
 ** [[https://en.wikipedia.org/wiki/BvS_10][Wikipedia]]
   
 ** Type

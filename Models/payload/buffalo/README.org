@@ -1,5 +1,8 @@
 *  MRAP Buffalo
 
+#+NAME: MRAP Buffalo
+[[thumbnail.png]]
+  
 ** [[https://en.wikipedia.org/wiki/Buffalo_(mine_protected_vehicle)][Wikipedia]]
   
 ** Used by

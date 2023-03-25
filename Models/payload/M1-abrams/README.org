@@ -1,5 +1,8 @@
 * M1 Abrams
 
+#+NAME: M1 Abrams
+[[thumbnail.png]]
+
 ** [[https://en.wikipedia.org/wiki/M1_Abrams][Wikipedia]]
   
 ** Type

@@ -1,5 +1,8 @@
 * *M2 Bradley*
 
+#+NAME: M2 Bradley
+[[thumbnail.png]]
+  
 ** [[https://en.wikipedia.org/wiki/M2_Bradley][Wikipedia]]
 ** Specifications
    
