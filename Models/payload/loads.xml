@@ -319,7 +319,7 @@
   
   <model>
     <name>bradle</name>
-    <path>Models/payload/bradle/m2.xml</path>
+    <path>Models/payload/bradley/m2.xml</path>
     <offsets>
       <x-m>18</x-m>
       <y-m>0</y-m>
