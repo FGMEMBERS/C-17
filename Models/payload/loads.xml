@@ -17,8 +17,9 @@
       <pitch-deg>0.0</pitch-deg>
     </offsets>
   </model>	
-
+  
   <!-- Cargobay -->
+  <!-- 3D models -->
   <model>
     <name>1x Hummer</name>
     <path>Models/payload/hummvee/Hummer.xml</path>
@@ -29,22 +30,6 @@
       <pitch-deg>0</pitch-deg>
     </offsets>
   </model>
-  <animation>
-    <type>select</type>
-    <object-name>1x Hummer</object-name>      
-    <condition>
-      <or>
-	<equals>
-          <property>sim/multiplay/generic/string[1]</property>
-          <value>1x Hummer</value>
-	</equals>
-	<equals>
-          <property>sim/multiplay/generic/int[20]</property>
-          <property>fdm/jsbsim/systems/payload/item-id/Hummer1x</property>
-	</equals>
-      </or>
-    </condition>
-  </animation>			
 
   <model>
     <name>CH-47</name>
@@ -56,22 +41,6 @@
       <pitch-deg>0</pitch-deg>
     </offsets>
   </model>
-  <animation>
-    <type>select</type>
-    <object-name>CH-47</object-name>      
-    <condition>
-      <or>
-	<equals>
-          <property>sim/multiplay/generic/string[1]</property>
-          <value>CH-47</value>
-	</equals>
-	<equals>
-          <property>sim/multiplay/generic/int[20]</property>
-          <property>fdm/jsbsim/systems/payload/item-id/CH-47</property>
-	</equals>
-      </or>
-    </condition>
-  </animation>	
 
   <model>
     <name>M1 Abrams</name>
@@ -84,22 +53,6 @@
       <heading-deg>180</heading-deg>
     </offsets>
   </model>
-  <animation>
-    <type>select</type>
-    <object-name>M1 Abrams</object-name>      
-    <condition>
-      <or>
-	<equals>
-          <property>sim/multiplay/generic/string[1]</property>
-          <value>M1 Abrams</value>
-	</equals>
-      	<equals>
-          <property>sim/multiplay/generic/int[20]</property>
-          <property>fdm/jsbsim/systems/payload/item-id/M1Abrams</property>
-	</equals>
-      </or>
-    </condition>
-  </animation>	
 
   <model>
     <name>2xHummer</name>
@@ -111,22 +64,6 @@
       <yaw-deg>180</yaw-deg>
     </offsets>
   </model>
-  <animation>
-    <type>select</type>
-    <object-name>2xHummer</object-name>      
-    <condition>
-      <or>
-	<equals>
-          <property>sim/multiplay/generic/string[1]</property>
-          <value>2x Hummer</value>
-	</equals>
-      	<equals>
-          <property>sim/multiplay/generic/int[20]</property>
-          <property>fdm/jsbsim/systems/payload/item-id/Hummer2x</property>
-	</equals>
-      </or>
-    </condition>
-  </animation>		
   
   <model>
     <name>1xwmik</name>
@@ -138,23 +75,7 @@
       <heading-deg>180</heading-deg>
     </offsets>
   </model>
-  <animation>
-    <type>select</type>
-    <object-name>1xwmik</object-name>      
-    <condition>
-      <or>
-	<equals>
-          <property>sim/multiplay/generic/string[1]</property>
-          <value>1x LandRover WMIK</value>
-	</equals>
-      	<equals>
-          <property>sim/multiplay/generic/int[20]</property>
-          <property>fdm/jsbsim/systems/payload/item-id/LandRover1x</property>
-	</equals>
-      </or>
-    </condition>
-  </animation>	
-  
+
   <model>
     <name>2xwmik</name>
     <path>Models/payload/landrover/2xwmik.xml</path>
@@ -165,23 +86,7 @@
       <yaw-deg>180</yaw-deg>
     </offsets>
   </model>
-  <animation>
-    <type>select</type>
-    <object-name>2xwmik</object-name>      
-    <condition>
-      <or>
-	<equals>
-          <property>sim/multiplay/generic/string[1]</property>
-          <value>2x LandRover WMIK</value>
-	</equals>
-      	<equals>
-          <property>sim/multiplay/generic/int[20]</property>
-          <property>fdm/jsbsim/systems/payload/item-id/LandRover2x</property>
-	</equals>
-      </or>
-    </condition>
-  </animation>	
-  
+
   <model>
     <name>4xwmik</name>
     <path>Models/payload/landrover/4xwmik.xml</path>
@@ -192,23 +97,7 @@
       <yaw-deg>180</yaw-deg>
     </offsets>
   </model>
-  <animation>
-    <type>select</type>
-    <object-name>4xwmik</object-name>      
-    <condition>
-      <or>
-	<equals>
-          <property>sim/multiplay/generic/string[1]</property>
-          <value>4x LandRover WMIK</value>
-	</equals>
-      	<equals>
-          <property>sim/multiplay/generic/int[20]</property>
-          <property>fdm/jsbsim/systems/payload/item-id/LandRover4x</property>
-	</equals>
-      </or>
-    </condition>
-  </animation>	
-
+  
   <model>
     <name>1xjackal</name>
     <path>Models/payload/jackal/jackal.xml</path>
@@ -219,22 +108,6 @@
       <heading-deg>180</heading-deg>
     </offsets>
   </model>
-  <animation>
-    <type>select</type>
-    <object-name>1xjackal</object-name>      
-    <condition>
-      <or>
-	<equals>
-          <property>sim/multiplay/generic/string[1]</property>
-          <value>1x Jackal</value>
-	</equals>
-      	<equals>
-          <property>sim/multiplay/generic/int[20]</property>
-          <property>fdm/jsbsim/systems/payload/item-id/Jackal1x</property>
-	</equals>
-      </or>
-    </condition>
-  </animation>
 
   <model>
     <name>2xJackal</name>
@@ -246,22 +119,6 @@
       <yaw-deg>180</yaw-deg>
     </offsets>
   </model>
-  <animation>
-    <type>select</type>
-    <object-name>2xJackal</object-name>      
-    <condition>
-      <or>
-	<equals>
-          <property>sim/multiplay/generic/string[1]</property>
-          <value>2x Jackal</value>
-	</equals>
-	<equals>
-          <property>sim/multiplay/generic/int[20]</property>
-          <property>fdm/jsbsim/systems/payload/item-id/Jackal2x</property>
-	</equals>
-      </or>
-    </condition>
-  </animation>	  
 
   <model>
     <name>MTVR1</name>
@@ -273,23 +130,7 @@
       <heading-deg>180</heading-deg>
     </offsets>
   </model>
-  <animation>
-    <type>select</type>
-    <object-name>MTVR1</object-name>      
-    <condition>
-      <or>
-	<equals>
-          <property>sim/multiplay/generic/string[1]</property>
-          <value>MTVR</value>
-	</equals>
-      	<equals>
-          <property>sim/multiplay/generic/int[20]</property>
-          <property>fdm/jsbsim/systems/payload/item-id/MTVR</property>
-	</equals>
-      </or>
-    </condition>
-  </animation>	
-  
+
   <model>
     <name>viking</name>
     <path>Models/payload/viking/viking.xml</path>
@@ -300,23 +141,7 @@
       <heading-deg>180</heading-deg>
     </offsets>
   </model>
-  <animation>
-    <type>select</type>
-    <object-name>viking</object-name>      
-    <condition>
-      <or>
-	<equals>
-          <property>sim/multiplay/generic/string[1]</property>
-          <value>BVS10-Viking</value>
-	</equals>
-      	<equals>
-          <property>sim/multiplay/generic/int[20]</property>
-          <property>fdm/jsbsim/systems/payload/item-id/viking</property>
-	</equals>
-      </or>
-    </condition>
-  </animation>	
-  
+
   <model>
     <name>bradle</name>
     <path>Models/payload/bradley/m2.xml</path>
@@ -327,23 +152,7 @@
       <heading-deg>180</heading-deg>
     </offsets>
   </model>
-  <animation>
-    <type>select</type>
-    <object-name>bradle</object-name>      
-    <condition>
-      <or>
-	<equals>
-          <property>sim/multiplay/generic/string[1]</property>
-          <value>M2-Bradle</value>
-	</equals>
-      	<equals>
-          <property>sim/multiplay/generic/int[20]</property>
-          <property>fdm/jsbsim/systems/payload/item-id/bradle</property>
-	</equals>
-      </or>
-    </condition>
-  </animation>	
-  
+
   <model>
     <name>mlrs</name>
     <path>Models/payload/M270/mlrs.xml</path>
@@ -354,23 +163,7 @@
       <heading-deg>180</heading-deg>
     </offsets>
   </model>
-  <animation>
-    <type>select</type>
-    <object-name>mlrs</object-name>      
-    <condition>
-      <or>
-	<equals>
-          <property>sim/multiplay/generic/string[1]</property>
-          <value>MLRS</value>
-	</equals>
-      	<equals>
-          <property>sim/multiplay/generic/int[20]</property>
-          <property>fdm/jsbsim/systems/payload/item-id/MLRS</property>
-	</equals>
-      </or>
-    </condition>
-  </animation>	
-  
+
   <model>
     <name>buffalo</name>
     <path>Models/payload/buffalo/mrap-buffalo.xml</path>
@@ -381,23 +174,7 @@
       <heading-deg>180</heading-deg>
     </offsets>
   </model>
-  <animation>
-    <type>select</type>
-    <object-name>buffalo</object-name>      
-    <condition>
-      <or>
-	<equals>
-          <property>sim/multiplay/generic/string[1]</property>
-          <value>Buffalo</value>
-	</equals>
-      	<equals>
-          <property>sim/multiplay/generic/int[20]</property>
-          <property>fdm/jsbsim/systems/payload/item-id/buffalo</property>
-	</equals>
-      </or>
-    </condition>
-  </animation>	
-  
+
   <model>
     <name>stryker</name>
     <path>Models/payload/stryker/stryker.xml</path>
@@ -408,23 +185,7 @@
       <heading-deg>180</heading-deg>
     </offsets>
   </model>
-  <animation>
-    <type>select</type>
-    <object-name>stryker</object-name>      
-    <condition>
-      <or>
-	<equals>
-          <property>sim/multiplay/generic/string[1]</property>
-          <value>Stryker</value>
-	</equals>
-      	<equals>
-          <property>sim/multiplay/generic/int[20]</property>
-          <property>fdm/jsbsim/systems/payload/item-id/stryker</property>
-	</equals>
-      </or>
-    </condition>
-  </animation>	
-  
+
   <model>
     <name>Scimiter</name>
     <path>Models/payload/FV107/fv107.xml</path>
@@ -435,23 +196,7 @@
       <heading-deg>180</heading-deg>
     </offsets>
   </model>
-  <animation>
-    <type>select</type>
-    <object-name>Scimiter</object-name>      
-    <condition>
-      <or>
-	<equals>
-          <property>sim/multiplay/generic/string[1]</property>
-          <value>FV107</value>
-	</equals>
-      	<equals>
-          <property>sim/multiplay/generic/int[20]</property>
-          <property>fdm/jsbsim/systems/payload/item-id/FV107</property>
-	</equals>
-      </or>
-    </condition>
-  </animation>	
-  
+
   <model>
     <name>warrior</name>
     <path>Models/payload/FV510/fv510.xml</path>
@@ -462,23 +207,588 @@
       <heading-deg>180</heading-deg>
     </offsets>
   </model>
+  
+  <!-- Yasim animations --> 
+  <animation>
+    <type>select</type>
+    <object-name>1x Hummer</object-name>      
+    <condition>
+      <and>
+	<equals>
+          <property>sim/flight-model</property>
+          <property>yasim</property>
+	</equals>
+	<equals>
+          <property>sim/multiplay/generic/string[1]</property>
+          <value>1x Hummer</value>
+	</equals>
+      </and>
+    </condition>
+  </animation>			
+
+  <animation>
+    <type>select</type>
+    <object-name>CH-47</object-name>      
+    <condition>
+      <and>
+	<equals>
+          <property>sim/flight-model</property>
+          <property>yasim</property>
+	</equals>
+	<equals>
+          <property>sim/multiplay/generic/string[1]</property>
+          <value>CH-47</value>
+	</equals>
+      </and>
+    </condition>
+  </animation>	
+
+  <animation>
+    <type>select</type>
+    <object-name>M1 Abrams</object-name>      
+    <condition>
+      <and>
+	<equals>
+          <property>sim/flight-model</property>
+          <property>yasim</property>
+	</equals>
+	<equals>
+          <property>sim/multiplay/generic/string[1]</property>
+          <value>M1 Abrams</value>
+	</equals>
+      </and>
+    </condition>
+  </animation>	
+
+  <animation>
+    <type>select</type>
+    <object-name>2xHummer</object-name>      
+    <condition>
+      <and>
+	<equals>
+          <property>sim/flight-model</property>
+          <property>yasim</property>
+	</equals>
+	<equals>
+          <property>sim/multiplay/generic/string[1]</property>
+          <value>2x Hummer</value>
+	</equals>
+      </and>
+    </condition>
+  </animation>		
+
+  <animation>
+    <type>select</type>
+    <object-name>1xwmik</object-name>      
+    <condition>
+      <and>
+	<equals>
+          <property>sim/flight-model</property>
+          <property>yasim</property>
+	</equals>
+	<equals>
+          <property>sim/multiplay/generic/string[1]</property>
+          <value>1x LandRover WMIK</value>
+	</equals>
+      </and>
+    </condition>
+  </animation>	
+
+  <animation>
+    <type>select</type>
+    <object-name>2xwmik</object-name>      
+    <condition>
+      <and>
+	<equals>
+          <property>sim/flight-model</property>
+          <property>yasim</property>
+	</equals>
+	<equals>
+          <property>sim/multiplay/generic/string[1]</property>
+          <value>2x LandRover WMIK</value>
+	</equals>
+      </and>
+    </condition>
+  </animation>	
+  
+  <animation>
+    <type>select</type>
+    <object-name>4xwmik</object-name>      
+    <condition>
+      <and>
+	<equals>
+          <property>sim/flight-model</property>
+          <property>yasim</property>
+	</equals>
+	<equals>
+          <property>sim/multiplay/generic/string[1]</property>
+          <value>4x LandRover WMIK</value>
+	</equals>
+      </and>
+    </condition>
+  </animation>	
+
+  <animation>
+    <type>select</type>
+    <object-name>1xjackal</object-name>      
+    <condition>
+      <and>
+	<equals>
+          <property>sim/flight-model</property>
+          <property>yasim</property>
+	</equals>
+	<equals>
+          <property>sim/multiplay/generic/string[1]</property>
+          <value>1x Jackal</value>
+	</equals>
+      </and>
+    </condition>
+  </animation>
+
+  <animation>
+    <type>select</type>
+    <object-name>2xJackal</object-name>      
+    <condition>
+      <and>
+	<equals>
+          <property>sim/flight-model</property>
+          <property>yasim</property>
+	</equals>
+	<equals>
+          <property>sim/multiplay/generic/string[1]</property>
+          <value>2x Jackal</value>
+	</equals>
+      </and>
+    </condition>
+  </animation>	  
+
+  <animation>
+    <type>select</type>
+    <object-name>MTVR1</object-name>      
+    <condition>
+      <and>
+	<equals>
+          <property>sim/flight-model</property>
+          <property>yasim</property>
+	</equals>
+	<equals>
+          <property>sim/multiplay/generic/string[1]</property>
+          <value>MTVR</value>
+	</equals>
+      </and>
+    </condition>
+  </animation>	
+  
+  <animation>
+    <type>select</type>
+    <object-name>viking</object-name>      
+    <condition>
+      <and>
+	<equals>
+          <property>sim/flight-model</property>
+          <property>yasim</property>
+	</equals>
+	<equals>
+          <property>sim/multiplay/generic/string[1]</property>
+          <value>BVS10-Viking</value>
+	</equals>
+      </and>
+    </condition>
+  </animation>	
+  
+  <animation>
+    <type>select</type>
+    <object-name>bradle</object-name>      
+    <condition>
+      <and>
+	<equals>
+          <property>sim/flight-model</property>
+          <property>yasim</property>
+	</equals>
+	<equals>
+          <property>sim/multiplay/generic/string[1]</property>
+          <value>M2-Bradle</value>
+	</equals>
+      </and>
+    </condition>
+  </animation>	
+  
+  <animation>
+    <type>select</type>
+    <object-name>mlrs</object-name>      
+    <condition>
+      <equals>
+        <property>sim/flight-model</property>
+        <property>yasim</property>
+      </equals>
+      <and>
+	<equals>
+          <property>sim/multiplay/generic/string[1]</property>
+          <value>MLRS</value>
+	</equals>
+      </and>
+    </condition>
+  </animation>	
+  
+  <animation>
+    <type>select</type>
+    <object-name>buffalo</object-name>      
+    <condition>
+      <and>
+	<equals>
+          <property>sim/flight-model</property>
+          <property>yasim</property>
+	</equals>
+	<equals>
+          <property>sim/multiplay/generic/string[1]</property>
+          <value>Buffalo</value>
+	</equals>
+      </and>
+    </condition>
+  </animation>	
+  
+  <animation>
+    <type>select</type>
+    <object-name>stryker</object-name>      
+    <condition>
+      <and>
+	<equals>
+          <property>sim/flight-model</property>
+          <property>yasim</property>
+	</equals>
+	<equals>
+          <property>sim/multiplay/generic/string[1]</property>
+          <value>Stryker</value>
+	</equals>
+      </and>
+    </condition>
+  </animation>	
+  
+  <animation>
+    <type>select</type>
+    <object-name>Scimiter</object-name>      
+    <condition>
+      <and>
+	<equals>
+          <property>sim/flight-model</property>
+          <property>yasim</property>
+	</equals>
+	<equals>
+          <property>sim/multiplay/generic/string[1]</property>
+          <value>FV107</value>
+	</equals>
+      </and>
+    </condition>
+  </animation>	
+  
   <animation>
     <type>select</type>
     <object-name>warrior</object-name>      
     <condition>
-      <or>
+      <and>
+	<equals>
+          <property>sim/flight-model</property>
+          <property>yasim</property>
+	</equals>
 	<equals>
           <property>sim/multiplay/generic/string[1]</property>
           <value>FV510</value>
+	</equals>
+      </and>
+    </condition>
+  </animation>	
+  
+  <!-- JSBSim animations --> 
+  <animation>
+    <type>select</type>
+    <object-name>1x Hummer</object-name>      
+    <condition>
+      <and>
+	<equals>
+          <property>sim/flight-model</property>
+          <property>jsb</property>
+	</equals>
+	<equals>
+          <property>sim/multiplay/generic/int[20]</property>
+          <property>fdm/jsbsim/systems/payload/item-id/Hummer1x</property>
+	</equals>
+      </and>
+    </condition>
+  </animation>			
+
+  <animation>
+    <type>select</type>
+    <object-name>CH-47</object-name>      
+    <condition>
+      <and>
+	<equals>
+          <property>sim/flight-model</property>
+          <property>jsb</property>
+	</equals>
+	<equals>
+          <property>sim/multiplay/generic/int[20]</property>
+          <property>fdm/jsbsim/systems/payload/item-id/CH-47</property>
+	</equals>
+      </and>
+    </condition>
+  </animation>	
+
+  <animation>
+    <type>select</type>
+    <object-name>M1 Abrams</object-name>      
+    <condition>
+      <and>
+	<equals>
+          <property>sim/flight-model</property>
+          <property>jsb</property>
+	</equals>
+      	<equals>
+          <property>sim/multiplay/generic/int[20]</property>
+          <property>fdm/jsbsim/systems/payload/item-id/M1Abrams</property>
+	</equals>
+      </and>
+    </condition>
+  </animation>	
+
+  <animation>
+    <type>select</type>
+    <object-name>2xHummer</object-name>      
+    <condition>
+      <and>
+	<equals>
+          <property>sim/flight-model</property>
+          <property>jsb</property>
+	</equals>
+      	<equals>
+          <property>sim/multiplay/generic/int[20]</property>
+          <property>fdm/jsbsim/systems/payload/item-id/Hummer2x</property>
+	</equals>
+      </and>
+    </condition>
+  </animation>		
+
+  <animation>
+    <type>select</type>
+    <object-name>1xwmik</object-name>      
+    <condition>
+      <and>
+	<equals>
+          <property>sim/flight-model</property>
+          <property>jsb</property>
+	</equals>
+      	<equals>
+          <property>sim/multiplay/generic/int[20]</property>
+          <property>fdm/jsbsim/systems/payload/item-id/LandRover1x</property>
+	</equals>
+      </and>
+    </condition>
+  </animation>	
+
+  <animation>
+    <type>select</type>
+    <object-name>2xwmik</object-name>      
+    <condition>
+      <and>
+	<equals>
+          <property>sim/flight-model</property>
+          <property>jsb</property>
+	</equals>
+      	<equals>
+          <property>sim/multiplay/generic/int[20]</property>
+          <property>fdm/jsbsim/systems/payload/item-id/LandRover2x</property>
+	</equals>
+      </and>
+    </condition>
+  </animation>	
+
+  <animation>
+    <type>select</type>
+    <object-name>4xwmik</object-name>      
+    <condition>
+      <and>
+	<equals>
+          <property>sim/flight-model</property>
+          <property>jsb</property>
+	</equals>
+      	<equals>
+          <property>sim/multiplay/generic/int[20]</property>
+          <property>fdm/jsbsim/systems/payload/item-id/LandRover4x</property>
+	</equals>
+      </and>
+    </condition>
+  </animation>	
+
+  <animation>
+    <type>select</type>
+    <object-name>1xjackal</object-name>      
+    <condition>
+      <and>
+	<equals>
+          <property>sim/flight-model</property>
+          <property>jsb</property>
+	</equals>
+      	<equals>
+          <property>sim/multiplay/generic/int[20]</property>
+          <property>fdm/jsbsim/systems/payload/item-id/Jackal1x</property>
+	</equals>
+      </and>
+    </condition>
+  </animation>
+
+  <animation>
+    <type>select</type>
+    <object-name>2xJackal</object-name>      
+    <condition>
+      <and>
+	<equals>
+          <property>sim/flight-model</property>
+          <property>jsb</property>
+	</equals>
+	<equals>
+          <property>sim/multiplay/generic/int[20]</property>
+          <property>fdm/jsbsim/systems/payload/item-id/Jackal2x</property>
+	</equals>
+      </and>
+    </condition>
+  </animation>	  
+
+  <animation>
+    <type>select</type>
+    <object-name>MTVR1</object-name>      
+    <condition>
+      <and>
+	<equals>
+          <property>sim/flight-model</property>
+          <property>jsb</property>
+	</equals>
+      	<equals>
+          <property>sim/multiplay/generic/int[20]</property>
+          <property>fdm/jsbsim/systems/payload/item-id/MTVR</property>
+	</equals>
+      </and>
+    </condition>
+  </animation>	
+
+  <animation>
+    <type>select</type>
+    <object-name>viking</object-name>      
+    <condition>
+      <and>
+	<equals>
+          <property>sim/flight-model</property>
+          <property>jsb</property>
+	</equals>
+      	<equals>
+          <property>sim/multiplay/generic/int[20]</property>
+          <property>fdm/jsbsim/systems/payload/item-id/viking</property>
+	</equals>
+      </and>
+    </condition>
+  </animation>	
+
+  <animation>
+    <type>select</type>
+    <object-name>bradle</object-name>      
+    <condition>
+      <and>
+	<equals>
+          <property>sim/flight-model</property>
+          <property>jsb</property>
+	</equals>
+      	<equals>
+          <property>sim/multiplay/generic/int[20]</property>
+          <property>fdm/jsbsim/systems/payload/item-id/bradle</property>
+	</equals>
+      </and>
+    </condition>
+  </animation>	
+
+  <animation>
+    <type>select</type>
+    <object-name>mlrs</object-name>      
+    <condition>
+      <and>
+	<equals>
+          <property>sim/flight-model</property>
+          <property>jsb</property>
+	</equals>
+      	<equals>
+          <property>sim/multiplay/generic/int[20]</property>
+          <property>fdm/jsbsim/systems/payload/item-id/MLRS</property>
+	</equals>
+      </and>
+    </condition>
+  </animation>	
+
+  <animation>
+    <type>select</type>
+    <object-name>buffalo</object-name>      
+    <condition>
+      <and>
+	<equals>
+          <property>sim/flight-model</property>
+          <property>jsb</property>
+	</equals>
+      	<equals>
+          <property>sim/multiplay/generic/int[20]</property>
+          <property>fdm/jsbsim/systems/payload/item-id/buffalo</property>
+	</equals>
+      </and>
+    </condition>
+  </animation>	
+
+  <animation>
+    <type>select</type>
+    <object-name>stryker</object-name>      
+    <condition>
+      <and>
+	<equals>
+          <property>sim/flight-model</property>
+          <property>jsb</property>
+	</equals>
+      	<equals>
+          <property>sim/multiplay/generic/int[20]</property>
+          <property>fdm/jsbsim/systems/payload/item-id/stryker</property>
+	</equals>
+      </and>
+    </condition>
+  </animation>	
+
+  <animation>
+    <type>select</type>
+    <object-name>Scimiter</object-name>      
+    <condition>
+      <and>
+	<equals>
+          <property>sim/flight-model</property>
+          <property>jsb</property>
+	</equals>
+      	<equals>
+          <property>sim/multiplay/generic/int[20]</property>
+          <property>fdm/jsbsim/systems/payload/item-id/FV107</property>
+	</equals>
+      </and>
+    </condition>
+  </animation>	
+
+  <animation>
+    <type>select</type>
+    <object-name>warrior</object-name>      
+    <condition>
+      <and>
+	<equals>
+          <property>sim/flight-model</property>
+          <property>jsb</property>
 	</equals>
       	<equals>
           <property>sim/multiplay/generic/int[20]</property>
           <property>fdm/jsbsim/systems/payload/item-id/FV510</property>
 	</equals>
-      </or>
+      </and>
     </condition>
   </animation>	
-  
+
+  <!-- Pylon animation -->
   <animation>
     <type>select</type>
     <object-name>pylon.C</object-name>  
