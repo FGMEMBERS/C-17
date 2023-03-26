@@ -347,7 +347,8 @@
     </menubar>
 
     <aircraft-data>
-      <path>fdm/jsbsim/systems/payload/cargo-id</path>
+      <path>fdm/jsbsim/systems/payload/selected/cargo-id</path>
+      <path>fdm/jsbsim/systems/payload/selected/item-string</path>
     </aircraft-data>
   </sim>
 

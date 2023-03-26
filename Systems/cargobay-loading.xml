@@ -3,68 +3,68 @@
 
 <system>
     <channel name="Weight of Payload in Lbs">
-      <switch name="systems/payload/weight-lbs">
-	<default value="systems/payload/weight/empty"/>
-	<test value="systems/payload/weight/empty">
-	  systems/payload/cargo-id == systems/payload/item-id/empty
+      <switch name="systems/payload/selected/weight-lbs">
+	<default value="systems/payload/empty/weight"/>
+	<test value="systems/payload/empty/weight">
+	  systems/payload/selected/cargo-id == systems/payload/empty/item-id
 	</test>
-	<test value="systems/payload/weight/CH-47">
-	  systems/payload/cargo-id == systems/payload/item-id/CH-47
+	<test value="systems/payload/CH-47/weight">
+	  systems/payload/selected/cargo-id == systems/payload/CH-47/item-id
 	</test>
-	<test value="systems/payload/weight/M1Abrams">
-	  systems/payload/cargo-id == systems/payload/item-id/M1Abrams
+	<test value="systems/payload/M1Abrams/weight">
+	  systems/payload/selected/cargo-id == systems/payload/M1Abrams/item-id
 	</test>
-	<test value="systems/payload/weight/Hummer1x">
-	  systems/payload/cargo-id == systems/payload/item-id/Hummer1x
+	<test value="systems/payload/Hummer1x/weight">
+	  systems/payload/selected/cargo-id == systems/payload/Hummer1x/item-id
 	</test>
-	<test value="systems/payload/weight/Hummer2x">
-	  systems/payload/cargo-id == systems/payload/item-id/Hummer2x
+	<test value="systems/payload/Hummer2x/weight">
+	  systems/payload/selected/cargo-id == systems/payload/Hummer2x/item-id
 	</test>
-	<test value="systems/payload/weight/LandRover1x">
-	  systems/payload/cargo-id == systems/payload/item-id/LandRover1x
+	<test value="systems/payload/LandRover1x/weight">
+	  systems/payload/selected/cargo-id == systems/payload/LandRover1x/item-id
 	</test>
-	<test value="systems/payload/weight/LandRover2x">
-	  systems/payload/cargo-id == systems/payload/item-id/LandRover2x
+	<test value="systems/payload/LandRover2x/weight">
+	  systems/payload/selected/cargo-id == systems/payload/LandRover2x/item-id
 	</test>
-	<test value="systems/payload/weight/LandRover4x">
-	  systems/payload/cargo-id == systems/payload/item-id/LandRover4x
+	<test value="systems/payload/LandRover4x/weight">
+	  systems/payload/selected/cargo-id == systems/payload/LandRover4x/item-id
 	</test>
-	<test value="systems/payload/weight/Jackal1x">
-	  systems/payload/cargo-id == systems/payload/item-id/Jackal1x
+	<test value="systems/payload/Jackal1x/weight">
+	  systems/payload/selected/cargo-id == systems/payload/Jackal1x/item-id
 	</test>
-	<test value="systems/payload/weight/Jackal2x">
-	  systems/payload/cargo-id == systems/payload/item-id/Jackal2x
+	<test value="systems/payload/Jackal2x/weight">
+	  systems/payload/selected/cargo-id == systems/payload/Jackal2x/item-id
 	</test>
-	<test value="systems/payload/weight/MTVR">
-	  systems/payload/cargo-id == systems/payload/item-id/MTVR
+	<test value="systems/payload/MTVR/weight">
+	  systems/payload/selected/cargo-id == systems/payload/MTVR/item-id
 	</test>
-	<test value="systems/payload/weight/viking">
-	  systems/payload/cargo-id == systems/payload/item-id/viking
+	<test value="systems/payload/viking/weight">
+	  systems/payload/selected/cargo-id == systems/payload/viking/item-id
 	</test>
-	<test value="systems/payload/weight/bradle">
-	  systems/payload/cargo-id == systems/payload/item-id/bradle
+	<test value="systems/payload/bradle/weight">
+	  systems/payload/selected/cargo-id == systems/payload/bradle/item-id
 	</test>
-	<test value="systems/payload/weight/MLRS">
-	  systems/payload/cargo-id == systems/payload/item-id/MLRS
+	<test value="systems/payload/MLRS/weight">
+	  systems/payload/selected/cargo-id == systems/payload/MLRS/item-id
 	</test>
-	<test value="systems/payload/weight/stryker">
-	  systems/payload/cargo-id == systems/payload/item-id/stryker
+	<test value="systems/payload/stryker/weight">
+	  systems/payload/selected/cargo-id == systems/payload/stryker/item-id
 	</test>
-	<test value="systems/payload/weight/FV107">
-	  systems/payload/cargo-id == systems/payload/item-id/FV107
+	<test value="systems/payload/FV107/weight">
+	  systems/payload/selected/cargo-id == systems/payload/FV107/item-id
 	</test>
-	<test value="systems/payload/weight/FV510">
-	  systems/payload/cargo-id == systems/payload/item-id/FV510
+	<test value="systems/payload/FV510/weight">
+	  systems/payload/selected/cargo-id == systems/payload/FV510/item-id
 	</test>
-	<test value="systems/payload/weight/buffalo">
-	  systems/payload/cargo-id == systems/payload/item-id/buffalo
+	<test value="systems/payload/buffalo/weight">
+	  systems/payload/selected/cargo-id == systems/payload/buffalo/item-id
 	</test>
       </switch>
     </channel>
 
     <channel name="Cargo Item pointmass Loading">
       <switch name="inertia/pointmass-weight-lbs[4]">
-	<default value="systems/payload/weight-lbs"/>
+	<default value="systems/payload/selected/weight-lbs"/>
       </switch>
     </channel>
 </system>
