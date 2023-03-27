@@ -5,161 +5,163 @@
     <weight type="double">0</weight>
     <item-id type="double">0></item-id>
     <item-string type="string">Empty</item-string>
-    <paylod-position-x type="double">18</paylod-position-x>
-    <paylod-position-y type="double">0</paylod-position-y>
-    <paylod-position-z type="double">-2.25</paylod-position-z>
+    <payload-position-x type="double">18</payload-position-x><!-- Assumed in meters -->
+    <payload-position-y type="double">0</payload-position-y>
+    <payload-position-z type="double">-2.25</payload-position-z>
   </empty>
 
   <CH-47>
     <weight type="double">23400</weight>
     <item-id type="double">1</item-id>
     <item-string type="string">CH-47</item-string>
-    <paylod-position-x type="double">17</paylod-position-x>
-    <paylod-position-y type="double">0</paylod-position-y>
-    <paylod-position-z type="double">-0.2</paylod-position-z>
+    <payload-position-x type="double">17</payload-position-x>
+    <payload-position-y type="double">0</payload-position-y>
+    <payload-position-z type="double">-0.2</payload-position-z>
   </CH-47>
 
   <M1Abrams>
     <weight type="double">122800</weight>
     <item-id type="double">2</item-id>
     <item-string type="string">M1 Abrams</item-string>
-    <paylod-position-x type="double">18</paylod-position-x>
-    <paylod-position-y type="double">0</paylod-position-y>
-    <paylod-position-z type="double">-1.1</paylod-position-z>
+    <payload-position-x type="double">18</payload-position-x>
+    <payload-position-y type="double">0</payload-position-y>
+    <payload-position-z type="double">-1.1</payload-position-z>
   </M1Abrams>
 
   <Hummer1x>
     <weight type="double">5700</weight>
     <item-id type="double">3</item-id>
     <item-string type="string">1x Hummer</item-string>
-    <paylod-position-x type="double">18</paylod-position-x>
-    <paylod-position-y type="double">0</paylod-position-y>
-    <paylod-position-z type="double">-2.2</paylod-position-z>
+    <payload-position-x type="double">18</payload-position-x>
+    <payload-position-y type="double">0</payload-position-y>
+    <payload-position-z type="double">-2.2</payload-position-z>
   </Hummer1x>
 
   <Hummer2x>
     <weight type="double">11400</weight>
     <item-id type="double">4</item-id>
     <item-string type="string">2x Hummer</item-string>
-    <paylod-position-x type="double">18</paylod-position-x>
-    <paylod-position-y type="double">0</paylod-position-y>
-    <paylod-position-z type="double">-2.2</paylod-position-z>
+    <payload-position-x type="double">18</payload-position-x>
+    <payload-position-y type="double">0</payload-position-y>
+    <payload-position-z type="double">-2.2</payload-position-z>
   </Hummer2x>
 
   <LandRover1x>
     <weight type="double">9020</weight>
     <item-id type="double">5</item-id>
     <item-string type="string">1x LandRover WMIK</item-string>
-    <paylod-position-x type="double">18</paylod-position-x>
-    <paylod-position-y type="double">0</paylod-position-y>
-    <paylod-position-z type="double">-2.3</paylod-position-z>
+    <payload-position-x type="double">18</payload-position-x>
+    <payload-position-y type="double">0</payload-position-y>
+    <payload-position-z type="double">-2.3</payload-position-z>
   </LandRover1x>
 
   <LandRover2x>
     <weight type="double">18040</weight>
     <item-id type="double">6</item-id>
     <item-string type="string">2x LandRover WMIK</item-string>
-    <paylod-position-x type="double">18</paylod-position-x>
-    <paylod-position-y type="double">0</paylod-position-y>
-    <paylod-position-z type="double">-2.3</paylod-position-z>
+    <payload-position-x type="double">18</payload-position-x>
+    <payload-position-y type="double">0</payload-position-y>
+    <payload-position-z type="double">-2.3</payload-position-z>
   </LandRover2x>
   
   <LandRover4x>
     <weight type="double">36080</weight>
     <item-id type="double">7</item-id>
     <item-string type="string">4x LandRover WMIK</item-string>
-    <paylod-position-x type="double">18</paylod-position-x>
-    <paylod-position-y type="double">0</paylod-position-y>
-    <paylod-position-z type="double">-2.3</paylod-position-z>
+    <payload-position-x type="double">18</payload-position-x>
+    <payload-position-y type="double">0</payload-position-y>
+    <payload-position-z type="double">-2.3</payload-position-z>
   </LandRover4x>
 
   <Jackal1x>
     <weight type="double">14896</weight>
     <item-id type="double">8</item-id>
     <item-string type="string">1x Jackal</item-string>
-    <paylod-position-x type="double">18</paylod-position-x>
-    <paylod-position-y type="double">0</paylod-position-y>
-    <paylod-position-z type="double">-2.3</paylod-position-z>
+    <payload-position-x type="double">18</payload-position-x>
+    <payload-position-y type="double">0</payload-position-y>
+    <payload-position-z type="double">-2.3</payload-position-z>
   </Jackal1x>
 
   <Jackal2x>
     <weight type="double">29792</weight>
     <item-id type="double">9</item-id>
     <item-string type="string">2x Jackal</item-string>
-    <paylod-position-x type="double">18</paylod-position-x>
-    <paylod-position-y type="double">0</paylod-position-y>
-    <paylod-position-z type="double">-2.3</paylod-position-z>
+    <payload-position-x type="double">18</payload-position-x>
+    <payload-position-y type="double">0</payload-position-y>
+    <payload-position-z type="double">-2.3</payload-position-z>
   </Jackal2x>
 
   <MTVR>
     <weight type="double">27900</weight>
     <item-id type="double">10</item-id>
     <item-string type="string">MTVR</item-string>
-    <paylod-position-x type="double">18</paylod-position-x>
-    <paylod-position-y type="double">0</paylod-position-y>
-    <paylod-position-z type="double">-2.3</paylod-position-z>
+    <payload-position-x type="double">18</payload-position-x>
+    <payload-position-y type="double">0</payload-position-y>
+    <payload-position-z type="double">-2.3</payload-position-z>
   </MTVR>
 
   <viking>
     <weight type="double">19040</weight>
     <item-id type="double">11</item-id>
     <item-string type="string">BVS10-Viking</item-string>
-    <paylod-position-x type="double">18</paylod-position-x>
-    <paylod-position-y type="double">0</paylod-position-y>
-    <paylod-position-z type="double">-2.3</paylod-position-z>
+    <payload-position-x type="double">18</payload-position-x>
+    <payload-position-y type="double">0</payload-position-y>
+    <payload-position-z type="double">-2.3</payload-position-z>
   </viking>
 
   <bradle>
     <weight type="double">55200</weight>
     <item-id type="double">12</item-id>
     <item-string type="string">M2-Bradle</item-string>
-    <paylod-position-x type="double">18</paylod-position-x>
-    <paylod-position-y type="double">0</paylod-position-y>
-    <paylod-position-z type="double">-2.3</paylod-position-z>
+    <payload-position-x type="double">18</payload-position-x>
+    <payload-position-y type="double">0</payload-position-y>
+    <payload-position-z type="double">-2.3</payload-position-z>
   </bradle>
 
   <MLRS>
     <weight type="double">55000</weight>
     <item-id type="double">13</item-id>
     <item-string type="string">MLRS</item-string>
-    <paylod-position-x type="double">18</paylod-position-x>
-    <paylod-position-y type="double">0</paylod-position-y>
-    <paylod-position-z type="double">-2.3</paylod-position-z>
+    <payload-position-x type="double">18</payload-position-x>
+    <payload-position-y type="double">0</payload-position-y>
+    <payload-position-z type="double">-2.3</payload-position-z>
   </MLRS>
 
   <stryker>
     <weight type="double">32940</weight>
     <item-id type="double">14</item-id>
     <item-string type="string">Stryker</item-string>
-    <paylod-position-x type="double">18</paylod-position-x>
-    <paylod-position-y type="double">0</paylod-position-y>
-    <paylod-position-z type="double">-2.3</paylod-position-z>
+    <payload-position-x type="double">18</payload-position-x>
+    <payload-position-y type="double">0</payload-position-y>
+    <payload-position-z type="double">-2.3</payload-position-z>
   </stryker>
 
   <FV107>
     <weight type="double">15600</weight>
     <item-id type="double">15</item-id>
     <item-string type="string">Scimiter</item-string>
-    <paylod-position-x type="double">18</paylod-position-x>
-    <paylod-position-y type="double">0</paylod-position-y>
-    <paylod-position-z type="double">-2.3</paylod-position-z>
+    <payload-position-x type="double">18</payload-position-x>
+    <payload-position-y type="double">0</payload-position-y>
+    <payload-position-z type="double">-2.3</payload-position-z>
   </FV107>
 
   <FV510>
     <weight type="double">50800</weight>
     <item-id type="double">16</item-id>
     <item-string type="string">FV510</item-string>
-    <paylod-position-x type="double">18</paylod-position-x>
-    <paylod-position-y type="double">0</paylod-position-y>
-    <paylod-position-z type="double">-2.3</paylod-position-z>
+    <payload-position-x type="double">18</payload-position-x>
+    <payload-position-y type="double">0</payload-position-y>
+    <payload-position-z type="double">-2.3</payload-position-z>
   </FV510>
 
   <buffalo>
     <weight type="double">56000</weight>
     <item-id type="double">17</item-id>
     <item-string type="string">Buffalo</item-string>
-    <paylod-position-x type="double">18</paylod-position-x>
-    <paylod-position-y type="double">0</paylod-position-y>
-    <paylod-position-z type="double">-2.3</paylod-position-z>
+    <payload-position-x type="double">18</payload-position-x>
+    <payload-position-y type="double">0</payload-position-y>
+    <payload-position-z type="double">-2.3</payload-position-z>
   </buffalo>
+
+  
 </PropertyList>
