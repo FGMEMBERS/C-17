@@ -449,7 +449,7 @@
     </armament>
   </controls>
   <input>
-    <keyboard include="Nasal/keyboard.xml"/>
+    <keyboard include="Systems/keyboard.xml"/>
   </input>
   <ai>
     <submodels>
@@ -460,12 +460,12 @@
     <C-17>
       <!-- <file>Aircraft/Generic/limits.nas</file>-->
       <file>Aircraft/C-17/Nasal/liveries.nas</file>
-      <file>Aircraft/C-17/Systems/air-ground.nas</file>
+      <file>Aircraft/C-17/Nasal/air-ground.nas</file>
       <!-- <file>Aircraft/C-17/Nasal/light.nas</file>-->
       <file>Aircraft/C-17/Nasal/tyresmoke.nas</file>
-      <!--  <file>Aircraft/C-17/Systems/TEST.nas</file>-->
-      <file>Aircraft/C-17/Systems/systems.nas</file>
-      <!-- <file>Aircraft/C-17/Systems/Electrical.nas</file>-->
+      <!--  <file>Aircraft/C-17/Nasal/TEST.nas</file>-->
+      <file>Aircraft/C-17/Nasal/systems.nas</file>
+      <!-- <file>Aircraft/C-17/Nasal/Electrical.nas</file>-->
     </C-17>
     <doors>
       <file>Aircraft/C-17/Nasal/doors.nas</file>
