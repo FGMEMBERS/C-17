@@ -373,7 +373,7 @@
   </animation> 
   
   <model>
-    <path>Aircraft/C-17/Models/Panels/C-17-cockpit.xml</path> 
+    <path>Models/Panels/Cockpit/C-17-Cockpit.xml</path> 
     <!--<offsets> 
 	<x-m> 2.30278 </x-m>
 	<y-m> 0.00375307 </y-m>

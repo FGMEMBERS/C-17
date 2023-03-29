@@ -1,6 +1,6 @@
 <?xml version="1.0"?>
 <PropertyList>
-  <path>C-17-cockpit.ac</path>
+  <path>C-17-Cockpit.ac</path>
 
   <animation>
     <type>range</type>
@@ -22,7 +22,7 @@
 
   <!-- Instruments -->
   <model>
-    <path>Aircraft/C-17/Models/Panels/Instruments/instruments.xml</path> 
+    <path>Models/Panels/Instruments/Instruments.xml</path> 
     <offsets> 
       <x-m> 1.28</x-m>
       <y-m> 0.01</y-m>
