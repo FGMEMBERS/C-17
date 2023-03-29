@@ -539,8 +539,8 @@
       </font>
       <lightning archive="y" type="bool">true</lightning>
       <display-mode archive="y" type="string">arc</display-mode>
-      <radar-texture-path archive="y" type="string">Aircraft/C-17/Panels/Instruments/MFD/od_wxradar.png</radar-texture-path>
-      <echo-texture-path archive="y" type="string">Aircraft/C-17/Panels/Instruments/MFD/wxecho.png</echo-texture-path>
+      <radar-texture-path archive="y" type="string">Aircraft/C-17/Models/Panels/Instruments/MFD/od_wxradar.png</radar-texture-path>
+      <echo-texture-path archive="y" type="string">Aircraft/C-17/Models/Panels/Instruments/MFD/wxecho.png</echo-texture-path>
       <minimized archive="y" type="bool">false</minimized>
       <heading-marker archive="y" type="bool">true</heading-marker>
       <limit-deg type="int">360</limit-deg>
