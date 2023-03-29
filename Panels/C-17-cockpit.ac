@@ -124,7 +124,7 @@ OBJECT poly
 name "c17-newouter"
 data 12
 c17-newouter
-texture "C17-cockpit.jpg"
+texture "C17-cockpit.png"
 crease 30.000000
 numvert 27004
 2.50935 0.796663 -1.00948
