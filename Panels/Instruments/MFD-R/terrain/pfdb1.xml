@@ -3,7 +3,6 @@
 -->
 
 <PropertyList>
-
   <path>pfdb1.ac</path>
 
   <animation>
@@ -55,7 +54,6 @@
     </axis>
   </animation>
 
-
   <animation>
     <type>select</type>
     <object-name>Omarker</object-name>
@@ -104,43 +102,45 @@
     </axis>
   </animation>
 
-  <!--<animation>
-      <type>rotate</type>
-      <object-name>pfdhdg</object-name>
-      <property>autopilot/internal/fdm-heading-bug-error-deg</property>
-      <interpolation>
+  <!--
+  <animation>
+    <type>rotate</type>
+    <object-name>pfdhdg</object-name>
+    <property>autopilot/internal/fdm-heading-bug-error-deg</property>
+    <interpolation>
       <entry>
-      <ind> -180.0</ind>
-      <dep>-50.0</dep>
+	<ind> -180.0</ind>
+	<dep>-50.0</dep>
       </entry>
       <entry>
-      <ind>-50.0</ind>
-      <dep>-50.0</dep>
+	<ind>-50.0</ind>
+	<dep>-50.0</dep>
       </entry>
       <entry>
-      <ind> 0.0</ind>
-      <dep>0.0</dep>
+	<ind> 0.0</ind>
+	<dep>0.0</dep>
       </entry>
       <entry>
-      <ind> 50.0</ind>
-      <dep>50.0</dep>
+	<ind> 50.0</ind>
+	<dep>50.0</dep>
       </entry>
       <entry>
-      <ind>180.0</ind>
-      <dep>50.0</dep>
+	<ind>180.0</ind>
+	<dep>50.0</dep>
       </entry>
-      </interpolation>
-      <axis>
+    </interpolation>
+    <axis>
       <x>-1.0</x>
       <y>0.0</y>
       <z>0.0</z>
-      </axis>
-      <center>
+    </axis>
+    <center>
       <x-m>0.007</x-m>
       <y-m>-0.013</y-m>
       <z-m>-0.135</z-m>
-      </center>
-      </animation>-->
+    </center>
+  </animation>
+  -->
 
   <animation>
     <type>rotate</type>
@@ -244,47 +244,48 @@
       <z>0.0</z>
     </center>
   </animation>
+
   <!-- 
-       <animation>
-       <type>rotate</type>
-       <object-name>hdgbug</object-name>
-       <property>/autopilot/internal/fdm-heading-bug-error-deg</property>
-       <axis>
-       <x>-1.0</x>
-       <y>0.0</y>
-       <z>0.0</z>
-       </axis>
-       <center>
-       <x-m>0.002</x-m>
-       <y-m>0</y-m>
-       <z-m>-0.040</z-m>
-       </center>
-       </animation>
-       
-       <animation>
-       <type>translate</type>
-       <object-name>GSneedle</object-name>
-       <property>/instrumentation/nav/gs-needle-deflection</property>
-       <interpolation>
-       <entry>
-       <ind>-10.0</ind>
-       <dep>-0.0160</dep>
-       </entry>
-       <entry>
-       <ind>0.0</ind>
-       <dep>0.0</dep>
-       </entry>
-       <entry>
-       <ind>10.0</ind>
-       <dep>0.0160</dep>
-       </entry>
-       </interpolation>
-       <axis>
-       <x>0.0</x>
-       <y>0.0</y>
-       <z>1.0</z>
-       </axis>
-       </animation>
+  <animation>
+    <type>rotate</type>
+    <object-name>hdgbug</object-name>
+    <property>/autopilot/internal/fdm-heading-bug-error-deg</property>
+    <axis>
+      <x>-1.0</x>
+      <y>0.0</y>
+      <z>0.0</z>
+    </axis>
+    <center>
+      <x-m>0.002</x-m>
+      <y-m>0</y-m>
+      <z-m>-0.040</z-m>
+    </center>
+  </animation>
+  
+  <animation>
+    <type>translate</type>
+    <object-name>GSneedle</object-name>
+    <property>/instrumentation/nav/gs-needle-deflection</property>
+    <interpolation>
+      <entry>
+	<ind>-10.0</ind>
+	<dep>-0.0160</dep>
+      </entry>
+      <entry>
+	<ind>0.0</ind>
+	<dep>0.0</dep>
+      </entry>
+      <entry>
+	<ind>10.0</ind>
+	<dep>0.0160</dep>
+      </entry>
+    </interpolation>
+    <axis>
+      <x>0.0</x>
+      <y>0.0</y>
+      <z>1.0</z>
+    </axis>
+  </animation>
   -->
   
   <animation>
@@ -666,7 +667,7 @@
     </axis>
   </animation>
 
-  <!--
+ <!--
   <animation>
     <type>textranslate</type>
     <object-name>RAtape</object-name>
@@ -752,6 +753,7 @@
       <property>sim/model/A-6E/instrumentation/PHD/s[0]/visible</property>
     </condition>
   </animation>
+
   <animation>
     <type>select</type>
     <object-name>s1</object-name>
@@ -759,6 +761,7 @@
       <property>sim/model/A-6E/instrumentation/PHD/s[1]/visible</property>
     </condition>
   </animation>
+
   <animation>
     <type>select</type>
     <object-name>s2</object-name>
@@ -766,6 +769,7 @@
       <property>sim/model/A-6E/instrumentation/PHD/s[2]/visible</property>
     </condition>
   </animation>
+
   <animation>
     <type>select</type>
     <object-name>s3</object-name>
@@ -773,6 +777,7 @@
       <property>sim/model/A-6E/instrumentation/PHD/s[3]/visible</property>
     </condition>
   </animation>
+
   <animation>
     <type>select</type>
     <object-name>s4</object-name>
@@ -780,6 +785,7 @@
       <property>sim/model/A-6E/instrumentation/PHD/s[4]/visible</property>
     </condition>
   </animation>
+
   <animation>
     <type>select</type>
     <object-name>s5</object-name>
@@ -787,6 +793,7 @@
       <property>sim/model/A-6E/instrumentation/PHD/s[5]/visible</property>
     </condition>
   </animation>
+
   <animation>
     <type>select</type>
     <object-name>s6</object-name>
@@ -794,6 +801,7 @@
       <property>sim/model/A-6E/instrumentation/PHD/s[6]/visible</property>
     </condition>
   </animation>
+
   <animation>
     <type>select</type>
     <object-name>s7</object-name>
@@ -801,6 +809,7 @@
       <property>sim/model/A-6E/instrumentation/PHD/s[7]/visible</property>
     </condition>
   </animation>
+
   <animation>
     <type>select</type>
     <object-name>s8</object-name>
@@ -808,6 +817,7 @@
       <property>sim/model/A-6E/instrumentation/PHD/s[8]/visible</property>
     </condition>
   </animation>
+
   <animation>
     <type>select</type>
     <object-name>s9</object-name>
@@ -823,6 +833,7 @@
       <property>sim/model/A-6E/instrumentation/PHD/s[10]/visible</property>
     </condition>
   </animation>
+
   <animation>
     <type>select</type>
     <object-name>s11</object-name>
@@ -830,6 +841,7 @@
       <property>sim/model/A-6E/instrumentation/PHD/s[11]/visible</property>
     </condition>
   </animation>
+
   <animation>
     <type>select</type>
     <object-name>s12</object-name>
@@ -837,6 +849,7 @@
       <property>sim/model/A-6E/instrumentation/PHD/s[12]/visible</property>
     </condition>
   </animation>
+
   <animation>
     <type>select</type>
     <object-name>s13</object-name>
@@ -844,6 +857,7 @@
       <property>sim/model/A-6E/instrumentation/PHD/s[13]/visible</property>
     </condition>
   </animation>
+
   <animation>
     <type>select</type>
     <object-name>s14</object-name>
@@ -851,6 +865,7 @@
       <property>sim/model/A-6E/instrumentation/PHD/s[14]/visible</property>
     </condition>
   </animation>
+
   <animation>
     <type>select</type>
     <object-name>s15</object-name>
@@ -858,6 +873,7 @@
       <property>sim/model/A-6E/instrumentation/PHD/s[15]/visible</property>
     </condition>
   </animation>
+
   <animation>
     <type>select</type>
     <object-name>s16</object-name>
@@ -865,6 +881,7 @@
       <property>sim/model/A-6E/instrumentation/PHD/s[16]/visible</property>
     </condition>
   </animation>
+
   <animation>
     <type>select</type>
     <object-name>s17</object-name>
@@ -872,6 +889,7 @@
       <property>sim/model/A-6E/instrumentation/PHD/s[17]/visible</property>
     </condition>
   </animation>
+
   <animation>
     <type>select</type>
     <object-name>s18</object-name>
@@ -879,6 +897,7 @@
       <property>sim/model/A-6E/instrumentation/PHD/s[18]/visible</property>
     </condition>
   </animation>
+
   <animation>
     <type>select</type>
     <object-name>s19</object-name>
@@ -894,6 +913,7 @@
       <property>sim/model/A-6E/instrumentation/PHD/s[20]/visible</property>
     </condition>
   </animation>
+
   <animation>
     <type>select</type>
     <object-name>s21</object-name>
@@ -901,6 +921,7 @@
       <property>sim/model/A-6E/instrumentation/PHD/s[21]/visible</property>
     </condition>
   </animation>
+
   <animation>
     <type>select</type>
     <object-name>s22</object-name>
@@ -908,6 +929,7 @@
       <property>sim/model/A-6E/instrumentation/PHD/s[22]/visible</property>
     </condition>
   </animation>
+
   <animation>
     <type>select</type>
     <object-name>s23</object-name>
@@ -915,6 +937,7 @@
       <property>sim/model/A-6E/instrumentation/PHD/s[23]/visible</property>
     </condition>
   </animation>
+
   <animation>
     <type>select</type>
     <object-name>s24</object-name>
@@ -922,6 +945,7 @@
       <property>sim/model/A-6E/instrumentation/PHD/s[24]/visible</property>
     </condition>
   </animation>
+
   <animation>
     <type>select</type>
     <object-name>s25</object-name>
@@ -929,6 +953,7 @@
       <property>sim/model/A-6E/instrumentation/PHD/s[25]/visible</property>
     </condition>
   </animation>
+
   <animation>
     <type>select</type>
     <object-name>s26</object-name>
@@ -936,6 +961,7 @@
       <property>sim/model/A-6E/instrumentation/PHD/s[26]/visible</property>
     </condition>
   </animation>
+
   <animation>
     <type>select</type>
     <object-name>s27</object-name>
@@ -943,6 +969,7 @@
       <property>sim/model/A-6E/instrumentation/PHD/s[27]/visible</property>
     </condition>
   </animation>
+
   <animation>
     <type>select</type>
     <object-name>s28</object-name>
@@ -950,6 +977,7 @@
       <property>sim/model/A-6E/instrumentation/PHD/s[28]/visible</property>
     </condition>
   </animation>
+
   <animation>
     <type>select</type>
     <object-name>s29</object-name>
@@ -965,6 +993,7 @@
       <property>sim/model/A-6E/instrumentation/PHD/s[30]/visible</property>
     </condition>
   </animation>
+
   <animation>
     <type>select</type>
     <object-name>s31</object-name>
@@ -972,6 +1001,7 @@
       <property>sim/model/A-6E/instrumentation/PHD/s[31]/visible</property>
     </condition>
   </animation>
+
   <animation>
     <type>select</type>
     <object-name>s31</object-name>
@@ -979,6 +1009,7 @@
       <property>sim/model/A-6E/instrumentation/PHD/s[31]/visible</property>
     </condition>
   </animation>
+
   <animation>
     <type>select</type>
     <object-name>s32</object-name>
@@ -986,6 +1017,7 @@
       <property>sim/model/A-6E/instrumentation/PHD/s[32]/visible</property>
     </condition>
   </animation>
+
   <animation>
     <type>select</type>
     <object-name>s33</object-name>
@@ -993,6 +1025,7 @@
       <property>sim/model/A-6E/instrumentation/PHD/s[33]/visible</property>
     </condition>
   </animation>
+
   <animation>
     <type>select</type>
     <object-name>s34</object-name>
@@ -1000,6 +1033,7 @@
       <property>sim/model/A-6E/instrumentation/PHD/s[34]/visible</property>
     </condition>
   </animation>
+
   <animation>
     <type>select</type>
     <object-name>s35</object-name>
@@ -1007,6 +1041,7 @@
       <property>sim/model/A-6E/instrumentation/PHD/s[35]/visible</property>
     </condition>
   </animation>
+
   <animation>
     <type>select</type>
     <object-name>s36</object-name>
@@ -1014,6 +1049,7 @@
       <property>sim/model/A-6E/instrumentation/PHD/s[36]/visible</property>
     </condition>
   </animation>
+
   <animation>
     <type>select</type>
     <object-name>s37</object-name>
@@ -1021,6 +1057,7 @@
       <property>sim/model/A-6E/instrumentation/PHD/s[37]/visible</property>
     </condition>
   </animation>
+
   <animation>
     <type>select</type>
     <object-name>s38</object-name>
@@ -1028,6 +1065,7 @@
       <property>sim/model/A-6E/instrumentation/PHD/s[38]/visible</property>
     </condition>
   </animation>
+
   <animation>
     <type>select</type>
     <object-name>s39</object-name>
@@ -1043,6 +1081,7 @@
       <property>sim/model/A-6E/instrumentation/PHD/s[40]/visible</property>
     </condition>
   </animation>
+
   <animation>
     <type>select</type>
     <object-name>s41</object-name>
@@ -1050,6 +1089,7 @@
       <property>sim/model/A-6E/instrumentation/PHD/s[41]/visible</property>
     </condition>
   </animation>
+
   <animation>
     <type>select</type>
     <object-name>s42</object-name>
@@ -1057,6 +1097,7 @@
       <property>sim/model/A-6E/instrumentation/PHD/s[42]/visible</property>
     </condition>
   </animation>
+
   <animation>
     <type>select</type>
     <object-name>s43</object-name>
@@ -1064,6 +1105,7 @@
       <property>sim/model/A-6E/instrumentation/PHD/s[43]/visible</property>
     </condition>
   </animation>
+
   <animation>
     <type>select</type>
     <object-name>s44</object-name>
@@ -1071,6 +1113,7 @@
       <property>sim/model/A-6E/instrumentation/PHD/s[44]/visible</property>
     </condition>
   </animation>
+
   <animation>
     <type>select</type>
     <object-name>s45</object-name>
@@ -1078,6 +1121,7 @@
       <property>sim/model/A-6E/instrumentation/PHD/s[45]/visible</property>
     </condition>
   </animation>
+
   <animation>
     <type>select</type>
     <object-name>s46</object-name>
@@ -1085,6 +1129,7 @@
       <property>sim/model/A-6E/instrumentation/PHD/s[46]/visible</property>
     </condition>
   </animation>
+
   <animation>
     <type>select</type>
     <object-name>s47</object-name>
@@ -1092,6 +1137,7 @@
       <property>sim/model/A-6E/instrumentation/PHD/s[47]/visible</property>
     </condition>
   </animation>
+
   <animation>
     <type>select</type>
     <object-name>s48</object-name>
@@ -1099,6 +1145,7 @@
       <property>sim/model/A-6E/instrumentation/PHD/s[48]/visible</property>
     </condition>
   </animation>
+
   <animation>
     <type>select</type>
     <object-name>s49</object-name>
@@ -1113,54 +1160,63 @@
     <property>sim/model/A-6E/instrumentation/PHD/s[0]/elevation_m</property>
     <axis><x>0</x><y>0</y><z>1</z></axis>
   </animation>
+
   <animation>
     <type>translate</type>
     <object-name>s1</object-name>
     <property>sim/model/A-6E/instrumentation/PHD/s[1]/elevation_m</property>
     <axis><x>0</x><y>0</y><z>1</z></axis>
   </animation>
+
   <animation>
     <type>translate</type>
     <object-name>s2</object-name>
     <property>sim/model/A-6E/instrumentation/PHD/s[2]/elevation_m</property>
     <axis><x>0</x><y>0</y><z>1</z></axis>
   </animation>
+
   <animation>
     <type>translate</type>
     <object-name>s3</object-name>
     <property>sim/model/A-6E/instrumentation/PHD/s[3]/elevation_m</property>
     <axis><x>0</x><y>0</y><z>1</z></axis>
   </animation>
+
   <animation>
     <type>translate</type>
     <object-name>s4</object-name>
     <property>sim/model/A-6E/instrumentation/PHD/s[4]/elevation_m</property>
     <axis><x>0</x><y>0</y><z>1</z></axis>
   </animation>
+
   <animation>
     <type>translate</type>
     <object-name>s5</object-name>
     <property>sim/model/A-6E/instrumentation/PHD/s[5]/elevation_m</property>
     <axis><x>0</x><y>0</y><z>1</z></axis>
   </animation>
+
   <animation>
     <type>translate</type>
     <object-name>s6</object-name>
     <property>sim/model/A-6E/instrumentation/PHD/s[6]/elevation_m</property>
     <axis><x>0</x><y>0</y><z>1</z></axis>
   </animation>
+
   <animation>
     <type>translate</type>
     <object-name>s7</object-name>
     <property>sim/model/A-6E/instrumentation/PHD/s[7]/elevation_m</property>
     <axis><x>0</x><y>0</y><z>1</z></axis>
   </animation>
+
   <animation>
     <type>translate</type>
     <object-name>s8</object-name>
     <property>sim/model/A-6E/instrumentation/PHD/s[8]/elevation_m</property>
     <axis><x>0</x><y>0</y><z>1</z></axis>
   </animation>
+
   <animation>
     <type>translate</type>
     <object-name>s9</object-name>
@@ -1168,60 +1224,70 @@
     <axis><x>0</x><y>0</y><z>1</z></axis>
   </animation>
 
+
   <animation>
     <type>translate</type>
     <object-name>s10</object-name>
     <property>sim/model/A-6E/instrumentation/PHD/s[10]/elevation_m</property>
     <axis><x>0</x><y>0</y><z>1</z></axis>
   </animation>
+
   <animation>
     <type>translate</type>
     <object-name>s11</object-name>
     <property>sim/model/A-6E/instrumentation/PHD/s[11]/elevation_m</property>
     <axis><x>0</x><y>0</y><z>1</z></axis>
   </animation>
+
   <animation>
     <type>translate</type>
     <object-name>s12</object-name>
     <property>sim/model/A-6E/instrumentation/PHD/s[12]/elevation_m</property>
     <axis><x>0</x><y>0</y><z>1</z></axis>
   </animation>
+
   <animation>
     <type>translate</type>
     <object-name>s13</object-name>
     <property>sim/model/A-6E/instrumentation/PHD/s[13]/elevation_m</property>
     <axis><x>0</x><y>0</y><z>1</z></axis>
   </animation>
+
   <animation>
     <type>translate</type>
     <object-name>s14</object-name>
     <property>sim/model/A-6E/instrumentation/PHD/s[14]/elevation_m</property>
     <axis><x>0</x><y>0</y><z>1</z></axis>
   </animation>
+
   <animation>
     <type>translate</type>
     <object-name>s15</object-name>
     <property>sim/model/A-6E/instrumentation/PHD/s[15]/elevation_m</property>
     <axis><x>0</x><y>0</y><z>1</z></axis>
   </animation>
+
   <animation>
     <type>translate</type>
     <object-name>s16</object-name>
     <property>sim/model/A-6E/instrumentation/PHD/s[16]/elevation_m</property>
     <axis><x>0</x><y>0</y><z>1</z></axis>
   </animation>
+
   <animation>
     <type>translate</type>
     <object-name>s17</object-name>
     <property>sim/model/A-6E/instrumentation/PHD/s[17]/elevation_m</property>
     <axis><x>0</x><y>0</y><z>1</z></axis>
   </animation>
+
   <animation>
     <type>translate</type>
     <object-name>s18</object-name>
     <property>sim/model/A-6E/instrumentation/PHD/s[18]/elevation_m</property>
     <axis><x>0</x><y>0</y><z>1</z></axis>
   </animation>
+
   <animation>
     <type>translate</type>
     <object-name>s19</object-name>
@@ -1235,54 +1301,63 @@
     <property>sim/model/A-6E/instrumentation/PHD/s[20]/elevation_m</property>
     <axis><x>0</x><y>0</y><z>1</z></axis>
   </animation>
+
   <animation>
     <type>translate</type>
     <object-name>s21</object-name>
     <property>sim/model/A-6E/instrumentation/PHD/s[21]/elevation_m</property>
     <axis><x>0</x><y>0</y><z>1</z></axis>
   </animation>
+
   <animation>
     <type>translate</type>
     <object-name>s22</object-name>
     <property>sim/model/A-6E/instrumentation/PHD/s[22]/elevation_m</property>
     <axis><x>0</x><y>0</y><z>1</z></axis>
   </animation>
+
   <animation>
     <type>translate</type>
     <object-name>s23</object-name>
     <property>sim/model/A-6E/instrumentation/PHD/s[23]/elevation_m</property>
     <axis><x>0</x><y>0</y><z>1</z></axis>
   </animation>
+
   <animation>
     <type>translate</type>
     <object-name>s24</object-name>
     <property>sim/model/A-6E/instrumentation/PHD/s[24]/elevation_m</property>
     <axis><x>0</x><y>0</y><z>1</z></axis>
   </animation>
+
   <animation>
     <type>translate</type>
     <object-name>s25</object-name>
     <property>sim/model/A-6E/instrumentation/PHD/s[25]/elevation_m</property>
     <axis><x>0</x><y>0</y><z>1</z></axis>
   </animation>
+
   <animation>
     <type>translate</type>
     <object-name>s26</object-name>
     <property>sim/model/A-6E/instrumentation/PHD/s[26]/elevation_m</property>
     <axis><x>0</x><y>0</y><z>1</z></axis>
   </animation>
+
   <animation>
     <type>translate</type>
     <object-name>s27</object-name>
     <property>sim/model/A-6E/instrumentation/PHD/s[27]/elevation_m</property>
     <axis><x>0</x><y>0</y><z>1</z></axis>
   </animation>
+
   <animation>
     <type>translate</type>
     <object-name>s28</object-name>
     <property>sim/model/A-6E/instrumentation/PHD/s[28]/elevation_m</property>
     <axis><x>0</x><y>0</y><z>1</z></axis>
   </animation>
+
   <animation>
     <type>translate</type>
     <object-name>s29</object-name>
@@ -1296,54 +1371,63 @@
     <property>sim/model/A-6E/instrumentation/PHD/s[30]/elevation_m</property>
     <axis><x>0</x><y>0</y><z>1</z></axis>
   </animation>
+
   <animation>
     <type>translate</type>
     <object-name>s31</object-name>
     <property>sim/model/A-6E/instrumentation/PHD/s[31]/elevation_m</property>
     <axis><x>0</x><y>0</y><z>1</z></axis>
   </animation>
+
   <animation>
     <type>translate</type>
     <object-name>s32</object-name>
     <property>sim/model/A-6E/instrumentation/PHD/s[32]/elevation_m</property>
     <axis><x>0</x><y>0</y><z>1</z></axis>
   </animation>
+
   <animation>
     <type>translate</type>
     <object-name>s33</object-name>
     <property>sim/model/A-6E/instrumentation/PHD/s[33]/elevation_m</property>
     <axis><x>0</x><y>0</y><z>1</z></axis>
   </animation>
+
   <animation>
     <type>translate</type>
     <object-name>s34</object-name>
     <property>sim/model/A-6E/instrumentation/PHD/s[34]/elevation_m</property>
     <axis><x>0</x><y>0</y><z>1</z></axis>
   </animation>
+
   <animation>
     <type>translate</type>
     <object-name>s35</object-name>
     <property>sim/model/A-6E/instrumentation/PHD/s[35]/elevation_m</property>
     <axis><x>0</x><y>0</y><z>1</z></axis>
   </animation>
+
   <animation>
     <type>translate</type>
     <object-name>s36</object-name>
     <property>sim/model/A-6E/instrumentation/PHD/s[36]/elevation_m</property>
     <axis><x>0</x><y>0</y><z>1</z></axis>
   </animation>
+
   <animation>
     <type>translate</type>
     <object-name>s37</object-name>
     <property>sim/model/A-6E/instrumentation/PHD/s[37]/elevation_m</property>
     <axis><x>0</x><y>0</y><z>1</z></axis>
   </animation>
+
   <animation>
     <type>translate</type>
     <object-name>s38</object-name>
     <property>sim/model/A-6E/instrumentation/PHD/s[38]/elevation_m</property>
     <axis><x>0</x><y>0</y><z>1</z></axis>
   </animation>
+
   <animation>
     <type>translate</type>
     <object-name>s39</object-name>
@@ -1357,58 +1441,68 @@
     <property>sim/model/A-6E/instrumentation/PHD/s[40]/elevation_m</property>
     <axis><x>0</x><y>0</y><z>1</z></axis>
   </animation>
+
   <animation>
     <type>translate</type>
     <object-name>s41</object-name>
     <property>sim/model/A-6E/instrumentation/PHD/s[41]/elevation_m</property>
     <axis><x>0</x><y>0</y><z>1</z></axis>
   </animation>
+
   <animation>
     <type>translate</type>
     <object-name>s42</object-name>
     <property>sim/model/A-6E/instrumentation/PHD/s[42]/elevation_m</property>
     <axis><x>0</x><y>0</y><z>1</z></axis>
   </animation>
+
   <animation>
     <type>translate</type>
     <object-name>s43</object-name>
     <property>sim/model/A-6E/instrumentation/PHD/s[43]/elevation_m</property>
     <axis><x>0</x><y>0</y><z>1</z></axis>
   </animation>
+
   <animation>
     <type>translate</type>
     <object-name>s44</object-name>
     <property>sim/model/A-6E/instrumentation/PHD/s[44]/elevation_m</property>
     <axis><x>0</x><y>0</y><z>1</z></axis>
   </animation>
+
   <animation>
     <type>translate</type>
     <object-name>s45</object-name>
     <property>sim/model/A-6E/instrumentation/PHD/s[45]/elevation_m</property>
     <axis><x>0</x><y>0</y><z>1</z></axis>
   </animation>
+
   <animation>
     <type>translate</type>
     <object-name>s46</object-name>
     <property>sim/model/A-6E/instrumentation/PHD/s[46]/elevation_m</property>
     <axis><x>0</x><y>0</y><z>1</z></axis>
   </animation>
+
   <animation>
     <type>translate</type>
     <object-name>s47</object-name>
     <property>sim/model/A-6E/instrumentation/PHD/s[47]/elevation_m</property>
     <axis><x>0</x><y>0</y><z>1</z></axis>
   </animation>
+
   <animation>
     <type>translate</type>
     <object-name>s48</object-name>
     <property>sim/model/A-6E/instrumentation/PHD/s[48]/elevation_m</property>
     <axis><x>0</x><y>0</y><z>1</z></axis>
   </animation>
+
   <animation>
     <type>translate</type>
     <object-name>s49</object-name>
     <property>sim/model/A-6E/instrumentation/PHD/s[49]/elevation_m</property>
     <axis><x>0</x><y>0</y><z>1</z></axis>
   </animation>
+
 </PropertyList>

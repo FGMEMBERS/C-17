@@ -1,11 +1,13 @@
 <?xml version="1.0"?>
 <PropertyList>
   <path>C-17-cockpit.ac</path>
+
   <animation>
     <type>range</type>
     <min-m>0</min-m>
     <max-m>70</max-m>
   </animation>
+
   <!-- Turns off non rembrant lighting and effects -->
   <animation>
     <type>select</type>
@@ -17,6 +19,7 @@
       </not>
     </condition>
   </animation>         
+
   <!-- Instruments -->
   <model>
     <path>Aircraft/C-17/Panels/Instruments/instruments.xml</path> 
