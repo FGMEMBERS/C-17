@@ -104,8 +104,11 @@
       <path>Aircraft/C-17/Sounds/C-17-sound.xml</path>
     </sound>
     
-    <!-- 3D Model Converted With Permission From X-Plane C-17 v1.2, Authors
-	 Adam Fathergill / Dave Austin -->	
+    <!-- 
+	 3D Model Converted With Permission From X-Plane C-17 v1.2.
+	 Authors:
+	 Adam Fathergill / Dave Austin
+    -->	
     <model>
       <path>Aircraft/C-17/Models/C-17.xml</path>
       

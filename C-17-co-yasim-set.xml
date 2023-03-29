@@ -35,7 +35,7 @@ Usage: fgfs --prop:/sim/remote/pilot-callsign="remote pilot callsign" --aircraft
 
     <!-- 3d model -->
     <model>
-      <path>Aircraft/C-17/Models/C17-CoPilot.xml</path>
+      <path>Aircraft/C-17/Models/C-17-copilot.xml</path>
     </model>
     
     <hud>
