@@ -118,7 +118,7 @@
 
   <model>
     <name>AUTOPILOT</name>
-    <path>Aircraft/C-17/Models/Panels/Instruments/autopilot-panel.xml</path>
+    <path>Models/Panels/Instruments/AP/autopilot-panel.xml</path>
     <offsets>
       <x-m>0.45</x-m>
       <y-m>-0.02</y-m>
@@ -129,7 +129,7 @@
   
   <model>
     <name>EFIS</name>
-    <path>Aircraft/C-17/Models/Panels/Instruments/efis.xml</path>
+    <path>Models/Panels/Instruments/EFIS/efis.xml</path>
     <offsets>
       <x-m>0.4</x-m>
       <y-m>-0.02</y-m>
@@ -164,7 +164,7 @@
 
   <model>
     <name>cap-CLOCK</name>
-    <path>Aircraft/C-17/Models/Panels/Instruments/CLOCK/chronometer.xml</path>
+    <path>Models/Panels/Instruments/Clock/chronometer.xml</path>
     <offsets>
       <x-m>0.423</x-m>
       <y-m>0.1</y-m>
@@ -176,7 +176,7 @@
   <!--
   <model>
     <name>fo-CLOCK</name>
-    <path>Aircraft/C-17/Models/Panels/Instruments/CLOCK/chronometer.xml</path>
+    <path>Models/Panels/Instruments/Clock/chronometer.xml</path>
     <offsets>
       <x-m>0.341</x-m>
       <y-m>0.6</y-m>
