@@ -10,7 +10,7 @@
   </animation>    
 
   <model>
-    <path>Aircraft/C-17/Models/Panels/Instruments/MFD-L/mfd-l.xml</path>
+    <path>Models/Panels/Instruments/MFD-L/mfd-l.xml</path>
     <offsets>
       <x-m>0.41</x-m>
       <y-m>-0.12</y-m>
@@ -28,7 +28,7 @@
   </animation>
 
   <model>
-    <path>Aircraft/C-17/Models/Panels/Instruments/blank/blankmfd.ac</path>
+    <path>Models/Panels/Instruments/blank/blankmfd.ac</path>
     <offsets>
       <x-m>0.41</x-m>
       <y-m>0.08</y-m>
@@ -48,7 +48,7 @@
   -->
   
   <model>
-    <path>Aircraft/C-17/Models/Panels/Instruments/MFD-R/mfd-r.xml</path>
+    <path>Models/Panels/Instruments/MFD-R/mfd-r.xml</path>
     <offsets>
       <x-m>0.415</x-m>
       <y-m>-0.51</y-m>
@@ -67,7 +67,7 @@
   -->  
   <model>
     
-    <path>Aircraft/C-17/Models/Panels/Instruments/MFD-R/mfd-r.xml</path>
+    <path>Models/Panels/Instruments/MFD-R/mfd-r.xml</path>
     <offsets>
       <x-m>0.415</x-m>
       <y-m>0.51</y-m>
@@ -87,7 +87,7 @@
   
   <model>
     <name>EICAS</name>
-    <path>Aircraft/C-17/Models/Panels/Instruments/EICAS/eicas.xml</path>
+    <path>Models/Panels/Instruments/EICAS/eicas.xml</path>
     <offsets>
       <x-m>0.415</x-m>
       <y-m>-0.51</y-m>
@@ -106,7 +106,7 @@
 
   <model>
     <name>EICAS2</name>
-    <path>Aircraft/C-17/Models/Panels/Instruments/EICAS/eicas.xml</path>
+    <path>Models/Panels/Instruments/EICAS/eicas.xml</path>
     <offsets>
       <x-m>0.235</x-m>
       <y-m>-0.020</y-m>
@@ -141,7 +141,7 @@
   <!--
   <model>
     <name>CDU1</name>
-    <path>Aircraft/C-17/Models/Panels/Instruments/CDU/cdu.xml</path>
+    <path>Models/Panels/Instruments/CDU/cdu.xml</path>
     <offsets>
       <x-m>0.435</x-m>
       <y-m>-0.17</y-m>
@@ -152,7 +152,7 @@
   
   <model>
     <name>CDU2</name>
-    <path>Aircraft/C-17/Models/Panels/Instruments/CDU/cdu.xml</path>
+    <path>Models/Panels/Instruments/CDU/cdu.xml</path>
     <offsets>
       <x-m>0.435</x-m>
       <y-m>0.13</y-m>
@@ -188,7 +188,7 @@
 
   <model>
     <name>STANDBY-AH</name>
-    <path>Aircraft/C-17/Models/Panels/Instruments/STANDBY/att-ball.xml</path>
+    <path>Models/Panels/Instruments/STANDBY/att-ball.xml</path>
     <offsets>
       <x-m>0.407</x-m>
       <y-m>-0.38</y-m>
@@ -199,7 +199,7 @@
   
   <model>
     <name>STANDBY-AH2</name>
-    <path>Aircraft/C-17/Models/Panels/Instruments/STANDBY/att-ball.xml</path>
+    <path>Models/Panels/Instruments/STANDBY/att-ball.xml</path>
     <offsets>
       <x-m>0.407</x-m>
       <y-m>0.38</y-m>
@@ -210,7 +210,7 @@
 
   <model>
     <name>STANDBY-VOR</name>
-    <path>Aircraft/C-17/Models/Panels/Instruments/STANDBY/vor.xml</path>
+    <path>Models/Panels/Instruments/STANDBY/vor.xml</path>
     <offsets>
       <x-m>0.407</x-m>
       <y-m>-0.632</y-m>
@@ -221,7 +221,7 @@
   
   <model>
     <name>STANDBY-VOR2</name>
-    <path>Aircraft/C-17/Models/Panels/Instruments/STANDBY/vor.xml</path>
+    <path>Models/Panels/Instruments/STANDBY/vor.xml</path>
     <offsets>
       <x-m>0.407</x-m>
       <y-m>0.632</y-m>
@@ -232,7 +232,7 @@
   
   <model>
     <name>STANDBY-ASI</name>
-    <path>Aircraft/C-17/Models/Panels/Instruments/STANDBY/standby-asi.xml</path>
+    <path>Models/Panels/Instruments/STANDBY/standby-asi.xml</path>
     <offsets>
       <x-m>0.407</x-m>
       <y-m>-0.38</y-m>
@@ -244,7 +244,7 @@
   
   <model>
     <name>STANDBY-ASI2</name>
-    <path>Aircraft/C-17/Models/Panels/Instruments/STANDBY/standby-asi.xml</path>
+    <path>Models/Panels/Instruments/STANDBY/standby-asi.xml</path>
     <offsets>
       <x-m>0.407</x-m>
       <y-m>0.38</y-m>
@@ -257,7 +257,7 @@
   <!--
   <model>
     <name>EFB</name>
-    <path>Aircraft/C-17/Models/Panels/Instruments/EFB/EFB.xml</path>
+    <path>Models/Panels/Instruments/EFB/EFB.xml</path>
     <offsets>
       <x-m>0.425</x-m>
       <y-m>0</y-m>
