@@ -1,14 +1,6 @@
 <?xml version="1.0"?>
 
 <PropertyList>
-  <animation>
-    <type>select</type>
-    <object-name>PFD1</object-name>
-    <condition>
-      <property>sim/current-view/internal</property>
-    </condition>
-  </animation>    
-
   <model>
     <path>Models/Panels/Instruments/MFD-L/mfd-l.xml</path>
     <offsets>
@@ -19,14 +11,6 @@
     </offsets>
   </model>
 
-  <animation>
-    <type>select</type>
-    <object-name>PFD2</object-name>
-    <condition>
-      <property>sim/current-view/internal</property>
-    </condition>
-  </animation>
-
   <model>
     <path>Models/Panels/Instruments/blank/blankmfd.ac</path>
     <offsets>
@@ -36,14 +20,6 @@
       <pitch-deg>-6</pitch-deg>
     </offsets>
   </model>
-
-  <animation>
-    <type>select</type>
-    <object-name>ND1</object-name>
-    <condition>
-      <property>sim/current-view/internal</property>
-    </condition>
-  </animation>
   
   <model>
     <path>Models/Panels/Instruments/MFD-R/mfd-r.xml</path>
@@ -54,14 +30,6 @@
       <pitch-deg>-6</pitch-deg>
     </offsets>
   </model>
-
-  <animation>
-    <type>select</type>
-    <object-name>ND2</object-name>
-    <condition>
-      <property>sim/current-view/internal</property>
-    </condition>
-  </animation>
 
   <model>
     <path>Models/Panels/Instruments/MFD-R/mfd-r.xml</path>
@@ -123,7 +91,7 @@
       <pitch-deg>0</pitch-deg>
     </offsets>
   </model>
-  
+
   <model>
     <name>EFIS</name>
     <path>Models/Panels/Instruments/EFIS/efis.xml</path>
