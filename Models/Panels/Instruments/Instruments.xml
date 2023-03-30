@@ -139,10 +139,10 @@
     <name>CDU1</name>
     <path>Models/Panels/Instruments/CDU/cdu.xml</path>
     <offsets>
-      <x-m>0.435</x-m>
-      <y-m>-0.17</y-m>
-      <z-m>0.735</z-m>
-      <pitch-deg>299.5</pitch-deg>
+      <x-m>0.60214</x-m>
+      <y-m>-0.13253</y-m>
+      <z-m>0.63151</z-m>
+      <pitch-deg>294.6</pitch-deg>
     </offsets>
   </model>
   
@@ -150,10 +150,10 @@
     <name>CDU2</name>
     <path>Models/Panels/Instruments/CDU/cdu.xml</path>
     <offsets>
-      <x-m>0.435</x-m>
-      <y-m>0.13</y-m>
-      <z-m>0.735</z-m>
-      <pitch-deg>299.5</pitch-deg>
+      <x-m>0.6034</x-m>
+      <y-m>0.10157</y-m>
+      <z-m>0.63151</z-m>
+      <pitch-deg>294.6</pitch-deg>
     </offsets>
   </model>
 
