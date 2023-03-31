@@ -1,0 +1,229 @@
+<?xml version="1.0"?>
+
+<PropertyList>
+  <model>
+    <path>Models/Panels/Instruments/MFD-L/mfd-l.xml</path>
+    <offsets>
+      <x-m>0.41</x-m>
+      <y-m>-0.12</y-m>
+      <z-m>0.89</z-m>
+      <pitch-deg>-6</pitch-deg>
+    </offsets>
+  </model>
+
+  <model>
+    <path>Models/Panels/Instruments/blank/blankmfd.ac</path>
+    <offsets>
+      <x-m>0.41</x-m>
+      <y-m>0.08</y-m>
+      <z-m>0.89</z-m>
+      <pitch-deg>-6</pitch-deg>
+    </offsets>
+  </model>
+  
+  <model>
+    <path>Models/Panels/Instruments/MFD-R/mfd-r.xml</path>
+    <offsets>
+      <x-m>0.415</x-m>
+      <y-m>-0.51</y-m>
+      <z-m>0.82</z-m>
+      <pitch-deg>-6</pitch-deg>
+    </offsets>
+  </model>
+
+  <model>
+    <path>Models/Panels/Instruments/MFD-R/mfd-r.xml</path>
+    <offsets>
+      <x-m>0.415</x-m>
+      <y-m>0.51</y-m>
+      <z-m>0.82</z-m>
+      <pitch-deg>-6</pitch-deg>
+    </offsets>
+  </model>
+
+  <!--
+  <model>
+    <name>EICAS</name>
+    <path>Models/Panels/Instruments/EICAS/eicas.xml</path>
+    <offsets>
+      <x-m>0.415</x-m>
+      <y-m>-0.51</y-m>
+      <z-m>0.82</z-m>
+      <pitch-deg>0</pitch-deg>
+    </offsets>
+  </model> 
+
+  <model>
+    <name>EICAS2</name>
+    <path>Models/Panels/Instruments/EICAS/eicas.xml</path>
+    <offsets>
+      <x-m>0.235</x-m>
+      <y-m>-0.020</y-m>
+      <z-m>0.733</z-m>
+      <pitch-deg>299.5</pitch-deg>
+    </offsets>
+  </model>
+  
+  <animation>
+    <type>select</type>
+    <object-name>EICAS</object-name>
+    <condition>
+      <property>sim/current-view/internal</property>
+    </condition>
+  </animation> 
+
+  <animation>
+    <type>select</type>
+    <object-name>EICAS2</object-name>
+    <condition>
+      <property>sim/current-view/internal</property>
+    </condition>
+  </animation>
+  -->
+
+  <model>
+    <name>AUTOPILOT</name>
+    <path>Models/Panels/Instruments/AP/autopilot-panel.xml</path>
+    <offsets>
+      <x-m>0.45</x-m>
+      <y-m>-0.02</y-m>
+      <z-m>1.088</z-m>
+      <pitch-deg>0</pitch-deg>
+    </offsets>
+  </model>
+
+  <model>
+    <name>EFIS</name>
+    <path>Models/Panels/Instruments/EFIS/efis.xml</path>
+    <offsets>
+      <x-m>0.4</x-m>
+      <y-m>-0.02</y-m>
+      <z-m>0.93</z-m>
+      <pitch-deg>-6</pitch-deg>
+    </offsets>
+  </model>
+  
+  <model>
+    <name>CDU1</name>
+    <path>Models/Panels/Instruments/CDU/cdu.xml</path>
+    <offsets>
+      <x-m>0.60214</x-m>
+      <y-m>-0.13253</y-m>
+      <z-m>0.63151</z-m>
+      <pitch-deg>294.6</pitch-deg>
+    </offsets>
+  </model>
+  
+  <model>
+    <name>CDU2</name>
+    <path>Models/Panels/Instruments/CDU/cdu.xml</path>
+    <offsets>
+      <x-m>0.6034</x-m>
+      <y-m>0.10157</y-m>
+      <z-m>0.63151</z-m>
+      <pitch-deg>294.6</pitch-deg>
+    </offsets>
+  </model>
+
+  <model>
+    <name>cap-CLOCK</name>
+    <path>Models/Panels/Instruments/Clock/chronometer.xml</path>
+    <offsets>
+      <x-m>0.423</x-m>
+      <y-m>0.1</y-m>
+      <z-m>0.73</z-m>
+      <pitch-deg>-6</pitch-deg>
+    </offsets>
+  </model>
+
+  <model>
+    <name>fo-CLOCK</name>
+    <path>Models/Panels/Instruments/Clock/chronometer.xml</path>
+    <offsets>
+      <x-m>0.341</x-m>
+      <y-m>0.6</y-m>
+      <z-m>0.925</z-m>
+      <pitch-deg>0</pitch-deg>
+    </offsets>
+  </model>
+
+  <model>
+    <name>STANDBY-AH</name>
+    <path>Models/Panels/Instruments/STANDBY/att-ball.xml</path>
+    <offsets>
+      <x-m>0.407</x-m>
+      <y-m>-0.38</y-m>
+      <z-m>0.84</z-m>
+      <pitch-deg>-6</pitch-deg>
+    </offsets>
+  </model>
+  
+  <model>
+    <name>STANDBY-AH2</name>
+    <path>Models/Panels/Instruments/STANDBY/att-ball.xml</path>
+    <offsets>
+      <x-m>0.407</x-m>
+      <y-m>0.38</y-m>
+      <z-m>0.84</z-m>
+      <pitch-deg>-6</pitch-deg>
+    </offsets>
+  </model>
+
+  <model>
+    <name>STANDBY-VOR</name>
+    <path>Models/Panels/Instruments/STANDBY/vor.xml</path>
+    <offsets>
+      <x-m>0.407</x-m>
+      <y-m>-0.632</y-m>
+      <z-m>0.89</z-m>
+      <pitch-deg>-6</pitch-deg>
+    </offsets>
+  </model>
+  
+  <model>
+    <name>STANDBY-VOR2</name>
+    <path>Models/Panels/Instruments/STANDBY/vor.xml</path>
+    <offsets>
+      <x-m>0.407</x-m>
+      <y-m>0.632</y-m>
+      <z-m>0.89</z-m>
+      <pitch-deg>-6</pitch-deg>
+    </offsets>
+  </model>
+  
+  <model>
+    <name>STANDBY-ASI</name>
+    <path>Models/Panels/Instruments/STANDBY/standby-asi.xml</path>
+    <offsets>
+      <x-m>0.407</x-m>
+      <y-m>-0.38</y-m>
+      <z-m>0.775</z-m>
+      <pitch-deg>-6</pitch-deg>
+    </offsets>
+  </model>
+  
+  <model>
+    <name>STANDBY-ASI2</name>
+    <path>Models/Panels/Instruments/STANDBY/standby-asi.xml</path>
+    <offsets>
+      <x-m>0.407</x-m>
+      <y-m>0.38</y-m>
+      <z-m>0.775</z-m>
+      
+      <pitch-deg>-6</pitch-deg>
+    </offsets>
+  </model>
+
+  <!--
+  <model>
+    <name>EFB</name>
+    <path>Models/Panels/Instruments/EFB/EFB.xml</path>
+    <offsets>
+      <x-m>0.425</x-m>
+      <y-m>0</y-m>
+      <z-m>0.72</z-m>
+      <pitch-deg>-6</pitch-deg>
+    </offsets>
+  </model>
+  -->
+</PropertyList>

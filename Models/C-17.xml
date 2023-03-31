@@ -17,25 +17,6 @@
     <z-m>0.00</z-m>
   </offsets>
   
-  <!-- Disabling the ambient animation, as FG2020 cannot launch the aircraft
-       when this animation is present
-       <animation>				
-       <type>material</type>
-       <object-name></object-name>
-       <property-base>sim/model/C-17</property-base>
-       <rgb>
-       <red>0.93</red>
-       <green>0.93</green>
-       <blue>0.93</blue>
-       </rgb>
-       <ambient>
-       <red>0.93</red>
-       <green>0.93</green>
-       <blue>0.93</blue>
-       </ambient>
-       </animation>
-  -->
-  
   <!-- NASAL Code for Liveries -->	
   <nasal>
     <load>
@@ -388,7 +369,7 @@
   </animation>
   
   <model>
-    <path>Aircraft/C-17/Panels/C-17-cockpit.xml</path>
+    <path>Models/Panels/Cockpit/C-17-Cockpit.xml</path>
     <!--    
 	 <offsets>
 	 <x-m>2.30278</x-m>
