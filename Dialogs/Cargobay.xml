@@ -488,6 +488,38 @@
   <hrule/>
 
   <button>
+    <legend>Open/Close crew door</legend>
+    <default>true</default>
+    <key>Ctrl-d</key>
+    <binding>
+      <command>nasal</command>
+      <script>doors.doorsystem.crewexport();</script>
+    </binding>
+  </button>
+
+  <button>
+    <legend>Open/Close passenger door</legend>
+    <default>true</default>
+    <key>Ctrl-d</key>
+    <binding>
+      <command>nasal</command>
+      <script>doors.doorsystem.passengerexport();</script>
+    </binding>
+  </button>
+  
+  <button>
+    <legend>Open/Close Ramp</legend>
+    <default>true</default>
+    <key>Ctrl-d</key>
+    <binding>
+      <command>nasal</command>
+      <script>doors.doorsystem.rampexport();</script>
+    </binding>
+  </button>
+
+  <hrule/>
+  
+  <button>
     <legend>Close</legend>
     <default>true</default>
     <key>Esc</key>

@@ -2,90 +2,90 @@
 
 <PropertyList>
 
- <key n="4">
-				<name>Ctrl-d</name>
-				<desc>Open/close Ramp</desc>
-				<binding>
-					<command>nasal</command>
-					<script>doors.doorsystem.rampexport();</script>
-				</binding>
-			</key>
-
-		<key n="127">
-		<name>Delete</name>
-		<desc>Toggle Reversers</desc>
-		<binding>
-			<command>nasal</command>
-			<script>reversethrust.togglereverser()</script>
-		</binding>
-		</key>	
-
-		<key n="109">
-		<name>m</name>
-		<desc>engage nose wheel steering</desc>
-		<binding>
-			<command>property-assign</command>
-			<property>fdm/jsbsim/systems/NWS/engaged</property>
-		<value>1</value> 
-		</binding>
-		<mod-up>
-		<binding>
-			<command>property-assign</command>
-			<property>fdm/jsbsim/systems/NWS/engaged</property>
-        <value>0</value> 
-		</binding>
-		</mod-up>
-		</key>
-
-	   <key n="108">
-	 <name>l</name>
-     <desc>Jump signal</desc>
-     <binding>
-      <command>property-toggle</command>
-      <property>instrumentation/paras/trigger</property>
-      <value type="bool">true</value>
-     </binding>
-     <mod-up>
-      <binding>
-       <command>property-assign</command>
-      <property>instrumentation/paras/trigger</property>
-       <value type="bool">false</value>
-      </binding>
-     </mod-up>
-   </key>
-		
-	<key n="102">
-    <name>f</name>
-     <desc>Trigger flare release</desc>
-     <binding>
-      <command>property-toggle</command>
-      <property>ai/submodels/submodel/flare-release</property>
-      <value type="bool">true</value>
-     </binding>
-     <mod-up>
-      <binding>
-       <command>property-assign</command>
-      <property>ai/submodels/submodel/flare-release</property>
-       <value type="bool">false</value>
-      </binding>
-     </mod-up>
-    </key>
-	
-	 <key n="123">
-     <name>}</name>
-     <desc>Engine Autostop</desc>
+  <key n="4">
+    <name>Ctrl-d</name>
+    <desc>Open/close Ramp</desc>
     <binding>
-        <command>nasal</command>
-        <script>emu.autostop();</script>
+      <command>nasal</command>
+      <script>doors.doorsystem.rampexport();</script>
+    </binding>
+  </key>
+
+  <key n="127">
+    <name>Delete</name>
+    <desc>Toggle Reversers</desc>
+    <binding>
+      <command>nasal</command>
+      <script>reversethrust.togglereverser()</script>
+    </binding>
+  </key>	
+
+  <key n="109">
+    <name>m</name>
+    <desc>engage nose wheel steering</desc>
+    <binding>
+      <command>property-assign</command>
+      <property>fdm/jsbsim/systems/NWS/engaged</property>
+      <value>1</value> 
+    </binding>
+    <mod-up>
+      <binding>
+	<command>property-assign</command>
+	<property>fdm/jsbsim/systems/NWS/engaged</property>
+        <value>0</value> 
+      </binding>
+    </mod-up>
+  </key>
+
+  <key n="108">
+    <name>l</name>
+    <desc>Jump signal</desc>
+    <binding>
+      <command>property-toggle</command>
+      <property>instrumentation/paras/trigger</property>
+      <value type="bool">true</value>
+    </binding>
+    <mod-up>
+      <binding>
+	<command>property-assign</command>
+	<property>instrumentation/paras/trigger</property>
+	<value type="bool">false</value>
+      </binding>
+    </mod-up>
+  </key>
+  
+  <key n="102">
+    <name>f</name>
+    <desc>Trigger flare release</desc>
+    <binding>
+      <command>property-toggle</command>
+      <property>ai/submodels/submodel/flare-release</property>
+      <value type="bool">true</value>
+    </binding>
+    <mod-up>
+      <binding>
+	<command>property-assign</command>
+	<property>ai/submodels/submodel/flare-release</property>
+	<value type="bool">false</value>
+      </binding>
+    </mod-up>
+  </key>
+  
+  <key n="123">
+    <name>}</name>
+    <desc>Engine Autostop</desc>
+    <binding>
+      <command>nasal</command>
+      <script>emu.autostop();</script>
     </binding>
   </key>
   
-   <key n="125">
-     <name>}</name>
-     <desc>Engine Autostart</desc>
+  <key n="125">
+    <name>}</name>
+    <desc>Engine Autostart</desc>
     <binding>
-        <command>nasal</command>
-        <script>emu.autostart();</script>
+      <command>nasal</command>
+      <script>emu.autostart();</script>
     </binding>
   </key>
 
