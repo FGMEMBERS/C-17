@@ -315,39 +315,7 @@
     </limits>
     
     <!-- Menu Bar  -->
-    <menubar>
-      <default>
-	<menu n="100">				
-	  <label>Globemaster III</label>
-	  <enabled type="bool">true</enabled>
-	  <item>
-	    <label>Select Livery</label>
-	    <binding>
-	      <command>nasal</command>
-	      <script>aircraft.livery.dialog.open();</script>
-	    </binding>
-	  </item>
-	  <item>
-	    <label>Auto Start</label>
-	    <binding>
-	      <command>nasal</command>
-	      <script>
-	      autostart.StartUp();</script>
-	    </binding>
-	  </item>
-	  <item>
-	    <label>Cargobay loading</label>
-	    <binding>
-	      <command>nasal</command>
-	      <script>
-		var cargobay = gui.Dialog.new("sim/gui/dialogs/Cargobay/dialog", "Dialogs/Cargobay.xml");
-		cargobay.open();
-	      </script>
-	    </binding>
-	  </item>
-	</menu>		
-      </default>	
-    </menubar>
+    <menubar include="Dialogs/menubar.xml" />
 
     <aircraft-data>
       <path>fdm/jsbsim/systems/payload/selected/cargo-id</path>
