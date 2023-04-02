@@ -1,5 +1,13 @@
 <?xml version="1.0"?>
 
+<!--
+:copyright: 2023, IAHM-COL
+License: GPLv3
+
+Redistribution, or reuse, with or without modifications
+shall keep this attribution information. 
+-->
+
 <PropertyList>
   <name>Cargobay loading</name>
   <layout>vbox</layout>
@@ -67,10 +75,13 @@
       
       <binding>
 	<condition>
-	  <equals>
-	    <property>sim/multiplay/generic/string[1]</property>
-	    <value>Empty</value>
-	  </equals>
+	  <and>
+	    <property>fdm/jsbsim/systems/payload/limits/unload-able</property>
+	    <equals>
+	      <property>sim/multiplay/generic/string[1]</property>
+	      <value>Empty</value>
+	    </equals>
+	  </and>
 	</condition>
 	<command>property-assign</command>
 	<property>fdm/jsbsim/systems/payload/selected/cargo-id</property>
@@ -83,8 +94,8 @@
       <binding>
 	<condition>
 	  <equals>
-	    <property>sim/multiplay/generic/string[1]</property>
-	    <value>Empty</value>
+	    <property>fdm/jsbsim/systems/payload/selected/cargo-id</property>
+	    <property>fdm/jsbsim/systems/payload/empty/item-id</property>
 	  </equals>
 	</condition>
 	<command>property-assign</command>
@@ -94,10 +105,13 @@
 
       <binding>
 	<condition>
-	  <equals>
-	    <property>sim/multiplay/generic/string[1]</property>
-	    <value>CH-47</value>
-	  </equals>
+	  <and>
+	    <property>fdm/jsbsim/systems/payload/limits/load-able</property>
+	    <equals>
+	      <property>sim/multiplay/generic/string[1]</property>
+	      <value>CH-47</value>
+	    </equals>
+	  </and>
 	</condition>
 	<command>property-assign</command>
 	<property>fdm/jsbsim/systems/payload/selected/cargo-id</property>
@@ -106,8 +120,8 @@
       <binding>
 	<condition>
 	  <equals>
-	    <property>sim/multiplay/generic/string[1]</property>
-	    <value>CH-47</value>
+	    <property>fdm/jsbsim/systems/payload/selected/cargo-id</property>
+	    <property>fdm/jsbsim/systems/payload/CH-47/item-id</property>
 	  </equals>
 	</condition>
 	<command>property-assign</command>
@@ -117,10 +131,13 @@
 
       <binding>
 	<condition>
-	  <equals>
-	    <property>sim/multiplay/generic/string[1]</property>
-	    <value>M1 Abrams</value>
-	  </equals>
+	  <and>
+	    <property>fdm/jsbsim/systems/payload/limits/load-able</property>
+	    <equals>
+	      <property>sim/multiplay/generic/string[1]</property>
+	      <value>M1 Abrams</value>
+	    </equals>
+	  </and>
 	</condition>
 	<command>property-assign</command>
 	<property>fdm/jsbsim/systems/payload/selected/cargo-id</property>
@@ -129,8 +146,8 @@
       <binding>
 	<condition>
 	  <equals>
-	    <property>sim/multiplay/generic/string[1]</property>
-	    <value>M1 Abrams</value>
+	    <property>fdm/jsbsim/systems/payload/selected/cargo-id</property>
+	    <property>fdm/jsbsim/systems/payload/M1Abrams/item-id</property>
 	  </equals>
 	</condition>
 	<command>property-assign</command>
@@ -140,10 +157,13 @@
 
       <binding>
 	<condition>
-	  <equals>
-	    <property>sim/multiplay/generic/string[1]</property>
-	    <value>1x Hummer</value>
-	  </equals>
+	  <and>
+	    <property>fdm/jsbsim/systems/payload/limits/load-able</property>
+	    <equals>
+	      <property>sim/multiplay/generic/string[1]</property>
+	      <value>1x Hummer</value>
+	    </equals>
+	  </and>
 	</condition>
 	<command>property-assign</command>
 	<property>fdm/jsbsim/systems/payload/selected/cargo-id</property>
@@ -152,8 +172,8 @@
       <binding>
 	<condition>
 	  <equals>
-	    <property>sim/multiplay/generic/string[1]</property>
-	    <value>1x Hummer</value>
+	    <property>fdm/jsbsim/systems/payload/selected/cargo-id</property>
+	    <property>fdm/jsbsim/systems/payload/Hummer1x/item-id</property>
 	  </equals>
 	</condition>
 	<command>property-assign</command>
@@ -163,20 +183,23 @@
 
       <binding>
 	<condition>
-	  <equals>
-	    <property>sim/multiplay/generic/string[1]</property>
-	    <value>2x Hummer</value>
-	  </equals>
+	  <and>
+	    <property>fdm/jsbsim/systems/payload/limits/load-able</property>
+	    <equals>
+	      <property>sim/multiplay/generic/string[1]</property>
+	      <value>2x Hummer</value>
+	    </equals>
+	  </and>
 	</condition>
 	<command>property-assign</command>
 	<property>fdm/jsbsim/systems/payload/selected/cargo-id</property>
 	<property>fdm/jsbsim/systems/payload/Hummer2x/item-id</property>
       </binding>
-       <binding>
+      <binding>
 	<condition>
 	  <equals>
-	    <property>sim/multiplay/generic/string[1]</property>
-	    <value>2x Hummer</value>
+	    <property>fdm/jsbsim/systems/payload/selected/cargo-id</property>
+	    <property>fdm/jsbsim/systems/payload/Hummer2x/item-id</property>
 	  </equals>
 	</condition>
 	<command>property-assign</command>
@@ -186,10 +209,13 @@
       
       <binding>
 	<condition>
-	  <equals>
-	    <property>sim/multiplay/generic/string[1]</property>
-	    <value>1x LandRover WMIK</value>
-	  </equals>
+	  <and>
+	    <property>fdm/jsbsim/systems/payload/limits/load-able</property>
+	    <equals>
+	      <property>sim/multiplay/generic/string[1]</property>
+	      <value>1x LandRover WMIK</value>
+	    </equals>
+	  </and>
 	</condition>
 	<command>property-assign</command>
 	<property>fdm/jsbsim/systems/payload/selected/cargo-id</property>
@@ -198,8 +224,8 @@
       <binding>
 	<condition>
 	  <equals>
-	    <property>sim/multiplay/generic/string[1]</property>
-	    <value>1x LandRover WMIK</value>
+	    <property>fdm/jsbsim/systems/payload/selected/cargo-id</property>
+	    <property>fdm/jsbsim/systems/payload/LandRover1x/item-id</property>
 	  </equals>
 	</condition>
 	<command>property-assign</command>
@@ -209,10 +235,13 @@
 
       <binding>
 	<condition>
-	  <equals>
-	    <property>sim/multiplay/generic/string[1]</property>
-	    <value>2x LandRover WMIK</value>
-	  </equals>
+	  <and>
+	    <property>fdm/jsbsim/systems/payload/limits/load-able</property>
+	    <equals>
+	      <property>sim/multiplay/generic/string[1]</property>
+	      <value>2x LandRover WMIK</value>
+	    </equals>
+	  </and>
 	</condition>
 	<command>property-assign</command>
 	<property>fdm/jsbsim/systems/payload/selected/cargo-id</property>
@@ -221,8 +250,8 @@
       <binding>
 	<condition>
 	  <equals>
-	    <property>sim/multiplay/generic/string[1]</property>
-	    <value>2x LandRover WMIK</value>
+	    <property>fdm/jsbsim/systems/payload/selected/cargo-id</property>
+	    <property>fdm/jsbsim/systems/payload/LandRover2x/item-id</property>
 	  </equals>
 	</condition>
 	<command>property-assign</command>
@@ -232,10 +261,13 @@
 
       <binding>
 	<condition>
-	  <equals>
-	    <property>sim/multiplay/generic/string[1]</property>
-	    <value>4x LandRover WMIK</value>
-	  </equals>
+	  <and>
+	    <property>fdm/jsbsim/systems/payload/limits/load-able</property>
+	    <equals>
+	      <property>sim/multiplay/generic/string[1]</property>
+	      <value>4x LandRover WMIK</value>
+	    </equals>
+	  </and>
 	</condition>
 	<command>property-assign</command>
 	<property>fdm/jsbsim/systems/payload/selected/cargo-id</property>
@@ -244,8 +276,8 @@
       <binding>
 	<condition>
 	  <equals>
-	    <property>sim/multiplay/generic/string[1]</property>
-	    <value>4x LandRover WMIK</value>
+	    <property>fdm/jsbsim/systems/payload/selected/cargo-id</property>
+	    <property>fdm/jsbsim/systems/payload/LandRover4x/item-id</property>
 	  </equals>
 	</condition>
 	<command>property-assign</command>
@@ -255,10 +287,13 @@
 
       <binding>
 	<condition>
-	  <equals>
-	    <property>sim/multiplay/generic/string[1]</property>
-	    <value>1x Jackal</value>
-	  </equals>
+	  <and>
+	    <property>fdm/jsbsim/systems/payload/limits/load-able</property>
+	    <equals>
+	      <property>sim/multiplay/generic/string[1]</property>
+	      <value>1x Jackal</value>
+	    </equals>
+	  </and>
 	</condition>
 	<command>property-assign</command>
 	<property>fdm/jsbsim/systems/payload/selected/cargo-id</property>
@@ -267,8 +302,8 @@
       <binding>
 	<condition>
 	  <equals>
-	    <property>sim/multiplay/generic/string[1]</property>
-	    <value>1x Jackal</value>
+	    <property>fdm/jsbsim/systems/payload/selected/cargo-id</property>
+	    <property>fdm/jsbsim/systems/payload/Jackal1x/item-id</property>
 	  </equals>
 	</condition>
 	<command>property-assign</command>
@@ -278,10 +313,13 @@
 
       <binding>
 	<condition>
-	  <equals>
-	    <property>sim/multiplay/generic/string[1]</property>
-	    <value>2x Jackal</value>
-	  </equals>
+	  <and>
+	    <property>fdm/jsbsim/systems/payload/limits/load-able</property>
+	    <equals>
+	      <property>sim/multiplay/generic/string[1]</property>
+	      <value>2x Jackal</value>
+	    </equals>
+	  </and>
 	</condition>
 	<command>property-assign</command>
 	<property>fdm/jsbsim/systems/payload/selected/cargo-id</property>
@@ -290,8 +328,8 @@
       <binding>
 	<condition>
 	  <equals>
-	    <property>sim/multiplay/generic/string[1]</property>
-	    <value>2x Jackal</value>
+	    <property>fdm/jsbsim/systems/payload/selected/cargo-id</property>
+	    <property>fdm/jsbsim/systems/payload/Jackal2x/item-id</property>
 	  </equals>
 	</condition>
 	<command>property-assign</command>
@@ -301,10 +339,13 @@
 
       <binding>
 	<condition>
-	  <equals>
-	    <property>sim/multiplay/generic/string[1]</property>
-	    <value>MTVR</value>
-	  </equals>
+	  <and>
+	    <property>fdm/jsbsim/systems/payload/limits/load-able</property>
+	    <equals>
+	      <property>sim/multiplay/generic/string[1]</property>
+	      <value>MTVR</value>
+	    </equals>
+	  </and>
 	</condition>
 	<command>property-assign</command>
 	<property>fdm/jsbsim/systems/payload/selected/cargo-id</property>
@@ -313,8 +354,8 @@
       <binding>
 	<condition>
 	  <equals>
-	    <property>sim/multiplay/generic/string[1]</property>
-	    <value>MTVR</value>
+	    <property>fdm/jsbsim/systems/payload/selected/cargo-id</property>
+	    <property>fdm/jsbsim/systems/payload/MTVR/item-id</property>
 	  </equals>
 	</condition>
 	<command>property-assign</command>
@@ -324,10 +365,13 @@
 
       <binding>
 	<condition>
-	  <equals>
-	    <property>sim/multiplay/generic/string[1]</property>
-	    <value>BVS10-Viking</value>
-	  </equals>
+	  <and>
+	    <property>fdm/jsbsim/systems/payload/limits/load-able</property>
+	    <equals>
+	      <property>sim/multiplay/generic/string[1]</property>
+	      <value>BVS10-Viking</value>
+	    </equals>
+	  </and>
 	</condition>
 	<command>property-assign</command>
 	<property>fdm/jsbsim/systems/payload/selected/cargo-id</property>
@@ -336,8 +380,8 @@
       <binding>
 	<condition>
 	  <equals>
-	    <property>sim/multiplay/generic/string[1]</property>
-	    <value>BVS10-Viking</value>
+	    <property>fdm/jsbsim/systems/payload/selected/cargo-id</property>
+	    <property>fdm/jsbsim/systems/payload/viking/item-id</property>
 	  </equals>
 	</condition>
 	<command>property-assign</command>
@@ -347,10 +391,13 @@
 
       <binding>
 	<condition>
-	  <equals>
-	    <property>sim/multiplay/generic/string[1]</property>
-	    <value>M2-Bradle</value>
-	  </equals>
+	  <and>
+	    <property>fdm/jsbsim/systems/payload/limits/load-able</property>
+	    <equals>
+	      <property>sim/multiplay/generic/string[1]</property>
+	      <value>M2-Bradle</value>
+	    </equals>
+	  </and>
 	</condition>
 	<command>property-assign</command>
 	<property>fdm/jsbsim/systems/payload/selected/cargo-id</property>
@@ -359,8 +406,8 @@
       <binding>
 	<condition>
 	  <equals>
-	    <property>sim/multiplay/generic/string[1]</property>
-	    <value>M2-Bradle</value>
+	    <property>fdm/jsbsim/systems/payload/selected/cargo-id</property>
+	    <property>fdm/jsbsim/systems/payload/bradle/item-id</property>
 	  </equals>
 	</condition>
 	<command>property-assign</command>
@@ -370,10 +417,13 @@
 
       <binding>
 	<condition>
-	  <equals>
-	    <property>sim/multiplay/generic/string[1]</property>
-	    <value>MLRS</value>
-	  </equals>
+	  <and>
+	    <property>fdm/jsbsim/systems/payload/limits/load-able</property>
+	    <equals>
+	      <property>sim/multiplay/generic/string[1]</property>
+	      <value>MLRS</value>
+	    </equals>
+	  </and>
 	</condition>
 	<command>property-assign</command>
 	<property>fdm/jsbsim/systems/payload/selected/cargo-id</property>
@@ -382,8 +432,8 @@
       <binding>
 	<condition>
 	  <equals>
-	    <property>sim/multiplay/generic/string[1]</property>
-	    <value>MLRS</value>
+	    <property>fdm/jsbsim/systems/payload/selected/cargo-id</property>
+	    <property>fdm/jsbsim/systems/payload/MLRS/item-id</property>
 	  </equals>
 	</condition>
 	<command>property-assign</command>
@@ -393,10 +443,13 @@
 
       <binding>
 	<condition>
-	  <equals>
-	    <property>sim/multiplay/generic/string[1]</property>
-	    <value>Buffalo</value>
-	  </equals>
+	  <and>
+	    <property>fdm/jsbsim/systems/payload/limits/load-able</property>
+	    <equals>
+	      <property>sim/multiplay/generic/string[1]</property>
+	      <value>Buffalo</value>
+	    </equals>
+	  </and>
 	</condition>
 	<command>property-assign</command>
 	<property>fdm/jsbsim/systems/payload/selected/cargo-id</property>
@@ -405,8 +458,8 @@
       <binding>
 	<condition>
 	  <equals>
-	    <property>sim/multiplay/generic/string[1]</property>
-	    <value>Buffalo</value>
+	    <property>fdm/jsbsim/systems/payload/selected/cargo-id</property>
+	    <property>fdm/jsbsim/systems/payload/buffalo/item-id</property>
 	  </equals>
 	</condition>
 	<command>property-assign</command>
@@ -416,10 +469,13 @@
 
       <binding>
 	<condition>
-	  <equals>
-	    <property>sim/multiplay/generic/string[1]</property>
-	    <value>Stryker</value>
-	  </equals>
+	  <and>
+	    <property>fdm/jsbsim/systems/payload/limits/load-able</property>
+	    <equals>
+	      <property>sim/multiplay/generic/string[1]</property>
+	      <value>Stryker</value>
+	    </equals>
+	  </and>
 	</condition>
 	<command>property-assign</command>
 	<property>fdm/jsbsim/systems/payload/selected/cargo-id</property>
@@ -428,8 +484,8 @@
       <binding>
 	<condition>
 	  <equals>
-	    <property>sim/multiplay/generic/string[1]</property>
-	    <value>Stryker</value>
+	    <property>fdm/jsbsim/systems/payload/selected/cargo-id</property>
+	    <property>fdm/jsbsim/systems/payload/stryker/item-id</property>
 	  </equals>
 	</condition>
 	<command>property-assign</command>
@@ -439,10 +495,13 @@
 
       <binding>
 	<condition>
-	  <equals>
-	    <property>sim/multiplay/generic/string[1]</property>
-	    <value>Scimiter</value>
-	  </equals>
+	  <and>
+	    <property>fdm/jsbsim/systems/payload/limits/load-able</property>
+	    <equals>
+	      <property>sim/multiplay/generic/string[1]</property>
+	      <value>Scimiter</value>
+	    </equals>
+	  </and>
 	</condition>
 	<command>property-assign</command>
 	<property>fdm/jsbsim/systems/payload/selected/cargo-id</property>
@@ -451,8 +510,8 @@
       <binding>
 	<condition>
 	  <equals>
-	    <property>sim/multiplay/generic/string[1]</property>
-	    <value>Scimiter</value>
+	    <property>fdm/jsbsim/systems/payload/selected/cargo-id</property>
+	    <property>fdm/jsbsim/systems/payload/FV107/item-id</property>
 	  </equals>
 	</condition>
 	<command>property-assign</command>
@@ -462,10 +521,13 @@
 
       <binding>
 	<condition>
-	  <equals>
-	    <property>sim/multiplay/generic/string[1]</property>
-	    <value>FV510</value>
-	  </equals>
+	  <and>
+	    <property>fdm/jsbsim/systems/payload/limits/load-able</property>
+	    <equals>
+	      <property>sim/multiplay/generic/string[1]</property>
+	      <value>FV510</value>
+	    </equals>
+	  </and>
 	</condition>
 	<command>property-assign</command>
 	<property>fdm/jsbsim/systems/payload/selected/cargo-id</property>
@@ -474,8 +536,8 @@
       <binding>
 	<condition>
 	  <equals>
-	    <property>sim/multiplay/generic/string[1]</property>
-	    <value>FV510</value>
+	    <property>fdm/jsbsim/systems/payload/selected/cargo-id</property>
+	    <property>fdm/jsbsim/systems/payload/FV510/item-id</property>
 	  </equals>
 	</condition>
 	<command>property-assign</command>

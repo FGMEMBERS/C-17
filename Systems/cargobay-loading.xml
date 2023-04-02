@@ -1,6 +1,14 @@
 <?xml version="1.0"?>
 <?xml-stylesheet href="JSBSim.xsl" type="application/xml"?>
 
+<!--
+:copyright: 2023, IAHM-COL
+License: GPLv3
+
+Redistribution, or reuse, with or without modifications
+shall keep this attribution information. 
+-->
+
 <system>
     <channel name="Weight of Payload in Lbs">
       <switch name="systems/payload/selected/weight-lbs">
@@ -321,4 +329,33 @@
 	</test>
       </switch>
     </channel>
+
+    <channel name="loading and unloading limits">
+      <!--
+	  Limits for Loading and unloading of the cargo bay
+
+           + Objects can only be loaded in cargo bay when
+	     * Bay is empty
+	     * Ramp is open
+	     * Aircraft is on the groud and not moving
+	   + Cargo bay can only be empty when
+	     * Ramp is open
+      -->
+      <switch name="systems/payload/limits/load-able">
+	<default value="0"/>
+	<test logic="AND" value="1">
+	  systems/payload/selected/cargo-id == systems/payload/empty/item-id
+	  systems/payload/doors/ramp/open == 1
+	  gear/wow == 1
+	  /velocities/groundspeed-kt LT 5
+	</test>
+      </switch>
+      <switch name="systems/payload/limits/unload-able">
+	<default value="0"/>
+	<test value="1">
+	  systems/payload/doors/ramp/open == 1
+	</test>
+      </switch>
+    </channel>
+
   </system>
