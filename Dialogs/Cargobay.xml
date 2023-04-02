@@ -17,7 +17,11 @@ shall keep this attribution information.
     <empty><stretch>1</stretch></empty>
 
     <text>
-      <label>Cargobay Loading</label>
+      <label>MMMMMM</label>
+      <halign>left</halign>
+      <format>Cargobay: %s</format>
+      <property>fdm/jsbsim/systems/payload/selected/item-string</property>
+      <live>true</live>
     </text>
 
     <empty><stretch>1</stretch></empty>
