@@ -1,0 +1,80 @@
+<?xml version="1.0"?>
+
+<PropertyList>
+  <radar>
+    <switch type="string" archive="y">on</switch>
+    <mode-control type="int" archive="y">1</mode-control>
+    <display-mode>plan</display-mode>
+    <display-controls>
+      <WX type="bool" archive="y">false</WX>
+      <pos type="bool" archive="y">true</pos>
+      <data type="bool" archive="y">true</data>
+      <symbol type="bool" archive="y">true</symbol>
+      <rotate type="bool" archive="y">true</rotate>
+    </display-controls>
+    <serviceable type="bool">true</serviceable>
+    <range type="int" archive="y">10</range>
+    <reference-range-nm type="double" archive="y">640</reference-range-nm>
+    <mode type="string" archive="y">WX</mode>
+    <font>
+      <color>
+        <red type="float">0.7</red>
+        <green type="float">0.7</green>
+        <blue type="float">0.7</blue>
+        <alpha type="float">1</alpha>
+      </color>
+      <name type="string" archive="y">helvetica_bold.txf</name>
+      <size type="float">8I think all</size>
+      <line-spacing type="float">0.2</line-spacing>
+    </font>
+    <lightning type="bool" archive="y">true</lightning>
+    <display-mode type="string" archive="y">arc</display-mode>
+    <radar-texture-path type="string" archive="y">Aircraft/C-17/Models/Panels/Instruments/MFD/od_wxradar.png</radar-texture-path>
+    <echo-texture-path type="string" archive="y">Aircraft/C-17/Models/Panels/Instruments/MFD/wxecho.png</echo-texture-path>
+    <minimized type="bool" archive="y">false</minimized>
+    <heading-marker type="bool" archive="y">true</heading-marker>
+    <limit-deg type="int">360</limit-deg>
+  </radar>
+  
+  <dme>
+    <switch-position>1</switch-position>
+  </dme>               
+
+  <efis>
+    <ecam>
+      <display-mode type="string">FUEL</display-mode>
+    </ecam>
+
+    <nd>
+      <display-mode type="string">VOR</display-mode>
+      <display-mode-knob type="int">2</display-mode-knob>
+      <display-range type="int">20</display-range>
+    </nd>
+
+    <input>
+      <vor-adf-1 type="int">1</vor-adf-1>
+      <vor-adf-2 type="int">1</vor-adf-2>
+      <CSTR type="bool">1</CSTR>
+      <WPT type="bool">1</WPT>
+      <VORD type="bool">1</VORD>
+      <NDB type="bool">1</NDB>
+      <ARPT type="bool">1</ARPT>
+      <WX type="bool">1</WX>
+      <TERR type="bool">1</TERR>
+      <TRAF type="bool">1</TRAF>
+      <taxi type="bool">1</taxi>
+    </input>
+  </efis>
+
+  <doors>
+    <crew>
+      <position-norm userarchive="y" type="double">0</position-norm>
+    </crew>
+    <passenger>
+      <position-norm userarchive="y" type="double">0</position-norm>
+    </passenger>
+    <ramp>
+      <position-norm userarchive="y" type="double">0</position-norm>
+    </ramp>
+  </doors>
+</PropertyList>
