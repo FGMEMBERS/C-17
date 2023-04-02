@@ -487,6 +487,89 @@
   </group>
   <hrule/>
 
+  <group>
+    <layout>hbox</layout>
+    <default-padding>8</default-padding>
+    <text>
+      <visible>
+	<property>fdm/jsbsim/systems/payload/doors/crew/open</property>
+      </visible>
+      <label>Crew door is open</label>
+    </text>
+    <empty><stretch>1</stretch></empty>
+    <text>
+      <visible>
+	<property>fdm/jsbsim/systems/payload/doors/crew/closed</property>
+      </visible>
+      <label>Crew door is closed</label>
+    </text>
+    <empty><stretch>1</stretch></empty>
+    <button>
+      <legend>Open/Close</legend>
+      <default>true</default>
+      <binding>
+	<command>nasal</command>
+	<script>doors.doorsystem.crewexport();</script>
+      </binding>
+    </button>
+  </group>
+
+  <group>
+    <layout>hbox</layout>
+    <default-padding>8</default-padding>
+    <text>
+      <visible>
+	<property>fdm/jsbsim/systems/payload/doors/passenger/open</property>
+      </visible>
+      <label>Passenger door is open</label>
+    </text>
+    <empty><stretch>1</stretch></empty>
+    <text>
+      <visible>
+	<property>fdm/jsbsim/systems/payload/doors/passenger/closed</property>
+      </visible>
+      <label>Passenger door is closed</label>
+    </text>
+    <empty><stretch>1</stretch></empty>
+    <button>
+      <legend>Open/Close</legend>
+      <default>true</default>
+      <binding>
+	<command>nasal</command>
+	<script>doors.doorsystem.passengerexport();</script>
+      </binding>
+    </button>
+  </group>
+
+  <group>
+    <layout>hbox</layout>
+    <default-padding>8</default-padding>
+    <text>
+      <visible>
+	<property>fdm/jsbsim/systems/payload/doors/ramp/open</property>
+      </visible>
+      <label>Ramp is open</label>
+    </text>
+    <empty><stretch>1</stretch></empty>
+    <text>
+      <visible>
+	<property>fdm/jsbsim/systems/payload/doors/ramp/closed</property>
+      </visible>
+      <label>Ramp is closed</label>
+    </text>
+    <empty><stretch>1</stretch></empty>
+    <button>
+      <legend>Open/Close</legend>
+      <default>true</default>
+      <key>Ctrl-d</key>
+      <binding>
+	<command>nasal</command>
+	<script>doors.doorsystem.rampexport();</script>
+      </binding>
+    </button>
+  </group>
+  <hrule/>
+  
   <button>
     <legend>Close</legend>
     <default>true</default>

@@ -271,5 +271,54 @@
 	<default value="systems/payload/selected/position-z-inches"/>
       </switch>
     </channel>
-    
+
+    <channel name="Doors status">
+      <switch name="systems/payload/doors/crew/position-norm">
+	<default value="/instrumentation/doors/crew/position-norm"/>
+      </switch>
+      <switch name="systems/payload/doors/crew/open">
+	<default value="0"/>
+	<test value="1">
+	  systems/payload/doors/crew/position-norm == 1
+	</test>
+      </switch>
+      <switch name="systems/payload/doors/crew/closed">
+	<default value="0"/>
+	<test value="1">
+	  systems/payload/doors/crew/position-norm == 0
+	</test>
+      </switch>
+
+      <switch name="systems/payload/doors/passenger/position-norm">
+	<default value="/instrumentation/doors/passenger/position-norm"/>
+      </switch>
+      <switch name="systems/payload/doors/passenger/open">
+	<default value="0"/>
+	<test value="1">
+	  systems/payload/doors/passenger/position-norm == 1
+	</test>
+      </switch>
+      <switch name="systems/payload/doors/passenger/closed">
+	<default value="0"/>
+	<test value="1">
+	  systems/payload/doors/passenger/position-norm == 0
+	</test>
+      </switch>
+
+      <switch name="systems/payload/doors/ramp/position-norm">
+	<default value="/instrumentation/doors/ramp/position-norm"/>
+      </switch>
+      <switch name="systems/payload/doors/ramp/open">
+	<default value="0"/>
+	<test value="1">
+	  systems/payload/doors/ramp/position-norm == 1
+	</test>
+      </switch>
+      <switch name="systems/payload/doors/ramp/closed">
+	<default value="0"/>
+	<test value="1">
+	  systems/payload/doors/ramp/position-norm == 0
+	</test>
+      </switch>
+    </channel>
   </system>
