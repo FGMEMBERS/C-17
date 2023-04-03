@@ -1,12 +1,16 @@
 <?xml version="1.0"?>
 
-<!-- By Robert Maheu? -->
+<!--
+By Robert Maheu 
+https://liveries.flightgear.org/liveries.php?id=406
+-->
 
 <PropertyList>
   <sim>
     <model>
       <livery>
         <name type="string">Royal Canadian Air Force CC-177</name>
+	<database-id type="int">406</database-id>
         <texture>Liveries/RCAF177703.png</texture>
       </livery>
     </model>
