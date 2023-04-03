@@ -7,7 +7,7 @@ name "Elevator2"
 loc 6.7419 0.0573997 0.016384
 data 12
 HStab Left H
-texture "C-17-0174.jpg"
+texture "USAF62AW2.png"
 crease 30.000000
 numvert 10
 42.5022 11.0539 0.368316
@@ -65,7 +65,7 @@ name "Antenna3"
 loc 13.065 3.68869 0.51049
 data 13
 Misc Body 2 H
-texture "C-17-0174.jpg"
+texture "USAF62AW2.png"
 crease 30.000000
 numvert 74
 0.13845 -0.16145 0.0130234
@@ -719,7 +719,7 @@ name "Antenna2"
 loc 13.1545 3.60207 1.48955
 data 13
 Misc Body 2 H
-texture "C-17-0174.jpg"
+texture "USAF62AW2.png"
 crease 30.000000
 numvert 74
 0.13845 -0.16145 -0.0447465
@@ -1373,7 +1373,7 @@ name "Antenna4"
 loc 13.1075 3.59729 -1.23052
 data 13
 Misc Body 2 H
-texture "C-17-0174.jpg"
+texture "USAF62AW2.png"
 crease 30.000000
 numvert 74
 0.138448 -0.16145 0.0449446
@@ -2026,7 +2026,7 @@ OBJECT poly
 name "Gear"
 data 15
 Gear 10 strut H
-texture "C-17-0174.jpg"
+texture "USAF62AW2.png"
 crease 30.000000
 numvert 3
 19.1207 -2.53938 -3.86919
@@ -2044,7 +2044,7 @@ OBJECT poly
 name "Gear.002"
 data 14
 Gear 8 strut H
-texture "C-17-0174.jpg"
+texture "USAF62AW2.png"
 crease 30.000000
 numvert 3
 21.8639 -2.53938 -3.86919
@@ -2061,7 +2061,7 @@ kids 0
 OBJECT poly
 name "FanHub1"
 loc -3.6945 -1.44363 26.2292
-texture "C-17-0174.jpg"
+texture "USAF62AW2.png"
 crease 45.000000
 numvert 181
 17.8753 1.2355 -12.169
@@ -4230,7 +4230,7 @@ kids 0
 OBJECT poly
 name "FanDisk1"
 loc -3.6898 11.714 15.039
-texture "C-17-0174.jpg"
+texture "USAF62AW2.png"
 crease 45.000000
 numvert 70
 18.0766 -12.0201 -0.810905
@@ -4706,7 +4706,7 @@ name "Engine1.Cowl3"
 loc 3.1578 -0.670559 6.46145
 data 11
 c17-newfuse
-texture "C-17-0174.jpg"
+texture "USAF62AW2.png"
 crease 30.000000
 numvert 176
 13.319 0.0742066 8.70933
@@ -6242,7 +6242,7 @@ kids 0
 OBJECT poly
 name "Engine1.TR"
 loc 20.0582 5.97105 13.9383
-texture "C-17-0174.jpg"
+texture "USAF62AW2.png"
 crease 45.000000
 numvert 58
 -3.75541 -6.34568 0
@@ -6840,7 +6840,7 @@ kids 0
 OBJECT poly
 name "Engine3.TR"
 loc 16.8212 6.72454 7.48011
-texture "C-17-0174.jpg"
+texture "USAF62AW2.png"
 crease 45.000000
 numvert 58
 -2.76178 -5.31433 -14.7224
@@ -7444,7 +7444,7 @@ name "NoseGearDr4"
 loc -5.14984e-005 -0.00146861 -4.97997e-005
 data 11
 c17-newfuse
-texture "C-17-0174.jpg"
+texture "USAF62AW2.png"
 crease 30.000000
 numvert 32
 -24.5445 -2.24053 -0.659901
@@ -7724,7 +7724,7 @@ kids 0
 OBJECT poly
 name "CargoRamp2"
 loc 33.1085 -0.332539 0.0304674
-texture "C-17-0174.jpg"
+texture "USAF62AW2.png"
 crease 45.000000
 numvert 77
 0.0117378 -0.813496 -0.184463
@@ -8245,7 +8245,7 @@ kids 1
 OBJECT poly
 name "NGTires"
 loc -0.0254962 0.012553 -0.0493882
-texture "C-17-0174.jpg"
+texture "USAF62AW2.png"
 crease 45.000000
 numvert 100
 3.43393 -3.79968 0.157014
@@ -9507,7 +9507,7 @@ name "MainGear2.RearStrut"
 loc 22.9887 -2.55827 11.7627
 data 14
 Gear 4 strut H
-texture "C-17-0174.jpg"
+texture "USAF62AW2.png"
 crease 30.000000
 numvert 96
 -0.124451 -0.909874 -14.5704
@@ -9949,7 +9949,7 @@ name "MainGear2.FrontStrut"
 loc 20.4473 -2.56347 11.7678
 data 14
 Gear 4 strut H
-texture "C-17-0174.jpg"
+texture "USAF62AW2.png"
 crease 30.000000
 numvert 96
 -0.166771 -0.144501 -14.3851
@@ -10391,7 +10391,7 @@ name "MainGear2.RearTires"
 loc 22.9823 -3.3903 -3.17525
 data 8
 Gear 4 H
-texture "C-17-0174.jpg"
+texture "USAF62AW2.png"
 crease 30.000000
 numvert 150
 0.528316 0.554331 0.214649
@@ -11739,7 +11739,7 @@ name "MainGear2.FrontTires"
 loc 20.4327 -3.38463 -3.16492
 data 8
 Gear 4 H
-texture "C-17-0174.jpg"
+texture "USAF62AW2.png"
 crease 30.000000
 numvert 150
 0.208317 0.640079 -0.750313
@@ -13087,7 +13087,7 @@ name "MainGear1.FrontTires"
 loc 20.4327 -3.39176 3.16492
 data 8
 Gear 4 H
-texture "C-17-0174.jpg"
+texture "USAF62AW2.png"
 crease 30.000000
 numvert 150
 0.528316 -0.554331 -0.214645
@@ -14435,7 +14435,7 @@ name "MainGear1.Dr3"
 loc -0.19268 -0.0816877 1.02154
 data 9
 Door 10 H
-texture "C-17-0174.jpg"
+texture "USAF62AW2.png"
 crease 30.000000
 numvert 8
 19.2952 -3.46768 -0.34452
@@ -14488,7 +14488,7 @@ name "Gear 10 strut H"
 loc -0.0792198 0.0829377 0.00325329
 data 15
 Gear 10 strut H
-texture "C-17-0174.jpg"
+texture "USAF62AW2.png"
 crease 30.000000
 numvert 3
 19.1999 -2.62232 -3.87244
@@ -14507,7 +14507,7 @@ name "Gear 7 strut H"
 loc -0.0792198 0.0829377 0.00325329
 data 14
 Gear 7 strut H
-texture "C-17-0174.jpg"
+texture "USAF62AW2.png"
 crease 30.000000
 numvert 3
 21.9431 -2.62232 3.86956
@@ -14526,7 +14526,7 @@ name "Gear 8 strut H"
 loc -0.0792198 0.0829377 0.00325329
 data 14
 Gear 8 strut H
-texture "C-17-0174.jpg"
+texture "USAF62AW2.png"
 crease 30.000000
 numvert 3
 21.9431 -2.62232 -3.87244
@@ -14545,7 +14545,7 @@ name "Gear 9 strut H"
 loc -0.0792198 0.0829377 0.00325329
 data 14
 Gear 9 strut H
-texture "C-17-0174.jpg"
+texture "USAF62AW2.png"
 crease 30.000000
 numvert 4
 19.2024 -2.62654 3.87472
@@ -14571,7 +14571,7 @@ name "Misc Body 10 H*"
 loc -0.0792198 0.0829377 0.00325329
 data 14
 Misc Body 6 H*
-texture "C-17-0174.jpg"
+texture "USAF62AW2.png"
 crease 30.000000
 numvert 21
 22.4028 0.609601 -9.4488
@@ -14700,7 +14700,7 @@ name "Misc Body 11 H*"
 loc -0.0792198 0.0829377 0.00325329
 data 15
 Misc Body 11 H*
-texture "C-17-0174.jpg"
+texture "USAF62AW2.png"
 crease 30.000000
 numvert 21
 23.2257 0.365801 -12.8016
@@ -14829,7 +14829,7 @@ name "Misc Body 12 H*"
 loc -0.0792198 0.0829377 0.00325329
 data 14
 Misc Body 8 H*
-texture "C-17-0174.jpg"
+texture "USAF62AW2.png"
 crease 30.000000
 numvert 21
 24.2292 0.203201 -16.6902
@@ -14958,7 +14958,7 @@ name "Nacelle2"
 loc -0.0792198 0.0829377 0.00325346
 data 14
 Misc Body 13 H
-texture "C-17-0174.jpg"
+texture "USAF62AW2.png"
 crease 30.000000
 subdiv 3
 numvert 74
@@ -15589,7 +15589,7 @@ name "Nacelle3"
 loc -0.0792198 0.0829377 0.00325329
 data 14
 Misc Body 14 H
-texture "C-17-0174.jpg"
+texture "USAF62AW2.png"
 crease 30.000000
 subdiv 1
 numvert 74
@@ -16220,7 +16220,7 @@ name "Nacelle4"
 loc -0.0792198 0.0829377 0.00325329
 data 14
 Misc Body 15 H
-texture "C-17-0174.jpg"
+texture "USAF62AW2.png"
 crease 30.000000
 subdiv 1
 numvert 74
@@ -16851,7 +16851,7 @@ name "Nacelle1"
 loc -0.0792198 0.0829377 0.00325329
 data 14
 Misc Body 16 H
-texture "C-17-0174.jpg"
+texture "USAF62AW2.png"
 crease 30.000000
 subdiv 1
 numvert 74
@@ -17482,7 +17482,7 @@ name "Misc Body 4 H*"
 loc -0.0792198 0.0829377 0.00325329
 data 14
 Misc Body 4 H*
-texture "C-17-0174.jpg"
+texture "USAF62AW2.png"
 crease 30.000000
 numvert 21
 21.7932 0.883897 5.18161
@@ -17611,7 +17611,7 @@ name "Misc Body 6 H*"
 loc -0.0792198 0.0829377 0.00325329
 data 14
 Misc Body 6 H*
-texture "C-17-0174.jpg"
+texture "USAF62AW2.png"
 crease 30.000000
 numvert 21
 22.4028 0.609597 8.83921
@@ -17740,7 +17740,7 @@ name "Misc Body 7 H*"
 loc -0.0792198 0.0829377 0.00325329
 data 14
 Misc Body 7 H*
-texture "C-17-0174.jpg"
+texture "USAF62AW2.png"
 crease 30.000000
 numvert 21
 23.2257 0.365797 12.192
@@ -17869,7 +17869,7 @@ name "Misc Body 8 H*"
 loc -0.0792198 0.0829377 0.00325329
 data 14
 Misc Body 8 H*
-texture "C-17-0174.jpg"
+texture "USAF62AW2.png"
 crease 30.000000
 numvert 21
 24.2292 0.203196 16.2282
@@ -17998,7 +17998,7 @@ name "Misc Body 9 H*"
 loc -0.0792198 0.0829377 0.00325329
 data 14
 Misc Body 4 H*
-texture "C-17-0174.jpg"
+texture "USAF62AW2.png"
 crease 30.000000
 numvert 21
 21.7932 0.883901 -5.7912
@@ -18127,7 +18127,7 @@ name "Antenna5"
 loc 3.44568 -1.91026 0.00325287
 data 13
 Misc Wing 4 H
-texture "C-17-0174.jpg"
+texture "USAF62AW2.png"
 crease 30.000000
 numvert 8
 20.9702 5.30016 -2.50014e-006
@@ -18180,7 +18180,7 @@ name "Antenna7"
 loc -0.0792198 0.0829377 0.00325329
 data 13
 Misc Wing 5 H
-texture "C-17-0174.jpg"
+texture "USAF62AW2.png"
 crease 30.000000
 numvert 8
 16.0706 -3.1333 -1.91573e-006
@@ -18240,7 +18240,7 @@ name "Antenna6"
 loc -0.0792198 0.0829377 0.00325329
 data 13
 Misc Wing 6 H
-texture "C-17-0174.jpg"
+texture "USAF62AW2.png"
 crease 30.000000
 numvert 8
 9.0678 -2.7432 -1.0973
@@ -18300,7 +18300,7 @@ name "Fairing4"
 loc -0.0792198 0.0829377 0.00325329
 data 11
 flapact1b H
-texture "C-17-0174.jpg"
+texture "USAF62AW2.png"
 crease 30.000000
 numvert 32
 19.6769 1.9086 5.2534
@@ -18602,7 +18602,7 @@ name "Fairing5"
 loc -0.0792198 0.0829377 0.00325329
 data 11
 flapact1b H
-texture "C-17-0174.jpg"
+texture "USAF62AW2.png"
 crease 30.000000
 numvert 32
 19.6769 1.9086 -5.7194
@@ -18904,7 +18904,7 @@ name "Fairing3"
 loc -0.0792198 0.0829377 0.00325329
 data 11
 flapact1b H
-texture "C-17-0174.jpg"
+texture "USAF62AW2.png"
 crease 30.000000
 numvert 32
 20.2865 1.6038 8.911
@@ -19206,7 +19206,7 @@ name "Fairing6"
 loc -0.0792198 0.0829377 0.00325329
 data 11
 flapact1b H
-texture "C-17-0174.jpg"
+texture "USAF62AW2.png"
 crease 30.000000
 numvert 32
 20.2865 1.6038 -9.377
@@ -19508,7 +19508,7 @@ name "Fairing2"
 loc -0.0792198 0.0829377 0.00325329
 data 11
 flapact1b H
-texture "C-17-0174.jpg"
+texture "USAF62AW2.png"
 crease 30.000000
 numvert 32
 21.2009 1.3295 12.2638
@@ -19810,7 +19810,7 @@ name "Fairing7"
 loc -0.0792198 0.0829377 0.00325329
 data 11
 flapact1b H
-texture "C-17-0174.jpg"
+texture "USAF62AW2.png"
 crease 30.000000
 numvert 32
 21.2009 1.3295 -12.7298
@@ -20112,7 +20112,7 @@ name "Fairing1"
 loc -0.0792198 0.0829377 0.00325329
 data 11
 flapact4b H
-texture "C-17-0174.jpg"
+texture "USAF62AW2.png"
 crease 30.000000
 numvert 32
 22.5334 0.9476 16.2673
@@ -20414,7 +20414,7 @@ name "Fairing8"
 loc -0.0792198 0.0829377 0.00325329
 data 11
 flapact4b H
-texture "C-17-0174.jpg"
+texture "USAF62AW2.png"
 crease 30.000000
 numvert 32
 22.5334 0.9476 -16.6511
@@ -20716,7 +20716,7 @@ name "Wing 1 Left H"
 loc -0.0792198 0.0829377 0.00325329
 data 13
 Wing 1 Left H
-texture "C-17-0174.jpg"
+texture "USAF62AW2.png"
 crease 30.000000
 numvert 4
 24.3764 0.396199 25.4051
@@ -20737,7 +20737,7 @@ name "Wing 1 Right H"
 loc -0.0792198 0.0829377 0.00325329
 data 13
 Wing 1 Left H
-texture "C-17-0174.jpg"
+texture "USAF62AW2.png"
 crease 30.000000
 numvert 4
 24.3764 0.396199 -25.4051
@@ -20758,7 +20758,7 @@ name "MainGear1.RearTires"
 loc 22.9823 -3.39176 3.17525
 data 8
 Gear 4 H
-texture "C-17-0174.jpg"
+texture "USAF62AW2.png"
 crease 30.000000
 numvert 150
 0.208317 -0.64008 0.750313
@@ -22106,7 +22106,7 @@ name "Elevator1"
 loc 6.74039 0.0577335 0.00172169
 data 12
 HStab Left H
-texture "C-17-0174.jpg"
+texture "USAF62AW2.png"
 crease 30.000000
 numvert 9
 44.9173 10.6973 8.96389
@@ -22162,7 +22162,7 @@ name "Elevator4"
 loc 6.73607 0.0577335 0.00866063
 data 12
 HStab Left H
-texture "C-17-0174.jpg"
+texture "USAF62AW2.png"
 crease 30.000000
 numvert 8
 43.5306 10.9874 -4.363
@@ -22217,7 +22217,7 @@ name "HStabLeft"
 loc 6.74065 0.0577335 0.00325329
 data 12
 HStab Left H
-texture "C-17-0174.jpg"
+texture "USAF62AW2.png"
 crease 30.000000
 numvert 23
 43.5762 11.0907 4.37878
@@ -22350,7 +22350,7 @@ name "Elevator3"
 loc 6.74065 0.0577335 0.00325329
 data 12
 HStab Left H
-texture "C-17-0174.jpg"
+texture "USAF62AW2.png"
 crease 30.000000
 numvert 10
 43.5867 11.0903 -4.363
@@ -22408,7 +22408,7 @@ name "HStabRight"
 loc 6.74065 0.0577335 0.00325329
 data 12
 HStab Left H
-texture "C-17-0174.jpg"
+texture "USAF62AW2.png"
 crease 30.000000
 numvert 22
 43.5311 11.0957 -4.363
@@ -22539,7 +22539,7 @@ name "Rudder"
 loc 6.74065 0.0577335 0.00325329
 data 9
 VStab 1 H
-texture "C-17-0174.jpg"
+texture "USAF62AW2.png"
 crease 30.000000
 numvert 9
 36.7266 3.73148 0.218207
@@ -22593,7 +22593,7 @@ kids 0
 OBJECT poly
 name "CargoDoor"
 loc 37.9122 1.92734 0.00411224
-texture "C-17-0174.jpg"
+texture "USAF62AW2.png"
 crease 45.000000
 numvert 55
 -3.46754 -3.67792 1.7446
@@ -22956,7 +22956,7 @@ name "c17-newfuse"
 loc -0.0792198 0.0829377 0.00325329
 data 11
 c17-newfuse
-texture "C-17-0174.jpg"
+texture "USAF62AW2.png"
 crease 30.000000
 numvert 3
 46.4322 3.22 0.00899332
@@ -22973,7 +22973,7 @@ kids 0
 OBJECT poly
 name "CargoRamp"
 loc 26.5306 -2.97561 0.00322843
-texture "C-17-0174.jpg"
+texture "USAF62AW2.png"
 crease 45.000000
 numvert 108
 5.00919 1.08697 -2.71699
@@ -23730,7 +23730,7 @@ name "FlapTk1"
 loc 23.1956 1.41866 11.4171
 data 15
 Misc Wing 19 H*
-texture "C-17-0174.jpg"
+texture "USAF62AW2.png"
 crease 30.000000
 numvert 58
 1.69522 -0.197927 4.76998
@@ -24180,7 +24180,7 @@ name "FlapTk2"
 loc 23.1956 1.41866 11.4171
 data 15
 Misc Wing 19 H*
-texture "C-17-0174.jpg"
+texture "USAF62AW2.png"
 crease 30.000000
 numvert 58
 0.00780106 0.127375 1.19677
@@ -24630,7 +24630,7 @@ name "FlapTk3"
 loc 23.1956 1.41866 11.4171
 data 15
 Misc Wing 19 H*
-texture "C-17-0174.jpg"
+texture "USAF62AW2.png"
 crease 30.000000
 numvert 58
 -0.8151 0.371175 -2.15603
@@ -25080,7 +25080,7 @@ name "FlapTk4"
 loc 23.1956 1.41866 11.4171
 data 15
 Misc Wing 19 H*
-texture "C-17-0174.jpg"
+texture "USAF62AW2.png"
 crease 30.000000
 numvert 58
 -1.4247 0.645476 -5.81363
@@ -25530,7 +25530,7 @@ name "FlapTk8"
 loc 23.1956 1.42156 -11.4177
 data 15
 Misc Wing 19 H*
-texture "C-17-0174.jpg"
+texture "USAF62AW2.png"
 crease 30.000000
 numvert 58
 1.0137 -0.24132 -4.92445
@@ -25980,7 +25980,7 @@ name "FlapTk7"
 loc 23.1956 1.42156 -11.4177
 data 15
 Misc Wing 19 H*
-texture "C-17-0174.jpg"
+texture "USAF62AW2.png"
 crease 30.000000
 numvert 58
 0.00779915 0.12448 -0.962049
@@ -26430,7 +26430,7 @@ name "FlapTk6"
 loc 23.1956 1.42156 -11.4177
 data 15
 Misc Wing 19 H*
-texture "C-17-0174.jpg"
+texture "USAF62AW2.png"
 crease 30.000000
 numvert 58
 -0.8151 0.36828 2.39075
@@ -26880,7 +26880,7 @@ name "FlapTk5"
 loc 23.1956 1.42156 -11.4177
 data 15
 Misc Wing 19 H*
-texture "C-17-0174.jpg"
+texture "USAF62AW2.png"
 crease 30.000000
 numvert 58
 -1.4247 0.64258 6.04835
@@ -27328,7 +27328,7 @@ kids 0
 OBJECT poly
 name "Aileron1"
 loc 27.9517 2.44758 -23.1424
-texture "C-17-0174.jpg"
+texture "USAF62AW2.png"
 crease 45.000000
 numvert 11
 -1.0491 -1.70765 48.3006
@@ -27393,7 +27393,7 @@ kids 0
 OBJECT poly
 name "Flap2"
 loc 26.3958 4.65471 -11.3653
-texture "C-17-0174.jpg"
+texture "USAF62AW2.png"
 crease 45.000000
 numvert 8
 -1.5814 -3.36807 -7.82657
@@ -27447,7 +27447,7 @@ kids 0
 OBJECT poly
 name "Aileron2"
 loc 27.9517 2.44758 -23.1424
-texture "C-17-0174.jpg"
+texture "USAF62AW2.png"
 crease 45.000000
 numvert 11
 -1.67976 -1.80536 -2.1989
@@ -27512,7 +27512,7 @@ kids 0
 OBJECT poly
 name "Flap1"
 loc 26.3958 4.65471 -11.3654
-texture "C-17-0174.jpg"
+texture "USAF62AW2.png"
 crease 45.000000
 numvert 8
 -3.01145 -2.38571 14.7894
@@ -27568,7 +27568,7 @@ name "Winglet2"
 loc 25.7756 1.70974 -25.7631
 data 11
 c17-newfuse
-texture "C-17-0174.jpg"
+texture "USAF62AW2.png"
 crease 30.000000
 numvert 12
 -0.666109 -1.03356 0.307951
@@ -27651,7 +27651,7 @@ name "Winglet1"
 loc 25.7686 1.69753 25.6083
 data 11
 c17-newfuse
-texture "C-17-0174.jpg"
+texture "USAF62AW2.png"
 crease 30.000000
 numvert 12
 -0.657608 -1.06538 -0.140497
@@ -27732,7 +27732,7 @@ kids 0
 OBJECT poly
 name "MainWing1"
 loc 19.3887 1.96183 -0.0697784
-texture "C-17-0174.jpg"
+texture "USAF62AW2.png"
 crease 45.000000
 numvert 49
 5.07009 -0.965733 19.2178
@@ -27987,7 +27987,7 @@ name "NoseGearDr2"
 loc -2.28882e-005 -0.000285581 1.01328e-005
 data 11
 c17-newfuse
-texture "C-17-0174.jpg"
+texture "USAF62AW2.png"
 crease 30.000000
 numvert 28
 -25.2814 -2.05481 0.577099
@@ -28232,7 +28232,7 @@ name "NoseGearDr1"
 loc 0 4.47035e-008 0
 data 11
 c17-newfuse
-texture "C-17-0174.jpg"
+texture "USAF62AW2.png"
 crease 30.000000
 numvert 44
 -26.2635 -1.61274 0.658805
@@ -28625,7 +28625,7 @@ name "NoseGearDr3"
 loc -4.95911e-005 -0.00191529 -5.01573e-005
 data 11
 c17-newfuse
-texture "C-17-0174.jpg"
+texture "USAF62AW2.png"
 crease 30.000000
 numvert 44
 -26.2764 -1.58339 -0.667351
@@ -29018,7 +29018,7 @@ name "NGWheelWell"
 loc 24.2318 0.263933 0.00325005
 data 11
 c17-newfuse
-texture "C-17-0174.jpg"
+texture "USAF62AW2.png"
 crease 30.000000
 numvert 13
 -22.9738 -1.62602 -0.383714
@@ -29061,7 +29061,7 @@ name "NGStrut3"
 loc -3.19468 5.32875 -0.121209
 data 14
 Gear 6 strut H
-texture "C-17-0174.jpg"
+texture "USAF62AW2.png"
 crease 30.000000
 numvert 16
 2.76347 -1.51945 0.039692
@@ -29143,7 +29143,7 @@ name "NGStrut1"
 loc 0.149456 3.79144 0.0799654
 data 14
 Misc Body 17 H
-texture "C-17-0174.jpg"
+texture "USAF62AW2.png"
 crease 30.000000
 numvert 53
 -0.05285 -0.607205 -0.0283865
@@ -29582,7 +29582,7 @@ name "WindowRight4"
 loc 24.2318 0.263939 0.00324965
 data 11
 c17-newfuse
-texture "C-17-0174.jpg"
+texture "USAF62AW2.png"
 crease 30.000000
 numvert 4
 -22.903 0.670001 -0.874
@@ -29608,7 +29608,7 @@ name "WindowRight2"
 loc 24.2318 0.263939 -0.00325513
 data 11
 c17-newfuse
-texture "C-17-0174.jpg"
+texture "USAF62AW2.png"
 crease 30.000000
 numvert 4
 -21.954 0.987002 -1.28299
@@ -29634,7 +29634,7 @@ name "WindowRight1"
 loc 24.2318 0.263939 0.00324965
 data 11
 c17-newfuse
-texture "C-17-0174.jpg"
+texture "USAF62AW2.png"
 crease 30.000000
 numvert 4
 -22.522 1.659 2.44705e-007
@@ -29660,7 +29660,7 @@ name "WindowLeft1"
 loc 24.2318 0.263939 0.00324965
 data 11
 c17-newfuse
-texture "C-17-0174.jpg"
+texture "USAF62AW2.png"
 crease 30.000000
 numvert 4
 -22.522 1.659 2.44705e-007
@@ -29686,7 +29686,7 @@ name "WindowLeft2"
 loc 24.2318 0.263939 0.00325001
 data 11
 c17-newfuse
-texture "C-17-0174.jpg"
+texture "USAF62AW2.png"
 crease 30.000000
 numvert 4
 -22.255 1.675 0.56
@@ -29712,7 +29712,7 @@ name "WindowLeft4"
 loc 24.2318 0.263939 0.00324965
 data 11
 c17-newfuse
-texture "C-17-0174.jpg"
+texture "USAF62AW2.png"
 crease 30.000000
 numvert 4
 -22.902 0.218 1.066
@@ -29738,7 +29738,7 @@ name "WindowLeft5"
 loc 24.2318 0.263939 0.00324965
 data 11
 c17-newfuse
-texture "C-17-0174.jpg"
+texture "USAF62AW2.png"
 crease 30.000000
 numvert 4
 -22.122 1.826 0.567
@@ -29764,7 +29764,7 @@ name "WindowRight5"
 loc 24.2318 0.263939 0.00324965
 data 11
 c17-newfuse
-texture "C-17-0174.jpg"
+texture "USAF62AW2.png"
 crease 30.000000
 numvert 4
 -22.122 1.826 -0.567
@@ -29790,7 +29790,7 @@ name "Antenna1"
 loc 6.70188 3.64992 0.00272415
 data 13
 Misc Wing 1 H
-texture "C-17-0174.jpg"
+texture "USAF62AW2.png"
 crease 30.000000
 numvert 12
 0.167048 -0.217944 -0.024966
@@ -29882,7 +29882,7 @@ name "MainGear1.FrontStrut"
 loc 20.4519 -2.55633 3.20564
 data 14
 Gear 4 strut H
-texture "C-17-0174.jpg"
+texture "USAF62AW2.png"
 crease 30.000000
 numvert 96
 -0.124449 -0.909873 -0.421453
@@ -30324,7 +30324,7 @@ name "MainGear1.RearStrut"
 loc 22.9975 -2.55682 3.23904
 data 14
 Gear 4 strut H
-texture "C-17-0174.jpg"
+texture "USAF62AW2.png"
 crease 30.000000
 numvert 96
 -0.124451 -0.909874 -0.421453
@@ -30766,7 +30766,7 @@ name "WingTip1"
 loc 25.7686 1.69753 25.6083
 data 11
 c17-newfuse
-texture "C-17-0174.jpg"
+texture "USAF62AW2.png"
 crease 30.000000
 numvert 71
 -0.928488 -1.00876 -0.110203
@@ -31603,7 +31603,7 @@ name "WingTip2"
 loc 25.7756 1.70974 -25.7631
 data 11
 c17-newfuse
-texture "C-17-0174.jpg"
+texture "USAF62AW2.png"
 crease 30.000000
 numvert 71
 -0.936989 -1.02097 0.113447
@@ -32440,7 +32440,7 @@ name "MainGear2.Dr2"
 loc -0.0792198 0.0829377 0.00325329
 data 11
 Fairing 8 H
-texture "C-17-0174.jpg"
+texture "USAF62AW2.png"
 crease 30.000000
 numvert 49
 21.6408 -2.69336 -4.33656
@@ -32793,7 +32793,7 @@ name "MainGear2.Dr1"
 loc -0.0792198 0.0829377 0.00325329
 data 12
 Fairing 10 H
-texture "C-17-0174.jpg"
+texture "USAF62AW2.png"
 crease 30.000000
 numvert 49
 19.2024 -2.75389 -4.33656
@@ -33146,7 +33146,7 @@ name "MainGear1.Dr1"
 loc -0.0792198 0.0829377 0.00325329
 data 11
 Fairing 9 H
-texture "C-17-0174.jpg"
+texture "USAF62AW2.png"
 crease 30.000000
 numvert 49
 19.2024 -3.05102 4.70242
@@ -33499,7 +33499,7 @@ name "MainGear1.Dr2"
 loc -0.0792198 0.0829377 0.00325329
 data 11
 Fairing 7 H
-texture "C-17-0174.jpg"
+texture "USAF62AW2.png"
 crease 30.000000
 numvert 49
 21.6408 -3.05703 4.75679
@@ -33850,7 +33850,7 @@ kids 0
 OBJECT poly
 name "MainWing2"
 loc 19.3887 1.96183 -0.0697784
-texture "C-17-0174.jpg"
+texture "USAF62AW2.png"
 crease 45.000000
 numvert 41
 5.96889 -1.45397 -25.2574
@@ -34074,7 +34074,7 @@ name "WindowRight3"
 loc 24.2318 0.263939 -0.00325513
 data 11
 c17-newfuse
-texture "C-17-0174.jpg"
+texture "USAF62AW2.png"
 crease 30.000000
 numvert 5
 -21.838 1.707 -0.930995
@@ -34107,7 +34107,7 @@ name "WindowLeft3"
 loc 24.2318 0.263939 0.00325001
 data 11
 c17-newfuse
-texture "C-17-0174.jpg"
+texture "USAF62AW2.png"
 crease 30.000000
 numvert 5
 -21.954 0.987002 1.283
@@ -34140,7 +34140,7 @@ name "NGStrut2"
 loc 3.36915 -2.62647 0.000136986
 data 14
 Gear 1 strut H
-texture "C-17-0174.jpg"
+texture "USAF62AW2.png"
 crease 30.000000
 numvert 29
 -0.01124 -0.916895 -0.0735039
@@ -34305,7 +34305,7 @@ kids 0
 OBJECT poly
 name "disk"
 loc 3.45125 -1.73638 -0.00419033
-texture "C-17-0174.jpg"
+texture "USAF62AW2.png"
 crease 45.000000
 numvert 13
 0 0 0
@@ -34400,7 +34400,7 @@ name "NGWheelWell"
 loc 24.2318 0.263933 0.00325005
 data 11
 c17-newfuse
-texture "C-17-0174.jpg"
+texture "USAF62AW2.png"
 crease 30.000000
 numvert 8
 -20.5195 -2.48885 -0.667451
@@ -34429,7 +34429,7 @@ name "Fuselage"
 loc 24.2318 0.298058 0.00324965
 data 11
 c17-newfuse
-texture "C-17-0174.jpg"
+texture "USAF62AW2.png"
 crease 30.000000
 numvert 17
 -20.53 -2.52022 -0.66745
@@ -34481,7 +34481,7 @@ name "Fuselage"
 loc 24.2318 0.298058 0.00324965
 data 11
 c17-newfuse
-texture "C-17-0174.jpg"
+texture "USAF62AW2.png"
 crease 30.000000
 numvert 15
 -22.974 -0.725036 0.658756
@@ -34524,7 +34524,7 @@ name "NGWheelWell"
 loc 24.2318 0.263933 0.00325005
 data 11
 c17-newfuse
-texture "C-17-0174.jpg"
+texture "USAF62AW2.png"
 crease 30.000000
 numvert 4
 -22.974 -0.690911 0.658755
@@ -34543,7 +34543,7 @@ kids 0
 OBJECT poly
 name "box"
 loc 21.7196 -4.14419 3.77395
-texture "C-17-0174.jpg"
+texture "USAF62AW2.png"
 crease 45.000000
 numvert 7
 2.53167 1.42862 0.0816717
@@ -34570,7 +34570,7 @@ name "Fuselage"
 loc 24.2318 0.298058 0.00324965
 data 11
 c17-newfuse
-texture "C-17-0174.jpg"
+texture "USAF62AW2.png"
 crease 30.000000
 numvert 909
 -5.04729 -3.31798 -3.91191
@@ -44905,7 +44905,7 @@ name "MainGear2.Dr3"
 loc -0.19268 -0.0816877 1.02154
 data 9
 Door 10 H
-texture "C-17-0174.jpg"
+texture "USAF62AW2.png"
 crease 30.000000
 numvert 8
 24.49 -3.46768 -1.79139
@@ -44958,7 +44958,7 @@ name "Engine3.Cowl3"
 loc -0.0792198 0.0829372 0.00325346
 data 11
 c17-newfuse
-texture "C-17-0174.jpg"
+texture "USAF62AW2.png"
 crease 30.000000
 numvert 176
 13.864 -0.946001 -7.38051
@@ -46496,7 +46496,7 @@ name "Engine3.Cowl1"
 loc -0.0792198 0.0829372 0.00325346
 data 11
 c17-newfuse
-texture "C-17-0174.jpg"
+texture "USAF62AW2.png"
 crease 30.000000
 numvert 216
 11.318 0.552 -6.23601
@@ -48480,7 +48480,7 @@ kids 0
 OBJECT poly
 name "FanDisk3"
 loc -6.92682 12.4675 8.60696
-texture "C-17-0174.jpg"
+texture "USAF62AW2.png"
 crease 45.000000
 numvert 70
 18.0766 -12.0352 -15.1475
@@ -48954,7 +48954,7 @@ kids 0
 OBJECT poly
 name "FanHub3"
 loc -6.93152 -0.690134 19.7972
-texture "C-17-0174.jpg"
+texture "USAF62AW2.png"
 crease 45.000000
 numvert 181
 18.0484 0.833888 -27.3332
@@ -51125,7 +51125,7 @@ name "Engine2.Cowl2"
 loc -0.0792198 0.0829372 0.00325346
 data 11
 c17-newfuse
-texture "C-17-0174.jpg"
+texture "USAF62AW2.png"
 crease 30.000000
 numvert 172
 11.473 0.175001 -8.35051
@@ -53071,7 +53071,7 @@ name "Engine3.Core"
 loc 13.0268 0.415978 7.44645
 data 11
 Nacelle 1 H
-texture "C-17-0174.jpg"
+texture "USAF62AW2.png"
 crease 30.000000
 numvert 206
 0.43635 -0.01076 -13.5866
@@ -54819,7 +54819,7 @@ name "Engine1.Core"
 loc 16.2272 -0.346023 13.9479
 data 11
 c17-newfuse
-texture "C-17-0174.jpg"
+texture "USAF62AW2.png"
 crease 30.000000
 numvert 206
 2.70291 -0.700251 0.0394049
@@ -56567,7 +56567,7 @@ name "Engine1.Cowl2"
 loc 3.1578 -0.670559 6.46145
 data 11
 c17-newfuse
-texture "C-17-0174.jpg"
+texture "USAF62AW2.png"
 crease 30.000000
 numvert 160
 11.473 0.175001 8.344
@@ -58453,7 +58453,7 @@ name "Engine1.Cowl1"
 loc 14.9748 -0.368059 13.9268
 data 11
 c17-newfuse
-texture "C-17-0174.jpg"
+texture "USAF62AW2.png"
 crease 30.000000
 numvert 216
 -0.499 0.2495 -1.23585
@@ -60487,7 +60487,7 @@ name "Engine2.Core"
 loc 13.0268 0.415978 7.44645
 data 11
 Nacelle 1 H
-texture "C-17-0174.jpg"
+texture "USAF62AW2.png"
 crease 30.000000
 numvert 206
 1.8905 -0.724756 -0.000199795
@@ -62235,7 +62235,7 @@ name "Engine2.Cowl2"
 loc -0.0792198 0.0829372 0.00325346
 data 11
 c17-newfuse
-texture "C-17-0174.jpg"
+texture "USAF62AW2.png"
 crease 30.000000
 numvert 172
 11.318 0.552 6.2295
@@ -64179,7 +64179,7 @@ kids 0
 OBJECT poly
 name "FanHub2"
 loc -6.93152 -0.67707 19.771
-texture "C-17-0174.jpg"
+texture "USAF62AW2.png"
 crease 45.000000
 numvert 181
 17.8753 1.2355 -12.169
@@ -66348,7 +66348,7 @@ kids 0
 OBJECT poly
 name "FanDisk2"
 loc -6.92682 12.4806 8.58084
-texture "C-17-0174.jpg"
+texture "USAF62AW2.png"
 crease 45.000000
 numvert 70
 18.0766 -12.0201 -0.810902
@@ -66824,7 +66824,7 @@ name "Engine2.Cowl1"
 loc -0.0792198 0.0829372 0.00325346
 data 11
 c17-newfuse
-texture "C-17-0174.jpg"
+texture "USAF62AW2.png"
 crease 30.000000
 numvert 216
 13.319 0.302999 8.73285
@@ -68810,7 +68810,7 @@ name "Engine2.Cowl3"
 loc -0.0792198 0.0829372 0.00325346
 data 11
 c17-newfuse
-texture "C-17-0174.jpg"
+texture "USAF62AW2.png"
 crease 30.000000
 numvert 176
 13.319 0.0742066 8.70933
@@ -70346,7 +70346,7 @@ kids 0
 OBJECT poly
 name "Engine2.TR"
 loc 16.8212 6.72454 7.48011
-texture "C-17-0174.jpg"
+texture "USAF62AW2.png"
 crease 45.000000
 numvert 58
 -3.75541 -6.34568 0
@@ -70946,7 +70946,7 @@ name "Engine4.Cowl1"
 loc 14.9748 -0.368059 13.9268
 data 11
 c17-newfuse
-texture "C-17-0174.jpg"
+texture "USAF62AW2.png"
 crease 30.000000
 numvert 216
 -1.044 0.2705 -26.4997
@@ -72980,7 +72980,7 @@ name "Engine1.Cowl2"
 loc 3.1578 -0.670559 6.46145
 data 11
 c17-newfuse
-texture "C-17-0174.jpg"
+texture "USAF62AW2.png"
 crease 30.000000
 numvert 160
 10.326 0.542999 -21.4869
@@ -74866,7 +74866,7 @@ name "Engine4.Core"
 loc 16.2272 -0.346023 13.9479
 data 11
 c17-newfuse
-texture "C-17-0174.jpg"
+texture "USAF62AW2.png"
 crease 30.000000
 numvert 206
 -1.52355 -0.00589651 -27.8957
@@ -76612,7 +76612,7 @@ kids 0
 OBJECT poly
 name "Engine4.TR"
 loc 20.0582 5.97105 13.9383
-texture "C-17-0174.jpg"
+texture "USAF62AW2.png"
 crease 45.000000
 numvert 58
 -2.76178 -5.31433 -27.6388
@@ -77212,7 +77212,7 @@ name "Engine4.Cowl3"
 loc 3.1578 -0.670559 6.46145
 data 11
 c17-newfuse
-texture "C-17-0174.jpg"
+texture "USAF62AW2.png"
 crease 30.000000
 numvert 176
 13.864 -0.946001 -20.2969
@@ -78748,7 +78748,7 @@ kids 0
 OBJECT poly
 name "FanDisk4"
 loc -3.6898 11.7184 15.0695
-texture "C-17-0174.jpg"
+texture "USAF62AW2.png"
 crease 45.000000
 numvert 70
 18.0766 -12.0352 -28.0639
@@ -79222,7 +79222,7 @@ kids 0
 OBJECT poly
 name "FanHub4"
 loc -3.6945 -1.43928 26.2597
-texture "C-17-0174.jpg"
+texture "USAF62AW2.png"
 crease 45.000000
 numvert 181
 18.0484 0.833888 -40.2496
@@ -81391,7 +81391,7 @@ kids 0
 OBJECT poly
 name "VStabCap"
 loc -0.0089035 -0.212028 0.000603479
-texture "C-17-0174.jpg"
+texture "USAF62AW2.png"
 crease 45.000000
 numvert 154
 47.1401 11.1829 0.330035
@@ -83379,7 +83379,7 @@ name "VStab"
 loc 44.6537 7.53318 0.00324526
 data 9
 VStab 1 H
-texture "C-17-0174.jpg"
+texture "USAF62AW2.png"
 crease 30.000000
 numvert 29
 1.28765 -3.7944 6.85453e-007
@@ -83601,7 +83601,7 @@ name "WingRoot"
 loc -0.0555492 0.392608 -0.0117935
 data 13
 Misc Body 1 H
-texture "C-17-0174.jpg"
+texture "USAF62AW2.png"
 crease 30.000000
 subdiv 3
 numvert 172
