@@ -1,6 +1,6 @@
 <?xml version="1.0"?>
 
-<?By Robert Maheu?>
+<!-- By Robert Maheu? -->
 
 <PropertyList>
   <sim>
@@ -8,8 +8,7 @@
       <livery>
         <name type="string">CC-177 Canadian Air Force</name>
         <texture>Liveries/caf/CC-177703.jpg</texture>
-	  </livery>
-	  	  
+      </livery>
     </model>
   </sim>
 </PropertyList>

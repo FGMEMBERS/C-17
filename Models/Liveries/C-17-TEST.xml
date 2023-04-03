@@ -7,7 +7,6 @@
         <name type="string">TEST</name>
         <texture>Liveries/test/C-17-TEST.jpg</texture>
       </livery>
-	  	  
     </model>
   </sim>
 </PropertyList>

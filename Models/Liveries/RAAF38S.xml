@@ -6,8 +6,7 @@
       <livery>
         <name type="string">RAAF 36 Sqdn</name>
         <texture>Liveries/RAAF36S/C-17-36.jpg</texture>
-	  </livery>
-	  	  
+      </livery>
     </model>
   </sim>
 </PropertyList>

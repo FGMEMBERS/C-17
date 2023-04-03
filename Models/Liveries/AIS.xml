@@ -6,8 +6,7 @@
       <livery>
         <name type="string">AIS</name>
         <texture>Liveries/ais/C-17-AIS.jpg</texture>
-	  </livery>
-	  	  
+      </livery>
     </model>
   </sim>
 </PropertyList>

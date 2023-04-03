@@ -6,8 +6,7 @@
       <livery>
         <name type="string">Default - USAF 62nd AW</name>
         <texture>Liveries/default/C-17-0174.jpg</texture>
-	  </livery>
-	  	  
+      </livery>
     </model>
   </sim>
 </PropertyList>

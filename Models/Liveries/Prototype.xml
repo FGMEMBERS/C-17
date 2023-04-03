@@ -6,8 +6,7 @@
       <livery>
         <name type="string">C-17 Prototype, European 1 camo</name>
         <texture>Liveries/Prototype/C-17-Pro.jpg</texture>
-	  </livery>
-	  	  
+      </livery>
     </model>
   </sim>
 </PropertyList>

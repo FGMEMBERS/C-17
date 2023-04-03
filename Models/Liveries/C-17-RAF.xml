@@ -6,8 +6,7 @@
       <livery>
         <name type="string">10-0217 RAF</name>
         <texture>Liveries/raf/C-17-RAF.jpg</texture>
-	  </livery>
-	  	  
+      </livery>
     </model>
   </sim>
 </PropertyList>
