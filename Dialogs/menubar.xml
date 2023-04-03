@@ -4,13 +4,6 @@
     <menu n="100">				
       <label>Globemaster III</label>
       <enabled type="bool">true</enabled>
-      <item>
-	<label>Select Livery</label>
-	<binding>
-	  <command>nasal</command>
-	  <script>aircraft.livery.dialog.open();</script>
-	</binding>
-      </item>
 
       <item>
 	<label>Auto Start</label>
@@ -29,6 +22,14 @@
 	    var cargobay = gui.Dialog.new("sim/gui/dialogs/Cargobay/dialog", "Dialogs/Cargobay.xml");
 	    cargobay.open();
 	  </script>
+	</binding>
+      </item>
+
+      <item>
+	<label>Select Livery</label>
+	<binding>
+	  <command>nasal</command>
+	  <script>aircraft.livery.dialog.open();</script>
 	</binding>
       </item>
     </menu>		
