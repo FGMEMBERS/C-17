@@ -6,7 +6,7 @@
   <inherits-from>Effects/bumpspec</inherits-from>
   <parameters>
     <texture n="2">
-      <image>Aircraft/C-17/Models/Liveries/Bumpfiles/C17bump.png</image>
+      <image>Models/effects/C-17-bump.png</image>
       <filter>linear-mipmap-linear</filter>
       <wrap-s>repeat</wrap-s>
       <wrap-t>repeat</wrap-t>

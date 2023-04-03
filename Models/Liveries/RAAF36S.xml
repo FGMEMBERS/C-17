@@ -4,8 +4,8 @@
   <sim>
     <model>
       <livery>
-        <name type="string">USAF 436 AW, Dover</name>
-        <texture>Liveries/USAF436AW.png</texture>
+        <name type="string">RAAF 36 Sqdn, Amberley</name>
+        <texture>Liveries/RAAF36S.png</texture>
       </livery>
     </model>
   </sim>

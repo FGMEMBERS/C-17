@@ -5,7 +5,7 @@
     <model>
       <livery>
         <name type="string">USAF 412 TW, Edwards</name>
-        <texture>Liveries/USAF412TW/C-17-412TW.jpg</texture>
+        <texture>Liveries/USAF412TW.png</texture>
       </livery>
     </model>
   </sim>

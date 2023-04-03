@@ -6,8 +6,8 @@
   <sim>
     <model>
       <livery>
-        <name type="string">RCAF 429 TS, Trenton</name>
-        <texture>Liveries/RCAF429TS.png</texture>
+        <name type="string">Royal Canadian Air Force CC-177</name>
+        <texture>Liveries/RCAF177703.png</texture>
       </livery>
     </model>
   </sim>
