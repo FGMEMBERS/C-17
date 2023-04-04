@@ -257,9 +257,9 @@
 	<from-model-idx type="int">0</from-model-idx>
 	<x-offset-m type="double">0.75</x-offset-m>	<!-- Negative Moves view Left -->
 	<y-offset-m type="double">-0.1</y-offset-m>	<!-- Positive Moves view Up -->
-	<z-offset-m type="double">25.7</z-offset-m>	<!-- Negative Moves view Forward -->
+	<z-offset-m type="double">10.0</z-offset-m>	<!-- Negative Moves view Forward -->
 	<pitch-offset-deg>0</pitch-offset-deg>
-	<default-field-of-view-deg>45.3</default-field-of-view-deg>
+	<default-field-of-view-deg>10.3//</default-field-of-view-deg>
       </config>
     </view>
     
