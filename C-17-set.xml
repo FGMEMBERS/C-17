@@ -178,13 +178,6 @@
       </key>
     </help>
     
-    <!-- big plane, so extend chase view offset a bit -->	
-    <!--<view n="1">
-	<config>
-	<z-offset-m type="double" archive="y">-50</z-offset-m>
-	</config>
-	</view>-->
-    
     <chase-distance-m type="double" archive="y">-95</chase-distance-m>
     
     <view n="0">
@@ -211,22 +204,26 @@
 	</limits>
       </config>
     </view>
+
     <!-- Shift Camera View to Center of Plane -->		
     <view n="1">
       <config>
 	<target-z-offset-m archive="y" type="double">-30</target-z-offset-m>
       </config>
     </view>
+
     <view n="2">
       <config>
 	<target-z-offset-m archive="y" type="double">-30</target-z-offset-m>
       </config>
     </view>
+
     <view n="3">
       <config>
 	<target-z-offset-m archive="y" type="double">-20</target-z-offset-m>
       </config>
     </view>
+
     <view n="4">
       <config>
 	<target-z-offset-m archive="y" type="double">-30</target-z-offset-m>
@@ -234,8 +231,8 @@
     </view>
 
     <view n="100">
-      <name>Co-Pilot</name>
-      <internal archive="y">true</internal>
+      <name>Copilot</name>
+      <internal type="bool">true</internal>
       <type>lookfrom</type>
       <config>
 	<from-model type="bool">true</from-model>
@@ -249,7 +246,7 @@
     </view>
     
     <view n="101">
-      <name>Tail view</name>
+      <name>Tail</name>
       <type>lookfrom</type>
       <internal type="bool">false</internal>
       <config>
@@ -269,14 +266,14 @@
 
     <view n="102">
       <name>Loadmaster</name>
-      <internal archive="y">true</internal>
+      <internal type="bool">false</internal>
       <type>lookfrom</type>
       <config>
 	<from-model type="bool">true</from-model>
 	<from-model-idx type="int">0</from-model-idx>
-	<x-offset-m type="double">0.75</x-offset-m>	<!-- Negative Moves view Left -->
-	<y-offset-m type="double">-0.1</y-offset-m>	<!-- Positive Moves view Up -->
-	<z-offset-m type="double">10.0</z-offset-m>	<!-- Negative Moves view Forward -->
+	<x-offset-m type="double">0.75</x-offset-m>
+	<y-offset-m type="double">-0.1</y-offset-m>
+	<z-offset-m type="double">10.0</z-offset-m>
 	<pitch-offset-deg>0</pitch-offset-deg>
 	<default-field-of-view-deg>10.3</default-field-of-view-deg>
       </config>
@@ -284,14 +281,14 @@
     
     <view n="103">
       <name>Loadmaster Station</name>
-       <internal archive="y">true</internal>
+      <internal type="bool">true</internal>
       <type>lookfrom</type>
       <config>
 	<from-model type="bool">true</from-model>
 	<from-model-idx type="int">0</from-model-idx>
-	<x-offset-m type="double">-2.0</x-offset-m>	<!-- Negative Moves view Left -->
-	<y-offset-m type="double">-0.5</y-offset-m>	<!-- Positive Moves view Up -->
-	<z-offset-m type="double">-45</z-offset-m>	<!-- Negative Moves view Forward -->
+	<x-offset-m type="double">-2.0</x-offset-m>
+	<y-offset-m type="double">-0.5</y-offset-m>
+	<z-offset-m type="double">-45</z-offset-m>
 	<pitch-offset-deg>0</pitch-offset-deg>
 	<heading-offset-deg>-180</heading-offset-deg>
 	<default-field-of-view-deg>100</default-field-of-view-deg>
