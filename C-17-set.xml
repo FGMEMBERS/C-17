@@ -247,38 +247,8 @@
 	<default-field-of-view-deg>75.3</default-field-of-view-deg>
       </config>
     </view>
-
-    <view n="107">  <!-- view[107]/ is unassigned -->
-      <name>Loadmaster Station</name>
-       <internal archive="y">true</internal>
-      <type>lookfrom</type>
-      <config>
-	<from-model type="bool">true</from-model>
-	<from-model-idx type="int">0</from-model-idx>
-	<x-offset-m type="double">-2.0</x-offset-m>	<!-- Negative Moves view Left -->
-	<y-offset-m type="double">-0.5</y-offset-m>	<!-- Positive Moves view Up -->
-	<z-offset-m type="double">10.0</z-offset-m>	<!-- Negative Moves view Forward -->
-	<pitch-offset-deg>0</pitch-offset-deg>
-	<default-field-of-view-deg>4.0//</default-field-of-view-deg>
-      </config>
-    </view>
     
     <view n="101">
-      <name>Loadmaster</name>
-      <internal archive="y">true</internal>
-      <type>lookfrom</type>
-      <config>
-	<from-model type="bool">true</from-model>
-	<from-model-idx type="int">0</from-model-idx>
-	<x-offset-m type="double">0.75</x-offset-m>	<!-- Negative Moves view Left -->
-	<y-offset-m type="double">-0.1</y-offset-m>	<!-- Positive Moves view Up -->
-	<z-offset-m type="double">10.0</z-offset-m>	<!-- Negative Moves view Forward -->
-	<pitch-offset-deg>0</pitch-offset-deg>
-	<default-field-of-view-deg>10.3//</default-field-of-view-deg>
-      </config>
-    </view>
-    
-    <view n="102">
       <name>Tail view</name>
       <type>lookfrom</type>
       <internal type="bool">false</internal>
@@ -297,6 +267,36 @@
       </dynamic>
     </view>
 
+    <view n="102">
+      <name>Loadmaster</name>
+      <internal archive="y">true</internal>
+      <type>lookfrom</type>
+      <config>
+	<from-model type="bool">true</from-model>
+	<from-model-idx type="int">0</from-model-idx>
+	<x-offset-m type="double">0.75</x-offset-m>	<!-- Negative Moves view Left -->
+	<y-offset-m type="double">-0.1</y-offset-m>	<!-- Positive Moves view Up -->
+	<z-offset-m type="double">10.0</z-offset-m>	<!-- Negative Moves view Forward -->
+	<pitch-offset-deg>0</pitch-offset-deg>
+	<default-field-of-view-deg>10.3//</default-field-of-view-deg>
+      </config>
+    </view>
+    
+    <view n="103">
+      <name>Loadmaster Station</name>
+       <internal archive="y">true</internal>
+      <type>lookfrom</type>
+      <config>
+	<from-model type="bool">true</from-model>
+	<from-model-idx type="int">0</from-model-idx>
+	<x-offset-m type="double">-2.0</x-offset-m>	<!-- Negative Moves view Left -->
+	<y-offset-m type="double">-0.5</y-offset-m>	<!-- Positive Moves view Up -->
+	<z-offset-m type="double">10.0</z-offset-m>	<!-- Negative Moves view Forward -->
+	<pitch-offset-deg>0</pitch-offset-deg>
+	<default-field-of-view-deg>4.0//</default-field-of-view-deg>
+      </config>
+    </view>
+    
     <limits>
       <max-flap-extension-speed>
 	<flaps>0.167</flaps>
