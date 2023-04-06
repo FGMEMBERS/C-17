@@ -201,12 +201,12 @@
     <object-name>FanHub4</object-name>
     <property-base>sim/model/livery</property-base>
     <texture-prop>texture</texture-prop>
-    <texture>CC-177703.png</texture>
+    <texture>Liveries/USAF62AW2.png</texture>
   </animation>
   
   <!-- Bump Map Effect -->
   <effect>
-    <inherits-from>Aircraft/C-17/Models/effects/c17_bumpspec</inherits-from>
+    <inherits-from>Aircraft/C-17/Models/effects/C-17_bumpspec</inherits-from>
     <object-name>Fuselage</object-name>
     <object-name>WingRoot</object-name>
     <object-name>MainWing1</object-name>
@@ -258,14 +258,6 @@
     <object-name>Nacelle2</object-name>
     <object-name>Nacelle3</object-name>
     <object-name>Nacelle4</object-name>
-    <!--   
-	 <object-name>MainGear1.Dr1</object-name>
-	 <object-name>MainGear1.Dr2</object-name>
-	 <object-name>MainGear1.Dr3</object-name>
-	 <object-name>MainGear2.Dr1</object-name>
-	 <object-name>MainGear2.Dr2</object-name>
-	 <object-name>MainGear2.Dr3</object-name>
-    -->
     <object-name>NoseGearDr1</object-name>
     <object-name>NoseGearDr2</object-name>
     <object-name>NoseGearDr3</object-name>

@@ -113,7 +113,7 @@
       <path>Aircraft/C-17/Models/C-17.xml</path>
       
       <livery>
-	<file type="string">C-17-0174</file>
+	<file type="string">USAF62AW2</file>
       </livery>
     </model>
     

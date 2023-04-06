@@ -100,7 +100,7 @@
     <model>
       <path>Aircraft/C-17/Models/C-17-GlobemasterIII.xml</path>
       <livery>
-        <file type="string">CC-177703</file>
+        <file type="string">USAF62AW2</file>
       </livery>
     </model>
     <hud>
