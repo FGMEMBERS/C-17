@@ -95,12 +95,14 @@
     </sound>
     <!-- 
 	 3D Model Converted With Permission From X-Plane C-17 v1.2
-	 Authors Adam Fathergill/Dave Austin 
+	 Authors:
+	 Adam Fathergill / Dave Austin 
     -->
     <model>
       <path>Aircraft/C-17/Models/C-17-GlobemasterIII.xml</path>
       <livery>
         <file type="string">USAF62AW2</file>
+	<texture type="string" userarchive="y">Liveries/USAF62AW2.png</texture>
       </livery>
     </model>
     <hud>

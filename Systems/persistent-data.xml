@@ -6,4 +6,5 @@
   <path>instrumentation/doors/crew/position-norm</path>
   <path>instrumentation/doors/passenger/position-norm</path>
   <path>instrumentation/doors/ramp/position-norm</path>
+  <path>sim/model/livery/texture</path>
 </PropertyList>
