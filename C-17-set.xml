@@ -112,8 +112,8 @@
     <model>
       <path>Aircraft/C-17/Models/C-17.xml</path>
       <livery>
-	<file type="string">USAF62AW2</file>
-	<texture type="string" userarchive="y">Liveries/USAF62AW2.png</texture>
+	<file type="string">Systems/liveries-initialization.xml</file>
+	<texture alias="fdm/jsbsim/systems/liveries/selected/texture" userarchive="y" />
       </livery>
     </model>
     

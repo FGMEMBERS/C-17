@@ -1,0 +1,52 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<!--
+:copyright: 2023, IAHM-COL
+License: GPLv3
+
+Redistribution, or reuse, with or without modifications
+shall keep this attribution information. 
+-->
+
+<PropertyList>
+  <AIS>
+    <id type="int">1</id>
+    <database-id type="int">0</database-id>
+    <name type="string">Avionics Backshop</name>
+    <texture type="string">Liveries/AIS.png</texture>
+    <author type="string">Unlisted</author>
+  </AIS>
+
+  <Blank>
+    <id type="int">2</id>
+    <database-id type="int">0</database-id>
+    <name type="string">Blank Livery</name>
+    <texture type="string">Liveries/Blank.png</texture>
+    <author type="string">Unlisted</author>
+  </Blank>
+
+  <IAF81>
+    <id type="int">3</id>
+    <database-id type="int">0</database-id>
+    <name type="string">Indian Airforce 81 Sqdn, Hindon</name>
+    <texture type="string">Liveries/IAF81.png</texture>
+    <author type="string">Unlisted</author>
+  </IAF81>
+
+  <KAF342>
+    <id type="int">4</id>
+    <database-id type="int">0</database-id>
+    <name type="string">Kuwaiti Air Force 342</name>
+    <texture type="string">Liveries/KAF342.png</texture>
+    <author type="string">Unlisted</author>
+  </KAF342>
+
+  <RAAF36S>
+    <id type="int">5</id>
+    <database-id type="int">0</database-id>
+    <name type="string">RAAF 36 Sqdn, Amberley</name>
+    <texture type="string">Liveries/RAAF36S.png</texture>
+    <author type="string">Unlisted</author>
+  </RAAF36S>
+
+</PropertyList>
