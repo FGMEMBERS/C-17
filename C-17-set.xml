@@ -286,9 +286,9 @@
       <config>
 	<from-model type="bool">true</from-model>
 	<from-model-idx type="int">0</from-model-idx>
-	<x-offset-m type="double">0.75</x-offset-m>
-	<y-offset-m type="double">-0.1</y-offset-m>
-	<z-offset-m type="double">10.0</z-offset-m>
+	<x-offset-m type="double">-1.90</x-offset-m>
+	<y-offset-m type="double">-0.05</y-offset-m>
+	<z-offset-m type="double">-52.0g</z-offset-m>
 	<pitch-offset-deg>0</pitch-offset-deg>
 	<heading-offset-deg>-180</heading-offset-deg>
 	<default-field-of-view-deg>32</default-field-of-view-deg>
