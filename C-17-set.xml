@@ -113,7 +113,7 @@
       <path>Aircraft/C-17/Models/C-17.xml</path>
       <livery>
 	<file type="string">Systems/liveries-initialization.xml</file>
-	<texture alias="fdm/jsbsim/systems/liveries/selected/texture" userarchive="y" />
+	<texture alias="/fdm/jsbsim/systems/livery/selected/texture"/>
       </livery>
     </model>
     

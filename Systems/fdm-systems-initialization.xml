@@ -5,9 +5,16 @@
     <engaged type="double">0</engaged>
   </NWS>
 
+  <livery include="Systems/liveries-initialization.xml">
+    <selected>
+      <id userarchive="y" type="int">0</id>
+      <texture userarchive="y" type="string">Liveries/USAF62AW2.png</texture>
+    </selected>
+  </livery>
+  
   <payload include="Systems/payload-systems-initialization.xml">
     <selected>
-      <cargo-id userarchive="y" type="double">0</cargo-id>
+      <cargo-id userarchive="y" type="int">0</cargo-id>
       <item-string userarchive="y" type="string">Empty</item-string>
     </selected>
   </payload>
