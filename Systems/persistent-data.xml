@@ -1,6 +1,9 @@
 <?xml version="1.0"?>
 
 <PropertyList>
+  <path>fdm/jsbsim/systems/livery/selected/id</path>
+  <path>fdm/jsbsim/systems/livery/selected/name</path>
+  <path>fdm/jsbsim/systems/livery/selected/texture</path>
   <path>fdm/jsbsim/systems/payload/selected/cargo-id</path>
   <path>fdm/jsbsim/systems/payload/selected/item-string</path>
   <path>instrumentation/doors/crew/position-norm</path>

@@ -26,10 +26,13 @@
       </item>
 
       <item>
-	<label>Select Livery</label>
+	<label>Update Livery</label>
 	<binding>
 	  <command>nasal</command>
-	  <script>aircraft.livery.dialog.open();</script>
+	  <script>
+	    var livery = gui.Dialog.new("sim/gui/dialogs/Livery/dialog", "Dialogs/Livery.xml");
+	    livery.open();
+	  </script>
 	</binding>
       </item>
     </menu>		
