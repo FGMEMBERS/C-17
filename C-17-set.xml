@@ -254,10 +254,10 @@
 	<from-model-idx type="int">0</from-model-idx>
 	<ground-level-nearplane-m type="double">6f</ground-level-nearplane-m>
 	<x-offset-m type="double">0.00</x-offset-m>
-	<y-offset-m type="double">13.20</y-offset-m>
-	<z-offset-m type="double">-15</z-offset-m>
-	<pitch-offset-deg>-10</pitch-offset-deg>
-	<default-field-of-view-deg type="double">75.0</default-field-of-view-deg>
+	<y-offset-m type="double">12.689</y-offset-m>
+	<z-offset-m type="double">-7.78</z-offset-m>
+	<pitch-offset-deg>-7.0</pitch-offset-deg>
+	<default-field-of-view-deg type="double">123.0</default-field-of-view-deg>
       </config>
       <dynamic>
 	<enabled type="bool">false</enabled>
