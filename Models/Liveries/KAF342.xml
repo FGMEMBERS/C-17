@@ -4,7 +4,7 @@
   <sim>
     <model>
       <livery>
-        <name type="string">Kuwaiti Air Force 342</name>
+        <name type="string">KAF 342</name>
         <texture>Liveries/KAF342.png</texture>
       </livery>
     </model>

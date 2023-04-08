@@ -9,7 +9,7 @@ https://liveries.flightgear.org/liveries.php?id=406
   <sim>
     <model>
       <livery>
-        <name type="string">Royal Canadian Air Force CC-177</name>
+        <name type="string">RCAF CC-177</name>
 	<database-id type="int">406</database-id>
         <texture>Liveries/RCAF177703.png</texture>
       </livery>

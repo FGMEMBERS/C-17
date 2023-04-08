@@ -1,0 +1,155 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<!--
+:copyright: 2023, IAHM-COL
+License: GPLv3
+
+Redistribution, or reuse, with or without modifications
+shall keep this attribution information. 
+-->
+
+<PropertyList>
+  <USAF62AW2>
+    <id type="int">0</id>
+    <database-id type="int">0</database-id>
+    <name type="string">USAF 62 AW, McChord (Default)</name>
+    <texture type="string">Liveries/USAF62AW2.png</texture>
+    <author type="string">Unlisted</author>
+  </USAF62AW2>
+  
+  <AIS>
+    <id type="int">1</id>
+    <database-id type="int">0</database-id>
+    <name type="string">Avionics Backshop</name>
+    <texture type="string">Liveries/AIS.png</texture>
+    <author type="string">Unlisted</author>
+  </AIS>
+
+  <Blank>
+    <id type="int">2</id>
+    <database-id type="int">0</database-id>
+    <name type="string">Blank Livery</name>
+    <texture type="string">Liveries/Blank.png</texture>
+    <author type="string">Unlisted</author>
+  </Blank>
+
+  <IAF81>
+    <id type="int">3</id>
+    <database-id type="int">0</database-id>
+    <name type="string">IAF 81 Sqdn, Hindon</name>
+    <texture type="string">Liveries/IAF81.png</texture>
+    <author type="string">Unlisted</author>
+  </IAF81>
+
+  <KAF342>
+    <id type="int">4</id>
+    <database-id type="int">0</database-id>
+    <name type="string">KAF 342</name>
+    <texture type="string">Liveries/KAF342.png</texture>
+    <author type="string">Unlisted</author>
+  </KAF342>
+
+  <RAAF36S>
+    <id type="int">5</id>
+    <database-id type="int">0</database-id>
+    <name type="string">RAAF 36 Sqdn, Amberley</name>
+    <texture type="string">Liveries/RAAF36S.png</texture>
+    <author type="string">Unlisted</author>
+  </RAAF36S>
+
+  <RAF99Sq2>
+    <id type="int">6</id>
+    <database-id type="int">0</database-id>
+    <name type="string">RAF 99 Sqdn ZZ172, Brize Norton</name>
+    <texture type="string">Liveries/RAF99Sq2.png</texture>
+    <author type="string">Unlisted</author>
+  </RAF99Sq2>
+
+  <RAF99Sq5>
+    <id type="int">7</id>
+    <database-id type="int">0</database-id>
+    <name type="string">RAF 99 Sqdn ZZ175, Brize Norton</name>
+    <texture type="string">Liveries/RAF99Sq5.png</texture>
+    <author type="string">Unlisted</author>
+  </RAF99Sq5>
+
+  <RCAF177703>
+    <id type="int">8</id>
+    <database-id type="int">406</database-id>
+    <name type="string">RCAF CC-177</name>
+    <texture type="string">Liveries/RCAF177703.png</texture>
+    <author type="string">Robert Maheu</author>
+  </RCAF177703>
+
+  <RCAF429TS>
+    <id type="int">9</id>
+    <database-id type="int">0</database-id>
+    <name type="string">RCAF 429 TS, Trenton</name>
+    <texture type="string">Liveries/RCAF429TS.png</texture>
+    <author type="string">Robert Maheu</author>
+  </RCAF429TS>
+
+  <SAC03>
+    <id type="int">10</id>
+    <database-id type="int">0</database-id>
+    <name type="string">Strategic Airlift Capability 03, Papa</name>
+    <texture type="string">Liveries/SAC03.png</texture>
+    <author type="string">Unlisted</author>
+  </SAC03>
+
+  <USAF3WG>
+    <id type="int">11</id>
+    <database-id type="int">0</database-id>
+    <name type="string">USAF 3 WG, Elmendorf</name>
+    <texture type="string">Liveries/USAF3WG.png</texture>
+    <author type="string">Unlisted</author>
+  </USAF3WG>
+
+  <USAF412TW>
+    <id type="int">12</id>
+    <database-id type="int">0</database-id>
+    <name type="string">USAF 412 TW, Edwards</name>
+    <texture type="string">Liveries/USAF412TW.png</texture>
+    <author type="string">Unlisted</author>
+  </USAF412TW>
+
+  <USAF436AW>
+    <id type="int">13</id>
+    <database-id type="int">0</database-id>
+    <name type="string">USAF 436 AW, Dover</name>
+    <texture type="string">Liveries/USAF436AW.png</texture>
+    <author type="string">Unlisted</author>
+  </USAF436AW>
+
+  <USAF60AMW>
+    <id type="int">14</id>
+    <database-id type="int">0</database-id>
+    <name type="string">USAF 60 AMW, Travis</name>
+    <texture type="string">Liveries/USAF60AMW.png</texture>
+    <author type="string">Unlisted</author>
+  </USAF60AMW>
+
+  <USAF62AW>
+    <id type="int">15</id>
+    <database-id type="int">0</database-id>
+    <name type="string">USAF 62 AW, McChord</name>
+    <texture type="string">Liveries/USAF62AW.png</texture>
+    <author type="string">Unlisted</author>
+  </USAF62AW>
+
+  <USAF62AW3>
+    <id type="int">16</id>
+    <database-id type="int">0</database-id>
+    <name type="string">USAF 62AW, McChord (Blue)</name>
+    <texture type="string">Liveries/USAF62AW3.png</texture>
+    <author type="string">Unlisted</author>
+  </USAF62AW3>
+
+  <USAFED70025>
+    <id type="int">17</id>
+    <database-id type="int">0</database-id>
+    <name type="string">USAF Camo ED70025 (Prototype)</name>
+    <texture type="string">Liveries/USAFED70025.png</texture>
+    <author type="string">Unlisted</author>
+  </USAFED70025>
+</PropertyList>

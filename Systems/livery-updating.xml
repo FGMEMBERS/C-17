@@ -1,0 +1,80 @@
+<?xml version="1.0"?>
+<?xml-stylesheet href="JSBSim.xsl" type="application/xml"?>
+
+<!--
+    :copyright: 2023, IAHM-COL
+    License: GPLv3
+
+    Redistribution, or reuse, with or without modifications
+    shall keep this attribution information. 
+-->
+
+<system>
+  <channel name="Livery database id">
+    <switch name="systems/livery/selected/database-id">
+      <default value="systems/livery/USAF62AW2/database-id"/>
+      <test value="systems/livery/AIS/database-id">
+	systems/livery/selected/id == systems/livery/AIS/id
+      </test>
+      <test value="systems/livery/Blank/database-id">
+	systems/livery/selected/id == systems/livery/Blank/id
+      </test>
+      <test value="systems/livery/IAF81/database-id">
+	systems/livery/selected/id == systems/livery/IAF81/id
+      </test>
+      <test value="systems/livery/KAF342/database-id">
+	systems/livery/selected/id == systems/livery/KAF342/id
+      </test>
+      <test value="systems/livery/RAAF36S/database-id">
+	systems/livery/selected/id == systems/livery/RAAF36S/id
+      </test>
+      <test value="systems/livery/RAF99Sq2/database-id">
+	systems/livery/selected/id == systems/livery/RAF99Sq2/id
+      </test>
+      <test value="systems/livery/RAF99Sq5/database-id">
+	systems/livery/selected/id == systems/livery/RAF99Sq5/id
+      </test>
+      <test value="systems/livery/RCAF177703/database-id">
+	systems/livery/selected/id == systems/livery/RCAF177703/id
+      </test>
+      <test value="systems/livery/RCAF429TS/database-id">
+	systems/livery/selected/id == systems/livery/RCAF429TS/id
+      </test>
+      <test value="systems/livery/SAC03/database-id">
+	systems/livery/selected/id == systems/livery/SAC03/id
+      </test>
+      <test value="systems/livery/USAF412TW/database-id">
+	systems/livery/selected/id == systems/livery/USAF412TW/id
+      </test>
+      <test value="systems/livery/USAF436AW/database-id">
+	systems/livery/selected/id == systems/livery/USAF436AW/id
+      </test>
+      <test value="systems/livery/USAF60AMW/database-id">
+	systems/livery/selected/id == systems/livery/USAF60AMW/id
+      </test>
+      <test value="systems/livery/USAF62AW/database-id">
+	systems/livery/selected/id == systems/livery/USAF62AW/id
+      </test>
+      <test value="systems/livery/USAF62AW3/database-id">
+	systems/livery/selected/id == systems/livery/USAF62AW3/id
+      </test>
+      <test value="systems/livery/USAFED70025/database-id">
+	systems/livery/selected/id == systems/livery/USAFED70025/id
+      </test>
+    </switch>
+  </channel>
+
+  <channel name="livery updating limits">
+    <!--
+	Limits for updating the livery
+	+ Livery will only update when aircraft is on the groud and not moving
+    -->
+    <switch name="systems/livery/limits/livery-able">
+      <default value="0"/>
+      <test logic="AND" value="1">
+	gear/wow == 1
+	/velocities/groundspeed-kt LT 5
+      </test>
+    </switch>
+  </channel>
+</system>

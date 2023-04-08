@@ -2935,7 +2935,9 @@
   </aerodynamics>
 
   <system name="PAYLOAD: C-17" file="Systems/cargobay-loading.xml" />
-  
+
+  <system name="LIVERY: C-17" file="Systems/livery-updating.xml" />
+
   <output name="C-17-jsbim-output.csv" type="CSV" rate="100">
     <simulation>OFF</simulation>
     <atmosphere>OFF</atmosphere>

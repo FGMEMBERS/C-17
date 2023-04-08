@@ -2,7 +2,7 @@
 <!-- Bump and specular effect-->
 
 <PropertyList>
-  <name>Aircraft/C-17/Models/Effects/c17_bumpspec</name>
+  <name>Aircraft/C-17/Models/Effects/C-17_bumpspec</name>
   <inherits-from>Effects/bumpspec</inherits-from>
   <parameters>
     <texture n="2">
