@@ -8,6 +8,7 @@
   <livery include="Systems/liveries-initialization.xml">
     <selected>
       <id userarchive="y" type="int">0</id>
+      <name userarchive="y" type="string">USAF 62 AW, McChord (Default)</name>
       <texture userarchive="y" type="string">Liveries/USAF62AW2.png</texture>
     </selected>
   </livery>

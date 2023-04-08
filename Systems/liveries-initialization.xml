@@ -36,7 +36,7 @@ shall keep this attribution information.
   <IAF81>
     <id type="int">3</id>
     <database-id type="int">0</database-id>
-    <name type="string">Indian Airforce 81 Sqdn, Hindon</name>
+    <name type="string">IAF 81 Sqdn, Hindon</name>
     <texture type="string">Liveries/IAF81.png</texture>
     <author type="string">Unlisted</author>
   </IAF81>
@@ -44,7 +44,7 @@ shall keep this attribution information.
   <KAF342>
     <id type="int">4</id>
     <database-id type="int">0</database-id>
-    <name type="string">Kuwaiti Air Force 342</name>
+    <name type="string">KAF 342</name>
     <texture type="string">Liveries/KAF342.png</texture>
     <author type="string">Unlisted</author>
   </KAF342>
@@ -76,18 +76,18 @@ shall keep this attribution information.
   <RCAF177703>
     <id type="int">8</id>
     <database-id type="int">406</database-id>
-    <name type="string">Royal Canadian Air Force CC-177</name>
+    <name type="string">RCAF CC-177</name>
     <texture type="string">Liveries/RCAF177703.png</texture>
     <author type="string">Robert Maheu</author>
   </RCAF177703>
 
-  <RCAF177703>
+  <RCAF429TS>
     <id type="int">9</id>
     <database-id type="int">0</database-id>
     <name type="string">RCAF 429 TS, Trenton</name>
     <texture type="string">Liveries/RCAF429TS.png</texture>
     <author type="string">Robert Maheu</author>
-  </RCAF177703>
+  </RCAF429TS>
 
   <SAC03>
     <id type="int">10</id>
@@ -113,13 +113,13 @@ shall keep this attribution information.
     <author type="string">Unlisted</author>
   </USAF412TW>
 
-  <USAF412TW>
+  <USAF436AW>
     <id type="int">13</id>
     <database-id type="int">0</database-id>
     <name type="string">USAF 436 AW, Dover</name>
     <texture type="string">Liveries/USAF436AW.png</texture>
     <author type="string">Unlisted</author>
-  </USAF412TW>
+  </USAF436AW>
 
   <USAF60AMW>
     <id type="int">14</id>

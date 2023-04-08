@@ -1,0 +1,559 @@
+<?xml version="1.0"?>
+
+<!--
+:copyright: 2023, IAHM-COL
+License: GPLv3
+
+Redistribution, or reuse, with or without modifications
+shall keep this attribution information. 
+-->
+
+<PropertyList>
+  <name>Livery updating</name>
+  <layout>vbox</layout>
+
+  <group>
+    <layout>hbox</layout>
+    <text>
+      <label>MMMMMM</label>
+      <halign>left</halign>
+      <format>Livery: %s</format>
+      <property>/fdm/jsbsim/systems/livery/selected/name</property>
+      <live>true</live>
+    </text>
+
+    <empty><stretch>1</stretch></empty>
+    <button>
+      <pref-width>16</pref-width>
+      <pref-height>16</pref-height>
+      <legend></legend>
+      <default>1</default>
+      <keynum>27</keynum>
+      <border>2</border>
+      <binding>
+	<command>dialog-close</command>
+      </binding>
+      <binding>
+	<command>dialog-apply</command>
+      </binding>
+    </button>
+  </group>
+
+  <hrule/>
+
+  <group>
+    <layout>hbox</layout>
+    <default-padding>8</default-padding>
+
+    <combo>
+      <name>livery-id</name>
+      <pref-width>300</pref-width>
+      <pref-height>25</pref-height>
+      <live>true</live>
+      <property>/fdm/jsbsim/systems/livery/selected/name</property>
+      <value>USAF 62 AW, McChord (Default)</value>
+      <value>Avionics Backshop</value>
+      <value>Blank Livery</value>
+      <value>IAF 81 Sqdn, Hindon</value>
+      <value>KAF 342</value>
+      <value>RAAF 36 Sqdn, Amberley</value>
+      <value>RAF 99 Sqdn ZZ172, Brize Norton</value>
+      <value>RAF 99 Sqdn ZZ175, Brize Norton</value>
+      <value>RCAF CC-177</value>
+      <value>RCAF 429 TS, Trenton</value>
+      <value>Strategic Airlift Capability 03, Papa</value>
+      <value>USAF 3 WG, Elmendorf</value>
+      <value>USAF 412 TW, Edwards</value>
+      <value>USAF 436 AW, Dover</value>
+      <value>USAF 60 AMW, Travis</value>
+      <value>USAF 62 AW, McChord</value>
+      <value>USAF 62AW, McChord (Blue)</value>
+      <value>USAF Camo ED70025 (Prototype)</value>
+      <binding>
+	<command>dialog-apply</command>
+	<object-name>livery-id</object-name>
+      </binding>
+
+      <!-- Swapping Liveries -->
+      <binding>
+	<condition>
+	  <and>
+	    <property>fdm/jsbsim/systems/livery/limits/livery-able</property>
+	    <equals>
+	      <property>fdm/jsbsim/systems/livery/selected/name</property>
+	      <property>fdm/jsbsim/systems/livery/USAF62AW2/name</property>
+	    </equals>
+	  </and>
+	</condition>
+	<command>property-assign</command>
+	<property>fdm/jsbsim/systems/livery/selected/id</property>
+	<property>fdm/jsbsim/systems/livery/USAF62AW2/id</property>
+      </binding>
+      <binding>
+	<condition>
+	  <equals>
+	    <property>fdm/jsbsim/systems/livery/selected/id</property>
+	    <property>fdm/jsbsim/systems/livery/USAF62AW2/id</property>
+	  </equals>
+	</condition>
+	<command>property-assign</command>
+	<property>fdm/jsbsim/systems/livery/selected/texture</property>
+	<property>fdm/jsbsim/systems/livery/USAF62AW2/texture</property>
+      </binding>
+
+      <binding>
+	<condition>
+	  <and>
+	    <property>fdm/jsbsim/systems/livery/limits/livery-able</property>
+	    <equals>
+	      <property>fdm/jsbsim/systems/livery/selected/name</property>
+	      <property>fdm/jsbsim/systems/livery/AIS/name</property>
+	    </equals>
+	  </and>
+	</condition>
+	<command>property-assign</command>
+	<property>fdm/jsbsim/systems/livery/selected/id</property>
+	<property>fdm/jsbsim/systems/livery/AIS/id</property>
+      </binding>
+      <binding>
+	<condition>
+	  <equals>
+	    <property>fdm/jsbsim/systems/livery/selected/id</property>
+	    <property>fdm/jsbsim/systems/livery/AIS/id</property>
+	  </equals>
+	</condition>
+	<command>property-assign</command>
+	<property>fdm/jsbsim/systems/livery/selected/texture</property>
+	<property>fdm/jsbsim/systems/livery/AIS/texture</property>
+      </binding>
+      
+      <binding>
+	<condition>
+	  <and>
+	    <property>fdm/jsbsim/systems/livery/limits/livery-able</property>
+	    <equals>
+	      <property>fdm/jsbsim/systems/livery/selected/name</property>
+	      <property>fdm/jsbsim/systems/livery/Blank/name</property>
+	    </equals>
+	  </and>
+	</condition>
+	<command>property-assign</command>
+	<property>fdm/jsbsim/systems/livery/selected/id</property>
+	<property>fdm/jsbsim/systems/livery/Blank/id</property>
+      </binding>
+      <binding>
+	<condition>
+	  <equals>
+	    <property>fdm/jsbsim/systems/livery/selected/id</property>
+	    <property>fdm/jsbsim/systems/livery/Blank/id</property>
+	  </equals>
+	</condition>
+	<command>property-assign</command>
+	<property>fdm/jsbsim/systems/livery/selected/texture</property>
+	<property>fdm/jsbsim/systems/livery/Blank/texture</property>
+      </binding>
+
+      <binding>
+	<condition>
+	  <and>
+	    <property>fdm/jsbsim/systems/livery/limits/livery-able</property>
+	    <equals>
+	      <property>fdm/jsbsim/systems/livery/selected/name</property>
+	      <property>fdm/jsbsim/systems/livery/IAF81/name</property>
+	    </equals>
+	  </and>
+	</condition>
+	<command>property-assign</command>
+	<property>fdm/jsbsim/systems/livery/selected/id</property>
+	<property>fdm/jsbsim/systems/livery/IAF81/id</property>
+      </binding>
+      <binding>
+	<condition>
+	  <equals>
+	    <property>fdm/jsbsim/systems/livery/selected/id</property>
+	    <property>fdm/jsbsim/systems/livery/IAF81/id</property>
+	  </equals>
+	</condition>
+	<command>property-assign</command>
+	<property>fdm/jsbsim/systems/livery/selected/texture</property>
+	<property>fdm/jsbsim/systems/livery/IAF81/texture</property>
+      </binding>
+
+      <binding>
+	<condition>
+	  <and>
+	    <property>fdm/jsbsim/systems/livery/limits/livery-able</property>
+	    <equals>
+	      <property>fdm/jsbsim/systems/livery/selected/name</property>
+	      <property>fdm/jsbsim/systems/livery/KAF342/name</property>
+	    </equals>
+	  </and>
+	</condition>
+	<command>property-assign</command>
+	<property>fdm/jsbsim/systems/livery/selected/id</property>
+	<property>fdm/jsbsim/systems/livery/KAF342/id</property>
+      </binding>
+      <binding>
+	<condition>
+	  <equals>
+	    <property>fdm/jsbsim/systems/livery/selected/id</property>
+	    <property>fdm/jsbsim/systems/livery/KAF342/id</property>
+	  </equals>
+	</condition>
+	<command>property-assign</command>
+	<property>fdm/jsbsim/systems/livery/selected/texture</property>
+	<property>fdm/jsbsim/systems/livery/KAF342/texture</property>
+      </binding>
+
+      <binding>
+	<condition>
+	  <and>
+	    <property>fdm/jsbsim/systems/livery/limits/livery-able</property>
+	    <equals>
+	      <property>fdm/jsbsim/systems/livery/selected/name</property>
+	      <property>fdm/jsbsim/systems/livery/RAAF36S/name</property>
+	    </equals>
+	  </and>
+	</condition>
+	<command>property-assign</command>
+	<property>fdm/jsbsim/systems/livery/selected/id</property>
+	<property>fdm/jsbsim/systems/livery/RAAF36S/id</property>
+      </binding>
+      <binding>
+	<condition>
+	  <equals>
+	    <property>fdm/jsbsim/systems/livery/selected/id</property>
+	    <property>fdm/jsbsim/systems/livery/RAAF36S/id</property>
+	  </equals>
+	</condition>
+	<command>property-assign</command>
+	<property>fdm/jsbsim/systems/livery/selected/texture</property>
+	<property>fdm/jsbsim/systems/livery/RAAF36S/texture</property>
+      </binding>
+
+      <binding>
+	<condition>
+	  <and>
+	    <property>fdm/jsbsim/systems/livery/limits/livery-able</property>
+	    <equals>
+	      <property>fdm/jsbsim/systems/livery/selected/name</property>
+	      <property>fdm/jsbsim/systems/livery/RAF99Sq2/name</property>
+	    </equals>
+	  </and>
+	</condition>
+	<command>property-assign</command>
+	<property>fdm/jsbsim/systems/livery/selected/id</property>
+	<property>fdm/jsbsim/systems/livery/RAF99Sq2/id</property>
+      </binding>
+      <binding>
+	<condition>
+	  <equals>
+	    <property>fdm/jsbsim/systems/livery/selected/id</property>
+	    <property>fdm/jsbsim/systems/livery/RAF99Sq2/id</property>
+	  </equals>
+	</condition>
+	<command>property-assign</command>
+	<property>fdm/jsbsim/systems/livery/selected/texture</property>
+	<property>fdm/jsbsim/systems/livery/RAF99Sq2/texture</property>
+      </binding>
+
+      <binding>
+	<condition>
+	  <and>
+	    <property>fdm/jsbsim/systems/livery/limits/livery-able</property>
+	    <equals>
+	      <property>fdm/jsbsim/systems/livery/selected/name</property>
+	      <property>fdm/jsbsim/systems/livery/RAF99Sq5/name</property>
+	    </equals>
+	  </and>
+	</condition>
+	<command>property-assign</command>
+	<property>fdm/jsbsim/systems/livery/selected/id</property>
+	<property>fdm/jsbsim/systems/livery/RAF99Sq5/id</property>
+      </binding>
+      <binding>
+	<condition>
+	  <equals>
+	    <property>fdm/jsbsim/systems/livery/selected/id</property>
+	    <property>fdm/jsbsim/systems/livery/RAF99Sq5/id</property>
+	  </equals>
+	</condition>
+	<command>property-assign</command>
+	<property>fdm/jsbsim/systems/livery/selected/texture</property>
+	<property>fdm/jsbsim/systems/livery/RAF99Sq5/texture</property>
+      </binding>
+
+      <binding>
+	<condition>
+	  <and>
+	    <property>fdm/jsbsim/systems/livery/limits/livery-able</property>
+	    <equals>
+	      <property>fdm/jsbsim/systems/livery/selected/name</property>
+	      <property>fdm/jsbsim/systems/livery/RCAF177703/name</property>
+	    </equals>
+	  </and>
+	</condition>
+	<command>property-assign</command>
+	<property>fdm/jsbsim/systems/livery/selected/id</property>
+	<property>fdm/jsbsim/systems/livery/RCAF177703/id</property>
+      </binding>
+      <binding>
+	<condition>
+	  <equals>
+	    <property>fdm/jsbsim/systems/livery/selected/id</property>
+	    <property>fdm/jsbsim/systems/livery/RCAF177703/id</property>
+	  </equals>
+	</condition>
+	<command>property-assign</command>
+	<property>fdm/jsbsim/systems/livery/selected/texture</property>
+	<property>fdm/jsbsim/systems/livery/RCAF177703/texture</property>
+      </binding>
+
+      <binding>
+	<condition>
+	  <and>
+	    <property>fdm/jsbsim/systems/livery/limits/livery-able</property>
+	    <equals>
+	      <property>fdm/jsbsim/systems/livery/selected/name</property>
+	      <property>fdm/jsbsim/systems/livery/RCAF429TS/name</property>
+	    </equals>
+	  </and>
+	</condition>
+	<command>property-assign</command>
+	<property>fdm/jsbsim/systems/livery/selected/id</property>
+	<property>fdm/jsbsim/systems/livery/RCAF429TS/id</property>
+      </binding>
+      <binding>
+	<condition>
+	  <equals>
+	    <property>fdm/jsbsim/systems/livery/selected/id</property>
+	    <property>fdm/jsbsim/systems/livery/RCAF429TS/id</property>
+	  </equals>
+	</condition>
+	<command>property-assign</command>
+	<property>fdm/jsbsim/systems/livery/selected/texture</property>
+	<property>fdm/jsbsim/systems/livery/RCAF429TS/texture</property>
+      </binding>
+
+      <binding>
+	<condition>
+	  <and>
+	    <property>fdm/jsbsim/systems/livery/limits/livery-able</property>
+	    <equals>
+	      <property>fdm/jsbsim/systems/livery/selected/name</property>
+	      <property>fdm/jsbsim/systems/livery/SAC03/name</property>
+	    </equals>
+	  </and>
+	</condition>
+	<command>property-assign</command>
+	<property>fdm/jsbsim/systems/livery/selected/id</property>
+	<property>fdm/jsbsim/systems/livery/SAC03/id</property>
+      </binding>
+      <binding>
+	<condition>
+	  <equals>
+	    <property>fdm/jsbsim/systems/livery/selected/id</property>
+	    <property>fdm/jsbsim/systems/livery/SAC03/id</property>
+	  </equals>
+	</condition>
+	<command>property-assign</command>
+	<property>fdm/jsbsim/systems/livery/selected/texture</property>
+	<property>fdm/jsbsim/systems/livery/SAC03/texture</property>
+      </binding>
+
+      <binding>
+	<condition>
+	  <and>
+	    <property>fdm/jsbsim/systems/livery/limits/livery-able</property>
+	    <equals>
+	      <property>fdm/jsbsim/systems/livery/selected/name</property>
+	      <property>fdm/jsbsim/systems/livery/USAF3WG/name</property>
+	    </equals>
+	  </and>
+	</condition>
+	<command>property-assign</command>
+	<property>fdm/jsbsim/systems/livery/selected/id</property>
+	<property>fdm/jsbsim/systems/livery/USAF3WG/id</property>
+      </binding>
+      <binding>
+	<condition>
+	  <equals>
+	    <property>fdm/jsbsim/systems/livery/selected/id</property>
+	    <property>fdm/jsbsim/systems/livery/USAF3WG/id</property>
+	  </equals>
+	</condition>
+	<command>property-assign</command>
+	<property>fdm/jsbsim/systems/livery/selected/texture</property>
+	<property>fdm/jsbsim/systems/livery/USAF3WG/texture</property>
+      </binding>
+
+      <binding>
+	<condition>
+	  <and>
+	    <property>fdm/jsbsim/systems/livery/limits/livery-able</property>
+	    <equals>
+	      <property>fdm/jsbsim/systems/livery/selected/name</property>
+	      <property>fdm/jsbsim/systems/livery/USAF412TW/name</property>
+	    </equals>
+	  </and>
+	</condition>
+	<command>property-assign</command>
+	<property>fdm/jsbsim/systems/livery/selected/id</property>
+	<property>fdm/jsbsim/systems/livery/USAF412TW/id</property>
+      </binding>
+      <binding>
+	<condition>
+	  <equals>
+	    <property>fdm/jsbsim/systems/livery/selected/id</property>
+	    <property>fdm/jsbsim/systems/livery/USAF412TW/id</property>
+	  </equals>
+	</condition>
+	<command>property-assign</command>
+	<property>fdm/jsbsim/systems/livery/selected/texture</property>
+	<property>fdm/jsbsim/systems/livery/USAF412TW/texture</property>
+      </binding>
+
+      <binding>
+	<condition>
+	  <and>
+	    <property>fdm/jsbsim/systems/livery/limits/livery-able</property>
+	    <equals>
+	      <property>fdm/jsbsim/systems/livery/selected/name</property>
+	      <property>fdm/jsbsim/systems/livery/USAF436AW/name</property>
+	    </equals>
+	  </and>
+	</condition>
+	<command>property-assign</command>
+	<property>fdm/jsbsim/systems/livery/selected/id</property>
+	<property>fdm/jsbsim/systems/livery/USAF436AW/id</property>
+      </binding>
+      <binding>
+	<condition>
+	  <equals>
+	    <property>fdm/jsbsim/systems/livery/selected/id</property>
+	    <property>fdm/jsbsim/systems/livery/USAF436AW/id</property>
+	  </equals>
+	</condition>
+	<command>property-assign</command>
+	<property>fdm/jsbsim/systems/livery/selected/texture</property>
+	<property>fdm/jsbsim/systems/livery/USAF436AW/texture</property>
+      </binding>
+
+      <binding>
+	<condition>
+	  <and>
+	    <property>fdm/jsbsim/systems/livery/limits/livery-able</property>
+	    <equals>
+	      <property>fdm/jsbsim/systems/livery/selected/name</property>
+	      <property>fdm/jsbsim/systems/livery/USAF60AMW/name</property>
+	    </equals>
+	  </and>
+	</condition>
+	<command>property-assign</command>
+	<property>fdm/jsbsim/systems/livery/selected/id</property>
+	<property>fdm/jsbsim/systems/livery/USAF60AMW/id</property>
+      </binding>
+      <binding>
+	<condition>
+	  <equals>
+	    <property>fdm/jsbsim/systems/livery/selected/id</property>
+	    <property>fdm/jsbsim/systems/livery/USAF60AMW/id</property>
+	  </equals>
+	</condition>
+	<command>property-assign</command>
+	<property>fdm/jsbsim/systems/livery/selected/texture</property>
+	<property>fdm/jsbsim/systems/livery/USAF60AMW/texture</property>
+      </binding>
+
+      <binding>
+	<condition>
+	  <and>
+	    <property>fdm/jsbsim/systems/livery/limits/livery-able</property>
+	    <equals>
+	      <property>fdm/jsbsim/systems/livery/selected/name</property>
+	      <property>fdm/jsbsim/systems/livery/USAF62AW/name</property>
+	    </equals>
+	  </and>
+	</condition>
+	<command>property-assign</command>
+	<property>fdm/jsbsim/systems/livery/selected/id</property>
+	<property>fdm/jsbsim/systems/livery/USAF62AW/id</property>
+      </binding>
+      <binding>
+	<condition>
+	  <equals>
+	    <property>fdm/jsbsim/systems/livery/selected/id</property>
+	    <property>fdm/jsbsim/systems/livery/USAF62AW/id</property>
+	  </equals>
+	</condition>
+	<command>property-assign</command>
+	<property>fdm/jsbsim/systems/livery/selected/texture</property>
+	<property>fdm/jsbsim/systems/livery/USAF62AW/texture</property>
+      </binding>
+
+      <binding>
+	<condition>
+	  <and>
+	    <property>fdm/jsbsim/systems/livery/limits/livery-able</property>
+	    <equals>
+	      <property>fdm/jsbsim/systems/livery/selected/name</property>
+	      <property>fdm/jsbsim/systems/livery/USAF62AW3/name</property>
+	    </equals>
+	  </and>
+	</condition>
+	<command>property-assign</command>
+	<property>fdm/jsbsim/systems/livery/selected/id</property>
+	<property>fdm/jsbsim/systems/livery/USAF62AW3/id</property>
+      </binding>
+      <binding>
+	<condition>
+	  <equals>
+	    <property>fdm/jsbsim/systems/livery/selected/id</property>
+	    <property>fdm/jsbsim/systems/livery/USAF62AW3/id</property>
+	  </equals>
+	</condition>
+	<command>property-assign</command>
+	<property>fdm/jsbsim/systems/livery/selected/texture</property>
+	<property>fdm/jsbsim/systems/livery/USAF62AW3/texture</property>
+      </binding>
+
+      <binding>
+	<condition>
+	  <and>
+	    <property>fdm/jsbsim/systems/livery/limits/livery-able</property>
+	    <equals>
+	      <property>fdm/jsbsim/systems/livery/selected/name</property>
+	      <property>fdm/jsbsim/systems/livery/USAFED70025/name</property>
+	    </equals>
+	  </and>
+	</condition>
+	<command>property-assign</command>
+	<property>fdm/jsbsim/systems/livery/selected/id</property>
+	<property>fdm/jsbsim/systems/livery/USAFED70025/id</property>
+      </binding>
+      <binding>
+	<condition>
+	  <equals>
+	    <property>fdm/jsbsim/systems/livery/selected/id</property>
+	    <property>fdm/jsbsim/systems/livery/USAFED70025/id</property>
+	  </equals>
+	</condition>
+	<command>property-assign</command>
+	<property>fdm/jsbsim/systems/livery/selected/texture</property>
+	<property>fdm/jsbsim/systems/livery/USAFED70025/texture</property>
+      </binding>
+
+    </combo>
+  </group>
+  <hrule/>
+
+  <button>
+    <legend>Close</legend>
+    <default>true</default>
+    <key>Esc</key>
+    <binding>
+      <command>dialog-close</command>
+    </binding>
+  </button>
+
+</PropertyList>
