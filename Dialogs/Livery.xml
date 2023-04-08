@@ -70,6 +70,9 @@ shall keep this attribution information.
       <value>USAF 62AW, McChord (Blue)</value>
       <value>USAF Camo ED70025 (Prototype)</value>
       <binding>
+	<condition>
+	  <property>fdm/jsbsim/systems/livery/limits/livery-able</property>
+	</condition>
 	<command>dialog-apply</command>
 	<object-name>livery-id</object-name>
       </binding>
