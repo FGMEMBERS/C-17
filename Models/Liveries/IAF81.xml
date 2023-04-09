@@ -1,0 +1,12 @@
+<?xml version="1.0"?>
+
+<PropertyList>
+  <sim>
+    <model>
+      <livery>
+        <name type="string">IAF 81 Sqdn, Hindon</name>
+        <texture>Liveries/IAF81.png</texture>
+      </livery>
+    </model>
+  </sim>
+</PropertyList>

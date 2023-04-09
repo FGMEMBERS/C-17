@@ -1,13 +1,13 @@
 <?xml version="1.0"?>
 <!-- $Id$ -->
 <!--
-MD500 multiplayer passenger view.
+C-17 multiplayer passenger view.
 
-Copyright (C) 2009  Anders Gidenstam  (anders(at)gidenstam.org)
+Copyright (C) 2009  Anders Gidenstam  (anders@gidenstam.org)
 This file is licensed under the GPL license version 2 or later.
 -->
 <!--
-Usage: fgfs - -prop:/sim/remote/pilot-callsign="remote pilot callsign" - -aircraft=Fi-156-passenger
+Usage: fgfs --prop:/sim/remote/pilot-callsign="remote pilot callsign" --aircraft=C-17-co-yasim
 -->
 <PropertyList>
   <sim>
@@ -26,7 +26,7 @@ Usage: fgfs - -prop:/sim/remote/pilot-callsign="remote pilot callsign" - -aircra
     <!-- Submodel (Paratroopers) -->
     <submodels>
       <serviceable type="bool">true</serviceable>
-      <path>Aircraft/C-17/Submodels/submodels.xml</path>
+      <path>Aircraft/C-17/Models/Submodels/submodels.xml</path>
       <path>Aircraft/C-17/Models/payload/loads.xml</path>
     </submodels>
     <instrumentation>
@@ -35,7 +35,7 @@ Usage: fgfs - -prop:/sim/remote/pilot-callsign="remote pilot callsign" - -aircra
 
     <!-- 3d model -->
     <model>
-      <path>Aircraft/C-17/Models/C17-CoPilot.xml</path>
+      <path>Aircraft/C-17/Models/C-17-copilot.xml</path>
     </model>
     
     <hud>
@@ -298,8 +298,8 @@ Usage: fgfs - -prop:/sim/remote/pilot-callsign="remote pilot callsign" - -aircra
       </font>
       <lightning type="bool" archive="y">true</lightning>
       <display-mode type="string" archive="y">arc</display-mode>
-      <radar-texture-path type="string" archive="y">Aircraft/C-17/Panels/Instruments/MFD/od_wxradar.png</radar-texture-path>
-      <echo-texture-path type="string" archive="y">Aircraft/C-17/Panels/Instruments/MFD/wxecho.png</echo-texture-path>
+      <radar-texture-path type="string" archive="y">Aircraft/C-17/Models/Panels/Instruments/MFD/od_wxradar.png</radar-texture-path>
+      <echo-texture-path type="string" archive="y">Aircraft/C-17/Models/Panels/Instruments/MFD/wxecho.png</echo-texture-path>
       <minimized type="bool" archive="y">false</minimized>
       <heading-marker type="bool" archive="y">true</heading-marker>
       <limit-deg type="int">360</limit-deg>

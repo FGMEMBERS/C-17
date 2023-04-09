@@ -5,9 +5,8 @@
     <model>
       <livery>
         <name type="string">USAF 436 AW, Dover</name>
-        <texture>Liveries/USAF436AW/C-17-436.jpg</texture>
-	  </livery>
-	  	  
+        <texture>Liveries/USAF436AW.png</texture>
+      </livery>
     </model>
   </sim>
 </PropertyList>

@@ -1,0 +1,12 @@
+<?xml version="1.0"?>
+
+<PropertyList>
+  <sim>
+    <model>
+      <livery>
+        <name type="string">RAAF 36 Sqdn, Amberley</name>
+        <texture>Liveries/RAAF36S.png</texture>
+      </livery>
+    </model>
+  </sim>
+</PropertyList>

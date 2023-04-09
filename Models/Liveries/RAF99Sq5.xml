@@ -1,0 +1,12 @@
+<?xml version="1.0"?>
+
+<PropertyList>
+  <sim>
+    <model>
+      <livery>
+        <name type="string">RAF 99 Sqdn ZZ175, Brize Norton</name>
+        <texture>Liveries/RAF99Sq5.png</texture>
+      </livery>
+    </model>
+  </sim>
+</PropertyList>

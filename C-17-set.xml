@@ -79,8 +79,8 @@
 	<int n="17" alias="/controls/lighting/landing-lights"/>
 	<int n="18" alias="/controls/lighting/landing-lights[1]"/>
 	<int n="19" alias="/controls/lighting/cabin-lights"/>
+	<int n="20" alias="/fdm/jsbsim/systems/payload/cargo-id"/>
 	<!-- This does not work, because FlightGear limits MP properties to 18 -->
-
 	<float n="1" alias="/instrumentation/doors/ramp/position-norm"/>
 	<float n="2" alias="/position/gear-agl-m">0</float><!-- 11 altitude for MP shadow -->
 	<float n="3" alias="/surface-positions/flap-pos-norm"/>
@@ -90,13 +90,11 @@
 	<float n="7" alias="/controls/flight/aileron"/>
 	<float n="8" alias="/controls/engines/engine[0]/throttle"/>
 	<float n="9" alias="/controls/engines/engine[1]/throttle"/>
-	
 	<float n="14" alias="/controls/gear/brake-left"/>
 	<float n="15" alias="/controls/gear/brake-right"/>
 	<float n="16" alias="/gear/gear[0]/position-norm"/>
 	<float n="17" alias="/controls/flight/rudder-trim"/>
 	<float n="18" alias="/controls/flight/aileron-trim"/>
-        
 	<string n="0" type="string"></string><!-- RESERVED FOR DUAL CONTROL (Analog Switch - TDM)-->
 	<!--<string n="1" type"string"/>RESERVED FOR MODE WHEELS/AMPHIBIOUS -->
 	<string alias="/sim/weight[0]/selected" n="1"/><!-- Payload over multiplayer -->
@@ -107,22 +105,30 @@
       <path>Aircraft/C-17/Sounds/C-17-sound.xml</path>
     </sound>
     
-    <!-- 3D Model Converted With Permission From X-Plane C-17 v1.2, Authors
-	 Adam Fathergill / Dave Austin -->	
+    <!-- 
+	 3D Model Converted With Permission From X-Plane C-17 v1.2.
+	 Authors:
+	 Adam Fathergill / Dave Austin
+    -->	
     <model>
       <path>Aircraft/C-17/Models/C-17.xml</path>
-      
       <livery>
-	<file type="string">C-17-0174</file>
+	<file type="string">Systems/liveries-initialization.xml</file>
+	<texture alias="/fdm/jsbsim/systems/livery/selected/texture"/>
       </livery>
     </model>
     
     <!-- Submodels -->
     <submodels>
       <serviceable type="bool">true</serviceable>
-      <path>Aircraft/C-17/Submodels/submodels.xml</path>
+      <path>Aircraft/C-17/Models/Submodels/submodels.xml</path>
       <path>Aircraft/C-17/Models/payload/loads.xml</path>
     </submodels>
+    
+     <instrumentation>
+      <path>Aircraft/C-17/Systems/instrumentation.xml</path>
+    </instrumentation>
+      
 
   <hud>
       <path n="1">Aircraft/C-17/Hud/hud.xml</path>
@@ -148,10 +154,6 @@
         </color>
       </palette>
     </hud>
-
-    <instrumentation>
-      <path>Aircraft/C-17/Systems/instrumentation.xml</path>
-    </instrumentation>
     
     <help>
       <title>C-17</title>
@@ -176,13 +178,6 @@
 	<desc>Reverse thrusters</desc>
       </key>
     </help>
-    
-    <!-- big plane, so extend chase view offset a bit -->	
-    <!--<view n="1">
-	<config>
-	<z-offset-m type="double" archive="y">-50</z-offset-m>
-	</config>
-	</view>-->
     
     <chase-distance-m type="double" archive="y">-95</chase-distance-m>
     
@@ -210,22 +205,26 @@
 	</limits>
       </config>
     </view>
+
     <!-- Shift Camera View to Center of Plane -->		
     <view n="1">
       <config>
 	<target-z-offset-m archive="y" type="double">-30</target-z-offset-m>
       </config>
     </view>
+
     <view n="2">
       <config>
 	<target-z-offset-m archive="y" type="double">-30</target-z-offset-m>
       </config>
     </view>
+
     <view n="3">
       <config>
 	<target-z-offset-m archive="y" type="double">-20</target-z-offset-m>
       </config>
     </view>
+
     <view n="4">
       <config>
 	<target-z-offset-m archive="y" type="double">-30</target-z-offset-m>
@@ -233,8 +232,8 @@
     </view>
 
     <view n="100">
-      <name>Co-Pilot</name>
-      <internal archive="y">true</internal>
+      <name>Copilot</name>
+      <internal type="bool">true</internal>
       <type>lookfrom</type>
       <config>
 	<from-model type="bool">true</from-model>
@@ -246,24 +245,9 @@
 	<default-field-of-view-deg>75.3</default-field-of-view-deg>
       </config>
     </view>
-
-    <view n="101">
-      <name>Loadmaster</name>
-      <internal archive="y">true</internal>
-      <type>lookfrom</type>
-      <config>
-	<from-model type="bool">true</from-model>
-	<from-model-idx type="int">0</from-model-idx>
-	<x-offset-m type="double">0.75</x-offset-m>	<!-- Negative Moves view Left -->
-	<y-offset-m type="double">-0.1</y-offset-m>	<!-- Positive Moves view Up -->
-	<z-offset-m type="double">25.7</z-offset-m>	<!-- Negative Moves view Forward -->
-	<pitch-offset-deg>0</pitch-offset-deg>
-	<default-field-of-view-deg>45.3</default-field-of-view-deg>
-      </config>
-    </view>
     
-    <view n="102">
-      <name>Tail view</name>
+    <view n="101">
+      <name>Tail</name>
       <type>lookfrom</type>
       <internal type="bool">false</internal>
       <config>
@@ -271,133 +255,86 @@
 	<from-model-idx type="int">0</from-model-idx>
 	<ground-level-nearplane-m type="double">6f</ground-level-nearplane-m>
 	<x-offset-m type="double">0.00</x-offset-m>
-	<y-offset-m type="double">13.20</y-offset-m>
-	<z-offset-m type="double">-15</z-offset-m>
-	<pitch-offset-deg>-10</pitch-offset-deg>
-	<default-field-of-view-deg type="double">75.0</default-field-of-view-deg>
+	<y-offset-m type="double">12.689</y-offset-m>
+	<z-offset-m type="double">-7.78</z-offset-m>
+	<pitch-offset-deg>-7.0</pitch-offset-deg>
+	<default-field-of-view-deg type="double">123.0</default-field-of-view-deg>
       </config>
       <dynamic>
 	<enabled type="bool">false</enabled>
       </dynamic>
     </view>
 
+    <view n="102">
+      <name>Loadmaster</name>
+      <internal type="bool">false</internal>
+      <type>lookfrom</type>
+      <config>
+	<from-model type="bool">true</from-model>
+	<from-model-idx type="int">0</from-model-idx>
+	<x-offset-m type="double">-0.10</x-offset-m>
+	<y-offset-m type="double">-0.05</y-offset-m>
+	<z-offset-m type="double">12.5</z-offset-m>
+	<pitch-offset-deg>0</pitch-offset-deg>
+	<default-field-of-view-deg>10.3</default-field-of-view-deg>
+      </config>
+    </view>
+    
+    <view n="103">
+      <name>Loadmaster Station</name>
+      <internal type="bool">true</internal>
+      <type>lookfrom</type>
+      <config>
+	<from-model type="bool">true</from-model>
+	<from-model-idx type="int">0</from-model-idx>
+	<x-offset-m type="double">-2.33</x-offset-m>
+	<y-offset-m type="double">-0.45</y-offset-m>
+	<z-offset-m type="double">-48.0</z-offset-m>
+	<pitch-offset-deg>-8</pitch-offset-deg>/
+	<heading-offset-deg>-180</heading-offset-deg>
+	<default-field-of-view-deg>18.0</default-field-of-view-deg>
+      </config>
+    </view>
+    
     <limits>
       <max-flap-extension-speed>
 	<flaps>0.167</flaps>
 	<speed>260</speed>
       </max-flap-extension-speed>
+
       <max-flap-extension-speed>
 	<flaps>0.333</flaps>
 	<speed>240</speed>
       </max-flap-extension-speed>
+
       <max-flap-extension-speed>
 	<flaps>0.667</flaps>
 	<speed>230</speed>
       </max-flap-extension-speed>
+
       <max-flap-extension-speed>
 	<flaps>0.833</flaps>
 	<speed>205</speed>
       </max-flap-extension-speed>
+
       <max-flap-extension-speed>
 	<flaps>1.000</flaps>
 	<speed>180</speed>
       </max-flap-extension-speed>
-      
+
       <vne>600</vne>
-      
       <max-gear-extension-speed>270</max-gear-extension-speed>
-      
       <max-positive-g>4.4</max-positive-g>
       <max-negative-g>-1.76</max-negative-g>
-      
     </limits>
     
     <!-- Menu Bar  -->
-    <menubar>
-      <default>
-	<menu n="100">				
-	  <label>Globemaster III</label>
-	  <enabled type="bool">true</enabled>
-	  <item>
-	    <label>Select Livery</label>
-	    <binding>
-	      <command>nasal</command>
-	      <script>aircraft.livery.dialog.open()</script>
-	    </binding>
-	  </item>
-	  <item>
-	    <label>Auto Start</label>
-	    <binding>
-	      <command>nasal</command>
-	      <script>
-	      autostart.StartUp();</script>
-	    </binding>
-	  </item>
-	</menu>		
-      </default>	
-    </menubar>
+    <menubar include="Dialogs/menubar.xml" />
     
-    <!-- Payload options -->
-    <weight n="0">
-      <name>Cargobay</name>
-      <weight-lb>0</weight-lb>
-      <selected>none</selected>
-      <opt>
-	<name>none</name>
-	<lbs>0</lbs>
-      </opt>
-      <opt>
-	<name>1x Hummer</name>
-	<lbs>5700</lbs>
-      </opt>
+    <aircraft-data include="Systems/persistent-data.xml" />
 
-      <opt>
-	<name>CH-47</name>
-	<lbs>23400</lbs>
-      </opt>
-
-      <opt>
-	<name>M1 Abrams</name>
-	<lbs>122800</lbs>
-      </opt>
-
-      <opt>
-	<name>2x Hummer</name>
-	<lbs>11400</lbs>
-      </opt>
-
-      <opt>
-	<name>1x LandRover WMIK</name>
-	<lbs>9020</lbs>
-      </opt>
-
-      <opt>
-	<name>2x LandRover WMIK</name>
-	<lbs>18040</lbs>
-      </opt>
-
-      <opt>
-	<name>1x Jackal</name>
-	<lbs>14896</lbs>
-      </opt>
-
-      <opt>
-	<name>2x Jackal</name>
-	<lbs>29792</lbs>
-      </opt>
-
-      <opt>
-	<name>MTVR</name>
-	<lbs>27900</lbs>
-      </opt>
-
-      <opt>
-	<name>BVS10-Viking</name>
-	<lbs>19040</lbs>
-      </opt>
-    </weight>
-    
   </sim>
+
   <systems>
     <electrical>
       <path>Aircraft/Generic/generic-electrical.xml</path>
@@ -421,33 +358,22 @@
   <engines>
     <engine n="0">
       <running>false</running>
+      <reverser-position type="int">0</reverser-position>
     </engine>
     <engine n="1">
       <running>false</running>
-    </engine>
-    <engine n="2">
-      <running>false</running>
-    </engine>
-    <engine n="3">
-      <running>false</running>
-    </engine>
-  </engines>
-  
-  <engines>
-    <engine n="0">
-      <reverser-position type="int">0</reverser-position>
-    </engine>    
-    <engine n="1">
       <reverser-position type="int">0</reverser-position>
     </engine>
     <engine n="2">
+      <running>false</running>
       <reverser-position type="int">0</reverser-position>
     </engine>
     <engine n="3">
+      <running>false</running>
       <reverser-position type="int">0</reverser-position>
     </engine>
   </engines>
-  
+    
   <controls>
     <gear>
       <brake-parking>1</brake-parking>
@@ -460,7 +386,7 @@
   </controls>
   
   <input>
-    <keyboard include="Nasal/keyboard.xml"/>
+    <keyboard include="Systems/keyboard.xml"/>
   </input>
   
   <ai>
@@ -471,14 +397,7 @@
   
   <fdm>
     <jsbsim>
-      <systems>
-	<NWS>
-	  <engaged type="double">0</engaged>
-	</NWS>
-	<multipliers>
-	  <rudder-yaw type="double">1.000</rudder-yaw>
-	</multipliers>
-      </systems>
+      <systems include="Systems/fdm-systems-initialization.xml"/>
     </jsbsim>
   </fdm>
   
@@ -487,14 +406,14 @@
       <file>Aircraft/C-17/Nasal/autostart.nas</file>	
     </autostart>
     <C-17>
+      <file>Aircraft/C-17/Nasal/Fuel-And-Payload.nas</file>
       <!--<file>Aircraft/Generic/limits.nas</file>-->
-      <file>Aircraft/C-17/Nasal/liveries.nas</file>
-      <file>Aircraft/C-17/Systems/air-ground.nas</file>
+      <file>Aircraft/C-17/Nasal/air-ground.nas</file>
       <!--<file>Aircraft/C-17/Nasal/light.nas</file>-->
       <file>Aircraft/C-17/Nasal/tyresmoke.nas</file>
-      <file>Aircraft/C-17/Systems/TEST.nas</file>
-      <file>Aircraft/C-17/Systems/systems.nas</file>
-      <!--<file>Aircraft/C-17/Systems/Electrical.nas</file>	-->		
+      <file>Aircraft/C-17/Nasal/TEST.nas</file>
+      <file>Aircraft/C-17/Nasal/systems.nas</file>
+      <!--<file>Aircraft/C-17/Nasal/Electrical.nas</file>	-->		
     </C-17>
     <doors>
       <file>Aircraft/C-17/Nasal/doors.nas</file>
@@ -534,72 +453,7 @@
     </damage>
   </nasal>
   
-  <instrumentation>
-    <radar>
-      <switch type="string" archive="y">on</switch>
-      <mode-control type="int" archive="y">1</mode-control>
-      <display-mode>plan</display-mode>
-      <display-controls>
-	<WX type="bool" archive="y">false</WX>
-	<pos type="bool" archive="y">true</pos>
-	<data type="bool" archive="y">true</data>
-	<symbol type="bool" archive="y">true</symbol>
-	<rotate type="bool" archive="y">true</rotate>
-      </display-controls>
-      <serviceable type="bool">true</serviceable>
-      <range type="int" archive="y">10</range>
-      <reference-range-nm type="double" archive="y">640</reference-range-nm>
-      <mode type="string" archive="y">WX</mode>
-      <font>
-	<color>
-          <red type="float">0.7</red>
-          <green type="float">0.7</green>
-          <blue type="float">0.7</blue>
-          <alpha type="float">1</alpha>
-	</color>
-	<name type="string" archive="y">helvetica_bold.txf</name>
-	<size type="float">8I think all</size>
-	<line-spacing type="float">0.2</line-spacing>
-      </font>
-      <lightning type="bool" archive="y">true</lightning>
-      <display-mode type="string" archive="y">arc</display-mode>
-      <radar-texture-path type="string" archive="y">Aircraft/C-17/Panels/Instruments/MFD/od_wxradar.png</radar-texture-path>
-      <echo-texture-path type="string" archive="y">Aircraft/C-17/Panels/Instruments/MFD/wxecho.png</echo-texture-path>
-      <minimized type="bool" archive="y">false</minimized>
-      <heading-marker type="bool" archive="y">true</heading-marker>
-      <limit-deg type="int">360</limit-deg>
-    </radar>
-    
-    <dme>
-      <switch-position>1</switch-position>
-    </dme>               
-
-    <efis>
-      <ecam>
-	<display-mode type="string">FUEL</display-mode>
-      </ecam>
-
-      <nd>
-	<display-mode type="string">VOR</display-mode>
-	<display-mode-knob type="int">2</display-mode-knob>
-	<display-range type="int">20</display-range>
-      </nd>
-
-      <input>
-	<vor-adf-1 type="int">1</vor-adf-1>
-	<vor-adf-2 type="int">1</vor-adf-2>
-	<CSTR type="bool">1</CSTR>
-	<WPT type="bool">1</WPT>
-	<VORD type="bool">1</VORD>
-	<NDB type="bool">1</NDB>
-	<ARPT type="bool">1</ARPT>
-	<WX type="bool">1</WX>
-	<TERR type="bool">1</TERR>
-	<TRAF type="bool">1</TRAF>
-	<taxi type="bool">1</taxi>
-      </input>
-    </efis>
-  </instrumentation>
+  <instrumentation include="Systems/instrumentation-initialization.xml" />
   
   <status>early production</status>
 </PropertyList>

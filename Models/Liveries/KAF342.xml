@@ -1,0 +1,12 @@
+<?xml version="1.0"?>
+
+<PropertyList>
+  <sim>
+    <model>
+      <livery>
+        <name type="string">KAF 342</name>
+        <texture>Liveries/KAF342.png</texture>
+      </livery>
+    </model>
+  </sim>
+</PropertyList>

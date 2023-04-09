@@ -3,7 +3,7 @@
   <sim>
     <description>C-17 Globemaster III(YASIM)</description>
     <status>BETA</status>
-    <author>StuartC (FDM), Adam Fothergill (Model) Geed ( sound )</author>
+    <author>StuartC (FDM), Adam Fothergill (Model), Geed (Sound)</author>
     <aircraft-version>3.1</aircraft-version>
     <flight-model>yasim</flight-model>
     <aero>Aero/C-17-yasim</aero>
@@ -93,11 +93,16 @@
     <sound>
       <path>Aircraft/C-17/Sounds/sound.xml</path>
     </sound>
-    <!-- 3D Model Converted With Permission From X-Plane C-17 v1.2, Authors Adam Fathergill/Dave Austin -->
+    <!-- 
+	 3D Model Converted With Permission From X-Plane C-17 v1.2
+	 Authors:
+	 Adam Fathergill / Dave Austin 
+    -->
     <model>
       <path>Aircraft/C-17/Models/C-17-GlobemasterIII.xml</path>
       <livery>
-        <file type="string">CC-177703</file>
+        <file type="string">USAF62AW2</file>
+	<texture type="string" userarchive="y">Liveries/USAF62AW2.png</texture>
       </livery>
     </model>
     <hud>
@@ -288,7 +293,7 @@
     <!-- Submodel (Paratroopers) -->
     <submodels>
       <serviceable type="bool">true</serviceable>
-      <path>Aircraft/C-17/Submodels/submodels.xml</path>
+      <path>Aircraft/C-17/Models/Submodels/submodels.xml</path>
       <path>Aircraft/C-17/Models/payload/loads.xml</path>
     </submodels>
     <instrumentation>
@@ -449,7 +454,7 @@
     </armament>
   </controls>
   <input>
-    <keyboard include="Nasal/keyboard.xml"/>
+    <keyboard include="Systems/keyboard.xml"/>
   </input>
   <ai>
     <submodels>
@@ -460,12 +465,12 @@
     <C-17>
       <!-- <file>Aircraft/Generic/limits.nas</file>-->
       <file>Aircraft/C-17/Nasal/liveries.nas</file>
-      <file>Aircraft/C-17/Systems/air-ground.nas</file>
+      <file>Aircraft/C-17/Nasal/air-ground.nas</file>
       <!-- <file>Aircraft/C-17/Nasal/light.nas</file>-->
       <file>Aircraft/C-17/Nasal/tyresmoke.nas</file>
-      <!--  <file>Aircraft/C-17/Systems/TEST.nas</file>-->
-      <file>Aircraft/C-17/Systems/systems.nas</file>
-      <!-- <file>Aircraft/C-17/Systems/Electrical.nas</file>-->
+      <!--  <file>Aircraft/C-17/Nasal/TEST.nas</file>-->
+      <file>Aircraft/C-17/Nasal/systems.nas</file>
+      <!-- <file>Aircraft/C-17/Nasal/Electrical.nas</file>-->
     </C-17>
     <doors>
       <file>Aircraft/C-17/Nasal/doors.nas</file>
@@ -539,8 +544,8 @@
       </font>
       <lightning archive="y" type="bool">true</lightning>
       <display-mode archive="y" type="string">arc</display-mode>
-      <radar-texture-path archive="y" type="string">Aircraft/C-17/Panels/Instruments/MFD/od_wxradar.png</radar-texture-path>
-      <echo-texture-path archive="y" type="string">Aircraft/C-17/Panels/Instruments/MFD/wxecho.png</echo-texture-path>
+      <radar-texture-path archive="y" type="string">Aircraft/C-17/Models/Panels/Instruments/MFD/od_wxradar.png</radar-texture-path>
+      <echo-texture-path archive="y" type="string">Aircraft/C-17/Models/Panels/Instruments/MFD/wxecho.png</echo-texture-path>
       <minimized archive="y" type="bool">false</minimized>
       <heading-marker archive="y" type="bool">true</heading-marker>
       <limit-deg type="int">360</limit-deg>

@@ -1,0 +1,83 @@
+* M1 Abrams
+
+#+NAME: M1 Abrams
+[[thumbnail.png]]
+
+** [[https://en.wikipedia.org/wiki/M1_Abrams][Wikipedia]]
+  
+** Type
+   Main battle tank
+      
+** National origin
+   United States
+      
+** Service history
+   In service: 1980–present 
+            
+** Wars
+   - Gulf War
+   - War in Afghanistan
+   - Iraq War
+   - Iraqi insurgency (2011–present) 
+      
+** Production history
+      
+** Designer
+   Chrysler Defense (now General Dynamics Land Systems)
+      
+** Designed: 1972–79 
+      
+** Manufacturer
+   - Lima Army Tank Plant (since 1980)[2]
+   - Detroit Arsenal Tank Plant (1982–1996) 
+      
+** Unit cost:
+   US$6.21 million (M1A2 / FY99)[3] Estimated in 2012 as US$8.58 million (with inflation adjustment)
+      
+** Produced
+   1979–present
+      
+** Number built
+   10,000[4]
+      
+** Specifications
+   - Weight
+     + M1: 60 short tons (54 t)[5]
+     + M1A1: 63 short tons (57 t)[5]
+     + M1A2: 68 short tons (62 t) 
+   - Length
+     + Gun forward: 32.04 ft (9.77 m)[6]
+     + Hull length: 26.02 ft (7.93 m) 
+   - Width: 12 ft (3.66 m)[6] 
+   - Height: 8 ft (2.44 m)[6] 
+   - Crew:  4 (commander, gunner, loader, driver) 
+   - Armor
+     + M1, M1A1: Burlington composite armor[7]
+     + M1A2: depleted uranium mesh-reinforced composite armor[7]
+     + M1: Hull & turret – 450 mm vs Armour-piercing fin-stabilized discarding-sabot APFSDS, 650 mm vs High-explosive anti-tank warhead (HEAT)[8]
+     + M1A1: Hull & turret – 600 mm vs APFSDS, 900 mm vs HEAT[8]
+     + M1A1HA: Hull – 600 mm vs APFSDS, 700 mm vs HEAT, Turret – 800 mm vs APFSDS, 1,300  mm vs HEAT[8][9][nb 1]
+   - Main armament
+     + M1: 105 mm L/52 M68 rifled gun (55 rounds)
+     + M1A1: 120 mm L/44 M256A1 smoothbore gun (40 rounds)
+     + M1A2: 120 mm L/44 M256A1 smoothbore gun (42 rounds) 
+   - Secondary armament
+     + 1 × .50-caliber (12.7 mm) M2HB heavy machine gun with 900 rounds
+     + 2 × 7.62 mm (.308 in) M240 machine guns with 10,400 rounds (1 pintle-mounted, 1 coaxial) 
+   - Engine
+     + Honeywell AGT1500C multi-fuel turbine engine
+     + 1,500 shp (1,120 kW) 
+   - Power/weight: From 26.9 hp/t (20.05 kW/t) to 23.8 hp/t (17.74 kW/t) 
+     + Transmission: Allison DDA X-1100-3B 
+     + Suspension: High-hardness-steel torsion bars with rotary shock absorbers 
+   - Ground clearance
+     + M1, M1A1: 0.48 m (1 ft 7 in)
+     + M1A2: 0.43 m (1 ft 5 in) 
+   - Fuel capacity: 500 US gallons (1,900 l; 420 imp gal) 
+   - Operational range
+     + M1A2: 426 km (265 mi)[10] 
+   - Speed
+     + M1A1: Road 45 mph (72 km/h) (governed);
+     + M1A1 Off-road: 30 mph (48 km/h)[6]
+     + M1A2: Road 42 mph (67 km/h) (governed);
+     + M1A2 Off-road: 25 mph (40 km/h) 

@@ -1,0 +1,361 @@
+<?xml version="1.0"?>
+<?xml-stylesheet href="JSBSim.xsl" type="application/xml"?>
+
+<!--
+:copyright: 2023, IAHM-COL
+License: GPLv3
+
+Redistribution, or reuse, with or without modifications
+shall keep this attribution information. 
+-->
+
+<system>
+    <channel name="Weight of Payload in Lbs">
+      <switch name="systems/payload/selected/weight-lbs">
+	<default value="systems/payload/empty/weight"/>
+	<test value="systems/payload/empty/weight">
+	  systems/payload/selected/cargo-id == systems/payload/empty/item-id
+	</test>
+	<test value="systems/payload/CH-47/weight">
+	  systems/payload/selected/cargo-id == systems/payload/CH-47/item-id
+	</test>
+	<test value="systems/payload/M1Abrams/weight">
+	  systems/payload/selected/cargo-id == systems/payload/M1Abrams/item-id
+	</test>
+	<test value="systems/payload/Hummer1x/weight">
+	  systems/payload/selected/cargo-id == systems/payload/Hummer1x/item-id
+	</test>
+	<test value="systems/payload/Hummer2x/weight">
+	  systems/payload/selected/cargo-id == systems/payload/Hummer2x/item-id
+	</test>
+	<test value="systems/payload/LandRover1x/weight">
+	  systems/payload/selected/cargo-id == systems/payload/LandRover1x/item-id
+	</test>
+	<test value="systems/payload/LandRover2x/weight">
+	  systems/payload/selected/cargo-id == systems/payload/LandRover2x/item-id
+	</test>
+	<test value="systems/payload/LandRover4x/weight">
+	  systems/payload/selected/cargo-id == systems/payload/LandRover4x/item-id
+	</test>
+	<test value="systems/payload/Jackal1x/weight">
+	  systems/payload/selected/cargo-id == systems/payload/Jackal1x/item-id
+	</test>
+	<test value="systems/payload/Jackal2x/weight">
+	  systems/payload/selected/cargo-id == systems/payload/Jackal2x/item-id
+	</test>
+	<test value="systems/payload/MTVR/weight">
+	  systems/payload/selected/cargo-id == systems/payload/MTVR/item-id
+	</test>
+	<test value="systems/payload/viking/weight">
+	  systems/payload/selected/cargo-id == systems/payload/viking/item-id
+	</test>
+	<test value="systems/payload/bradle/weight">
+	  systems/payload/selected/cargo-id == systems/payload/bradle/item-id
+	</test>
+	<test value="systems/payload/MLRS/weight">
+	  systems/payload/selected/cargo-id == systems/payload/MLRS/item-id
+	</test>
+	<test value="systems/payload/stryker/weight">
+	  systems/payload/selected/cargo-id == systems/payload/stryker/item-id
+	</test>
+	<test value="systems/payload/FV107/weight">
+	  systems/payload/selected/cargo-id == systems/payload/FV107/item-id
+	</test>
+	<test value="systems/payload/FV510/weight">
+	  systems/payload/selected/cargo-id == systems/payload/FV510/item-id
+	</test>
+	<test value="systems/payload/buffalo/weight">
+	  systems/payload/selected/cargo-id == systems/payload/buffalo/item-id
+	</test>
+      </switch>
+    </channel>
+
+    <channel name="Position of Payload in X">
+      <switch name="systems/payload/selected/position-x">
+	<default value="systems/payload/empty/payload-position-x"/>
+	<test value="systems/payload/empty/payload-position-x">
+	  systems/payload/selected/cargo-id == systems/payload/empty/item-id
+	</test>
+	<test value="systems/payload/CH-47/payload-position-x">
+	  systems/payload/selected/cargo-id == systems/payload/CH-47/item-id
+	</test>
+	<test value="systems/payload/M1Abrams/payload-position-x">
+	  systems/payload/selected/cargo-id == systems/payload/M1Abrams/item-id
+	</test>
+	<test value="systems/payload/Hummer1x/payload-position-x">
+	  systems/payload/selected/cargo-id == systems/payload/Hummer1x/item-id
+	</test>
+	<test value="systems/payload/Hummer2x/payload-position-x">
+	  systems/payload/selected/cargo-id == systems/payload/Hummer2x/item-id
+	</test>
+	<test value="systems/payload/LandRover1x/payload-position-x">
+	  systems/payload/selected/cargo-id == systems/payload/LandRover1x/item-id
+	</test>
+	<test value="systems/payload/LandRover2x/payload-position-x">
+	  systems/payload/selected/cargo-id == systems/payload/LandRover2x/item-id
+	</test>
+	<test value="systems/payload/LandRover4x/payload-position-x">
+	  systems/payload/selected/cargo-id == systems/payload/LandRover4x/item-id
+	</test>
+	<test value="systems/payload/Jackal1x/payload-position-x">
+	  systems/payload/selected/cargo-id == systems/payload/Jackal1x/item-id
+	</test>
+	<test value="systems/payload/Jackal2x/payload-position-x">
+	  systems/payload/selected/cargo-id == systems/payload/Jackal2x/item-id
+	</test>
+	<test value="systems/payload/MTVR/payload-position-x">
+	  systems/payload/selected/cargo-id == systems/payload/MTVR/item-id
+	</test>
+	<test value="systems/payload/viking/payload-position-x">
+	  systems/payload/selected/cargo-id == systems/payload/viking/item-id
+	</test>
+	<test value="systems/payload/bradle/payload-position-x">
+	  systems/payload/selected/cargo-id == systems/payload/bradle/item-id
+	</test>
+	<test value="systems/payload/MLRS/payload-position-x">
+	  systems/payload/selected/cargo-id == systems/payload/MLRS/item-id
+	</test>
+	<test value="systems/payload/stryker/payload-position-x">
+	  systems/payload/selected/cargo-id == systems/payload/stryker/item-id
+	</test>
+	<test value="systems/payload/FV107/payload-position-x">
+	  systems/payload/selected/cargo-id == systems/payload/FV107/item-id
+	</test>
+	<test value="systems/payload/FV510/payload-position-x">
+	  systems/payload/selected/cargo-id == systems/payload/FV510/item-id
+	</test>
+	<test value="systems/payload/buffalo/payload-position-x">
+	  systems/payload/selected/cargo-id == systems/payload/buffalo/item-id
+	</test>
+      </switch>
+    </channel>
+
+    <channel name="Position of Payload in Y">
+      <switch name="systems/payload/selected/position-y">
+	<default value="systems/payload/empty/payload-position-y"/>
+	<test value="systems/payload/empty/payload-position-y">
+	  systems/payload/selected/cargo-id == systems/payload/empty/item-id
+	</test>
+	<test value="systems/payload/CH-47/payload-position-y">
+	  systems/payload/selected/cargo-id == systems/payload/CH-47/item-id
+	</test>
+	<test value="systems/payload/M1Abrams/payload-position-y">
+	  systems/payload/selected/cargo-id == systems/payload/M1Abrams/item-id
+	</test>
+	<test value="systems/payload/Hummer1x/payload-position-y">
+	  systems/payload/selected/cargo-id == systems/payload/Hummer1x/item-id
+	</test>
+	<test value="systems/payload/Hummer2x/payload-position-y">
+	  systems/payload/selected/cargo-id == systems/payload/Hummer2x/item-id
+	</test>
+	<test value="systems/payload/LandRover1x/payload-position-y">
+	  systems/payload/selected/cargo-id == systems/payload/LandRover1x/item-id
+	</test>
+	<test value="systems/payload/LandRover2x/payload-position-y">
+	  systems/payload/selected/cargo-id == systems/payload/LandRover2x/item-id
+	</test>
+	<test value="systems/payload/LandRover4x/payload-position-y">
+	  systems/payload/selected/cargo-id == systems/payload/LandRover4x/item-id
+	</test>
+	<test value="systems/payload/Jackal1x/payload-position-y">
+	  systems/payload/selected/cargo-id == systems/payload/Jackal1x/item-id
+	</test>
+	<test value="systems/payload/Jackal2x/payload-position-y">
+	  systems/payload/selected/cargo-id == systems/payload/Jackal2x/item-id
+	</test>
+	<test value="systems/payload/MTVR/payload-position-y">
+	  systems/payload/selected/cargo-id == systems/payload/MTVR/item-id
+	</test>
+	<test value="systems/payload/viking/payload-position-y">
+	  systems/payload/selected/cargo-id == systems/payload/viking/item-id
+	</test>
+	<test value="systems/payload/bradle/payload-position-y">
+	  systems/payload/selected/cargo-id == systems/payload/bradle/item-id
+	</test>
+	<test value="systems/payload/MLRS/payload-position-y">
+	  systems/payload/selected/cargo-id == systems/payload/MLRS/item-id
+	</test>
+	<test value="systems/payload/stryker/payload-position-y">
+	  systems/payload/selected/cargo-id == systems/payload/stryker/item-id
+	</test>
+	<test value="systems/payload/FV107/payload-position-y">
+	  systems/payload/selected/cargo-id == systems/payload/FV107/item-id
+	</test>
+	<test value="systems/payload/FV510/payload-position-y">
+	  systems/payload/selected/cargo-id == systems/payload/FV510/item-id
+	</test>
+	<test value="systems/payload/buffalo/payload-position-y">
+	  systems/payload/selected/cargo-id == systems/payload/buffalo/item-id
+	</test>
+      </switch>
+    </channel>
+
+    <channel name="Position of Payload in Z">
+      <switch name="systems/payload/selected/position-z">
+	<default value="systems/payload/empty/payload-position-z"/>
+	<test value="systems/payload/empty/payload-position-z">
+	  systems/payload/selected/cargo-id == systems/payload/empty/item-id
+	</test>
+	<test value="systems/payload/CH-47/payload-position-z">
+	  systems/payload/selected/cargo-id == systems/payload/CH-47/item-id
+	</test>
+	<test value="systems/payload/M1Abrams/payload-position-z">
+	  systems/payload/selected/cargo-id == systems/payload/M1Abrams/item-id
+	</test>
+	<test value="systems/payload/Hummer1x/payload-position-z">
+	  systems/payload/selected/cargo-id == systems/payload/Hummer1x/item-id
+	</test>
+	<test value="systems/payload/Hummer2x/payload-position-z">
+	  systems/payload/selected/cargo-id == systems/payload/Hummer2x/item-id
+	</test>
+	<test value="systems/payload/LandRover1x/payload-position-z">
+	  systems/payload/selected/cargo-id == systems/payload/LandRover1x/item-id
+	</test>
+	<test value="systems/payload/LandRover2x/payload-position-z">
+	  systems/payload/selected/cargo-id == systems/payload/LandRover2x/item-id
+	</test>
+	<test value="systems/payload/LandRover4x/payload-position-z">
+	  systems/payload/selected/cargo-id == systems/payload/LandRover4x/item-id
+	</test>
+	<test value="systems/payload/Jackal1x/payload-position-z">
+	  systems/payload/selected/cargo-id == systems/payload/Jackal1x/item-id
+	</test>
+	<test value="systems/payload/Jackal2x/payload-position-z">
+	  systems/payload/selected/cargo-id == systems/payload/Jackal2x/item-id
+	</test>
+	<test value="systems/payload/MTVR/payload-position-z">
+	  systems/payload/selected/cargo-id == systems/payload/MTVR/item-id
+	</test>
+	<test value="systems/payload/viking/payload-position-z">
+	  systems/payload/selected/cargo-id == systems/payload/viking/item-id
+	</test>
+	<test value="systems/payload/bradle/payload-position-z">
+	  systems/payload/selected/cargo-id == systems/payload/bradle/item-id
+	</test>
+	<test value="systems/payload/MLRS/payload-position-z">
+	  systems/payload/selected/cargo-id == systems/payload/MLRS/item-id
+	</test>
+	<test value="systems/payload/stryker/payload-position-z">
+	  systems/payload/selected/cargo-id == systems/payload/stryker/item-id
+	</test>
+	<test value="systems/payload/FV107/payload-position-z">
+	  systems/payload/selected/cargo-id == systems/payload/FV107/item-id
+	</test>
+	<test value="systems/payload/FV510/payload-position-z">
+	  systems/payload/selected/cargo-id == systems/payload/FV510/item-id
+	</test>
+	<test value="systems/payload/buffalo/payload-position-z">
+	  systems/payload/selected/cargo-id == systems/payload/buffalo/item-id
+	</test>
+      </switch>
+    </channel>
+    
+    <channel name="Cargo Item pointmass Loading">
+      <switch name="inertia/pointmass-weight-lbs[4]">
+	<default value="systems/payload/selected/weight-lbs"/>
+      </switch>
+    </channel>
+
+    <channel name="Pointmass Position Loading">
+      <pure_gain name="systems/payload/selected/position-x-inches">
+	<input>systems/payload/selected/position-x</input>
+	<gain>39.3701</gain>
+      </pure_gain>
+      <pure_gain name="systems/payload/selected/position-y-inches">
+	<input>systems/payload/selected/position-y</input>
+	<gain>39.3701</gain>
+      </pure_gain>
+      <pure_gain name="systems/payload/selected/position-z-inches">
+	<input>systems/payload/selected/position-z</input>
+	<gain>39.3701</gain>
+      </pure_gain>
+      <switch name="inertia/pointmass-location-X-inches[4]">
+	<default value="systems/payload/selected/position-x-inches"/>
+      </switch>
+      <switch name="inertia/pointmass-location-Y-inches[4]">
+	<default value="systems/payload/selected/position-y-inches"/>
+      </switch>
+      <switch name="inertia/pointmass-location-Z-inches[4]">
+	<default value="systems/payload/selected/position-z-inches"/>
+      </switch>
+    </channel>
+
+    <channel name="Doors status">
+      <switch name="systems/payload/doors/crew/position-norm">
+	<default value="/instrumentation/doors/crew/position-norm"/>
+      </switch>
+      <switch name="systems/payload/doors/crew/open">
+	<default value="0"/>
+	<test value="1">
+	  systems/payload/doors/crew/position-norm == 1
+	</test>
+      </switch>
+      <switch name="systems/payload/doors/crew/closed">
+	<default value="0"/>
+	<test value="1">
+	  systems/payload/doors/crew/position-norm == 0
+	</test>
+      </switch>
+
+      <switch name="systems/payload/doors/passenger/position-norm">
+	<default value="/instrumentation/doors/passenger/position-norm"/>
+      </switch>
+      <switch name="systems/payload/doors/passenger/open">
+	<default value="0"/>
+	<test value="1">
+	  systems/payload/doors/passenger/position-norm == 1
+	</test>
+      </switch>
+      <switch name="systems/payload/doors/passenger/closed">
+	<default value="0"/>
+	<test value="1">
+	  systems/payload/doors/passenger/position-norm == 0
+	</test>
+      </switch>
+
+      <switch name="systems/payload/doors/ramp/position-norm">
+	<default value="/instrumentation/doors/ramp/position-norm"/>
+      </switch>
+      <switch name="systems/payload/doors/ramp/open">
+	<default value="0"/>
+	<test value="1">
+	  systems/payload/doors/ramp/position-norm == 1
+	</test>
+      </switch>
+      <switch name="systems/payload/doors/ramp/closed">
+	<default value="0"/>
+	<test value="1">
+	  systems/payload/doors/ramp/position-norm == 0
+	</test>
+      </switch>
+    </channel>
+
+    <channel name="loading and unloading limits">
+      <!--
+	  Limits for Loading and unloading of the cargo bay
+
+           + Objects can only be loaded in cargo bay when
+	     * Bay is empty
+	     * Ramp is open
+	     * Aircraft is on the groud and not moving
+	   + Cargo bay can only be empty when
+	     * Ramp is open
+      -->
+      <switch name="systems/payload/limits/load-able">
+	<default value="0"/>
+	<test logic="AND" value="1">
+	  systems/payload/selected/cargo-id == systems/payload/empty/item-id
+	  systems/payload/doors/ramp/open == 1
+	  gear/wow == 1
+	  /velocities/groundspeed-kt LT 5
+	</test>
+      </switch>
+      <switch name="systems/payload/limits/unload-able">
+	<default value="0"/>
+	<test value="1">
+	  systems/payload/doors/ramp/open == 1
+	</test>
+      </switch>
+    </channel>
+
+  </system>

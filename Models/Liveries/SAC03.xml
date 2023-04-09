@@ -1,0 +1,12 @@
+<?xml version="1.0"?>
+
+<PropertyList>
+  <sim>
+    <model>
+      <livery>
+        <name type="string">Strategic Airlift Capability 03, Papa</name>
+        <texture>Liveries/SAC03.png</texture>
+      </livery>
+    </model>
+  </sim>
+</PropertyList>

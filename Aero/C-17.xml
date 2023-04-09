@@ -80,45 +80,56 @@
       <y>0.00</y>
       <z>7.392472</z>
     </location>
+    <pointmass name="Engine0">
+      <location unit="FT">
+	<x>53.2388</x>
+	<y>-45.7608</y>
+	<z>-1.13525</z>
+      </location>
+      <weight unit="LBS">7100</weight>
+    </pointmass>
+    <pointmass name="Engine1">
+      <location unit="FT">
+	<x>42.7388</x>
+	<y>-24.4306</y>
+	<z>1.36476</z>
+      </location>
+      <weight unit="LBS">7100</weight>
+    </pointmass>
+    <pointmass name="Engine2">
+      <location unit="FT">
+	<x>42.7388</x>
+	<y>24.4306</y>
+	<z>1.36476</z>
+      </location>
+      <weight unit="LBS">7100</weight>
+    </pointmass>
+    <pointmass name="Engine3">
+      <location unit="FT">
+	<x>53.2388</x>
+	<y>45.7608</y>
+	<z>-1.13525</z>
+      </location>
+      <weight unit="LBS">7100</weight>
+    </pointmass>
+    <pointmass name="CargoBay">
+      <location unit="M">
+	<x>18.00</x>
+	<y>0.00</y>
+	<z>-2.20</z>
+      </location>
+      <weight unit="LBS">0</weight>
+    </pointmass>
   </mass_balance>
-
-  <pointmass name="Engine0">
-    <location unit="FT">
-      <x>53.2388</x>
-      <y>-45.7608</y>
-      <z>-1.13525</z>
-    </location>
-    <weight unit="LBS">7100</weight>
-  </pointmass>
-  <pointmass name="Engine1">
-    <location unit="FT">
-      <x>42.7388</x>
-      <y>-24.4306</y>
-      <z>1.36476</z>
-    </location>
-    <weight unit="LBS">7100</weight>
-  </pointmass>
-  <pointmass name="Engine2">
-    <location unit="FT">
-      <x>42.7388</x>
-      <y>24.4306</y>
-      <z>1.36476</z>
-    </location>
-    <weight unit="LBS">7100</weight>
-  </pointmass>
-  <pointmass name="Engine3">
-    <location unit="FT">
-      <x>53.2388</x>
-      <y>45.7608</y>
-      <z>-1.13525</z>
-    </location>
-    <weight unit="LBS">7100</weight>
-  </pointmass>
   
   <ground_reactions name="CONTACTS: C-17" file="Aero/C-17-groundReactions.xml" />
   <propulsion name="POWER: C-17" file="Aero/C-17-propulsion.xml" />
   <flight_control name="FCS: C-17" file="Aero/C-17-flightControl.xml" />
   <aerodynamics name="AERO: C-17" file="Aero/C-17-aerodynamics.xml" />
+
+  <system name="PAYLOAD: C-17" file="Systems/cargobay-loading.xml" />
+
+  <system name="LIVERY: C-17" file="Systems/livery-updating.xml" />
 
   <output name="C-17-jsbim-output.csv" type="CSV" rate="100">
     <simulation>OFF</simulation>
