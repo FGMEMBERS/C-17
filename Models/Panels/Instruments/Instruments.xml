@@ -10,17 +10,6 @@
       <pitch-deg>-6</pitch-deg>
     </offsets>
   </model>
-
-  <!-- temporary install a turn coordinator -->
-  <model>
-    <path>Aircraft/Instruments-3d/tc/tc.xml</path>
-    <offsets>
-      <x-m>0.47</x-m>
-      <y-m>-0.275</y-m>
-      <z-m>0.90</z-m>
-      <pitch-deg>-6</pitch-deg>
-    </offsets>
-  </model>
   
   <model>
     <path>Models/Panels/Instruments/blank/blankmfd.ac</path>

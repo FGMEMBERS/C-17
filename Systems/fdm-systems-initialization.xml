@@ -20,7 +20,4 @@
     </selected>
   </payload>
 
-  <multipliers>
-    <rudder-yaw type="double">1.000</rudder-yaw>
-  </multipliers>
 </PropertyList>

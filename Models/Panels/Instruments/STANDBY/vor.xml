@@ -65,19 +65,6 @@
     </axis> 
   </animation>
 
-  <animation>
-    <type>pick</type>
-    <object-name>VOR/ADF1</object-name>
-    <action>
-      <button>0</button>
-      <repeatable>true</repeatable>
-      <binding>
-        <command>property-toggle</command>
-        <property>/controls/flight/auto-coordination</property>
-      </binding>    
-    </action>
-  </animation>
-  
  <!--   
   <animation>
     <type>rotate</type>

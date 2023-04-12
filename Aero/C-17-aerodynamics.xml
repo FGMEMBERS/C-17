@@ -1116,7 +1116,6 @@
       <description>Yaw_moment_due_to_beta_rudder_deflection</description>
       <product>
 	<value>0.4476</value><!--rudder deflection power -->
-	<property>systems/multipliers/rudder-yaw</property>
 	<property>aero/qbar-psf</property>
 	<property>metrics/Sh-sqft</property>
 	<property>metrics/bw-ft</property>
