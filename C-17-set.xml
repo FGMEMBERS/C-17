@@ -82,6 +82,7 @@
 	<int n="20" alias="/fdm/jsbsim/systems/payload/cargo-id"/>
 	<!-- This does not work, because FlightGear limits MP properties to 18 -->
 	<float n="1" alias="/instrumentation/doors/ramp/position-norm"/>
+	<float n="2" alias="/position/gear-agl-m">0</float><!-- 11 altitude for MP shadow -->
 	<float n="3" alias="/surface-positions/flap-pos-norm"/>
 	<float n="4" alias="/controls/flight/elevator-trim"/>
 	<float n="5" alias="/controls/flight/rudder"/>
@@ -374,6 +375,9 @@
   </engines>
     
   <controls>
+    <flight>
+      <auto-coordination-factor type="double">0.375</auto-coordination-factor>
+    </flight>
     <gear>
       <brake-parking>1</brake-parking>
     </gear>

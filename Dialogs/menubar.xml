@@ -6,6 +6,18 @@
       <enabled type="bool">true</enabled>
 
       <item>
+	<label>Auto-coordination</label>
+	<binding>
+	  <command>nasal</command>
+	  <script>
+	    var autocoordination = gui.Dialog.new("sim/gui/dialogs/Autocoordination/dialog", "Dialogs/Autocoordination.xml");
+	    autocoordination.open();
+	  </script>
+	</binding>
+      </item>
+
+      
+      <item>
 	<label>Auto Start</label>
 	<binding>
 	  <command>nasal</command>

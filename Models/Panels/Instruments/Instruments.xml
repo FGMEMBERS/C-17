@@ -10,7 +10,7 @@
       <pitch-deg>-6</pitch-deg>
     </offsets>
   </model>
-
+  
   <model>
     <path>Models/Panels/Instruments/blank/blankmfd.ac</path>
     <offsets>
