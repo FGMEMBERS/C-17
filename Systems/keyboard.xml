@@ -89,5 +89,17 @@
     </binding>
   </key>
 
+  <key n="83">
+    <name>Shift-s</name>
+    <desc>Multipliers adjustments</desc>
+    <binding>
+      <command>nasal</command>
+      <script>
+	var multipliers = gui.Dialog.new("sim/gui/dialogs/Multipliers/dialog", "Dialogs/multipliers.xml");
+	multipliers.open();
+      </script>
+    </binding>
+  </key>
+  
 </PropertyList>
 

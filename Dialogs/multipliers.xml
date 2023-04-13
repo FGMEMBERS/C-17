@@ -1,0 +1,107 @@
+<?xml version="1.0"?>
+
+<!--
+:copyright: 2023, IAHM-COL
+License: GPLv3
+
+Redistribution, or reuse, with or without modifications
+shall keep this attribution information. 
+-->
+
+<PropertyList>
+  <name>Multipliers adjustments</name>
+   <width>380</width>
+   <height>150</height>
+
+  <layout>vbox</layout>
+
+  <group>
+    <layout>hbox</layout>
+    <empty><stretch>1</stretch></empty>
+
+    <text>
+      <label>Multipliers</label>
+    </text>
+
+    <empty><stretch>1</stretch></empty>
+    
+    <button>
+      <pref-width>16</pref-width>
+      <pref-height>16</pref-height>
+      <legend></legend>
+      <default>1</default>
+      <keynum>27</keynum>
+      <border>2</border>
+      <binding>
+	<command>dialog-close</command>
+      </binding>
+      <binding>
+	<command>dialog-apply</command>
+      </binding>
+    </button>
+  </group>
+
+  <hrule/>
+
+  <group>
+    <layout>hbox</layout>
+    <default-padding>5</default-padding>
+    <text>
+      <label>MMMMM</label>
+      <halign>right</halign>
+      <property>fdm/jsbsim/systems/multipliers/drag</property>
+      <live>true</live>
+    </text>
+    <slider>
+      <width>1000</width>
+      <height>20</height>
+      <min>0.01</min>
+      <max>2.50</max>
+      <halign>left</halign>
+      <label>Drag coefficient</label>
+      <live>true</live>
+      <property>fdm/jsbsim/systems/multipliers/drag</property>
+      <binding>
+	<command>dialog-apply</command>
+      </binding>
+    </slider>
+
+  </group>
+
+  <group>
+    <layout>hbox</layout>
+
+    <default-padding>5</default-padding>
+    <text>
+      <label>MMMMM</label>
+      <halign>right</halign>
+      <property>fdm/jsbsim/systems/multipliers/lift</property>
+      <live>true</live>
+    </text>
+
+    <slider>
+      <width>1000</width>
+      <height>20</height>
+      <min>0.01</min>
+      <max>2.50</max>
+      <halign>left</halign>
+      <label>Lift coefficient</label>
+      <property>fdm/jsbsim/systems/multipliers/lift</property>
+      <live>true</live>
+      <binding>
+	<command>dialog-apply</command>
+      </binding>
+    </slider>
+  </group>  
+  <hrule/>
+  
+  <button>
+    <legend>Close</legend>
+    <default>true</default>
+    <key>Esc</key>
+    <binding>
+      <command>dialog-close</command>
+    </binding>
+  </button>
+
+</PropertyList>

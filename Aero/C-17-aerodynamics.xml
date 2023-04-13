@@ -7,6 +7,7 @@
       <description>Lift_due_to_alpha</description>
       <product>
 	<value>3.6910</value>
+	<property>systems/multipliers/lift</property>
 	<property>aero/qbar-psf</property>
 	<property>metrics/Sw-sqft</property>
 	<table>
@@ -182,6 +183,7 @@
       <description>Drag_due_to_alpha</description>
       <product>
 	<value>13.22735</value>
+	<property>systems/multipliers/drag</property>
 	<property>aero/qbar-psf</property>
 	<property>metrics/Sw-sqft</property>
 	<table>
