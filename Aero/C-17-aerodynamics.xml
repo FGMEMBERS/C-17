@@ -6,7 +6,7 @@
     <function name="aero/coefficient/CLalpha">
       <description>Lift_due_to_alpha</description>
       <product>
-	<value>1.62404</value>
+	<value>1.578604</value>
 	<property>systems/multipliers/lift</property>
 	<property>aero/qbar-psf</property>
 	<property>metrics/Sw-sqft</property>
@@ -182,7 +182,7 @@
     <function name="aero/coefficient/CD0">
       <description>Drag_due_to_alpha</description>
       <product>
-	<value>6.349128</value>
+	<value>7.317911</value>
 	<property>systems/multipliers/drag</property>
 	<property>aero/qbar-psf</property>
 	<property>metrics/Sw-sqft</property>
