@@ -4,34 +4,17 @@
     <description>C-17 Globemaster III</description>
     <status>BETA</status>
     <author>IH-COL, D. Waggoner, Jon Bourgeois, Adam Fothergill, Geed</author>
-    <aircraft-version>3.1.2</aircraft-version>
+    <aircraft-version>4.0.1</aircraft-version>
     <minimum-fg-version>2020.2.0</minimum-fg-version>    
 
     <rating>
       <FDM type="int">1</FDM>
       <systems type="int">1</systems>
       <cockpit type="int">1</cockpit>
-      <model type="int">2</model>
+      <model type="int">1</model>
     </rating>
 
-    <!-- Splash screens. One is randomly chosen when FlightGear starts -->
-    <previews>
-      <preview>
-        <type>exterior</type>
-        <path>Previews/C-17-preview1.png</path>
-        <splash type="bool">true</splash>
-      </preview>
-      <preview>
-        <type>exterior</type>
-        <path>Previews/C-17-preview2.png</path>
-        <splash type="bool">true</splash>
-      </preview>
-      <preview>
-        <type>exterior</type>
-        <path>Previews/C-17-preview3.png</path>
-        <splash type="bool">true</splash>
-      </preview>
-    </previews>
+    <previews include="Previews/previews.xml"/>
     
     <flight-model>jsb</flight-model>
     <aero>Aero/C-17</aero>
@@ -129,55 +112,9 @@
       <path>Aircraft/C-17/Systems/instrumentation.xml</path>
     </instrumentation>
       
-
-  <hud>
-      <path n="1">Aircraft/C-17/Hud/hud.xml</path>
-      <visibility n="1">true</visibility>
-      <palette>
-        <color n="0">
-          <alpha type="float">0.85</alpha>
-          <antialiased type="bool">true</antialiased>
-          <brightness type="float">0.85</brightness>
-          <transparent type="bool">true</transparent>
-          <red type="float">0.38</red>
-          <green type="float">1.0</green>
-          <blue type="float">0.22</blue>
-        </color>
-        <color n="1">
-          <alpha type="float">0.85</alpha>
-          <antialiased type="bool">true</antialiased>
-          <brightness type="float">0.85</brightness>
-          <transparent type="bool">true</transparent>
-          <red type="float">1.0</red>
-          <green type="float">0.2</green>
-          <blue type="float">0.0</blue>
-        </color>
-      </palette>
-    </hud>
+    <hud include="Hud/C-17-hud.xml"/>
     
-    <help>
-      <title>C-17</title>
-      <key>
-	<name>m</name>
-	<desc>Engage nose wheel steering</desc>
-      </key>
-      <key>
-	<name>Ctrl-d</name>
-	<desc>Open/Close cargo ramp</desc>
-      </key>
-      <key>
-	<name>Ctrl-J</name>
-	<desc>Hold down for Paratroopers</desc>
-      </key>
-      <key>
-	<name>f</name>
-	<desc>Launch flares</desc>
-      </key>
-      <key>
-	<name>Delete</name>
-	<desc>Reverse thrusters</desc>
-      </key>
-    </help>
+    <help include="Dialogs/help.xml"/>
     
     <chase-distance-m type="double" archive="y">-95</chase-distance-m>
     
