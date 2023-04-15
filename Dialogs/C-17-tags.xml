@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<!--
+    :copyright: 2023, IAHM-COL
+    License: GPLv3
+    
+    Redistribution, or reuse, with or without modifications
+    shall keep this attribution information. 
+-->
+
+<PropertyList>
+  <tag>cargo</tag>
+  <tag>transport</tag>
+  <tag>boeing</tag>
+  <tag>mc-donnell-douglas</tag>
+  <tag>1990s</tag>
+  <tag>glass-cockpit</tag>
+  <tag>high-wing</tag>
+  <tag>hud</tag>
+  <tag>ifr</tag>
+  <tag>pressurised</tag>
+  <tag>retractable-gear</tag>
+  <tag>t-tail</tag>
+  <tag>tricycle</tag>
+  <tag>jet</tag>
+  <tag>four-engine</tag>
+  <tag>combat</tag>
+</PropertyList>

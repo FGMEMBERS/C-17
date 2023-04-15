@@ -1,0 +1,32 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<!--
+    License: GPLv3
+    
+    Redistribution, or reuse, with or without modifications
+    shall keep this attribution information. 
+-->
+
+<PropertyList>
+  <title>C-17 Globemaster III</title>
+  <key>
+    <name>m</name>
+    <desc>Engage nose wheel steering</desc>
+  </key>
+  <key>
+    <name>Ctrl-d</name>
+    <desc>Open/Close cargo ramp</desc>
+  </key>
+  <key>
+    <name>Ctrl-J</name>
+    <desc>Hold down for Paratroopers</desc>
+  </key>
+  <key>
+    <name>f</name>
+    <desc>Launch flares</desc>
+  </key>
+  <key>
+    <name>Delete</name>
+    <desc>Reverse thrusters</desc>
+  </key>
+</PropertyList>
