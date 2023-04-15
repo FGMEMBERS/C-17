@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<!--
+:copyright: 2023, IAHM-COL
+License: GPLv3
+
+Redistribution, or reuse, with or without modifications
+shall keep this attribution information. 
+-->
+
+<PropertyList>
+  <!-- Splash screens. One is randomly chosen when FlightGear starts -->
+  <preview>
+    <type>exterior</type>
+    <path>Previews/C-17-preview1.png</path>
+    <splash type="bool">true</splash>
+  </preview>
+  <preview>
+    <type>exterior</type>
+    <path>Previews/C-17-preview2.png</path>
+    <splash type="bool">true</splash>
+  </preview>
+  <preview>
+    <type>exterior</type>
+    <path>Previews/C-17-preview3.png</path>
+    <splash type="bool">true</splash>
+  </preview>
+</PropertyList>
