@@ -14,6 +14,8 @@
       <model type="int">1</model>
     </rating>
 
+    <tags include="Dialogs/C-17-tags.xml" />
+    
     <previews include="Previews/previews.xml"/>
     
     <flight-model>jsb</flight-model>
