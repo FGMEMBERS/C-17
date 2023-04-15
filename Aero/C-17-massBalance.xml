@@ -1,0 +1,66 @@
+<?xml version="1.0"?>
+<?xml-stylesheet href="JSBSim.xsl" type="application/xml"?>
+
+<!--
+    :copyright: 2023, IAHM-COL
+    :copyright: 2023, David Wagonner
+    License: GPLv3
+    
+    Redistribution, or reuse, with or without modifications
+    shall keep this attribution information. 
+-->
+
+<mass_balance>
+  <ixx unit="SLUG*FT2">5960958.7007</ixx>
+  <iyy unit="SLUG*FT2">7090719.1211</iyy>
+  <izz unit="SLUG*FT2">12871124.0727</izz>
+  <ixz unit="SLUG*FT2">0.00</ixz>
+  <iyz unit="SLUG*FT2">0.00</iyz>
+  <ixy unit="SLUG*FT2">0.00</ixy>
+  <emptywt unit="LBS">254100</emptywt>
+  <location name="CG" unit="FT">
+    <x>62.59203</x>
+    <y>0.00</y>
+    <z>7.392472</z>
+  </location>
+  <pointmass name="Engine0">
+    <location unit="FT">
+      <x>53.2388</x>
+      <y>-45.7608</y>
+      <z>-1.13525</z>
+    </location>
+    <weight unit="LBS">7100</weight>
+  </pointmass>
+  <pointmass name="Engine1">
+    <location unit="FT">
+      <x>42.7388</x>
+      <y>-24.4306</y>
+      <z>1.36476</z>
+    </location>
+    <weight unit="LBS">7100</weight>
+  </pointmass>
+  <pointmass name="Engine2">
+    <location unit="FT">
+      <x>42.7388</x>
+      <y>24.4306</y>
+      <z>1.36476</z>
+    </location>
+    <weight unit="LBS">7100</weight>
+  </pointmass>
+  <pointmass name="Engine3">
+    <location unit="FT">
+      <x>53.2388</x>
+      <y>45.7608</y>
+      <z>-1.13525</z>
+    </location>
+    <weight unit="LBS">7100</weight>
+  </pointmass>
+  <pointmass name="CargoBay">
+    <location unit="M">
+      <x>18.00</x>
+      <y>0.00</y>
+      <z>-2.20</z>
+    </location>
+    <weight unit="LBS">0</weight>
+  </pointmass>
+</mass_balance>
