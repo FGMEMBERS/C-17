@@ -1,0 +1,44 @@
+<?xml version="1.0"?>
+<?xml-stylesheet href="JSBSim.xsl" type="application/xml"?>
+
+<!--
+    :copyright: 2023, IAHM-COL
+    :copyright: 2023, David Wagonner
+    License: GPLv3
+    
+    Redistribution, or reuse, with or without modifications
+    shall keep this attribution information. 
+-->
+
+<metrics>
+  <length unit="FT">173.92</length>
+  <diameter unit="FT">33.67</diameter>
+  <wingarea unit="FT2">3800</wingarea>
+  <wingspan unit="FT">170.75</wingspan>
+  <chord unit="FT">25.9</chord>
+  <wing_incidence unit="DEG">3.0</wing_incidence>
+  <wing_sweep unit="DEG">25.0</wing_sweep>
+  <wing_anhedral unit="DEG">3.0</wing_anhedral>
+  <htailarea unit="FT2">845</htailarea>
+  <htailarm unit="FT">94.48</htailarm>
+  <ht_sweep unit="DEG">27.0</ht_sweep>
+  <ht_anhedral unit="DEG">3.0</ht_anhedral>
+  <vtailarea unit="FT2">685</vtailarea>
+  <vtailarm unit="FT">67.25</vtailarm>
+  <vt_sweep unit="DEG">41.0</vt_sweep>
+  <location name="AERORP" unit="FT">
+    <x>63.21503</x>
+    <y>0</y>
+    <z>7.392472</z>
+  </location>
+  <location name="EYEPOINT" unit="FT">
+    <x>7.54</x>
+    <y>-2.74</y>
+    <z>4.795</z>
+  </location>
+  <location name="VRP" unit="FT">
+    <x>75.26</x>
+    <y>0</y>
+    <z>0</z>
+  </location>
+</metrics>
