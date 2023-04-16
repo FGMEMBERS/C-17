@@ -133,21 +133,50 @@
     </aerosurface_scale>
   </channel>
 
-  <channel name="Flaps">
-    <kinematic name="Flaps Control">
+  <channel name="Flaps and Slats">
+    <switch name="/sim/slats/current-setting">
+      <default value="0"/>
+      <test logic="AND" value="1">
+	/sim/flaps/current-setting GE 1
+	/sim/flaps/current-setting LE 3
+      </test>
+      <test value="2">
+	/sim/flaps/current-setting GE 4
+      </test>
+    </switch>
+    
+    <switch name="fcs/slat-cmd-norm">
+      <default value="/sim/slats/setting[0]"/>
+      <test value="/sim/slats/setting[1]">
+	/sim/slats/current-setting EQ 1
+      </test>
+      <test value="/sim/slats/setting[2]">
+	/sim/slats/current-setting EQ 2
+      </test>
+    </switch>
+    
+    <kinematic name="flaps control">
       <input>fcs/flap-cmd-norm</input>
       <traverse>
         <setting>
           <position>0</position>
-          <time>0</time>
-        </setting>
-        <setting>
-          <position>15</position>
           <time>4</time>
         </setting>
         <setting>
-          <position>30</position>
-          <time>3</time>
+          <position>8</position>
+          <time>4</time>
+        </setting>
+        <setting>
+          <position>16</position>
+          <time>4</time>
+        </setting>
+        <setting>
+          <position>24</position>
+          <time>4</time>
+        </setting>
+        <setting>
+          <position>40</position>
+          <time>8</time>
         </setting>
       </traverse>
       <output>fcs/flap-pos-deg</output>
@@ -157,7 +186,7 @@
       <input>fcs/flap-pos-deg</input>
       <domain>
         <min>0</min>
-        <max>30</max>
+        <max>40</max>
       </domain>
       <range>
         <min>0</min>
@@ -165,6 +194,43 @@
       </range>
       <output>fcs/flap-pos-norm</output>
     </aerosurface_scale>
+
+    <kinematic name="slats control">
+      <input>fcs/slat-cmd-norm</input>
+      <traverse>
+        <setting>
+          <position>0</position>
+          <time>3</time>
+        </setting>
+        <setting>
+          <position>24</position>
+          <time>3</time>
+        </setting>
+        <setting>
+          <position>32</position>
+          <time>3</time>
+        </setting>
+      </traverse>
+      <output>fcs/slat-pos-deg</output>
+    </kinematic>
+
+    <aerosurface_scale name="slat normalization">
+      <input>fcs/slat-pos-deg</input>
+      <domain>
+        <min>0</min>
+        <max>32</max>
+      </domain>
+      <range>
+        <min>0</min>
+        <max>1</max>
+      </range>
+      <output>fcs/slat-pos-norm</output>
+    </aerosurface_scale>
+
+    <pure_gain name="fcs/slat-pos-rad">
+      <input>fcs/slat-pos-deg</input>
+      <gain>0.0174533</gain>
+    </pure_gain>
   </channel>
 
   <channel name="Landing Gear">
