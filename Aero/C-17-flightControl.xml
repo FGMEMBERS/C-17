@@ -144,17 +144,58 @@
 	/sim/flaps/current-setting GE 4
       </test>
     </switch>
-    
+
     <switch name="fcs/slat-cmd-norm">
       <default value="/sim/slats/setting[0]"/>
+      <test logic="AND" value="/sim/slats/setting[0]">
+	/sim/slats/current-setting EQ 0
+	fcs/flap-pos-norm EQ /sim/flaps/setting[0]
+	<!-- slat retraction happens after flap retraction -->
+      </test>
+      <test value="/sim/slats/setting[1]">
+	/sim/slats/current-setting EQ 0
+	fcs/flap-pos-norm GT /sim/flaps/setting[0]
+      </test>
       <test value="/sim/slats/setting[1]">
 	/sim/slats/current-setting EQ 1
+	fcs/flap-pos-norm LE /sim/flaps/setting[3]
+      </test>
+      <test value="/sim/slats/setting[2]">
+	fcs/flap-pos-norm GT /sim/flaps/setting[3]
       </test>
       <test value="/sim/slats/setting[2]">
 	/sim/slats/current-setting EQ 2
       </test>
     </switch>
-    
+
+    <switch name="fcs/flap-cmd-norm">
+      <default value="/sim/flaps/setting[0]"/>
+      <test value="/sim/flaps/setting[0]">
+	/sim/flaps/current-setting EQ 0
+      </test>
+      <test logic="AND" value="/sim/flaps/setting[1]">
+	/sim/flaps/current-setting EQ 1
+	fcs/slat-pos-norm GE /sim/slats/setting[1]
+	<!-- flap deflection happens after slat deflection -->
+      </test>
+      <test logic="AND" value="/sim/flaps/setting[2]">
+	/sim/flaps/current-setting EQ 2
+	fcs/slat-pos-norm GE /sim/slats/setting[1]
+      </test>
+      <test logic="AND" value="/sim/flaps/setting[3]">
+	/sim/flaps/current-setting EQ 3
+	fcs/slat-pos-norm GE /sim/slats/setting[1]
+      </test>
+      <test logic="AND" value="/sim/flaps/setting[3]">
+	/sim/flaps/current-setting EQ 4
+	fcs/slat-pos-norm LT /sim/slats/setting[2]
+      </test>
+      <test logic="AND" value="/sim/flaps/setting[4]">
+	/sim/flaps/current-setting EQ 4
+	fcs/slat-pos-norm EQ /sim/slats/setting[2]
+      </test>
+    </switch>
+
     <kinematic name="flaps control">
       <input>fcs/flap-cmd-norm</input>
       <traverse>
