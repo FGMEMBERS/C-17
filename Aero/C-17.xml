@@ -52,6 +52,9 @@
   <system name="PAYLOAD: C-17" file="Systems/cargobay-loading.xml" />
   <system name="LIVERY: C-17" file="Systems/livery-updating.xml" />
 
+  <!--Instruments-->
+  <system name="FLAP INDICATOR: C-17" file="Models/Panels/Instruments/FlapIndicator/FlapIndicator-systems.xml" />
+  
   <!--Output-->
   <output name="C-17-jsbim-output.csv" type="CSV" rate="120">
     <simulation>OFF</simulation>
