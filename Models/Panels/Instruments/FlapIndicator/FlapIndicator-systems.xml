@@ -28,12 +28,18 @@ shall keep this attribution information.
     </switch>
   </channel>
 
-  <channel name="Flap extension degree">
-    <switch name="instruments/flap-indicator/flap-pos-deg">
+  <channel name="Letft flap extension degree">
+    <switch name="instruments/flap-indicator/flap-pos-deg-l">
       <default value="fcs/flap-pos-deg" />
     </switch>
   </channel>
-  
+
+  <channel name="Right flap extension degree">
+    <switch name="instruments/flap-indicator/flap-pos-deg-r">
+      <default value="fcs/flap-pos-deg" />
+    </switch>
+  </channel>
+
   <channel name="Flap extension percentage">
     <pure_gain name="instruments/flap-indicator/flap-pos-percentage">
       <input>fcs/flap-pos-norm</input>

@@ -41,6 +41,17 @@
     </offsets>
   </model>
 
+  <!-- Flap Indicator -->
+  <model>
+    <path>Models/Panels/Instruments/FlapIndicator/FlapIndicator.xml</path>
+    <offsets>
+      <x-m>0.423</x-m>
+      <y-m>0.1</y-m>
+      <z-m>0.73</z-m>
+      <pitch-deg>-6</pitch-deg>
+    </offsets>
+  </model>
+  
   <!--
   <model>
     <name>EICAS</name>
@@ -125,6 +136,7 @@
     </offsets>
   </model>
 
+  <!--
   <model>
     <name>cap-CLOCK</name>
     <path>Models/Panels/Instruments/Clock/chronometer.xml</path>
@@ -135,6 +147,7 @@
       <pitch-deg>-6</pitch-deg>
     </offsets>
   </model>
+  -->
 
   <model>
     <name>fo-CLOCK</name>
