@@ -250,6 +250,7 @@
 
     <slats>
       <current-setting type="int">0</current-setting>
+      <enabled type="bool">true</enabled>
       <setting n="0" type="double">0.00</setting>
       <setting n="1" type="double">0.75</setting>
       <max-slat-extension-speed n="1" type="int">260</max-slat-extension-speed>

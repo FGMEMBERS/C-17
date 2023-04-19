@@ -136,6 +136,9 @@
   <channel name="Flaps and Slats">
     <switch name="/sim/slats/current-setting">
       <default value="0"/>
+      <test value="0">
+	/sim/slats/enabled EQ 0
+      </test>
       <test logic="AND" value="1">
 	/sim/flaps/current-setting GE 1
 	/sim/flaps/current-setting LE 3
@@ -147,6 +150,9 @@
 
     <switch name="fcs/slat-cmd-norm">
       <default value="/sim/slats/setting[0]"/>
+      <test value="0">
+	/sim/slats/enabled EQ 0
+      </test>
       <test logic="AND" value="/sim/slats/setting[0]">
 	/sim/slats/current-setting EQ 0
 	fcs/flap-pos-norm EQ /sim/flaps/setting[0]
@@ -174,25 +180,47 @@
 	/sim/flaps/current-setting EQ 0
       </test>
       <test logic="AND" value="/sim/flaps/setting[1]">
+	/sim/slats/enabled EQ 1
 	/sim/flaps/current-setting EQ 1
 	fcs/slat-pos-norm GE /sim/slats/setting[1]
 	<!-- flap deflection happens after slat deflection -->
       </test>
       <test logic="AND" value="/sim/flaps/setting[2]">
+	/sim/slats/enabled EQ 1
 	/sim/flaps/current-setting EQ 2
 	fcs/slat-pos-norm GE /sim/slats/setting[1]
       </test>
       <test logic="AND" value="/sim/flaps/setting[3]">
+	/sim/slats/enabled EQ 1
 	/sim/flaps/current-setting EQ 3
 	fcs/slat-pos-norm GE /sim/slats/setting[1]
       </test>
       <test logic="AND" value="/sim/flaps/setting[3]">
+	/sim/slats/enabled EQ 1
 	/sim/flaps/current-setting EQ 4
 	fcs/slat-pos-norm LT /sim/slats/setting[2]
       </test>
       <test logic="AND" value="/sim/flaps/setting[4]">
+	/sim/slats/enabled EQ 1
 	/sim/flaps/current-setting EQ 4
 	fcs/slat-pos-norm EQ /sim/slats/setting[2]
+      </test>
+      <!-- direct flap response if slats are not enabled -->
+      <test logic="AND" value="/sim/flaps/setting[1]">
+	/sim/slats/enabled EQ 0
+	/sim/flaps/current-setting EQ 1
+      </test>
+      <test logic="AND" value="/sim/flaps/setting[2]">
+	/sim/slats/enabled EQ 0
+	/sim/flaps/current-setting EQ 2
+      </test>
+      <test logic="AND" value="/sim/flaps/setting[3]">
+	/sim/slats/enabled EQ 0
+	/sim/flaps/current-setting EQ 3
+      </test>
+      <test logic="AND" value="/sim/flaps/setting[4]">
+	/sim/slats/enabled EQ 0
+	/sim/flaps/current-setting EQ 4
       </test>
     </switch>
 
