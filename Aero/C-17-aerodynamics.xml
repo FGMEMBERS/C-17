@@ -15,7 +15,7 @@
     <function name="aero/coefficient/CLalpha">
       <description>Lift_due_to_alpha_flap_slat_deflection</description>
       <product>
-	<value>1.578604</value>
+	<value>1.8153946</value>
 	<property>systems/multipliers/lift</property>
 	<property>aero/qbar-psf</property>
 	<property>metrics/Sw-sqft</property>
@@ -504,7 +504,7 @@
     <function name="aero/coefficient/CD0">
       <description>Drag_due_to_alpha_flap_slat_deflection</description>
       <product>
-	<value>7.317911</value>
+	<value>6.253520845</value>
 	<property>systems/multipliers/drag</property>
 	<property>aero/qbar-psf</property>
 	<property>metrics/Sw-sqft</property>
