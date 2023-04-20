@@ -338,6 +338,7 @@
   <fdm>
     <jsbsim>
       <systems include="Systems/fdm-systems-initialization.xml"/>
+      <instruments include="Systems/fdm-instruments-initialization.xml" />
     </jsbsim>
   </fdm>
   

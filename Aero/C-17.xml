@@ -53,6 +53,7 @@
   <system name="LIVERY: C-17" file="Systems/livery-updating.xml" />
 
   <!--Instruments-->
+  <system name="PANEL LIGHTS: C-17" file="Models/Panels/Instruments/PanelLighting/PanelLighting-systems.xml" />
   <system name="FLAP INDICATOR: C-17" file="Models/Panels/Instruments/FlapIndicator/FlapIndicator-systems.xml" />
   
   <!--Output-->

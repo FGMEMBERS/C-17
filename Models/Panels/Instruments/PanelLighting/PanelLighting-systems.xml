@@ -1,0 +1,42 @@
+<?xml version="1.0"?>
+<?xml-stylesheet href="JSBSim.xsl" type="application/xml"?>
+
+<!--
+:copyright: 2023, IAHM-COL
+License: GPLv3
+
+Redistribution, or reuse, with or without modifications
+shall keep this attribution information. 
+-->
+
+<system>
+  <channel name="Panel Light Status">
+    <switch name="instruments/panel-lighting/active">
+      <default value="0" />
+      <test value="0">
+	<!-- OFF -->
+	instruments/panel-lighting/status EQ 0
+      </test>
+      <test value="1">
+	<!-- ON -->
+	instruments/panel-lighting/status EQ 1
+      </test>
+      <test logic="AND" value="1">
+	<!-- AUTO -->
+	instruments/panel-lighting/status EQ 2
+	/sim/time/sun-angle-rad GE 1.45
+      </test>
+    </switch>
+  </channel>
+
+  <channel name="Panel light intensity">
+    <pure_gain name="instruments/panel-lighting/intensity-norm">
+      <input>instruments/panel-lighting/intensity</input>
+      <gain>1</gain>
+      <clipto>
+	<min>0</min>
+	<max>1</max>
+      </clipto>
+    </pure_gain>
+  </channel>
+</system>
