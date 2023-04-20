@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<!--
+    :copyright: 2023, IAHM-COL
+    License: GPLv3
+    
+    Redistribution, or reuse, with or without modifications
+    shall keep this attribution information. 
+-->
+
+<PropertyList>
+  <name>shaders</name>
+  <inherits-from>/Effects/model-combined-deferred</inherits-from>
+  <parameters>
+    <lightmap-enabled type="int">1</lightmap-enabled>
+    <lightmap-factor type="double">1</lightmap-factor>
+    <texture n="3">
+      <image>FlapIndicator-lightmap.png</image>
+    </texture>
+  </parameters>
+</PropertyList>

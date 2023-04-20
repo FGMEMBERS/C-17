@@ -1,0 +1,70 @@
+<?xml version="1.0"?>
+
+<!--
+    :copyright: 2023, IAHM-COL
+    License: GPLv3
+    
+    Redistribution, or reuse, with or without modifications
+    shall keep this attribution information. 
+-->
+
+<PropertyList>
+  <path>FlapIndicator.ac</path>
+
+  <animation>
+    <type>rotate</type>   
+    <object-name>needleL</object-name> 
+    <property>fdm/jsbsim/instruments/flap-indicator/flap-pos-deg-l</property>
+    <factor>4</factor>
+    <axis>
+      <x1-m>0.005135</x1-m>
+      <y1-m>0</y1-m>
+      <z1-m>0</z1-m>
+      <x2-m>0.004638</x2-m>
+      <y2-m>0</y2-m>
+      <z2-m>0</z2-m>
+    </axis>
+  </animation>
+
+  <animation>
+    <type>rotate</type>   
+    <object-name>needleR</object-name> 
+    <property>fdm/jsbsim/instruments/flap-indicator/flap-pos-deg-r</property>
+    <factor>4</factor>
+    <axis>
+      <x1-m>0.005761</x1-m>
+      <y1-m>0</y1-m>
+      <z1-m>0</z1-m>
+      <x2-m>0.005263</x2-m>
+      <y2-m>0</y2-m>
+      <z2-m>0</z2-m>
+    </axis>
+  </animation>
+
+  <animation>
+    <type>select</type>   
+    <object-name>LETransit</object-name> 
+    <condition>
+      <property>fdm/jsbsim/instruments/flap-indicator/slat-in-transit</property>
+    </condition>
+  </animation>
+
+  <animation>
+    <type>select</type>   
+    <object-name>LEExtended</object-name> 
+    <condition>
+      <property>fdm/jsbsim/instruments/flap-indicator/slat-extended</property>
+    </condition>
+  </animation>
+
+  <!-- Lightmap -->
+  <effect>
+    <inherits-from>FlapIndicator-shaders</inherits-from>
+    <object-name>face</object-name>
+    <object-name>Frame</object-name>
+    <object-name>LETransit</object-name>
+    <object-name>LEExtended</object-name>
+    <object-name>needleL</object-name>
+    <object-name>needleR</object-name>
+  </effect>
+</PropertyList>

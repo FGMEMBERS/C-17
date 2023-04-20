@@ -234,33 +234,31 @@
 	<default-field-of-view-deg>18.0</default-field-of-view-deg>
       </config>
     </view>
+
+    <flaps>
+      <current-setting type="int">0</current-setting>
+      <setting n="0" type="double">0.00</setting>
+      <setting n="1" type="double">0.20</setting>
+      <max-flap-extension-speed n="1" type="int">260</max-flap-extension-speed>
+      <setting n="2" type="double">0.40</setting>
+      <max-flap-extension-speed n="2" type="int">240</max-flap-extension-speed>
+      <setting n="3" type="double">0.60</setting>
+      <max-flap-extension-speed n="3" type="int">180</max-flap-extension-speed>
+      <setting n="4" type="double">1.00</setting>
+      <max-flap-extension-speed n="4" type="int">165</max-flap-extension-speed>
+    </flaps>
+
+    <slats>
+      <current-setting type="int">0</current-setting>
+      <enabled type="bool">true</enabled>
+      <setting n="0" type="double">0.00</setting>
+      <setting n="1" type="double">0.75</setting>
+      <max-slat-extension-speed n="1" type="int">260</max-slat-extension-speed>
+      <setting n="2" type="double">1.00</setting>
+      <max-slat-extension-speed n="2" type="int">165</max-slat-extension-speed>
+    </slats>
     
     <limits>
-      <max-flap-extension-speed>
-	<flaps>0.167</flaps>
-	<speed>260</speed>
-      </max-flap-extension-speed>
-
-      <max-flap-extension-speed>
-	<flaps>0.333</flaps>
-	<speed>240</speed>
-      </max-flap-extension-speed>
-
-      <max-flap-extension-speed>
-	<flaps>0.667</flaps>
-	<speed>230</speed>
-      </max-flap-extension-speed>
-
-      <max-flap-extension-speed>
-	<flaps>0.833</flaps>
-	<speed>205</speed>
-      </max-flap-extension-speed>
-
-      <max-flap-extension-speed>
-	<flaps>1.000</flaps>
-	<speed>180</speed>
-      </max-flap-extension-speed>
-
       <vne>600</vne>
       <max-gear-extension-speed>270</max-gear-extension-speed>
       <max-positive-g>4.4</max-positive-g>
