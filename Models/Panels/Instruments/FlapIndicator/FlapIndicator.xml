@@ -56,5 +56,15 @@
       <property>fdm/jsbsim/instruments/flap-indicator/slat-extended</property>
     </condition>
   </animation>
-    
+
+  <!-- Lightmap -->
+  <effect>
+    <inherits-from>FlapIndicator-shaders</inherits-from>
+    <object-name>face</object-name>
+    <object-name>Frame</object-name>
+    <object-name>LETransit</object-name>
+    <object-name>LEExtended</object-name>
+    <object-name>needleL</object-name>
+    <object-name>needleR</object-name>
+  </effect>
 </PropertyList>
