@@ -18,5 +18,8 @@
     <lightmap-factor type="double">
       <use>fdm/jsbsim/instruments/panel-lighting/floodlight-intensity-norm</use>
     </lightmap-factor>
+    <texture n="3">
+      <image>floodlight.png</image>
+    </texture>
   </parameters>
 </PropertyList>

@@ -51,6 +51,26 @@
       <pitch-deg>-6</pitch-deg>
     </offsets>
   </model>
+
+  <!-- Limits plackards -->
+  <model>
+    <path>Models/Panels/Instruments/LimitsPlackards/LimitsPlackard.xml</path>
+    <offsets>
+      <x-m>0.42436</x-m>
+      <y-m>-0.50832</y-m>
+      <z-m>0.71607</z-m>
+      <pitch-deg>-6</pitch-deg>
+    </offsets>
+  </model>
+  <model>
+    <path>Models/Panels/Instruments/LimitsPlackards/LimitsPlackard.xml</path>
+    <offsets>
+      <x-m>0.42436</x-m>
+      <y-m>0.45817</y-m>
+      <z-m>0.71604</z-m>
+      <pitch-deg>-6</pitch-deg>
+    </offsets>
+  </model>
   
   <!--
   <model>
