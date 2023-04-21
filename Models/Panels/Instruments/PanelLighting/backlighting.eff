@@ -18,8 +18,5 @@
     <lightmap-factor type="double">
       <use>fdm/jsbsim/instruments/panel-lighting/intensity-norm</use>
     </lightmap-factor>
-    <texture n="3">
-      <image>FlapIndicator-lightmap.png</image>
-    </texture>
   </parameters>
 </PropertyList>

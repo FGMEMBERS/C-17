@@ -57,9 +57,9 @@
     </condition>
   </animation>
 
-  <!-- Lightmap -->
+  <!-- Lightmaps -->
   <effect>
-    <inherits-from>FlapIndicator-shaders</inherits-from>
+    <inherits-from>backlighting</inherits-from>
     <object-name>face</object-name>
     <object-name>Frame</object-name>
     <object-name>LETransit</object-name>
