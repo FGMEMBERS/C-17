@@ -9,8 +9,10 @@ shall keep this attribution information.
 -->
 
 <PropertyList>
-  <path>fdm/jsbsim/instruments/panel-lighting/status</path>
-  <path>fdm/jsbsim/instruments/panel-lighting/intensity</path>
+  <path>fdm/jsbsim/instruments/panel-lighting/backlight-status</path>
+  <path>fdm/jsbsim/instruments/panel-lighting/backlight-intensity</path>
+  <path>fdm/jsbsim/instruments/panel-lighting/floodlight-status</path>
+  <path>fdm/jsbsim/instruments/panel-lighting/floodlight-intensity</path>
   <path>fdm/jsbsim/systems/livery/selected/id</path>
   <path>fdm/jsbsim/systems/livery/selected/name</path>
   <path>fdm/jsbsim/systems/livery/selected/texture</path>

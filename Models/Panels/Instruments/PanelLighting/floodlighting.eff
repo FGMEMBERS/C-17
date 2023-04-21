@@ -13,10 +13,10 @@
   <inherits-from>/Effects/model-combined-deferred</inherits-from>
   <parameters>
     <lightmap-enabled type="int">
-      <use>fdm/jsbsim/instruments/panel-lighting/backlight-active</use>
+      <use>fdm/jsbsim/instruments/panel-lighting/floodlight-active</use>
     </lightmap-enabled>
     <lightmap-factor type="double">
-      <use>fdm/jsbsim/instruments/panel-lighting/backlight-intensity-norm</use>
+      <use>fdm/jsbsim/instruments/panel-lighting/floodlight-intensity-norm</use>
     </lightmap-factor>
   </parameters>
 </PropertyList>

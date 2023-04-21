@@ -61,10 +61,13 @@
   <effect>
     <inherits-from>backlighting</inherits-from>
     <object-name>face</object-name>
-    <object-name>Frame</object-name>
     <object-name>LETransit</object-name>
     <object-name>LEExtended</object-name>
     <object-name>needleL</object-name>
     <object-name>needleR</object-name>
+  </effect>
+  <effect>
+    <inherits-from>floodlighting</inherits-from>
+    <object-name>Frame</object-name>
   </effect>
 </PropertyList>

@@ -10,7 +10,9 @@ shall keep this attribution information.
 
 <PropertyList>
   <panel-lighting>
-    <status userarchive="y" type="int">2</status>
-    <intensity userarchive="y" type="double">1</intensity>
+    <backlight-status userarchive="y" type="int">2</backlight-status>
+    <backlight-intensity userarchive="y" type="double">1</backlight-intensity>
+    <floodlight-status userarchive="y" type="int">2</floodlight-status>
+    <floodlight-intensity userarchive="y" type="double">1</floodlight-intensity>
   </panel-lighting>
 </PropertyList>

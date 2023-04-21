@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<!--
+    :copyright: 2023, IAHM-COL
+    License: GPLv3
+    
+    Redistribution, or reuse, with or without modifications
+    shall keep this attribution information. 
+-->
+
+<PropertyList>
+  <name>shaders</name>
+  <inherits-from>Models/Panels/Instruments/PanelLighting/floodlighting</inherits-from>
+  <parameters>
+    <texture n="3">
+      <image>FlapIndicator-floodlight.png</image>
+    </texture>
+  </parameters>
+</PropertyList>
