@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<!--
+:copyright: 2023, IAHM-COL
+License: GPLv3
+
+Redistribution, or reuse, with or without modifications
+shall keep this attribution information. 
+-->
+
+<PropertyList>
+  <panel-lighting>
+    <backlight-status userarchive="y" type="int">2</backlight-status>
+    <backlight-intensity userarchive="y" type="double">1</backlight-intensity>
+    <floodlight-status userarchive="y" type="int">2</floodlight-status>
+    <floodlight-intensity userarchive="y" type="double">1</floodlight-intensity>
+  </panel-lighting>
+</PropertyList>

@@ -220,7 +220,7 @@
     <input>
       <property>/velocities/mach</property>
     </input>
-    <format>M%4.1f</format>
+    <format>M%4.3f</format>
     <halign>left</halign>
   </label>
   

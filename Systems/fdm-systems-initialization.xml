@@ -20,4 +20,8 @@
     </selected>
   </payload>
 
+  <multipliers>
+    <drag type="double">1.000</drag>
+    <lift type="double">1.000</lift>
+  </multipliers>
 </PropertyList>

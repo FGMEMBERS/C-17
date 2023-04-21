@@ -97,6 +97,8 @@
     <object-name>Antenna7</object-name>
     <object-name>MainWing1</object-name>
     <object-name>MainWing2</object-name>
+    <object-name>Slat1</object-name>
+    <object-name>Slat2</object-name>
     <object-name>Aileron1</object-name>
     <object-name>Aileron2</object-name>
     <object-name>Flap1</object-name>
@@ -137,6 +139,8 @@
     <object-name>WingRoot</object-name>
     <object-name>MainWing1</object-name>
     <object-name>MainWing2</object-name>
+    <object-name>Slat1</object-name>
+    <object-name>Slat2</object-name>
     <object-name>Flap1</object-name>
     <object-name>Aileron1</object-name>
     <object-name>Winglet1</object-name>
@@ -575,7 +579,6 @@
       <entry><ind>0.0</ind><dep>0.0</dep></entry>
       <entry><ind>1.0</ind><dep>-25.0</dep></entry>
     </interpolation>
-
     <axis>
       <x1-m>24.8325</x1-m>
       <y1-m>19.2697</y1-m>
@@ -585,13 +588,44 @@
       <z2-m>0.76706</z2-m>
     </axis>
   </animation>
-  
+
+  <!-- Slats -->
+  <animation>
+    <type>rotate</type>
+    <object-name>Slat1</object-name>
+    <property>fdm/jsbsim/fcs/slat-pos-deg</property>
+    <factor>-1</factor>
+    <axis>
+      <x1-m>24.05</x1-m>
+      <y1-m>-24.28</y1-m>
+      <z1-m>0.716</z1-m>
+      <x2-m>15.09</x2-m>
+      <y2-m>-3.014</y2-m>
+      <z2-m>2.646</z2-m>
+    </axis>
+  </animation>
+
+  <animation>
+    <type>rotate</type>
+    <object-name>Slat2</object-name>
+    <property>fdm/jsbsim/fcs/slat-pos-deg</property>
+    <factor>1</factor>
+    <axis>
+      <x1-m>23.75</x1-m>
+      <y1-m>23.72</y1-m>
+      <z1-m>0.7794</z1-m>
+      <x2-m>15.33</x2-m>
+      <y2-m>3.729</y2-m>
+      <z2-m>2.594</z2-m>
+    </axis>
+  </animation>
+
   <!-- Flaps -->	
   <animation>
     <type>rotate</type>
     <object-name>Flap1</object-name>
-    <property>surface-positions/flap-pos-norm</property>
-    <factor>30</factor>
+    <property>fdm/jsbsim/fcs/flap-pos-deg</property>
+    <factor>1</factor>
     <axis>
       <x1-m>24.8144</x1-m>
       <y1-m>-19.0523</y1-m>
@@ -605,7 +639,7 @@
   <animation>
     <type>translate</type>
     <object-name>Flap1</object-name>
-    <property>surface-positions/flap-pos-norm</property>
+    <property>fdm/jsbsim/fcs/flap-pos-norm</property>
     <interpolation>
       <entry><ind>0.0</ind><dep>0.0</dep></entry>
       <entry><ind>0.033</ind><dep>0.0</dep></entry>
@@ -622,8 +656,8 @@
   <animation>
     <type>rotate</type>
     <object-name>Flap2</object-name>
-    <property>surface-positions/flap-pos-norm</property>
-    <factor>-30</factor>
+    <property>fdm/jsbsim/fcs/flap-pos-deg</property>
+    <factor>-1</factor>
     <axis>
       <x1-m>24.8144</x1-m>
       <y1-m>19.1919</y1-m>
@@ -637,7 +671,7 @@
   <animation>
     <type>translate</type>
     <object-name>Flap2</object-name>
-    <property>surface-positions/flap-pos-norm</property>
+    <property>fdm/jsbsim/fcs/flap-pos-norm</property>
     <interpolation>
       <entry><ind>0.0</ind><dep>0.0</dep></entry>
       <entry><ind>0.033</ind><dep>0.0</dep></entry>
@@ -655,8 +689,8 @@
   <animation>
     <type>rotate</type>
     <object-name>FlapTk1</object-name>
-    <property>surface-positions/flap-pos-norm</property>
-    <factor>42</factor>
+    <property>fdm/jsbsim/fcs/flap-pos-deg</property>
+    <factor>1</factor>
     <center>
       <x-m>24.18</x-m>
       <y-m>16.4625</y-m>
@@ -670,8 +704,8 @@
   <animation>
     <type>rotate</type>
     <object-name>FlapTk2</object-name>
-    <property>surface-positions/flap-pos-norm</property>
-    <factor>40</factor>
+    <property>fdm/jsbsim/fcs/flap-pos-deg</property>
+    <factor>1</factor>
     <center>
       <x-m>23.18</x-m>
       <y-m>12.5001</y-m>
@@ -685,8 +719,8 @@
   <animation>
     <type>rotate</type>
     <object-name>FlapTk3</object-name>
-    <property>surface-positions/flap-pos-norm</property>
-    <factor>37</factor>
+    <property>fdm/jsbsim/fcs/flap-pos-deg</property>
+    <factor>1</factor>
     <center>
       <x-m>22.28</x-m>
       <y-m>9.14728</y-m>
@@ -700,8 +734,8 @@
   <animation>
     <type>rotate</type>
     <object-name>FlapTk4</object-name>
-    <property>surface-positions/flap-pos-norm</property>
-    <factor>37</factor>
+    <property>fdm/jsbsim/fcs/flap-pos-deg</property>
+    <factor>1</factor>
     <center>
       <x-m>21.67</x-m>
       <y-m>5.48968</y-m>
@@ -715,8 +749,8 @@
   <animation>
     <type>rotate</type>
     <object-name>FlapTk5</object-name>
-    <property>surface-positions/flap-pos-norm</property>
-    <factor>37</factor>
+    <property>fdm/jsbsim/fcs/flap-pos-deg</property>
+    <factor>1</factor>
     <center>
       <x-m>21.67</x-m>
       <y-m>-5.48315</y-m>
@@ -730,8 +764,8 @@
   <animation>
     <type>rotate</type>
     <object-name>FlapTk6</object-name>
-    <property>surface-positions/flap-pos-norm</property>
-    <factor>37</factor>
+    <property>fdm/jsbsim/fcs/flap-pos-deg</property>
+    <factor>1</factor>
     <center>
       <x-m>22.28</x-m>
       <y-m>-9.14075</y-m>
@@ -745,8 +779,8 @@
   <animation>
     <type>rotate</type>
     <object-name>FlapTk7</object-name>
-    <property>surface-positions/flap-pos-norm</property>
-    <factor>40</factor>
+    <property>fdm/jsbsim/fcs/flap-pos-deg</property>
+    <factor>1</factor>
     <center>
       <x-m>23.18</x-m>
       <y-m>-12.4936</y-m>
@@ -760,8 +794,8 @@
   <animation>
     <type>rotate</type>
     <object-name>FlapTk8</object-name>
-    <property>surface-positions/flap-pos-norm</property>
-    <factor>42</factor>
+    <property>fdm/jsbsim/fcs/flap-pos-deg</property>
+    <factor>1</factor>
     <center>
       <x-m>24.18</x-m>
       <y-m>-16.4559</y-m>

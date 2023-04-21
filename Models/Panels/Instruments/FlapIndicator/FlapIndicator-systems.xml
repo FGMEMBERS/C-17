@@ -1,0 +1,49 @@
+<?xml version="1.0"?>
+<?xml-stylesheet href="JSBSim.xsl" type="application/xml"?>
+
+<!--
+:copyright: 2023, IAHM-COL
+License: GPLv3
+
+Redistribution, or reuse, with or without modifications
+shall keep this attribution information. 
+-->
+
+<system>
+  <channel name="Slat status">
+    <switch name="instruments/flap-indicator/slat-extended">
+      <default value="0" />
+      <test logic="AND" value="1">
+	fcs/slat-pos-norm GT /sim/slats/setting[0]
+	fcs/slat-pos-norm EQ fcs/slat-cmd-norm
+      </test>
+    </switch>
+
+    <switch name="instruments/flap-indicator/slat-in-transit">
+      <default value="0" />
+      <test logic="AND" value="1">
+	fcs/slat-pos-norm GT /sim/slats/setting[0]
+	instruments/flap-indicator/slat-extended EQ 0
+      </test>
+    </switch>
+  </channel>
+
+  <channel name="Letft flap extension degree">
+    <switch name="instruments/flap-indicator/flap-pos-deg-l">
+      <default value="fcs/flap-pos-deg" />
+    </switch>
+  </channel>
+
+  <channel name="Right flap extension degree">
+    <switch name="instruments/flap-indicator/flap-pos-deg-r">
+      <default value="fcs/flap-pos-deg" />
+    </switch>
+  </channel>
+
+  <channel name="Flap extension percentage">
+    <pure_gain name="instruments/flap-indicator/flap-pos-percentage">
+      <input>fcs/flap-pos-norm</input>
+      <gain>100</gain>
+    </pure_gain>
+  </channel>
+</system>

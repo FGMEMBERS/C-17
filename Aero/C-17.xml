@@ -3,7 +3,7 @@
 <fdm_config name="C-17 Globemaster III" version="2.0" release="BETA">
   <!--
       :copyright: 2023, IAHM-COL
-      :copyright: 2023, David Wagonner
+      :copyright: 2023, David Waggoner
       License: GPLv3
 
       File:     C-17.xml
@@ -52,6 +52,10 @@
   <system name="PAYLOAD: C-17" file="Systems/cargobay-loading.xml" />
   <system name="LIVERY: C-17" file="Systems/livery-updating.xml" />
 
+  <!--Instruments-->
+  <system name="PANEL LIGHTS: C-17" file="Models/Panels/Instruments/PanelLighting/PanelLighting-systems.xml" />
+  <system name="FLAP INDICATOR: C-17" file="Models/Panels/Instruments/FlapIndicator/FlapIndicator-systems.xml" />
+  
   <!--Output-->
   <output name="C-17-jsbim-output.csv" type="CSV" rate="120">
     <simulation>OFF</simulation>

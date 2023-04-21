@@ -1,0 +1,92 @@
+<?xml version="1.0"?>
+<?xml-stylesheet href="JSBSim.xsl" type="application/xml"?>
+
+<!--
+:copyright: 2023, IAHM-COL
+License: GPLv3
+
+Redistribution, or reuse, with or without modifications
+shall keep this attribution information. 
+-->
+
+<system>
+  <channel name="Panel backlight status">
+    <switch name="instruments/panel-lighting/backlight-active">
+      <default value="0" />
+      <test value="0">
+	<!-- OFF -->
+	instruments/panel-lighting/backlight-status EQ 0
+      </test>
+      <test value="1">
+	<!-- ON -->
+	instruments/panel-lighting/backlight-status EQ 1
+      </test>
+      <test logic="AND" value="1">
+	<!-- AUTO -->
+	instruments/panel-lighting/backlight-status EQ 2
+	/sim/time/sun-angle-rad GE 1.45
+      </test>
+    </switch>
+  </channel>
+
+  <channel name="Panel backlight intensity">
+    <switch name="instruments/panel-lighting/backlight-intensity-cmd">
+      <default value="instruments/panel-lighting/backlight-intensity"/>
+      <test value="0">
+	instruments/panel-lighting/backlight-status EQ 0
+      </test>
+      <test logic="OR" value="instruments/panel-lighting/backlight-intensity">
+	instruments/panel-lighting/backlight-status EQ 1
+	instruments/panel-lighting/backlight-status EQ 2
+      </test>
+    </switch>
+    <pure_gain name="instruments/panel-lighting/backlight-intensity-norm">
+      <input>instruments/panel-lighting/backlight-intensity-cmd</input>
+      <gain>1</gain>
+      <clipto>
+	<min>0</min>
+	<max>1</max>
+      </clipto>
+    </pure_gain>
+  </channel>
+
+  <channel name="Panel floodlight status">
+    <switch name="instruments/panel-lighting/floodlight-active">
+      <default value="0" />
+      <test value="0">
+	<!-- OFF -->
+	instruments/panel-lighting/floodlight-status EQ 0
+      </test>
+      <test value="1">
+	<!-- ON -->
+	instruments/panel-lighting/floodlight-status EQ 1
+      </test>
+      <test logic="AND" value="1">
+	<!-- AUTO -->
+	instruments/panel-lighting/floodlight-status EQ 2
+	/sim/time/sun-angle-rad GE 1.45
+      </test>
+    </switch>
+  </channel>
+
+  <channel name="Panel floodlight intensity">
+    <switch name="instruments/panel-lighting/floodlight-intensity-cmd">
+      <default value="instruments/panel-lighting/floodlight-intensity"/>
+      <test value="0">
+	instruments/panel-lighting/floodlight-status EQ 0
+      </test>
+      <test logic="OR" value="instruments/panel-lighting/floodlight-intensity">
+	instruments/panel-lighting/floodlight-status EQ 1
+	instruments/panel-lighting/floodlight-status EQ 2
+      </test>
+    </switch>
+    <pure_gain name="instruments/panel-lighting/floodlight-intensity-norm">
+      <input>instruments/panel-lighting/floodlight-intensity-cmd</input>
+      <gain>1</gain>
+      <clipto>
+	<min>0</min>
+	<max>1</max>
+      </clipto>
+    </pure_gain>
+  </channel>
+</system>
