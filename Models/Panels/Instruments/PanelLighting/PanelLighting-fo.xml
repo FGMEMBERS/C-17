@@ -1,0 +1,27 @@
+<?xml version="1.0"?>
+
+<!--
+    :copyright: 2023, IAHM-COL
+    License: GPLv3
+    
+    Redistribution, or reuse, with or without modifications
+    shall keep this attribution information. 
+-->
+
+<PropertyList>
+  <path>PanelLighting-fo.ac</path>
+
+  <!-- Lightmaps --> 
+  <effect>
+    <inherits-from>backlighting</inherits-from>
+    <object-name>face.fo</object-name>
+    <object-name>flood.knob.fo</object-name>
+    <object-name>panel.knob.fo</object-name>
+    <object-name>sys</object-name>
+    <object-name>auto</object-name>
+  </effect>
+  <effect>
+    <inherits-from>floodlighting</inherits-from>
+    <object-name>face.fo</object-name>
+  </effect>
+</PropertyList>
