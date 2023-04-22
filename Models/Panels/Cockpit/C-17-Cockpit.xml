@@ -30,4 +30,14 @@
       <pitch-offset>-10</pitch-offset>
     </offsets>
   </model>
+
+  <!-- Lightmaps -->
+  <effect>
+    <inherits-from>floodlighting</inherits-from>
+    <object-name>maindash-centre</object-name>
+    <object-name>Topdash-centre</object-name>
+    <object-name>Topdash-centre</object-name>
+    <object-name>lightpanel.support</object-name>
+    <object-name>lightpanel.support.fo</object-name>
+  </effect>
 </PropertyList>
