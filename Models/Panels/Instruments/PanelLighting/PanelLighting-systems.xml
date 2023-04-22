@@ -69,6 +69,35 @@ shall keep this attribution information.
     </switch>
   </channel>
 
+  <channel name="Intensity knobs">
+    <switch name="instruments/panel-lighting/floodlight-status">
+      <default value="instruments/panel-lighting/floodlight-status" />
+      <test value="0">
+	instruments/panel-lighting/floodlight-intensity LE 0
+      </test>
+      <test logic="AND" value="1">
+	instruments/panel-lighting/floodlight-intensity GT 0
+	instruments/panel-lighting/floodlight-intensity LE 1
+      </test>
+      <test value="2">
+	instruments/panel-lighting/floodlight-intensity GT 1
+      </test>
+    </switch>
+    <switch name="instruments/panel-lighting/backlight-status">
+      <default value="instruments/panel-lighting/backlight-status" />
+      <test value="0">
+	instruments/panel-lighting/backlight-intensity LE 0
+      </test>
+      <test logic="AND" value="1">
+	instruments/panel-lighting/backlight-intensity GT 0
+	instruments/panel-lighting/backlight-intensity LE 1
+      </test>
+      <test value="2">
+	instruments/panel-lighting/backlight-intensity GT 1
+      </test>
+    </switch>
+  </channel>
+
   <channel name="Panel floodlight intensity">
     <switch name="instruments/panel-lighting/floodlight-intensity-cmd">
       <default value="instruments/panel-lighting/floodlight-intensity"/>
@@ -89,4 +118,17 @@ shall keep this attribution information.
       </clipto>
     </pure_gain>
   </channel>
+
+  <!-- Needs to be connected with the IRCM instrument on the pedestal -->
+  <channel name="IRCM indicators">
+    <switch name="instruments/panel-lighting/ircm-auto">
+      <!--default value="instruments/ircm/ircm-auto" /-->
+      <default value="0"/>
+    </switch>
+    <switch name="instruments/panel-lighting/ircm-sys-engaged">
+      <!--default value="instruments/ircm/ircm-sys-engaged" /-->
+      <default value="0" />
+    </switch>
+  </channel>
+  
 </system>
