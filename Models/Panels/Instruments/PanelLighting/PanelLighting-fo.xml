@@ -1,0 +1,89 @@
+<?xml version="1.0"?>
+
+<!--
+    :copyright: 2023, IAHM-COL
+    License: GPLv3
+    
+    Redistribution, or reuse, with or without modifications
+    shall keep this attribution information. 
+-->
+
+<PropertyList>
+  <path>PanelLighting-fo.ac</path>
+
+  <animation>
+    <type>knob</type>
+    <object-name>flood.knob.fo</object-name> 
+    <property>fdm/jsbsim/instruments/panel-lighting/backlight-intensity</property>
+    <factor>-180</factor>
+    <axis>
+      <x1-m>0.008011</x1-m>
+      <y1-m>-0.01006</y1-m>
+      <z1-m>0.00036</z1-m>
+      <x2-m>0.009011</x2-m>
+      <y2-m>-0.01006</y2-m>
+      <z2-m>0.00036</z2-m>
+    </axis>
+    <action>
+      <binding>
+	<command>property-adjust</command>
+        <property>fdm/jsbsim/instruments/panel-lighting/backlight-intensity</property>
+        <factor>0.01</factor>
+        <min>0</min>
+        <max>1.25</max>                
+        <wrap>false</wrap>
+      </binding>
+    </action>
+  </animation>
+
+  <animation>
+    <type>knob</type>
+    <object-name>panel.knob.fo</object-name> 
+    <property>fdm/jsbsim/instruments/panel-lighting/floodlight-intensity</property>
+    <factor>-180</factor>
+    <axis>
+      <x1-m>0.01498</x1-m>
+      <y1-m>0.02574</y1-m>
+      <z1-m>0</z1-m>
+      <x2-m>0.01598</x2-m>
+      <y2-m>0.02574</y2-m>
+      <z2-m>0</z2-m>
+    </axis>
+    <action>
+      <binding>
+	<command>property-adjust</command>
+        <property>fdm/jsbsim/instruments/panel-lighting/floodlight-intensity</property>
+        <factor>0.01</factor>
+        <min>0</min>
+        <max>1.25</max>                
+        <wrap>false</wrap>
+      </binding>
+    </action>
+  </animation>
+
+  <animation>
+    <type>select</type>
+    <object-name>auto</object-name>
+    <condition>
+      <property>fdm/jsbsim/instruments/panel-lighting/ircm-auto</property>
+    </condition>
+  </animation>
+
+  <animation>
+    <type>select</type>
+    <object-name>sys</object-name>
+    <condition>
+      <property>fdm/jsbsim/instruments/panel-lighting/ircm-sys-engaged</property>
+    </condition>
+  </animation>
+  
+  <!-- Lightmaps --> 
+  <effect>
+    <inherits-from>backlighting</inherits-from>
+    <object-name>face.fo</object-name>
+    <object-name>flood.knob.fo</object-name>
+    <object-name>panel.knob.fo</object-name>
+    <object-name>sys</object-name>
+    <object-name>auto</object-name>
+  </effect>
+</PropertyList>

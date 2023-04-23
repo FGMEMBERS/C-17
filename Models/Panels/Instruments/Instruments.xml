@@ -41,6 +41,26 @@
     </offsets>
   </model>
 
+  <!-- INST LT -->
+  <model>
+    <path>Models/Panels/Instruments/PanelLighting/PanelLighting.xml</path>
+    <offsets>
+      <x-m>0.475</x-m>
+      <y-m>-0.6385</y-m>
+      <z-m>1.0685</z-m>
+      <pitch-deg>0</pitch-deg>
+    </offsets>
+  </model>
+  <model>
+    <path>Models/Panels/Instruments/PanelLighting/PanelLighting-fo.xml</path>
+    <offsets>
+      <x-m>0.475</x-m>
+      <y-m>0.615</y-m>
+      <z-m>1.0685</z-m>
+      <pitch-deg>0</pitch-deg>
+    </offsets>
+  </model>
+
   <!-- Flap Indicator -->
   <model>
     <path>Models/Panels/Instruments/FlapIndicator/FlapIndicator.xml</path>
