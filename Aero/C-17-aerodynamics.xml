@@ -477,18 +477,6 @@
       </product>
     </function>
 
-    <!--
-    <function name="aero/coefficient/dCLflap">
-      <description>Delta_Lift_due_to_flaps</description>
-      <product>
-	<property>aero/qbar-psf</property>
-	<property>metrics/Sw-sqft</property>
-	<property>fcs/flap-pos-deg</property>
-	<value>0.00680</value>
-      </product>
-    </function>
-    -->
-
     <function name="aero/coefficient/dCLsb">
       <description>Delta_Lift_due_to_speedbrake</description>
       <product>
@@ -1229,18 +1217,6 @@
       </product>
     </function>
     
-    <!--
-    <function name="aero/coefficient/CDflap">
-      <description>Drag_due_to_flaps</description>
-      <product>
-	<value>0.0008</value>
-	<property>aero/qbar-psf</property>
-	<property>metrics/Sw-sqft</property>
-	<property>fcs/flap-pos-deg</property>
-      </product>
-    </function>
-    -->
-
     <function name="aero/coefficient/CDsb">
       <description>Drag_due_to_speedbrakes</description>
       <product>

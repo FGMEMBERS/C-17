@@ -229,23 +229,23 @@
       <traverse>
         <setting>
           <position>0</position>
-          <time>4</time>
+          <time>8</time>
         </setting>
         <setting>
           <position>8</position>
-          <time>4</time>
+          <time>8</time>
         </setting>
         <setting>
           <position>16</position>
-          <time>4</time>
+          <time>8</time>
         </setting>
         <setting>
           <position>24</position>
-          <time>4</time>
+          <time>8</time>
         </setting>
         <setting>
           <position>40</position>
-          <time>8</time>
+          <time>16</time>
         </setting>
       </traverse>
       <output>fcs/flap-pos-deg</output>
@@ -269,7 +269,7 @@
       <traverse>
         <setting>
           <position>0</position>
-          <time>3</time>
+          <time>6</time>
         </setting>
         <setting>
           <position>24</position>
