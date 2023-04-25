@@ -260,6 +260,9 @@
 
     <spoilers>
       <current-setting type="int">0</current-setting>
+      <current-ground-spoiler-setting
+	  type="int">0</current-ground-spoiler-setting>
+      <ground-spoiler-enabled type="bool">true</ground-spoiler-enabled>
       <setting n="0" type="double">0.00000</setting>
       <setting n="1" type="double">0.08333</setting>
       <setting n="2" type="double">0.16667</setting>
@@ -276,7 +279,8 @@
       <ground-spoiler-setting n="0"
 			      type="double">0.00</ground-spoiler-setting> 
       <ground-spoiler-setting n="1"
-			      type="double">60.00</ground-spoiler-setting> 
+			      type="double">1.00</ground-spoiler-setting>
+      <retraction-commanded type="bool">false</retraction-commanded>
     </spoilers>
     
     <limits>

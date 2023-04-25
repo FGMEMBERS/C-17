@@ -109,6 +109,11 @@
       <command>nasal</command>
       <script>controls.stepSpoilers(1);</script>
     </binding>
+    <binding>
+      <command>property-assign</command>
+      <property>/sim/spoilers/retraction-commanded</property>
+      <value>false</value>
+    </binding>
   </key>
 
   <key n="98">
@@ -119,6 +124,17 @@
       <binding>
 	<command>nasal</command>
 	<script>controls.stepSpoilers(-1);</script>
+      </binding>
+      <binding>
+	<!--
+	    Permit ground spoiler cancelation after touchdown
+	<condition>
+	  <property>instruments/gears/touchdown</property>
+	</condition>
+	-->
+	<command>property-assign</command>
+	<property>/sim/spoilers/retraction-commanded</property>
+	<value>true</value>
       </binding>
     </mod-alt>
   </key>

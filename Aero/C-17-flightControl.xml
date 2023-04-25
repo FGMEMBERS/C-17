@@ -363,7 +363,7 @@
       </test>
     </switch>
 
-    <kinematic name="flaps control">
+    <kinematic name="Spoilers norm control">
       <input>fcs/spoiler-cmd-norm</input>
       <traverse>
         <setting>
@@ -437,6 +437,77 @@
 
     <pure_gain name="fcs/spoiler-pos-rad">
       <input>fcs/spoiler-pos-deg</input>
+      <gain>0.0174533</gain>
+    </pure_gain>
+
+    <switch name="fcs/ground-spoiler-deployed">
+      <default value="0" />
+      <test value="0">
+	/sim/spoilers/ground-spoiler-enabled NE 1
+      </test>
+      <test value="0">
+	/sim/spoilers/retraction-commanded EQ 1
+      </test>
+      <!-- To be connected with gears touchdown 
+      <test logic="AND" value="1">
+	instruments/gears/touchdown EQ 1
+	</test>-->
+    </switch>
+
+    <switch name="/sim/spoilers/current-ground-spoiler-setting">
+      <default value="0"/>
+      <test value="0">
+	fcs/ground-spoiler-deployed EQ 0
+      </test>
+      <test value="1">
+	fcs/ground-spoiler-deployed EQ 1
+      </test>
+    </switch>
+
+    <switch name="fcs/ground-spoiler-cmd-norm">
+      <default value="/sim/spoilers/ground-spoiler-setting[0]"/>
+      <test value="/sim/spoilers/ground-spoiler-setting[0]">
+	/sim/spoilers/current-ground-spoiler-setting EQ 0
+      </test>
+      <test value="/sim/spoilers/ground-spoiler-setting[1]">
+	/sim/spoilers/current-ground-spoiler-setting EQ 1
+      </test>
+    </switch>
+
+    <switch name="/controls/flight/ground-spoiler">
+      <default value="fcs/ground-spoiler-cmd-norm" />
+    </switch>
+    
+    <kinematic name="Ground spoiler control">
+      <input>fcs/ground-spoiler-cmd-norm</input>
+      <traverse>
+        <setting>
+          <position>0.000</position>
+          <time>0.167</time>
+        </setting>
+        <setting>
+          <position>60</position>
+          <time>0.167</time>
+        </setting>
+      </traverse>
+      <output>fcs/ground-spoiler-pos-deg</output>
+    </kinematic>
+
+    <aerosurface_scale name="Ground spoiler aero normalization">
+      <input>fcs/ground-spoiler-pos-deg</input>
+      <domain>
+        <min>0</min>
+        <max>60</max>
+      </domain>
+      <range>
+        <min>0</min>
+        <max>1</max>
+      </range>
+      <output>fcs/ground-spoiler-pos-norm</output>
+    </aerosurface_scale>
+    
+    <pure_gain name="fcs/ground-spoiler-pos-rad">
+      <input>fcs/ground-spoiler-pos-deg</input>
       <gain>0.0174533</gain>
     </pure_gain>
   </channel>
