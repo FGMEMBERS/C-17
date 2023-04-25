@@ -100,6 +100,27 @@
       </script>
     </binding>
   </key>
-  
+
+  <key n="2">
+    <name>Ctrl-b</name>
+    <desc>Extend spoilers</desc>
+    <repeatable type="bool">true</repeatable>
+    <binding>
+      <command>nasal</command>
+      <script>controls.stepSpoilers(1);</script>
+    </binding>
+  </key>
+
+  <key n="98">
+    <name>Alt-b</name>
+    <desc>Retract spoilers</desc>
+    <repeatable type="bool">true</repeatable>
+    <mod-alt>
+      <binding>
+	<command>nasal</command>
+	<script>controls.stepSpoilers(-1);</script>
+      </binding>
+    </mod-alt>
+  </key>
 </PropertyList>
 

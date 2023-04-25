@@ -257,6 +257,27 @@
       <setting n="2" type="double">1.00</setting>
       <max-slat-extension-speed n="2" type="int">190</max-slat-extension-speed>
     </slats>
+
+    <spoilers>
+      <current-setting type="int">0</current-setting>
+      <setting n="0" type="double">0.00000</setting>
+      <setting n="1" type="double">0.08333</setting>
+      <setting n="2" type="double">0.16667</setting>
+      <setting n="3" type="double">0.25000</setting>
+      <setting n="4" type="double">0.33333</setting>
+      <setting n="5" type="double">0.41667</setting>
+      <setting n="6" type="double">0.50000</setting>
+      <setting n="7" type="double">0.58333</setting>
+      <setting n="8" type="double">0.66667</setting>
+      <setting n="9" type="double">0.75000</setting>
+      <setting n="10" type="double">0.83333</setting>
+      <setting n="11" type="double">0.91667</setting>
+      <setting n="12" type="double">1.00000</setting>
+      <ground-spoiler-setting n="0"
+			      type="double">0.00</ground-spoiler-setting> 
+      <ground-spoiler-setting n="1"
+			      type="double">60.00</ground-spoiler-setting> 
+    </spoilers>
     
     <limits>
       <vne>600</vne>

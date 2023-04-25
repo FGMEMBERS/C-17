@@ -319,21 +319,126 @@
     </kinematic>
   </channel>
 
-  <channel name="Speedbrake">
-    <kinematic name="Speedbrake Control">
-      <input>fcs/speedbrake-cmd-norm</input>
+  <channel name="Spoilers control">
+    <switch name="fcs/spoiler-cmd-norm">
+      <default value="/sim/spoilers/setting[0]"/>
+      <test value="/sim/spoilers/setting[0]">
+	/sim/spoilers/current-setting EQ 0
+      </test>
+      <test value="/sim/spoilers/setting[1]">
+	/sim/spoilers/current-setting EQ 1
+      </test>
+      <test value="/sim/spoilers/setting[2]">
+	/sim/spoilers/current-setting EQ 2
+      </test>
+      <test value="/sim/spoilers/setting[3]">
+	/sim/spoilers/current-setting EQ 3
+      </test>
+      <test value="/sim/spoilers/setting[4]">
+	/sim/spoilers/current-setting EQ 4
+      </test>
+      <test value="/sim/spoilers/setting[5]">
+	/sim/spoilers/current-setting EQ 5
+      </test>
+      <test value="/sim/spoilers/setting[6]">
+	/sim/spoilers/current-setting EQ 6
+      </test>
+      <test value="/sim/spoilers/setting[7]">
+	/sim/spoilers/current-setting EQ 7
+      </test>
+      <test value="/sim/spoilers/setting[8]">
+	/sim/spoilers/current-setting EQ 8
+      </test>
+      <test value="/sim/spoilers/setting[9]">
+	/sim/spoilers/current-setting EQ 9
+      </test>
+      <test value="/sim/spoilers/setting[10]">
+	/sim/spoilers/current-setting EQ 10
+      </test>
+      <test value="/sim/spoilers/setting[11]">
+	/sim/spoilers/current-setting EQ 11
+      </test>
+      <test value="/sim/spoilers/setting[12]">
+	/sim/spoilers/current-setting EQ 12
+      </test>
+    </switch>
+
+    <kinematic name="flaps control">
+      <input>fcs/spoiler-cmd-norm</input>
       <traverse>
         <setting>
-          <position>0</position>
-          <time>0</time>
+          <position>0.000</position>
+          <time>0.167</time>
         </setting>
         <setting>
-          <position>1</position>
-          <time>1</time>
+          <position>3.3333</position>
+          <time>0.167</time>
+        </setting>
+        <setting>
+          <position>6.6667</position>
+          <time>0.167</time>
+        </setting>
+        <setting>
+          <position>10.000</position>
+          <time>0.167</time>
+        </setting>
+        <setting>
+          <position>13.3333</position>
+          <time>0.167</time>
+        </setting>
+        <setting>
+          <position>16.6667</position>
+          <time>0.167</time>
+        </setting>
+        <setting>
+          <position>20.000</position>
+          <time>0.167</time>
+        </setting>
+        <setting>
+          <position>23.3333</position>
+          <time>0.167</time>
+        </setting>
+        <setting>
+          <position>26.6667</position>
+          <time>0.167</time>
+        </setting>
+        <setting>
+          <position>30.000</position>
+          <time>0.167</time>
+        </setting>
+        <setting>
+          <position>33.3333</position>
+          <time>0.167</time>
+        </setting>
+        <setting>
+          <position>33.6667</position>
+          <time>0.167</time>
+        </setting>
+        <setting>
+          <position>40</position>
+          <time>0.167</time>
         </setting>
       </traverse>
-      <output>fcs/speedbrake-pos-norm</output>
+      <output>fcs/spoiler-pos-deg</output>
     </kinematic>
+
+    <aerosurface_scale name="spoiler normalization">
+      <input>fcs/spoiler-pos-deg</input>
+      <domain>
+        <min>0</min>
+        <max>40</max>
+      </domain>
+      <range>
+        <min>0</min>
+        <max>1</max>
+      </range>
+      <output>fcs/spoiler-pos-norm</output>
+    </aerosurface_scale>
+
+    <pure_gain name="fcs/spoiler-pos-rad">
+      <input>fcs/spoiler-pos-deg</input>
+      <gain>0.0174533</gain>
+    </pure_gain>
   </channel>
   
   <system name="NWS">

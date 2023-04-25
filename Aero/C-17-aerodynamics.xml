@@ -489,11 +489,11 @@
     </function>
 
     <function name="aero/coefficient/dCLsb">
-      <description>Delta_Lift_due_to_speedbrake</description>
+      <description>Delta_Lift_due_to_spoiler</description>
       <product>
 	<property>aero/qbar-psf</property>
 	<property>metrics/Sw-sqft</property>
-	<property>fcs/speedbrake-pos-norm</property>
+	<property>fcs/spoiler-pos-norm</property>
 	<value>-0.05</value>
       </product>
     </function>
@@ -1240,12 +1240,12 @@
     </function>
     
     <function name="aero/coefficient/CDsb">
-      <description>Drag_due_to_speedbrakes</description>
+      <description>Drag_due_to_spoilers</description>
       <product>
 	<value>0.012</value>
 	<property>aero/qbar-psf</property>
 	<property>metrics/Sw-sqft</property>
-	<property>fcs/speedbrake-pos-norm</property>
+	<property>fcs/spoiler-pos-norm</property>
       </product>
     </function>
   </axis>

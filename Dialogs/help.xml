@@ -14,6 +14,14 @@
     <desc>Engage nose wheel steering</desc>
   </key>
   <key>
+    <name>Ctrl-b (hold)</name>
+    <desc>Extend spoilers</desc>
+  </key>
+  <key>
+    <name>Alt-b (hold)</name>
+    <desc>Retract spoilers</desc>
+  </key>
+  <key>
     <name>Ctrl-d</name>
     <desc>Open/Close cargo ramp</desc>
   </key>
