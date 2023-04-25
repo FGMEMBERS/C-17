@@ -322,6 +322,9 @@
   <channel name="Spoilers control">
     <switch name="fcs/spoiler-cmd-norm">
       <default value="/sim/spoilers/setting[0]"/>
+      <test value="1"><!-- fully deploy automatically while ground spoilers deploy-->
+	fcs/ground-spoiler-deployed	
+      </test>
       <test value="/sim/spoilers/setting[0]">
 	/sim/spoilers/current-setting EQ 0
       </test>
