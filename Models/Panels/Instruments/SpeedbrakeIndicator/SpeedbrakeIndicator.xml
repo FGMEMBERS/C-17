@@ -1,0 +1,26 @@
+<?xml version="1.0"?>
+
+<!--
+    :copyright: 2023, IAHM-COL
+    License: GPLv3
+    
+    Redistribution, or reuse, with or without modifications
+    shall keep this attribution information. 
+-->
+
+<PropertyList>
+  <path>SpeedbrakeIndicator.ac</path>
+
+  <!-- Lightmaps -->
+  <effect>
+    <inherits-from>backlighting</inherits-from>
+    <object-name>face</object-name>
+    <object-name>needle</object-name>
+  </effect>
+  <effect>
+    <inherits-from>floodlighting</inherits-from>
+    <object-name>case</object-name>
+    <object-name>screw.hi</object-name>
+    <object-name>screw.lo</object-name>
+  </effect>
+</PropertyList>
