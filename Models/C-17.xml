@@ -57,6 +57,7 @@
     <object-name>Engine4.Cowl3</object-name>
     <object-name>Engine4.Core</object-name>
     <object-name>Fuselage</object-name>
+    <object-name>Fuselage.inner</object-name>
     <object-name>WindowLeft1</object-name>
     <object-name>WindowLeft2</object-name>
     <object-name>WindowLeft3</object-name>
@@ -70,6 +71,7 @@
     <object-name>CargoRamp</object-name>
     <object-name>CargoRamp2</object-name>
     <object-name>CargoDoor</object-name>
+    <object-name>CargoDoor.inner</object-name>
     <object-name>VStab</object-name>
     <object-name>VStabCap</object-name>
     <object-name>Rudder</object-name>
@@ -964,6 +966,7 @@
   <animation>
     <type>rotate</type>
     <object-name>CargoDoor</object-name>
+    <object-name>CargoDoor.inner</object-name>
     <property>instrumentation/doors/ramp/position-norm</property>
     <!-- 
 	 <interpolation>
