@@ -492,7 +492,7 @@
       <product>
 	<property>aero/qbar-psf</property>
 	<property>metrics/Sw-sqft</property>
-	<value>1.000</value>
+	<value>25.000</value>
 	<property>systems/multipliers/lift</property>
 	<table>
 	  <independentVar>fcs/spoiler-pos-deg</independentVar>
@@ -1249,7 +1249,7 @@
       <product>
 	<property>aero/qbar-psf</property>
 	<property>metrics/Sw-sqft</property>
-	<value>1.0000</value>
+	<value>25.0000</value>
 	<property>systems/multipliers/drag</property>
 	<table>
 	  <independentVar>fcs/spoiler-pos-deg</independentVar>
