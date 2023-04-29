@@ -71,6 +71,16 @@
       <pitch-deg>-6</pitch-deg>
     </offsets>
   </model>
+  <!-- Spoiler Indicator -->
+  <model>
+    <path>Models/Panels/Instruments/SpeedbrakeIndicator/SpeedbrakeIndicator.xml</path>
+    <offsets>
+      <x-m>0.42373</x-m>
+      <y-m>0.15353</y-m>
+      <z-m>0.71784</z-m>
+      <pitch-deg>-6</pitch-deg>
+    </offsets>
+  </model>
 
   <!-- Limits plackards -->
   <model>

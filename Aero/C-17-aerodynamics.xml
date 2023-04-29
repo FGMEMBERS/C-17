@@ -16,7 +16,6 @@
       <description>Lift_due_to_alpha_flap_slat_deflection</description>
       <product>
 	<value>1.766015867</value>
-	<property>systems/multipliers/lift</property>
 	<property>aero/qbar-psf</property>
 	<property>metrics/Sw-sqft</property>
 	<table>
@@ -401,10 +400,10 @@
 	  <independentVar>fcs/flap-pos-deg</independentVar>
 	  <tableData>
 	    0         1.0000
-	    8         0.5745
-	    16        0.4351
-	    24        0.3983
-	    40        0.3443
+	    8         1.0000
+	    16        1.0000
+	    24        1.0000
+	    40        1.0000
 	  </tableData>
 	</table>
       </product>
@@ -489,12 +488,19 @@
     </function>
 
     <function name="aero/coefficient/dCLsb">
-      <description>Delta_Lift_due_to_speedbrake</description>
+      <description>Delta_Lift_due_to_spoiler</description>
       <product>
 	<property>aero/qbar-psf</property>
 	<property>metrics/Sw-sqft</property>
-	<property>fcs/speedbrake-pos-norm</property>
-	<value>-0.05</value>
+	<value>25.000</value>
+	<property>systems/multipliers/lift</property>
+	<table>
+	  <independentVar>fcs/spoiler-pos-deg</independentVar>
+	  <tableData>
+	    0    0.0000
+	    30  -0.0183
+	  </tableData>
+	</table>
       </product>
     </function>
   </axis>
@@ -504,7 +510,6 @@
       <description>Drag_due_to_alpha_flap_slat_deflection</description>
       <product>
 	<value>7.107750832</value>
-	<property>systems/multipliers/drag</property>
 	<property>aero/qbar-psf</property>
 	<property>metrics/Sw-sqft</property>
 	<table>
@@ -889,10 +894,10 @@
 	  <independentVar>fcs/flap-pos-deg</independentVar>
 	  <tableData>
 	    0         1.0000
-	    8         0.5745
-	    16        0.4351
-	    24        0.3983
-	    40        0.3443
+	    8         1.0000
+	    16        1.0000
+	    24        1.0000
+	    40        1.0000
 	  </tableData>
 	</table>
       </product>
@@ -1240,12 +1245,19 @@
     </function>
     
     <function name="aero/coefficient/CDsb">
-      <description>Drag_due_to_speedbrakes</description>
+      <description>Drag_due_to_spoilers</description>
       <product>
-	<value>0.012</value>
 	<property>aero/qbar-psf</property>
 	<property>metrics/Sw-sqft</property>
-	<property>fcs/speedbrake-pos-norm</property>
+	<value>25.0000</value>
+	<property>systems/multipliers/drag</property>
+	<table>
+	  <independentVar>fcs/spoiler-pos-deg</independentVar>
+	  <tableData>
+	    0    0.0000
+	    30   0.0046
+	  </tableData>
+	</table>
       </product>
     </function>
   </axis>
@@ -1954,10 +1966,10 @@
 	  <independentVar>fcs/flap-pos-deg</independentVar>
 	  <tableData>
 	    0         1.0000
-	    8         0.5745
-	    16        0.4351
-	    24        0.3983
-	    40        0.3443
+	    8         1.0000
+	    16        1.0000
+	    24        1.0000
+	    40        1.0000
 	  </tableData>
 	</table>
       </product>
