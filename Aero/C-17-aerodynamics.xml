@@ -489,15 +489,36 @@
     </function>
 
     <function name="aero/coefficient/dCLsb">
-      <description>Delta_Lift_due_to_spoiler</description>
+      <description>Delta_Lift_due_alpha_spoiler_deflection</description>
       <product>
 	<property>aero/qbar-psf</property>
 	<property>metrics/Sw-sqft</property>
 	<table>
 	  <independentVar>fcs/spoiler-pos-deg</independentVar>
 	  <tableData>
-	    0    0.0000
-	    30  -0.4575
+	    0.0    0.0000
+	    30.0  -0.4575
+	    60.0  -0.9150
+	  </tableData>
+	</table>
+	<table>
+	  <independentVar>aero/alpha-deg</independentVar>
+	  <tableData>
+	    -30.0       0.0000
+	    -16.0	0.0000
+	    -15.0	0.1000
+	    -12.0	0.4240
+	    -9.0	0.6760
+	    -6.0	0.8560
+	    -3.0	0.9640
+	    0.0  	1.0000
+	    3.0 	0.9640
+	    6.0 	0.8560
+	    9.0 	0.6760
+	    12.0 	0.4240
+	    15.0	0.1000
+	    16.0	0.0000
+	    30.0        0.0000
 	  </tableData>
 	</table>
       </product>
@@ -1204,6 +1225,7 @@
       <product>
 	<value>4.875</value>
 	<property>metrics/Sw-sqft</property>
+	<!--<property>aero/qbar-psf</property>-->
 	<table>
           <independentVar>velocities/mach</independentVar>
           <tableData>
@@ -1227,6 +1249,7 @@
 	<value>-2.000</value><!-- Drag suppression, 2 winglets -->
 	<value>19.44</value><!-- Area of each winglet -->
 	<value>0.08</value> <!-- 8 % suppressed per winglet -->
+	<!--<property>aero/qbar-psf</property>-->
 	<table>
           <independentVar>velocities/mach</independentVar>
           <tableData>
@@ -1245,15 +1268,36 @@
     </function>
     
     <function name="aero/coefficient/CDsb">
-      <description>Drag_due_to_spoilers</description>
+      <description>Drag_due_to_alpha_spoilers_deflection</description>
       <product>
 	<property>aero/qbar-psf</property>
 	<property>metrics/Sw-sqft</property>
 	<table>
 	  <independentVar>fcs/spoiler-pos-deg</independentVar>
 	  <tableData>
-	    0    0.0000
-	    30   0.1150
+	    0.0    0.0000
+	    30.0   0.1150
+	    60.0   0.2300
+	  </tableData>
+	</table>
+	<table>
+	  <independentVar>aero/alpha-deg</independentVar>
+	  <tableData>
+	    -30.0       0.0000
+	    -16.0	0.0000
+	    -15.0	0.1000
+	    -12.0	0.4240
+	    -9.0	0.6760
+	    -6.0	0.8560
+	    -3.0	0.9640
+	    0.0  	1.0000
+	    3.0 	0.9640
+	    6.0 	0.8560
+	    9.0 	0.6760
+	    12.0 	0.4240
+	    15.0	0.1000
+	    16.0	0.0000
+	    30.0        0.0000
 	  </tableData>
 	</table>
       </product>
