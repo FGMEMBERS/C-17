@@ -61,6 +61,29 @@
     </offsets>
   </model>
 
+  <!-- Attitude Indicators -->
+  <model>
+    <name>AI</name>
+    <path>Models/Panels/Instruments/AttitudeIndicator/AttitudeIndicator.xml</path>
+    <offsets>
+      <x-m>0.415</x-m>
+      <y-m>-0.38</y-m>
+      <z-m>0.84</z-m>
+      <pitch-deg>-6</pitch-deg>
+    </offsets>
+  </model>
+  
+  <model>
+    <name>AI.FO</name>
+    <path>Models/Panels/Instruments/AttitudeIndicator/AttitudeIndicator.xml</path>
+    <offsets>
+      <x-m>0.415</x-m>
+      <y-m>0.38</y-m>
+      <z-m>0.84</z-m>
+      <pitch-deg>-6</pitch-deg>
+    </offsets>
+  </model>
+  
   <!-- Flap Indicator -->
   <model>
     <path>Models/Panels/Instruments/FlapIndicator/FlapIndicator.xml</path>
@@ -200,27 +223,6 @@
     </offsets>
   </model>
 
-  <model>
-    <name>STANDBY-AH</name>
-    <path>Models/Panels/Instruments/STANDBY/att-ball.xml</path>
-    <offsets>
-      <x-m>0.407</x-m>
-      <y-m>-0.38</y-m>
-      <z-m>0.84</z-m>
-      <pitch-deg>-6</pitch-deg>
-    </offsets>
-  </model>
-  
-  <model>
-    <name>STANDBY-AH2</name>
-    <path>Models/Panels/Instruments/STANDBY/att-ball.xml</path>
-    <offsets>
-      <x-m>0.407</x-m>
-      <y-m>0.38</y-m>
-      <z-m>0.84</z-m>
-      <pitch-deg>-6</pitch-deg>
-    </offsets>
-  </model>
 
   <model>
     <name>STANDBY-VOR</name>

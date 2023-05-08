@@ -1,0 +1,35 @@
+<?xml version="1.0"?>
+
+<!--
+    :copyright: 2023, IAHM-COL
+    License: GPLv3
+    
+    Redistribution, or reuse, with or without modifications
+    shall keep this attribution information. 
+-->
+
+<PropertyList>
+  <path>AttitudeIndicator.ac</path>
+
+  <!-- Lightmaps -->
+  <effect>
+    <inherits-from>backlighting</inherits-from>
+    <object-name>ai.sphere</object-name>
+    <object-name>aircraft.indicator</object-name>
+    <object-name>bank.label</object-name>
+    <object-name>flag.caged</object-name>
+    <object-name>flag.off</object-name>
+    <object-name>knob.face</object-name>
+    <object-name>knob.indicator</object-name>
+    <object-name>knob.label</object-name>
+    <object-name>sky.indicator</object-name>
+  </effect>
+  <effect>
+    <inherits-from>floodlighting</inherits-from>
+    <object-name>frame</object-name>
+    <object-name>knob</object-name>
+    <object-name>screw.1</object-name>
+    <object-name>screw.2</object-name>
+    <object-name>screw.3</object-name>
+  </effect>
+</PropertyList>
