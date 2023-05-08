@@ -15,4 +15,8 @@ shall keep this attribution information.
     <floodlight-status userarchive="y" type="int">2</floodlight-status>
     <floodlight-intensity userarchive="y" type="double">1</floodlight-intensity>
   </panel-lighting>
+  <attitude-indicator>
+    <caged type="bool">false</caged>
+    <perspective-offset userarchive="y" type="double">0</perspective-offset>
+  </attitude-indicator>
 </PropertyList>

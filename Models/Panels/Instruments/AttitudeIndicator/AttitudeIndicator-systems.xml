@@ -1,0 +1,66 @@
+<?xml version="1.0"?>
+<?xml-stylesheet href="JSBSim.xsl" type="application/xml"?>
+
+<!--
+:copyright: 2023, IAHM-COL
+License: GPLv3
+
+Redistribution, or reuse, with or without modifications
+shall keep this attribution information. 
+-->
+
+<system>
+  <channel name="flags">
+    <switch name="instruments/attitude-indicator/vacuum">
+      <default value="/systems/vacuum/serviceable" />
+    </switch>
+
+    <switch name="instruments/attitude-indicator/off">
+      <default value="0" />
+      <test value="0">
+	instruments/attitude-indicator/vacuum EQ 1
+      </test>
+      <test value="1">
+	instruments/attitude-indicator/vacuum EQ 0
+      </test>
+    </switch>
+
+    <switch name="instruments/attitude-indicator/flagged">
+      <default value="0" />
+      <test value="0">
+	instruments/attitude-indicator/caged EQ 0
+      </test>
+      <test value="1">
+	instruments/attitude-indicator/caged EQ 1
+      </test>
+    </switch>
+  </channel>
+
+  <channel name="Pitch">
+    <switch name="instruments/attitude-indicator/pitch-deg">
+      <default value="/orientation/pitch-deg"/>
+    </switch>
+
+    <switch name="instruments/attitude-indicator/pitch-indication">
+      <default value="instruments/attitude-indicator/pitch-deg"/>
+      <test logic="OR" value="0">
+	instruments/attitude-indicator/flagged EQ 1
+	instruments/attitude-indicator/off EQ 1
+      </test>
+    </switch>
+  </channel>
+
+  <channel name="Bank">
+    <switch name="instruments/attitude-indicator/roll-deg">
+      <default value="/orientation/roll-deg"/>
+    </switch>
+
+    <switch name="instruments/attitude-indicator/bank-indication">
+      <default value="instruments/attitude-indicator/roll-deg"/>
+      <test logic="OR" value="0">
+	instruments/attitude-indicator/flagged EQ 1
+	instruments/attitude-indicator/off EQ 1
+      </test>
+    </switch>
+  </channel>
+</system>

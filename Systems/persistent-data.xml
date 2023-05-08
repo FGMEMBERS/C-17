@@ -13,6 +13,7 @@ shall keep this attribution information.
   <path>fdm/jsbsim/instruments/panel-lighting/backlight-intensity</path>
   <path>fdm/jsbsim/instruments/panel-lighting/floodlight-status</path>
   <path>fdm/jsbsim/instruments/panel-lighting/floodlight-intensity</path>
+  <path>fdm/jsbsim/instruments/instruments/attitude-indicator/perspective-offset</path>
   <path>fdm/jsbsim/systems/livery/selected/id</path>
   <path>fdm/jsbsim/systems/livery/selected/name</path>
   <path>fdm/jsbsim/systems/livery/selected/texture</path>
