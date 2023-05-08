@@ -56,6 +56,7 @@
   <system name="PANEL LIGHTS: C-17" file="Models/Panels/Instruments/PanelLighting/PanelLighting-systems.xml" />
   <system name="FLAP INDICATOR: C-17" file="Models/Panels/Instruments/FlapIndicator/FlapIndicator-systems.xml" />
   <system name="SPEEDBRAKE INDICATOR: C-17" file="Models/Panels/Instruments/SpeedbrakeIndicator/SpeedbrakeIndicator-systems.xml" />
+  <system name="ATTITUDE INDICATOR: C-17" file="Models/Panels/Instruments/AttitudeIndicator/AttitudeIndicator-systems.xml" />
   
   <!--Output-->
   <output name="C-17-jsbim-output.csv" type="CSV" rate="120">
