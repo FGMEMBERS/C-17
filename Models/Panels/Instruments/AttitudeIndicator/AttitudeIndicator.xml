@@ -1,0 +1,139 @@
+<?xml version="1.0"?>
+
+<!--
+:copyright: 2023, IAHM-COL
+License: GPLv3
+
+Redistribution, or reuse, with or without modifications
+shall keep this attribution information. 
+-->
+
+<PropertyList>
+  <path>AttitudeIndicator.ac</path>
+
+  <!-- Flags -->
+  <animation>
+    <object-name>flag.caged</object-name>
+    <type>select</type>
+    <condition>
+      <property>fdm/jsbsim/instruments/attitude-indicator/flagged</property>
+    </condition>
+  </animation>
+
+  <animation>
+    <object-name>flag.off</object-name>
+    <type>select</type>
+    <condition>
+      <property>fdm/jsbsim/instruments/attitude-indicator/off</property>
+    </condition>
+  </animation>
+
+  <!-- Knob -->
+  <animation>
+    <name>Offset knob</name>
+    <type>knob</type>
+    <object-name>knob</object-name>
+    <object-name>knob.label</object-name>
+    <object-name>knob.indicator</object-name>
+    <property>fdm/jsbsim/instruments/attitude-indicator/perspective-offset</property>
+    <factor>-8</factor>
+    <axis>
+      <x1-m>0.003709</x1-m>
+      <y1-m>0.02499</y1-m>
+      <z1-m>-0.02256</z1-m>
+      <x2-m>0.02152</x2-m>
+      <y2-m>0.02499</y2-m>
+      <z2-m>-0.02256</z2-m>
+    </axis>
+    <action>
+      <binding>
+	<condition><!-- must be caged to adjust the knob -->
+	  <property>fdm/jsbsim/instruments/attitude-indicator/caged</property>
+	</condition>
+	<command>property-adjust</command>
+	<property>fdm/jsbsim/instruments/attitude-indicator/perspective-offset</property>
+	<factor>0.25</factor>
+	<min>-10</min>
+	<max>5</max>                
+	<wrap>false</wrap>
+      </binding>
+    </action>
+    <shift-action><!-- Shift to pull/push, and cage -->
+      <binding>
+	<command>property-toggle</command>
+	<property>fdm/jsbsim/instruments/attitude-indicator/caged</property>
+      </binding>
+    </shift-action>
+  </animation>
+
+  <animation>
+    <type>translate</type>
+    <object-name>knob</object-name>
+    <object-name>knob.label</object-name>
+    <property>fdm/jsbsim/instruments/attitude-indicator/caged</property>
+    <factor>0.0044</factor>
+    <axis>
+      <x1-m>0.003709</x1-m>
+      <y1-m>0.02499</y1-m>
+      <z1-m>-0.02256</z1-m>
+      <x2-m>0.02152</x2-m>
+      <y2-m>0.02499</y2-m>
+      <z2-m>-0.02256</z2-m>
+    </axis>
+  </animation>
+
+  <!-- Banking -->
+  <animation>
+    <type>rotate</type>   
+    <object-name>ai.sphere</object-name> 
+    <object-name>sky.indicator</object-name> 
+    <property>fdm/jsbsim/instruments/attitude-indicator/bank-indication</property>
+    <factor>1</factor>
+    <axis>
+      <x1-m>-0.1003</x1-m>
+      <y1-m>0</y1-m>
+      <z1-m>0</z1-m>
+      <x2-m>-0.002859</x2-m>
+      <y2-m>0</y2-m>
+      <z2-m>0</z2-m>
+    </axis>
+  </animation>
+
+  <!-- Pitch -->
+  <animation>
+    <type>rotate</type>   
+    <object-name>ai.sphere</object-name> 
+    <property>fdm/jsbsim/instruments/attitude-indicator/pitch-indication</property>
+    <factor>0.80</factor>
+    <axis>
+      <x1-m>-0.04873</x1-m>
+      <y1-m>-0.05159</y1-m>
+      <z1-m>0</z1-m>
+      <x2-m>-0.04873</x2-m>
+      <y2-m>0.05159</y2-m>
+      <z2-m>0</z2-m>
+    </axis>
+  </animation>
+  
+  <!-- Lightmaps -->
+  <effect>
+    <inherits-from>backlighting</inherits-from>
+    <object-name>ai.sphere</object-name>
+    <object-name>aircraft.indicator</object-name>
+    <object-name>bank.label</object-name>
+    <object-name>flag.caged</object-name>
+    <object-name>flag.off</object-name>
+    <object-name>knob.face</object-name>
+    <object-name>knob.indicator</object-name>
+    <object-name>knob.label</object-name>
+    <object-name>sky.indicator</object-name>
+  </effect>
+  <effect>
+    <inherits-from>floodlighting</inherits-from>
+    <object-name>frame</object-name>
+    <object-name>knob</object-name>
+    <object-name>screw.1</object-name>
+    <object-name>screw.2</object-name>
+    <object-name>screw.3</object-name>
+  </effect>
+</PropertyList>
