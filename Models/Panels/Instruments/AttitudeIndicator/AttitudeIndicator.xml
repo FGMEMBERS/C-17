@@ -148,6 +148,7 @@ shall keep this attribution information.
     <object-name>knob.indicator</object-name>
     <object-name>knob.label</object-name>
     <object-name>sky.indicator</object-name>
+    <object-name>TC.sphere</object-name>
   </effect>
   <effect>
     <inherits-from>floodlighting</inherits-from>
