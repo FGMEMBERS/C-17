@@ -42,12 +42,34 @@ shall keep this attribution information.
     </switch>
 
     <switch name="instruments/attitude-indicator/pitch-indication">
-      <default value="instruments/attitude-indicator/pitch-deg"/>
+      <default value="instruments/attitude-indicator/pitch-adjusted"/>
       <test logic="OR" value="0">
 	instruments/attitude-indicator/flagged EQ 1
 	instruments/attitude-indicator/off EQ 1
       </test>
     </switch>
+
+    <switch name="instruments/attitude-indicator/pitch-offset">
+      <default value="0" />
+      <!-- when flagged the offset will match the pitch-deg, then remain
+	   static at the last value when uncaged -->
+      <test value="instruments/attitude-indicator/pitch-offset">
+	instruments/attitude-indicator/flagged EQ 0
+      </test>
+      <test value="instruments/attitude-indicator/pitch-deg">
+	instruments/attitude-indicator/flagged EQ 1
+      </test>
+    </switch>
+
+    <summer name="instruments/attitude-indicator/pitch-adjusted">
+      <!-- Adjust the bank to the offset after caging and limits to -65 / 65 -->
+      <input>instruments/attitude-indicator/pitch-deg</input>
+      <input>instruments/attitude-indicator/pitch-offset</input>
+      <clipto>
+	<min>-65</min>
+	<max>65</max>
+      </clipto>
+    </summer>
   </channel>
 
   <channel name="Bank">
@@ -56,11 +78,53 @@ shall keep this attribution information.
     </switch>
 
     <switch name="instruments/attitude-indicator/bank-indication">
-      <default value="instruments/attitude-indicator/roll-deg"/>
+      <default value="instruments/attitude-indicator/bank-adjusted"/>
       <test logic="OR" value="0">
 	instruments/attitude-indicator/flagged EQ 1
 	instruments/attitude-indicator/off EQ 1
       </test>
     </switch>
+    
+    <switch name="instruments/attitude-indicator/bank-offset">
+      <default value="0" />
+      <!-- when flagged the offset will match the roll-deg, then remain
+	   static at the last value when uncaged -->
+      <test value="instruments/attitude-indicator/bank-offset">
+	instruments/attitude-indicator/flagged EQ 0
+      </test>
+      <test value="instruments/attitude-indicator/roll-deg">
+	instruments/attitude-indicator/flagged EQ 1
+      </test>
+    </switch>
+
+    <summer name="instruments/attitude-indicator/bank-adjusted">
+      <!-- Adjust the bank to the offset after caging and limits to -360 / 360 -->
+      <input>instruments/attitude-indicator/roll-deg</input>
+      <input>instruments/attitude-indicator/bank-offset</input>
+      <clipto>
+	<min>-360</min>
+	<max>360</max>
+      </clipto>
+    </summer>
   </channel>
+
+  <channel name="Turn coordinator">
+    <switch name="instruments/attitude-indicator/indicated-slip-skid">
+      <default value="/instrumentation/slip-skid-ball/indicated-slip-skid" />
+    </switch>
+
+    <pure_gain name="instruments/attitude-indicator/adjusted-slip-skid">
+      <input>instruments/attitude-indicator/indicated-slip-skid</input>
+      <gain>1</gain>
+      <!-- 
+	   limits the skid instrument output to avoid sphere to escape
+	   instrument
+      -->
+      <clipto>
+	<min>-5</min>
+	<max>5</max>
+      </clipto>
+    </pure_gain>
+  </channel>
+  
 </system>
