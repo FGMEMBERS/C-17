@@ -135,6 +135,17 @@ shall keep this attribution information.
       <x>0</x><y>0</y><z>1</z>
     </axis>
   </animation>
+
+  <!-- Turn coordinator -->
+  <animation>
+    <type>translate</type>
+    <object-name>TC.sphere</object-name>
+    <property>fdm/jsbsim/instruments/attitude-indicator/adjusted-slip-skid</property>
+    <factor>0.0015154</factor>
+    <axis><!-- the skid slip ball moves on the y axis to the clipped slip skid-->
+      <x>0</x><y>1</y><z>0</z>
+    </axis>
+  </animation>
   
   <!-- Lightmaps -->
   <effect>

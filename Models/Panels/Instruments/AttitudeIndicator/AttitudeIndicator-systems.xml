@@ -107,4 +107,24 @@ shall keep this attribution information.
       </clipto>
     </summer>
   </channel>
+
+  <channel name="Turn coordinator">
+    <switch name="instruments/attitude-indicator/indicated-slip-skid">
+      <default value="/instrumentation/slip-skid-ball/indicated-slip-skid" />
+    </switch>
+
+    <pure_gain name="instruments/attitude-indicator/adjusted-slip-skid">
+      <input>instruments/attitude-indicator/indicated-slip-skid</input>
+      <gain>1</gain>
+      <!-- 
+	   limits the skid instrument output to avoid sphere to escape
+	   instrument
+      -->
+      <clipto>
+	<min>-5</min>
+	<max>5</max>
+      </clipto>
+    </pure_gain>
+  </channel>
+  
 </system>
