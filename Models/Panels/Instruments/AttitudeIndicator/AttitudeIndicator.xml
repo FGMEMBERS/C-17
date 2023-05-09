@@ -30,6 +30,22 @@ shall keep this attribution information.
 
   <!-- Knob -->
   <animation>
+    <type>pick</type>
+    <object-name>knob</object-name>
+    <object-name>knob.label</object-name>
+    <object-name>knob.indicator</object-name>
+    <action>
+      <button>1</button><!-- Mouse wheel clicking to pull the knob -->
+      <repeatable>false</repeatable>
+      <interval-sec>0.2</interval-sec>
+      <binding>
+	<command>property-toggle</command>
+	<property>fdm/jsbsim/instruments/attitude-indicator/caged</property>
+      </binding>
+    </action>
+  </animation>
+  
+  <animation>
     <name>Offset knob</name>
     <type>knob</type>
     <object-name>knob</object-name>
@@ -58,12 +74,6 @@ shall keep this attribution information.
 	<wrap>false</wrap>
       </binding>
     </action>
-    <shift-action><!-- Shift to pull/push, and cage -->
-      <binding>
-	<command>property-toggle</command>
-	<property>fdm/jsbsim/instruments/attitude-indicator/caged</property>
-      </binding>
-    </shift-action>
   </animation>
 
   <animation>
@@ -114,6 +124,28 @@ shall keep this attribution information.
       <z2-m>0</z2-m>
     </axis>
   </animation>
+
+  <!-- Perspective -->
+  <animation>
+    <type>translate</type>
+    <object-name>aircraft.indicator</object-name>
+    <property>fdm/jsbsim/instruments/attitude-indicator/perspective-offset</property>
+    <factor>0.0006137</factor>
+    <axis><!-- the wings move up or down following the offset -->
+      <x>0</x><y>0</y><z>1</z>
+    </axis>
+  </animation>
+
+  <!-- Turn coordinator -->
+  <animation>
+    <type>translate</type>
+    <object-name>TC.sphere</object-name>
+    <property>fdm/jsbsim/instruments/attitude-indicator/adjusted-slip-skid</property>
+    <factor>0.0015154</factor>
+    <axis><!-- the skid slip ball moves on the y axis to the clipped slip skid-->
+      <x>0</x><y>1</y><z>0</z>
+    </axis>
+  </animation>
   
   <!-- Lightmaps -->
   <effect>
@@ -127,6 +159,7 @@ shall keep this attribution information.
     <object-name>knob.indicator</object-name>
     <object-name>knob.label</object-name>
     <object-name>sky.indicator</object-name>
+    <object-name>TC.sphere</object-name>
   </effect>
   <effect>
     <inherits-from>floodlighting</inherits-from>
