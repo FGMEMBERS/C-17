@@ -1,0 +1,41 @@
+<?xml version="1.0"?>
+
+<!--
+    :copyright: 2023, IAHM-COL
+    License: GPLv3
+    
+    Redistribution, or reuse, with or without modifications
+    shall keep this attribution information. 
+-->
+
+<PropertyList>
+  <path>altasi.ac</path>
+
+  <!-- Lightmaps -->
+  <effect>
+    <inherits-from>backlighting</inherits-from>
+    <object-name>alt.digit1</object-name>
+    <object-name>alt.digit2</object-name>
+    <object-name>alt.digit3</object-name>
+    <object-name>alt.digit4</object-name>
+    <object-name>alt.digit5</object-name>
+    <object-name>alt.needle</object-name>
+    <object-name>alt.needle.spin</object-name>
+    <object-name>face</object-name>
+    <object-name>iastape</object-name>
+    <object-name>inhg.digit1</object-name>
+    <object-name>inhg.digit2</object-name>
+    <object-name>inhg.digit3</object-name>
+    <object-name>inhg.digit4</object-name>
+    <object-name>knob.label</object-name>
+    <object-name>mb.digit1</object-name>
+    <object-name>mb.digit2</object-name>
+    <object-name>mb.digit3</object-name>
+    <object-name>mb.digit4</object-name>
+  </effect>
+  <effect>
+    <inherits-from>floodlighting</inherits-from>
+    <object-name>knob</object-name>
+    <object-name>screw</object-name>
+  </effect>
+</PropertyList>

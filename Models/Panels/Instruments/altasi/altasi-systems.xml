@@ -1,0 +1,261 @@
+<?xml version="1.0"?>
+<?xml-stylesheet href="JSBSim.xsl" type="application/xml"?>
+
+<!--
+:copyright: 2023, IAHM-COL
+License: GPLv3
+
+Redistribution, or reuse, with or without modifications
+shall keep this attribution information. 
+-->
+
+<system>
+  <channel name="Altimeter">
+    <switch name="instruments/altasi/indicated-altitude-ft">
+      <default value="/instrumentation/altimeter/indicated-altitude-ft" />
+    </switch>
+
+    <fcs_function name="instruments/altasi/alt.100ft">
+      <function>
+	<mod>
+	  <property>instruments/altasi/indicated-altitude-ft</property>
+	  <value>1000</value>
+	</mod>
+      </function>
+    </fcs_function>
+
+    <fcs_function name="instruments/altasi/alt.digit1">
+      <function>
+	<floor>
+	  <product>
+	    <mod>
+	      <property>instruments/altasi/indicated-altitude-ft</property>
+	      <value>100000</value>
+	    </mod>
+	    <value>0.0001</value>
+	  </product>
+	</floor>
+      </function>
+    </fcs_function>
+
+    <fcs_function name="instruments/altasi/alt.digit2">
+      <function>
+	<floor>
+	  <product>
+	    <mod>
+	      <property>instruments/altasi/indicated-altitude-ft</property>
+	      <value>10000</value>
+	    </mod>
+	    <value>0.001</value>
+	  </product>
+	</floor>
+      </function>
+    </fcs_function>
+
+    <fcs_function name="instruments/altasi/alt.digit3">
+      <function>
+	<floor>
+	  <product>
+	    <mod>
+	      <property>instruments/altasi/indicated-altitude-ft</property>
+	      <value>1000</value>
+	    </mod>
+	    <value>0.01</value>
+	  </product>
+	</floor>
+      </function>
+    </fcs_function>
+
+    <fcs_function name="instruments/altasi/alt.digit4">
+      <function>
+	<floor>
+	  <product>
+	    <mod>
+	      <property>instruments/altasi/indicated-altitude-ft</property>
+	      <value>100</value>
+	    </mod>
+	    <value>0.1</value>
+	  </product>
+	</floor>
+      </function>
+    </fcs_function>
+    
+    <fcs_function name="instruments/altasi/alt.digit5">
+      <function>
+	<mod>
+	  <property>instruments/altasi/indicated-altitude-ft</property>
+	  <value>10</value>
+	</mod>
+      </function>
+    </fcs_function>
+  </channel>
+
+  <channel name="Altimeter MB">
+    <fcs_function name="instruments/altasi/setting-mb">
+      <function>
+	<floor>
+	  <product>
+	    <property>/instrumentation/altimeter/setting-hpa</property>
+	    <value>10</value>
+	  </product>
+	</floor>
+      </function>
+    </fcs_function>
+
+    <fcs_function name="instruments/altasi/mb.digit1">
+      <function>
+	<floor>
+	  <product>
+	    <mod>
+	      <property>instruments/altasi/setting-mb</property>
+	      <value>100000</value>
+	    </mod>
+	    <value>0.0001</value>
+	  </product>
+	</floor>
+      </function>
+    </fcs_function>
+    
+    <fcs_function name="instruments/altasi/mb.digit2">
+      <function>
+	<floor>
+	  <product>
+	    <mod>
+	      <property>instruments/altasi/setting-mb</property>
+	      <value>10000</value>
+	    </mod>
+	    <value>0.001</value>
+	  </product>
+	</floor>
+      </function>
+    </fcs_function>
+    
+    <fcs_function name="instruments/altasi/mb.digit3">
+      <function>
+	<floor>
+	  <product>
+	    <mod>
+	      <property>instruments/altasi/setting-mb</property>
+	      <value>1000</value>
+	    </mod>
+	    <value>0.01</value>
+	  </product>
+	</floor>
+      </function>
+    </fcs_function>
+
+    <fcs_function name="instruments/altasi/mb.digit4">
+      <function>
+	<product>
+	  <mod>
+	    <property>instruments/altasi/setting-mb</property>
+	    <value>100</value>
+	  </mod>
+	  <value>0.1</value>
+	</product>
+      </function>
+    </fcs_function>
+
+    <fcs_function name="instruments/altasi/baro-knob-norm">
+      <function>
+	<sum>
+	  <property>instruments/altasi/setting-mb</property>
+	  <value>-10132</value>
+	</sum>
+      </function>
+    </fcs_function>
+  </channel>
+
+  <channel name="Altimeter INHG">
+    <fcs_function name="instruments/altasi/setting-inhg">
+      <function>
+	<floor>
+	  <product>
+	    <property>/instrumentation/altimeter/setting-inhg</property>
+	    <value>1000</value>
+	  </product>
+	</floor>
+      </function>
+    </fcs_function>
+
+    <fcs_function name="instruments/altasi/inhg.digit1">
+      <function>
+	<floor>
+	  <product>
+	    <mod>
+	      <property>instruments/altasi/setting-inhg</property>
+	      <value>100000</value>
+	    </mod>
+	    <value>0.0001</value>
+	  </product>
+	</floor>
+      </function>
+    </fcs_function>
+    
+    <fcs_function name="instruments/altasi/inhg.digit2">
+      <function>
+	<floor>
+	  <product>
+	    <mod>
+	      <property>instruments/altasi/setting-inhg</property>
+	      <value>10000</value>
+	    </mod>
+	    <value>0.001</value>
+	  </product>
+	</floor>
+      </function>
+    </fcs_function>
+    
+    <fcs_function name="instruments/altasi/inhg.digit3">
+      <function>
+	<floor>
+	  <product>
+	    <mod>
+	      <property>instruments/altasi/setting-inhg</property>
+	      <value>1000</value>
+	    </mod>
+	    <value>0.01</value>
+	  </product>
+	</floor>
+      </function>
+    </fcs_function>
+    
+    <fcs_function name="instruments/altasi/inhg.digit4">
+      <function>
+	<product>
+	  <mod>
+	    <property>instruments/altasi/setting-inhg</property>
+	    <value>100</value>
+	  </mod>
+	  <value>0.1</value>
+	</product>
+      </function>
+    </fcs_function>
+  </channel>
+
+  <channel name="ASI">
+    <pure_gain name="instruments/altasi/indicated-speed-kt">
+      <input>/instrumentation/airspeed-indicator/indicated-speed-kt</input>
+      <gain>1</gain>
+      <clipto>
+	<min>0</min>
+	<max>375</max>
+      </clipto>
+    </pure_gain>
+
+    <fcs_function name="instruments/altasi/asitape-norm">
+      <function>
+	<interpolate1d>
+	  <property>instruments/altasi/indicated-speed-kt</property>
+	  <value>0</value><value>0.0000</value>
+	  <value>60</value><value>0.030411</value>
+	  <value>100</value><value>0.101832</value>
+	  <value>250</value><value>0.475060</value>
+	  <value>350</value><value>0.776754</value>
+	  <value>360</value><value>0.853588</value>
+	  <value>380</value><value>1.0000</value>
+	</interpolate1d>
+      </function>
+    </fcs_function>
+  </channel>
+</system>
