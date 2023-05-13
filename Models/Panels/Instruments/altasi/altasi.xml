@@ -11,6 +11,249 @@
 <PropertyList>
   <path>altasi.ac</path>
 
+  <!-- ASI --> 
+  <animation>
+    <type>textranslate</type>
+    <object-name>iastape</object-name>
+    <property>fdm/jsbsim/instruments/altasi/asitape-norm</property>
+    <factor>-0.8681</factor>
+    <axis>
+      <x>0</x><y>1</y><z>0</z>
+    </axis>
+  </animation>
+
+  <!-- Baro Knob -->
+  <animation>
+    <type>pick</type>
+    <object-name>knob</object-name>
+    <object-name>knob.label</object-name>
+    <action>
+      <button>1</button><!-- Mouse wheel clicking to set to standard -->
+      <repeatable>false</repeatable>
+      <interval-sec>0.2</interval-sec>
+      <binding>
+	<command>property-assign</command>
+	<property>instrumentation/altimeter/setting-inhg</property>
+	<value>29.92</value>
+      </binding>
+    </action>
+  </animation>
+
+  <animation>
+    <name>Baro Adjust</name>
+    <type>knob</type>
+    <object-name>knob</object-name>
+    <object-name>knob.label</object-name>
+    <property>fdm/jsbsim/instruments/altasi/baro-knob-norm</property>
+    <factor>-1</factor>
+    <axis>
+      <x1-m>0.004425</x1-m>
+      <y1-m>-0.02345</y1-m>
+      <z1-m>-0.02337</z1-m>
+      <x2-m>0.005425</x2-m>
+      <y2-m>-0.02345</y2-m>
+      <z2-m>-0.02337</z2-m>
+    </axis>
+    <action>
+      <binding>
+	<command>property-adjust</command>
+	<property>instrumentation/altimeter/setting-inhg</property>
+	<factor>0.01</factor>
+      </binding>
+    </action>
+  </animation>
+
+  <!-- 100 feet needle -->
+  <animation>
+    <type>rotate</type>
+    <object-name>alt.needle</object-name>
+    <property>fdm/jsbsim/instruments/altasi/alt.100ft</property>
+    <factor>-0.3595</factor>
+    <axis>
+      <x1-m>0.00503</x1-m>
+      <y1-m>0.000068</y1-m>
+      <z1-m>0.008592</z1-m>
+      <x2-m>0.00603</x2-m>
+      <y2-m>0.000068</y2-m>
+      <z2-m>0.008592</z2-m>
+    </axis>
+  </animation>
+
+  <!-- ALT digits  -->
+  <animation>
+    <type>select</type>
+    <object-name>alt.digit.negative</object-name>
+    <condition>
+      <property>fdm/jsbsim/instruments/altasi/indicated-altitude-negative</property>
+    </condition>
+  </animation>
+
+  <animation>
+    <type>select</type>
+    <object-name>alt.digit.under10000</object-name>
+    <condition>
+      <property>fdm/jsbsim/instruments/altasi/indicated-altitude-under10000</property>
+    </condition>
+  </animation>
+  
+  <animation>
+    <type>textranslate</type>
+    <object-name>alt.digit1</object-name>
+    <property>fdm/jsbsim/instruments/altasi/alt.digit1</property>
+    <factor>0.10</factor>
+    <axis>
+      <x>0</x>
+      <y>1</y>
+      <z>0</z>
+    </axis>
+  </animation>
+
+  <animation>
+    <type>textranslate</type>
+    <object-name>alt.digit2</object-name>
+    <property>fdm/jsbsim/instruments/altasi/alt.digit2</property>
+    <factor>0.10</factor>
+    <axis>
+      <x>0</x>
+      <y>1</y>
+      <z>0</z>
+    </axis>
+  </animation>
+
+  <animation>
+    <type>textranslate</type>
+    <object-name>alt.digit3</object-name>
+    <property>fdm/jsbsim/instruments/altasi/alt.digit3</property>
+    <factor>0.10</factor>
+    <axis>
+      <x>0</x>
+      <y>1</y>
+      <z>0</z>
+    </axis>
+  </animation>
+
+  <animation>
+    <type>textranslate</type>
+    <object-name>alt.digit4</object-name>
+    <property>fdm/jsbsim/instruments/altasi/alt.digit4</property>
+    <factor>0.10</factor>
+    <axis>
+      <x>0</x>
+      <y>1</y>
+      <z>0</z>
+    </axis>
+  </animation>
+
+  <animation>
+    <type>textranslate</type>
+    <object-name>alt.digit5</object-name>
+    <property>fdm/jsbsim/instruments/altasi/alt.digit5</property>
+    <factor>0.10</factor>
+    <axis>
+      <x>0</x>
+      <y>1</y>
+      <z>0</z>
+    </axis>
+  </animation>
+
+  <!-- MB digits -->
+  <animation>
+    <type>textranslate</type>
+    <object-name>mb.digit1</object-name>
+    <property>fdm/jsbsim/instruments/altasi/mb.digit1</property>
+    <factor>0.10</factor>
+    <axis>
+      <x>0</x>
+      <y>1</y>
+      <z>0</z>
+    </axis>
+  </animation>
+
+  <animation>
+    <type>textranslate</type>
+    <object-name>mb.digit2</object-name>
+    <property>fdm/jsbsim/instruments/altasi/mb.digit2</property>
+    <factor>0.10</factor>
+    <axis>
+      <x>0</x>
+      <y>1</y>
+      <z>0</z>
+    </axis>
+  </animation>
+
+  <animation>
+    <type>textranslate</type>
+    <object-name>mb.digit3</object-name>
+    <property>fdm/jsbsim/instruments/altasi/mb.digit3</property>
+    <factor>0.10</factor>
+    <axis>
+      <x>0</x>
+      <y>1</y>
+      <z>0</z>
+    </axis>
+  </animation>
+
+  <animation>
+    <type>textranslate</type>
+    <object-name>mb.digit4</object-name>
+    <property>fdm/jsbsim/instruments/altasi/mb.digit4</property>
+    <factor>0.10</factor>
+    <axis>
+      <x>0</x>
+      <y>1</y>
+      <z>0</z>
+    </axis>
+  </animation>
+
+  <!-- INHG digits -->
+  <animation>
+    <type>textranslate</type>
+    <object-name>inhg.digit1</object-name>
+    <property>fdm/jsbsim/instruments/altasi/inhg.digit1</property>
+    <factor>0.10</factor>
+    <axis>
+      <x>0</x>
+      <y>1</y>
+      <z>0</z>
+    </axis>
+  </animation>
+
+  <animation>
+    <type>textranslate</type>
+    <object-name>inhg.digit2</object-name>
+    <property>fdm/jsbsim/instruments/altasi/inhg.digit2</property>
+    <factor>0.10</factor>
+    <axis>
+      <x>0</x>
+      <y>1</y>
+      <z>0</z>
+    </axis>
+  </animation>
+
+  <animation>
+    <type>textranslate</type>
+    <object-name>inhg.digit3</object-name>
+    <property>fdm/jsbsim/instruments/altasi/inhg.digit3</property>
+    <factor>0.10</factor>
+    <axis>
+      <x>0</x>
+      <y>1</y>
+      <z>0</z>
+    </axis>
+  </animation>
+
+  <animation>
+    <type>textranslate</type>
+    <object-name>inhg.digit4</object-name>
+    <property>fdm/jsbsim/instruments/altasi/inhg.digit4</property>
+    <factor>0.10</factor>
+    <axis>
+      <x>0</x>
+      <y>1</y>
+      <z>0</z>
+    </axis>
+  </animation>
+  
   <!-- Lightmaps -->
   <effect>
     <inherits-from>backlighting</inherits-from>
@@ -19,6 +262,8 @@
     <object-name>alt.digit3</object-name>
     <object-name>alt.digit4</object-name>
     <object-name>alt.digit5</object-name>
+    <object-name>alt.digit.negative</object-name>
+    <object-name>alt.digit.under10000</object-name>
     <object-name>alt.needle</object-name>
     <object-name>alt.needle.spin</object-name>
     <object-name>face</object-name>

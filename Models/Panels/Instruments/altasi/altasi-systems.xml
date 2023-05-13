@@ -15,6 +15,20 @@ shall keep this attribution information.
       <default value="/instrumentation/altimeter/indicated-altitude-ft" />
     </switch>
 
+    <switch name="instruments/altasi/indicated-altitude-negative">
+      <default value="0" />
+      <test value="1">
+	instruments/altasi/indicated-altitude-ft LT 0
+      </test>
+    </switch>
+
+    <switch name="instruments/altasi/indicated-altitude-under10000">
+      <default value="0" />
+      <test value="1">
+	instruments/altasi/indicated-altitude-ft LT 10000
+      </test>
+    </switch>
+
     <fcs_function name="instruments/altasi/alt.100ft">
       <function>
 	<mod>
@@ -29,7 +43,9 @@ shall keep this attribution information.
 	<floor>
 	  <product>
 	    <mod>
-	      <property>instruments/altasi/indicated-altitude-ft</property>
+	      <abs>
+		<property>instruments/altasi/indicated-altitude-ft</property>
+	      </abs>
 	      <value>100000</value>
 	    </mod>
 	    <value>0.0001</value>
@@ -43,7 +59,9 @@ shall keep this attribution information.
 	<floor>
 	  <product>
 	    <mod>
-	      <property>instruments/altasi/indicated-altitude-ft</property>
+	      <abs>
+		<property>instruments/altasi/indicated-altitude-ft</property>
+	      </abs>
 	      <value>10000</value>
 	    </mod>
 	    <value>0.001</value>
@@ -57,7 +75,9 @@ shall keep this attribution information.
 	<floor>
 	  <product>
 	    <mod>
-	      <property>instruments/altasi/indicated-altitude-ft</property>
+	      <abs>
+		<property>instruments/altasi/indicated-altitude-ft</property>
+	      </abs>
 	      <value>1000</value>
 	    </mod>
 	    <value>0.01</value>
@@ -71,7 +91,9 @@ shall keep this attribution information.
 	<floor>
 	  <product>
 	    <mod>
-	      <property>instruments/altasi/indicated-altitude-ft</property>
+	      <abs>
+		<property>instruments/altasi/indicated-altitude-ft</property>
+	      </abs>
 	      <value>100</value>
 	    </mod>
 	    <value>0.1</value>
@@ -82,10 +104,18 @@ shall keep this attribution information.
     
     <fcs_function name="instruments/altasi/alt.digit5">
       <function>
-	<mod>
-	  <property>instruments/altasi/indicated-altitude-ft</property>
-	  <value>10</value>
-	</mod>
+	<product>
+	  <mod>
+	    <product>
+	      <abs>
+		<property>instruments/altasi/indicated-altitude-ft</property>
+	      </abs>
+	      <value>10</value>
+	    </product>
+	    <value>100</value>
+	  </mod>
+	  <value>0.1</value>
+	</product>
       </function>
     </fcs_function>
   </channel>
