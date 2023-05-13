@@ -57,6 +57,7 @@
   <system name="FLAP INDICATOR: C-17" file="Models/Panels/Instruments/FlapIndicator/FlapIndicator-systems.xml" />
   <system name="SPEEDBRAKE INDICATOR: C-17" file="Models/Panels/Instruments/SpeedbrakeIndicator/SpeedbrakeIndicator-systems.xml" />
   <system name="ATTITUDE INDICATOR: C-17" file="Models/Panels/Instruments/AttitudeIndicator/AttitudeIndicator-systems.xml" />
+  <system name="ALTASI: C-17" file="Models/Panels/Instruments/altasi/altasi-systems.xml" />
   
   <!--Output-->
   <output name="C-17-jsbim-output.csv" type="CSV" rate="120">
