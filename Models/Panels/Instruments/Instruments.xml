@@ -1,5 +1,13 @@
 <?xml version="1.0"?>
 
+<!--
+    :copyright: 2023, IAHM-COL
+    License: GPLv3
+    
+    Redistribution, or reuse, with or without modifications
+    shall keep this attribution information. 
+-->
+
 <PropertyList>
   <model>
     <path>Models/Panels/Instruments/MFD-L/mfd-l.xml</path>
@@ -80,6 +88,28 @@
       <x-m>0.415</x-m>
       <y-m>0.38</y-m>
       <z-m>0.84</z-m>
+      <pitch-deg>-6</pitch-deg>
+    </offsets>
+  </model>
+  <!-- Altasis -->
+  <model>
+    <name>Altasi</name>
+    <path>Models/Panels/Instruments/altasi/altasi.xml</path>
+    <offsets>
+      <x-m>0.418</x-m>
+      <y-m>-0.38</y-m>
+      <z-m>0.775</z-m>
+      <pitch-deg>-6</pitch-deg>
+    </offsets>
+  </model>
+  
+  <model>
+    <name>Altasi.FO</name>
+    <path>Models/Panels/Instruments/altasi/altasi.xml</path>
+    <offsets>
+      <x-m>0.418</x-m>
+      <y-m>0.38</y-m>
+      <z-m>0.775</z-m>
       <pitch-deg>-6</pitch-deg>
     </offsets>
   </model>
@@ -167,17 +197,6 @@
   </model>
 
   <model>
-    <name>EFIS</name>
-    <path>Models/Panels/Instruments/EFIS/efis.xml</path>
-    <offsets>
-      <x-m>0.4</x-m>
-      <y-m>-0.02</y-m>
-      <z-m>0.93</z-m>
-      <pitch-deg>-6</pitch-deg>
-    </offsets>
-  </model>
-  
-  <model>
     <name>CDU1</name>
     <path>Models/Panels/Instruments/CDU/cdu.xml</path>
     <offsets>
@@ -242,29 +261,6 @@
       <x-m>0.407</x-m>
       <y-m>0.632</y-m>
       <z-m>0.89</z-m>
-      <pitch-deg>-6</pitch-deg>
-    </offsets>
-  </model>
-  
-  <model>
-    <name>STANDBY-ASI</name>
-    <path>Models/Panels/Instruments/STANDBY/standby-asi.xml</path>
-    <offsets>
-      <x-m>0.407</x-m>
-      <y-m>-0.38</y-m>
-      <z-m>0.775</z-m>
-      <pitch-deg>-6</pitch-deg>
-    </offsets>
-  </model>
-  
-  <model>
-    <name>STANDBY-ASI2</name>
-    <path>Models/Panels/Instruments/STANDBY/standby-asi.xml</path>
-    <offsets>
-      <x-m>0.407</x-m>
-      <y-m>0.38</y-m>
-      <z-m>0.775</z-m>
-      
       <pitch-deg>-6</pitch-deg>
     </offsets>
   </model>
