@@ -102,7 +102,6 @@
       <pitch-deg>-6</pitch-deg>
     </offsets>
   </model>
-  
   <model>
     <name>Altasi.FO</name>
     <path>Models/Panels/Instruments/altasi/altasi.xml</path>
@@ -110,6 +109,17 @@
       <x-m>0.418</x-m>
       <y-m>0.38</y-m>
       <z-m>0.775</z-m>
+      <pitch-deg>-6</pitch-deg>
+    </offsets>
+  </model>
+  <!-- Gears Lever -->
+  <model>
+    <name>Gears lever</name>
+    <path>Models/Panels/Instruments/gearsLever/gearsLever.xml</path>
+    <offsets>
+      <x-m>0.4118</x-m>
+      <y-m>0.2027</y-m>
+      <z-m>0.8357</z-m>
       <pitch-deg>-6</pitch-deg>
     </offsets>
   </model>

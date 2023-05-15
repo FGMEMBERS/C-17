@@ -1,0 +1,42 @@
+<?xml version="1.0"?>
+
+<!--
+    :copyright: 2023, IAHM-COL
+    License: GPLv3
+    
+    Redistribution, or reuse, with or without modifications
+    shall keep this attribution information. 
+-->
+
+<PropertyList>
+  <path>gearsLever.ac</path>
+
+  <!-- Lightmaps -->
+  <effect>
+    <inherits-from>backlighting</inherits-from>
+    <object-name>label</object-name>
+    <object-name>nose.down.led</object-name>
+    <object-name>nose.transit.led</object-name>
+    <object-name>aft.left.down.led</object-name>
+    <object-name>aft.left.transit.led</object-name>
+    <object-name>aft.right.down.led</object-name>
+    <object-name>aft.right.transit.led</object-name>
+    <object-name>fwd.left.down.led</object-name>
+    <object-name>fwd.left.transit.led</object-name>
+    <object-name>fwd.right.down.led</object-name>
+    <object-name>fwd.right.transit.led</object-name>
+    <object-name>led.limits</object-name>
+    <object-name>led.warning</object-name>
+    <object-name>leds.frame</object-name>
+    <object-name>lever.knob</object-name>
+    <object-name>lock.release.button</object-name>
+    <object-name>test.button</object-name>
+    <object-name>warning.button</object-name>
+  </effect>
+  <effect>
+    <inherits-from>floodlighting</inherits-from>
+    <object-name>frame</object-name>
+    <object-name>lever</object-name>
+    <object-name>screws</object-name>
+  </effect>
+</PropertyList>
