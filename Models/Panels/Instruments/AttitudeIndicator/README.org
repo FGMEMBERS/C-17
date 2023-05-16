@@ -1,0 +1,59 @@
+* AI: The Attitude Indicator
+
+** Introduction:
+
+#+CAPTION: AI in daylight
+#+NAME:   Figure 1: AI in daylight.
+[[man-images/AI-Day-Small.png]]
+ 
+#+CAPTION: AI with illumination turned on
+#+NAME:   Figure 2: AI with illumination turned on
+[[man-images/AI-Small-Night.png]]
+
+The flightdeck of the Boeing/McDonnell Douglas C-17 Globemaster III is a very complex office in which to work.  The C-17, although it is a revolutionary heavy transport, is engineered for multiple specialties and missions, with the ability to reconfigure its hold often in a matter of hours.  Its performance has a solid global reputation for having the capacity to successefully carry out difficult missions in difficult places.  This versatile heavy transport is a vital partner in the militaries of numerous countries.
+
+** AI adjustment operation:
+
+*Warning*: The aircraft must be in a level orientation to correctly adjust the gauge, whether on the ground or in flight! After uncaging, the instrument resets the horizon to the current attitude.
+
+1. Pull on the Cage Knob with the roller wheel of your mouse:
+   1. Pull-#1 to cage the AI.  A red flag appears with "*CAGED*" written on it.
+   2. Pull-#2 to uncage the AI.
+2. With the AI caged you can move the offset to center the "wingman" (shaped like a W with wings) up or down.
+3. Rolling the knob using your mouse roller wheel moves the wingman so it will be properly centered on the horizon
+   1. Roll the wheel forward to move the wingman up.  The hash-mark scale allows for up to 5 degrees of adjustment.
+   2. Roll the wheel back to move the wingman down.  The hash-mark scale allows for down to 10 degrees of adjustment.
+4. Once the butterfly is correctly centered, pull on the caged knob again to release it for standard flight operation.
+
+*OFF*: In the event of a failure in vacuum, a yellow "*OFF*" flag will appear, and the instrument might not operate correctly
+
+*NOTE*: This attitude indicator was designed to be an authentic working
+replica.  All C-17 instruments are illuminated for night operations.  See:
+"[[../PanelLighting][Panel Lighting]]" for lighting information.
+
+*Location*: directly above the standby [[../altasi][altimeter/air speed indicator (Alt/ASI)]].
+
+** Features
+
+The Attitude Indicator (sometimes called the "Artificial Horizon") contains these separate elements:
+
+1. The Horizon ball is demarcated in 5 degree lines. It moves in relation to the airplane's orientation to the horizon, both climb and dive and and angle of the wings.
+2. A horizontal "wingman" (shaped like a "W" with wings).  It sits across the center-line of the gauge, and if the instrument is uncaged, it's offset can be adjusted.
+3. The turn-coordinator/skid ball is built into the base of the horizon ball.  It should show a white/green ball in a concave-shaped tube and gives a visual cue of the rate of slidding or skidding during a coordinated turn.
+4. The "Pull-to-Cage" knob has two functions.  Its uses are tied to your mouse roller-wheel.
+   1. Mouse center-wheel click #1: Pulls out "Pull to Cage" Knob.  Red "Caged" flag pops out on the left side of the globe.
+   2. Mouse center-wheel: roll wheel forward to move dial at base of knob to the right -- hash-marks are in 1 degree increments. Roll wheel back to move dial to primary hash-mark. Roll dial back to move dial from 1-10 degrees down.
+   3. Mouse center-wheel click #2 uncages device.
+5. Caging will reset the instrument horizon
+
+** Attributions
+
+1. Attitude Indicator was designed using Blender.  Gauge, textures, and animations by IH-COL.
+
+2. AI images were taken from screenshots and the prepared using GIMP.  Images prepared by David Waggoner (SkyBoat, N159A)
+
+\copy 2023, Israel Hernandez (IH-COL)
+
+\copy 2023, Text and images by David Waggoner (SkyBoat)
+
+License:  GPL version 3 or higher
