@@ -17,12 +17,12 @@ The flightdeck of the Boeing/McDonnell Douglas C-17 Globemaster III is a very co
 *Warning*: The aircraft must be in a level orientation to correctly adjust the gauge, whether on the ground or in flight! After uncaging, the instrument resets the horizon to the current attitude.
 
 1. Pull on the Cage Knob with the roller wheel of your mouse:
-   a. Pull-#1 to cage the AI.  A red flag appears with "*CAGED*" written on it.
-   b. Pull-#2 to uncage the AI.
+   1. Pull-#1 to cage the AI.  A red flag appears with "*CAGED*" written on it.
+   2. Pull-#2 to uncage the AI.
 2. With the AI caged you can move the offset to center the "wingman" (shaped like a W with wings) up or down.
 3. Rolling the knob using your mouse roller wheel moves the wingman so it will be properly centered on the horizon
-   a. Roll the wheel forward to move the wingman up.  The hash-mark scale allows for up to 5 degrees of adjustment.
-   b. Roll the wheel back to move the wingman down.  The hash-mark scale allows for down to 10 degrees of adjustment.
+   1. Roll the wheel forward to move the wingman up.  The hash-mark scale allows for up to 5 degrees of adjustment.
+   2. Roll the wheel back to move the wingman down.  The hash-mark scale allows for down to 10 degrees of adjustment.
 4. Once the butterfly is correctly centered, pull on the caged knob again to release it for standard flight operation.
 
 *OFF*: In the event of a failure in vacuum, a yellow "*OFF*" flag will appear, and the instrument might not operate correctly
@@ -39,9 +39,9 @@ The Attitude Indicator (sometimes called the "Artificial Horizon") contains thes
 2. A horizontal "wingman" (shaped like a "W" with wings).  It sits across the center-line of the gauge, and if the instrument is uncaged, it's offset can be adjusted.
 3. The turn-coordinator/skid ball is built into the base of the horizon ball.  It should show a white/green ball in a concave-shaped tube and gives a visual cue of the rate of slidding or skidding during a coordinated turn.
 4. The "Pull-to-Cage" knob has two functions.  Its uses are tied to your mouse roller-wheel.
-   a. Mouse center-wheel click #1: Pulls out "Pull to Cage" Knob.  Red "Caged" flag pops out on the left side of the globe.
-   b. Mouse center-wheel: roll wheel forward to move dial at base of knob to the right -- hash-marks are in 1 degree increments. Roll wheel back to move dial to primary hash-mark. Roll dial back to move dial from 1-10 degrees down.
-   c. Mouse center-wheel click #2 uncages device.
+   1. Mouse center-wheel click #1: Pulls out "Pull to Cage" Knob.  Red "Caged" flag pops out on the left side of the globe.
+   2. Mouse center-wheel: roll wheel forward to move dial at base of knob to the right -- hash-marks are in 1 degree increments. Roll wheel back to move dial to primary hash-mark. Roll dial back to move dial from 1-10 degrees down.
+   3. Mouse center-wheel click #2 uncages device.
 5. Caging will reset the instrument horizon
 
 ** Attributions
