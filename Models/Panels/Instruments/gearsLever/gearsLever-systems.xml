@@ -10,6 +10,13 @@ shall keep this attribution information.
 -->
 
 <system>
+  <channel name="Gears status">
+    <switch name="instruments/gearsLever/gear-cmd-pos">
+      <default value="/controls/gear/gear-down" />
+    </switch>
+  </channel>
+  
   <channel name="Leds Status">
+    
   </channel>
 </system>
