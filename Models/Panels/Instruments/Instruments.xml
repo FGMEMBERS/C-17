@@ -80,17 +80,17 @@
       <pitch-deg>-6</pitch-deg>
     </offsets>
   </model>
-  
   <model>
     <name>AI.FO</name>
     <path>Models/Panels/Instruments/AttitudeIndicator/AttitudeIndicator.xml</path>
     <offsets>
-      <x-m>0.415</x-m>
-      <y-m>0.38</y-m>
-      <z-m>0.84</z-m>
+      <x-m>0.4122</x-m>
+      <y-m>0.2846</y-m>
+      <z-m>0.825</z-m>
       <pitch-deg>-6</pitch-deg>
     </offsets>
   </model>
+  
   <!-- Altasis -->
   <model>
     <name>Altasi</name>
@@ -106,9 +106,9 @@
     <name>Altasi.FO</name>
     <path>Models/Panels/Instruments/altasi/altasi.xml</path>
     <offsets>
-      <x-m>0.418</x-m>
-      <y-m>0.38</y-m>
-      <z-m>0.775</z-m>
+      <x-m>0.4185</x-m>
+      <y-m>0.2852</y-m>
+      <z-m>0.7615</z-m>
       <pitch-deg>-6</pitch-deg>
     </offsets>
   </model>
@@ -118,7 +118,7 @@
     <path>Models/Panels/Instruments/gearsLever/gearsLever.xml</path>
     <offsets>
       <x-m>0.4118</x-m>
-      <y-m>0.2027</y-m>
+      <y-m>0.2119</y-m>
       <z-m>0.8357</z-m>
       <pitch-deg>-6</pitch-deg>
     </offsets>
