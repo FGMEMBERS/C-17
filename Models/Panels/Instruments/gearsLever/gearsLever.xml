@@ -1,0 +1,255 @@
+<?xml version="1.0"?>
+
+<!--
+    :copyright: 2023, IAHM-COL
+    License: GPLv3
+    
+    Redistribution, or reuse, with or without modifications
+    shall keep this attribution information. 
+-->
+
+<PropertyList>
+  <path>gearsLever.ac</path>
+
+  <!-- Knob -->
+  <animation>
+    <type>textranslate</type>
+    <object-name>lever.knob</object-name>
+    <property>fdm/jsbsim/instruments/gearsLever/knob-lit</property>
+    <factor>-0.1582</factor>
+    <axis>
+      <x>0</x>
+      <y>1</y>
+      <z>0</z>
+    </axis>
+  </animation>
+
+  <animation>
+    <type>translate</type>
+    <object-name>lever.knob</object-name>
+    <object-name>lever</object-name>
+    <property>fdm/jsbsim/instruments/gearsLever/gear-cmd-pos</property>
+    <factor>-0.007759</factor>
+    <axis>
+      <x>0</x>
+      <y>0</y>
+      <z>1</z>
+    </axis>
+  </animation>
+
+  <animation>
+    <name>Gears Knob</name>
+    <type>knob</type>
+    <object-name>lever.knob</object-name>
+    <object-name>lever</object-name>
+    <property>fdm/jsbsim/instruments/gearsLever/gear-cmd-pos</property>
+    <factor>-22.50</factor>
+    <axis>
+      <x1-m>-0.003328</x1-m>
+      <y1-m>-0.00946</y1-m>
+      <z1-m>-0.01726</z1-m>
+      <x2-m>-0.003328</x2-m>
+      <y2-m>-0.00956</y2-m>
+      <z2-m>-0.01726</z2-m>
+    </axis>
+    <increase>
+      <binding>
+	<condition>
+	  <not>
+	    <property>fdm/jsbsim/instruments/gearsLever/safety-lock</property>
+	  </not>
+	</condition>
+        <command>nasal</command>
+        <script>controls.gearDown(-1);</script>
+      </binding>
+    </increase>
+    <decrease>
+      <binding>
+	<condition>
+	  <not>
+	    <property>fdm/jsbsim/instruments/gearsLever/safety-lock</property>
+	  </not>
+	</condition>
+        <command>nasal</command>
+        <script>controls.gearDown(1);</script>
+      </binding>
+    </decrease>
+  </animation>
+  
+  <!-- Test -->
+  <animation>
+    <type>pick</type>
+    <object-name>test.button</object-name>
+    <action>
+      <button>0</button>
+      <binding>
+	<command>property-assign</command>
+	<property>fdm/jsbsim/instruments/gearsLever/test-cmd</property>
+	<value>1</value>
+      </binding>
+    </action>
+  </animation>
+  <animation>
+    <type>textranslate</type>
+    <object-name>test.button</object-name>
+    <property>fdm/jsbsim/instruments/gearsLever/test-cmd</property>
+    <factor>0.0850</factor>
+    <axis>
+      <x>1</x>
+      <y>0</y>
+      <z>0</z>
+    </axis>
+  </animation>
+  
+  <!-- Lock Release -->
+  <animation>
+    <type>pick</type>
+    <object-name>lock.release.button</object-name>
+    <action>
+      <button>0</button>
+      <binding>
+	<command>property-assign</command>
+	<property>fdm/jsbsim/instruments/gearsLever/lock-release-cmd</property>
+	<value>1</value>
+      </binding>
+    </action>
+  </animation>
+  <animation>
+    <type>textranslate</type>
+    <object-name>lock.release.button</object-name>
+    <property>fdm/jsbsim/instruments/gearsLever/safety-lock</property>
+    <factor>0.0850</factor>
+    <axis>
+      <x>1</x>
+      <y>0</y>
+      <z>0</z>
+    </axis>
+  </animation>
+  
+  <!-- warning leds -->
+  <animation>
+    <type>select</type>
+    <object-name>led.limits</object-name>
+    <condition>
+      <property>fdm/jsbsim/instruments/gearsLever/limits-max</property>
+    </condition>
+  </animation>
+
+  <animation>
+    <type>select</type>
+    <object-name>led.warning</object-name>
+    <condition>
+      <property>fdm/jsbsim/instruments/gearsLever/limits-warning</property>
+    </condition>
+  </animation>
+
+  <!-- Status Leds -->
+  <animation>
+    <type>select</type>
+    <object-name>nose.transit.led</object-name>
+    <condition>
+      <property>fdm/jsbsim/instruments/gearsLever/nose-in-transit-led</property>
+    </condition>
+  </animation>
+
+  <animation>
+    <type>select</type>
+    <object-name>aft.left.transit.led</object-name>
+    <condition>
+      <property>fdm/jsbsim/instruments/gearsLever/aft-left-in-transit-led</property>
+    </condition>
+  </animation>
+
+  <animation>
+    <type>select</type>
+    <object-name>aft.right.transit.led</object-name>
+    <condition>
+      <property>fdm/jsbsim/instruments/gearsLever/aft-right-in-transit-led</property>
+    </condition>
+  </animation>
+
+  <animation>
+    <type>select</type>
+    <object-name>fwd.left.transit.led</object-name>
+    <condition>
+      <property>fdm/jsbsim/instruments/gearsLever/fwd-left-in-transit-led</property>
+    </condition>
+  </animation>
+
+  <animation>
+    <type>select</type>
+    <object-name>fwd.right.transit.led</object-name>
+    <condition>
+      <property>fdm/jsbsim/instruments/gearsLever/fwd-right-in-transit-led</property>
+    </condition>
+  </animation>
+
+  <animation>
+    <type>select</type>
+    <object-name>nose.down.led</object-name>
+    <condition>
+      <property>fdm/jsbsim/instruments/gearsLever/nose-down-led</property>
+    </condition>
+  </animation>
+
+  <animation>
+    <type>select</type>
+    <object-name>aft.left.down.led</object-name>
+    <condition>
+      <property>fdm/jsbsim/instruments/gearsLever/aft-left-down-led</property>
+    </condition>
+  </animation>
+
+  <animation>
+    <type>select</type>
+    <object-name>aft.right.down.led</object-name>
+    <condition>
+      <property>fdm/jsbsim/instruments/gearsLever/aft-right-down-led</property>
+    </condition>
+  </animation>
+
+  <animation>
+    <type>select</type>
+    <object-name>fwd.left.down.led</object-name>
+    <condition>
+      <property>fdm/jsbsim/instruments/gearsLever/fwd-left-down-led</property>
+    </condition>
+  </animation>
+
+  <animation>
+    <type>select</type>
+    <object-name>fwd.right.down.led</object-name>
+    <condition>
+      <property>fdm/jsbsim/instruments/gearsLever/fwd-right-down-led</property>
+    </condition>
+  </animation>
+  
+  <!-- Lightmaps -->
+  <effect>
+    <inherits-from>backlighting</inherits-from>
+    <object-name>label</object-name>
+    <object-name>nose.down.led</object-name>
+    <object-name>nose.transit.led</object-name>
+    <object-name>aft.left.down.led</object-name>
+    <object-name>aft.left.transit.led</object-name>
+    <object-name>aft.right.down.led</object-name>
+    <object-name>aft.right.transit.led</object-name>
+    <object-name>fwd.left.down.led</object-name>
+    <object-name>fwd.left.transit.led</object-name>
+    <object-name>fwd.right.down.led</object-name>
+    <object-name>fwd.right.transit.led</object-name>
+    <object-name>led.limits</object-name>
+    <object-name>led.warning</object-name>
+    <object-name>leds.frame</object-name>
+    <object-name>lever.knob</object-name>
+    <object-name>lock.release.button</object-name>
+    <object-name>test.button</object-name>
+    <object-name>warning.button</object-name>
+  </effect>
+  <effect>
+    <inherits-from>floodlighting</inherits-from>
+    <object-name>frame</object-name>
+    <object-name>lever</object-name>
+    <object-name>screws</object-name>
+  </effect>
+</PropertyList>

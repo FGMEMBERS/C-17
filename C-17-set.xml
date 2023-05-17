@@ -284,9 +284,11 @@
     </spoilers>
     
     <limits>
-      <vne>600</vne>
-      <max-gear-down-speed>250</max-gear-down-speed>
-      <max-gear-extesion-speed>250</max-gear-extesion-speed>
+      <vne>380</vne>
+      <warning-gear-down-speed>250</warning-gear-down-speed>
+      <warning-gear-extesion-speed>250</warning-gear-extesion-speed>
+      <max-gear-down-speed>260</max-gear-down-speed>
+      <max-gear-extesion-speed>260</max-gear-extesion-speed>
       <max-positive-g>4.4</max-positive-g>
       <max-negative-g>-1.76</max-negative-g>
     </limits>

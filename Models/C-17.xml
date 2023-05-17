@@ -994,7 +994,9 @@
   <!-- Steering -->
   <animation>
     <type>rotate</type>
+    <object-name>NGStrut1</object-name>
     <object-name>NGStrut2</object-name>
+    <object-name>NGStrut3</object-name>
     <object-name>NGTires</object-name>
     <property>gear/gear[0]/steering-norm</property>
     <factor>70</factor>
@@ -1015,7 +1017,7 @@
     <object-name>NGStrut2</object-name>
     <object-name>NGStrut3</object-name>
     <object-name>NGTires</object-name>
-    <property>gear/gear/position-norm</property>
+    <property>fdm/jsbsim/gear/nose-pos-norm</property>
     <interpolation>
       <entry><ind>0.0</ind><dep>103.0</dep></entry>
       <entry><ind>0.2</ind><dep>103.0</dep></entry>
@@ -1038,7 +1040,7 @@
     <object-name>NGStrut2</object-name>
     <object-name>NGStrut3</object-name>
     <object-name>NGTires</object-name>
-    <property>gear/gear/position-norm</property>
+    <property>fdm/jsbsim/gear/nose-pos-norm</property>
     <interpolation>
       <entry><ind>0.0</ind><dep>0.85</dep></entry>
       <entry><ind>0.2</ind><dep>0.85</dep></entry>
@@ -1057,7 +1059,7 @@
     <type>rotate</type>
     <object-name>MainGear1.FrontStrut</object-name>
     <object-name>MainGear1.FrontTires</object-name>
-    <property>gear/gear[0]/position-norm</property>
+    <property>fdm/jsbsim/gear/aft-left-pos-norm</property>
     <interpolation>
       <entry><ind>0.0</ind><dep>90.0</dep></entry>
       <entry><ind>1</ind><dep>0.0</dep></entry>
@@ -1076,7 +1078,7 @@
     <type>rotate</type>
     <object-name>MainGear1.RearStrut</object-name>
     <object-name>MainGear1.RearTires</object-name>
-    <property>gear/gear[0]/position-norm</property>
+    <property>fdm/jsbsim/gear/aft-left-pos-norm</property>
     <interpolation>
       <entry><ind>0.0</ind><dep>-90.0</dep></entry>
       <entry><ind>1</ind><dep>0.0</dep></entry>
@@ -1097,7 +1099,7 @@
     <object-name>MainGear1.FrontTires</object-name>
     <object-name>MainGear1.RearStrut</object-name>
     <object-name>MainGear1.RearTires</object-name>
-    <property>gear/gear[0]/position-norm</property>
+    <property>fdm/jsbsim/gear/aft-left-pos-norm</property>
     <interpolation>
       <entry><ind>0.0</ind><dep>0.85</dep></entry>
       <entry><ind>1</ind><dep>0.0</dep></entry>
@@ -1114,7 +1116,7 @@
     <type>rotate</type>
     <object-name>MainGear2.FrontStrut</object-name>
     <object-name>MainGear2.FrontTires</object-name>
-    <property>gear/gear[0]/position-norm</property>
+    <property>fdm/jsbsim/gear/aft-right-pos-norm</property>
     <interpolation>
       <entry><ind>0.0</ind><dep>-90.0</dep></entry>
       <entry><ind>1</ind><dep>0.0</dep></entry>
@@ -1133,7 +1135,7 @@
     <type>rotate</type>
     <object-name>MainGear2.RearStrut</object-name>
     <object-name>MainGear2.RearTires</object-name>
-    <property>gear/gear[0]/position-norm</property>
+    <property>fdm/jsbsim/gear/aft-right-pos-norm</property>
     <interpolation>
       <entry><ind>0.0</ind><dep>90.0</dep></entry>
       <entry><ind>1</ind><dep>0.0</dep></entry>
@@ -1154,7 +1156,7 @@
     <object-name>MainGear2.FrontTires</object-name>
     <object-name>MainGear2.RearStrut</object-name>
     <object-name>MainGear2.RearTires</object-name>
-    <property>gear/gear[0]/position-norm</property>
+    <property>fdm/jsbsim/gear/aft-right-pos-norm</property>
     <interpolation>
       <entry><ind>0.0</ind><dep>0.85</dep></entry>
       <entry><ind>1</ind><dep>0.0</dep></entry>
@@ -1171,7 +1173,7 @@
   <animation>
     <type>rotate</type>
     <object-name>NoseGearDr2</object-name>
-    <property>gear/gear/position-norm</property>
+    <property>fdm/jsbsim/gear/nose-pos-norm</property>
     <interpolation>
       <entry><ind>0.0</ind><dep>0.0</dep></entry>
       <entry><ind>0.2</ind><dep>0.0</dep></entry>
@@ -1190,7 +1192,7 @@
   <animation>
     <type>rotate</type>
     <object-name>NoseGearDr4</object-name>
-    <property>gear/gear/position-norm</property>
+    <property>fdm/jsbsim/gear/nose-pos-norm</property>
     <interpolation>
       <entry><ind>0.0</ind><dep>0.0</dep></entry>
       <entry><ind>0.2</ind><dep>0.0</dep></entry>
@@ -1210,7 +1212,7 @@
   <animation>
     <type>rotate</type>
     <object-name>NoseGearDr1</object-name>
-    <property>gear/gear[0]/position-norm</property>
+    <property>fdm/jsbsim/gear/nose-pos-norm</property>
     <interpolation>
       <entry><ind>0.0</ind><dep>0.0</dep></entry>
       <entry><ind>0.2</ind><dep>-90.0</dep></entry>
@@ -1229,7 +1231,7 @@
   <animation>
     <type>rotate</type>
     <object-name>NoseGearDr3</object-name>
-    <property>gear/gear[0]/position-norm</property>
+    <property>fdm/jsbsim/gear/nose-pos-norm</property>
     <interpolation>
       <entry><ind>0.0</ind><dep>0.0</dep></entry>
       <entry><ind>0.2</ind><dep>90.0</dep></entry>
@@ -1252,7 +1254,7 @@
     <type>rotate</type>
     <object-name>MainGear1.Dr1</object-name>
     <object-name>MainGear1.Dr2</object-name>
-    <property>gear/gear[0]/position-norm</property>
+    <property>fdm/jsbsim/gear/aft-left-pos-norm</property>
     <interpolation>
       <entry><ind>0.0</ind><dep>90.0</dep></entry>
       <entry><ind>0.2</ind><dep>0.0</dep></entry>
@@ -1270,7 +1272,7 @@
   <animation>
     <type>rotate</type>
     <object-name>MainGear1.Dr3</object-name>
-    <property>gear/gear[0]/position-norm</property>
+    <property>fdm/jsbsim/gear/aft-left-pos-norm</property>
     <interpolation>
       <entry><ind>0.0</ind><dep>-142.0</dep></entry>
       <entry><ind>0.2</ind><dep>0.0</dep></entry>
@@ -1290,7 +1292,7 @@
     <type>rotate</type>
     <object-name>MainGear2.Dr1</object-name>
     <object-name>MainGear2.Dr2</object-name>
-    <property>gear/gear[0]/position-norm</property>
+    <property>fdm/jsbsim/gear/aft-right-pos-norm</property>
     <interpolation>
       <entry><ind>0.0</ind><dep>-90.0</dep></entry>
       <entry><ind>0.2</ind><dep>0.0</dep></entry>
@@ -1308,7 +1310,7 @@
   <animation>
     <type>rotate</type>
     <object-name>MainGear2.Dr3</object-name>
-    <property>gear/gear[0]/position-norm</property>
+    <property>fdm/jsbsim/gear/aft-right-pos-norm</property>
     <interpolation>
       <entry><ind>0.0</ind><dep>142.0</dep></entry>
       <entry><ind>0.2</ind><dep>0.0</dep></entry>
