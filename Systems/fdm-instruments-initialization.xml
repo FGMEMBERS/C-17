@@ -19,4 +19,8 @@ shall keep this attribution information.
     <caged type="bool">false</caged>
     <perspective-offset userarchive="y" type="double">0</perspective-offset>
   </attitude-indicator>
+  <gearsLever>
+    <test-cmd type="double">0</test-cmd>
+    <lock-release-cmd type="double">0</lock-release-cmd>
+  </gearsLever>
 </PropertyList>

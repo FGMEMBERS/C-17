@@ -15,8 +15,120 @@ shall keep this attribution information.
       <default value="/controls/gear/gear-down" />
     </switch>
   </channel>
+
+  <channel name="Limits">
+    <switch name="instruments/gearsLever/gears-warning-ias">
+      <default value="0" />
+      <test logic="AND" value="1">
+	gear/gear-pos-norm EQ 1
+	instruments/altasi/indicated-speed-kt GE /sim/limits/warning-gear-down-speed
+	instruments/altasi/indicated-speed-kt LT /sim/limits/max-gear-down-speed
+      </test>
+    </switch>
+
+    <switch name="instruments/gearsLever/gears-max-ias">
+      <default value="0" />
+      <test logic="AND" value="1">
+	gear/gear-pos-norm EQ 1
+	instruments/altasi/indicated-speed-kt GE /sim/limits/max-gear-down-speed
+      </test>
+    </switch>
+  </channel>
+
+  <channel name="Button timers">
+    <switch name="instruments/gearsLever/lock-release-cmd">
+      <default value="instruments/gearsLever/lock-release-cmd" />
+      <test value="0">
+	instruments/gearsLever/lock-release-timed EQ 0
+      </test>
+    </switch>
+    
+    <switch name="instruments/gearsLever/lock-release-inverter">
+      <default value="1"/>
+      <test value="0">
+	instruments/gearsLever/lock-release-cmd EQ 1
+      </test>
+    </switch>
+
+    <kinematic name="lock release timer">
+      <input>instruments/gearsLever/lock-release-inverter</input>
+      <traverse>
+	<setting>
+	  <position>0</position>
+	  <time>0.25</time>
+	</setting>
+	<setting>
+	  <position>1</position>
+	  <time>5</time>
+	</setting>
+      </traverse>
+      <output>instruments/gearsLever/lock-release-timed</output>
+    </kinematic>
+
+    <switch name="instruments/gearsLever/test-cmd">
+      <default value="instruments/gearsLever/test-cmd" />
+      <test value="0">
+	instruments/gearsLever/test-timed EQ 0
+      </test>
+    </switch>
+    
+    <switch name="instruments/gearsLever/test-inverter">
+      <default value="1"/>
+      <test value="0">
+	instruments/gearsLever/test-cmd EQ 1
+      </test>
+    </switch>
+
+    <kinematic name="test timer">
+      <input>instruments/gearsLever/test-inverter</input>
+      <traverse>
+	<setting>
+	  <position>0</position>
+	  <time>0.25</time>
+	</setting>
+	<setting>
+	  <position>1</position>
+	  <time>5</time>
+	</setting>
+      </traverse>
+      <output>instruments/gearsLever/test-timed</output>
+    </kinematic>
+  </channel>
   
   <channel name="Leds Status">
+    <switch name="instruments/gearsLever/electrical-serviceable">
+      <default value="/systems/electrical/serviceable"/>
+    </switch>
+    
+    <switch name="instruments/gearsLever/limits-warning">
+      <default value="0" />
+      <test value="0">
+	instruments/gearsLever/electrical-serviceable EQ 0
+      </test>
+      <test value="1">
+	instruments/gearsLever/gears-warning-ias EQ 1 
+      </test>
+      <test logic="AND" value="1">
+	instruments/gearsLever/test-cmd EQ 1
+	instruments/gearsLever/test-timed LT 0.5
+      </test>
+    </switch>
+
+    <switch name="instruments/gearsLever/limits-max">
+      <default value="0" />
+      <test value="0">
+	instruments/gearsLever/electrical-serviceable EQ 0
+      </test>
+      <test value="1">
+	instruments/gearsLever/gears-max-ias EQ 1 
+      </test>
+      <test logic="AND" value="1">
+	instruments/gearsLever/test-cmd EQ 1
+	instruments/gearsLever/test-timed LT 1
+	instruments/gearsLever/test-timed GT 0.5
+      </test>
+    </switch>
+
     
   </channel>
 </system>

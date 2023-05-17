@@ -11,7 +11,61 @@
 <PropertyList>
   <path>gearsLever.ac</path>
 
+  <!-- Test -->
+  <animation>
+    <type>pick</type>
+    <object-name>test.button</object-name>
+    <action>
+      <button>0</button>
+      <binding>
+	<command>property-assign</command>
+	<property>fdm/jsbsim/instruments/gearsLever/test-cmd</property>
+	<value>1</value>
+      </binding>
+    </action>
+  </animation>
+  <animation>
+    <type>textranslate</type>
+    <object-name>test.button</object-name>
+    <property>fdm/jsbsim/instruments/gearsLever/test-cmd</property>
+    <factor>0.0850</factor>
+    <axis>
+      <x>1</x>
+      <y>0</y>
+      <z>0</z>
+    </axis>
+  </animation>
+
+  <!-- Lock Release -->
+  <animation>
+    <type>pick</type>
+    <object-name>lock.release.button</object-name>
+    <action>
+      <button>0</button>
+      <binding>
+	<command>property-assign</command>
+	<property>fdm/jsbsim/instruments/gearsLever/lock-release-cmd</property>
+	<value>1</value>
+      </binding>
+    </action>
+  </animation>
   
+  <!-- warning leds -->
+  <animation>
+    <type>select</type>
+    <object-name>led.limits</object-name>
+    <condition>
+      <property>fdm/jsbsim/instruments/gearsLever/limits-max</property>
+    </condition>
+  </animation>
+
+  <animation>
+    <type>select</type>
+    <object-name>led.warning</object-name>
+    <condition>
+      <property>fdm/jsbsim/instruments/gearsLever/limits-warning</property>
+    </condition>
+  </animation>
   
   <!-- Lightmaps -->
   <effect>
