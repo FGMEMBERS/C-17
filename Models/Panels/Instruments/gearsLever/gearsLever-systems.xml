@@ -111,6 +111,54 @@ shall keep this attribution information.
       <output>instruments/gearsLever/test-timed</output>
     </kinematic>
   </channel>
+
+  <channel name="discrepancies">
+    <switch name="instruments/gearsLever/nose-in-transit">
+      <default value="0"/>
+      <test value="1">
+	gear/nose-pos-norm NE gear/gear-cmd-norm
+      </test>
+    </switch>
+
+    <switch name="instruments/gearsLever/aft-left-in-transit">
+      <default value="0"/>
+      <test value="1">
+	gear/aft-left-pos-norm NE gear/gear-cmd-norm
+      </test>
+    </switch>
+
+    <switch name="instruments/gearsLever/aft-right-in-transit">
+      <default value="0"/>
+      <test value="1">
+	gear/aft-right-pos-norm NE gear/gear-cmd-norm
+      </test>
+    </switch>
+
+    <switch name="instruments/gearsLever/fwd-left-in-transit">
+      <default value="0"/>
+      <test value="1">
+	gear/fwd-left-pos-norm NE gear/gear-cmd-norm
+      </test>
+    </switch>
+
+    <switch name="instruments/gearsLever/fwd-right-in-transit">
+      <default value="0"/>
+      <test value="1">
+	gear/fwd-right-pos-norm NE gear/gear-cmd-norm
+      </test>
+    </switch>
+    
+    <switch name="instruments/gearsLever/discrepancy">
+      <default value="0"/>
+      <test logic="OR" value="1">
+	instruments/gearsLever/nose-in-transit EQ 1
+	instruments/gearsLever/aft-left-in-transit EQ 1
+	instruments/gearsLever/aft-right-in-transit EQ 1
+	instruments/gearsLever/fwd-left-in-transit EQ 1
+	instruments/gearsLever/fwd-right-in-transit EQ 1
+      </test>
+    </switch>
+  </channel>
   
   <channel name="Leds Status">
     <switch name="instruments/gearsLever/electrical-serviceable">
@@ -128,6 +176,9 @@ shall keep this attribution information.
       </test>
       <test value="1">
 	instruments/gearsLever/test-cmd EQ 1
+      </test>
+      <test value="1">
+	instruments/gearsLever/discrepancy EQ 1
       </test>
     </switch>
     
@@ -160,6 +211,134 @@ shall keep this attribution information.
       </test>
     </switch>
 
-    
+    <switch name="instruments/gearsLever/nose-in-transit-led">
+      <default value="0"/>
+      <test value="0">
+	instruments/gearsLever/electrical-serviceable EQ 0
+      </test>
+      <test value="1">
+	instruments/gearsLever/test-cmd EQ 1
+      </test>
+      <test value="1">
+	instruments/gearsLever/nose-in-transit EQ 1
+      </test>
+    </switch>
+
+    <switch name="instruments/gearsLever/aft-left-in-transit-led">
+      <default value="0"/>
+      <test value="0">
+	instruments/gearsLever/electrical-serviceable EQ 0
+      </test>
+      <test value="1">
+	instruments/gearsLever/test-cmd EQ 1
+      </test>
+      <test value="1">
+	instruments/gearsLever/aft-left-in-transit EQ 1
+      </test>
+    </switch>
+
+    <switch name="instruments/gearsLever/aft-right-in-transit-led">
+      <default value="0"/>
+      <test value="0">
+	instruments/gearsLever/electrical-serviceable EQ 0
+      </test>
+      <test value="1">
+	instruments/gearsLever/test-cmd EQ 1
+      </test>
+      <test value="1">
+	instruments/gearsLever/aft-right-in-transit EQ 1
+      </test>
+    </switch>
+
+    <switch name="instruments/gearsLever/fwd-left-in-transit-led">
+      <default value="0"/>
+      <test value="0">
+	instruments/gearsLever/electrical-serviceable EQ 0
+      </test>
+      <test value="1">
+	instruments/gearsLever/test-cmd EQ 1
+      </test>
+      <test value="1">
+	instruments/gearsLever/fwd-left-in-transit EQ 1
+      </test>
+    </switch>
+
+    <switch name="instruments/gearsLever/fwd-right-in-transit-led">
+      <default value="0"/>
+      <test value="0">
+	instruments/gearsLever/electrical-serviceable EQ 0
+      </test>
+      <test value="1">
+	instruments/gearsLever/test-cmd EQ 1
+      </test>
+      <test value="1">
+	instruments/gearsLever/fwd-right-in-transit EQ 1
+      </test>
+    </switch>
+
+    <switch name="instruments/gearsLever/nose-down-led">
+      <default value="0"/>
+      <test value="0">
+	instruments/gearsLever/electrical-serviceable EQ 0
+      </test>
+      <test value="1">
+	instruments/gearsLever/test-cmd EQ 1
+      </test>
+      <test value="1">
+	gear/nose-pos-norm EQ 1
+      </test>
+    </switch>
+
+    <switch name="instruments/gearsLever/aft-left-down-led">
+      <default value="0"/>
+      <test value="0">
+	instruments/gearsLever/electrical-serviceable EQ 0
+      </test>
+      <test value="1">
+	instruments/gearsLever/test-cmd EQ 1
+      </test>
+      <test value="1">
+	gear/aft-left-pos-norm EQ 1
+      </test>
+    </switch>
+
+    <switch name="instruments/gearsLever/aft-right-down-led">
+      <default value="0"/>
+      <test value="0">
+	instruments/gearsLever/electrical-serviceable EQ 0
+      </test>
+      <test value="1">
+	instruments/gearsLever/test-cmd EQ 1
+      </test>
+      <test value="1">
+	gear/aft-right-pos-norm EQ 1
+      </test>
+    </switch>
+
+    <switch name="instruments/gearsLever/fwd-left-down-led">
+      <default value="0"/>
+      <test value="0">
+	instruments/gearsLever/electrical-serviceable EQ 0
+      </test>
+      <test value="1">
+	instruments/gearsLever/test-cmd EQ 1
+      </test>
+      <test value="1">
+	gear/fwd-left-pos-norm EQ 1
+      </test>
+    </switch>
+
+    <switch name="instruments/gearsLever/fwd-right-down-led">
+      <default value="0"/>
+      <test value="0">
+	instruments/gearsLever/electrical-serviceable EQ 0
+      </test>
+      <test value="1">
+	instruments/gearsLever/test-cmd EQ 1
+      </test>
+      <test value="1">
+	gear/fwd-right-pos-norm EQ 1
+      </test>
+    </switch>
   </channel>
 </system>

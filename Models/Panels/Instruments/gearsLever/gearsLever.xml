@@ -11,7 +11,6 @@
 <PropertyList>
   <path>gearsLever.ac</path>
 
-
   <!-- Knob -->
   <animation>
     <type>textranslate</type>
@@ -141,6 +140,87 @@
     <object-name>led.warning</object-name>
     <condition>
       <property>fdm/jsbsim/instruments/gearsLever/limits-warning</property>
+    </condition>
+  </animation>
+
+  <!-- Status Leds -->
+  <animation>
+    <type>select</type>
+    <object-name>nose.transit.led</object-name>
+    <condition>
+      <property>fdm/jsbsim/instruments/gearsLever/nose-in-transit-led</property>
+    </condition>
+  </animation>
+
+  <animation>
+    <type>select</type>
+    <object-name>aft.left.transit.led</object-name>
+    <condition>
+      <property>fdm/jsbsim/instruments/gearsLever/aft-left-in-transit-led</property>
+    </condition>
+  </animation>
+
+  <animation>
+    <type>select</type>
+    <object-name>aft.right.transit.led</object-name>
+    <condition>
+      <property>fdm/jsbsim/instruments/gearsLever/aft-right-in-transit-led</property>
+    </condition>
+  </animation>
+
+  <animation>
+    <type>select</type>
+    <object-name>fwd.left.transit.led</object-name>
+    <condition>
+      <property>fdm/jsbsim/instruments/gearsLever/fwd-left-in-transit-led</property>
+    </condition>
+  </animation>
+
+  <animation>
+    <type>select</type>
+    <object-name>fwd.right.transit.led</object-name>
+    <condition>
+      <property>fdm/jsbsim/instruments/gearsLever/fwd-right-in-transit-led</property>
+    </condition>
+  </animation>
+
+  <animation>
+    <type>select</type>
+    <object-name>nose.down.led</object-name>
+    <condition>
+      <property>fdm/jsbsim/instruments/gearsLever/nose-down-led</property>
+    </condition>
+  </animation>
+
+  <animation>
+    <type>select</type>
+    <object-name>aft.left.down.led</object-name>
+    <condition>
+      <property>fdm/jsbsim/instruments/gearsLever/aft-left-down-led</property>
+    </condition>
+  </animation>
+
+  <animation>
+    <type>select</type>
+    <object-name>aft.right.down.led</object-name>
+    <condition>
+      <property>fdm/jsbsim/instruments/gearsLever/aft-right-down-led</property>
+    </condition>
+  </animation>
+
+  <animation>
+    <type>select</type>
+    <object-name>fwd.left.down.led</object-name>
+    <condition>
+      <property>fdm/jsbsim/instruments/gearsLever/fwd-left-down-led</property>
+    </condition>
+  </animation>
+
+  <animation>
+    <type>select</type>
+    <object-name>fwd.right.down.led</object-name>
+    <condition>
+      <property>fdm/jsbsim/instruments/gearsLever/fwd-right-down-led</property>
     </condition>
   </animation>
   
