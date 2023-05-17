@@ -302,20 +302,53 @@
     </pure_gain>
   </channel>
 
-  <channel name="Landing Gear">
-    <kinematic name="Gear Control">
+  <channel name="Landing Gears">
+    <kinematic name="Nose Control">
       <input>gear/gear-cmd-norm</input>
       <traverse>
         <setting>
           <position>0</position>
-          <time>0</time>
+          <time>7.725</time>
         </setting>
         <setting>
           <position>1</position>
-          <time>5</time>
+          <time>7.725</time>
+        </setting>
+      </traverse>
+      <output>gear/nose-pos-norm</output>
+      <output>gear/unit[0]/pos-norm</output>
+      <output>gear/unit[1]/pos-norm</output>
+    </kinematic>
+
+    <kinematic name="Fwd Left Control">
+      <input>gear/gear-cmd-norm</input>
+      <traverse>
+        <setting>
+          <position>0</position>
+          <time>8.225</time>
+        </setting>
+        <setting>
+          <position>1</position>
+          <time>8.225</time>
         </setting>
       </traverse>
       <output>gear/gear-pos-norm</output>
+      <output>gear/fwd-left-pos-norm</output>
+      <output>gear/fwd-right-pos-norm</output>
+      <output>gear/aft-left-pos-norm</output>
+      <output>gear/aft-right-pos-norm</output>
+      <output>gear/unit[2]/pos-norm</output>
+      <output>gear/unit[3]/pos-norm</output>
+      <output>gear/unit[4]/pos-norm</output>
+      <output>gear/unit[5]/pos-norm</output>
+      <output>gear/unit[6]/pos-norm</output>
+      <output>gear/unit[7]/pos-norm</output>
+      <output>gear/unit[8]/pos-norm</output>
+      <output>gear/unit[9]/pos-norm</output>
+      <output>gear/unit[10]/pos-norm</output>
+      <output>gear/unit[11]/pos-norm</output>
+      <output>gear/unit[12]/pos-norm</output>
+      <output>gear/unit[13]/pos-norm</output>
     </kinematic>
   </channel>
 
