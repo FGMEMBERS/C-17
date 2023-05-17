@@ -35,6 +35,23 @@ shall keep this attribution information.
     </switch>
   </channel>
 
+  <channel name="Knob lock">
+    <switch name="instruments/gearsLever/safety-lock">
+      <default value="0"/>
+      <test value="0">
+	<!-- 
+	     allow the lock release to transiently remove the
+	     safety lock
+	-->
+	instruments/gearsLever/lock-release-cmd EQ 1
+      </test>
+      <test logic="OR" value="1">
+	gear/wow EQ 1
+	instruments/altasi/indicated-speed-kt GE /sim/limits/max-gear-down-speed
+      </test>
+    </switch>
+  </channel>
+
   <channel name="Button timers">
     <switch name="instruments/gearsLever/lock-release-cmd">
       <default value="instruments/gearsLever/lock-release-cmd" />
@@ -98,6 +115,20 @@ shall keep this attribution information.
   <channel name="Leds Status">
     <switch name="instruments/gearsLever/electrical-serviceable">
       <default value="/systems/electrical/serviceable"/>
+    </switch>
+
+    <switch name="instruments/gearsLever/knob-lit">
+      <!-- 
+	   The knob illuminates red if a disagreement in position
+	   or, while testing 
+      -->
+      <default value="0" />
+	<test value="0">
+	instruments/gearsLever/electrical-serviceable EQ 0
+      </test>
+      <test value="1">
+	instruments/gearsLever/test-cmd EQ 1
+      </test>
     </switch>
     
     <switch name="instruments/gearsLever/limits-warning">
