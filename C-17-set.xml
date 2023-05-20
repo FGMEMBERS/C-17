@@ -68,16 +68,19 @@
 	<!-- This does not work, because FlightGear limits MP properties to 18 -->
 	<float n="1" alias="/instrumentation/doors/ramp/position-norm"/>
 	<float n="2" alias="/position/gear-agl-m">0</float><!-- 11 altitude for MP shadow -->
-	<float n="3" alias="/surface-positions/flap-pos-norm"/>
+	<float n="3" alias="/fdm/jsbsim/fcs/flap-pos-norm"/>
 	<float n="4" alias="/controls/flight/elevator-trim"/>
 	<float n="5" alias="/controls/flight/rudder"/>
 	<float n="6" alias="/controls/flight/elevator"/>
 	<float n="7" alias="/controls/flight/aileron"/>
-	<float n="8" alias="/controls/engines/engine[0]/throttle"/>
-	<float n="9" alias="/controls/engines/engine[1]/throttle"/>
-	<float n="14" alias="/controls/gear/brake-left"/>
-	<float n="15" alias="/controls/gear/brake-right"/>
-	<float n="16" alias="/gear/gear[0]/position-norm"/>
+	<float n="8" alias="/fdm/jsbsim/fcs/slat-pos-deg"/>
+	<float n="9" alias="/fdm/jsbsim/fcs/flap-pos-deg"/>
+	<float n="10" alias="/fdm/jsbsim/gear/nose-pos-norm"/>
+	<float n="11" alias="/fdm/jsbsim/gear/aft-left-pos-norm"/>
+	<float n="12" alias="/fdm/jsbsim/gear/aft-right-pos-norm"/>
+	<float n="13" alias="/fdm/jsbsim/gear/fwd-left-pos-norm"/>
+	<float n="14" alias="/fdm/jsbsim/gear/fwd-right-pos-norm"/>
+	<float n="15" alias="/gear/gear[0]/steering-norm"/>
 	<float n="17" alias="/controls/flight/rudder-trim"/>
 	<float n="18" alias="/controls/flight/aileron-trim"/>
 	<string n="0" type="string"></string><!-- RESERVED FOR DUAL CONTROL (Analog Switch - TDM)-->
