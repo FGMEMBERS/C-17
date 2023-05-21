@@ -68,16 +68,19 @@
 	<!-- This does not work, because FlightGear limits MP properties to 18 -->
 	<float n="1" alias="/instrumentation/doors/ramp/position-norm"/>
 	<float n="2" alias="/position/gear-agl-m">0</float><!-- 11 altitude for MP shadow -->
-	<float n="3" alias="/surface-positions/flap-pos-norm"/>
+	<float n="3" alias="/fdm/jsbsim/fcs/flap-pos-norm"/>
 	<float n="4" alias="/controls/flight/elevator-trim"/>
 	<float n="5" alias="/controls/flight/rudder"/>
 	<float n="6" alias="/controls/flight/elevator"/>
 	<float n="7" alias="/controls/flight/aileron"/>
-	<float n="8" alias="/controls/engines/engine[0]/throttle"/>
-	<float n="9" alias="/controls/engines/engine[1]/throttle"/>
-	<float n="14" alias="/controls/gear/brake-left"/>
-	<float n="15" alias="/controls/gear/brake-right"/>
-	<float n="16" alias="/gear/gear[0]/position-norm"/>
+	<float n="8" alias="/fdm/jsbsim/fcs/slat-pos-deg"/>
+	<float n="9" alias="/fdm/jsbsim/fcs/flap-pos-deg"/>
+	<float n="10" alias="/fdm/jsbsim/gear/nose-pos-norm"/>
+	<float n="11" alias="/fdm/jsbsim/gear/aft-left-pos-norm"/>
+	<float n="12" alias="/fdm/jsbsim/gear/aft-right-pos-norm"/>
+	<float n="13" alias="/fdm/jsbsim/gear/fwd-left-pos-norm"/>
+	<float n="14" alias="/fdm/jsbsim/gear/fwd-right-pos-norm"/>
+	<float n="15" alias="/gear/gear[0]/steering-norm"/>
 	<float n="17" alias="/controls/flight/rudder-trim"/>
 	<float n="18" alias="/controls/flight/aileron-trim"/>
 	<string n="0" type="string"></string><!-- RESERVED FOR DUAL CONTROL (Analog Switch - TDM)-->
@@ -257,6 +260,31 @@
       <setting n="2" type="double">1.00</setting>
       <max-slat-extension-speed n="2" type="int">190</max-slat-extension-speed>
     </slats>
+
+    <spoilers>
+      <current-setting type="int">0</current-setting>
+      <current-ground-spoiler-setting
+	  type="int">0</current-ground-spoiler-setting>
+      <ground-spoiler-enabled type="bool">true</ground-spoiler-enabled>
+      <setting n="0" type="double">0.00000</setting>
+      <setting n="1" type="double">0.08333</setting>
+      <setting n="2" type="double">0.16667</setting>
+      <setting n="3" type="double">0.25000</setting>
+      <setting n="4" type="double">0.33333</setting>
+      <setting n="5" type="double">0.41667</setting>
+      <setting n="6" type="double">0.50000</setting>
+      <setting n="7" type="double">0.58333</setting>
+      <setting n="8" type="double">0.66667</setting>
+      <setting n="9" type="double">0.75000</setting>
+      <setting n="10" type="double">0.83333</setting>
+      <setting n="11" type="double">0.91667</setting>
+      <setting n="12" type="double">1.00000</setting>
+      <ground-spoiler-setting n="0"
+			      type="double">0.00</ground-spoiler-setting> 
+      <ground-spoiler-setting n="1"
+			      type="double">1.00</ground-spoiler-setting>
+      <retraction-commanded type="bool">false</retraction-commanded>
+    </spoilers>
     
     <limits>
       <vne>380</vne>

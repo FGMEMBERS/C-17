@@ -13,7 +13,7 @@
 <aerodynamics>
   <axis name="LIFT" unit="LBS">
     <function name="aero/coefficient/CLalpha">
-      <description>Lift_due_to_alpha_flap_slat_deflection</description>
+      <description>Lift due to alpha flap slat deflection</description>
       <product>
 	<value>1.766015867</value>
 	<property>systems/multipliers/lift</property>
@@ -396,11 +396,22 @@
 	    30.00	1.5680	1.4990	1.3960	1.2870	1.1090
           </tableData>
 	</table>
+	<table>
+	  <!-- fractional area damper -->
+	  <independentVar>fcs/flap-pos-deg</independentVar>
+	  <tableData>
+	    0         1.0000
+	    8         1.0000
+	    16        1.0000
+	    24        1.0000
+	    40        1.0000
+	  </tableData>
+	</table>
       </product>
     </function>
 
     <function name="aero/coefficient/CLalpha_HS">
-      <description>Lift_due_to_alpha_HStab_elevator_deflection</description>
+      <description>Lift due to alpha HStab elevator deflection</description>
       <product>
 	<value>-1.000</value>
 	<value>2.430</value>
@@ -477,32 +488,46 @@
       </product>
     </function>
 
-    <!--
-    <function name="aero/coefficient/dCLflap">
-      <description>Delta_Lift_due_to_flaps</description>
-      <product>
-	<property>aero/qbar-psf</property>
-	<property>metrics/Sw-sqft</property>
-	<property>fcs/flap-pos-deg</property>
-	<value>0.00680</value>
-      </product>
-    </function>
-    -->
-
     <function name="aero/coefficient/dCLsb">
-      <description>Delta_Lift_due_to_speedbrake</description>
+      <description>Delta Lift due alpha spoiler deflection</description>
       <product>
 	<property>aero/qbar-psf</property>
 	<property>metrics/Sw-sqft</property>
-	<property>fcs/speedbrake-pos-norm</property>
-	<value>-0.05</value>
+	<table>
+	  <independentVar>fcs/spoiler-pos-deg</independentVar>
+	  <tableData>
+	    0.0    0.0000
+	    30.0  -0.4575
+	    60.0  -0.9150
+	  </tableData>
+	</table>
+	<table>
+	  <independentVar>aero/alpha-deg</independentVar>
+	  <tableData>
+	    -30.0       0.0000
+	    -16.0	0.0000
+	    -15.0	0.1000
+	    -12.0	0.4240
+	    -9.0	0.6760
+	    -6.0	0.8560
+	    -3.0	0.9640
+	    0.0  	1.0000
+	    3.0 	0.9640
+	    6.0 	0.8560
+	    9.0 	0.6760
+	    12.0 	0.4240
+	    15.0	0.1000
+	    16.0	0.0000
+	    30.0        0.0000
+	  </tableData>
+	</table>
       </product>
     </function>
   </axis>
 
   <axis name="DRAG" unit="LBS">
     <function name="aero/coefficient/CD0">
-      <description>Drag_due_to_alpha_flap_slat_deflection</description>
+      <description>Drag due to alpha flap slat deflection</description>
       <product>
 	<value>7.107750832</value>
 	<property>systems/multipliers/drag</property>
@@ -885,11 +910,22 @@
 	    30.00	0.0808	0.0880	0.0929	0.0962	0.0957
           </tableData>
 	</table>
+	<table>
+	  <!-- fractional area damper -->
+	  <independentVar>fcs/flap-pos-deg</independentVar>
+	  <tableData>
+	    0         1.0000
+	    8         1.0000
+	    16        1.0000
+	    24        1.0000
+	    40        1.0000
+	  </tableData>
+	</table>
       </product>
     </function>
     
     <function name="aero/coefficient/CD0_HS">
-      <description>Drag_due_to_alpha_HS_ElevatorDeflection</description>
+      <description>Drag due to alpha HS ElevatorDeflection</description>
       <product>
 	<value>1.225</value>
 	<property>aero/qbar-psf</property>
@@ -966,7 +1002,7 @@
     </function>
     
     <function name="aero/coefficient/CDbeta">
-      <description>Drag_due_to_sideslip_VStab_Rudder_Deflection</description>
+      <description>Drag due to sideslip VStab Rudder Deflection</description>
       <product>
 	<value>2.185</value>
 	<property>aero/qbar-psf</property>
@@ -1103,7 +1139,7 @@
     </function>
 
     <function name="aero/coefficient/CDbetaW">
-      <description>Drag_due_to_sideslip_Winglets</description>
+      <description>Drag due to sideslip Winglets</description>
       <product>
 	<value>1.0852</value>
 	<property>aero/qbar-psf</property>
@@ -1185,10 +1221,11 @@
     </function>
 
     <function name="aero/coefficient/CDMach">
-      <description>Induced_Drag</description>
+      <description>Induced Drag</description>
       <product>
 	<value>4.875</value>
 	<property>metrics/Sw-sqft</property>
+	<!--<property>aero/qbar-psf</property>-->
 	<table>
           <independentVar>velocities/mach</independentVar>
           <tableData>
@@ -1207,11 +1244,12 @@
     </function>
 
     <function name="aero/coefficient/CDMachW">
-      <description>Induced_Drag_Suppression_by_Winglets</description>
+      <description>Induced Drag Suppression by Winglets</description>
       <product>
 	<value>-2.000</value><!-- Drag suppression, 2 winglets -->
 	<value>19.44</value><!-- Area of each winglet -->
 	<value>0.08</value> <!-- 8 % suppressed per winglet -->
+	<!--<property>aero/qbar-psf</property>-->
 	<table>
           <independentVar>velocities/mach</independentVar>
           <tableData>
@@ -1229,32 +1267,46 @@
       </product>
     </function>
     
-    <!--
-    <function name="aero/coefficient/CDflap">
-      <description>Drag_due_to_flaps</description>
-      <product>
-	<value>0.0008</value>
-	<property>aero/qbar-psf</property>
-	<property>metrics/Sw-sqft</property>
-	<property>fcs/flap-pos-deg</property>
-      </product>
-    </function>
-    -->
-
     <function name="aero/coefficient/CDsb">
-      <description>Drag_due_to_speedbrakes</description>
+      <description>Drag due to alpha spoilers deflection</description>
       <product>
-	<value>0.012</value>
 	<property>aero/qbar-psf</property>
 	<property>metrics/Sw-sqft</property>
-	<property>fcs/speedbrake-pos-norm</property>
+	<table>
+	  <independentVar>fcs/spoiler-pos-deg</independentVar>
+	  <tableData>
+	    0.0    0.0000
+	    30.0   0.1150
+	    60.0   0.2300
+	  </tableData>
+	</table>
+	<table>
+	  <independentVar>aero/alpha-deg</independentVar>
+	  <tableData>
+	    -30.0       0.0000
+	    -16.0	0.0000
+	    -15.0	0.1000
+	    -12.0	0.4240
+	    -9.0	0.6760
+	    -6.0	0.8560
+	    -3.0	0.9640
+	    0.0  	1.0000
+	    3.0 	0.9640
+	    6.0 	0.8560
+	    9.0 	0.6760
+	    12.0 	0.4240
+	    15.0	0.1000
+	    16.0	0.0000
+	    30.0        0.0000
+	  </tableData>
+	</table>
       </product>
     </function>
   </axis>
 
   <axis name="SIDE" unit="LBS">
     <function name="aero/coefficient/CYb">
-      <description>Side_force_due_to_beta</description>
+      <description>Side force due to beta</description>
       <product>
 	<value>-1.000</value>
 	<value>12.3596</value>
@@ -1416,7 +1468,7 @@
     </function>
 
     <function name="aero/coefficient/CYbW">
-      <description>Side_force_due_to_beta_Winglets</description>
+      <description>Side force due to beta Winglets</description>
       <product>
 	<value>-1.000</value>
 	<value>1.058</value>
@@ -1501,7 +1553,7 @@
 
   <axis name="ROLL" unit="LBS*FT">
     <function name="aero/coefficient/Clb">
-      <description>Roll_moment_due_to_beta</description>
+      <description>Roll moment due to beta</description>
       <product>
 	<value>-1.000</value>
 	<value>0.100</value>
@@ -1513,7 +1565,7 @@
     </function>
 
     <function name="aero/coefficient/Clp">
-      <description>Roll_moment_due_to_roll_rate</description>
+      <description>Roll moment due to roll rate</description>
       <product>
 	<value>-1.000</value>
 	<value>0.485</value>
@@ -1526,7 +1578,7 @@
     </function>
 
     <function name="aero/coefficient/Clr">
-      <description>Roll_moment_due_to_yaw_rate</description>
+      <description>Roll moment due to yaw rate</description>
       <product>
 	<value>0.166</value>
 	<property>aero/qbar-psf</property>
@@ -1538,7 +1590,7 @@
     </function>
 
     <function name="aero/coefficient/Clda">
-      <description>Roll_moment_due_to_aileron</description>
+      <description>Roll moment due to aileron</description>
       <product>
 	<value>0.480</value> <!-- Aileron power on roll -->
 	<property>aero/qbar-psf</property>
@@ -1568,7 +1620,7 @@
 
   <axis name="PITCH" unit="LBS*FT">
     <function name="aero/coefficient/Cmalpha">
-      <description>Pitch_moment_due_to_alpha_flap_slat_deflection</description>
+      <description>Pitch moment due to alpha flap slat deflection</description>
       <product>
 	<value>0.65608</value><!-- Pitch up moment tampers here -->
 	<property>aero/qbar-psf</property>
@@ -1951,11 +2003,22 @@
 	    30.00	-0.424	-0.516	-0.593	-0.653	-0.728
 	  </tableData>
 	</table>
+	<table>
+	  <!-- fractional area damper -->
+	  <independentVar>fcs/flap-pos-deg</independentVar>
+	  <tableData>
+	    0         1.0000
+	    8         1.0000
+	    16        1.0000
+	    24        1.0000
+	    40        1.0000
+	  </tableData>
+	</table>
       </product>
     </function>
 
     <function name="aero/coefficient/Cmalpha_HS">
-      <description>Pitch_moment_due_to_alpha_HS</description>
+      <description>Pitch moment due to alpha HS</description>
       <product>
 	<value>-8.53785</value> <!-- Elevator deflection power -->
 	<property>aero/qbar-psf</property>
@@ -2033,7 +2096,7 @@
     </function>
     
     <function name="aero/coefficient/Cmq">
-      <description>Pitch_moment_due_to_pitch_rate</description>
+      <description>Pitch moment due to pitch rate</description>
       <product>
 	<value>-1.000</value>
 	<value>125</value>
@@ -2046,7 +2109,7 @@
     </function>
 
     <function name="aero/coefficient/Cmadot">
-      <description>Pitch_moment_due_to_alpha_rate</description>
+      <description>Pitch moment due to alpha rate</description>
       <product>
 	<value>-1.000</value>
 	<value>18</value>
@@ -2061,7 +2124,7 @@
 
   <axis name="YAW" unit="LBS*FT">
     <function name="aero/coefficient/Cnb">
-      <description>Yaw_moment_due_to_beta_rudder_deflection</description>
+      <description>Yaw moment due to beta rudder deflection</description>
       <product>
 	<value>0.4476</value><!--rudder deflection power -->
 	<property>aero/qbar-psf</property>
@@ -2199,7 +2262,7 @@
     </function>
 
     <function name="aero/coefficient/CnbW">
-      <description>Yaw_moment_due_to_beta_Winglets</description>
+      <description>Yaw moment due to beta Winglets</description>
       <product>
 	<value>2.000</value> <!-- Two Winglets -->
 	<value>0.000</value> <!-- Nullify moments per symmetrical effect -->
@@ -2282,7 +2345,7 @@
     </function>
     
     <function name="aero/coefficient/Cnbdot">
-      <description>Yaw_moment_due_to_beta_rate</description>
+      <description>Yaw moment due to beta rate</description>
       <product>
 	<value>-1.000</value>
 	<value>2.000</value>
@@ -2295,7 +2358,7 @@
     </function>
     
     <function name="aero/coefficient/Cnr">
-      <description>Yaw_moment_due_to_yaw_rate</description>
+      <description>Yaw moment due to yaw rate</description>
       <product>
 	<value>-1.000</value>
 	<value>0.8321</value>
@@ -2308,7 +2371,7 @@
     </function>
 
     <function name="aero/coefficient/Cnda">
-      <description>Adverse_yaw_moment_due_to_aileron</description>
+      <description>Adverse yaw moment due to aileron</description>
       <product>
 	<value>0.600</value> <!-- Adverse yaw power -->
 	<property>aero/qbar-psf</property>

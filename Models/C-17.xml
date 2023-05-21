@@ -57,6 +57,7 @@
     <object-name>Engine4.Cowl3</object-name>
     <object-name>Engine4.Core</object-name>
     <object-name>Fuselage</object-name>
+    <object-name>Fuselage.inner</object-name>
     <object-name>WindowLeft1</object-name>
     <object-name>WindowLeft2</object-name>
     <object-name>WindowLeft3</object-name>
@@ -70,6 +71,7 @@
     <object-name>CargoRamp</object-name>
     <object-name>CargoRamp2</object-name>
     <object-name>CargoDoor</object-name>
+    <object-name>CargoDoor.inner</object-name>
     <object-name>VStab</object-name>
     <object-name>VStabCap</object-name>
     <object-name>Rudder</object-name>
@@ -99,6 +101,10 @@
     <object-name>MainWing2</object-name>
     <object-name>Slat1</object-name>
     <object-name>Slat2</object-name>
+    <object-name>spoiler1</object-name>
+    <object-name>spoiler1.outer</object-name>
+    <object-name>spoiler2</object-name>
+    <object-name>spoiler2.outer</object-name>
     <object-name>Aileron1</object-name>
     <object-name>Aileron2</object-name>
     <object-name>Flap1</object-name>
@@ -805,6 +811,113 @@
       <y>1</y>
     </axis>
   </animation>
+
+  <!-- Spoiler animation -->
+  <animation>
+    <type>rotate</type>
+    <object-name>spoiler1</object-name>
+    <property>fdm/jsbsim/fcs/spoiler-pos-deg</property>
+    <factor>1</factor>
+    <axis>
+      <x1-m>19.87</x1-m>
+      <y1-m>-3.415</y1-m>
+      <z1-m>2.762</z1-m>
+      <x2-m>22.87</x2-m>
+      <y2-m>-15.14</y2-m>
+      <z2-m>1.745</z2-m>
+    </axis>
+  </animation>
+
+  <animation>
+    <type>rotate</type>
+    <object-name>spoiler1.outer</object-name>
+    <condition>
+      <not>
+	<property>fdm/jsbsim/fcs/ground-spoiler-deployed</property>
+      </not>
+    </condition>
+    <property>fdm/jsbsim/fcs/spoiler-pos-deg</property>
+    <factor>1</factor>
+    <axis>
+      <x1-m>22.87</x1-m>
+      <y1-m>-15.14</y1-m>
+      <z1-m>1.743</z1-m>
+      <x2-m>23.87</x2-m>
+      <y2-m>-19.05</y2-m>
+      <z2-m>1.404</z2-m>
+    </axis>
+  </animation>
+
+  <animation>
+    <type>rotate</type>
+    <object-name>spoiler1.outer</object-name>
+    <condition>
+	<property>fdm/jsbsim/fcs/ground-spoiler-deployed</property>
+    </condition>
+    <property>fdm/jsbsim/fcs/ground-spoiler-pos-deg</property>
+    <factor>1</factor>
+    <axis>
+      <x1-m>22.87</x1-m>
+      <y1-m>-15.14</y1-m>
+      <z1-m>1.743</z1-m>
+      <x2-m>23.87</x2-m>
+      <y2-m>-19.05</y2-m>
+      <z2-m>1.404</z2-m>
+    </axis>
+  </animation>
+  
+  <animation>
+    <type>rotate</type>
+    <object-name>spoiler2</object-name>
+    <property>fdm/jsbsim/fcs/spoiler-pos-deg</property>
+    <factor>-1</factor>
+    <axis>
+      <x1-m>19.87</x1-m>
+      <y1-m>3.554</y1-m>
+      <z1-m>2.778</z1-m>
+      <x2-m>22.48</x2-m>
+      <y2-m>13.77</y2-m>
+      <z2-m>1.893</z2-m>
+    </axis>
+  </animation>
+
+  <animation>
+    <type>rotate</type>
+    <object-name>spoiler2.outer</object-name>
+    <condition>
+      <not>
+	<property>fdm/jsbsim/fcs/ground-spoiler-deployed</property>
+      </not>
+    </condition>
+    <property>fdm/jsbsim/fcs/spoiler-pos-deg</property>
+    <factor>-1</factor>
+    <axis>
+      <x1-m>22.48</x1-m>
+      <y1-m>13.77</y1-m>
+      <z1-m>1.894</z1-m>
+      <x2-m>23.87</x2-m>
+      <y2-m>19.19</y2-m>
+      <z2-m>1.423</z2-m>
+    </axis>
+  </animation>
+
+  <animation>
+    <type>rotate</type>
+    <object-name>spoiler2.outer</object-name>
+    <condition>
+	<property>fdm/jsbsim/fcs/ground-spoiler-deployed</property>
+    </condition>
+    <property>fdm/jsbsim/fcs/ground-spoiler-pos-deg</property>
+    <factor>-1</factor>
+    <axis>
+      <x1-m>22.48</x1-m>
+      <y1-m>13.77</y1-m>
+      <z1-m>1.894</z1-m>
+      <x2-m>23.87</x2-m>
+      <y2-m>19.19</y2-m>
+      <z2-m>1.423</z2-m>
+    </axis>
+  </animation>
   
   <!-- CARGO RAMP/DOOR  -->	
   <animation>
@@ -853,6 +966,7 @@
   <animation>
     <type>rotate</type>
     <object-name>CargoDoor</object-name>
+    <object-name>CargoDoor.inner</object-name>
     <property>instrumentation/doors/ramp/position-norm</property>
     <!-- 
 	 <interpolation>

@@ -70,25 +70,29 @@
       </binding>
     </mod-up>
   </key>
-  
-  <key n="123">
-    <name>}</name>
-    <desc>Engine Autostop</desc>
-    <binding>
-      <command>nasal</command>
-      <script>emu.autostop();</script>
-    </binding>
-  </key>
-  
-  <key n="125">
-    <name>}</name>
-    <desc>Engine Autostart</desc>
-    <binding>
-      <command>nasal</command>
-      <script>emu.autostart();</script>
-    </binding>
-  </key>
 
+  <key n="71">
+    <!-- overriding default gears to obey the gear lock -->
+    <name>G</name>
+    <desc>G for gears lever</desc>
+    <binding>
+      <condition>
+	<not><property>fdm/jsbsim/instruments/gearsLever/safety-lock</property></not>
+      </condition>
+      <command>nasal</command>
+      <script>controls.gearDown(1)</script>
+    </binding>
+    <mod-up>
+      <binding>
+	<condition>
+	  <not><property>fdm/jsbsim/instruments/gearsLever/safety-lock</property></not>
+	</condition>
+	<command>nasal</command>
+	<script>controls.gearDown(0)</script>
+      </binding>
+    </mod-up>
+  </key>
+  
   <key n="83">
     <name>Shift-s</name>
     <desc>Multipliers adjustments</desc>
@@ -100,6 +104,43 @@
       </script>
     </binding>
   </key>
-  
+
+  <key n="2">
+    <name>Ctrl-b</name>
+    <desc>Extend spoilers</desc>
+    <repeatable type="bool">true</repeatable>
+    <binding>
+      <command>nasal</command>
+      <script>controls.stepSpoilers(1);</script>
+    </binding>
+    <binding>
+      <command>property-assign</command>
+      <property>/sim/spoilers/retraction-commanded</property>
+      <value>false</value>
+    </binding>
+  </key>
+
+  <key n="98">
+    <name>Alt-b</name>
+    <desc>Retract spoilers</desc>
+    <repeatable type="bool">true</repeatable>
+    <mod-alt>
+      <binding>
+	<command>nasal</command>
+	<script>controls.stepSpoilers(-1);</script>
+      </binding>
+      <binding>
+	<!--
+	    Permit ground spoiler cancelation after touchdown
+	<condition>
+	  <property>instruments/gears/touchdown</property>
+	</condition>
+	-->
+	<command>property-assign</command>
+	<property>/sim/spoilers/retraction-commanded</property>
+	<value>true</value>
+      </binding>
+    </mod-alt>
+  </key>
 </PropertyList>
 

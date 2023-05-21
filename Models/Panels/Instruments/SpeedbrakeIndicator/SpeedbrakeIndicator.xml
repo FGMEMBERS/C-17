@@ -1,0 +1,41 @@
+<?xml version="1.0"?>
+
+<!--
+    :copyright: 2023, IAHM-COL
+    License: GPLv3
+    
+    Redistribution, or reuse, with or without modifications
+    shall keep this attribution information. 
+-->
+
+<PropertyList>
+  <path>SpeedbrakeIndicator.ac</path>
+
+  <animation>
+    <type>rotate</type>   
+    <object-name>needle</object-name> 
+    <property>fdm/jsbsim/instruments/speedbrake-indicator/spoiler-needle-deflection</property>
+    <factor>-1</factor>
+    <axis>
+      <x1-m>0.000</x1-m>
+      <y1-m>0.000487</y1-m>
+      <z1-m>0.00</z1-m>
+      <x2-m>0.020</x2-m>
+      <y2-m>0.000487</y2-m>
+      <z2-m>0.00</z2-m>
+    </axis>
+  </animation>
+  
+  <!-- Lightmaps -->
+  <effect>
+    <inherits-from>backlighting</inherits-from>
+    <object-name>face</object-name>
+    <object-name>needle</object-name>
+  </effect>
+  <effect>
+    <inherits-from>floodlighting</inherits-from>
+    <object-name>case</object-name>
+    <object-name>screw.hi</object-name>
+    <object-name>screw.lo</object-name>
+  </effect>
+</PropertyList>
