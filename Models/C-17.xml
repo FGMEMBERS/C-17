@@ -313,7 +313,7 @@
     <path>Models/Panels/Cockpit/Maindash/maindash.xml</path>
     <offsets>
       <x-m>1.5707</x-m>
-      <y-m>-0.054905</y-m>
+      <y-m>-0.077085</y-m>
       <z-m>1.0013</z-m>
     </offsets>
   </model>

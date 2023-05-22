@@ -9,42 +9,42 @@
 -->
 
 <PropertyList>
-  <model>
+  <model><!--centre-left-->
     <path>Models/Panels/Instruments/MFD-L/mfd-l.xml</path>
     <offsets>
-      <x-m>0.41</x-m>
-      <y-m>-0.12</y-m>
-      <z-m>0.89</z-m>
+      <x-m>0.41228</x-m>
+      <y-m>-0.13342</y-m>
+      <z-m>0.87635</z-m>
       <pitch-deg>-6</pitch-deg>
     </offsets>
   </model>
   
-  <model>
+  <model><!--centre-rigth-->
     <path>Models/Panels/Instruments/blank/blankmfd.ac</path>
     <offsets>
-      <x-m>0.41</x-m>
-      <y-m>0.08</y-m>
-      <z-m>0.89</z-m>
+      <x-m>0.41228</x-m>
+      <y-m>0.0251388</y-m>
+      <z-m>0.8758</z-m>
       <pitch-deg>-6</pitch-deg>
     </offsets>
   </model>
   
-  <model>
+  <model><!--Captain-->
     <path>Models/Panels/Instruments/MFD-R/mfd-r.xml</path>
     <offsets>
-      <x-m>0.415</x-m>
-      <y-m>-0.51</y-m>
-      <z-m>0.82</z-m>
+      <x-m>0.41378</x-m>
+      <y-m>-0.48979</y-m>
+      <z-m>0.85701</z-m>
       <pitch-deg>-6</pitch-deg>
     </offsets>
   </model>
 
-  <model>
+  <model><!--FO-->
     <path>Models/Panels/Instruments/MFD-R/mfd-r.xml</path>
     <offsets>
-      <x-m>0.415</x-m>
-      <y-m>0.51</y-m>
-      <z-m>0.82</z-m>
+      <x-m>0.41378</x-m>
+      <y-m>0.40208</y-m>
+      <z-m>0.85701</z-m>
       <pitch-deg>-6</pitch-deg>
     </offsets>
   </model>
@@ -74,19 +74,20 @@
     <name>AI</name>
     <path>Models/Panels/Instruments/AttitudeIndicator/AttitudeIndicator.xml</path>
     <offsets>
-      <x-m>0.415</x-m>
-      <y-m>-0.38</y-m>
-      <z-m>0.84</z-m>
+      <x-m>0.40988</x-m>
+      <y-m>-0.34975</y-m>
+      <z-m>0.85634</z-m>
       <pitch-deg>-6</pitch-deg>
     </offsets>
   </model>
+  
   <model>
     <name>AI.FO</name>
     <path>Models/Panels/Instruments/AttitudeIndicator/AttitudeIndicator.xml</path>
     <offsets>
-      <x-m>0.4122</x-m>
-      <y-m>0.2846</y-m>
-      <z-m>0.825</z-m>
+      <x-m>0.40988</x-m>
+      <y-m>0.25934</y-m>
+      <z-m>0.86426</z-m>
       <pitch-deg>-6</pitch-deg>
     </offsets>
   </model>
@@ -96,30 +97,32 @@
     <name>Altasi</name>
     <path>Models/Panels/Instruments/altasi/altasi.xml</path>
     <offsets>
-      <x-m>0.418</x-m>
-      <y-m>-0.38</y-m>
-      <z-m>0.775</z-m>
+      <x-m>0.41749</x-m>
+      <y-m>-0.34916</y-m>
+      <z-m>0.79215</z-m>
       <pitch-deg>-6</pitch-deg>
     </offsets>
   </model>
+  
   <model>
     <name>Altasi.FO</name>
     <path>Models/Panels/Instruments/altasi/altasi.xml</path>
     <offsets>
-      <x-m>0.4185</x-m>
-      <y-m>0.2852</y-m>
-      <z-m>0.7615</z-m>
+      <x-m>0.41749</x-m>
+      <y-m>0.25994</y-m>
+      <z-m>0.79507</z-m>
       <pitch-deg>-6</pitch-deg>
     </offsets>
   </model>
+  
   <!-- Gears Lever -->
   <model>
     <name>Gears lever</name>
     <path>Models/Panels/Instruments/gearsLever/gearsLever.xml</path>
     <offsets>
-      <x-m>0.4118</x-m>
-      <y-m>0.2119</y-m>
-      <z-m>0.8357</z-m>
+      <x-m>0.4075</x-m>
+      <y-m>0.18859</y-m>
+      <z-m>0.88528</z-m>
       <pitch-deg>-6</pitch-deg>
     </offsets>
   </model>
@@ -129,18 +132,19 @@
     <path>Models/Panels/Instruments/FlapIndicator/FlapIndicator.xml</path>
     <offsets>
       <x-m>0.423</x-m>
-      <y-m>0.1</y-m>
-      <z-m>0.73</z-m>
+      <y-m>0.08758</y-m>
+      <z-m>0.73823</z-m>
       <pitch-deg>-6</pitch-deg>
     </offsets>
   </model>
+  
   <!-- Spoiler Indicator -->
   <model>
     <path>Models/Panels/Instruments/SpeedbrakeIndicator/SpeedbrakeIndicator.xml</path>
     <offsets>
-      <x-m>0.42373</x-m>
-      <y-m>0.15353</y-m>
-      <z-m>0.71784</z-m>
+      <x-m>0.42395</x-m>
+      <y-m>0.14111</y-m>
+      <z-m>0.72606</z-m>
       <pitch-deg>-6</pitch-deg>
     </offsets>
   </model>
@@ -149,18 +153,19 @@
   <model>
     <path>Models/Panels/Instruments/LimitsPlackards/LimitsPlackard.xml</path>
     <offsets>
-      <x-m>0.42436</x-m>
-      <y-m>-0.50832</y-m>
-      <z-m>0.71607</z-m>
+      <x-m>0.43606</x-m>
+      <y-m>-0.48728</y-m>
+      <z-m>0.69055</z-m>
       <pitch-deg>-6</pitch-deg>
     </offsets>
   </model>
+  
   <model>
     <path>Models/Panels/Instruments/LimitsPlackards/LimitsPlackard.xml</path>
     <offsets>
-      <x-m>0.42436</x-m>
-      <y-m>0.45817</y-m>
-      <z-m>0.71604</z-m>
+      <x-m>0.43007</x-m>
+      <y-m>0.40351</y-m>
+      <z-m>0.69164</z-m>
       <pitch-deg>-6</pitch-deg>
     </offsets>
   </model>
