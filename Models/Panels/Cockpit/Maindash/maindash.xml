@@ -1,0 +1,24 @@
+<?xml version="1.0"?>
+
+<!--
+    :copyright: 2023, IAHM-COL
+    License: GPLv3
+    
+    Redistribution, or reuse, with or without modifications
+    shall keep this attribution information. 
+-->
+
+<PropertyList>
+  <path>maindash.ac</path>
+
+  <!-- Lightmaps -->  
+  <effect>
+    <inherits-from>floodlighting</inherits-from>
+    <object-name>maindash.centre</object-name>
+    <object-name>maindash.handle1</object-name>
+    <object-name>maindash.handle2</object-name>
+    <object-name>maindash.handle3</object-name>
+    <object-name> maindash.handle4</object-name>
+  </effect>
+
+</PropertyList>
