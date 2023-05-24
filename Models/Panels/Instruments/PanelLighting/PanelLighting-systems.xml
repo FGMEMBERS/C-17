@@ -119,6 +119,16 @@ shall keep this attribution information.
     </pure_gain>
   </channel>
 
+  <channel name="Ledlight status">
+    <switch name="instruments/panel-lighting/ledlight-status">
+      <default value="1"/>
+      <test value="0">
+	<!-- Off ledlight if electrical is off -->
+	/systems/electrical/serviceable EQ 0
+      </test>
+    </switch>
+  </channel>
+
   <!-- Needs to be connected with the IRCM instrument on the pedestal -->
   <channel name="IRCM indicators">
     <switch name="instruments/panel-lighting/ircm-auto">
