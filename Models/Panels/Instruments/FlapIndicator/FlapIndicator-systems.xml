@@ -45,5 +45,10 @@ shall keep this attribution information.
       <input>fcs/flap-pos-norm</input>
       <gain>100</gain>
     </pure_gain>
+
+    <!-- Flap index 100 for now, until the instrument to adjust is built-->
+    <switch name="instruments/flap-indicator/flap-index-setting">
+      <default value="100" />
+    </switch>
   </channel>
 </system>
