@@ -14,6 +14,10 @@ shall keep this attribution information.
     <switch name="instruments/panel-lighting/backlight-active">
       <default value="0" />
       <test value="0">
+	<!-- Off backlight if electrical is off -->
+	/systems/electrical/serviceable EQ 0
+      </test>
+      <test value="0">
 	<!-- OFF -->
 	instruments/panel-lighting/backlight-status EQ 0
       </test>
@@ -53,6 +57,10 @@ shall keep this attribution information.
   <channel name="Panel floodlight status">
     <switch name="instruments/panel-lighting/floodlight-active">
       <default value="0" />
+      <test value="0">
+	<!-- Off floodlight if electrical is off -->
+	/systems/electrical/serviceable EQ 0
+      </test>
       <test value="0">
 	<!-- OFF -->
 	instruments/panel-lighting/floodlight-status EQ 0
