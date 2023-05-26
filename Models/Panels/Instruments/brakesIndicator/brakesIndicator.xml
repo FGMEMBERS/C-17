@@ -10,6 +10,22 @@
 
 <PropertyList>
   <path>brakesIndicator.ac</path>
+
+  <!-- Brake press Gauge -->
+  <animation>
+    <type>rotate</type>
+    <object-name>needle</object-name>
+    <property>fdm/jsbsim/instruments/brakesIndicator/brakePress</property>
+    <factor>-0.049</factor>
+    <axis>
+      <x1-m>0.001693</x1-m>
+      <y1-m>0.000189</y1-m>
+      <z1-m>-0.000337</z1-m>
+      <x2-m>0.002693</x2-m>
+      <y2-m>0.000189</y2-m>
+      <z2-m>-0.000337</z2-m>
+    </axis>
+  </animation>
   
   <!-- Lightmaps-->
   <effect>
