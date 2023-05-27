@@ -9,6 +9,7 @@ shall keep this attribution information.
 -->
 
 <PropertyList>
+  <path>controls/gear/antiskid</path>
   <path>fdm/jsbsim/instruments/panel-lighting/backlight-status</path>
   <path>fdm/jsbsim/instruments/panel-lighting/backlight-intensity</path>
   <path>fdm/jsbsim/instruments/panel-lighting/floodlight-status</path>

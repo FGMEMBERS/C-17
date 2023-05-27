@@ -59,6 +59,7 @@
   <system name="ATTITUDE INDICATOR: C-17" file="Models/Panels/Instruments/AttitudeIndicator/AttitudeIndicator-systems.xml" />
   <system name="ALTASI: C-17" file="Models/Panels/Instruments/altasi/altasi-systems.xml" />
   <system name="GEARS LEVER: C-17" file="Models/Panels/Instruments/gearsLever/gearsLever-systems.xml" />
+  <system name="BRAKES INDICATOR: C-17" file="Models/Panels/Instruments/brakesIndicator/brakesIndicator-systems.xml" />
   
   <!--Output-->
   <output name="C-17-jsbim-output.csv" type="CSV" rate="120">
