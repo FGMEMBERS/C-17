@@ -1,0 +1,31 @@
+<?xml version="1.0"?>
+
+<!--
+    :copyright: 2023, IAHM-COL
+    License: GPLv3
+    
+    Redistribution, or reuse, with or without modifications
+    shall keep this attribution information. 
+-->
+
+<PropertyList>
+  <path>fuelLevel.ac</path>
+
+  <!-- Lightmaps-->
+  <effect>
+    <inherits-from>Models/Panels/Instruments/PanelLighting/backlighting</inherits-from>
+    <object-name>Circle</object-name>
+    <object-name>used.led</object-name>
+    <object-name>label.fuelreset</object-name>
+    <object-name>label.totalfuel</object-name>
+    <object-name>label.lbs</object-name>
+  </effect>
+  <effect>
+    <inherits-from>floodlighting</inherits-from>
+    <object-name>frame</object-name>
+    <object-name>lcd.frame</object-name>
+    <object-name>screw.hi.1</object-name>
+    <object-name>screw.hi.2</object-name>
+    <object-name>screw.low</object-name>
+  </effect>
+</PropertyList>
