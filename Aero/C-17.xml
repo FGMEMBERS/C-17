@@ -63,9 +63,6 @@
   
   <!--Output-->
   <output name="C-17-jsbim-output.csv" type="CSV" rate="120">
-    <property>/controls/gear/brake-left</property>
-    <property>/gear/gear[2]/rollspeed-ms</property>
-    <property>/velocities/groundspeed-kt</property>
     <simulation>OFF</simulation>
     <atmosphere>OFF</atmosphere>
     <massprops>OFF</massprops>
