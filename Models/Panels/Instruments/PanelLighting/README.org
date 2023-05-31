@@ -1,0 +1,75 @@
+#+TITLE: Instrument: Instrument Lights
+#+DATE: <2023-05-29 Mon>
+#+AUTHOR: David Waggoner (Skyboat)
+#+EMAIL:  dr.skyboat@gmail.com
+#+AUTHOR: Israel Hernandez (IH-COL)
+#+EMAIL:  iahmcol@thejabberwocky.net
+#+LANGUAGE: en
+
+* Introduction
+
+The dials are multifunctional, controlling the light to the panel, 
+and the instruments, as well as having an automatic setting that turns on the lights at dusk.
+
+#+CAPTION: Instrument Lights in daylight.
+#+NAME:   Figure 1: Panel and Instrument Lights in daylight.
+[[man-images/C-17-illum-Dial-Small.png]]
+ 
+#+CAPTION: Instrument Lights illuminated.
+#+NAME:   Figure 2: <Panel and Instrument Lights> with illumination turned on
+[[man-images/C-17-Illumination-Small-Night.png]]
+
+* Operation:
+
+1. The panel consists of two dials:
+	1. One is labeled "Panel" and the other is labeled "Flood."
+	2. Both dials are clearly marked where the "Off" position is.
+	3. On the right edge of the panel are the letters "INST LT", which are abbreviations for "Instrument Lights."
+2.  Both dials are dimmer switches. Turning them to the right increases the light's brightness.
+	1. The dials operate independently. They can be used in tandem or individually.
+	2. The left Panel dial controls the backlighting for the instruments.
+	3. The right flood dial controls the flood lights of the entire panel.
+	4. Turning either dial up allows the pilot to set the desired level of illumination for the circumstances.
+3.  Automatic setting.
+	1. Turning either dial to the maximum right turns on the automatic function.
+	2. In this position, the instrument and panel lights will turn on at dusk, when light drops below a certain level. 
+	3. The light also automatically turns itself off at dawn, when the natural light reaches a certain level.
+4. IRCM leds on the left of the instrument informs status of the flares
+
+** STANDARD OPERATION
+
+In most cases it is advisable during the preflight check to turn up the panel light at least half way, 
+so the changing light conditions in the sky do not interfere with one's ability to see the instruments, 
+since the light can change faster than our eyes can adjust.
+
+** FAILURE NOTICE
+
+In the event of a power loss to the aircraft, the lighting system is tied to the backup electrical power.
+
+*Location*: Left or Right of the HUDs.
+
+
+* Features: Automatic Light setting
+
+The Instrument Lights contains these separate elements:
+
+1. Two light adjusting dials
+	1. A setting for off
+	2. A setting for automatic operation in low-light or dark conditions.
+2. A face plate with backlit symbols to aid simplicity of operation.
+3. IRCM situation indicators
+
+** For more information
+
+Refer to our comments in the main C-17 README.org for additional details about the aircraft and this project.
+
+* Attributions
+
+1. The Instrument Lights were designed using Blender.  Gauge, textures, and animations by IH-COL.
+2. AI images were taken from screenshots and the prepared using GIMP.  Images prepared by David Waggoner (SkyBoat, N159A)
+
+\copy 2023, Israel Hernandez (IH-COL)
+
+\copy 2023, Text and images by David Waggoner (SkyBoat)
+
+License:  GPL version 3 or higher

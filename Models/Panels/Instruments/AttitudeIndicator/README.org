@@ -1,6 +1,12 @@
-* AI: The Attitude Indicator
+#+TITLE: AI: The Attitude Indicator
+#+DATE: <2023-05-29 Mon>
+#+AUTHOR: David Waggoner (Skyboat)
+#+EMAIL:  dr.skyboat@gmail.com
+#+AUTHOR: Israel Hernandez (IH-COL)
+#+EMAIL:  iahmcol@thejabberwocky.net
+#+LANGUAGE: en
 
-** Introduction:
+* Introduction
 
 #+CAPTION: AI in daylight
 #+NAME:   Figure 1: AI in daylight.
@@ -12,7 +18,7 @@
 
 The flightdeck of the Boeing/McDonnell Douglas C-17 Globemaster III is a very complex office in which to work.  The C-17, although it is a revolutionary heavy transport, is engineered for multiple specialties and missions, with the ability to reconfigure its hold often in a matter of hours.  Its performance has a solid global reputation for having the capacity to successefully carry out difficult missions in difficult places.  This versatile heavy transport is a vital partner in the militaries of numerous countries.
 
-** AI adjustment operation:
+* AI adjustment operation
 
 *Warning*: The aircraft must be in a level orientation to correctly adjust the gauge, whether on the ground or in flight! After uncaging, the instrument resets the horizon to the current attitude.
 
@@ -33,7 +39,7 @@ replica.  All C-17 instruments are illuminated for night operations.  See:
 
 *Location*: directly above the standby [[../altasi][altimeter/air speed indicator (Alt/ASI)]].
 
-** Features
+* Features
 
 The Attitude Indicator (sometimes called the "Artificial Horizon") contains these separate elements:
 
@@ -46,7 +52,7 @@ The Attitude Indicator (sometimes called the "Artificial Horizon") contains thes
    3. Mouse center-wheel click #2 uncages device.
 5. Caging will reset the instrument horizon
 
-** Attributions
+* Attributions
 
 1. Attitude Indicator was designed using Blender.  Gauge, textures, and animations by IH-COL.
 
