@@ -149,7 +149,7 @@ shall keep this attribution information.
   
   <!-- Lightmaps -->
   <effect>
-    <inherits-from>backlighting</inherits-from>
+    <inherits-from>Models/Panels/Instruments/PanelLighting/backlighting</inherits-from>
     <object-name>ai.sphere</object-name>
     <object-name>aircraft.indicator</object-name>
     <object-name>bank.label</object-name>
@@ -162,7 +162,7 @@ shall keep this attribution information.
     <object-name>TC.sphere</object-name>
   </effect>
   <effect>
-    <inherits-from>floodlighting</inherits-from>
+    <inherits-from>Models/Panels/Instruments/PanelLighting/floodlighting</inherits-from>
     <object-name>frame</object-name>
     <object-name>knob</object-name>
     <object-name>screw.1</object-name>

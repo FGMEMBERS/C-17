@@ -256,7 +256,7 @@
   
   <!-- Lightmaps -->
   <effect>
-    <inherits-from>backlighting</inherits-from>
+    <inherits-from>Models/Panels/Instruments/PanelLighting/backlighting</inherits-from>
     <object-name>alt.digit1</object-name>
     <object-name>alt.digit2</object-name>
     <object-name>alt.digit3</object-name>
@@ -279,7 +279,7 @@
     <object-name>mb.digit4</object-name>
   </effect>
   <effect>
-    <inherits-from>floodlighting</inherits-from>
+    <inherits-from>Models/Panels/Instruments/PanelLighting/floodlighting</inherits-from>
     <object-name>knob</object-name>
     <object-name>screw</object-name>
   </effect>

@@ -13,7 +13,7 @@
 
   <!-- Lightmaps -->
   <effect>
-    <inherits-from>floodlighting</inherits-from>
+    <inherits-from>Models/Panels/Instruments/PanelLighting/floodlighting</inherits-from>
     <object-name>limits.plackard</object-name>
   </effect>
 </PropertyList>

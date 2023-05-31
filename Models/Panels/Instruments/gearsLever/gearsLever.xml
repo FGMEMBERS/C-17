@@ -226,7 +226,7 @@
   
   <!-- Lightmaps -->
   <effect>
-    <inherits-from>backlighting</inherits-from>
+    <inherits-from>Models/Panels/Instruments/PanelLighting/backlighting</inherits-from>
     <object-name>label</object-name>
     <object-name>nose.down.led</object-name>
     <object-name>nose.transit.led</object-name>
@@ -247,7 +247,7 @@
     <object-name>warning.button</object-name>
   </effect>
   <effect>
-    <inherits-from>floodlighting</inherits-from>
+    <inherits-from>Models/Panels/Instruments/PanelLighting/floodlighting</inherits-from>
     <object-name>frame</object-name>
     <object-name>lever</object-name>
     <object-name>screws</object-name>

@@ -28,12 +28,12 @@
   
   <!-- Lightmaps -->
   <effect>
-    <inherits-from>backlighting</inherits-from>
+    <inherits-from>Models/Panels/Instruments/PanelLighting/backlighting</inherits-from>
     <object-name>face</object-name>
     <object-name>needle</object-name>
   </effect>
   <effect>
-    <inherits-from>floodlighting</inherits-from>
+    <inherits-from>Models/Panels/Instruments/PanelLighting/floodlighting</inherits-from>
     <object-name>case</object-name>
     <object-name>screw.hi</object-name>
     <object-name>screw.lo</object-name>

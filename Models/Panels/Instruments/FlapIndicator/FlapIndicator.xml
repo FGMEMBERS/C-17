@@ -88,7 +88,7 @@
   
   <!-- Lightmaps -->
   <effect>
-    <inherits-from>backlighting</inherits-from>
+    <inherits-from>Models/Panels/Instruments/PanelLighting/backlighting</inherits-from>
     <object-name>face</object-name>
     <object-name>LETransit</object-name>
     <object-name>LEExtended</object-name>
@@ -96,7 +96,7 @@
     <object-name>needleR</object-name>
   </effect>
   <effect>
-    <inherits-from>floodlighting</inherits-from>
+    <inherits-from>Models/Panels/Instruments/PanelLighting/floodlighting</inherits-from>
     <object-name>Frame</object-name>
   </effect>
 </PropertyList>

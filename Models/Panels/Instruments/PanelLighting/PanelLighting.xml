@@ -79,7 +79,7 @@
 
   <!-- Lightmaps --> 
   <effect>
-    <inherits-from>backlighting</inherits-from>
+    <inherits-from>Models/Panels/Instruments/PanelLighting/backlighting</inherits-from>
     <object-name>face</object-name>
     <object-name>flood.knob</object-name>
     <object-name>panel.knob</object-name>
