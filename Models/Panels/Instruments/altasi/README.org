@@ -1,0 +1,77 @@
+#+TITLE:  ALT-ASI: altimeter-Air Speed Indicator
+#+DATE: <2023-06-07 Thu>
+#+AUTHOR: David Waggoner (Skyboat)
+#+EMAIL:  dr.skyboat@gmail.com
+#+AUTHOR: Israel Hernandez (IH-COL)
+#+EMAIL:  iahmcol@thejabberwocky.net
+#+LANGUAGE: en
+
+* Introduction:  
+
+The Alt-ASI is a standby gauge, backing up the primary altimeter and air speed indicator guages.  
+This instrument features readings for setting the altitude pressure in both millibars (MB) and inches of Mercury (InHg).
+
+#+CAPTION: Altasi in daylight
+#+NAME:   Figure 1: <altasi> in daylight.
+[[man-images/altasi.png]]
+ 
+#+CAPTION: Altasi with illumination turned on
+#+NAME:   Figure 2: <altasi> with illumination turned on
+[[man-images/altasi-illum.png]]
+
+* Operation:
+  
+** SPECIAL INSTRUCTIONS:  
+   
+*Warning*: The Alt-ASI pressure setting must be callibrated to the local barometric pressure below transtion altitudes (TA) to obtain a reliable altitude reading.
+
+1. Verify the local barometric pressure before setting the instrument.
+2. Turn the BARO knob to set the current atmospheric pressure.	
+3. The two pressure indicators, the altitude readout and the sweep dial will all move accordingly to the correct altitude.
+4. Set the pressure to standard (1013/29.92), anytime the aircraft is flying above the Transition Altitude, by rotation of the BARO knob, or by pulling the knob, clicking on the mouse wheel.
+5. The air speed tape cannot be adjusted by the pilot.  It will automatically move when the aircraft begins to move.
+
+** FAILURE NOTICE: 
+   
+*Warning*: This device can fail if the internal workings of the gauge are damaged.
+
+For flood and backlighting see "[[../PanelLighting][Panel Lighting]]"
+
+*Location*: Two instruments for pilot and first officer located in the main instrument panel.
+
+* Features
+
+This altasi contains:
+
+1. The instrument is divided into two sections.  
+   1.The top half is the altimeter.
+   2. The lower half is the air speed indicator.
+2. The Altimeter consists of seven parts:
+   1. A dial knob with the word "BARO" used to adjust for the local atmospheric pressure.
+      + The BARO knob adusts both of the readouts automatically when turned up or down.
+      + The BARO knob sets standard pressure if pulled (middle button click)
+   2. On the left the readout is in millibars (MB)
+   3. On the right the readout is in inches of mercury (InHg).
+   4. The altimeter rose indicates a 100 feet increment, for each mark
+   5. The digital altitude readout shows four digits when below 10,000 ft. A mask covers the fifth digit until 10,000 feet is reached.
+   6. The instrument is a one-needle design.  The sweep shows the altitude per hundred feet.  The digital readout indicates the barometric altitude.
+   7. A signal NEG appears, when the pressure altitude is below 0 ft
+3. The Air Speed Indicator.
+   1. The ASI tape shows the Indicated Airspeed in Knots (KIAS).
+   2. The maximum airspeed for this instrument is 380 knots.  
+   3. The hash marks provide a visual reminder of the gauge's upper limit.  
+
+** For more information
+
+Refer to our comments in the main C-17 README.org for additional details about the aircraft and this project.
+
+* Attributions
+
+1. This altasi was designed using Blender.  Gauge, textures, and animations by IH-COL.
+2. AI images were taken from screenshots and the prepared using GIMP.  Images prepared by David Waggoner (SkyBoat, N159A)
+
+\copy 2023, Israel Hernandez (IH-COL)
+
+\copy 2023, Text and images by David Waggoner (SkyBoat)
+
+License:  GPL version 3 or higher
