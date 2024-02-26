@@ -11,6 +11,76 @@
 <PropertyList>
   <path>fuelLevel.ac</path>
 
+  <animation>
+    <type>select</type>   
+    <object-name>used.led</object-name> 
+    <condition>
+      <property>fdm/jsbsim/instruments/fuelLevel/lcd-mode</property>
+    </condition>
+  </animation>
+
+  <text>
+    <name>fuelLCD</name>
+    <font>Helvetica.txf</font>
+    <character-size type="double">0.00825</character-size>
+    <offsets>
+      <x-m>0.003124</x-m>
+      <y-m>0.008751</y-m>
+      <z-m>-0.006255</z-m>
+    </offsets>
+    <axis-alignment>yz-plane</axis-alignment>
+    <type type="string">number-value</type>
+    <format type="string">%0.0f</format>
+    <truncate type="bool">false</truncate>
+    <character-aspect-ratio type="double">0.8</character-aspect-ratio>
+    <property>fdm/jsbsim/instruments/fuelLevel/lcd</property>    
+    <alignment>right-top</alignment>
+  </text>
+
+  <animation>
+    <object-name>fuelLCD</object-name>
+    <type>material</type>
+    <emission>
+      <factor-prop>fdm/jsbsim/instruments/panel-lighting/ledlight-status</factor-prop>
+      <red>0.255</red>
+      <green>1.0</green>
+      <blue>0.10</blue>
+    </emission>
+  </animation>
+  
+  <animation>
+    <type>pick</type>
+    <object-name>used.button</object-name>
+    <object-name>used.led</object-name>
+    <action>
+      <button>0</button>
+      <binding>
+	<command>property-toggle</command>
+	<property>fdm/jsbsim/instruments/fuelLevel/lcd-mode</property>
+      </binding>
+    </action>
+  </animation>
+  
+  <animation>
+    <type>pick</type>
+    <object-name>reset.button</object-name>
+    <action>
+      <button>0</button>
+      <binding>
+	<command>property-assign</command>
+	<property>fdm/jsbsim/instruments/fuelLevel/reset-switch</property>
+	<value>1</value>
+      </binding>
+      <mod-up>
+	<binding>
+	  <command>property-assign</command>
+	  <property>fdm/jsbsim/instruments/fuelLevel/reset-switch</property>
+	  <value>0</value>
+	</binding>
+      </mod-up>
+    </action>
+  </animation>
+  
   <!-- Lightmaps-->
   <effect>
     <inherits-from>Models/Panels/Instruments/PanelLighting/backlighting</inherits-from>

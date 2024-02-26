@@ -2,78 +2,66 @@
 <?xml-stylesheet href="JSBSim.xsl" type="application/xml"?>
 
 <!--
-:copyright: 2023, IAHM-COL
+:copyright: 2024, IAHM-COL
 License: GPLv3
 
 Redistribution, or reuse, with or without modifications
 shall keep this attribution information. 
 -->
 
-<system>
-  <channel name="Brake Press">
-    <fcs_function name="instruments/brakesIndicator/brakePress-left">
-      <function>
-	<table>
-	  <independentVar>/controls/gear/brake-left</independentVar>
-	  <tableData>
-	    0.0   0.0
-	    0.1   26.0
-	    0.2   42.0
-	    0.3   75.0
-	    0.4   115.0
-	    0.5   185.0
-	    0.6   266.0
-	    0.7   412.0
-	    0.8   755.0
-	    0.9   3800.0
-	    1.0   5100.0
-	  </tableData>
-	</table>
-      </function>
-      <clipto>
-	<min>0</min>
-	<max>5000</max>
-      </clipto>
-    </fcs_function>
+<system name="Fuel Level Instrument">
+  <property value="0">instruments/fuelLevel/fuel-used-reset-mark</property>
+  <property value="0">instruments/fuelLevel/reset-switch</property>
+  <!-- lcd-mode_ 0: display total fuel, 1: display fuel used corrected-->
+  <property value="0">instruments/fuelLevel/lcd-mode</property>
+  
+  <channel name="Fuel Levels">
 
-    <fcs_function name="instruments/brakesIndicator/brakePress-right">
+    <fcs_function name="instruments/fuelLevel/fuel-used-lbs-total">
       <function>
-	<table>
-	  <independentVar>/controls/gear/brake-right</independentVar>
-	  <tableData>
-	    0.0   0.0
-	    0.1   26.0
-	    0.2   42.0
-	    0.3   75.0
-	    0.4   115.0
-	    0.5   185.0
-	    0.6   266.0
-	    0.7   412.0
-	    0.8   755.0
-	    0.9   3800.0
-	    1.0   5100.0
-	  </tableData>
-	</table>
-      </function>
-      <clipto>
-	<min>0</min>
-	<max>5000</max>
-      </clipto>
-    </fcs_function>
-
-    <fcs_function name="instruments/brakesIndicator/brakePress-max">
-      <function>
-	<max>
-	  <property>instruments/brakesIndicator/brakePress-right</property>
-	  <property>instruments/brakesIndicator/brakePress-left</property>
-	</max>
+	<sum>
+	  <property>propulsion/engine/fuel-used-lbs</property>
+	  <property>propulsion/engine[1]/fuel-used-lbs</property>
+	  <property>propulsion/engine[2]/fuel-used-lbs</property>
+	  <property>propulsion/engine[3]/fuel-used-lbs</property>
+	</sum>
       </function>
     </fcs_function>
 
-    <switch name="instruments/brakesIndicator/brakePress">
-      <default value="instruments/brakesIndicator/brakePress-max" />
-      <test value="4000">
-	/controls/gear/brake-parking EQ 1
+    <fcs_function name="instruments/fuelLevel/fuel-used-lbs-corrected">
+      <function>
+	<difference>
+	  <property>instruments/fuelLevel/fuel-used-lbs-total</property>
+	  <property>instruments/fuelLevel/fuel-used-reset-mark</property>
+	</difference>
+      </function>
+    </fcs_function>
+
+    <fcs_function name="instruments/fuelLevel/fuel-total">
+      <function>
+	<sum>
+	  <property>propulsion/tank/contents-lbs</property>
+	  <property>propulsion/tank[1]/contents-lbs</property>
+	  <property>propulsion/tank[2]/contents-lbs</property>
+	  <property>propulsion/tank[3]/contents-lbs</property>
+	  <property>propulsion/tank[4]/contents-lbs</property>
+	</sum>
+      </function>
+    </fcs_function>
+
+    <!-- Defines the fuel level used when fuel reset switch is pressed -->
+    <switch name="instruments/fuelLevel/fuel-used-reset-mark">
+      <default value="instruments/fuelLevel/fuel-used-reset-mark" />
+      <test value="instruments/fuelLevel/fuel-used-lbs-total">
+	instruments/fuelLevel/reset-switch == 1
+      </test>
+    </switch>
+
+    <!-- Defines the digits to be displayed on the lcd given the lcd mode -->
+    <switch name="instruments/fuelLevel/lcd">
+      <default value="instruments/fuelLevel/fuel-total" />
+      <test value="instruments/fuelLevel/fuel-used-lbs-corrected">
+	instruments/fuelLevel/lcd-mode == 1
       </test>
     </switch>
     

@@ -196,7 +196,7 @@
 
   <!-- Fuel Indicator -->
   <model>
-    <path>Models/Panels/Instruments/fuelLevel/fuelLevel.ac</path>
+    <path>Models/Panels/Instruments/fuelLevel/fuelLevel.xml</path>
     <offsets>
       <x-m>0.4058</x-m>
       <y-m>-0.2849</y-m>
