@@ -1,0 +1,69 @@
+<?xml version="1.0"?>
+<?xml-stylesheet href="JSBSim.xsl" type="application/xml"?>
+
+<!--
+:copyright: 2024, IAHM-COL
+License: GPLv3
+
+Redistribution, or reuse, with or without modifications
+shall keep this attribution information. 
+-->
+
+<system name="Fuel Level Instrument">
+  <property value="0">instruments/fuelLevel/fuel-used-reset-mark</property>
+  <property value="0">instruments/fuelLevel/reset-switch</property>
+  <!-- lcd-mode_ 0: display total fuel, 1: display fuel used corrected-->
+  <property value="0">instruments/fuelLevel/lcd-mode</property>
+  
+  <channel name="Fuel Levels">
+
+    <fcs_function name="instruments/fuelLevel/fuel-used-lbs-total">
+      <function>
+	<sum>
+	  <property>propulsion/engine/fuel-used-lbs</property>
+	  <property>propulsion/engine[1]/fuel-used-lbs</property>
+	  <property>propulsion/engine[2]/fuel-used-lbs</property>
+	  <property>propulsion/engine[3]/fuel-used-lbs</property>
+	</sum>
+      </function>
+    </fcs_function>
+
+    <fcs_function name="instruments/fuelLevel/fuel-used-lbs-corrected">
+      <function>
+	<difference>
+	  <property>instruments/fuelLevel/fuel-used-lbs-total</property>
+	  <property>instruments/fuelLevel/fuel-used-reset-mark</property>
+	</difference>
+      </function>
+    </fcs_function>
+
+    <fcs_function name="instruments/fuelLevel/fuel-total">
+      <function>
+	<sum>
+	  <property>propulsion/tank/contents-lbs</property>
+	  <property>propulsion/tank[1]/contents-lbs</property>
+	  <property>propulsion/tank[2]/contents-lbs</property>
+	  <property>propulsion/tank[3]/contents-lbs</property>
+	  <property>propulsion/tank[4]/contents-lbs</property>
+	</sum>
+      </function>
+    </fcs_function>
+
+    <!-- Defines the fuel level used when fuel reset switch is pressed -->
+    <switch name="instruments/fuelLevel/fuel-used-reset-mark">
+      <default value="instruments/fuelLevel/fuel-used-reset-mark" />
+      <test value="instruments/fuelLevel/fuel-used-lbs-total">
+	instruments/fuelLevel/reset-switch == 1
+      </test>
+    </switch>
+
+    <!-- Defines the digits to be displayed on the lcd given the lcd mode -->
+    <switch name="instruments/fuelLevel/lcd">
+      <default value="instruments/fuelLevel/fuel-total" />
+      <test value="instruments/fuelLevel/fuel-used-lbs-corrected">
+	instruments/fuelLevel/lcd-mode == 1
+      </test>
+    </switch>
+    
+  </channel>
+</system>

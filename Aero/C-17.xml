@@ -2,8 +2,8 @@
 <?xml-stylesheet href="JSBSim.xsl" type="application/xml"?>
 <fdm_config name="C-17 Globemaster III" version="2.0" release="BETA">
   <!--
-      :copyright: 2023, IAHM-COL
-      :copyright: 2023, David Waggoner
+      :copyright: 2024-2023, IAHM-COL
+      :copyright: 2024-2023, David Waggoner
       License: GPLv3
 
       File:     C-17.xml
@@ -60,6 +60,7 @@
   <system name="ALTASI: C-17" file="Models/Panels/Instruments/altasi/altasi-systems.xml" />
   <system name="GEARS LEVER: C-17" file="Models/Panels/Instruments/gearsLever/gearsLever-systems.xml" />
   <system name="BRAKES INDICATOR: C-17" file="Models/Panels/Instruments/brakesIndicator/brakesIndicator-systems.xml" />
+  <system name="FUEL LEVELS: C-17" file="Models/Panels/Instruments/fuelLevel/fuelLevel-systems.xml" />
   
   <!--Output-->
   <output name="C-17-jsbim-output.csv" type="CSV" rate="120">
