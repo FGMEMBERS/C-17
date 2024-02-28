@@ -61,6 +61,7 @@
   <system name="GEARS LEVER: C-17" file="Models/Panels/Instruments/gearsLever/gearsLever-systems.xml" />
   <system name="BRAKES INDICATOR: C-17" file="Models/Panels/Instruments/brakesIndicator/brakesIndicator-systems.xml" />
   <system name="FUEL LEVELS: C-17" file="Models/Panels/Instruments/fuelLevel/fuelLevel-systems.xml" />
+  <system name="FUEL LEVELS: C-17" file="Models/Panels/Instruments/digitalClock/digitalClock-systems.xml" />
   
   <!--Output-->
   <output name="C-17-jsbim-output.csv" type="CSV" rate="120">
