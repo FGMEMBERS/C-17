@@ -289,13 +289,6 @@ shall keep this attribution information.
 	</integer>
       </function>
     </fcs_function>
-
-    <switch name="instruments/digitalClock/temperature/temp">
-      <default value="instruments/digitalClock/temperature/degc"/>
-      <test value="instruments/digitalClock/temperature/degf">
-	instruments/digitalClock/temp-mode == 1
-      </test>
-    </switch>
   </channel>
 
   <channel name="Elapsed time _since engine1 started on the ground_">
@@ -508,5 +501,262 @@ shall keep this attribution information.
       </test>
     </switch>
   </channel>
-  
+
+  <!-- start-stop; 0: stop, 1: start, 2: running, 3: stopping -->
+  <property value="0">instruments/digitalClock/chrono/start-stop</property>
+  <!-- reset; 0: nil, 1: reset -->
+  <property value="0">instruments/digitalClock/chrono/reset</property>
+  <channel name="instruments/digitalClock/chrono">
+    
+    <switch name="instruments/digitalClock/chrono/elapsed-sys">
+      <default value="instruments/digitalClock/elapsed-time/elapsed-sys"/>
+    </switch>
+
+    <switch name="instruments/digitalClock/chrono/base">
+      <default value="0"/>
+      <test logic="OR" value="instruments/digitalClock/chrono/elapsed-sys">
+	instruments/digitalClock/chrono/start-stop eq 1
+	instruments/digitalClock/chrono/reset eq 1
+      </test>
+      <test logic="OR" value="instruments/digitalClock/chrono/base">
+	instruments/digitalClock/chrono/start-stop eq 2
+	instruments/digitalClock/chrono/start-stop eq 3
+      </test>
+    </switch>
+
+    <switch name="instruments/digitalClock/chrono/started">
+      <default value="0"/>
+      <test value="1">
+	instruments/digitalClock/chrono/base gt 0
+      </test>
+    </switch>
+
+    <fcs_function name="instruments/digitalClock/chrono/runnning-seconds">
+      <function>
+      	  <ifthen>
+	    <property>instruments/digitalClock/chrono/started</property>
+	    <difference>
+	      <property>instruments/digitalClock/chrono/elapsed-sys</property>
+	      <property>instruments/digitalClock/chrono/base</property>
+	    </difference>
+	    <value>0</value>
+	  </ifthen>
+      </function>
+    </fcs_function>
+
+    <switch name="instruments/digitalClock/chrono/buffer-seconds">
+      <default value="0"/>
+      <test value="0">
+	instruments/digitalClock/chrono/reset eq 1
+      </test>
+      <test logic="OR" value="instruments/digitalClock/chrono/buffer-seconds">
+	instruments/digitalClock/chrono/start-stop eq 0
+	instruments/digitalClock/chrono/start-stop eq 1
+	instruments/digitalClock/chrono/start-stop eq 2
+      </test>
+      <test value="instruments/digitalClock/chrono/chrono-seconds-float">
+	instruments/digitalClock/chrono/start-stop eq 3
+      </test>
+    </switch>
+
+    <fcs_function name="instruments/digitalClock/chrono/chrono-seconds-float">
+      <function>
+	<ifthen>
+	  <eq>
+	    <property>instruments/digitalClock/chrono/start-stop</property>
+	    <value>3</value>
+	  </eq>
+	  <property>instruments/digitalClock/chrono/chrono-seconds-float</property>
+	  <sum>
+	    <property>instruments/digitalClock/chrono/buffer-seconds</property>
+	    <property>instruments/digitalClock/chrono/runnning-seconds</property>
+	  </sum>
+	</ifthen>
+      </function>
+    </fcs_function>
+
+    <fcs_function name="instruments/digitalClock/chrono/chrono-seconds">
+      <function>
+	<integer>
+	  <property>instruments/digitalClock/chrono/chrono-seconds-float</property>
+	</integer>
+      </function>
+    </fcs_function>
+    
+    <fcs_function name="instruments/digitalClock/chrono/hrs">
+      <function>
+	<integer>
+	  <quotient>
+	    <property>instruments/digitalClock/chrono/chrono-seconds</property>
+	    <value>3600</value>
+	  </quotient>
+	</integer>
+	<clipto>
+	  <min>0</min>
+	  <max>99</max>
+	</clipto>
+      </function>
+    </fcs_function>
+
+    <fcs_function name="instruments/digitalClock/chrono/min">
+      <function>
+	<integer>
+	  <quotient>
+	    <mod>
+	      <property>instruments/digitalClock/chrono/chrono-seconds</property>
+	      <value>3600</value>
+	    </mod>
+	    <value>60</value>
+	  </quotient>
+	</integer>
+      </function>
+    </fcs_function>
+
+    <fcs_function name="instruments/digitalClock/chrono/sec">
+      <function>
+	<mod>
+	  <mod>
+	    <property>instruments/digitalClock/chrono/chrono-seconds</property>
+	    <value>3600</value>
+	  </mod>
+	  <value>60</value>
+	</mod>
+      </function>
+    </fcs_function>
+    
+    <!--digits -->
+    <fcs_function name="instruments/digitalClock/chrono/digits/hrs-10">
+      <function>
+	<integer>
+	  <quotient>
+	    <property>instruments/digitalClock/chrono/hrs</property>
+	    <value>10</value>
+	  </quotient>
+	</integer>
+      </function>
+    </fcs_function>
+
+    <fcs_function name="instruments/digitalClock/chrono/digits/hrs-1">
+      <function>
+	<mod>
+	  <property>instruments/digitalClock/chrono/hrs</property>
+	  <value>10</value>
+	</mod>
+      </function>
+    </fcs_function>
+
+    <fcs_function name="instruments/digitalClock/chrono/digits/min-10">
+      <function>
+	<integer>
+	  <quotient>
+	    <property>instruments/digitalClock/chrono/min</property>
+	    <value>10</value>
+	  </quotient>
+	</integer>
+      </function>
+    </fcs_function>
+
+    <fcs_function name="instruments/digitalClock/chrono/digits/min-1">
+      <function>
+	<mod>
+	  <property>instruments/digitalClock/chrono/min</property>
+	  <value>10</value>
+	</mod>
+      </function>
+    </fcs_function>
+
+    <!-- seconds needle rotation in degrees-->
+    <fcs_function name="instruments/digitalClock/chrono/sec-deg">
+      <function>
+	<product>
+	  <property>instruments/digitalClock/chrono/sec</property>
+	  <value>6</value>
+	</product>
+      </function>
+    </fcs_function>
+
+  </channel>
+
+  <!-- mode selector defined lcd output -->
+  <channel name="LCD">
+    <switch name="instruments/digitalClock/LCD/temp">
+      <default value="instruments/digitalClock/temperature/degc"/>
+      <test value="instruments/digitalClock/temperature/degf">
+	instruments/digitalClock/temp-mode == 1
+      </test>
+    </switch>
+
+    <switch name="instruments/digitalClock/LCD/digits/hrs-10">
+      <default value="instruments/digitalClock/utc/digits/hrs-10"/>
+      <test value="instruments/digitalClock/local-time/digits/hrs-10">
+	instruments/digitalClock/clock-mode eq 1
+      </test>
+      <test value="instruments/digitalClock/elapsed-time/digits/hrs-10">
+	instruments/digitalClock/clock-mode eq 2
+      </test>
+      <test value="instruments/digitalClock/chrono/digits/hrs-10">
+	instruments/digitalClock/clock-mode eq 3
+      </test>
+    </switch>
+
+    <switch name="instruments/digitalClock/LCD/digits/hrs-1">
+      <default value="instruments/digitalClock/utc/digits/hrs-1"/>
+      <test value="instruments/digitalClock/local-time/digits/hrs-1">
+	instruments/digitalClock/clock-mode eq 1
+      </test>
+      <test value="instruments/digitalClock/elapsed-time/digits/hrs-1">
+	instruments/digitalClock/clock-mode eq 2
+      </test>
+      <test value="instruments/digitalClock/chrono/digits/hrs-1">
+	instruments/digitalClock/clock-mode eq 3
+      </test>
+    </switch>
+
+    <switch name="instruments/digitalClock/LCD/digits/min-10">
+      <default value="instruments/digitalClock/utc/digits/min-10"/>
+      <test value="instruments/digitalClock/local-time/digits/min-10">
+	instruments/digitalClock/clock-mode eq 1
+      </test>
+      <test value="instruments/digitalClock/elapsed-time/digits/min-10">
+	instruments/digitalClock/clock-mode eq 2
+      </test>
+      <test value="instruments/digitalClock/chrono/digits/min-10">
+	instruments/digitalClock/clock-mode eq 3
+      </test>
+    </switch>
+
+    <switch name="instruments/digitalClock/LCD/digits/min-1">
+      <default value="instruments/digitalClock/utc/digits/min-1"/>
+      <test value="instruments/digitalClock/local-time/digits/min-1">
+	instruments/digitalClock/clock-mode eq 1
+      </test>
+      <test value="instruments/digitalClock/elapsed-time/digits/min-1">
+	instruments/digitalClock/clock-mode eq 2
+      </test>
+      <test value="instruments/digitalClock/chrono/digits/min-1">
+	instruments/digitalClock/clock-mode eq 3
+      </test>
+    </switch>
+
+    <switch name="instruments/digitalClock/LCD/sec-deg">
+      <default value="instruments/digitalClock/utc/sec-deg"/>
+      <test value="instruments/digitalClock/local-time/sec-deg">
+	instruments/digitalClock/clock-mode eq 1
+      </test>
+      <test value="instruments/digitalClock/elapsed-time/sec-deg">
+	instruments/digitalClock/clock-mode eq 2
+      </test>
+      <test value="instruments/digitalClock/chrono/sec-deg">
+	instruments/digitalClock/clock-mode eq 3
+      </test>
+    </switch>
+
+    <switch name="instruments/digitalClock/LCD/am">
+      <default value="instruments/digitalClock/utc/am"/>
+      <test value="instruments/digitalClock/local-time/am">
+	instruments/digitalClock/clock-mode eq 1
+      </test>
+    </switch>
+
+  </channel>
 </system>
