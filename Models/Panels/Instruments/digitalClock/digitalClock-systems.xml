@@ -139,7 +139,7 @@ shall keep this attribution information.
       <function>
 	<product>
 	  <property>instruments/digitalClock/utc/sec</property>
-	  <value>6</value>
+	  <value>-6</value>
 	</product>
       </function>
     </fcs_function>
@@ -267,7 +267,7 @@ shall keep this attribution information.
       <function>
 	<product>
 	  <property>instruments/digitalClock/local-time/sec</property>
-	  <value>6</value>
+	  <value>-6</value>
 	</product>
       </function>
     </fcs_function>
@@ -417,7 +417,7 @@ shall keep this attribution information.
       <function>
 	<product>
 	  <property>instruments/digitalClock/elapsed-time/sec</property>
-	  <value>6</value>
+	  <value>-6</value>
 	</product>
       </function>
     </fcs_function>
@@ -670,7 +670,7 @@ shall keep this attribution information.
       <function>
 	<product>
 	  <property>instruments/digitalClock/chrono/sec</property>
-	  <value>6</value>
+	  <value>-6</value>
 	</product>
       </function>
     </fcs_function>
