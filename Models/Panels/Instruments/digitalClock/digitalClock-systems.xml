@@ -1,0 +1,762 @@
+<?xml version="1.0"?>
+<?xml-stylesheet href="JSBSim.xsl" type="application/xml"?>
+
+<!--
+:copyright: 2024, IAHM-COL
+License: GPLv3
+
+Redistribution, or reuse, with or without modifications
+shall keep this attribution information. 
+-->
+
+<system name="Digital Clock and Chron">
+  <!-- time-mode; 0: 24h, 1: am-pm-->
+  <property value="0">instruments/digitalClock/time-mode</property>
+  <!-- clock-mode; 0: UTC time, 1: Local Time, 2: Elapsed Time, 3: Chronometer -->
+  <property value="0">instruments/digitalClock/clock-mode</property>
+  <!-- temp mode; 0: Celsius, 1: Farenheit -->
+  <property value="0">instruments/digitalClock/temp-mode</property>
+
+  <channel name="UTC">
+    <switch name="instruments/digitalClock/utc/day-seconds">
+      <default value="/sim/time/utc/day-seconds"/>
+    </switch>
+
+    <fcs_function name="instruments/digitalClock/utc/h-24">
+      <function>
+	<integer>
+	  <quotient>
+	    <property>instruments/digitalClock/utc/day-seconds</property>
+	    <value>3600</value>
+	  </quotient>
+	</integer>
+      </function>
+    </fcs_function>
+    
+    <fcs_function name="instruments/digitalClock/utc/h-am">
+      <function>
+	<ifthen>
+	  <property>instruments/digitalClock/utc/am</property>
+	  <property>instruments/digitalClock/utc/h-24</property>
+	  <difference>
+	    <property>instruments/digitalClock/utc/h-24</property>
+	    <value>12</value>
+	  </difference>
+	</ifthen>
+      </function>
+    </fcs_function>
+
+    <!-- am; 1: am, 0:pm -->
+    <fcs_function name="instruments/digitalClock/utc/am">
+      <function>
+	<ifthen>
+	  <gt>
+	    <property>instruments/digitalClock/utc/h-24</property>
+	    <value>12</value>
+	  </gt>
+	  <value>0</value>
+	  <value>1</value>
+	</ifthen>
+      </function>
+    </fcs_function>
+    
+    <switch name="instruments/digitalClock/utc/hrs">
+      <default value="instruments/digitalClock/utc/h-24"/>
+      <test value="instruments/digitalClock/utc/h-am">
+	instruments/digitalClock/time-mode == 1
+      </test>
+    </switch>
+
+    <fcs_function name="instruments/digitalClock/utc/min">
+      <function>
+	<integer>
+	  <quotient>
+	    <mod>
+	      <property>instruments/digitalClock/utc/day-seconds</property>
+	      <value>3600</value>
+	    </mod>
+	    <value>60</value>
+	  </quotient>
+	</integer>
+      </function>
+    </fcs_function>
+
+    <fcs_function name="instruments/digitalClock/utc/sec">
+      <function>
+	<mod>
+	  <mod>
+	    <property>instruments/digitalClock/utc/day-seconds</property>
+	    <value>3600</value>
+	  </mod>
+	  <value>60</value>
+	</mod>
+      </function>
+    </fcs_function>
+
+    <!--digits -->
+    <fcs_function name="instruments/digitalClock/utc/digits/hrs-10">
+      <function>
+	<integer>
+	  <quotient>
+	    <property>instruments/digitalClock/utc/hrs</property>
+	    <value>10</value>
+	  </quotient>
+	</integer>
+      </function>
+    </fcs_function>
+
+    <fcs_function name="instruments/digitalClock/utc/digits/hrs-1">
+      <function>
+	<mod>
+	  <property>instruments/digitalClock/utc/hrs</property>
+	  <value>10</value>
+	</mod>
+      </function>
+    </fcs_function>
+
+    <fcs_function name="instruments/digitalClock/utc/digits/min-10">
+      <function>
+	<integer>
+	  <quotient>
+	    <property>instruments/digitalClock/utc/min</property>
+	    <value>10</value>
+	  </quotient>
+	</integer>
+      </function>
+    </fcs_function>
+
+    <fcs_function name="instruments/digitalClock/utc/digits/min-1">
+      <function>
+	<mod>
+	  <property>instruments/digitalClock/utc/min</property>
+	  <value>10</value>
+	</mod>
+      </function>
+    </fcs_function>
+
+    <!-- seconds needle rotation in degrees-->
+    <fcs_function name="instruments/digitalClock/utc/sec-deg">
+      <function>
+	<product>
+	  <property>instruments/digitalClock/utc/sec</property>
+	  <value>-6</value>
+	</product>
+      </function>
+    </fcs_function>
+  </channel>
+
+  <channel name="LocalTime">
+    <switch name="instruments/digitalClock/local-time/day-seconds">
+      <default value="/sim/time/local-day-seconds"/>
+    </switch>
+
+    <fcs_function name="instruments/digitalClock/local-time/h-24">
+      <function>
+	<integer>
+	  <quotient>
+	    <property>instruments/digitalClock/local-time/day-seconds</property>
+	    <value>3600</value>
+	  </quotient>
+	</integer>
+      </function>
+    </fcs_function>
+    
+    <fcs_function name="instruments/digitalClock/local-time/h-am">
+      <function>
+	<ifthen>
+	  <property>instruments/digitalClock/local-time/am</property>
+	  <property>instruments/digitalClock/local-time/h-24</property>
+	  <difference>
+	    <property>instruments/digitalClock/local-time/h-24</property>
+	    <value>12</value>
+	  </difference>
+	</ifthen>
+      </function>
+    </fcs_function>
+
+    <!-- am; 1: am, 0:pm -->
+    <fcs_function name="instruments/digitalClock/local-time/am">
+      <function>
+	<ifthen>
+	  <gt>
+	    <property>instruments/digitalClock/local-time/h-24</property>
+	    <value>12</value>
+	  </gt>
+	  <value>0</value>
+	  <value>1</value>
+	</ifthen>
+      </function>
+    </fcs_function>
+    
+    <switch name="instruments/digitalClock/local-time/hrs">
+      <default value="instruments/digitalClock/local-time/h-24"/>
+      <test value="instruments/digitalClock/local-time/h-am">
+	instruments/digitalClock/time-mode == 1
+      </test>
+    </switch>
+
+    <fcs_function name="instruments/digitalClock/local-time/min">
+      <function>
+	<integer>
+	  <quotient>
+	    <mod>
+	      <property>instruments/digitalClock/local-time/day-seconds</property>
+	      <value>3600</value>
+	    </mod>
+	    <value>60</value>
+	  </quotient>
+	</integer>
+      </function>
+    </fcs_function>
+
+    <fcs_function name="instruments/digitalClock/local-time/sec">
+      <function>
+	<mod>
+	  <mod>
+	    <property>instruments/digitalClock/local-time/day-seconds</property>
+	    <value>3600</value>
+	  </mod>
+	  <value>60</value>
+	</mod>
+      </function>
+    </fcs_function>
+
+    <!--digits -->
+    <fcs_function name="instruments/digitalClock/local-time/digits/hrs-10">
+      <function>
+	<integer>
+	  <quotient>
+	    <property>instruments/digitalClock/local-time/hrs</property>
+	    <value>10</value>
+	  </quotient>
+	</integer>
+      </function>
+    </fcs_function>
+
+    <fcs_function name="instruments/digitalClock/local-time/digits/hrs-1">
+      <function>
+	<mod>
+	  <property>instruments/digitalClock/local-time/hrs</property>
+	  <value>10</value>
+	</mod>
+      </function>
+    </fcs_function>
+
+    <fcs_function name="instruments/digitalClock/local-time/digits/min-10">
+      <function>
+	<integer>
+	  <quotient>
+	    <property>instruments/digitalClock/local-time/min</property>
+	    <value>10</value>
+	  </quotient>
+	</integer>
+      </function>
+    </fcs_function>
+
+    <fcs_function name="instruments/digitalClock/local-time/digits/min-1">
+      <function>
+	<mod>
+	  <property>instruments/digitalClock/local-time/min</property>
+	  <value>10</value>
+	</mod>
+      </function>
+    </fcs_function>
+
+    <!-- seconds needle rotation in degrees-->
+    <fcs_function name="instruments/digitalClock/local-time/sec-deg">
+      <function>
+	<product>
+	  <property>instruments/digitalClock/local-time/sec</property>
+	  <value>-6</value>
+	</product>
+      </function>
+    </fcs_function>
+  </channel>
+
+  <channel name="Temperature">
+    <fcs_function name="instruments/digitalClock/temperature/degc">
+      <function>
+	<integer>
+	  <property>/environment/temperature-degc</property>
+	</integer>
+      </function>
+    </fcs_function>
+
+    <fcs_function name="instruments/digitalClock/temperature/degf">
+      <function>
+	<integer>
+	  <property>/environment/temperature-degf</property>
+	</integer>
+      </function>
+    </fcs_function>
+  </channel>
+
+  <channel name="Elapsed time _since engine1 started on the ground_">
+    <!-- Start counter once any engine is started _in the ground_ -->
+    <switch name="instruments/digitalClock/elapsed-time/base">
+      <default value="0"/>
+      <test value="instruments/digitalClock/elapsed-time/base">
+	instruments/digitalClock/elapsed-time/started eq 1
+      </test>
+      <test logic="AND" value="instruments/digitalClock/elapsed-time/elapsed-sys">
+	instruments/digitalClock/elapsed-time/started eq 0
+	instruments/digitalClock/elapsed-time/engine-signal/signal eq 1	
+      </test>
+    </switch>
+    
+    <switch name="instruments/digitalClock/elapsed-time/elapsed-sys">
+      <default value="/sim/time/elapsed-sec"/>
+    </switch>
+
+    <switch name="instruments/digitalClock/elapsed-time/started">
+      <default value="0"/>
+      <test value="1">
+	instruments/digitalClock/elapsed-time/base gt 0
+      </test>
+    </switch>
+
+    <fcs_function name="instruments/digitalClock/elapsed-time/elapsed-seconds">
+      <function>
+	<integer>
+      	  <ifthen>
+	    <property>instruments/digitalClock/elapsed-time/started</property>
+	    <difference>
+	      <property>instruments/digitalClock/elapsed-time/elapsed-sys</property>
+	      <property>instruments/digitalClock/elapsed-time/base</property>
+	    </difference>
+	    <value>0</value>
+	  </ifthen>
+	</integer>
+      </function>
+    </fcs_function>
+
+    <fcs_function name="instruments/digitalClock/elapsed-time/hrs">
+      <function>
+	<integer>
+	  <quotient>
+	    <property>instruments/digitalClock/elapsed-time/elapsed-seconds</property>
+	    <value>3600</value>
+	  </quotient>
+	</integer>
+	<clipto>
+	  <min>0</min>
+	  <max>99</max>
+	</clipto>
+      </function>
+    </fcs_function>
+
+    <fcs_function name="instruments/digitalClock/elapsed-time/min">
+      <function>
+	<integer>
+	  <quotient>
+	    <mod>
+	      <property>instruments/digitalClock/elapsed-time/elapsed-seconds</property>
+	      <value>3600</value>
+	    </mod>
+	    <value>60</value>
+	  </quotient>
+	</integer>
+      </function>
+    </fcs_function>
+
+    <fcs_function name="instruments/digitalClock/elapsed-time/sec">
+      <function>
+	<mod>
+	  <mod>
+	    <property>instruments/digitalClock/elapsed-time/elapsed-seconds</property>
+	    <value>3600</value>
+	  </mod>
+	  <value>60</value>
+	</mod>
+      </function>
+    </fcs_function>
+
+    <!--digits -->
+    <fcs_function name="instruments/digitalClock/elapsed-time/digits/hrs-10">
+      <function>
+	<integer>
+	  <quotient>
+	    <property>instruments/digitalClock/elapsed-time/hrs</property>
+	    <value>10</value>
+	  </quotient>
+	</integer>
+      </function>
+    </fcs_function>
+
+    <fcs_function name="instruments/digitalClock/elapsed-time/digits/hrs-1">
+      <function>
+	<mod>
+	  <property>instruments/digitalClock/elapsed-time/hrs</property>
+	  <value>10</value>
+	</mod>
+      </function>
+    </fcs_function>
+
+    <fcs_function name="instruments/digitalClock/elapsed-time/digits/min-10">
+      <function>
+	<integer>
+	  <quotient>
+	    <property>instruments/digitalClock/elapsed-time/min</property>
+	    <value>10</value>
+	  </quotient>
+	</integer>
+      </function>
+    </fcs_function>
+
+    <fcs_function name="instruments/digitalClock/elapsed-time/digits/min-1">
+      <function>
+	<mod>
+	  <property>instruments/digitalClock/elapsed-time/min</property>
+	  <value>10</value>
+	</mod>
+      </function>
+    </fcs_function>
+
+    <!-- seconds needle rotation in degrees-->
+    <fcs_function name="instruments/digitalClock/elapsed-time/sec-deg">
+      <function>
+	<product>
+	  <property>instruments/digitalClock/elapsed-time/sec</property>
+	  <value>-6</value>
+	</product>
+      </function>
+    </fcs_function>
+    
+  </channel>
+
+  <channel name="Engine starting monitor execrated" execrate="500">
+    <switch name="instruments/digitalClock/elapsed-time/engine-signal/engine/running-execrated">
+      <default value="/engines/engine/running"/>
+    </switch>
+
+    <switch name="instruments/digitalClock/elapsed-time/engine-signal/engine[1]/running-execrated">
+      <default value="/engines/engine[1]/running"/>
+    </switch>
+
+    <switch name="instruments/digitalClock/elapsed-time/engine-signal/engine[2]/running-execrated">
+      <default value="/engines/engine[2]/running"/>
+    </switch>
+
+    <switch name="instruments/digitalClock/elapsed-time/engine-signal/engine[3]/running-execrated">
+      <default value="/engines/engine[3]/running"/>
+    </switch>
+  </channel>
+
+  <channel name="Engine starting monitor non-execrated">
+    <switch name="instruments/digitalClock/elapsed-time/engine-signal/engine/running">
+      <default value="/engines/engine/running"/>
+    </switch>
+
+    <switch name="instruments/digitalClock/elapsed-time/engine-signal/engine[1]/running">
+      <default value="/engines/engine[1]/running"/>
+    </switch>
+
+    <switch name="instruments/digitalClock/elapsed-time/engine-signal/engine[2]/running">
+      <default value="/engines/engine[2]/running"/>
+    </switch>
+
+    <switch name="instruments/digitalClock/elapsed-time/engine-signal/engine[3]/running">
+      <default value="/engines/engine[3]/running"/>
+    </switch>
+
+    <switch name="instruments/digitalClock/elapsed-time/engine-signal/engine/signal">
+      <default value="0"/>
+      <test logic="AND" value="1">
+	instruments/digitalClock/elapsed-time/engine-signal/engine/running-execrated ne instruments/digitalClock/elapsed-time/engine-signal/engine/running
+	gear/wow == 1
+      </test>
+    </switch>
+
+    <switch name="instruments/digitalClock/elapsed-time/engine-signal/engine[1]/signal">
+      <default value="0"/>
+      <test logic="AND" value="1">
+	instruments/digitalClock/elapsed-time/engine-signal/engine[1]/running-execrated ne instruments/digitalClock/elapsed-time/engine-signal/engine[1]/running
+	gear/wow == 1
+      </test>
+    </switch>
+
+    <switch name="instruments/digitalClock/elapsed-time/engine-signal/engine[2]/signal">
+      <default value="0"/>
+      <test logic="AND" value="1">
+	instruments/digitalClock/elapsed-time/engine-signal/engine[2]/running-execrated ne instruments/digitalClock/elapsed-time/engine-signal/engine[2]/running
+	gear/wow == 1
+      </test>
+    </switch>
+
+    <switch name="instruments/digitalClock/elapsed-time/engine-signal/engine[3]/signal">
+      <default value="0"/>
+      <test logic="AND" value="1">
+	instruments/digitalClock/elapsed-time/engine-signal/engine[3]/running-execrated ne instruments/digitalClock/elapsed-time/engine-signal/engine[3]/running
+	gear/wow == 1
+      </test>
+    </switch>
+
+    <switch name="instruments/digitalClock/elapsed-time/engine-signal/signal">
+     <default value="0"/>
+      <test logic="OR" value="1">
+	instruments/digitalClock/elapsed-time/engine-signal/engine/signal eq 1
+	instruments/digitalClock/elapsed-time/engine-signal/engine[1]/signal eq 1
+	instruments/digitalClock/elapsed-time/engine-signal/engine[2]/signal eq 1
+	instruments/digitalClock/elapsed-time/engine-signal/engine[3]/signal eq 1
+      </test>
+    </switch>
+  </channel>
+
+  <!-- start-stop; 0: stop, 1: start, 2: running, 3: stopping -->
+  <property value="0">instruments/digitalClock/chrono/start-stop</property>
+  <!-- reset; 0: nil, 1: reset -->
+  <property value="0">instruments/digitalClock/chrono/reset</property>
+  <channel name="instruments/digitalClock/chrono">
+    
+    <switch name="instruments/digitalClock/chrono/elapsed-sys">
+      <default value="instruments/digitalClock/elapsed-time/elapsed-sys"/>
+    </switch>
+
+    <switch name="instruments/digitalClock/chrono/base">
+      <default value="0"/>
+      <test logic="OR" value="instruments/digitalClock/chrono/elapsed-sys">
+	instruments/digitalClock/chrono/start-stop eq 1
+	instruments/digitalClock/chrono/reset eq 1
+      </test>
+      <test logic="OR" value="instruments/digitalClock/chrono/base">
+	instruments/digitalClock/chrono/start-stop eq 2
+	instruments/digitalClock/chrono/start-stop eq 3
+      </test>
+    </switch>
+
+    <switch name="instruments/digitalClock/chrono/started">
+      <default value="0"/>
+      <test value="1">
+	instruments/digitalClock/chrono/base gt 0
+      </test>
+    </switch>
+
+    <fcs_function name="instruments/digitalClock/chrono/runnning-seconds">
+      <function>
+      	  <ifthen>
+	    <property>instruments/digitalClock/chrono/started</property>
+	    <difference>
+	      <property>instruments/digitalClock/chrono/elapsed-sys</property>
+	      <property>instruments/digitalClock/chrono/base</property>
+	    </difference>
+	    <value>0</value>
+	  </ifthen>
+      </function>
+    </fcs_function>
+
+    <switch name="instruments/digitalClock/chrono/buffer-seconds">
+      <default value="0"/>
+      <test value="0">
+	instruments/digitalClock/chrono/reset eq 1
+      </test>
+      <test logic="OR" value="instruments/digitalClock/chrono/buffer-seconds">
+	instruments/digitalClock/chrono/start-stop eq 0
+	instruments/digitalClock/chrono/start-stop eq 1
+	instruments/digitalClock/chrono/start-stop eq 2
+      </test>
+      <test value="instruments/digitalClock/chrono/chrono-seconds-float">
+	instruments/digitalClock/chrono/start-stop eq 3
+      </test>
+    </switch>
+
+    <fcs_function name="instruments/digitalClock/chrono/chrono-seconds-float">
+      <function>
+	<ifthen>
+	  <eq>
+	    <property>instruments/digitalClock/chrono/start-stop</property>
+	    <value>3</value>
+	  </eq>
+	  <property>instruments/digitalClock/chrono/chrono-seconds-float</property>
+	  <sum>
+	    <property>instruments/digitalClock/chrono/buffer-seconds</property>
+	    <property>instruments/digitalClock/chrono/runnning-seconds</property>
+	  </sum>
+	</ifthen>
+      </function>
+    </fcs_function>
+
+    <fcs_function name="instruments/digitalClock/chrono/chrono-seconds">
+      <function>
+	<integer>
+	  <property>instruments/digitalClock/chrono/chrono-seconds-float</property>
+	</integer>
+      </function>
+    </fcs_function>
+    
+    <fcs_function name="instruments/digitalClock/chrono/hrs">
+      <function>
+	<integer>
+	  <quotient>
+	    <property>instruments/digitalClock/chrono/chrono-seconds</property>
+	    <value>3600</value>
+	  </quotient>
+	</integer>
+	<clipto>
+	  <min>0</min>
+	  <max>99</max>
+	</clipto>
+      </function>
+    </fcs_function>
+
+    <fcs_function name="instruments/digitalClock/chrono/min">
+      <function>
+	<integer>
+	  <quotient>
+	    <mod>
+	      <property>instruments/digitalClock/chrono/chrono-seconds</property>
+	      <value>3600</value>
+	    </mod>
+	    <value>60</value>
+	  </quotient>
+	</integer>
+      </function>
+    </fcs_function>
+
+    <fcs_function name="instruments/digitalClock/chrono/sec">
+      <function>
+	<mod>
+	  <mod>
+	    <property>instruments/digitalClock/chrono/chrono-seconds</property>
+	    <value>3600</value>
+	  </mod>
+	  <value>60</value>
+	</mod>
+      </function>
+    </fcs_function>
+    
+    <!--digits -->
+    <fcs_function name="instruments/digitalClock/chrono/digits/hrs-10">
+      <function>
+	<integer>
+	  <quotient>
+	    <property>instruments/digitalClock/chrono/hrs</property>
+	    <value>10</value>
+	  </quotient>
+	</integer>
+      </function>
+    </fcs_function>
+
+    <fcs_function name="instruments/digitalClock/chrono/digits/hrs-1">
+      <function>
+	<mod>
+	  <property>instruments/digitalClock/chrono/hrs</property>
+	  <value>10</value>
+	</mod>
+      </function>
+    </fcs_function>
+
+    <fcs_function name="instruments/digitalClock/chrono/digits/min-10">
+      <function>
+	<integer>
+	  <quotient>
+	    <property>instruments/digitalClock/chrono/min</property>
+	    <value>10</value>
+	  </quotient>
+	</integer>
+      </function>
+    </fcs_function>
+
+    <fcs_function name="instruments/digitalClock/chrono/digits/min-1">
+      <function>
+	<mod>
+	  <property>instruments/digitalClock/chrono/min</property>
+	  <value>10</value>
+	</mod>
+      </function>
+    </fcs_function>
+
+    <!-- seconds needle rotation in degrees-->
+    <fcs_function name="instruments/digitalClock/chrono/sec-deg">
+      <function>
+	<product>
+	  <property>instruments/digitalClock/chrono/sec</property>
+	  <value>-6</value>
+	</product>
+      </function>
+    </fcs_function>
+
+  </channel>
+
+  <!-- mode selector defined lcd output -->
+  <channel name="LCD">
+    <switch name="instruments/digitalClock/LCD/temp">
+      <default value="instruments/digitalClock/temperature/degc"/>
+      <test value="instruments/digitalClock/temperature/degf">
+	instruments/digitalClock/temp-mode == 1
+      </test>
+    </switch>
+
+    <switch name="instruments/digitalClock/LCD/digits/hrs-10">
+      <default value="instruments/digitalClock/utc/digits/hrs-10"/>
+      <test value="instruments/digitalClock/local-time/digits/hrs-10">
+	instruments/digitalClock/clock-mode eq 1
+      </test>
+      <test value="instruments/digitalClock/elapsed-time/digits/hrs-10">
+	instruments/digitalClock/clock-mode eq 2
+      </test>
+      <test value="instruments/digitalClock/chrono/digits/hrs-10">
+	instruments/digitalClock/clock-mode eq 3
+      </test>
+    </switch>
+
+    <switch name="instruments/digitalClock/LCD/digits/hrs-1">
+      <default value="instruments/digitalClock/utc/digits/hrs-1"/>
+      <test value="instruments/digitalClock/local-time/digits/hrs-1">
+	instruments/digitalClock/clock-mode eq 1
+      </test>
+      <test value="instruments/digitalClock/elapsed-time/digits/hrs-1">
+	instruments/digitalClock/clock-mode eq 2
+      </test>
+      <test value="instruments/digitalClock/chrono/digits/hrs-1">
+	instruments/digitalClock/clock-mode eq 3
+      </test>
+    </switch>
+
+    <switch name="instruments/digitalClock/LCD/digits/min-10">
+      <default value="instruments/digitalClock/utc/digits/min-10"/>
+      <test value="instruments/digitalClock/local-time/digits/min-10">
+	instruments/digitalClock/clock-mode eq 1
+      </test>
+      <test value="instruments/digitalClock/elapsed-time/digits/min-10">
+	instruments/digitalClock/clock-mode eq 2
+      </test>
+      <test value="instruments/digitalClock/chrono/digits/min-10">
+	instruments/digitalClock/clock-mode eq 3
+      </test>
+    </switch>
+
+    <switch name="instruments/digitalClock/LCD/digits/min-1">
+      <default value="instruments/digitalClock/utc/digits/min-1"/>
+      <test value="instruments/digitalClock/local-time/digits/min-1">
+	instruments/digitalClock/clock-mode eq 1
+      </test>
+      <test value="instruments/digitalClock/elapsed-time/digits/min-1">
+	instruments/digitalClock/clock-mode eq 2
+      </test>
+      <test value="instruments/digitalClock/chrono/digits/min-1">
+	instruments/digitalClock/clock-mode eq 3
+      </test>
+    </switch>
+
+    <switch name="instruments/digitalClock/LCD/sec-deg">
+      <default value="instruments/digitalClock/utc/sec-deg"/>
+      <test value="instruments/digitalClock/local-time/sec-deg">
+	instruments/digitalClock/clock-mode eq 1
+      </test>
+      <test value="instruments/digitalClock/elapsed-time/sec-deg">
+	instruments/digitalClock/clock-mode eq 2
+      </test>
+      <test value="instruments/digitalClock/chrono/sec-deg">
+	instruments/digitalClock/clock-mode eq 3
+      </test>
+    </switch>
+
+    <switch name="instruments/digitalClock/LCD/am">
+      <default value="instruments/digitalClock/utc/am"/>
+      <test value="instruments/digitalClock/local-time/am">
+	instruments/digitalClock/clock-mode eq 1
+      </test>
+    </switch>
+
+  </channel>
+</system>

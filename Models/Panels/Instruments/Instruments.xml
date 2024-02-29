@@ -204,6 +204,28 @@
       <pitch-deg>-6</pitch-deg>
     </offsets>
   </model>
+
+  <!-- Digital Clocks -->
+  <model>
+    <path>Models/Panels/Instruments/digitalClock/digitalClock.xml</path>
+    <offsets>
+      <x-m>0.40480</x-m>
+      <y-m>-0.60489</y-m>
+      <z-m>0.90685</z-m>
+      <pitch-deg>-6</pitch-deg>
+    </offsets>
+  </model>
+
+  <model>
+    <path>Models/Panels/Instruments/digitalClock/digitalClock.xml</path>
+    <offsets>
+      <x-m>0.40316</x-m>
+      <y-m>0.52977</y-m>
+      <z-m>0.91038</z-m>
+      <pitch-deg>-6</pitch-deg>
+    </offsets>
+  </model>
+
   
   <!--
   <model>
@@ -292,24 +314,12 @@
   -->
 
   <model>
-    <name>fo-CLOCK</name>
-    <path>Models/Panels/Instruments/Clock/chronometer.xml</path>
-    <offsets>
-      <x-m>0.341</x-m>
-      <y-m>0.6</y-m>
-      <z-m>0.925</z-m>
-      <pitch-deg>0</pitch-deg>
-    </offsets>
-  </model>
-
-
-  <model>
     <name>STANDBY-VOR</name>
     <path>Models/Panels/Instruments/STANDBY/vor.xml</path>
     <offsets>
-      <x-m>0.407</x-m>
-      <y-m>-0.632</y-m>
-      <z-m>0.89</z-m>
+      <x-m>0.3866</x-m>
+      <y-m>-0.61377</y-m>
+      <z-m>0.84657</z-m>
       <pitch-deg>-6</pitch-deg>
     </offsets>
   </model>
@@ -318,9 +328,9 @@
     <name>STANDBY-VOR2</name>
     <path>Models/Panels/Instruments/STANDBY/vor.xml</path>
     <offsets>
-      <x-m>0.407</x-m>
-      <y-m>0.632</y-m>
-      <z-m>0.89</z-m>
+      <x-m>0.3866</x-m>
+      <y-m>0.5374</y-m>
+      <z-m>0.8542</z-m>
       <pitch-deg>-6</pitch-deg>
     </offsets>
   </model>

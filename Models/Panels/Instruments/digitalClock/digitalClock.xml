@@ -1,0 +1,539 @@
+<?xml version="1.0"?>
+
+<!--
+    :copyright: 2023, IAHM-COL
+    License: GPLv3
+    
+    Redistribution, or reuse, with or without modifications
+    shall keep this attribution information. 
+-->
+
+<PropertyList>
+  <path>digitalClock.ac</path>
+
+    <text>
+    <name>hrs10</name>
+    <font>lcd.txf</font>
+    <character-size type="double">0.00525</character-size>
+    <offsets>
+      <x-m>0.002109</x-m>
+      <y-m>-0.005539</y-m>
+      <z-m>0.004517</z-m>
+    </offsets>
+    <axis-alignment>yz-plane</axis-alignment>
+    <type type="string">number-value</type>
+    <format type="string">%0.0f</format>
+    <truncate type="bool">false</truncate>
+    <character-aspect-ratio type="double">1</character-aspect-ratio>
+    <property>fdm/jsbsim/instruments/digitalClock/LCD/digits/hrs-10</property>    
+    <alignment>right-top</alignment>
+  </text>
+
+  <text>
+    <name>hrs1</name>
+    <font>lcd.txf</font>
+    <character-size type="double">0.00525</character-size>
+    <offsets>
+      <x-m>0.002109</x-m>
+      <y-m>-0.000847</y-m>
+      <z-m>0.004517</z-m>
+    </offsets>
+    <axis-alignment>yz-plane</axis-alignment>
+    <type type="string">number-value</type>
+    <format type="string">%0.0f</format>
+    <truncate type="bool">false</truncate>
+    <character-aspect-ratio type="double">1</character-aspect-ratio>
+    <property>fdm/jsbsim/instruments/digitalClock/LCD/digits/hrs-1</property>    
+    <alignment>right-top</alignment>
+  </text>
+
+  <text>
+    <name>colon</name>
+    <font>lcd.txf</font>
+    <character-size type="double">0.00525</character-size>
+    <offsets>
+      <x-m>0.002109</x-m>
+      <y-m>0.002167</y-m>
+      <z-m>0.002933</z-m>
+    </offsets>
+    <axis-alignment>yz-plane</axis-alignment>
+    <type type="string">literal</type>
+    <text type="string">:</text>
+    <character-aspect-ratio type="double">1</character-aspect-ratio>
+    <alignment>right-top</alignment>
+  </text>
+  
+  <text>
+    <name>min10</name>
+    <font>lcd.txf</font>
+    <character-size type="double">0.00525</character-size>
+    <offsets>
+      <x-m>0.002109</x-m>
+      <y-m>0.005800</y-m>
+      <z-m>0.004517</z-m>
+    </offsets>
+    <axis-alignment>yz-plane</axis-alignment>
+    <type type="string">number-value</type>
+    <format type="string">%0.0f</format>
+    <truncate type="bool">false</truncate>
+    <character-aspect-ratio type="double">1</character-aspect-ratio>
+    <property>fdm/jsbsim/instruments/digitalClock/LCD/digits/min-10</property>    
+    <alignment>right-top</alignment>
+  </text>
+  
+  <text>
+    <name>min1</name>
+    <font>lcd.txf</font>
+    <character-size type="double">0.00525</character-size>
+    <offsets>
+      <x-m>0.002109</x-m>
+      <y-m>0.010492</y-m>
+      <z-m>0.004517</z-m>
+    </offsets>
+    <axis-alignment>yz-plane</axis-alignment>
+    <type type="string">number-value</type>
+    <format type="string">%0.0f</format>
+    <truncate type="bool">false</truncate>
+    <character-aspect-ratio type="double">1</character-aspect-ratio>
+    <property>fdm/jsbsim/instruments/digitalClock/LCD/digits/min-1</property>    
+    <alignment>right-top</alignment>
+  </text>
+
+  <text>
+    <name>temp</name>
+    <font>lcd.txf</font>
+    <character-size type="double">0.00525</character-size>
+    <offsets>
+      <x-m>0.002109</x-m>
+      <y-m>0.004774</y-m>
+      <z-m>-0.001641</z-m>
+    </offsets>
+    <axis-alignment>yz-plane</axis-alignment>
+    <type type="string">number-value</type>
+    <format type="string">%0.0f</format>
+    <truncate type="bool">false</truncate>
+    <character-aspect-ratio type="double">1</character-aspect-ratio>
+    <property>fdm/jsbsim/instruments/digitalClock/LCD/temp</property>    
+    <alignment>right-top</alignment>
+  </text>
+  
+  <text>
+    <name>C</name>
+    <font>lcd.txf</font>
+    <character-size type="double">0.00525</character-size>
+    <offsets>
+      <x-m>0.002109</x-m>
+      <y-m>0.009905</y-m>
+      <z-m>-0.001641</z-m>
+    </offsets>
+    <axis-alignment>yz-plane</axis-alignment>
+    <type type="string">literal</type>
+    <text type="string">C</text>
+    <character-aspect-ratio type="double">1</character-aspect-ratio>
+    <alignment>right-top</alignment>
+  </text>
+    
+  <text>
+    <name>F</name>
+    <font>lcd.txf</font>
+    <character-size type="double">0.00525</character-size>
+    <offsets>
+      <x-m>0.002109</x-m>
+      <y-m>0.009905</y-m>
+      <z-m>-0.001641</z-m>
+    </offsets>
+    <axis-alignment>yz-plane</axis-alignment>
+    <type type="string">literal</type>
+    <text type="string">F</text>
+    <character-aspect-ratio type="double">1</character-aspect-ratio>
+    <alignment>right-top</alignment>
+  </text>
+
+  <text>
+    <name>UT</name>
+    <font>Helvetica.txf</font>
+    <character-size type="double">0.00625</character-size>
+    <offsets>
+      <x-m>0.002109</x-m>
+      <y-m>0.004431</y-m>
+      <z-m>0.011799</z-m>
+    </offsets>
+    <axis-alignment>yz-plane</axis-alignment>
+    <type type="string">literal</type>
+    <text type="string">UT</text>
+    <character-aspect-ratio type="double">1</character-aspect-ratio>
+    <alignment>right-top</alignment>
+  </text>
+
+  <text>
+    <name>LT</name>
+    <font>Helvetica.txf</font>
+    <character-size type="double">0.00625</character-size>
+    <offsets>
+      <x-m>0.002109</x-m>
+      <y-m>0.004431</y-m>
+      <z-m>0.011799</z-m>
+    </offsets>
+    <axis-alignment>yz-plane</axis-alignment>
+    <type type="string">literal</type>
+    <text type="string">LT</text>
+    <character-aspect-ratio type="double">1</character-aspect-ratio>
+    <alignment>right-top</alignment>
+  </text>
+  
+  <text>
+    <name>ET</name>
+    <font>Helvetica.txf</font>
+    <character-size type="double">0.00625</character-size>
+    <offsets>
+      <x-m>0.002109</x-m>
+      <y-m>0.004431</y-m>
+      <z-m>0.011799</z-m>
+    </offsets>
+    <axis-alignment>yz-plane</axis-alignment>
+    <type type="string">literal</type>
+    <text type="string">ET</text>
+    <character-aspect-ratio type="double">1</character-aspect-ratio>
+    <alignment>right-top</alignment>
+  </text>
+
+  <text>
+    <name>CH</name>
+    <font>Helvetica.txf</font>
+    <character-size type="double">0.00625</character-size>
+    <offsets>
+      <x-m>0.002109</x-m>
+      <y-m>0.004431</y-m>
+      <z-m>0.011799</z-m>
+    </offsets>
+    <axis-alignment>yz-plane</axis-alignment>
+    <type type="string">literal</type>
+    <text type="string">CH</text>
+    <character-aspect-ratio type="double">1</character-aspect-ratio>
+    <alignment>right-top</alignment>
+  </text>
+
+  
+  <text>
+    <name>PM</name>
+    <font>Helvetica.txf</font>
+    <character-size type="double">0.00725</character-size>
+    <offsets>
+      <x-m>0.002109</x-m>
+      <y-m>0.013668</y-m>
+      <z-m>0.004517</z-m>
+    </offsets>
+    <axis-alignment>yz-plane</axis-alignment>
+    <type type="string">literal</type>
+    <text type="string">*</text>
+    <character-aspect-ratio type="double">1</character-aspect-ratio>
+    <alignment>right-top</alignment>
+  </text>
+  
+  <animation>
+    <object-name>hrs10</object-name>
+    <object-name>hrs1</object-name>
+    <object-name>min10</object-name>
+    <object-name>min1</object-name>
+    <object-name>colon</object-name>
+    <object-name>temp</object-name>
+    <object-name>C</object-name>
+    <object-name>F</object-name>
+    <object-name>PM</object-name>
+    <type>material</type>
+    <emission>
+      <factor-prop>fdm/jsbsim/instruments/panel-lighting/ledlight-status</factor-prop>
+      <red>0.0</red>
+      <green>1.0</green>
+      <blue>1.0</blue>
+    </emission>
+  </animation>
+
+  <animation>
+    <object-name>UT</object-name>
+    <object-name>LT</object-name>
+    <object-name>ET</object-name>
+    <object-name>CH</object-name>
+    <type>material</type>
+    <emission>
+      <factor-prop>fdm/jsbsim/instruments/panel-lighting/ledlight-status</factor-prop>
+      <red>0.0</red>
+      <green>1.0</green>
+      <blue>0.0</blue>
+    </emission>
+  </animation>
+  
+  <animation>
+    <type>select</type>   
+    <object-name>C</object-name> 
+    <condition>
+      <equals>
+	<property>fdm/jsbsim/instruments/digitalClock/temp-mode</property>
+	<value>0</value>
+      </equals>
+    </condition>
+  </animation>
+
+  <animation>
+    <type>select</type>   
+    <object-name>F</object-name> 
+    <condition>
+      <equals>
+	<property>fdm/jsbsim/instruments/digitalClock/temp-mode</property>
+	<value>1</value>
+      </equals>
+    </condition>
+  </animation>
+  
+  <animation>
+    <type>select</type>   
+    <object-name>PM</object-name> 
+    <condition>
+      <and>
+	<equals>
+	  <property>fdm/jsbsim/instruments/digitalClock/time-mode</property>
+	  <value>1</value>
+	</equals>
+	<equals>
+	  <property>fdm/jsbsim/instruments/digitalClock/LCD/am</property>
+	  <value>0</value>
+	</equals>
+	<or>
+	  <equals>
+	    <property>fdm/jsbsim/instruments/digitalClock/clock-mode</property>
+	    <value>0</value>
+	  </equals>
+	  <equals>
+	    <property>fdm/jsbsim/instruments/digitalClock/clock-mode</property>
+	    <value>1</value>
+	  </equals>
+	</or>
+      </and>
+    </condition>
+  </animation>
+
+  <animation>
+    <type>select</type>   
+    <object-name>UT</object-name> 
+    <condition>
+      <equals>
+	<property>fdm/jsbsim/instruments/digitalClock/clock-mode</property>
+	<value>0</value>
+      </equals>
+    </condition>
+  </animation>
+
+  <animation>
+    <type>select</type>   
+    <object-name>LT</object-name> 
+    <condition>
+      <equals>
+	<property>fdm/jsbsim/instruments/digitalClock/clock-mode</property>
+	<value>1</value>
+      </equals>
+    </condition>
+  </animation>
+
+  <animation>
+    <type>select</type>   
+    <object-name>ET</object-name> 
+    <condition>
+      <equals>
+	<property>fdm/jsbsim/instruments/digitalClock/clock-mode</property>
+	<value>2</value>
+      </equals>
+    </condition>
+  </animation>
+
+  <animation>
+    <type>select</type>   
+    <object-name>CH</object-name> 
+    <condition>
+      <equals>
+	<property>fdm/jsbsim/instruments/digitalClock/clock-mode</property>
+	<value>3</value>
+      </equals>
+    </condition>
+  </animation>
+
+  <animation>
+    <type>pick</type>
+    <object-name>sel.button</object-name>
+    <action>
+      <button>0</button>
+      <binding>
+	<command>property-cycle</command>
+	<property>fdm/jsbsim/instruments/digitalClock/clock-mode</property>
+	<value>0</value>
+	<value>1</value>
+	<value>2</value>
+	<value>3</value>
+      </binding>
+    </action>
+  </animation>
+
+  <animation>
+    <type>pick</type>
+    <object-name>ctrl.button</object-name>
+
+    <action>
+      <button>0</button>
+      <binding>
+	<condition>
+	  <or>
+	    <equals>
+	      <property>fdm/jsbsim/instruments/digitalClock/clock-mode</property>
+	      <value>0</value>
+	    </equals>
+	    <equals>
+	      <property>fdm/jsbsim/instruments/digitalClock/clock-mode</property>
+	      <value>1</value>
+	    </equals>
+	  </or>
+	</condition>
+	<command>property-toggle</command>
+	<property>fdm/jsbsim/instruments/digitalClock/time-mode</property>
+      </binding>
+    </action>
+
+    <action>
+      <button>1</button>
+      <binding>
+	<condition>
+	  <or>
+	    <equals>
+	      <property>fdm/jsbsim/instruments/digitalClock/clock-mode</property>
+	      <value>0</value>
+	    </equals>
+	    <equals>
+	      <property>fdm/jsbsim/instruments/digitalClock/clock-mode</property>
+	      <value>1</value>
+	    </equals>
+	    <equals>
+	      <property>fdm/jsbsim/instruments/digitalClock/clock-mode</property>
+	      <value>2</value>
+	    </equals>
+	  </or>
+	</condition>
+	<command>property-toggle</command>
+	<property>fdm/jsbsim/instruments/digitalClock/temp-mode</property>
+      </binding>
+    </action>
+    
+    <action>
+      <button>0</button>
+      <binding>
+	<condition>
+	  <and>
+	    <equals>
+	      <property>fdm/jsbsim/instruments/digitalClock/clock-mode</property>
+	      <value>3</value>
+	    </equals>
+	    <equals>
+	      <property>fdm/jsbsim/instruments/digitalClock/chrono/start-stop</property>
+	      <value>0</value>
+	    </equals>
+	  </and>
+	</condition>
+	<command>property-assign</command>
+	<property>fdm/jsbsim/instruments/digitalClock/chrono/start-stop</property>
+	<value>1</value>
+      </binding>
+      <mod-up>
+	<binding>
+	  <command>property-assign</command>
+	  <property>fdm/jsbsim/instruments/digitalClock/chrono/start-stop</property>
+	  <value>2</value>
+	</binding>
+      </mod-up>
+    </action>
+
+    <action>
+      <button>0</button>
+      <binding>
+	<condition>
+	  <and>
+	    <equals>
+	      <property>fdm/jsbsim/instruments/digitalClock/clock-mode</property>
+	      <value>3</value>
+	    </equals>
+	    <equals>
+	      <property>fdm/jsbsim/instruments/digitalClock/chrono/start-stop</property>
+	      <value>2</value>
+	    </equals>
+	  </and>
+	</condition>
+	<command>property-assign</command>
+	<property>fdm/jsbsim/instruments/digitalClock/chrono/start-stop</property>
+	<value>3</value>
+      </binding>
+      <mod-up>
+	<binding>
+	  <command>property-assign</command>
+	<property>fdm/jsbsim/instruments/digitalClock/chrono/start-stop</property>
+	<value>0</value>
+	</binding>
+      </mod-up>
+    </action>
+
+    <action>
+      <button>1</button>
+      <binding>
+	<condition>
+	  <equals>
+	    <property>fdm/jsbsim/instruments/digitalClock/clock-mode</property>
+	    <value>3</value>
+	  </equals>
+	</condition>
+	<command>property-assign</command>
+	<property>fdm/jsbsim/instruments/digitalClock/chrono/reset</property>
+	<value>1</value>
+      </binding>
+      <mod-up>
+	<binding>
+	  <command>property-assign</command>
+	  <property>fdm/jsbsim/instruments/digitalClock/chrono/reset</property>
+	  <value>0</value>
+	</binding>
+      </mod-up>
+    </action>
+  </animation>
+  
+  <animation>
+    <object-name>sec.needle</object-name>
+    <type>rotate</type>
+    <property>fdm/jsbsim/instruments/digitalClock/LCD/sec-deg</property>
+    <center>
+      <x-m>0</x-m><y-m>0</y-m><z-m>0</z-m>
+    </center>
+    <axis>
+      <x>1</x><y>0</y><z>0</z>
+    </axis>
+  </animation>
+  
+  <!-- Lightmaps-->
+  <effect>
+    <inherits-from>backlighting</inherits-from>
+    <object-name>sec.needle</object-name>
+    <object-name>sec-mark.00</object-name>
+    <object-name>sec-mark.05</object-name>
+    <object-name>sec-mark.10</object-name>
+    <object-name>sec-mark.15</object-name>
+    <object-name>sec-mark.20</object-name>
+    <object-name>sec-mark.25</object-name>
+    <object-name>sec-mark.30</object-name>
+    <object-name>sec-mark.35</object-name>
+    <object-name>sec-mark.40</object-name>
+    <object-name>sec-mark.45</object-name>
+    <object-name>sec-mark.50</object-name>
+    <object-name>sec-mark.55</object-name>
+  </effect>
+  <effect>
+    <inherits-from>floodlighting</inherits-from>
+    <object-name>frame</object-name>
+    <object-name>screw.hi.1</object-name>
+    <object-name>screw.hi.2</object-name>
+    <object-name>sel.button</object-name>
+    <object-name>ctrl.button</object-name>
+  </effect>
+</PropertyList>
