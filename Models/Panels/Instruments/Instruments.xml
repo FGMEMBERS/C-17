@@ -226,6 +226,17 @@
     </offsets>
   </model>
 
+  <!-- ID Plackard -->
+  <model>
+    <path>Models/Panels/Instruments/idPlackard/idPlackard.xml</path>
+    <offsets>
+      <x-m>0.4143</x-m>
+      <y-m>-0.28384</y-m>
+      <z-m>0.84333</z-m>
+      <pitch-deg>-6</pitch-deg>
+    </offsets>
+  </model>
+  
   
   <!--
   <model>
