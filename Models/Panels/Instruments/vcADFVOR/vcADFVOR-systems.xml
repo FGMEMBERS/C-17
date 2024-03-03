@@ -1,0 +1,29 @@
+<?xml version="1.0"?>
+<?xml-stylesheet href="JSBSim.xsl" type="application/xml"?>
+
+<!--
+:copyright: 2023, IAHM-COL
+License: GPLv3
+
+Redistribution, or reuse, with or without modifications
+shall keep this attribution information. 
+-->
+
+<system>
+  <!-- ch1 select; 0:VOR, 1:VOR_TAC, 2: ADF -->
+  <property value="0">instruments/vcADFVOR/ch1-select</property>
+  <!-- ch1 select; 0:VOR, 1:VOR_TAC, 2: ADF -->
+  <property value="0">instruments/vcADFVOR/ch2-select</property>
+  <!-- initial values for the nav stack -->
+  <property value="112.10">/instrumentation/nav[2]/frequencies/selected-mhz</property> 
+  <property value="115.20">/instrumentation/nav[2]/frequencies/standby-mhz</property> 
+  <property value="117.15">/instrumentation/nav[3]/frequencies/selected-mhz</property> 
+  <property value="113.80">/instrumentation/nav[3]/frequencies/standby-mhz</property>
+
+  <!-- Somehow the second instance of adf fails electrical output creation -->
+  <channel name="activate adf1 electrical">
+    <switch name="/systems/electrical/outputs/adf[1]">
+      <default value="/systems/electrical/outputs/adf"/>
+    </switch>
+  </channel>
+</system>
