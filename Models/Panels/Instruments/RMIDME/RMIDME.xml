@@ -135,11 +135,11 @@
 	<or>
 	  <equals>
 	    <property>fdm/jsbsim/instruments/RMIDME/ch1/select</property>
-	    <value>1</value>
+	    <value>0</value>
 	  </equals>
 	  <equals>
 	    <property>fdm/jsbsim/instruments/RMIDME/ch1/select</property>
-	    <value>2</value>
+	    <value>1</value>
 	  </equals>
 	</or>
 	<equals>
@@ -158,11 +158,11 @@
 	<or>
 	  <equals>
 	    <property>fdm/jsbsim/instruments/RMIDME/ch1/select</property>
-	    <value>1</value>
+	    <value>0</value>
 	  </equals>
 	  <equals>
 	    <property>fdm/jsbsim/instruments/RMIDME/ch1/select</property>
-	    <value>2</value>
+	    <value>1</value>
 	  </equals>
 	</or>
 	<equals>
@@ -179,7 +179,7 @@
     <condition>
       <equals>
 	<property>fdm/jsbsim/instruments/RMIDME/ch1/select</property>
-	<value>0</value>
+	<value>2</value>
       </equals>
     </condition>
   </animation>
@@ -192,11 +192,11 @@
 	<or>
 	  <equals>
 	    <property>fdm/jsbsim/instruments/RMIDME/ch2/select</property>
-	    <value>1</value>
+	    <value>0</value>
 	  </equals>
 	  <equals>
 	    <property>fdm/jsbsim/instruments/RMIDME/ch2/select</property>
-	    <value>2</value>
+	    <value>1</value>
 	  </equals>
 	</or>
 	<equals>
@@ -215,11 +215,11 @@
 	<or>
 	  <equals>
 	    <property>fdm/jsbsim/instruments/RMIDME/ch2/select</property>
-	    <value>1</value>
+	    <value>0</value>
 	  </equals>
 	  <equals>
 	    <property>fdm/jsbsim/instruments/RMIDME/ch2/select</property>
-	    <value>2</value>
+	    <value>1</value>
 	  </equals>
 	</or>
 	<equals>
@@ -236,7 +236,7 @@
     <condition>
       <equals>
 	<property>fdm/jsbsim/instruments/RMIDME/ch2/select</property>
-	<value>0</value>
+	<value>2</value>
       </equals>
     </condition>
   </animation>

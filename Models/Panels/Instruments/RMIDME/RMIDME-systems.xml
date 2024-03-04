@@ -387,27 +387,27 @@ shall keep this attribution information.
     <switch name="instruments/RMIDME/ch1/display/flag">
       <default value="0"/>
       <test value="instruments/RMIDME/ch1/adf/flag">
-	instruments/RMIDME/ch1/select eq 0
+	instruments/RMIDME/ch1/select eq 2
       </test>
       <test value="instruments/RMIDME/ch1/vor/flag">
-	instruments/RMIDME/ch1/select eq 1
+	instruments/RMIDME/ch1/select eq 0
       </test>
       <test value="instruments/RMIDME/ch1/tac/flag">
-	instruments/RMIDME/ch1/select eq 2
+	instruments/RMIDME/ch1/select eq 1
       </test>
     </switch>
 
     <switch name="instruments/RMIDME/ch1/display/signal-rotation">
       <default value="0"/>
       <test value="instruments/RMIDME/ch1/adf/signal-rotation">
-	instruments/RMIDME/ch1/select eq 0
+	instruments/RMIDME/ch1/select eq 2
       </test>
       <test logic="AND" value="instruments/RMIDME/ch1/vor/signal-rotation">
-	instruments/RMIDME/ch1/select eq 1
+	instruments/RMIDME/ch1/select eq 0
 	instruments/RMIDME/ch1/vor/flag eq 0
       </test>
       <test logic="AND" value="instruments/RMIDME/ch1/tac/signal-rotation">
-	instruments/RMIDME/ch1/select eq 2
+	instruments/RMIDME/ch1/select eq 1
 	instruments/RMIDME/ch1/tac/flag eq 0
       </test>
     </switch>
@@ -415,11 +415,11 @@ shall keep this attribution information.
     <switch name="instruments/RMIDME/ch1/display/dme">
       <default value="0"/>
       <test logic="AND" value="instruments/RMIDME/ch1/vor/dme">
-	instruments/RMIDME/ch1/select eq 1
+	instruments/RMIDME/ch1/select eq 0
 	instruments/RMIDME/ch1/vor/flag eq 0
       </test>
       <test logic="AND" value="instruments/RMIDME/ch1/tac/dme">
-	instruments/RMIDME/ch1/select eq 2
+	instruments/RMIDME/ch1/select eq 1
 	instruments/RMIDME/ch1/tac/flag eq 0
       </test>
     </switch>
@@ -427,27 +427,27 @@ shall keep this attribution information.
     <switch name="instruments/RMIDME/ch2/display/flag">
       <default value="0"/>
       <test value="instruments/RMIDME/ch2/adf/flag">
-	instruments/RMIDME/ch2/select eq 0
+	instruments/RMIDME/ch2/select eq 2
       </test>
       <test value="instruments/RMIDME/ch2/vor/flag">
-	instruments/RMIDME/ch2/select eq 1
+	instruments/RMIDME/ch2/select eq 0
       </test>
       <test value="instruments/RMIDME/ch2/tac/flag">
-	instruments/RMIDME/ch2/select eq 2
+	instruments/RMIDME/ch2/select eq 1
       </test>
     </switch>
 
     <switch name="instruments/RMIDME/ch2/display/signal-rotation">
       <default value="0"/>
       <test value="instruments/RMIDME/ch2/adf/signal-rotation">
-	instruments/RMIDME/ch2/select eq 0
+	instruments/RMIDME/ch2/select eq 2
       </test>
       <test logic="AND" value="instruments/RMIDME/ch2/vor/signal-rotation">
-	instruments/RMIDME/ch2/select eq 1
+	instruments/RMIDME/ch2/select eq 0
 	instruments/RMIDME/ch2/vor/flag eq 0
       </test>
       <test logic="AND" value="instruments/RMIDME/ch2/tac/signal-rotation">
-	instruments/RMIDME/ch2/select eq 2
+	instruments/RMIDME/ch2/select eq 1
 	instruments/RMIDME/ch2/tac/flag eq 0
       </test>
     </switch>
@@ -455,11 +455,11 @@ shall keep this attribution information.
     <switch name="instruments/RMIDME/ch2/display/dme">
       <default value="0"/>
       <test logic="AND" value="instruments/RMIDME/ch2/vor/dme">
-	instruments/RMIDME/ch2/select eq 1
+	instruments/RMIDME/ch2/select eq 0
 	instruments/RMIDME/ch2/vor/flag eq 0
       </test>
       <test logic="AND" value="instruments/RMIDME/ch2/tac/dme">
-	instruments/RMIDME/ch2/select eq 2
+	instruments/RMIDME/ch2/select eq 1
 	instruments/RMIDME/ch2/tac/flag eq 0
       </test>
     </switch>
