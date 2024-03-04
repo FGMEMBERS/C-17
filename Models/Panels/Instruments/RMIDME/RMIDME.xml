@@ -9,7 +9,7 @@
 -->
 
 <PropertyList>
-  <path>vcADFVOR.ac</path>
+  <path>RMIDME.ac</path>
 
   <text>
     <name>dist1</name>
@@ -25,7 +25,7 @@
     <format type="string">%3.1f</format>
     <truncate type="bool">false</truncate>
     <character-aspect-ratio type="double">1</character-aspect-ratio>
-    <property>fdm/jsbsim/instruments/vcADFVOR/ch1/display/dme</property>    
+    <property>fdm/jsbsim/instruments/RMIDME/ch1/display/dme</property>    
     <alignment>right-top</alignment>
   </text>
   
@@ -43,7 +43,7 @@
     <format type="string">%3.1f</format>
     <truncate type="bool">false</truncate>
     <character-aspect-ratio type="double">1</character-aspect-ratio>
-    <property>fdm/jsbsim/instruments/vcADFVOR/ch2/display/dme</property>    
+    <property>fdm/jsbsim/instruments/RMIDME/ch2/display/dme</property>    
     <alignment>right-top</alignment>
   </text>
 
@@ -134,16 +134,16 @@
       <and>
 	<or>
 	  <equals>
-	    <property>fdm/jsbsim/instruments/vcADFVOR/ch1/select</property>
+	    <property>fdm/jsbsim/instruments/RMIDME/ch1/select</property>
 	    <value>1</value>
 	  </equals>
 	  <equals>
-	    <property>fdm/jsbsim/instruments/vcADFVOR/ch1/select</property>
+	    <property>fdm/jsbsim/instruments/RMIDME/ch1/select</property>
 	    <value>2</value>
 	  </equals>
 	</or>
 	<equals>
-	  <property>fdm/jsbsim/instruments/vcADFVOR/ch1/display/flag</property>
+	  <property>fdm/jsbsim/instruments/RMIDME/ch1/display/flag</property>
 	  <value>0</value>
 	</equals>
       </and>
@@ -157,16 +157,16 @@
       <and>
 	<or>
 	  <equals>
-	    <property>fdm/jsbsim/instruments/vcADFVOR/ch1/select</property>
+	    <property>fdm/jsbsim/instruments/RMIDME/ch1/select</property>
 	    <value>1</value>
 	  </equals>
 	  <equals>
-	    <property>fdm/jsbsim/instruments/vcADFVOR/ch1/select</property>
+	    <property>fdm/jsbsim/instruments/RMIDME/ch1/select</property>
 	    <value>2</value>
 	  </equals>
 	</or>
 	<equals>
-	  <property>fdm/jsbsim/instruments/vcADFVOR/ch1/display/flag</property>
+	  <property>fdm/jsbsim/instruments/RMIDME/ch1/display/flag</property>
 	  <value>1</value>
 	</equals>
       </and>
@@ -178,7 +178,7 @@
     <object-name>adf1-text</object-name> 
     <condition>
       <equals>
-	<property>fdm/jsbsim/instruments/vcADFVOR/ch1/select</property>
+	<property>fdm/jsbsim/instruments/RMIDME/ch1/select</property>
 	<value>0</value>
       </equals>
     </condition>
@@ -191,16 +191,16 @@
       <and>
 	<or>
 	  <equals>
-	    <property>fdm/jsbsim/instruments/vcADFVOR/ch2/select</property>
+	    <property>fdm/jsbsim/instruments/RMIDME/ch2/select</property>
 	    <value>1</value>
 	  </equals>
 	  <equals>
-	    <property>fdm/jsbsim/instruments/vcADFVOR/ch2/select</property>
+	    <property>fdm/jsbsim/instruments/RMIDME/ch2/select</property>
 	    <value>2</value>
 	  </equals>
 	</or>
 	<equals>
-	  <property>fdm/jsbsim/instruments/vcADFVOR/ch2/display/flag</property>
+	  <property>fdm/jsbsim/instruments/RMIDME/ch2/display/flag</property>
 	  <value>0</value>
 	</equals>
       </and>
@@ -214,16 +214,16 @@
       <and>
 	<or>
 	  <equals>
-	    <property>fdm/jsbsim/instruments/vcADFVOR/ch2/select</property>
+	    <property>fdm/jsbsim/instruments/RMIDME/ch2/select</property>
 	    <value>1</value>
 	  </equals>
 	  <equals>
-	    <property>fdm/jsbsim/instruments/vcADFVOR/ch2/select</property>
+	    <property>fdm/jsbsim/instruments/RMIDME/ch2/select</property>
 	    <value>2</value>
 	  </equals>
 	</or>
 	<equals>
-	  <property>fdm/jsbsim/instruments/vcADFVOR/ch2/display/flag</property>
+	  <property>fdm/jsbsim/instruments/RMIDME/ch2/display/flag</property>
 	  <value>1</value>
 	</equals>
       </and>
@@ -235,7 +235,7 @@
     <object-name>adf2-text</object-name> 
     <condition>
       <equals>
-	<property>fdm/jsbsim/instruments/vcADFVOR/ch2/select</property>
+	<property>fdm/jsbsim/instruments/RMIDME/ch2/select</property>
 	<value>0</value>
       </equals>
     </condition>
@@ -246,7 +246,7 @@
     <object-name>nav1.flag</object-name> 
     <condition>
       <equals>
-	<property>fdm/jsbsim/instruments/vcADFVOR/ch1/display/flag</property>
+	<property>fdm/jsbsim/instruments/RMIDME/ch1/display/flag</property>
 	<value>1</value>
       </equals>
     </condition>
@@ -257,7 +257,7 @@
     <object-name>nav2.flag</object-name> 
     <condition>
       <equals>
-	<property>fdm/jsbsim/instruments/vcADFVOR/ch2/display/flag</property>
+	<property>fdm/jsbsim/instruments/RMIDME/ch2/display/flag</property>
 	<value>1</value>
       </equals>
     </condition>
@@ -266,7 +266,7 @@
   <animation>
     <object-name>nav1.guide</object-name>
     <type>rotate</type>
-    <property>fdm/jsbsim/instruments/vcADFVOR/ch1/display/signal-rotation</property>
+    <property>fdm/jsbsim/instruments/RMIDME/ch1/display/signal-rotation</property>
     <center>
       <x-m>0.003676</x-m>
       <y-m>0</y-m>
@@ -280,7 +280,7 @@
   <animation>
     <object-name>nav2.guide</object-name>
     <type>rotate</type>
-    <property>fdm/jsbsim/instruments/vcADFVOR/ch2/display/signal-rotation</property>
+    <property>fdm/jsbsim/instruments/RMIDME/ch2/display/signal-rotation</property>
     <center>
       <x-m>0.003676</x-m>
       <y-m>0</y-m>
@@ -294,7 +294,7 @@
   <animation>
     <object-name>rose</object-name>
     <type>rotate</type>
-    <property>fdm/jsbsim/instruments/vcADFVOR/heading-offset</property>
+    <property>fdm/jsbsim/instruments/RMIDME/heading-offset</property>
     <center>
       <x-m>0.003676</x-m>
       <y-m>0</y-m>
@@ -314,7 +314,7 @@
       <interval-sec>0.2</interval-sec>
       <binding>
 	<command>property-assign</command>
-	<property>fdm/jsbsim/instruments/vcADFVOR/heading-offset</property>
+	<property>fdm/jsbsim/instruments/RMIDME/heading-offset</property>
 	<property>/orientation/heading-magnetic-deg</property>
       </binding>
     </action>
@@ -324,7 +324,7 @@
       <interval-sec>0.2</interval-sec>
       <binding>
 	<command>property-assign</command>
-	<property>fdm/jsbsim/instruments/vcADFVOR/heading-offset</property>
+	<property>fdm/jsbsim/instruments/RMIDME/heading-offset</property>
 	<value>0</value>
       </binding>
     </action>
@@ -334,7 +334,7 @@
   <animation>
     <type>knob</type>
     <object-name>hdg.knob</object-name>
-    <property>fdm/jsbsim/instruments/vcADFVOR/heading-offset</property>
+    <property>fdm/jsbsim/instruments/RMIDME/heading-offset</property>
     <center>
       <x-m>0.007651</x-m>
       <y-m>-0.031478</y-m>
@@ -347,7 +347,7 @@
     <action>
       <binding>
         <command>property-adjust</command>
-        <property>fdm/jsbsim/instruments/vcADFVOR/heading-offset</property>
+        <property>fdm/jsbsim/instruments/RMIDME/heading-offset</property>
         <factor>1</factor>
         <min>0</min>
         <max>360</max>                

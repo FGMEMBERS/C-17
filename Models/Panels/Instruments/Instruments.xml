@@ -237,10 +237,10 @@
     </offsets>
   </model>
 
-  <!-- Standby ADF VOR DMEs -->
+  <!-- Standby RMI DMEs -->
   <model>
-    <name>vcADFVOR captain</name>
-    <path>Models/Panels/Instruments/vcADFVOR/vcADFVOR.xml</path>
+    <name>RMIDME captain</name>
+    <path>Models/Panels/Instruments/RMIDME/RMIDME.xml</path>
     <offsets>
       <x-m>0.41213</x-m>
       <y-m>-0.62309</y-m>
@@ -250,8 +250,8 @@
   </model>
   
   <model>
-    <name>vcADFVOR first officer</name>
-    <path>Models/Panels/Instruments/vcADFVOR/vcADFVOR.xml</path>
+    <name>RMIDME first officer</name>
+    <path>Models/Panels/Instruments/RMIDME/RMIDME.xml</path>
     <offsets>
       <x-m>0.41091</x-m>
       <y-m>0.54903</y-m>
