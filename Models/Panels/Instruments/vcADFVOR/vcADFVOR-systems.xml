@@ -11,9 +11,11 @@ shall keep this attribution information.
 
 <system>
   <!-- ch1 select; 0:VOR, 1:VOR_TAC, 2: ADF -->
-  <property value="0">instruments/vcADFVOR/ch1-select</property>
+  <property value="0">instruments/vcADFVOR/ch1/select</property>
   <!-- ch1 select; 0:VOR, 1:VOR_TAC, 2: ADF -->
-  <property value="0">instruments/vcADFVOR/ch2-select</property>
+  <property value="0">instruments/vcADFVOR/ch2/select</property>
+  <!-- heading knob offset -->
+  <property value="0">instruments/vcADFVOR/heading-offset</property>
   <!-- initial values for the nav stack -->
   <property value="112.10">/instrumentation/nav[2]/frequencies/selected-mhz</property> 
   <property value="115.20">/instrumentation/nav[2]/frequencies/standby-mhz</property> 
@@ -24,6 +26,442 @@ shall keep this attribution information.
   <channel name="activate adf1 electrical">
     <switch name="/systems/electrical/outputs/adf[1]">
       <default value="/systems/electrical/outputs/adf"/>
+    </switch>
+  </channel>
+
+  <channel name="ADF">
+    <switch name="instruments/vcADFVOR/ch1/adf/flag">
+      <default value="0"/>
+      <test value="1">
+	/instrumentation/adf/operable eq 0
+      </test>
+      <test value="1">
+	/instrumentation/adf/in-range eq 0
+      </test>
+    </switch>
+
+    <switch name="instruments/vcADFVOR/ch1/adf/bearing">
+      <default value="/instrumentation/adf/indicated-bearing-deg"/>
+      <test value="0">
+	instruments/vcADFVOR/ch1/adf/flag eq 1
+      </test>
+    </switch>
+
+    <fcs_function name="instruments/vcADFVOR/ch1/adf/signal-rotation">
+      <function>
+	<product>
+	    <property>instruments/vcADFVOR/ch1/adf/bearing</property>
+	    <value>-1</value>
+	</product>
+      </function>
+    </fcs_function>
+
+    <switch name="instruments/vcADFVOR/ch2/adf/flag">
+      <default value="0"/>
+      <test value="1">
+	/instrumentation/adf/operable eq 0
+      </test>
+      <test value="1">
+	/instrumentation/adf[1]/in-range eq 0
+      </test>
+    </switch>
+
+    <switch name="instruments/vcADFVOR/ch2/adf/bearing">
+      <default value="/instrumentation/adf[1]/indicated-bearing-deg"/>
+      <test value="0">
+	instruments/vcADFVOR/ch2/adf/flag eq 1
+      </test>
+    </switch>
+
+    <fcs_function name="instruments/vcADFVOR/ch2/adf/signal-rotation">
+      <function>
+	<product>
+	    <property>instruments/vcADFVOR/ch2/adf/bearing</property>
+	    <value>-1</value>
+	</product>
+      </function>
+    </fcs_function>
+  </channel>
+
+  <channel name="VOR">
+    <switch name="instruments/vcADFVOR/ch1/vor/flag">
+      <default value="0"/>
+      <test value="1">
+	/instrumentation/nav/operable eq 0
+      </test>
+      <test value="1">
+	/instrumentation/nav/in-range eq 0
+      </test>
+      <test value="1">
+	/instrumentation/nav/data-is-valid eq 0
+      </test>
+    </switch>
+
+    <switch name="instruments/vcADFVOR/ch1/vor/data-is-valid">
+      <default value="/instrumentation/nav/data-is-valid"/>
+    </switch>
+
+    <fcs_function name="instruments/vcADFVOR/ch1/vor/bearing-direct">
+      <function>
+	<difference>
+	  <property>/instrumentation/nav/heading-deg</property>
+	  <property>/orientation/heading-magnetic-deg</property>
+	</difference>
+      </function>
+    </fcs_function>
+
+    <fcs_function name="instruments/vcADFVOR/ch1/vor/bearing-corrected">
+      <function>
+	<ifthen>
+	  <lt>
+	    <property>instruments/vcADFVOR/ch1/vor/bearing-direct</property>
+	    <value>0</value>
+	  </lt>
+	  <sum>
+	    <property>instruments/vcADFVOR/ch1/vor/bearing-direct</property>
+	    <value>360</value>
+	  </sum>
+	  <property>instruments/vcADFVOR/ch1/vor/bearing-direct</property>
+	</ifthen>
+      </function>
+    </fcs_function>
+
+    <switch name="instruments/vcADFVOR/ch1/vor/bearing">
+      <default value="0"/>
+      <test value="instruments/vcADFVOR/ch1/vor/bearing-corrected">
+	/instrumentation/nav/data-is-valid eq 1
+      </test>
+    </switch>
+
+    <fcs_function name="instruments/vcADFVOR/ch1/vor/signal-rotation">
+      <function>
+	<product>
+	  <property>instruments/vcADFVOR/ch1/vor/bearing</property>
+	  <value>-1</value>
+	</product>
+      </function>
+    </fcs_function>
+
+    <fcs_function name="instruments/vcADFVOR/ch1/vor/nav-distance-nm">
+      <function>
+	<product>
+	  <property>/instrumentation/nav/nav-distance</property>
+	  <value>0.0005399568</value>
+	</product>
+      </function>
+    </fcs_function>
+    
+    <switch name="instruments/vcADFVOR/ch1/vor/dme">
+      <default value="instruments/vcADFVOR/ch1/vor/nav-distance-nm"/>
+      <test value="0">
+	instruments/vcADFVOR/ch1/vor/data-is-valid eq 0
+      </test>
+    </switch>
+    
+    <switch name="instruments/vcADFVOR/ch2/vor/flag">
+      <default value="0"/>
+      <test value="1">
+	/instrumentation/nav[2]/operable eq 0
+      </test>
+      <test value="1">
+	/instrumentation/nav[2]/in-range eq 0
+      </test>
+      <test value="1">
+	/instrumentation/nav[2]/data-is-valid eq 0
+      </test>
+    </switch>
+
+    <switch name="instruments/vcADFVOR/ch2/vor/data-is-valid">
+      <default value="/instrumentation/nav[2]/data-is-valid"/>
+    </switch>
+
+    <fcs_function name="instruments/vcADFVOR/ch2/vor/bearing-direct">
+      <function>
+	<difference>
+	  <property>/instrumentation/nav[2]/heading-deg</property>
+	  <property>/orientation/heading-magnetic-deg</property>
+	</difference>
+      </function>
+    </fcs_function>
+
+    <fcs_function name="instruments/vcADFVOR/ch2/vor/bearing-corrected">
+      <function>
+	<ifthen>
+	  <lt>
+	    <property>instruments/vcADFVOR/ch2/vor/bearing-direct</property>
+	    <value>0</value>
+	  </lt>
+	  <sum>
+	    <property>instruments/vcADFVOR/ch2/vor/bearing-direct</property>
+	    <value>360</value>
+	  </sum>
+	  <property>instruments/vcADFVOR/ch2/vor/bearing-direct</property>
+	</ifthen>
+      </function>
+    </fcs_function>
+
+    <switch name="instruments/vcADFVOR/ch2/vor/bearing">
+      <default value="0"/>
+      <test value="instruments/vcADFVOR/ch2/vor/bearing-corrected">
+	/instrumentation/nav[2]/data-is-valid eq 1
+      </test>
+    </switch>
+
+    <fcs_function name="instruments/vcADFVOR/ch2/vor/signal-rotation">
+      <function>
+	<product>
+	  <property>instruments/vcADFVOR/ch2/vor/bearing</property>
+	  <value>-1</value>
+	</product>
+      </function>
+    </fcs_function>
+    
+    <fcs_function name="instruments/vcADFVOR/ch2/vor/nav-distance-nm">
+      <function>
+	<product>
+	  <property>/instrumentation/nav[2]/nav-distance</property>
+	  <value>0.0005399568</value>
+	</product>
+      </function>
+    </fcs_function>
+
+    <switch name="instruments/vcADFVOR/ch2/vor/dme">
+      <default value="instruments/vcADFVOR/ch2/vor/nav-distance-nm"/>
+      <test value="0">
+	instruments/vcADFVOR/ch2/vor/data-is-valid eq 0
+      </test>
+    </switch>
+  </channel>
+
+  <channel name="TAC">
+    <switch name="instruments/vcADFVOR/ch1/tac/flag">
+      <default value="0"/>
+      <test value="1">
+	/instrumentation/nav[1]/operable eq 0
+      </test>
+      <test value="1">
+	/instrumentation/nav[1]/in-range eq 0
+      </test>
+      <test value="1">
+	/instrumentation/nav[1]/data-is-valid eq 0
+      </test>
+    </switch>
+
+    <switch name="instruments/vcADFVOR/ch1/tac/data-is-valid">
+      <default value="/instrumentation/nav[1]/data-is-valid"/>
+    </switch>
+
+    <fcs_function name="instruments/vcADFVOR/ch1/tac/bearing-direct">
+      <function>
+	<difference>
+	  <property>/instrumentation/nav[1]/heading-deg</property>
+	  <property>/orientation/heading-magnetic-deg</property>
+	</difference>
+      </function>
+    </fcs_function>
+
+    <fcs_function name="instruments/vcADFVOR/ch1/tac/bearing-corrected">
+      <function>
+	<ifthen>
+	  <lt>
+	    <property>instruments/vcADFVOR/ch1/tac/bearing-direct</property>
+	    <value>0</value>
+	  </lt>
+	  <sum>
+	    <property>instruments/vcADFVOR/ch1/tac/bearing-direct</property>
+	    <value>360</value>
+	  </sum>
+	  <property>instruments/vcADFVOR/ch1/tac/bearing-direct</property>
+	</ifthen>
+      </function>
+    </fcs_function>
+
+    <switch name="instruments/vcADFVOR/ch1/tac/bearing">
+      <default value="0"/>
+      <test value="instruments/vcADFVOR/ch1/tac/bearing-corrected">
+	/instrumentation/nav[1]/data-is-valid eq 1
+      </test>
+    </switch>
+
+    <fcs_function name="instruments/vcADFVOR/ch1/tac/signal-rotation">
+      <function>
+	<product>
+	  <property>instruments/vcADFVOR/ch1/tac/bearing</property>
+	  <value>-1</value>
+	</product>
+      </function>
+    </fcs_function>
+
+    <fcs_function name="instruments/vcADFVOR/ch1/tac/nav-distance-nm">
+      <function>
+	<product>
+	  <property>/instrumentation/nav[1]/nav-distance</property>
+	  <value>0.0005399568</value>
+	</product>
+      </function>
+    </fcs_function>
+    
+    <switch name="instruments/vcADFVOR/ch1/tac/dme">
+      <default value="instruments/vcADFVOR/ch1/tac/nav-distance-nm"/>
+      <test value="0">
+	instruments/vcADFVOR/ch1/tac/data-is-valid eq 0
+      </test>
+    </switch>
+    
+    <switch name="instruments/vcADFVOR/ch2/tac/flag">
+      <default value="0"/>
+      <test value="1">
+	/instrumentation/nav[3]/operable eq 0
+      </test>
+      <test value="1">
+	/instrumentation/nav[3]/in-range eq 0
+      </test>
+      <test value="1">
+	/instrumentation/nav[3]/data-is-valid eq 0
+      </test>
+    </switch>
+
+    <switch name="instruments/vcADFVOR/ch2/tac/data-is-valid">
+      <default value="/instrumentation/nav[3]/data-is-valid"/>
+    </switch>
+
+    <fcs_function name="instruments/vcADFVOR/ch2/tac/bearing-direct">
+      <function>
+	<difference>
+	  <property>/instrumentation/nav[3]/heading-deg</property>
+	  <property>/orientation/heading-magnetic-deg</property>
+	</difference>
+      </function>
+    </fcs_function>
+
+    <fcs_function name="instruments/vcADFVOR/ch2/tac/bearing-corrected">
+      <function>
+	<ifthen>
+	  <lt>
+	    <property>instruments/vcADFVOR/ch2/tac/bearing-direct</property>
+	    <value>0</value>
+	  </lt>
+	  <sum>
+	    <property>instruments/vcADFVOR/ch2/tac/bearing-direct</property>
+	    <value>360</value>
+	  </sum>
+	  <property>instruments/vcADFVOR/ch2/tac/bearing-direct</property>
+	</ifthen>
+      </function>
+    </fcs_function>
+
+    <switch name="instruments/vcADFVOR/ch2/tac/bearing">
+      <default value="0"/>
+      <test value="instruments/vcADFVOR/ch2/tac/bearing-corrected">
+	/instrumentation/nav[3]/data-is-valid eq 1
+      </test>
+    </switch>
+
+    <fcs_function name="instruments/vcADFVOR/ch2/tac/signal-rotation">
+      <function>
+	<product>
+	  <property>instruments/vcADFVOR/ch2/tac/bearing</property>
+	  <value>-1</value>
+	</product>
+      </function>
+    </fcs_function>
+    
+    <fcs_function name="instruments/vcADFVOR/ch2/tac/nav-distance-nm">
+      <function>
+	<product>
+	  <property>/instrumentation/nav[3]/nav-distance</property>
+	  <value>0.0005399568</value>
+	</product>
+      </function>
+    </fcs_function>
+
+    <switch name="instruments/vcADFVOR/ch2/tac/dme">
+      <default value="instruments/vcADFVOR/ch2/tac/nav-distance-nm"/>
+      <test value="0">
+	instruments/vcADFVOR/ch2/tac/data-is-valid eq 0
+      </test>
+    </switch>
+  </channel>
+
+  <channel name="Display">
+    <switch name="instruments/vcADFVOR/ch1/display/flag">
+      <default value="0"/>
+      <test value="instruments/vcADFVOR/ch1/adf/flag">
+	instruments/vcADFVOR/ch1/select eq 0
+      </test>
+      <test value="instruments/vcADFVOR/ch1/vor/flag">
+	instruments/vcADFVOR/ch1/select eq 1
+      </test>
+      <test value="instruments/vcADFVOR/ch1/tac/flag">
+	instruments/vcADFVOR/ch1/select eq 2
+      </test>
+    </switch>
+
+    <switch name="instruments/vcADFVOR/ch1/display/signal-rotation">
+      <default value="0"/>
+      <test value="instruments/vcADFVOR/ch1/adf/signal-rotation">
+	instruments/vcADFVOR/ch1/select eq 0
+      </test>
+      <test logic="AND" value="instruments/vcADFVOR/ch1/vor/signal-rotation">
+	instruments/vcADFVOR/ch1/select eq 1
+	instruments/vcADFVOR/ch1/vor/flag eq 0
+      </test>
+      <test logic="AND" value="instruments/vcADFVOR/ch1/tac/signal-rotation">
+	instruments/vcADFVOR/ch1/select eq 2
+	instruments/vcADFVOR/ch1/tac/flag eq 0
+      </test>
+    </switch>
+    
+    <switch name="instruments/vcADFVOR/ch1/display/dme">
+      <default value="0"/>
+      <test logic="AND" value="instruments/vcADFVOR/ch1/vor/dme">
+	instruments/vcADFVOR/ch1/select eq 1
+	instruments/vcADFVOR/ch1/vor/flag eq 0
+      </test>
+      <test logic="AND" value="instruments/vcADFVOR/ch1/tac/dme">
+	instruments/vcADFVOR/ch1/select eq 2
+	instruments/vcADFVOR/ch1/tac/flag eq 0
+      </test>
+    </switch>
+
+    <switch name="instruments/vcADFVOR/ch2/display/flag">
+      <default value="0"/>
+      <test value="instruments/vcADFVOR/ch2/adf/flag">
+	instruments/vcADFVOR/ch2/select eq 0
+      </test>
+      <test value="instruments/vcADFVOR/ch2/vor/flag">
+	instruments/vcADFVOR/ch2/select eq 1
+      </test>
+      <test value="instruments/vcADFVOR/ch2/tac/flag">
+	instruments/vcADFVOR/ch2/select eq 2
+      </test>
+    </switch>
+
+    <switch name="instruments/vcADFVOR/ch2/display/signal-rotation">
+      <default value="0"/>
+      <test value="instruments/vcADFVOR/ch2/adf/signal-rotation">
+	instruments/vcADFVOR/ch2/select eq 0
+      </test>
+      <test logic="AND" value="instruments/vcADFVOR/ch2/vor/signal-rotation">
+	instruments/vcADFVOR/ch2/select eq 1
+	instruments/vcADFVOR/ch2/vor/flag eq 0
+      </test>
+      <test logic="AND" value="instruments/vcADFVOR/ch2/tac/signal-rotation">
+	instruments/vcADFVOR/ch2/select eq 2
+	instruments/vcADFVOR/ch2/tac/flag eq 0
+      </test>
+    </switch>
+    
+    <switch name="instruments/vcADFVOR/ch2/display/dme">
+      <default value="0"/>
+      <test logic="AND" value="instruments/vcADFVOR/ch2/vor/dme">
+	instruments/vcADFVOR/ch2/select eq 1
+	instruments/vcADFVOR/ch2/vor/flag eq 0
+      </test>
+      <test logic="AND" value="instruments/vcADFVOR/ch2/tac/dme">
+	instruments/vcADFVOR/ch2/select eq 2
+	instruments/vcADFVOR/ch2/tac/flag eq 0
+      </test>
     </switch>
   </channel>
 </system>

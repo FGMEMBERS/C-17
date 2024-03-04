@@ -236,7 +236,30 @@
       <pitch-deg>-6</pitch-deg>
     </offsets>
   </model>
+
+  <!-- Standby ADF VOR DMEs -->
+  <model>
+    <name>vcADFVOR captain</name>
+    <path>Models/Panels/Instruments/vcADFVOR/vcADFVOR.xml</path>
+    <offsets>
+      <x-m>0.41213</x-m>
+      <y-m>-0.62309</y-m>
+      <z-m>0.82938</z-m>
+      <pitch-deg>-6</pitch-deg>
+    </offsets>
+  </model>
   
+  <model>
+    <name>vcADFVOR first officer</name>
+    <path>Models/Panels/Instruments/vcADFVOR/vcADFVOR.xml</path>
+    <offsets>
+      <x-m>0.41091</x-m>
+      <y-m>0.54903</y-m>
+      <z-m>0.82938</z-m>
+      <pitch-deg>-6</pitch-deg>
+    </offsets>
+  </model>
+
   
   <!--
   <model>
@@ -310,41 +333,7 @@
       <pitch-deg>294.6</pitch-deg>
     </offsets>
   </model>
-
-  <!--
-  <model>
-    <name>cap-CLOCK</name>
-    <path>Models/Panels/Instruments/Clock/chronometer.xml</path>
-    <offsets>
-      <x-m>0.423</x-m>
-      <y-m>0.1</y-m>
-      <z-m>0.73</z-m>
-      <pitch-deg>-6</pitch-deg>
-    </offsets>
-  </model>
-  -->
-
-  <model>
-    <name>STANDBY-VOR</name>
-    <path>Models/Panels/Instruments/STANDBY/vor.xml</path>
-    <offsets>
-      <x-m>0.3866</x-m>
-      <y-m>-0.61377</y-m>
-      <z-m>0.84657</z-m>
-      <pitch-deg>-6</pitch-deg>
-    </offsets>
-  </model>
   
-  <model>
-    <name>STANDBY-VOR2</name>
-    <path>Models/Panels/Instruments/STANDBY/vor.xml</path>
-    <offsets>
-      <x-m>0.3866</x-m>
-      <y-m>0.5374</y-m>
-      <z-m>0.8542</z-m>
-      <pitch-deg>-6</pitch-deg>
-    </offsets>
-  </model>
 
   <!--
   <model>
