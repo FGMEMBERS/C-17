@@ -210,8 +210,8 @@
     <path>Models/Panels/Instruments/digitalClock/digitalClock.xml</path>
     <offsets>
       <x-m>0.40480</x-m>
-      <y-m>-0.60489</y-m>
-      <z-m>0.90685</z-m>
+      <y-m>-0.63752</y-m>
+      <z-m>0.93491</z-m>
       <pitch-deg>-6</pitch-deg>
     </offsets>
   </model>
@@ -220,8 +220,8 @@
     <path>Models/Panels/Instruments/digitalClock/digitalClock.xml</path>
     <offsets>
       <x-m>0.40316</x-m>
-      <y-m>0.52977</y-m>
-      <z-m>0.91038</z-m>
+      <y-m>0.56496</y-m>
+      <z-m>0.93419</z-m>
       <pitch-deg>-6</pitch-deg>
     </offsets>
   </model>
@@ -243,8 +243,19 @@
     <path>Models/Panels/Instruments/RMIDME/RMIDME.xml</path>
     <offsets>
       <x-m>0.41213</x-m>
-      <y-m>-0.62309</y-m>
-      <z-m>0.82938</z-m>
+      <y-m>-0.61857</y-m>
+      <z-m>0.85967</z-m>
+      <pitch-deg>-6</pitch-deg>
+    </offsets>
+  </model>
+  
+  <model>
+    <name>RMI Selector captain</name>
+    <path>Models/Panels/Instruments/RMIDME/RMISEL/RMISEL.xml</path>
+    <offsets>
+      <x-m>0.41729</x-m>
+      <y-m>-0.7007</y-m>
+      <z-m>0.82994</z-m>
       <pitch-deg>-6</pitch-deg>
     </offsets>
   </model>
@@ -254,12 +265,22 @@
     <path>Models/Panels/Instruments/RMIDME/RMIDME.xml</path>
     <offsets>
       <x-m>0.41091</x-m>
-      <y-m>0.54903</y-m>
-      <z-m>0.82938</z-m>
+      <y-m>0.54635</y-m>
+      <z-m>0.85891</z-m>
       <pitch-deg>-6</pitch-deg>
     </offsets>
   </model>
-
+  
+  <model>
+    <name>RMI Selector first officer</name>
+    <path>Models/Panels/Instruments/RMIDME/RMISEL/RMISEL.xml</path>
+    <offsets>
+      <x-m>0.41453</x-m>
+      <y-m>0.63007</y-m>
+      <z-m>0.82937</z-m>
+      <pitch-deg>-6</pitch-deg>
+    </offsets>
+  </model>
   
   <!--
   <model>
