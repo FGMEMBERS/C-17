@@ -1,0 +1,59 @@
+<?xml version="1.0"?>
+
+<!--
+    :copyright: 2023, IAHM-COL
+    License: GPLv3
+    
+    Redistribution, or reuse, with or without modifications
+    shall keep this attribution information. 
+-->
+
+<PropertyList>
+  <path>RMICHSEL.ac</path>
+
+  <animation>
+    <type>knob</type>
+    <object-name>chsel.knob</object-name>
+    <property>fdm/jsbsim/instruments/RMIDME/channel/switch</property>
+    <factor>40</factor>
+    <offset-deg>-40</offset-deg>
+    <center>
+      <x-m>0.009745</x-m>
+      <y-m>0</y-m>
+      <z-m>-0.004755</z-m>
+    </center>
+    <axis>
+      <x>-1</x><y>0</y><z>0</z>
+    </axis>
+    
+    <action>
+      <binding>
+        <command>property-cycle</command>
+        <property>fdm/jsbsim/instruments/RMIDME/channel/switch</property>
+	<value>0</value>
+	<value>1</value>
+	<value>2</value>
+        <wrap>false</wrap>
+      </binding>
+    </action>
+  </animation>
+
+  <animation>
+    <type>select</type>   
+    <object-name>inop-tag</object-name> 
+    <condition>
+      <equals>
+	<property>fdm/jsbsim/instruments/RMIDME/channel/inop</property>
+	<value>1</value>
+      </equals>
+    </condition>
+  </animation>
+  
+  <!-- Lightmaps-->
+  <effect>
+    <inherits-from>floodlighting</inherits-from>
+    <object-name>frame</object-name>
+    <object-name>chsel.knob</object-name>
+    <object-name>inop-tag</object-name>
+  </effect>
+</PropertyList>

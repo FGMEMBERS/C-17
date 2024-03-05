@@ -464,4 +464,19 @@ shall keep this attribution information.
       </test>
     </switch>
   </channel>
+
+  <!-- channel/switch; 0: ch2. 1: default. 2: ch3 -->
+  <property value="1">instruments/RMIDME/channel/switch</property>
+  <property value="1">instruments/RMIDME/channel/inop</property>
+  <channel name="Alternative Channel Selector">
+    <!-- INOP: selected remains 0, regardless of switch position
+	 NO INOP: Selected channel based on switch position
+    -->
+    <switch name="instruments/RMIDME/channel/selected">
+      <default value="0"/>
+      <test value="instruments/RMIDME/channel/switch">
+	instruments/RMIDME/channel/inop eq 0
+      </test>
+    </switch>
+  </channel>
 </system>

@@ -281,6 +281,30 @@
       <pitch-deg>-6</pitch-deg>
     </offsets>
   </model>
+
+  <model>
+    <name>RMI Selector captain</name>
+    <path>Models/Panels/Instruments/RMIDME/RMICHSEL/RMICHSEL.xml</path>
+    <offsets>
+      <x-m>0.41981</x-m>
+      <y-m>-0.68043</y-m>
+      <z-m>0.78607</z-m>
+      <pitch-deg>-6</pitch-deg>
+    </offsets>
+  </model>
+
+  <model>
+    <name>RMI Selector first officer</name>
+    <path>Models/Panels/Instruments/RMIDME/RMICHSEL/RMICHSEL.xml</path>
+    <offsets>
+      <x-m>0.42142</x-m>
+      <y-m>0.6097</y-m>
+      <z-m>0.78607</z-m>
+      <pitch-deg>-6</pitch-deg>
+    </offsets>
+  </model>
+
+
   
   <!--
   <model>
