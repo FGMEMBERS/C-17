@@ -7,6 +7,7 @@
 -->
 
 <PropertyList>
+  <!-- ADFs ch1 -> 3 -->
   <adf>
     <name>adf</name>
     <number>0</number>
@@ -15,6 +16,11 @@
   <adf>
     <name>adf</name>
     <number>1</number>
+  </adf>
+
+  <adf>
+    <name>adf</name>
+    <number>2</number>
   </adf>
 
   <airspeed-indicator>
@@ -57,11 +63,13 @@
     <number>0</number>
   </magnetic-compass>
 
+  <!-- nav0 slaved to selected, and used on A/P response -->
   <nav-radio>
     <name>nav</name>
     <number>0</number>
   </nav-radio>
 
+  <!-- navs Ch1 -> 3, odd, tacs Ch1-> 3, even -->
   <nav-radio>
     <name>nav</name>
     <number>1</number>
@@ -77,6 +85,21 @@
     <number>3</number>
   </nav-radio>
 
+  <nav-radio>
+    <name>nav</name>
+    <number>4</number>
+  </nav-radio>
+
+  <nav-radio>
+    <name>nav</name>
+    <number>5</number>
+  </nav-radio>
+
+  <nav-radio>
+    <name>nav</name>
+    <number>6</number>
+  </nav-radio>
+  
   <slip-skid-ball>
     <name>slip-skid-ball</name>
     <number>0</number>

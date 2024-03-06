@@ -17,14 +17,30 @@ shall keep this attribution information.
   <!-- heading knob offset -->
   <property value="0">instruments/RMIDME/heading-offset</property>
   <!-- initial values for the nav stack -->
-  <property value="112.10">/instrumentation/nav[2]/frequencies/selected-mhz</property> 
-  <property value="115.20">/instrumentation/nav[2]/frequencies/standby-mhz</property> 
-  <property value="117.15">/instrumentation/nav[3]/frequencies/selected-mhz</property> 
-  <property value="113.80">/instrumentation/nav[3]/frequencies/standby-mhz</property>
+  <property value="112.10">/instrumentation/nav[1]/frequencies/selected-mhz</property> 
+  <property value="115.20">/instrumentation/nav[1]/frequencies/standby-mhz</property> 
+  <property value="117.15">/instrumentation/nav[2]/frequencies/selected-mhz</property> 
+  <property value="113.80">/instrumentation/nav[2]/frequencies/standby-mhz</property>
+  <property value="284">/instrumentation/nav[2]/radials/selected-deg</property>
+  <property value="112.10">/instrumentation/nav[3]/frequencies/selected-mhz</property> 
+  <property value="115.20">/instrumentation/nav[3]/frequencies/standby-mhz</property> 
+  <property value="326">/instrumentation/nav[3]/radials/selected-deg</property>
+  <property value="117.15">/instrumentation/nav[4]/frequencies/selected-mhz</property> 
+  <property value="113.80">/instrumentation/nav[4]/frequencies/standby-mhz</property>
+  <property value="284">/instrumentation/nav[4]/radials/selected-deg</property>
+  <property value="112.10">/instrumentation/nav[5]/frequencies/selected-mhz</property> 
+  <property value="115.20">/instrumentation/nav[5]/frequencies/standby-mhz</property> 
+  <property value="326">/instrumentation/nav[5]/radials/selected-deg</property>
+  <property value="117.15">/instrumentation/nav[6]/frequencies/selected-mhz</property> 
+  <property value="113.80">/instrumentation/nav[6]/frequencies/standby-mhz</property>
+  <property value="284">/instrumentation/nav[6]/radials/selected-deg</property>
 
   <!-- Somehow the second instance of adf fails electrical output creation -->
   <channel name="activate adf1 electrical">
     <switch name="/systems/electrical/outputs/adf[1]">
+      <default value="/systems/electrical/outputs/adf"/>
+    </switch>
+    <switch name="/systems/electrical/outputs/adf[2]">
       <default value="/systems/electrical/outputs/adf"/>
     </switch>
   </channel>
@@ -58,18 +74,37 @@ shall keep this attribution information.
 
     <switch name="instruments/RMIDME/ch2/adf/flag">
       <default value="0"/>
-      <test value="1">
-	/instrumentation/adf/operable eq 0
+      <test logic="AND" value="1">
+	instruments/RMIDME/channel/selected ne 2
+	/instrumentation/adf[1]/operable eq 0
       </test>
-      <test value="1">
+      <test logic="AND" value="1">
+	instruments/RMIDME/channel/selected ne 2
 	/instrumentation/adf[1]/in-range eq 0
+      </test>
+      <test logic="AND" value="1">
+	instruments/RMIDME/channel/selected eq 2
+	/instrumentation/adf[2]/operable eq 0
+      </test>
+      <test logic="AND" value="1">
+	instruments/RMIDME/channel/selected eq 2
+	/instrumentation/adf[2]/in-range eq 0
       </test>
     </switch>
 
     <switch name="instruments/RMIDME/ch2/adf/bearing">
       <default value="/instrumentation/adf[1]/indicated-bearing-deg"/>
-      <test value="0">
+      <test logic="AND" value="0">
+	instruments/RMIDME/channel/selected ne 2
 	instruments/RMIDME/ch2/adf/flag eq 1
+      </test>
+      <test logic="AND" value="0">
+	instruments/RMIDME/channel/selected eq 2
+	instruments/RMIDME/ch2/adf/flag eq 1
+      </test>
+      <test logic="AND" value="/instrumentation/adf[2]/indicated-bearing-deg">
+	instruments/RMIDME/channel/selected eq 2
+	instruments/RMIDME/ch2/adf/flag eq 0
       </test>
     </switch>
 
@@ -87,24 +122,24 @@ shall keep this attribution information.
     <switch name="instruments/RMIDME/ch1/vor/flag">
       <default value="0"/>
       <test value="1">
-	/instrumentation/nav/operable eq 0
+	/instrumentation/nav[1]/operable eq 0
       </test>
       <test value="1">
-	/instrumentation/nav/in-range eq 0
+	/instrumentation/nav[1]/in-range eq 0
       </test>
       <test value="1">
-	/instrumentation/nav/data-is-valid eq 0
+	/instrumentation/nav[1]/data-is-valid eq 0
       </test>
     </switch>
 
     <switch name="instruments/RMIDME/ch1/vor/data-is-valid">
-      <default value="/instrumentation/nav/data-is-valid"/>
+      <default value="/instrumentation/nav[1]/data-is-valid"/>
     </switch>
 
     <fcs_function name="instruments/RMIDME/ch1/vor/bearing-direct">
       <function>
 	<difference>
-	  <property>/instrumentation/nav/heading-deg</property>
+	  <property>/instrumentation/nav[1]/heading-deg</property>
 	  <property>/orientation/heading-magnetic-deg</property>
 	</difference>
       </function>
@@ -129,7 +164,7 @@ shall keep this attribution information.
     <switch name="instruments/RMIDME/ch1/vor/bearing">
       <default value="0"/>
       <test value="instruments/RMIDME/ch1/vor/bearing-corrected">
-	/instrumentation/nav/data-is-valid eq 1
+	/instrumentation/nav[1]/data-is-valid eq 1
       </test>
     </switch>
 
@@ -145,7 +180,7 @@ shall keep this attribution information.
     <fcs_function name="instruments/RMIDME/ch1/vor/nav-distance-nm">
       <function>
 	<product>
-	  <property>/instrumentation/nav/nav-distance</property>
+	  <property>/instrumentation/nav[1]/nav-distance</property>
 	  <value>0.0005399568</value>
 	</product>
       </function>
@@ -157,30 +192,58 @@ shall keep this attribution information.
 	instruments/RMIDME/ch1/vor/data-is-valid eq 0
       </test>
     </switch>
-    
+
     <switch name="instruments/RMIDME/ch2/vor/flag">
       <default value="0"/>
-      <test value="1">
-	/instrumentation/nav[2]/operable eq 0
+      <test logic="AND" value="1">
+	instruments/RMIDME/channel/selected ne 2
+	/instrumentation/nav[3]/operable eq 0
       </test>
-      <test value="1">
-	/instrumentation/nav[2]/in-range eq 0
+      <test logic="AND" value="1">
+	instruments/RMIDME/channel/selected ne 2
+	/instrumentation/nav[3]/in-range eq 0
       </test>
-      <test value="1">
-	/instrumentation/nav[2]/data-is-valid eq 0
+      <test logic="AND" value="1">
+	instruments/RMIDME/channel/selected ne 2
+	/instrumentation/nav[3]/data-is-valid eq 0
+      </test>
+      <test logic="AND" value="1">
+	instruments/RMIDME/channel/selected eq 2
+	/instrumentation/nav[5]/operable eq 0
+      </test>
+      <test logic="AND" value="1">
+	instruments/RMIDME/channel/selected eq 2
+	/instrumentation/nav[5]/in-range eq 0
+      </test>
+      <test logic="AND" value="1">
+	instruments/RMIDME/channel/selected eq 2
+	/instrumentation/nav[5]/data-is-valid eq 0
       </test>
     </switch>
 
     <switch name="instruments/RMIDME/ch2/vor/data-is-valid">
-      <default value="/instrumentation/nav[2]/data-is-valid"/>
+      <default value="/instrumentation/nav[3]/data-is-valid"/>
+      <test value="/instrumentation/nav[5]/data-is-valid">
+	instruments/RMIDME/channel/selected eq 2
+      </test>
     </switch>
 
     <fcs_function name="instruments/RMIDME/ch2/vor/bearing-direct">
       <function>
-	<difference>
-	  <property>/instrumentation/nav[2]/heading-deg</property>
-	  <property>/orientation/heading-magnetic-deg</property>
-	</difference>
+	<ifthen>
+	  <lt>
+	    <property>instruments/RMIDME/channel/selected</property>
+	    <value>1</value>
+	  </lt>
+	  <difference>
+	    <property>/instrumentation/nav[3]/heading-deg</property>
+	    <property>/orientation/heading-magnetic-deg</property>
+	  </difference>
+	  <difference>
+	    <property>/instrumentation/nav[5]/heading-deg</property>
+	    <property>/orientation/heading-magnetic-deg</property>
+	  </difference>
+	</ifthen>
       </function>
     </fcs_function>
 
@@ -202,8 +265,13 @@ shall keep this attribution information.
 
     <switch name="instruments/RMIDME/ch2/vor/bearing">
       <default value="0"/>
-      <test value="instruments/RMIDME/ch2/vor/bearing-corrected">
-	/instrumentation/nav[2]/data-is-valid eq 1
+      <test logic="AND" value="instruments/RMIDME/ch2/vor/bearing-corrected">
+	instruments/RMIDME/channel/selected ne 2
+	/instrumentation/nav[3]/data-is-valid eq 1
+      </test>
+      <test logic="AND" value="instruments/RMIDME/ch2/vor/bearing-corrected">
+	instruments/RMIDME/channel/selected eq 2
+	/instrumentation/nav[5]/data-is-valid eq 1
       </test>
     </switch>
 
@@ -218,10 +286,20 @@ shall keep this attribution information.
     
     <fcs_function name="instruments/RMIDME/ch2/vor/nav-distance-nm">
       <function>
-	<product>
-	  <property>/instrumentation/nav[2]/nav-distance</property>
-	  <value>0.0005399568</value>
-	</product>
+	<ifthen>
+	  <lt>
+	    <property>instruments/RMIDME/channel/selected</property>
+	    <value>1</value>
+	  </lt>
+	  <product>
+	    <property>/instrumentation/nav[3]/nav-distance</property>
+	    <value>0.0005399568</value>
+	  </product>
+	  <product>
+	    <property>/instrumentation/nav[5]/nav-distance</property>
+	    <value>0.0005399568</value>
+	  </product>
+	</ifthen>
       </function>
     </fcs_function>
 
@@ -233,28 +311,31 @@ shall keep this attribution information.
     </switch>
   </channel>
 
+
+
+
   <channel name="TAC">
     <switch name="instruments/RMIDME/ch1/tac/flag">
       <default value="0"/>
       <test value="1">
-	/instrumentation/nav[1]/operable eq 0
+	/instrumentation/nav[2]/operable eq 0
       </test>
       <test value="1">
-	/instrumentation/nav[1]/in-range eq 0
+	/instrumentation/nav[2]/in-range eq 0
       </test>
       <test value="1">
-	/instrumentation/nav[1]/data-is-valid eq 0
+	/instrumentation/nav[2]/data-is-valid eq 0
       </test>
     </switch>
 
     <switch name="instruments/RMIDME/ch1/tac/data-is-valid">
-      <default value="/instrumentation/nav[1]/data-is-valid"/>
+      <default value="/instrumentation/nav[2]/data-is-valid"/>
     </switch>
 
     <fcs_function name="instruments/RMIDME/ch1/tac/bearing-direct">
       <function>
 	<difference>
-	  <property>/instrumentation/nav[1]/heading-deg</property>
+	  <property>/instrumentation/nav[2]/heading-deg</property>
 	  <property>/orientation/heading-magnetic-deg</property>
 	</difference>
       </function>
@@ -279,7 +360,7 @@ shall keep this attribution information.
     <switch name="instruments/RMIDME/ch1/tac/bearing">
       <default value="0"/>
       <test value="instruments/RMIDME/ch1/tac/bearing-corrected">
-	/instrumentation/nav[1]/data-is-valid eq 1
+	/instrumentation/nav[2]/data-is-valid eq 1
       </test>
     </switch>
 
@@ -295,7 +376,7 @@ shall keep this attribution information.
     <fcs_function name="instruments/RMIDME/ch1/tac/nav-distance-nm">
       <function>
 	<product>
-	  <property>/instrumentation/nav[1]/nav-distance</property>
+	  <property>/instrumentation/nav[2]/nav-distance</property>
 	  <value>0.0005399568</value>
 	</product>
       </function>
@@ -307,30 +388,58 @@ shall keep this attribution information.
 	instruments/RMIDME/ch1/tac/data-is-valid eq 0
       </test>
     </switch>
-    
+
     <switch name="instruments/RMIDME/ch2/tac/flag">
       <default value="0"/>
-      <test value="1">
-	/instrumentation/nav[3]/operable eq 0
+      <test logic="AND" value="1">
+	instruments/RMIDME/channel/selected ne 2
+	/instrumentation/nav[4]/operable eq 0
       </test>
-      <test value="1">
-	/instrumentation/nav[3]/in-range eq 0
+      <test logic="AND" value="1">
+	instruments/RMIDME/channel/selected ne 2
+	/instrumentation/nav[4]/in-range eq 0
       </test>
-      <test value="1">
-	/instrumentation/nav[3]/data-is-valid eq 0
+      <test logic="AND" value="1">
+	instruments/RMIDME/channel/selected ne 2
+	/instrumentation/nav[4]/data-is-valid eq 0
+      </test>
+      <test logic="AND" value="1">
+	instruments/RMIDME/channel/selected eq 2
+	/instrumentation/nav[6]/operable eq 0
+      </test>
+      <test logic="AND" value="1">
+	instruments/RMIDME/channel/selected eq 2
+	/instrumentation/nav[6]/in-range eq 0
+      </test>
+      <test logic="AND" value="1">
+	instruments/RMIDME/channel/selected eq 2
+	/instrumentation/nav[6]/data-is-valid eq 0
       </test>
     </switch>
 
     <switch name="instruments/RMIDME/ch2/tac/data-is-valid">
-      <default value="/instrumentation/nav[3]/data-is-valid"/>
+      <default value="/instrumentation/nav[4]/data-is-valid"/>
+      <test value="/instrumentation/nav[6]/data-is-valid">
+	instruments/RMIDME/channel/selected eq 2
+      </test>
     </switch>
 
     <fcs_function name="instruments/RMIDME/ch2/tac/bearing-direct">
       <function>
-	<difference>
-	  <property>/instrumentation/nav[3]/heading-deg</property>
-	  <property>/orientation/heading-magnetic-deg</property>
-	</difference>
+	<ifthen>
+	  <lt>
+	    <property>instruments/RMIDME/channel/selected</property>
+	    <value>1</value>
+	  </lt>
+	  <difference>
+	    <property>/instrumentation/nav[4]/heading-deg</property>
+	    <property>/orientation/heading-magnetic-deg</property>
+	  </difference>
+	  <difference>
+	    <property>/instrumentation/nav[6]/heading-deg</property>
+	    <property>/orientation/heading-magnetic-deg</property>
+	  </difference>
+	</ifthen>
       </function>
     </fcs_function>
 
@@ -352,8 +461,13 @@ shall keep this attribution information.
 
     <switch name="instruments/RMIDME/ch2/tac/bearing">
       <default value="0"/>
-      <test value="instruments/RMIDME/ch2/tac/bearing-corrected">
-	/instrumentation/nav[3]/data-is-valid eq 1
+      <test logic="AND" value="instruments/RMIDME/ch2/tac/bearing-corrected">
+	instruments/RMIDME/channel/selected ne 2
+	/instrumentation/nav[4]/data-is-valid eq 1
+      </test>
+      <test logic="AND" value="instruments/RMIDME/ch2/tac/bearing-corrected">
+	instruments/RMIDME/channel/selected eq 2
+	/instrumentation/nav[6]/data-is-valid eq 1
       </test>
     </switch>
 
@@ -368,10 +482,20 @@ shall keep this attribution information.
     
     <fcs_function name="instruments/RMIDME/ch2/tac/nav-distance-nm">
       <function>
-	<product>
-	  <property>/instrumentation/nav[3]/nav-distance</property>
-	  <value>0.0005399568</value>
-	</product>
+	<ifthen>
+	  <lt>
+	    <property>instruments/RMIDME/channel/selected</property>
+	    <value>1</value>
+	  </lt>
+	  <product>
+	    <property>/instrumentation/nav[4]/nav-distance</property>
+	    <value>0.0005399568</value>
+	  </product>
+	  <product>
+	    <property>/instrumentation/nav[6]/nav-distance</property>
+	    <value>0.0005399568</value>
+	  </product>
+	</ifthen>
       </function>
     </fcs_function>
 
