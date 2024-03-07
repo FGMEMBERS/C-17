@@ -9,9 +9,9 @@
     <property>/instrumentation/nav[0]/radials/selected-deg</property> 
     <factor>-5.0</factor>         
     <center>
-      <x-m>0.033</x-m>
-      <y-m>-0.222</y-m>
-      <z-m>0.0231</z-m>
+      <x-m>0.04169</x-m>
+      <y-m>-0.2029</y-m>
+      <z-m>0.03627</z-m>
     </center>
     <axis>
       <x>1</x>
@@ -26,9 +26,9 @@
     <property>/autopilot/settings/heading-bug-deg</property> 
     <factor>-5.0</factor>         
     <center>
-      <x-m>0.033</x-m>
-      <y-m>-0.047</y-m>
-      <z-m>0.025</z-m>
+      <x-m>0.03992</x-m>
+      <y-m>-0.04286</y-m>
+      <z-m>0.04001</z-m>
     </center>
     <axis>
       <x>1</x>
@@ -44,9 +44,9 @@
     <factor>-5.8</factor> 
     <offset-deg>240</offset-deg>         
     <center>
-      <x-m>0.033</x-m>
-      <y-m>-0.047</y-m>
-      <z-m>0.025</z-m>
+      <x-m>0.03992</x-m>
+      <y-m>-0.04286</y-m>
+      <z-m>0.04001</z-m>
     </center>
     <axis>
       <x>1</x>
