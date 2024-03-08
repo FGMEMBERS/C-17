@@ -305,6 +305,29 @@
   </model>
 
 
+  <!-- CNC radios -->
+  <model>
+    <name>cnc radio captain</name>
+    <path>Models/Panels/Instruments/cnc-radio/cnc-radio.xml</path>
+    <offsets>
+      <x-m>0.5027</x-m>
+      <y-m>-0.36615</y-m>
+      <z-m>1.1022</z-m>
+      <pitch-deg>-6</pitch-deg>
+    </offsets>
+  </model>
+
+  <model>
+    <name>cnc radio first-officer</name>
+    <path>Models/Panels/Instruments/cnc-radio/cnc-radio.xml</path>
+    <offsets>
+      <x-m>0.50436</x-m>
+      <y-m>0.32884</y-m>
+      <z-m>1.1022</z-m>
+      <pitch-deg>-6</pitch-deg>
+    </offsets>
+  </model>
+
   
   <!--
   <model>
@@ -351,7 +374,7 @@
     <path>Models/Panels/Instruments/AP/autopilot-panel.xml</path>
     <offsets>
       <x-m>0.49046</x-m>
-      <y-m>-0.043363</y-m>
+      <y-m>-0.018363</y-m>
       <z-m>1.05249</z-m>
       <pitch-deg>-6</pitch-deg>
     </offsets>

@@ -1,0 +1,50 @@
+<?xml version="1.0"?>
+
+<!--
+    :copyright: 2024, IAHM-COL
+    License: GPLv3
+    
+    Redistribution, or reuse, with or without modifications
+    shall keep this attribution information. 
+-->
+
+<PropertyList>
+  <path>cnc-radio.ac</path>
+
+  <!-- Lightmaps -->
+  <effect>
+    <inherits-from>floodlighting</inherits-from>
+    <object-name>frame</object-name>
+    <object-name>knob.crs.hi</object-name>
+    <object-name>knob.crs.lo</object-name>
+    <object-name>knob.freq.hi</object-name>
+    <object-name>knob.freq.lo</object-name>
+    <object-name>button.iden</object-name>
+    <object-name>button.xfer</object-name>
+    <object-name>button.b1</object-name>
+    <object-name>button.b2</object-name>
+    <object-name>button.b3</object-name>
+    <object-name>button.b4</object-name>
+    <object-name>button.b5</object-name>
+    <object-name>button.b6</object-name>
+    <object-name>button.l1</object-name>
+    <object-name>button.l2</object-name>
+    <object-name>button.l3</object-name>
+    <object-name>button.l4</object-name>
+    <object-name>button.l5</object-name>
+    <object-name>button.r1</object-name>
+    <object-name>button.r2</object-name>
+    <object-name>button.r3</object-name>
+    <object-name>button.r4</object-name>
+    <object-name>button.r5</object-name>
+    <object-name>button.t1</object-name>
+    <object-name>button.t2</object-name>
+    <object-name>button.t3</object-name>
+    <object-name>button.t4</object-name>
+    <object-name>button.t5</object-name>
+    <object-name>button.t6</object-name>
+    <object-name>button.t7</object-name>
+    <object-name>button.bright.low</object-name>
+    <object-name>button.bright.hi</object-name>
+  </effect>
+</PropertyList>
