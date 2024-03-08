@@ -71,6 +71,30 @@ shall keep this attribution information.
 	instruments/cnc-radio/mode/composite-mode eq 39
       </test>
     </switch>
+
+    <switch name="instruments/cnc-radio/mode/comm-mode">
+      <default value="0"/>
+      <test logic="OR" value="1">
+	instruments/cnc-radio/mode/mode eq 10
+	instruments/cnc-radio/mode/mode eq 20
+	instruments/cnc-radio/mode/mode eq 30
+	instruments/cnc-radio/mode/mode eq 11
+	instruments/cnc-radio/mode/mode eq 12
+	instruments/cnc-radio/mode/mode eq 13
+      </test>
+    </switch>
+
+    <switch name="instruments/cnc-radio/mode/nav-mode">
+      <default value="0"/>
+      <test logic="OR" value="1">
+	instruments/cnc-radio/mode/mode eq 15
+	instruments/cnc-radio/mode/mode eq 25
+	instruments/cnc-radio/mode/mode eq 35
+	instruments/cnc-radio/mode/mode eq 15
+	instruments/cnc-radio/mode/mode eq 26
+	instruments/cnc-radio/mode/mode eq 36
+      </test>
+    </switch>
   </channel>
 
   <!-- uhf, vhf and hf frequencies -->
@@ -85,7 +109,7 @@ shall keep this attribution information.
   <property value="128.3">/instrumentation/comm[3]/frequencies/selected-mhz</property>
   <property value="121.9">/instrumentation/comm[3]/frequencies/standby-mhz</property> 
   <channel name="Frequencies">
-    <switch name="instruments/cnc-radio/display/frequencies/print">
+    <switch name="instruments/cnc-radio/display/frequencies/print-mhz">
       <default value="0"/>
       <test logic="OR" value="1">
 	instruments/cnc-radio/mode/mode eq 10
@@ -100,12 +124,18 @@ shall keep this attribution information.
 	instruments/cnc-radio/mode/mode eq 16
 	instruments/cnc-radio/mode/mode eq 26
 	instruments/cnc-radio/mode/mode eq 36
+      </test>
+    </switch>
+
+    <switch name="instruments/cnc-radio/display/frequencies/print-khz">
+      <default value="0"/>
+      <test logic="OR" value="1">
 	instruments/cnc-radio/mode/mode eq 17
 	instruments/cnc-radio/mode/mode eq 27
 	instruments/cnc-radio/mode/mode eq 37
       </test>
     </switch>
-
+    
     <switch name="instruments/cnc-radio/display/frequencies/standby-mhz">
       <default value="0"/>
       <test value="/instrumentation/comm[1]/frequencies/standby-mhz">
@@ -143,15 +173,6 @@ shall keep this attribution information.
       </test>
       <test value="/instrumentation/nav[6]/frequencies/standby-mhz">
 	instruments/cnc-radio/mode/mode eq 36
-      </test>
-      <test value="/instrumentation/adf/frequencies/standby-khz">
-	instruments/cnc-radio/mode/mode eq 17
-      </test>
-      <test value="/instrumentation/adf[1]/frequencies/standby-khz">
-	instruments/cnc-radio/mode/mode eq 27
-      </test>
-      <test value="/instrumentation/adf[2]/frequencies/standby-khz">
-	instruments/cnc-radio/mode/mode eq 37
       </test>
     </switch>
 
@@ -206,15 +227,6 @@ shall keep this attribution information.
       <test value="/instrumentation/nav[6]/frequencies/selected-mhz">
 	instruments/cnc-radio/mode/mode eq 36
       </test>
-      <test value="/instrumentation/adf/frequencies/selected-khz">
-	instruments/cnc-radio/mode/mode eq 17
-      </test>
-      <test value="/instrumentation/adf[1]/frequencies/selected-khz">
-	instruments/cnc-radio/mode/mode eq 27
-      </test>
-      <test value="/instrumentation/adf[2]/frequencies/selected-khz">
-	instruments/cnc-radio/mode/mode eq 37
-      </test>
     </switch>
 
     <switch name="instruments/cnc-radio/display/frequencies/selected-khz">
@@ -267,8 +279,9 @@ shall keep this attribution information.
     </switch>
   </channel>
 
+  <property value="1">instruments/cnc-radio/display/nav-id/on</property>
   <channel name="Nav Ids">
-    <switch name="instruments/cnc-radio/display/nav-id/print">
+    <switch name="instruments/cnc-radio/display/nav-id/print-mode">
       <default value="0"/>
       <test logic="OR" value="1">
 	instruments/cnc-radio/mode/mode eq 15
@@ -280,6 +293,13 @@ shall keep this attribution information.
 	instruments/cnc-radio/mode/mode eq 17
 	instruments/cnc-radio/mode/mode eq 27
 	instruments/cnc-radio/mode/mode eq 37
+      </test>
+    </switch>
+    <switch name="instruments/cnc-radio/display/nav-id/print">
+      <default value="0"/>
+      <test logic="AND" value="1">
+	instruments/cnc-radio/display/nav-id/on eq 1
+	instruments/cnc-radio/display/nav-id/print-mode eq 1
       </test>
     </switch>
   </channel>
@@ -426,4 +446,9 @@ shall keep this attribution information.
       </test>
     </switch>
   </channel>
+
+  <property value="0.8">instruments/cnc-radio/display/config/brt</property>
+  <channel name="Display configuration">
+  </channel>
+  
 </system>
