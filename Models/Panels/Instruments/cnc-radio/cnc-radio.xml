@@ -2707,7 +2707,365 @@
       </mod-up>
     </action>
   </animation>
+
+  <!-- IDENTs -->
+  <text>
+    <name>dots-id</name>
+    <font>Helvetica.txf</font>
+    <character-size type="double">0.0105</character-size>
+    <offsets>
+      <x-m>0.0103</x-m>
+      <y-m>0.004865</y-m>
+      <z-m>0.01973</z-m>
+    </offsets>
+    <axis-alignment>yz-plane</axis-alignment>
+    <type type="string">literal</type>
+    <text type="string">----</text>
+    <character-aspect-ratio type="double">1</character-aspect-ratio>
+    <alignment>left-top</alignment>
+  </text>
+
+  <text>
+    <name>nav1-id</name>
+    <font>Helvetica.txf</font>
+    <character-size type="double">0.0105</character-size>
+    <offsets>
+      <x-m>0.0103</x-m>
+      <y-m>0.004865</y-m>
+      <z-m>0.01973</z-m>
+    </offsets>
+    <axis-alignment>yz-plane</axis-alignment>
+    <type type="string">text-value</type>
+    <property type="string">/instrumentation/nav[1]/nav-id</property>
+    <format type="string">%s</format>
+    <character-aspect-ratio type="double">1</character-aspect-ratio>
+    <alignment>left-top</alignment>
+  </text>
+
+  <text>
+    <name>nav2-id</name>
+    <font>Helvetica.txf</font>
+    <character-size type="double">0.0105</character-size>
+    <offsets>
+      <x-m>0.0103</x-m>
+      <y-m>0.004865</y-m>
+      <z-m>0.01973</z-m>
+    </offsets>
+    <axis-alignment>yz-plane</axis-alignment>
+    <type type="string">text-value</type>
+    <property type="string">/instrumentation/nav[3]/nav-id</property>
+    <format type="string">%s</format>
+    <character-aspect-ratio type="double">1</character-aspect-ratio>
+    <alignment>left-top</alignment>
+  </text>
+
+  <text>
+    <name>nav3-id</name>
+    <font>Helvetica.txf</font>
+    <character-size type="double">0.0105</character-size>
+    <offsets>
+      <x-m>0.0103</x-m>
+      <y-m>0.004865</y-m>
+      <z-m>0.01973</z-m>
+    </offsets>
+    <axis-alignment>yz-plane</axis-alignment>
+    <type type="string">text-value</type>
+    <property type="string">/instrumentation/nav[5]/nav-id</property>
+    <format type="string">%s</format>
+    <character-aspect-ratio type="double">1</character-aspect-ratio>
+    <alignment>left-top</alignment>
+  </text>
+
+  <text>
+    <name>tac1-id</name>
+    <font>Helvetica.txf</font>
+    <character-size type="double">0.0105</character-size>
+    <offsets>
+      <x-m>0.0103</x-m>
+      <y-m>0.004865</y-m>
+      <z-m>0.01973</z-m>
+    </offsets>
+    <axis-alignment>yz-plane</axis-alignment>
+    <type type="string">text-value</type>
+    <property type="string">/instrumentation/nav[2]/nav-id</property>
+    <format type="string">%s</format>
+    <character-aspect-ratio type="double">1</character-aspect-ratio>
+    <alignment>left-top</alignment>
+  </text>
+
+  <text>
+    <name>tac2-id</name>
+    <font>Helvetica.txf</font>
+    <character-size type="double">0.0105</character-size>
+    <offsets>
+      <x-m>0.0103</x-m>
+      <y-m>0.004865</y-m>
+      <z-m>0.01973</z-m>
+    </offsets>
+    <axis-alignment>yz-plane</axis-alignment>
+    <type type="string">text-value</type>
+    <property type="string">/instrumentation/nav[4]/nav-id</property>
+    <format type="string">%s</format>
+    <character-aspect-ratio type="double">1</character-aspect-ratio>
+    <alignment>left-top</alignment>
+  </text>
+
+  <text>
+    <name>tac3-id</name>
+    <font>Helvetica.txf</font>
+    <character-size type="double">0.0105</character-size>
+    <offsets>
+      <x-m>0.0103</x-m>
+      <y-m>0.004865</y-m>
+      <z-m>0.01973</z-m>
+    </offsets>
+    <axis-alignment>yz-plane</axis-alignment>
+    <type type="string">text-value</type>
+    <property type="string">/instrumentation/nav[6]/nav-id</property>
+    <format type="string">%s</format>
+    <character-aspect-ratio type="double">1</character-aspect-ratio>
+    <alignment>left-top</alignment>
+  </text>
+
+  <text>
+    <name>adf1-id</name>
+    <font>Helvetica.txf</font>
+    <character-size type="double">0.0105</character-size>
+    <offsets>
+      <x-m>0.0103</x-m>
+      <y-m>0.004865</y-m>
+      <z-m>0.01973</z-m>
+    </offsets>
+    <axis-alignment>yz-plane</axis-alignment>
+    <type type="string">text-value</type>
+    <property type="string">/instrumentation/adf/ident</property>
+    <format type="string">%s</format>
+    <character-aspect-ratio type="double">1</character-aspect-ratio>
+    <alignment>left-top</alignment>
+  </text>
+
+  <text>
+    <name>adf2-id</name>
+    <font>Helvetica.txf</font>
+    <character-size type="double">0.0105</character-size>
+    <offsets>
+      <x-m>0.0103</x-m>
+      <y-m>0.004865</y-m>
+      <z-m>0.01973</z-m>
+    </offsets>
+    <axis-alignment>yz-plane</axis-alignment>
+    <type type="string">text-value</type>
+    <property type="string">/instrumentation/adf[1]/ident</property>
+    <format type="string">%s</format>
+    <character-aspect-ratio type="double">1</character-aspect-ratio>
+    <alignment>left-top</alignment>
+  </text>
+
+  <text>
+    <name>adf3-id</name>
+    <font>Helvetica.txf</font>
+    <character-size type="double">0.0105</character-size>
+    <offsets>
+      <x-m>0.0103</x-m>
+      <y-m>0.004865</y-m>
+      <z-m>0.01973</z-m>
+    </offsets>
+    <axis-alignment>yz-plane</axis-alignment>
+    <type type="string">text-value</type>
+    <property type="string">/instrumentation/adf[2]/ident</property>
+    <format type="string">%s</format>
+    <character-aspect-ratio type="double">1</character-aspect-ratio>
+    <alignment>left-top</alignment>
+  </text>
   
+  <animation>
+    <name>idents</name>
+    <object-name>dots-id</object-name>
+    <object-name>nav1-id</object-name>
+    <object-name>nav2-id</object-name>
+    <object-name>nav3-id</object-name>
+    <object-name>tac1-id</object-name>
+    <object-name>tac2-id</object-name>
+    <object-name>tac3-id</object-name>
+    <object-name>adf1-id</object-name>
+    <object-name>adf2-id</object-name>
+    <object-name>adf3-id</object-name>
+  </animation>
+  
+  <animation>
+    <object-name>idents</object-name>
+    <type>material</type>
+    <emission>
+      <factor-prop>fdm/jsbsim/instruments/cnc-radio/display/config/brt</factor-prop>
+      <red>1.0</red>
+      <green>1.0</green>
+      <blue>0.0</blue>
+    </emission>
+  </animation>
+
+  <animation>
+    <object-name>dots-id</object-name>
+    <type>select</type>
+    <condition>
+      <equals>
+	<property>fdm/jsbsim/instruments/cnc-radio/display/nav-id/print-dots</property>
+	<value>1</value>
+      </equals>
+    </condition>
+  </animation>
+
+  <animation>
+    <object-name>nav1-id</object-name>
+    <type>select</type>
+    <condition>
+      <and>
+      <equals>
+	<property>fdm/jsbsim/instruments/cnc-radio/display/nav-id/print-nav-id</property>
+	<value>1</value>
+      </equals>
+      <equals>
+	<property>fdm/jsbsim/instruments/cnc-radio/mode/mode</property>
+	<value>15</value>
+      </equals>
+      </and>
+    </condition>
+  </animation>
+
+  <animation>
+    <object-name>nav2-id</object-name>
+    <type>select</type>
+    <condition>
+      <and>
+      <equals>
+	<property>fdm/jsbsim/instruments/cnc-radio/display/nav-id/print-nav-id</property>
+	<value>1</value>
+      </equals>
+      <equals>
+	<property>fdm/jsbsim/instruments/cnc-radio/mode/mode</property>
+	<value>25</value>
+      </equals>
+      </and>
+    </condition>
+  </animation>
+
+  <animation>
+    <object-name>nav3-id</object-name>
+    <type>select</type>
+    <condition>
+      <and>
+      <equals>
+	<property>fdm/jsbsim/instruments/cnc-radio/display/nav-id/print-nav-id</property>
+	<value>1</value>
+      </equals>
+      <equals>
+	<property>fdm/jsbsim/instruments/cnc-radio/mode/mode</property>
+	<value>35</value>
+      </equals>
+      </and>
+    </condition>
+  </animation>
+
+  <animation>
+    <object-name>tac1-id</object-name>
+    <type>select</type>
+    <condition>
+      <and>
+      <equals>
+	<property>fdm/jsbsim/instruments/cnc-radio/display/nav-id/print-nav-id</property>
+	<value>1</value>
+      </equals>
+      <equals>
+	<property>fdm/jsbsim/instruments/cnc-radio/mode/mode</property>
+	<value>16</value>
+      </equals>
+      </and>
+    </condition>
+  </animation>
+
+  <animation>
+    <object-name>tac2-id</object-name>
+    <type>select</type>
+    <condition>
+      <and>
+      <equals>
+	<property>fdm/jsbsim/instruments/cnc-radio/display/nav-id/print-nav-id</property>
+	<value>1</value>
+      </equals>
+      <equals>
+	<property>fdm/jsbsim/instruments/cnc-radio/mode/mode</property>
+	<value>26</value>
+      </equals>
+      </and>
+    </condition>
+  </animation>
+
+  <animation>
+    <object-name>tac3-id</object-name>
+    <type>select</type>
+    <condition>
+      <and>
+      <equals>
+	<property>fdm/jsbsim/instruments/cnc-radio/display/nav-id/print-nav-id</property>
+	<value>1</value>
+      </equals>
+      <equals>
+	<property>fdm/jsbsim/instruments/cnc-radio/mode/mode</property>
+	<value>36</value>
+      </equals>
+      </and>
+    </condition>
+  </animation>
+
+  <animation>
+    <object-name>adf1-id</object-name>
+    <type>select</type>
+    <condition>
+      <and>
+      <equals>
+	<property>fdm/jsbsim/instruments/cnc-radio/display/nav-id/print-nav-id</property>
+	<value>1</value>
+      </equals>
+      <equals>
+	<property>fdm/jsbsim/instruments/cnc-radio/mode/mode</property>
+	<value>17</value>
+      </equals>
+      </and>
+    </condition>
+  </animation>
+
+  <animation>
+    <object-name>adf2-id</object-name>
+    <type>select</type>
+    <condition>
+      <and>
+      <equals>
+	<property>fdm/jsbsim/instruments/cnc-radio/display/nav-id/print-nav-id</property>
+	<value>1</value>
+      </equals>
+      <equals>
+	<property>fdm/jsbsim/instruments/cnc-radio/mode/mode</property>
+	<value>27</value>
+      </equals>
+      </and>
+    </condition>
+  </animation>
+
+  <animation>
+    <object-name>adf3-id</object-name>
+    <type>select</type>
+    <condition>
+      <and>
+      <equals>
+	<property>fdm/jsbsim/instruments/cnc-radio/display/nav-id/print-nav-id</property>
+	<value>1</value>
+      </equals>
+      <equals>
+	<property>fdm/jsbsim/instruments/cnc-radio/mode/mode</property>
+	<value>37</value>
+      </equals>
+      </and>
+    </condition>
+  </animation>
   
   <!-- Lightmaps -->
   <effect>

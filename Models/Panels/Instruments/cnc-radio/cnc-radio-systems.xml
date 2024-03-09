@@ -362,11 +362,68 @@ shall keep this attribution information.
 	instruments/cnc-radio/mode/mode eq 37
       </test>
     </switch>
-    <switch name="instruments/cnc-radio/display/nav-id/print">
+    
+    <switch name="instruments/cnc-radio/display/nav-id/print-able">
       <default value="0"/>
       <test logic="AND" value="1">
 	instruments/cnc-radio/display/nav-id/on eq 1
 	instruments/cnc-radio/display/nav-id/print-mode eq 1
+      </test>
+    </switch>
+
+    <switch name="instruments/cnc-radio/display/nav-id/nav-in-range">
+      <default value="0"/>
+      <test logic="AND" value="1">
+	instruments/cnc-radio/mode/mode eq 15
+	/instrumentation/nav[1]/in-range eq 1
+      </test>
+      <test logic="AND" value="1">
+	instruments/cnc-radio/mode/mode eq 25
+	/instrumentation/nav[3]/in-range eq 1
+      </test>
+      <test logic="AND" value="1">
+	instruments/cnc-radio/mode/mode eq 35
+	/instrumentation/nav[5]/in-range eq 1
+      </test>
+      <test logic="AND" value="1">
+	instruments/cnc-radio/mode/mode eq 16
+	/instrumentation/nav[2]/in-range eq 1
+      </test>
+      <test logic="AND" value="1">
+	instruments/cnc-radio/mode/mode eq 26
+	/instrumentation/nav[4]/in-range eq 1
+      </test>
+      <test logic="AND" value="1">
+	instruments/cnc-radio/mode/mode eq 36
+	/instrumentation/nav[6]/in-range eq 1
+      </test>
+      <test logic="AND" value="1">
+	instruments/cnc-radio/mode/mode eq 17
+	/instrumentation/adf/in-range eq 1
+      </test>
+      <test logic="AND" value="1">
+	instruments/cnc-radio/mode/mode eq 27
+	/instrumentation/adf[1]/in-range eq 1
+      </test>
+      <test logic="AND" value="1">
+	instruments/cnc-radio/mode/mode eq 37
+	/instrumentation/adf[2]/in-range eq 1
+      </test>
+    </switch>
+
+    <switch name="instruments/cnc-radio/display/nav-id/print-nav-id">
+      <default value="0"/>
+      <test logic="AND" value="1">
+	instruments/cnc-radio/display/nav-id/print-able eq 1
+	instruments/cnc-radio/display/nav-id/nav-in-range eq 1
+      </test>
+    </switch>
+    
+    <switch name="instruments/cnc-radio/display/nav-id/print-dots">
+      <default value="0"/>
+      <test logic="AND" value="1">
+	instruments/cnc-radio/display/nav-id/print-able eq 1
+	instruments/cnc-radio/display/nav-id/nav-in-range eq 0
       </test>
     </switch>
   </channel>
