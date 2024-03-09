@@ -1604,6 +1604,82 @@
     </condition>
   </animation>
 
+  <!-- course and radial -->
+  <text>
+    <name>course</name>
+    <font>Helvetica.txf</font>
+    <character-size type="double">0.0122</character-size>
+    <offsets>
+      <x-m>0.0103</x-m>
+      <y-m>0.03511</y-m>
+      <z-m>0.03066</z-m>
+    </offsets>
+    <axis-alignment>yz-plane</axis-alignment>
+    <type type="string">number-value</type>
+    <format type="string">%0.0f</format>
+    <truncate type="bool">false</truncate>
+    <character-aspect-ratio type="double">1</character-aspect-ratio>
+    <property>fdm/jsbsim/instruments/cnc-radio/display/radials/selected-deg</property>    
+    <alignment>right-top</alignment>
+  </text>
+
+  <text>
+    <name>radial</name>
+    <font>Helvetica.txf</font>
+    <character-size type="double">0.0122</character-size>
+    <offsets>
+      <x-m>0.0103</x-m>
+      <y-m>0.03511</y-m>
+      <z-m>0.03066</z-m>
+    </offsets>
+    <axis-alignment>yz-plane</axis-alignment>
+    <type type="string">number-value</type>
+    <format type="string">%0.0f</format>
+    <truncate type="bool">false</truncate>
+    <character-aspect-ratio type="double">1</character-aspect-ratio>
+    <property>fdm/jsbsim/instruments/cnc-radio/display/radials/target-radial-deg</property>    
+    <alignment>right-top</alignment>
+  </text>
+  
+  <animation>
+    <name>courses</name>
+    <object-name>course</object-name>
+    <object-name>radial</object-name>
+  </animation>
+  
+  <animation>
+    <object-name>courses</object-name>
+    <type>material</type>
+    <emission>
+      <factor-prop>fdm/jsbsim/instruments/cnc-radio/display/config/brt</factor-prop>
+      <red>0.0</red>
+      <green>1.0</green>
+      <blue>0.0</blue>
+    </emission>
+  </animation>
+
+  <animation>
+    <object-name>course</object-name>
+    <type>select</type>
+    <condition>
+      <equals>
+	<property>fdm/jsbsim/instruments/cnc-radio/display/radials/print-selected-deg</property>
+	<value>1</value>
+      </equals>
+    </condition>
+  </animation>
+
+  <animation>
+    <object-name>radial</object-name>
+    <type>select</type>
+    <condition>
+      <equals>
+	<property>fdm/jsbsim/instruments/cnc-radio/display/radials/print-target-radial-deg</property>
+	<value>1</value>
+      </equals>
+    </condition>
+  </animation>
+  
   <!-- Frequency Knob -->
   <animation>
         <type>knob</type>
@@ -2066,10 +2142,204 @@
         <max>535</max>                
         <wrap>false</wrap>
       </binding>
-      
     </action>
   </animation>
 
+  <!-- Course Knobs -->
+  <animation>
+        <type>knob</type>
+        <object-name>knob.crs.lo</object-name>
+        <action>
+
+	  <binding>
+	    <condition>
+	      <equals>
+		<property>fdm/jsbsim/instruments/cnc-radio/display/config/status/nav1</property>
+		<value>1</value>
+	      </equals>
+	    </condition>
+            <command>property-adjust</command>
+            <property>/instrumentation/nav[1]/radials/selected-deg</property>
+            <factor>10</factor>
+            <min>0</min>
+            <max>360</max>                
+            <wrap>true</wrap>
+          </binding>
+
+	  <binding>
+	    <condition>
+	      <equals>
+		<property>fdm/jsbsim/instruments/cnc-radio/display/config/status/nav2</property>
+		<value>1</value>
+	      </equals>
+	    </condition>
+            <command>property-adjust</command>
+            <property>/instrumentation/nav[3]/radials/selected-deg</property>
+            <factor>10</factor>
+            <min>0</min>
+            <max>360</max>                
+            <wrap>true</wrap>
+	  </binding>
+
+	  <binding>
+	    <condition>
+	      <equals>
+		<property>fdm/jsbsim/instruments/cnc-radio/display/config/status/nav3</property>
+		<value>1</value>
+	      </equals>
+	    </condition>
+            <command>property-adjust</command>
+            <property>/instrumentation/nav[5]/radials/selected-deg</property>
+            <factor>10</factor>
+            <min>0</min>
+            <max>360</max>                
+            <wrap>true</wrap>
+	  </binding>
+
+	  <binding>
+	    <condition>
+	      <equals>
+		<property>fdm/jsbsim/instruments/cnc-radio/display/config/status/tac1</property>
+		<value>1</value>
+	      </equals>
+	    </condition>
+            <command>property-adjust</command>
+            <property>/instrumentation/nav[2]/radials/selected-deg</property>
+            <factor>10</factor>
+            <min>0</min>
+            <max>360</max>                
+            <wrap>true</wrap>
+	  </binding>
+
+	  <binding>
+	    <condition>
+	      <equals>
+		<property>fdm/jsbsim/instruments/cnc-radio/display/config/status/tac2</property>
+		<value>1</value>
+	      </equals>
+	    </condition>
+            <command>property-adjust</command>
+            <property>/instrumentation/nav[4]/radials/selected-deg</property>
+            <factor>10</factor>
+            <min>0</min>
+            <max>360</max>                
+            <wrap>true</wrap>
+	  </binding>
+
+	  <binding>
+	    <condition>
+	      <equals>
+		<property>fdm/jsbsim/instruments/cnc-radio/display/config/status/tac3</property>
+		<value>1</value>
+	      </equals>
+	    </condition>
+            <command>property-adjust</command>
+            <property>/instrumentation/nav[6]/radials/selected-deg</property>
+            <factor>10</factor>
+            <min>0</min>
+            <max>360</max>                
+            <wrap>true</wrap>
+	  </binding>
+        </action>
+  </animation>
+
+  <animation>
+        <type>knob</type>
+        <object-name>knob.crs.hi</object-name>
+        <action>
+
+	  <binding>
+	    <condition>
+	      <equals>
+		<property>fdm/jsbsim/instruments/cnc-radio/display/config/status/nav1</property>
+		<value>1</value>
+	      </equals>
+	    </condition>
+            <command>property-adjust</command>
+            <property>/instrumentation/nav[1]/radials/selected-deg</property>
+            <factor>1</factor>
+            <min>0</min>
+            <max>360</max>                
+            <wrap>true</wrap>
+          </binding>
+
+	  <binding>
+	    <condition>
+	      <equals>
+		<property>fdm/jsbsim/instruments/cnc-radio/display/config/status/nav2</property>
+		<value>1</value>
+	      </equals>
+	    </condition>
+            <command>property-adjust</command>
+            <property>/instrumentation/nav[3]/radials/selected-deg</property>
+            <factor>1</factor>
+            <min>0</min>
+            <max>360</max>                
+            <wrap>true</wrap>
+	  </binding>
+
+	  <binding>
+	    <condition>
+	      <equals>
+		<property>fdm/jsbsim/instruments/cnc-radio/display/config/status/nav3</property>
+		<value>1</value>
+	      </equals>
+	    </condition>
+            <command>property-adjust</command>
+            <property>/instrumentation/nav[5]/radials/selected-deg</property>
+            <factor>1</factor>
+            <min>0</min>
+            <max>360</max>                
+            <wrap>true</wrap>
+	  </binding>
+
+	  <binding>
+	    <condition>
+	      <equals>
+		<property>fdm/jsbsim/instruments/cnc-radio/display/config/status/tac1</property>
+		<value>1</value>
+	      </equals>
+	    </condition>
+            <command>property-adjust</command>
+            <property>/instrumentation/nav[2]/radials/selected-deg</property>
+            <factor>1</factor>
+            <min>0</min>
+            <max>360</max>                
+            <wrap>true</wrap>
+	  </binding>
+
+	  <binding>
+	    <condition>
+	      <equals>
+		<property>fdm/jsbsim/instruments/cnc-radio/display/config/status/tac2</property>
+		<value>1</value>
+	      </equals>
+	    </condition>
+            <command>property-adjust</command>
+            <property>/instrumentation/nav[4]/radials/selected-deg</property>
+            <factor>1</factor>
+            <min>0</min>
+            <max>360</max>                
+            <wrap>true</wrap>
+	  </binding>
+
+	  <binding>
+	    <condition>
+	      <equals>
+		<property>fdm/jsbsim/instruments/cnc-radio/display/config/status/tac3</property>
+		<value>1</value>
+	      </equals>
+	    </condition>
+            <command>property-adjust</command>
+            <property>/instrumentation/nav[6]/radials/selected-deg</property>
+            <factor>1</factor>
+            <min>0</min>
+            <max>360</max>                
+            <wrap>true</wrap>
+	  </binding>
+        </action>
+  </animation>
+  
   <!-- XFER -->
   <animation>
     <type>pick</type>
@@ -2227,7 +2497,6 @@
 	  <property>/fdm/jsbsim/instruments/cnc-radio/hf/frequencies/standby-mhz</property>
 	  <property>/fdm/jsbsim/instruments/cnc-radio/xfer/buffer-selected-mhz</property>
 	</binding>
-
 
 	<binding>
 	  <condition>
@@ -2435,7 +2704,6 @@
 	  <property>/instrumentation/adf[2]/frequencies/standby-khz</property>
 	  <property>/fdm/jsbsim/instruments/cnc-radio/xfer/buffer-selected-khz</property>
 	</binding>
-
       </mod-up>
     </action>
   </animation>
