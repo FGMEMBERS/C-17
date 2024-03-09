@@ -448,7 +448,159 @@ shall keep this attribution information.
   </channel>
 
   <property value="0.8">instruments/cnc-radio/display/config/brt</property>
+  <property value="0">instruments/cnc-radio/display/config/offsets/y-m</property>
+  <property value="0">instruments/cnc-radio/display/config/offsets/z-m</property>
+  <property value="0">instruments/cnc-radio/display/config/offsets/scale-m</property>
+  <property value="0.0060">instruments/cnc-radio/display/config/offsets/font-size1-orig</property>
+  <property value="0.0086">instruments/cnc-radio/display/config/offsets/font-size2-orig</property>
+  <property value="0.012">instruments/cnc-radio/display/config/offsets/font-size3-orig</property>
   <channel name="Display configuration">
+    <switch name="instruments/cnc-radio/display/config/lcd-on">
+      <default value="1"/>
+      <test value="0">
+	instruments/cnc-radio/display/config/brt eq 0
+      </test>
+    </switch>
+
+    <fcs_function name="instruments/cnc-radio/display/config/offsets/font-size1">
+      <function>
+	<sum>
+	  <property>instruments/cnc-radio/display/config/offsets/font-size1-orig</property>
+	  <property>instruments/cnc-radio/display/config/offsets/scale-m</property>
+	</sum>
+      </function>
+    </fcs_function>
+
+    <fcs_function name="instruments/cnc-radio/display/config/offsets/font-size2">
+      <function>
+	<sum>
+	  <property>instruments/cnc-radio/display/config/offsets/font-size2-orig</property>
+	  <property>instruments/cnc-radio/display/config/offsets/scale-m</property>
+	</sum>
+      </function>
+    </fcs_function>
+
+    <fcs_function name="instruments/cnc-radio/display/config/offsets/font-size3">
+      <function>
+	<sum>
+	  <property>instruments/cnc-radio/display/config/offsets/font-size3-orig</property>
+	  <property>instruments/cnc-radio/display/config/offsets/scale-m</property>
+	</sum>
+      </function>
+    </fcs_function>
+
+    <switch name="instruments/cnc-radio/display/config/status/comm1">
+      <default value="0"/>
+      <test value="1">
+	instruments/cnc-radio/mode/mode eq 10
+      </test>
+    </switch>
+
+    <switch name="instruments/cnc-radio/display/config/status/comm2">
+      <default value="0"/>
+      <test value="1">
+	instruments/cnc-radio/mode/mode eq 20
+      </test>
+    </switch>
+
+    <switch name="instruments/cnc-radio/display/config/status/comm3">
+      <default value="0"/>
+      <test value="1">
+	instruments/cnc-radio/mode/mode eq 30
+      </test>
+    </switch>
+
+    <switch name="instruments/cnc-radio/display/config/status/uhf">
+      <default value="0"/>
+      <test value="1">
+	instruments/cnc-radio/mode/mode eq 11
+      </test>
+    </switch>
+
+    <switch name="instruments/cnc-radio/display/config/status/vhf">
+      <default value="0"/>
+      <test value="1">
+	instruments/cnc-radio/mode/mode eq 12
+      </test>
+    </switch>
+
+    <switch name="instruments/cnc-radio/display/config/status/hf">
+      <default value="0"/>
+      <test value="1">
+	instruments/cnc-radio/mode/mode eq 13
+      </test>
+    </switch>
+
+    <switch name="instruments/cnc-radio/display/config/status/nav1">
+      <default value="0"/>
+      <test value="1">
+	instruments/cnc-radio/mode/mode eq 15
+      </test>
+    </switch>
+
+    <switch name="instruments/cnc-radio/display/config/status/nav2">
+      <default value="0"/>
+      <test value="1">
+	instruments/cnc-radio/mode/mode eq 25
+      </test>
+    </switch>
+
+    <switch name="instruments/cnc-radio/display/config/status/nav3">
+      <default value="0"/>
+      <test value="1">
+	instruments/cnc-radio/mode/mode eq 35
+      </test>
+    </switch>
+
+
+    <switch name="instruments/cnc-radio/display/config/status/tac1">
+      <default value="0"/>
+      <test value="1">
+	instruments/cnc-radio/mode/mode eq 16
+      </test>
+    </switch>
+
+    <switch name="instruments/cnc-radio/display/config/status/tac2">
+      <default value="0"/>
+      <test value="1">
+	instruments/cnc-radio/mode/mode eq 26
+      </test>
+    </switch>
+
+    <switch name="instruments/cnc-radio/display/config/status/tac3">
+      <default value="0"/>
+      <test value="1">
+	instruments/cnc-radio/mode/mode eq 36
+      </test>
+    </switch>
+
+    <switch name="instruments/cnc-radio/display/config/status/adf1">
+      <default value="0"/>
+      <test value="1">
+	instruments/cnc-radio/mode/mode eq 17
+      </test>
+    </switch>
+
+    <switch name="instruments/cnc-radio/display/config/status/adf2">
+      <default value="0"/>
+      <test value="1">
+	instruments/cnc-radio/mode/mode eq 27
+      </test>
+    </switch>
+
+    <switch name="instruments/cnc-radio/display/config/status/adf3">
+      <default value="0"/>
+      <test value="1">
+	instruments/cnc-radio/mode/mode eq 37
+      </test>
+    </switch>
+
+    <switch name="instruments/cnc-radio/display/config/status/iff">
+      <default value="0"/>
+      <test value="1">
+	instruments/cnc-radio/mode/mode eq 18
+      </test>
+    </switch>
   </channel>
   
 </system>

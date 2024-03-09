@@ -436,7 +436,140 @@
     </action>
   </animation>
 
+  <!-- config buttons -->
+  <animation>
+    <type>pick</type>
+    <object-name>button.t1</object-name>
+    <action>
+      <button>0</button>
+      <repeatable>false</repeatable>
+      <interval-sec>0.20</interval-sec>
+      <binding>
+	<command>property-adjust</command>
+	<property>/fdm/jsbsim/instruments/cnc-radio/display/config/offsets/y-m</property>
+	<step>-0.001</step>
+	<min>-0.006</min>
+	<max>0.006</max>
+	<wrap>false</wrap>
+      </binding>
+    </action>
+  </animation>
 
+  <animation>
+    <type>pick</type>
+    <object-name>button.t2</object-name>
+    <action>
+      <button>0</button>
+      <repeatable>false</repeatable>
+      <interval-sec>0.20</interval-sec>
+      <binding>
+	<command>property-adjust</command>
+	<property>/fdm/jsbsim/instruments/cnc-radio/display/config/offsets/scale-m</property>
+	<step>-0.001</step>
+	<min>-0.005</min>
+	<max>0.005</max>
+	<wrap>false</wrap>
+      </binding>
+    </action>
+  </animation>
+
+  <animation>
+    <type>pick</type>
+    <object-name>button.t3</object-name>
+    <action>
+      <button>0</button>
+      <repeatable>false</repeatable>
+      <interval-sec>0.20</interval-sec>
+      <binding>
+	<command>property-adjust</command>
+	<property>/fdm/jsbsim/instruments/cnc-radio/display/config/offsets/z-m</property>
+	<step>0.001</step>
+	<min>-0.006</min>
+	<max>0.006</max>
+	<wrap>false</wrap>
+      </binding>
+    </action>
+  </animation>
+
+  <animation>
+    <type>pick</type>
+    <object-name>button.t4</object-name>
+    <action>
+      <button>0</button>
+      <repeatable>false</repeatable>
+      <interval-sec>0.20</interval-sec>
+      <binding>
+	<command>property-assign</command>
+	<property>/fdm/jsbsim/instruments/cnc-radio/display/config/offsets/y-m</property>
+	<value>0</value>
+      </binding>
+      <binding>
+	<command>property-assign</command>
+	<property>/fdm/jsbsim/instruments/cnc-radio/display/config/offsets/z-m</property>
+	<value>0</value>
+      </binding>
+      <binding>
+	<command>property-assign</command>
+	<property>/fdm/jsbsim/instruments/cnc-radio/display/config/offsets/scale-m</property>
+	<value>0</value>
+      </binding>
+    </action>
+  </animation>
+  
+  <animation>
+    <type>pick</type>
+    <object-name>button.t5</object-name>
+    <action>
+      <button>0</button>
+      <repeatable>false</repeatable>
+      <interval-sec>0.20</interval-sec>
+      <binding>
+	<command>property-adjust</command>
+	<property>/fdm/jsbsim/instruments/cnc-radio/display/config/offsets/z-m</property>
+	<step>-0.001</step>
+	<min>-0.006</min>
+	<max>0.006</max>
+	<wrap>false</wrap>
+      </binding>
+    </action>
+  </animation>
+
+  <animation>
+    <type>pick</type>
+    <object-name>button.t6</object-name>
+    <action>
+      <button>0</button>
+      <repeatable>false</repeatable>
+      <interval-sec>0.20</interval-sec>
+      <binding>
+	<command>property-adjust</command>
+	<property>/fdm/jsbsim/instruments/cnc-radio/display/config/offsets/scale-m</property>
+	<step>0.001</step>
+	<min>-0.005</min>
+	<max>0.005</max>
+	<wrap>false</wrap>
+      </binding>
+    </action>
+  </animation>
+
+  <animation>
+    <type>pick</type>
+    <object-name>button.t7</object-name>
+    <action>
+      <button>0</button>
+      <repeatable>false</repeatable>
+      <interval-sec>0.20</interval-sec>
+      <binding>
+	<command>property-adjust</command>
+	<property>/fdm/jsbsim/instruments/cnc-radio/display/config/offsets/y-m</property>
+	<step>0.001</step>
+	<min>-0.006</min>
+	<max>0.006</max>
+	<wrap>false</wrap>
+      </binding>
+    </action>
+  </animation>
+  
   <!-- menus -->
   <text>
     <name>comm</name>
@@ -502,9 +635,6 @@
     <alignment>left-top</alignment>
   </text>
 
-
-
-
   <text>
     <name>nav</name>
     <font>Helvetica.txf</font>
@@ -569,8 +699,6 @@
     <alignment>right-top</alignment>
   </text>
 
-
-
   <text>
     <name>mode</name>
     <font>Helvetica.txf</font>
@@ -602,7 +730,6 @@
     <character-aspect-ratio type="double">1</character-aspect-ratio>
     <alignment>center-top</alignment>
   </text>
-
 
   <text>
     <name>ch2</name>
@@ -636,7 +763,6 @@
     <alignment>center-top</alignment>
   </text>
 
-
   <text>
     <name>sel</name>
     <font>Helvetica.txf</font>
@@ -652,7 +778,6 @@
     <character-aspect-ratio type="double">1</character-aspect-ratio>
     <alignment>center-top</alignment>
   </text>
-
   
   <text>
     <name>fgcom</name>
@@ -827,6 +952,470 @@
     <condition>
       <equals>
 	<property>fdm/jsbsim/instruments/cnc-radio/display/menu/iff-menu-print</property>
+	<value>1</value>
+      </equals>
+    </condition>
+  </animation>
+
+  <!--status-->
+  <text>
+    <name>status-comm1</name>
+    <font>Helvetica.txf</font>
+    <character-size type="double">0.0086</character-size>
+    <offsets>
+      <x-m>0.0103</x-m>
+      <y-m>-0.05854</y-m>
+      <z-m>0.0374</z-m>
+    </offsets>
+    <axis-alignment>yz-plane</axis-alignment>
+    <type type="string">literal</type>
+    <text type="string">COM1</text>
+    <character-aspect-ratio type="double">1</character-aspect-ratio>
+    <alignment>left-top</alignment>
+  </text>
+
+  <text>
+    <name>status-comm2</name>
+    <font>Helvetica.txf</font>
+    <character-size type="double">0.0086</character-size>
+    <offsets>
+      <x-m>0.0103</x-m>
+      <y-m>-0.05854</y-m>
+      <z-m>0.0374</z-m>
+    </offsets>
+    <axis-alignment>yz-plane</axis-alignment>
+    <type type="string">literal</type>
+    <text type="string">COM2</text>
+    <character-aspect-ratio type="double">1</character-aspect-ratio>
+    <alignment>left-top</alignment>
+  </text>
+
+  <text>
+    <name>status-comm3</name>
+    <font>Helvetica.txf</font>
+    <character-size type="double">0.0086</character-size>
+    <offsets>
+      <x-m>0.0103</x-m>
+      <y-m>-0.05854</y-m>
+      <z-m>0.0374</z-m>
+    </offsets>
+    <axis-alignment>yz-plane</axis-alignment>
+    <type type="string">literal</type>
+    <text type="string">COM3</text>
+    <character-aspect-ratio type="double">1</character-aspect-ratio>
+    <alignment>left-top</alignment>
+  </text>
+  
+  <text>
+    <name>status-uhf</name>
+    <font>Helvetica.txf</font>
+    <character-size type="double">0.0086</character-size>
+    <offsets>
+      <x-m>0.0103</x-m>
+      <y-m>-0.05854</y-m>
+      <z-m>0.0374</z-m>
+    </offsets>
+    <axis-alignment>yz-plane</axis-alignment>
+    <type type="string">literal</type>
+    <text type="string">UHF</text>
+    <character-aspect-ratio type="double">1</character-aspect-ratio>
+    <alignment>left-top</alignment>
+  </text>
+
+  <text>
+    <name>status-vhf</name>
+    <font>Helvetica.txf</font>
+    <character-size type="double">0.0086</character-size>
+    <offsets>
+      <x-m>0.0103</x-m>
+      <y-m>-0.05854</y-m>
+      <z-m>0.0374</z-m>
+    </offsets>
+    <axis-alignment>yz-plane</axis-alignment>
+    <type type="string">literal</type>
+    <text type="string">VHF</text>
+    <character-aspect-ratio type="double">1</character-aspect-ratio>
+    <alignment>left-top</alignment>
+  </text>
+
+  <text>
+    <name>status-hf</name>
+    <font>Helvetica.txf</font>
+    <character-size type="double">0.0086</character-size>
+    <offsets>
+      <x-m>0.0103</x-m>
+      <y-m>-0.05854</y-m>
+      <z-m>0.0374</z-m>
+    </offsets>
+    <axis-alignment>yz-plane</axis-alignment>
+    <type type="string">literal</type>
+    <text type="string">HF</text>
+    <character-aspect-ratio type="double">1</character-aspect-ratio>
+    <alignment>left-top</alignment>
+  </text>
+
+  <text>
+    <name>status-nav1</name>
+    <font>Helvetica.txf</font>
+    <character-size type="double">0.0086</character-size>
+    <offsets>
+      <x-m>0.0103</x-m>
+      <y-m>-0.05854</y-m>
+      <z-m>0.0374</z-m>
+    </offsets>
+    <axis-alignment>yz-plane</axis-alignment>
+    <type type="string">literal</type>
+    <text type="string">NAV1</text>
+    <character-aspect-ratio type="double">1</character-aspect-ratio>
+    <alignment>left-top</alignment>
+  </text>
+
+  <text>
+    <name>status-nav2</name>
+    <font>Helvetica.txf</font>
+    <character-size type="double">0.0086</character-size>
+    <offsets>
+      <x-m>0.0103</x-m>
+      <y-m>-0.05854</y-m>
+      <z-m>0.0374</z-m>
+    </offsets>
+    <axis-alignment>yz-plane</axis-alignment>
+    <type type="string">literal</type>
+    <text type="string">NAV2</text>
+    <character-aspect-ratio type="double">1</character-aspect-ratio>
+    <alignment>left-top</alignment>
+  </text>
+
+  <text>
+    <name>status-nav3</name>
+    <font>Helvetica.txf</font>
+    <character-size type="double">0.0086</character-size>
+    <offsets>
+      <x-m>0.0103</x-m>
+      <y-m>-0.05854</y-m>
+      <z-m>0.0374</z-m>
+    </offsets>
+    <axis-alignment>yz-plane</axis-alignment>
+    <type type="string">literal</type>
+    <text type="string">NAV3</text>
+    <character-aspect-ratio type="double">1</character-aspect-ratio>
+    <alignment>left-top</alignment>
+  </text>
+
+  <text>
+    <name>status-tac1</name>
+    <font>Helvetica.txf</font>
+    <character-size type="double">0.0086</character-size>
+    <offsets>
+      <x-m>0.0103</x-m>
+      <y-m>-0.05854</y-m>
+      <z-m>0.0374</z-m>
+    </offsets>
+    <axis-alignment>yz-plane</axis-alignment>
+    <type type="string">literal</type>
+    <text type="string">TAC1</text>
+    <character-aspect-ratio type="double">1</character-aspect-ratio>
+    <alignment>left-top</alignment>
+  </text>
+
+  <text>
+    <name>status-tac2</name>
+    <font>Helvetica.txf</font>
+    <character-size type="double">0.0086</character-size>
+    <offsets>
+      <x-m>0.0103</x-m>
+      <y-m>-0.05854</y-m>
+      <z-m>0.0374</z-m>
+    </offsets>
+    <axis-alignment>yz-plane</axis-alignment>
+    <type type="string">literal</type>
+    <text type="string">TAC2</text>
+    <character-aspect-ratio type="double">1</character-aspect-ratio>
+    <alignment>left-top</alignment>
+  </text>
+
+  <text>
+    <name>status-tac3</name>
+    <font>Helvetica.txf</font>
+    <character-size type="double">0.0086</character-size>
+    <offsets>
+      <x-m>0.0103</x-m>
+      <y-m>-0.05854</y-m>
+      <z-m>0.0374</z-m>
+    </offsets>
+    <axis-alignment>yz-plane</axis-alignment>
+    <type type="string">literal</type>
+    <text type="string">TAC3</text>
+    <character-aspect-ratio type="double">1</character-aspect-ratio>
+    <alignment>left-top</alignment>
+  </text>
+
+  <text>
+    <name>status-adf1</name>
+    <font>Helvetica.txf</font>
+    <character-size type="double">0.0086</character-size>
+    <offsets>
+      <x-m>0.0103</x-m>
+      <y-m>-0.05854</y-m>
+      <z-m>0.0374</z-m>
+    </offsets>
+    <axis-alignment>yz-plane</axis-alignment>
+    <type type="string">literal</type>
+    <text type="string">ADF1</text>
+    <character-aspect-ratio type="double">1</character-aspect-ratio>
+    <alignment>left-top</alignment>
+  </text>
+
+  <text>
+    <name>status-adf2</name>
+    <font>Helvetica.txf</font>
+    <character-size type="double">0.0086</character-size>
+    <offsets>
+      <x-m>0.0103</x-m>
+      <y-m>-0.05854</y-m>
+      <z-m>0.0374</z-m>
+    </offsets>
+    <axis-alignment>yz-plane</axis-alignment>
+    <type type="string">literal</type>
+    <text type="string">ADF2</text>
+    <character-aspect-ratio type="double">1</character-aspect-ratio>
+    <alignment>left-top</alignment>
+  </text>
+
+  <text>
+    <name>status-adf3</name>
+    <font>Helvetica.txf</font>
+    <character-size type="double">0.0086</character-size>
+    <offsets>
+      <x-m>0.0103</x-m>
+      <y-m>-0.05854</y-m>
+      <z-m>0.0374</z-m>
+    </offsets>
+    <axis-alignment>yz-plane</axis-alignment>
+    <type type="string">literal</type>
+    <text type="string">ADF3</text>
+    <character-aspect-ratio type="double">1</character-aspect-ratio>
+    <alignment>left-top</alignment>
+  </text>
+
+  <text>
+    <name>status-iff</name>
+    <font>Helvetica.txf</font>
+    <character-size type="double">0.0086</character-size>
+    <offsets>
+      <x-m>0.0103</x-m>
+      <y-m>-0.05854</y-m>
+      <z-m>0.0374</z-m>
+    </offsets>
+    <axis-alignment>yz-plane</axis-alignment>
+    <type type="string">literal</type>
+    <text type="string">IFF</text>
+    <character-aspect-ratio type="double">1</character-aspect-ratio>
+    <alignment>left-top</alignment>
+  </text>
+  
+  <animation>
+    <name>status</name>
+    <object-name>status-comm1</object-name>
+    <object-name>status-comm2</object-name>
+    <object-name>status-comm3</object-name>
+    <object-name>status-uhf</object-name>
+    <object-name>status-vhf</object-name>
+    <object-name>status-hf</object-name>
+    <object-name>status-nav1</object-name>
+    <object-name>status-nav2</object-name>
+    <object-name>status-nav3</object-name>
+    <object-name>status-tac1</object-name>
+    <object-name>status-tac2</object-name>
+    <object-name>status-tac3</object-name>
+    <object-name>status-adf1</object-name>
+    <object-name>status-adf2</object-name>
+    <object-name>status-adf3</object-name>
+    <object-name>status-iff</object-name>
+  </animation>
+
+  <animation>
+    <object-name>status</object-name>
+    <type>material</type>
+    <emission>
+      <factor-prop>fdm/jsbsim/instruments/cnc-radio/display/config/brt</factor-prop>
+      <red>1.0</red>
+      <green>1.0</green>
+      <blue>0.0</blue>
+    </emission>
+  </animation>
+
+  <animation>
+    <object-name>status-comm1</object-name>
+    <type>select</type>
+    <condition>
+      <equals>
+	<property>fdm/jsbsim/instruments/cnc-radio/display/config/status/comm1</property>
+	<value>1</value>
+      </equals>
+    </condition>
+  </animation>
+
+  <animation>
+    <object-name>status-comm2</object-name>
+    <type>select</type>
+    <condition>
+      <equals>
+	<property>fdm/jsbsim/instruments/cnc-radio/display/config/status/comm2</property>
+	<value>1</value>
+      </equals>
+    </condition>
+  </animation>
+
+  <animation>
+    <object-name>status-comm3</object-name>
+    <type>select</type>
+    <condition>
+      <equals>
+	<property>fdm/jsbsim/instruments/cnc-radio/display/config/status/comm3</property>
+	<value>1</value>
+      </equals>
+    </condition>
+  </animation>
+
+  <animation>
+    <object-name>status-uhf</object-name>
+    <type>select</type>
+    <condition>
+      <equals>
+	<property>fdm/jsbsim/instruments/cnc-radio/display/config/status/uhf</property>
+	<value>1</value>
+      </equals>
+    </condition>
+  </animation>
+
+  <animation>
+    <object-name>status-vhf</object-name>
+    <type>select</type>
+    <condition>
+      <equals>
+	<property>fdm/jsbsim/instruments/cnc-radio/display/config/status/vhf</property>
+	<value>1</value>
+      </equals>
+    </condition>
+  </animation>
+
+  <animation>
+    <object-name>status-hf</object-name>
+    <type>select</type>
+    <condition>
+      <equals>
+	<property>fdm/jsbsim/instruments/cnc-radio/display/config/status/hf</property>
+	<value>1</value>
+      </equals>
+    </condition>
+  </animation>
+  
+  <animation>
+    <object-name>status-nav1</object-name>
+    <type>select</type>
+    <condition>
+      <equals>
+	<property>fdm/jsbsim/instruments/cnc-radio/display/config/status/nav1</property>
+	<value>1</value>
+      </equals>
+    </condition>
+  </animation>
+
+  <animation>
+    <object-name>status-nav2</object-name>
+    <type>select</type>
+    <condition>
+      <equals>
+	<property>fdm/jsbsim/instruments/cnc-radio/display/config/status/nav2</property>
+	<value>1</value>
+      </equals>
+    </condition>
+  </animation>
+
+  <animation>
+    <object-name>status-nav3</object-name>
+    <type>select</type>
+    <condition>
+      <equals>
+	<property>fdm/jsbsim/instruments/cnc-radio/display/config/status/nav3</property>
+	<value>1</value>
+      </equals>
+    </condition>
+  </animation>
+
+  <animation>
+    <object-name>status-tac1</object-name>
+    <type>select</type>
+    <condition>
+      <equals>
+	<property>fdm/jsbsim/instruments/cnc-radio/display/config/status/tac1</property>
+	<value>1</value>
+      </equals>
+    </condition>
+  </animation>
+
+  <animation>
+    <object-name>status-tac2</object-name>
+    <type>select</type>
+    <condition>
+      <equals>
+	<property>fdm/jsbsim/instruments/cnc-radio/display/config/status/tac2</property>
+	<value>1</value>
+      </equals>
+    </condition>
+  </animation>
+
+  <animation>
+    <object-name>status-tac3</object-name>
+    <type>select</type>
+    <condition>
+      <equals>
+	<property>fdm/jsbsim/instruments/cnc-radio/display/config/status/tac3</property>
+	<value>1</value>
+      </equals>
+    </condition>
+  </animation>
+
+  <animation>
+    <object-name>status-adf1</object-name>
+    <type>select</type>
+    <condition>
+      <equals>
+	<property>fdm/jsbsim/instruments/cnc-radio/display/config/status/adf1</property>
+	<value>1</value>
+      </equals>
+    </condition>
+  </animation>
+
+  <animation>
+    <object-name>status-adf2</object-name>
+    <type>select</type>
+    <condition>
+      <equals>
+	<property>fdm/jsbsim/instruments/cnc-radio/display/config/status/adf2</property>
+	<value>1</value>
+      </equals>
+    </condition>
+  </animation>
+  
+  <animation>
+    <object-name>status-adf3</object-name>
+    <type>select</type>
+    <condition>
+      <equals>
+	<property>fdm/jsbsim/instruments/cnc-radio/display/config/status/adf3</property>
+	<value>1</value>
+      </equals>
+    </condition>
+  </animation>
+
+  <animation>
+    <object-name>status-iff</object-name>
+    <type>select</type>
+    <condition>
+      <equals>
+	<property>fdm/jsbsim/instruments/cnc-radio/display/config/status/iff</property>
 	<value>1</value>
       </equals>
     </condition>
