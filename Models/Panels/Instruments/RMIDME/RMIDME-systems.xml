@@ -17,8 +17,6 @@ shall keep this attribution information.
   <!-- heading knob offset -->
   <property value="0">instruments/RMIDME/heading-offset</property>
   <!-- initial values for the nav stack -->
-  <property value="112.10">/instrumentation/nav[1]/frequencies/selected-mhz</property> 
-  <property value="115.20">/instrumentation/nav[1]/frequencies/standby-mhz</property> 
   <property value="117.15">/instrumentation/nav[2]/frequencies/selected-mhz</property> 
   <property value="113.80">/instrumentation/nav[2]/frequencies/standby-mhz</property>
   <property value="284">/instrumentation/nav[2]/radials/selected-deg</property>

@@ -1,0 +1,2480 @@
+<?xml version="1.0"?>
+
+<!--
+    :copyright: 2024, IAHM-COL
+    License: GPLv3
+    
+    Redistribution, or reuse, with or without modifications
+    shall keep this attribution information. 
+-->
+
+<PropertyList>
+  <path>cnc-radio.ac</path>
+
+  <!-- Brightness buttons -->
+  <animation>
+    <type>pick</type>
+    <object-name>button.bright.low</object-name>
+    <action>
+      <button>0</button>
+      <repeatable>false</repeatable>
+      <interval-sec>0.20</interval-sec>
+      <binding>
+	<command>property-adjust</command>
+	<property>/fdm/jsbsim/instruments/cnc-radio/display/config/brt</property>
+	<step>-0.10</step>
+	<min>0</min>
+	<max>1</max>
+	<wrap>false</wrap>
+      </binding>
+    </action>
+  </animation>
+
+  <animation>
+    <type>pick</type>
+    <object-name>button.bright.hi</object-name>
+    <action>
+      <button>0</button>
+      <repeatable>false</repeatable>
+      <interval-sec>0.20</interval-sec>
+      <binding>
+	<command>property-adjust</command>
+	<property>/fdm/jsbsim/instruments/cnc-radio/display/config/brt</property>
+	<step>0.10</step>
+	<min>0</min>
+	<max>1</max>
+	<wrap>false</wrap>
+      </binding>
+    </action>
+  </animation>
+
+  <!-- IDENT toggle -->
+  <animation>
+    <type>pick</type>
+    <object-name>button.iden</object-name>
+    <action>
+      <button>0</button>
+      <repeatable>false</repeatable>
+      <interval-sec>0.20</interval-sec>
+      <binding>
+	<condition>
+	  <equals>
+	    <property>/fdm/jsbsim/instruments/cnc-radio/display/menu/general-menu-print</property>
+	    <value>1</value>
+	  </equals>
+	</condition>
+	<command>property-toggle</command>
+	<property>/fdm/jsbsim/instruments/cnc-radio/display/nav-id/on</property>
+      </binding>
+      <binding>
+	<condition>
+	  <equals>
+	    <property>/fdm/jsbsim/instruments/cnc-radio/display/menu/iff-menu-print</property>
+	    <value>1</value>
+	  </equals>
+	</condition>
+	<command>property-toggle</command>
+	<property>/instrumentation/transponder/inputs/ident-btn</property>
+      </binding>
+    </action>
+  </animation>
+
+  <!-- Mode selectors -->
+  <animation>
+    <type>pick</type>
+    <object-name>button.l1</object-name>
+    <action>
+      <button>0</button>
+      <repeatable>false</repeatable>
+      <interval-sec>0.20</interval-sec>
+      <binding>
+	<command>property-assign</command>
+	<property>/fdm/jsbsim/instruments/cnc-radio/mode/minor-mode</property>
+	<value>0</value>
+      </binding>
+    </action>
+  </animation>
+
+  <animation>
+    <type>pick</type>
+    <object-name>button.l2</object-name>
+    <action>
+      <button>0</button>
+      <repeatable>false</repeatable>
+      <interval-sec>0.20</interval-sec>
+      <binding>
+	<command>property-assign</command>
+	<property>/fdm/jsbsim/instruments/cnc-radio/mode/minor-mode</property>
+	<value>1</value>
+      </binding>
+    </action>
+  </animation>
+
+  <animation>
+    <type>pick</type>
+    <object-name>button.l3</object-name>
+    <action>
+      <button>0</button>
+      <repeatable>false</repeatable>
+      <interval-sec>0.20</interval-sec>
+      <binding>
+	<command>property-assign</command>
+	<property>/fdm/jsbsim/instruments/cnc-radio/mode/minor-mode</property>
+	<value>2</value>
+      </binding>
+    </action>
+  </animation>
+  
+  <animation>
+    <type>pick</type>
+    <object-name>button.l4</object-name>
+    <action>
+      <button>0</button>
+      <repeatable>false</repeatable>
+      <interval-sec>0.20</interval-sec>
+      <binding>
+	<command>property-assign</command>
+	<property>/fdm/jsbsim/instruments/cnc-radio/mode/minor-mode</property>
+	<value>3</value>
+      </binding>
+    </action>
+  </animation>
+  
+  <animation>
+    <type>pick</type>
+    <object-name>button.l5</object-name>
+    <action>
+      <button>0</button>
+      <repeatable>false</repeatable>
+      <interval-sec>0.20</interval-sec>
+      <binding>
+	<command>property-assign</command>
+	<property>/fdm/jsbsim/instruments/cnc-radio/mode/minor-mode</property>
+	<value>4</value>
+      </binding>
+    </action>
+  </animation>
+
+  <animation>
+    <type>pick</type>
+    <object-name>button.r1</object-name>
+    <action>
+      <button>0</button>
+      <repeatable>false</repeatable>
+      <interval-sec>0.20</interval-sec>
+      <binding>
+	<command>property-assign</command>
+	<property>/fdm/jsbsim/instruments/cnc-radio/mode/minor-mode</property>
+	<value>5</value>
+      </binding>
+    </action>
+  </animation>
+
+  <animation>
+    <type>pick</type>
+    <object-name>button.r2</object-name>
+    <action>
+      <button>0</button>
+      <repeatable>false</repeatable>
+      <interval-sec>0.20</interval-sec>
+      <binding>
+	<command>property-assign</command>
+	<property>/fdm/jsbsim/instruments/cnc-radio/mode/minor-mode</property>
+	<value>6</value>
+      </binding>
+    </action>
+  </animation>
+
+  <animation>
+    <type>pick</type>
+    <object-name>button.r3</object-name>
+    <action>
+      <button>0</button>
+      <repeatable>false</repeatable>
+      <interval-sec>0.20</interval-sec>
+      <binding>
+	<command>property-assign</command>
+	<property>/fdm/jsbsim/instruments/cnc-radio/mode/minor-mode</property>
+	<value>7</value>
+      </binding>
+    </action>
+  </animation>
+
+  <animation>
+    <type>pick</type>
+    <object-name>button.r4</object-name>
+    <action>
+      <button>0</button>
+      <repeatable>false</repeatable>
+      <interval-sec>0.20</interval-sec>
+      <binding>
+	<command>property-assign</command>
+	<property>/fdm/jsbsim/instruments/cnc-radio/mode/minor-mode</property>
+	<value>8</value>
+      </binding>
+    </action>
+  </animation>
+
+  <animation>
+    <type>pick</type>
+    <object-name>button.r5</object-name>
+    <action>
+      <button>0</button>
+      <repeatable>false</repeatable>
+      <interval-sec>0.20</interval-sec>
+      <binding>
+	<command>property-assign</command>
+	<property>/fdm/jsbsim/instruments/cnc-radio/mode/minor-mode</property>
+	<value>9</value>
+      </binding>
+    </action>
+  </animation>
+
+  <!-- menu buttons -->
+  <animation>
+    <type>pick</type>
+    <object-name>button.b1</object-name>
+    <action>
+      <button>0</button>
+      <repeatable>false</repeatable>
+      <interval-sec>0.20</interval-sec>
+      <binding>
+	<condition>
+	  <equals>
+	    <property>/fdm/jsbsim/instruments/cnc-radio/display/menu/general-menu-print</property>
+	    <value>1</value>
+	  </equals>
+	</condition>
+	<command>property-assign</command>
+	<property>/fdm/jsbsim/instruments/cnc-radio/mode/major-mode</property>
+	<value>1</value>
+      </binding>
+      <binding>
+	<condition>
+	  <equals>
+	    <property>/fdm/jsbsim/instruments/cnc-radio/display/menu/iff-menu-print</property>
+	    <value>1</value>
+	  </equals>
+	</condition>
+	<command>property-assign</command>
+	<property>/instrumentation/transponder/inputs/knob-mode</property>
+	<value>0</value>
+      </binding>
+    </action>
+  </animation>
+
+  <animation>
+    <type>pick</type>
+    <object-name>button.b2</object-name>
+    <action>
+      <button>0</button>
+      <repeatable>false</repeatable>
+      <interval-sec>0.20</interval-sec>
+      <binding>
+	<condition>
+	  <equals>
+	    <property>/fdm/jsbsim/instruments/cnc-radio/display/menu/general-menu-print</property>
+	    <value>1</value>
+	  </equals>
+	</condition>
+	<command>property-assign</command>
+	<property>/fdm/jsbsim/instruments/cnc-radio/mode/major-mode</property>
+	<value>2</value>
+      </binding>
+      <binding>
+	<condition>
+	  <equals>
+	    <property>/fdm/jsbsim/instruments/cnc-radio/display/menu/iff-menu-print</property>
+	    <value>1</value>
+	  </equals>
+	</condition>
+	<command>property-assign</command>
+	<property>/instrumentation/transponder/inputs/knob-mode</property>
+	<value>1</value>
+      </binding>
+    </action>
+  </animation>
+  
+  <animation>
+    <type>pick</type>
+    <object-name>button.b3</object-name>
+    <action>
+      <button>0</button>
+      <repeatable>false</repeatable>
+      <interval-sec>0.20</interval-sec>
+      <binding>
+	<condition>
+	  <equals>
+	    <property>/fdm/jsbsim/instruments/cnc-radio/display/menu/general-menu-print</property>
+	    <value>1</value>
+	  </equals>
+	</condition>
+	<command>property-assign</command>
+	<property>/fdm/jsbsim/instruments/cnc-radio/mode/major-mode</property>
+	<value>3</value>
+      </binding>
+      <binding>
+	<condition>
+	  <equals>
+	    <property>/fdm/jsbsim/instruments/cnc-radio/display/menu/iff-menu-print</property>
+	    <value>1</value>
+	  </equals>
+	</condition>
+	<command>property-assign</command>
+	<property>/instrumentation/transponder/inputs/knob-mode</property>
+	<value>2</value>
+      </binding>
+    </action>
+  </animation>
+
+  <!-- SEL slave button -->
+  <animation>
+    <type>pick</type>
+    <object-name>button.b4</object-name>
+    <action>
+      <button>0</button>
+      <repeatable>false</repeatable>
+      <interval-sec>0.20</interval-sec>
+      <binding>
+	<condition>
+	  <and>
+	    <equals>
+	      <property>/fdm/jsbsim/instruments/cnc-radio/display/menu/general-menu-print</property>
+	      <value>1</value>
+	    </equals>
+	    <equals>
+	      <property>/fdm/jsbsim/instruments/cnc-radio/mode/comm-mode</property>
+	      <value>1</value>
+	    </equals>
+	  </and>
+	</condition>
+	<command>property-assign</command>
+	<property>/fdm/jsbsim/instruments/cnc-radio/mode/comm-slave</property>
+	<property>/fdm/jsbsim/instruments/cnc-radio/mode/mode</property>
+      </binding>
+      <binding>
+	<condition>
+	  <and>
+	    <equals>
+	      <property>/fdm/jsbsim/instruments/cnc-radio/display/menu/general-menu-print</property>
+	      <value>1</value>
+	    </equals>
+	    <equals>
+	      <property>/fdm/jsbsim/instruments/cnc-radio/mode/nav-mode</property>
+	      <value>1</value>
+	    </equals>
+	  </and>
+	</condition>
+	<command>property-assign</command>
+	<property>/fdm/jsbsim/instruments/cnc-radio/mode/nav-slave</property>
+	<property>/fdm/jsbsim/instruments/cnc-radio/mode/mode</property>
+      </binding>
+      <binding>
+	<condition>
+	  <equals>
+	    <property>/fdm/jsbsim/instruments/cnc-radio/display/menu/iff-menu-print</property>
+	    <value>1</value>
+	  </equals>
+	</condition>
+	<command>property-assign</command>
+	<property>/instrumentation/transponder/inputs/knob-mode</property>
+	<value>3</value>
+      </binding>
+    </action>
+  </animation>
+
+  <!-- FGCOM button -->
+  <animation>
+    <type>pick</type>
+    <object-name>button.b5</object-name>
+    <action>
+      <button>0</button>
+      <repeatable>false</repeatable>
+      <interval-sec>0.20</interval-sec>
+      <binding>
+	<condition>
+	  <equals>
+	    <property>/fdm/jsbsim/instruments/cnc-radio/display/menu/general-menu-print</property>
+	    <value>1</value>
+	  </equals>
+	</condition>
+	<command>property-toggle</command>
+	<property>/sim/fgcom/enabled</property>
+      </binding>
+      <binding>
+	<condition>
+	  <equals>
+	    <property>/fdm/jsbsim/instruments/cnc-radio/display/menu/iff-menu-print</property>
+	    <value>1</value>
+	  </equals>
+	</condition>
+	<command>property-assign</command>
+	<property>/instrumentation/transponder/inputs/knob-mode</property>
+	<value>4</value>
+      </binding>
+    </action>
+  </animation>
+
+  <animation>
+    <type>pick</type>
+    <object-name>button.b6</object-name>
+    <action>
+      <button>0</button>
+      <repeatable>false</repeatable>
+      <interval-sec>0.20</interval-sec>
+      <binding>
+	<condition>
+	  <equals>
+	    <property>/fdm/jsbsim/instruments/cnc-radio/display/menu/iff-menu-print</property>
+	    <value>1</value>
+	  </equals>
+	</condition>
+	<command>property-assign</command>
+	<property>/instrumentation/transponder/inputs/knob-mode</property>
+	<value>5</value>
+      </binding>
+    </action>
+  </animation>
+
+  <!-- config buttons -->
+  <animation>
+    <type>pick</type>
+    <object-name>button.t1</object-name>
+    <action>
+      <button>0</button>
+      <repeatable>false</repeatable>
+      <interval-sec>0.20</interval-sec>
+      <binding>
+	<command>property-adjust</command>
+	<property>/fdm/jsbsim/instruments/cnc-radio/display/config/offsets/y-m</property>
+	<step>-0.001</step>
+	<min>-0.006</min>
+	<max>0.006</max>
+	<wrap>false</wrap>
+      </binding>
+    </action>
+  </animation>
+
+  <animation>
+    <type>pick</type>
+    <object-name>button.t2</object-name>
+    <action>
+      <button>0</button>
+      <repeatable>false</repeatable>
+      <interval-sec>0.20</interval-sec>
+      <binding>
+	<command>property-adjust</command>
+	<property>/fdm/jsbsim/instruments/cnc-radio/display/config/offsets/scale-m</property>
+	<step>-0.001</step>
+	<min>-0.005</min>
+	<max>0.005</max>
+	<wrap>false</wrap>
+      </binding>
+    </action>
+  </animation>
+
+  <animation>
+    <type>pick</type>
+    <object-name>button.t3</object-name>
+    <action>
+      <button>0</button>
+      <repeatable>false</repeatable>
+      <interval-sec>0.20</interval-sec>
+      <binding>
+	<command>property-adjust</command>
+	<property>/fdm/jsbsim/instruments/cnc-radio/display/config/offsets/z-m</property>
+	<step>0.001</step>
+	<min>-0.006</min>
+	<max>0.006</max>
+	<wrap>false</wrap>
+      </binding>
+    </action>
+  </animation>
+
+  <animation>
+    <type>pick</type>
+    <object-name>button.t4</object-name>
+    <action>
+      <button>0</button>
+      <repeatable>false</repeatable>
+      <interval-sec>0.20</interval-sec>
+      <binding>
+	<command>property-assign</command>
+	<property>/fdm/jsbsim/instruments/cnc-radio/display/config/offsets/y-m</property>
+	<value>0</value>
+      </binding>
+      <binding>
+	<command>property-assign</command>
+	<property>/fdm/jsbsim/instruments/cnc-radio/display/config/offsets/z-m</property>
+	<value>0</value>
+      </binding>
+      <binding>
+	<command>property-assign</command>
+	<property>/fdm/jsbsim/instruments/cnc-radio/display/config/offsets/scale-m</property>
+	<value>0</value>
+      </binding>
+    </action>
+  </animation>
+  
+  <animation>
+    <type>pick</type>
+    <object-name>button.t5</object-name>
+    <action>
+      <button>0</button>
+      <repeatable>false</repeatable>
+      <interval-sec>0.20</interval-sec>
+      <binding>
+	<command>property-adjust</command>
+	<property>/fdm/jsbsim/instruments/cnc-radio/display/config/offsets/z-m</property>
+	<step>-0.001</step>
+	<min>-0.006</min>
+	<max>0.006</max>
+	<wrap>false</wrap>
+      </binding>
+    </action>
+  </animation>
+
+  <animation>
+    <type>pick</type>
+    <object-name>button.t6</object-name>
+    <action>
+      <button>0</button>
+      <repeatable>false</repeatable>
+      <interval-sec>0.20</interval-sec>
+      <binding>
+	<command>property-adjust</command>
+	<property>/fdm/jsbsim/instruments/cnc-radio/display/config/offsets/scale-m</property>
+	<step>0.001</step>
+	<min>-0.005</min>
+	<max>0.005</max>
+	<wrap>false</wrap>
+      </binding>
+    </action>
+  </animation>
+
+  <animation>
+    <type>pick</type>
+    <object-name>button.t7</object-name>
+    <action>
+      <button>0</button>
+      <repeatable>false</repeatable>
+      <interval-sec>0.20</interval-sec>
+      <binding>
+	<command>property-adjust</command>
+	<property>/fdm/jsbsim/instruments/cnc-radio/display/config/offsets/y-m</property>
+	<step>0.001</step>
+	<min>-0.006</min>
+	<max>0.006</max>
+	<wrap>false</wrap>
+      </binding>
+    </action>
+  </animation>
+  
+  <!-- menus -->
+  <text>
+    <name>comm</name>
+    <font>Helvetica.txf</font>
+    <character-size type="double">0.00402</character-size>
+    <offsets>
+      <x-m>0.0103</x-m>
+      <y-m>-0.06975</y-m>
+      <z-m>0.03317</z-m>
+    </offsets>
+    <axis-alignment>yz-plane</axis-alignment>
+    <type type="string">literal</type>
+    <text type="string">COM</text>
+    <character-aspect-ratio type="double">1</character-aspect-ratio>
+    <alignment>left-top</alignment>
+  </text>
+
+  <text>
+    <name>uhf</name>
+    <font>Helvetica.txf</font>
+    <character-size type="double">0.00402</character-size>
+    <offsets>
+      <x-m>0.0103</x-m>
+      <y-m>-0.06975</y-m>
+      <z-m>0.01898</z-m>
+    </offsets>
+    <axis-alignment>yz-plane</axis-alignment>
+    <type type="string">literal</type>
+    <text type="string">UHF</text>
+    <character-aspect-ratio type="double">1</character-aspect-ratio>
+    <alignment>left-top</alignment>
+  </text>
+
+  <text>
+    <name>vhf</name>
+    <font>Helvetica.txf</font>
+    <character-size type="double">0.00402</character-size>
+    <offsets>
+      <x-m>0.0103</x-m>
+      <y-m>-0.06975</y-m>
+      <z-m>0.005075</z-m>
+    </offsets>
+    <axis-alignment>yz-plane</axis-alignment>
+    <type type="string">literal</type>
+    <text type="string">VHF</text>
+    <character-aspect-ratio type="double">1</character-aspect-ratio>
+    <alignment>left-top</alignment>
+  </text>
+
+  <text>
+    <name>hf</name>
+    <font>Helvetica.txf</font>
+    <character-size type="double">0.00402</character-size>
+    <offsets>
+      <x-m>0.0103</x-m>
+      <y-m>-0.06975</y-m>
+      <z-m>-0.00812</z-m>
+    </offsets>
+    <axis-alignment>yz-plane</axis-alignment>
+    <type type="string">literal</type>
+    <text type="string">HF</text>
+    <character-aspect-ratio type="double">1</character-aspect-ratio>
+    <alignment>left-top</alignment>
+  </text>
+
+  <text>
+    <name>nav</name>
+    <font>Helvetica.txf</font>
+    <character-size type="double">0.00402</character-size>
+    <offsets>
+      <x-m>0.0103</x-m>
+      <y-m>0.0475</y-m>
+      <z-m>0.03317</z-m>
+    </offsets>
+    <axis-alignment>yz-plane</axis-alignment>
+    <type type="string">literal</type>
+    <text type="string">NAV</text>
+    <character-aspect-ratio type="double">1</character-aspect-ratio>
+    <alignment>right-top</alignment>
+  </text>
+
+  <text>
+    <name>tac</name>
+    <font>Helvetica.txf</font>
+    <character-size type="double">0.00402</character-size>
+    <offsets>
+      <x-m>0.0103</x-m>
+      <y-m>0.0475</y-m>
+      <z-m>0.01898</z-m>
+    </offsets>
+    <axis-alignment>yz-plane</axis-alignment>
+    <type type="string">literal</type>
+    <text type="string">TAC</text>
+    <character-aspect-ratio type="double">1</character-aspect-ratio>
+    <alignment>right-top</alignment>
+  </text>
+
+  <text>
+    <name>adf</name>
+    <font>Helvetica.txf</font>
+    <character-size type="double">0.00402</character-size>
+    <offsets>
+      <x-m>0.0103</x-m>
+      <y-m>0.0475</y-m>
+      <z-m>0.005075</z-m>
+    </offsets>
+    <axis-alignment>yz-plane</axis-alignment>
+    <type type="string">literal</type>
+    <text type="string">ADF</text>
+    <character-aspect-ratio type="double">1</character-aspect-ratio>
+    <alignment>right-top</alignment>
+  </text>
+
+  <text>
+    <name>iff</name>
+    <font>Helvetica.txf</font>
+    <character-size type="double">0.00402</character-size>
+    <offsets>
+      <x-m>0.0103</x-m>
+      <y-m>0.0475</y-m>
+      <z-m>-0.00812</z-m>
+    </offsets>
+    <axis-alignment>yz-plane</axis-alignment>
+    <type type="string">literal</type>
+    <text type="string">IFF</text>
+    <character-aspect-ratio type="double">1</character-aspect-ratio>
+    <alignment>right-top</alignment>
+  </text>
+
+  <text>
+    <name>mode</name>
+    <font>Helvetica.txf</font>
+    <character-size type="double">0.00402</character-size>
+    <offsets>
+      <x-m>0.0103</x-m>
+      <y-m>-0.06507</y-m>
+      <z-m>-0.03479</z-m>
+    </offsets>
+    <axis-alignment>yz-plane</axis-alignment>
+    <type type="string">literal</type>
+    <text type="string">MODE</text>
+    <character-aspect-ratio type="double">1</character-aspect-ratio>
+    <alignment>center-top</alignment>
+  </text>
+
+  <text>
+    <name>ch1</name>
+    <font>Helvetica.txf</font>
+    <character-size type="double">0.00402</character-size>
+    <offsets>
+      <x-m>0.0103</x-m>
+      <y-m>-0.06555</y-m>
+      <z-m>-0.0399</z-m>
+    </offsets>
+    <axis-alignment>yz-plane</axis-alignment>
+    <type type="string">literal</type>
+    <text type="string">CH1</text>
+    <character-aspect-ratio type="double">1</character-aspect-ratio>
+    <alignment>center-top</alignment>
+  </text>
+
+  <text>
+    <name>ch2</name>
+    <font>Helvetica.txf</font>
+    <character-size type="double">0.00402</character-size>
+    <offsets>
+      <x-m>0.0103</x-m>
+      <y-m>-0.04464</y-m>
+      <z-m>-0.0399</z-m>
+    </offsets>
+    <axis-alignment>yz-plane</axis-alignment>
+    <type type="string">literal</type>
+    <text type="string">CH2</text>
+    <character-aspect-ratio type="double">1</character-aspect-ratio>
+    <alignment>center-top</alignment>
+  </text>
+
+  <text>
+    <name>ch3</name>
+    <font>Helvetica.txf</font>
+    <character-size type="double">0.00402</character-size>
+    <offsets>
+      <x-m>0.0103</x-m>
+      <y-m>-0.02492</y-m>
+      <z-m>-0.0399</z-m>
+    </offsets>
+    <axis-alignment>yz-plane</axis-alignment>
+    <type type="string">literal</type>
+    <text type="string">CH3</text>
+    <character-aspect-ratio type="double">1</character-aspect-ratio>
+    <alignment>center-top</alignment>
+  </text>
+
+  <text>
+    <name>sel</name>
+    <font>Helvetica.txf</font>
+    <character-size type="double">0.00402</character-size>
+    <offsets>
+      <x-m>0.0103</x-m>
+      <y-m>-0.00448</y-m>
+      <z-m>-0.0399</z-m>
+    </offsets>
+    <axis-alignment>yz-plane</axis-alignment>
+    <type type="string">literal</type>
+    <text type="string">SEL</text>
+    <character-aspect-ratio type="double">1</character-aspect-ratio>
+    <alignment>center-top</alignment>
+  </text>
+  
+  <text>
+    <name>fgcom</name>
+    <font>Helvetica.txf</font>
+    <character-size type="double">0.00402</character-size>
+    <offsets>
+      <x-m>0.0103</x-m>
+      <y-m>0.01722</y-m>
+      <z-m>-0.0399</z-m>
+    </offsets>
+    <axis-alignment>yz-plane</axis-alignment>
+    <type type="string">literal</type>
+    <text type="string">FGCOM</text>
+    <character-aspect-ratio type="double">1</character-aspect-ratio>
+    <alignment>center-top</alignment>
+  </text>
+
+  <text>
+    <name>off</name>
+    <font>Helvetica.txf</font>
+    <character-size type="double">0.00402</character-size>
+    <offsets>
+      <x-m>0.0103</x-m>
+      <y-m>-0.06555</y-m>
+      <z-m>-0.0399</z-m>
+    </offsets>
+    <axis-alignment>yz-plane</axis-alignment>
+    <type type="string">literal</type>
+    <text type="string">OFF</text>
+    <character-aspect-ratio type="double">1</character-aspect-ratio>
+    <alignment>center-top</alignment>
+  </text>
+
+  <text>
+    <name>iff-stdby</name>
+    <font>Helvetica.txf</font>
+    <character-size type="double">0.00402</character-size>
+    <offsets>
+      <x-m>0.0103</x-m>
+      <y-m>-0.04464</y-m>
+      <z-m>-0.0399</z-m>
+    </offsets>
+    <axis-alignment>yz-plane</axis-alignment>
+    <type type="string">literal</type>
+    <text type="string">STDBY</text>
+    <character-aspect-ratio type="double">1</character-aspect-ratio>
+    <alignment>center-top</alignment>
+  </text>
+
+  <text>
+    <name>test</name>
+    <font>Helvetica.txf</font>
+    <character-size type="double">0.00402</character-size>
+    <offsets>
+      <x-m>0.0103</x-m>
+      <y-m>-0.02492</y-m>
+      <z-m>-0.0399</z-m>
+    </offsets>
+    <axis-alignment>yz-plane</axis-alignment>
+    <type type="string">literal</type>
+    <text type="string">TEST</text>
+    <character-aspect-ratio type="double">1</character-aspect-ratio>
+    <alignment>center-top</alignment>
+  </text>
+
+  <text>
+    <name>ground</name>
+    <font>Helvetica.txf</font>
+    <character-size type="double">0.00402</character-size>
+    <offsets>
+      <x-m>0.0103</x-m>
+      <y-m>-0.00448</y-m>
+      <z-m>-0.0399</z-m>
+    </offsets>
+    <axis-alignment>yz-plane</axis-alignment>
+    <type type="string">literal</type>
+    <text type="string">GRD</text>
+    <character-aspect-ratio type="double">1</character-aspect-ratio>
+    <alignment>center-top</alignment>
+  </text>
+  
+  <text>
+    <name>on</name>
+    <font>Helvetica.txf</font>
+    <character-size type="double">0.00402</character-size>
+    <offsets>
+      <x-m>0.0103</x-m>
+      <y-m>0.01722</y-m>
+      <z-m>-0.0399</z-m>
+    </offsets>
+    <axis-alignment>yz-plane</axis-alignment>
+    <type type="string">literal</type>
+    <text type="string">ON</text>
+    <character-aspect-ratio type="double">1</character-aspect-ratio>
+    <alignment>center-top</alignment>
+  </text>
+
+  <text>
+    <name>alt</name>
+    <font>Helvetica.txf</font>
+    <character-size type="double">0.00402</character-size>
+    <offsets>
+      <x-m>0.0103</x-m>
+      <y-m>0.03637</y-m>
+      <z-m>-0.0399</z-m>
+    </offsets>
+    <axis-alignment>yz-plane</axis-alignment>
+    <type type="string">literal</type>
+    <text type="string">ALT</text>
+    <character-aspect-ratio type="double">1</character-aspect-ratio>
+    <alignment>center-top</alignment>
+  </text>
+  
+  <animation>
+    <name>menus</name>
+    <object-name>comm</object-name>
+    <object-name>uhf</object-name>
+    <object-name>vhf</object-name>
+    <object-name>hf</object-name>
+    <object-name>nav</object-name>
+    <object-name>tac</object-name>
+    <object-name>adf</object-name>
+    <object-name>iff</object-name>
+    <object-name>mode</object-name>
+    <object-name>ch1</object-name>
+    <object-name>ch2</object-name>
+    <object-name>ch3</object-name>
+    <object-name>sel</object-name>
+    <object-name>fgcom</object-name>
+    <object-name>off</object-name>
+    <object-name>iff-stdby</object-name>
+    <object-name>test</object-name>
+    <object-name>ground</object-name>
+    <object-name>on</object-name>
+    <object-name>alt</object-name>
+  </animation>
+  
+  <animation>
+    <object-name>menus</object-name>
+    <type>material</type>
+    <emission>
+      <factor-prop>fdm/jsbsim/instruments/cnc-radio/display/config/brt</factor-prop>
+      <red>0.0</red>
+      <green>1.0</green>
+      <blue>0.0</blue>
+    </emission>
+  </animation>
+
+  <animation>
+    <object-name>ch1</object-name>
+    <object-name>ch2</object-name>
+    <object-name>ch3</object-name>
+    <object-name>sel</object-name>
+    <object-name>fgcom</object-name>
+    <type>select</type>
+    <condition>
+      <equals>
+	<property>fdm/jsbsim/instruments/cnc-radio/display/menu/general-menu-print</property>
+	<value>1</value>
+      </equals>
+    </condition>
+  </animation>
+
+  <animation>
+    <object-name>off</object-name>
+    <object-name>iff-stdby</object-name>
+    <object-name>test</object-name>
+    <object-name>ground</object-name>
+    <object-name>on</object-name>
+    <object-name>alt</object-name>
+    <type>select</type>
+    <condition>
+      <equals>
+	<property>fdm/jsbsim/instruments/cnc-radio/display/menu/iff-menu-print</property>
+	<value>1</value>
+      </equals>
+    </condition>
+  </animation>
+
+  <!--status-->
+  <text>
+    <name>status-comm1</name>
+    <font>Helvetica.txf</font>
+    <character-size type="double">0.0086</character-size>
+    <offsets>
+      <x-m>0.0103</x-m>
+      <y-m>-0.05854</y-m>
+      <z-m>0.0374</z-m>
+    </offsets>
+    <axis-alignment>yz-plane</axis-alignment>
+    <type type="string">literal</type>
+    <text type="string">COM1</text>
+    <character-aspect-ratio type="double">1</character-aspect-ratio>
+    <alignment>left-top</alignment>
+  </text>
+
+  <text>
+    <name>status-comm2</name>
+    <font>Helvetica.txf</font>
+    <character-size type="double">0.0086</character-size>
+    <offsets>
+      <x-m>0.0103</x-m>
+      <y-m>-0.05854</y-m>
+      <z-m>0.0374</z-m>
+    </offsets>
+    <axis-alignment>yz-plane</axis-alignment>
+    <type type="string">literal</type>
+    <text type="string">COM2</text>
+    <character-aspect-ratio type="double">1</character-aspect-ratio>
+    <alignment>left-top</alignment>
+  </text>
+
+  <text>
+    <name>status-comm3</name>
+    <font>Helvetica.txf</font>
+    <character-size type="double">0.0086</character-size>
+    <offsets>
+      <x-m>0.0103</x-m>
+      <y-m>-0.05854</y-m>
+      <z-m>0.0374</z-m>
+    </offsets>
+    <axis-alignment>yz-plane</axis-alignment>
+    <type type="string">literal</type>
+    <text type="string">COM3</text>
+    <character-aspect-ratio type="double">1</character-aspect-ratio>
+    <alignment>left-top</alignment>
+  </text>
+  
+  <text>
+    <name>status-uhf</name>
+    <font>Helvetica.txf</font>
+    <character-size type="double">0.0086</character-size>
+    <offsets>
+      <x-m>0.0103</x-m>
+      <y-m>-0.05854</y-m>
+      <z-m>0.0374</z-m>
+    </offsets>
+    <axis-alignment>yz-plane</axis-alignment>
+    <type type="string">literal</type>
+    <text type="string">UHF</text>
+    <character-aspect-ratio type="double">1</character-aspect-ratio>
+    <alignment>left-top</alignment>
+  </text>
+
+  <text>
+    <name>status-vhf</name>
+    <font>Helvetica.txf</font>
+    <character-size type="double">0.0086</character-size>
+    <offsets>
+      <x-m>0.0103</x-m>
+      <y-m>-0.05854</y-m>
+      <z-m>0.0374</z-m>
+    </offsets>
+    <axis-alignment>yz-plane</axis-alignment>
+    <type type="string">literal</type>
+    <text type="string">VHF</text>
+    <character-aspect-ratio type="double">1</character-aspect-ratio>
+    <alignment>left-top</alignment>
+  </text>
+
+  <text>
+    <name>status-hf</name>
+    <font>Helvetica.txf</font>
+    <character-size type="double">0.0086</character-size>
+    <offsets>
+      <x-m>0.0103</x-m>
+      <y-m>-0.05854</y-m>
+      <z-m>0.0374</z-m>
+    </offsets>
+    <axis-alignment>yz-plane</axis-alignment>
+    <type type="string">literal</type>
+    <text type="string">HF</text>
+    <character-aspect-ratio type="double">1</character-aspect-ratio>
+    <alignment>left-top</alignment>
+  </text>
+
+  <text>
+    <name>status-nav1</name>
+    <font>Helvetica.txf</font>
+    <character-size type="double">0.0086</character-size>
+    <offsets>
+      <x-m>0.0103</x-m>
+      <y-m>-0.05854</y-m>
+      <z-m>0.0374</z-m>
+    </offsets>
+    <axis-alignment>yz-plane</axis-alignment>
+    <type type="string">literal</type>
+    <text type="string">NAV1</text>
+    <character-aspect-ratio type="double">1</character-aspect-ratio>
+    <alignment>left-top</alignment>
+  </text>
+
+  <text>
+    <name>status-nav2</name>
+    <font>Helvetica.txf</font>
+    <character-size type="double">0.0086</character-size>
+    <offsets>
+      <x-m>0.0103</x-m>
+      <y-m>-0.05854</y-m>
+      <z-m>0.0374</z-m>
+    </offsets>
+    <axis-alignment>yz-plane</axis-alignment>
+    <type type="string">literal</type>
+    <text type="string">NAV2</text>
+    <character-aspect-ratio type="double">1</character-aspect-ratio>
+    <alignment>left-top</alignment>
+  </text>
+
+  <text>
+    <name>status-nav3</name>
+    <font>Helvetica.txf</font>
+    <character-size type="double">0.0086</character-size>
+    <offsets>
+      <x-m>0.0103</x-m>
+      <y-m>-0.05854</y-m>
+      <z-m>0.0374</z-m>
+    </offsets>
+    <axis-alignment>yz-plane</axis-alignment>
+    <type type="string">literal</type>
+    <text type="string">NAV3</text>
+    <character-aspect-ratio type="double">1</character-aspect-ratio>
+    <alignment>left-top</alignment>
+  </text>
+
+  <text>
+    <name>status-tac1</name>
+    <font>Helvetica.txf</font>
+    <character-size type="double">0.0086</character-size>
+    <offsets>
+      <x-m>0.0103</x-m>
+      <y-m>-0.05854</y-m>
+      <z-m>0.0374</z-m>
+    </offsets>
+    <axis-alignment>yz-plane</axis-alignment>
+    <type type="string">literal</type>
+    <text type="string">TAC1</text>
+    <character-aspect-ratio type="double">1</character-aspect-ratio>
+    <alignment>left-top</alignment>
+  </text>
+
+  <text>
+    <name>status-tac2</name>
+    <font>Helvetica.txf</font>
+    <character-size type="double">0.0086</character-size>
+    <offsets>
+      <x-m>0.0103</x-m>
+      <y-m>-0.05854</y-m>
+      <z-m>0.0374</z-m>
+    </offsets>
+    <axis-alignment>yz-plane</axis-alignment>
+    <type type="string">literal</type>
+    <text type="string">TAC2</text>
+    <character-aspect-ratio type="double">1</character-aspect-ratio>
+    <alignment>left-top</alignment>
+  </text>
+
+  <text>
+    <name>status-tac3</name>
+    <font>Helvetica.txf</font>
+    <character-size type="double">0.0086</character-size>
+    <offsets>
+      <x-m>0.0103</x-m>
+      <y-m>-0.05854</y-m>
+      <z-m>0.0374</z-m>
+    </offsets>
+    <axis-alignment>yz-plane</axis-alignment>
+    <type type="string">literal</type>
+    <text type="string">TAC3</text>
+    <character-aspect-ratio type="double">1</character-aspect-ratio>
+    <alignment>left-top</alignment>
+  </text>
+
+  <text>
+    <name>status-adf1</name>
+    <font>Helvetica.txf</font>
+    <character-size type="double">0.0086</character-size>
+    <offsets>
+      <x-m>0.0103</x-m>
+      <y-m>-0.05854</y-m>
+      <z-m>0.0374</z-m>
+    </offsets>
+    <axis-alignment>yz-plane</axis-alignment>
+    <type type="string">literal</type>
+    <text type="string">ADF1</text>
+    <character-aspect-ratio type="double">1</character-aspect-ratio>
+    <alignment>left-top</alignment>
+  </text>
+
+  <text>
+    <name>status-adf2</name>
+    <font>Helvetica.txf</font>
+    <character-size type="double">0.0086</character-size>
+    <offsets>
+      <x-m>0.0103</x-m>
+      <y-m>-0.05854</y-m>
+      <z-m>0.0374</z-m>
+    </offsets>
+    <axis-alignment>yz-plane</axis-alignment>
+    <type type="string">literal</type>
+    <text type="string">ADF2</text>
+    <character-aspect-ratio type="double">1</character-aspect-ratio>
+    <alignment>left-top</alignment>
+  </text>
+
+  <text>
+    <name>status-adf3</name>
+    <font>Helvetica.txf</font>
+    <character-size type="double">0.0086</character-size>
+    <offsets>
+      <x-m>0.0103</x-m>
+      <y-m>-0.05854</y-m>
+      <z-m>0.0374</z-m>
+    </offsets>
+    <axis-alignment>yz-plane</axis-alignment>
+    <type type="string">literal</type>
+    <text type="string">ADF3</text>
+    <character-aspect-ratio type="double">1</character-aspect-ratio>
+    <alignment>left-top</alignment>
+  </text>
+
+  <text>
+    <name>status-iff</name>
+    <font>Helvetica.txf</font>
+    <character-size type="double">0.0086</character-size>
+    <offsets>
+      <x-m>0.0103</x-m>
+      <y-m>-0.05854</y-m>
+      <z-m>0.0374</z-m>
+    </offsets>
+    <axis-alignment>yz-plane</axis-alignment>
+    <type type="string">literal</type>
+    <text type="string">IFF</text>
+    <character-aspect-ratio type="double">1</character-aspect-ratio>
+    <alignment>left-top</alignment>
+  </text>
+  
+  <animation>
+    <name>status</name>
+    <object-name>status-comm1</object-name>
+    <object-name>status-comm2</object-name>
+    <object-name>status-comm3</object-name>
+    <object-name>status-uhf</object-name>
+    <object-name>status-vhf</object-name>
+    <object-name>status-hf</object-name>
+    <object-name>status-nav1</object-name>
+    <object-name>status-nav2</object-name>
+    <object-name>status-nav3</object-name>
+    <object-name>status-tac1</object-name>
+    <object-name>status-tac2</object-name>
+    <object-name>status-tac3</object-name>
+    <object-name>status-adf1</object-name>
+    <object-name>status-adf2</object-name>
+    <object-name>status-adf3</object-name>
+    <object-name>status-iff</object-name>
+  </animation>
+
+  <animation>
+    <object-name>status</object-name>
+    <type>material</type>
+    <emission>
+      <factor-prop>fdm/jsbsim/instruments/cnc-radio/display/config/brt</factor-prop>
+      <red>1.0</red>
+      <green>1.0</green>
+      <blue>0.0</blue>
+    </emission>
+  </animation>
+
+  <animation>
+    <object-name>status-comm1</object-name>
+    <type>select</type>
+    <condition>
+      <equals>
+	<property>fdm/jsbsim/instruments/cnc-radio/display/config/status/comm1</property>
+	<value>1</value>
+      </equals>
+    </condition>
+  </animation>
+
+  <animation>
+    <object-name>status-comm2</object-name>
+    <type>select</type>
+    <condition>
+      <equals>
+	<property>fdm/jsbsim/instruments/cnc-radio/display/config/status/comm2</property>
+	<value>1</value>
+      </equals>
+    </condition>
+  </animation>
+
+  <animation>
+    <object-name>status-comm3</object-name>
+    <type>select</type>
+    <condition>
+      <equals>
+	<property>fdm/jsbsim/instruments/cnc-radio/display/config/status/comm3</property>
+	<value>1</value>
+      </equals>
+    </condition>
+  </animation>
+
+  <animation>
+    <object-name>status-uhf</object-name>
+    <type>select</type>
+    <condition>
+      <equals>
+	<property>fdm/jsbsim/instruments/cnc-radio/display/config/status/uhf</property>
+	<value>1</value>
+      </equals>
+    </condition>
+  </animation>
+
+  <animation>
+    <object-name>status-vhf</object-name>
+    <type>select</type>
+    <condition>
+      <equals>
+	<property>fdm/jsbsim/instruments/cnc-radio/display/config/status/vhf</property>
+	<value>1</value>
+      </equals>
+    </condition>
+  </animation>
+
+  <animation>
+    <object-name>status-hf</object-name>
+    <type>select</type>
+    <condition>
+      <equals>
+	<property>fdm/jsbsim/instruments/cnc-radio/display/config/status/hf</property>
+	<value>1</value>
+      </equals>
+    </condition>
+  </animation>
+  
+  <animation>
+    <object-name>status-nav1</object-name>
+    <type>select</type>
+    <condition>
+      <equals>
+	<property>fdm/jsbsim/instruments/cnc-radio/display/config/status/nav1</property>
+	<value>1</value>
+      </equals>
+    </condition>
+  </animation>
+
+  <animation>
+    <object-name>status-nav2</object-name>
+    <type>select</type>
+    <condition>
+      <equals>
+	<property>fdm/jsbsim/instruments/cnc-radio/display/config/status/nav2</property>
+	<value>1</value>
+      </equals>
+    </condition>
+  </animation>
+
+  <animation>
+    <object-name>status-nav3</object-name>
+    <type>select</type>
+    <condition>
+      <equals>
+	<property>fdm/jsbsim/instruments/cnc-radio/display/config/status/nav3</property>
+	<value>1</value>
+      </equals>
+    </condition>
+  </animation>
+
+  <animation>
+    <object-name>status-tac1</object-name>
+    <type>select</type>
+    <condition>
+      <equals>
+	<property>fdm/jsbsim/instruments/cnc-radio/display/config/status/tac1</property>
+	<value>1</value>
+      </equals>
+    </condition>
+  </animation>
+
+  <animation>
+    <object-name>status-tac2</object-name>
+    <type>select</type>
+    <condition>
+      <equals>
+	<property>fdm/jsbsim/instruments/cnc-radio/display/config/status/tac2</property>
+	<value>1</value>
+      </equals>
+    </condition>
+  </animation>
+
+  <animation>
+    <object-name>status-tac3</object-name>
+    <type>select</type>
+    <condition>
+      <equals>
+	<property>fdm/jsbsim/instruments/cnc-radio/display/config/status/tac3</property>
+	<value>1</value>
+      </equals>
+    </condition>
+  </animation>
+
+  <animation>
+    <object-name>status-adf1</object-name>
+    <type>select</type>
+    <condition>
+      <equals>
+	<property>fdm/jsbsim/instruments/cnc-radio/display/config/status/adf1</property>
+	<value>1</value>
+      </equals>
+    </condition>
+  </animation>
+
+  <animation>
+    <object-name>status-adf2</object-name>
+    <type>select</type>
+    <condition>
+      <equals>
+	<property>fdm/jsbsim/instruments/cnc-radio/display/config/status/adf2</property>
+	<value>1</value>
+      </equals>
+    </condition>
+  </animation>
+  
+  <animation>
+    <object-name>status-adf3</object-name>
+    <type>select</type>
+    <condition>
+      <equals>
+	<property>fdm/jsbsim/instruments/cnc-radio/display/config/status/adf3</property>
+	<value>1</value>
+      </equals>
+    </condition>
+  </animation>
+
+  <animation>
+    <object-name>status-iff</object-name>
+    <type>select</type>
+    <condition>
+      <equals>
+	<property>fdm/jsbsim/instruments/cnc-radio/display/config/status/iff</property>
+	<value>1</value>
+      </equals>
+    </condition>
+  </animation>
+
+  <!--  frequencies -->
+  <text>
+    <name>freq-standby</name>
+    <font>Helvetica.txf</font>
+    <character-size type="double">0.0060</character-size>
+    <offsets>
+      <x-m>0.0103</x-m>
+      <y-m>-0.05119</y-m>
+      <z-m>0.0088</z-m>
+    </offsets>
+    <axis-alignment>yz-plane</axis-alignment>
+    <type type="string">literal</type>
+    <text type="string">Standby</text>
+    <character-aspect-ratio type="double">1</character-aspect-ratio>
+    <alignment>left-top</alignment>
+  </text>
+
+  <text>
+    <name>freq-active</name>
+    <font>Helvetica.txf</font>
+    <character-size type="double">0.0060</character-size>
+    <offsets>
+      <x-m>0.0103</x-m>
+      <y-m>0.004794</y-m>
+      <z-m>0.0088</z-m>
+    </offsets>
+    <axis-alignment>yz-plane</axis-alignment>
+    <type type="string">literal</type>
+    <text type="string">Active</text>
+    <character-aspect-ratio type="double">1</character-aspect-ratio>
+    <alignment>left-top</alignment>
+  </text>
+
+  <text>
+    <name>selected-khz</name>
+    <font>Helvetica.txf</font>
+    <character-size type="double">0.0122</character-size>
+    <offsets>
+      <x-m>0.0103</x-m>
+      <y-m>0.000912</y-m>
+      <z-m>0.002058</z-m>
+    </offsets>
+    <axis-alignment>yz-plane</axis-alignment>
+    <type type="string">number-value</type>
+    <format type="string">%0.0f</format>
+    <truncate type="bool">false</truncate>
+    <character-aspect-ratio type="double">1</character-aspect-ratio>
+    <property>fdm/jsbsim/instruments/cnc-radio/display/frequencies/selected-khz</property>    
+    <alignment>left-top</alignment>
+  </text>
+
+  <text>
+    <name>selected-mhz</name>
+    <font>Helvetica.txf</font>
+    <character-size type="double">0.0122</character-size>
+    <offsets>
+      <x-m>0.0103</x-m>
+      <y-m>0.000912</y-m>
+      <z-m>0.002058</z-m>
+    </offsets>
+    <axis-alignment>yz-plane</axis-alignment>
+    <type type="string">number-value</type>
+    <format type="string">%0.2f</format>
+    <truncate type="bool">false</truncate>
+    <character-aspect-ratio type="double">1</character-aspect-ratio>
+    <property>fdm/jsbsim/instruments/cnc-radio/display/frequencies/selected-mhz</property>    
+    <alignment>left-top</alignment>
+  </text>
+
+  <text>
+    <name>standby-khz</name>
+    <font>Helvetica.txf</font>
+    <character-size type="double">0.0122</character-size>
+    <offsets>
+      <x-m>0.0103</x-m>
+      <y-m>-0.05619</y-m>
+      <z-m>0.002058</z-m>
+    </offsets>
+    <axis-alignment>yz-plane</axis-alignment>
+    <type type="string">number-value</type>
+    <format type="string">%0.0f</format>
+    <truncate type="bool">false</truncate>
+    <character-aspect-ratio type="double">1</character-aspect-ratio>
+    <property>fdm/jsbsim/instruments/cnc-radio/display/frequencies/standby-khz</property>    
+    <alignment>left-top</alignment>
+  </text>
+
+  <text>
+    <name>standby-mhz</name>
+    <font>Helvetica.txf</font>
+    <character-size type="double">0.0122</character-size>
+    <offsets>
+      <x-m>0.0103</x-m>
+      <y-m>-0.05619</y-m>
+      <z-m>0.002058</z-m>
+    </offsets>
+    <axis-alignment>yz-plane</axis-alignment>
+    <type type="string">number-value</type>
+    <format type="string">%0.2f</format>
+    <truncate type="bool">false</truncate>
+    <character-aspect-ratio type="double">1</character-aspect-ratio>
+    <property>fdm/jsbsim/instruments/cnc-radio/display/frequencies/standby-mhz</property>    
+    <alignment>left-top</alignment>
+  </text>
+
+  
+  <animation>
+    <name>frequency-labels</name>
+    <object-name>freq-standby</object-name>
+    <object-name>freq-active</object-name>
+  </animation>
+
+  <animation>
+    <name>frequencies</name>
+    <object-name>standby-mhz</object-name>
+    <object-name>selected-mhz</object-name>
+    <object-name>standby-khz</object-name>
+    <object-name>selected-khz</object-name>
+  </animation>
+
+  <animation>
+    <object-name>frequency-labels</object-name>
+    <type>material</type>
+    <emission>
+      <factor-prop>fdm/jsbsim/instruments/cnc-radio/display/config/brt</factor-prop>
+      <red>0.0</red>
+      <green>1.0</green>
+      <blue>0.0</blue>
+    </emission>
+  </animation>
+
+  <animation>
+    <object-name>frequencies</object-name>
+    <type>material</type>
+    <emission>
+      <factor-prop>fdm/jsbsim/instruments/cnc-radio/display/config/brt</factor-prop>
+      <red>1.0</red>
+      <green>1.0</green>
+      <blue>0.0</blue>
+    </emission>
+  </animation>
+
+  <animation>
+    <object-name>frequency-labels</object-name>
+    <type>select</type>
+    <condition>
+      <or>
+      <equals>
+	<property>fdm/jsbsim/instruments/cnc-radio/display/frequencies/print-khz</property>
+	<value>1</value>
+      </equals>
+      <equals>
+	<property>fdm/jsbsim/instruments/cnc-radio/display/frequencies/print-mhz</property>
+	<value>1</value>
+      </equals>
+      </or>
+    </condition>
+  </animation>
+
+  <animation>
+    <object-name>standby-khz</object-name>
+    <object-name>selected-khz</object-name>
+    <type>select</type>
+    <condition>
+      <equals>
+	<property>fdm/jsbsim/instruments/cnc-radio/display/frequencies/print-khz</property>
+	<value>1</value>
+      </equals>
+    </condition>
+  </animation>
+
+  <animation>
+    <object-name>standby-mhz</object-name>
+    <object-name>selected-mhz</object-name>
+    <type>select</type>
+    <condition>
+      <equals>
+	<property>fdm/jsbsim/instruments/cnc-radio/display/frequencies/print-mhz</property>
+	<value>1</value>
+      </equals>
+    </condition>
+  </animation>
+
+  <!-- Frequency Knob -->
+  <animation>
+        <type>knob</type>
+        <object-name>knob.freq.lo</object-name>
+        <action>
+          <binding>
+	    <condition>
+	      <equals>
+		<property>fdm/jsbsim/instruments/cnc-radio/display/config/status/comm1</property>
+		<value>1</value>
+	      </equals>
+	    </condition>
+            <command>property-adjust</command>
+            <property>/instrumentation/comm[1]/frequencies/standby-mhz</property>
+            <factor>1</factor>
+            <min>118.00</min>
+            <max>137.00</max>                
+            <wrap>false</wrap>
+          </binding>
+
+          <binding>
+	    <condition>
+	      <equals>
+		<property>fdm/jsbsim/instruments/cnc-radio/display/config/status/comm2</property>
+		<value>1</value>
+	      </equals>
+	    </condition>
+            <command>property-adjust</command>
+            <property>/instrumentation/comm[2]/frequencies/standby-mhz</property>
+            <factor>1</factor>
+            <min>118.00</min>
+            <max>137.00</max>                
+            <wrap>false</wrap>
+          </binding>
+
+	  <binding>
+	    <condition>
+	      <equals>
+		<property>fdm/jsbsim/instruments/cnc-radio/display/config/status/comm3</property>
+		<value>1</value>
+	      </equals>
+	    </condition>
+            <command>property-adjust</command>
+            <property>/instrumentation/comm[3]/frequencies/standby-mhz</property>
+            <factor>1</factor>
+            <min>118.00</min>
+            <max>137.00</max>                
+            <wrap>false</wrap>
+          </binding>
+
+	  <binding>
+	    <condition>
+	      <equals>
+		<property>fdm/jsbsim/instruments/cnc-radio/display/config/status/uhf</property>
+		<value>1</value>
+	      </equals>
+	    </condition>
+            <command>property-adjust</command>
+            <property>fdm/jsbsim/instruments/cnc-radio/uhf/frequencies/standby-mhz</property>
+            <factor>1</factor>
+            <min>200</min>
+            <max>415</max>                
+            <wrap>false</wrap>
+          </binding>
+
+	  <binding>
+	    <condition>
+	      <equals>
+		<property>fdm/jsbsim/instruments/cnc-radio/display/config/status/vhf</property>
+		<value>1</value>
+	      </equals>
+	    </condition>
+            <command>property-adjust</command>
+            <property>fdm/jsbsim/instruments/cnc-radio/vhf/frequencies/standby-mhz</property>
+            <factor>1</factor>
+            <min>118.00</min>
+            <max>137.00</max>                
+            <wrap>false</wrap>
+          </binding>
+
+	  <binding>
+	    <condition>
+	      <equals>
+		<property>fdm/jsbsim/instruments/cnc-radio/display/config/status/hf</property>
+		<value>1</value>
+	      </equals>
+	    </condition>
+            <command>property-adjust</command>
+            <property>fdm/jsbsim/instruments/cnc-radio/hf/frequencies/standby-mhz</property>
+            <factor>1</factor>
+            <min>118.00</min>
+            <max>137.00</max>                
+            <wrap>false</wrap>
+          </binding>
+
+	  <binding>
+	    <condition>
+	      <equals>
+		<property>fdm/jsbsim/instruments/cnc-radio/display/config/status/nav1</property>
+		<value>1</value>
+	      </equals>
+	    </condition>
+            <command>property-adjust</command>
+            <property>/instrumentation/nav[1]/frequencies/standby-mhz</property>
+            <factor>1</factor>
+            <min>108.00</min>
+            <max>118.00</max>                
+            <wrap>false</wrap>
+          </binding>
+
+	  <binding>
+	    <condition>
+	      <equals>
+		<property>fdm/jsbsim/instruments/cnc-radio/display/config/status/nav2</property>
+		<value>1</value>
+	      </equals>
+	    </condition>
+            <command>property-adjust</command>
+            <property>/instrumentation/nav[3]/frequencies/standby-mhz</property>
+            <factor>1</factor>
+            <min>108.00</min>
+            <max>118.00</max>                
+            <wrap>false</wrap>
+	  </binding>
+
+	  <binding>
+	    <condition>
+	      <equals>
+		<property>fdm/jsbsim/instruments/cnc-radio/display/config/status/nav3</property>
+		<value>1</value>
+	      </equals>
+	    </condition>
+            <command>property-adjust</command>
+            <property>/instrumentation/nav[5]/frequencies/standby-mhz</property>
+            <factor>1</factor>
+            <min>108.00</min>
+            <max>118.00</max>                
+            <wrap>false</wrap>
+	  </binding>
+
+	  <binding>
+	    <condition>
+	      <equals>
+		<property>fdm/jsbsim/instruments/cnc-radio/display/config/status/tac1</property>
+		<value>1</value>
+	      </equals>
+	    </condition>
+            <command>property-adjust</command>
+            <property>/instrumentation/nav[2]/frequencies/standby-mhz</property>
+            <factor>1</factor>
+            <min>108.00</min>
+            <max>118.00</max>                
+            <wrap>false</wrap>
+	  </binding>
+
+	  <binding>
+	    <condition>
+	      <equals>
+		<property>fdm/jsbsim/instruments/cnc-radio/display/config/status/tac2</property>
+		<value>1</value>
+	      </equals>
+	    </condition>
+            <command>property-adjust</command>
+            <property>/instrumentation/nav[4]/frequencies/standby-mhz</property>
+            <factor>1</factor>
+            <min>108.00</min>
+            <max>118.00</max>                
+            <wrap>false</wrap>
+	  </binding>
+
+	  <binding>
+	    <condition>
+	      <equals>
+		<property>fdm/jsbsim/instruments/cnc-radio/display/config/status/tac3</property>
+		<value>1</value>
+	      </equals>
+	    </condition>
+            <command>property-adjust</command>
+            <property>/instrumentation/nav[6]/frequencies/standby-mhz</property>
+            <factor>1</factor>
+            <min>108.00</min>
+            <max>118.00</max>                
+            <wrap>false</wrap>
+	  </binding>
+
+	  <binding>
+	    <condition>
+	      <equals>
+		<property>fdm/jsbsim/instruments/cnc-radio/display/config/status/adf1</property>
+		<value>1</value>
+	      </equals>
+	    </condition>
+            <command>property-adjust</command>
+            <property>/instrumentation/adf/frequencies/standby-khz</property>
+            <factor>10</factor>
+            <min>190</min>
+            <max>535</max>                
+            <wrap>false</wrap>
+	  </binding>
+
+	  <binding>
+	    <condition>
+	      <equals>
+		<property>fdm/jsbsim/instruments/cnc-radio/display/config/status/adf2</property>
+		<value>1</value>
+	      </equals>
+	    </condition>
+            <command>property-adjust</command>
+            <property>/instrumentation/adf[1]/frequencies/standby-khz</property>
+            <factor>10</factor>
+            <min>190</min>
+            <max>535</max>                
+            <wrap>false</wrap>
+	  </binding>
+
+	  <binding>
+	    <condition>
+	      <equals>
+		<property>fdm/jsbsim/instruments/cnc-radio/display/config/status/adf3</property>
+		<value>1</value>
+	      </equals>
+	    </condition>
+            <command>property-adjust</command>
+            <property>/instrumentation/adf[2]/frequencies/standby-khz</property>
+            <factor>10</factor>
+            <min>190</min>
+            <max>535</max>                
+            <wrap>false</wrap>
+	  </binding>
+	  
+        </action>
+  </animation>
+
+  <animation>
+    <type>knob</type>
+    <object-name>knob.freq.hi</object-name>
+    <action>
+
+      <binding>
+	<condition>
+	  <equals>
+	    <property>fdm/jsbsim/instruments/cnc-radio/display/config/status/comm1</property>
+	    <value>1</value>
+	  </equals>
+	</condition>
+        <command>property-adjust</command>
+        <property>/instrumentation/comm[1]/frequencies/standby-mhz</property>
+        <factor>0.05</factor>
+        <min>118.00</min>
+        <max>137.00</max>                
+        <wrap>false</wrap>
+      </binding>
+
+      <binding>
+	<condition>
+	  <equals>
+	    <property>fdm/jsbsim/instruments/cnc-radio/display/config/status/comm2</property>
+	    <value>1</value>
+	  </equals>
+	</condition>
+        <command>property-adjust</command>
+        <property>/instrumentation/comm[2]/frequencies/standby-mhz</property>
+        <factor>0.05</factor>
+        <min>118.00</min>
+        <max>137.00</max>                
+        <wrap>false</wrap>
+      </binding>
+
+      <binding>
+	<condition>
+	  <equals>
+	    <property>fdm/jsbsim/instruments/cnc-radio/display/config/status/comm3</property>
+	    <value>1</value>
+	  </equals>
+	</condition>
+        <command>property-adjust</command>
+        <property>/instrumentation/comm[3]/frequencies/standby-mhz</property>
+        <factor>0.05</factor>
+        <min>118.00</min>
+        <max>137.00</max>                
+        <wrap>false</wrap>
+      </binding>
+
+      <binding>
+	<condition>
+	  <equals>
+	    <property>fdm/jsbsim/instruments/cnc-radio/display/config/status/uhf</property>
+	    <value>1</value>
+	  </equals>
+	</condition>
+        <command>property-adjust</command>
+        <property>fdm/jsbsim/instruments/cnc-radio/uhf/frequencies/standby-mhz</property>
+        <factor>0.05</factor>
+        <min>200</min>
+        <max>415</max>                
+        <wrap>false</wrap>
+      </binding>
+
+      <binding>
+	<condition>
+	  <equals>
+	    <property>fdm/jsbsim/instruments/cnc-radio/display/config/status/vhf</property>
+	    <value>1</value>
+	  </equals>
+	</condition>
+        <command>property-adjust</command>
+        <property>fdm/jsbsim/instruments/cnc-radio/vhf/frequencies/standby-mhz</property>
+        <factor>0.05</factor>
+        <min>118.00</min>
+        <max>137.00</max>                
+        <wrap>false</wrap>
+      </binding>
+
+      <binding>
+	<condition>
+	  <equals>
+	    <property>fdm/jsbsim/instruments/cnc-radio/display/config/status/hf</property>
+	    <value>1</value>
+	  </equals>
+	</condition>
+        <command>property-adjust</command>
+        <property>fdm/jsbsim/instruments/cnc-radio/hf/frequencies/standby-mhz</property>
+        <factor>0.05</factor>
+        <min>118.00</min>
+        <max>137.00</max>                
+        <wrap>false</wrap>
+      </binding>
+      
+      <binding>
+	<condition>
+	  <equals>
+	    <property>fdm/jsbsim/instruments/cnc-radio/display/config/status/nav1</property>
+	    <value>1</value>
+	  </equals>
+	</condition>
+        <command>property-adjust</command>
+        <property>/instrumentation/nav[1]/frequencies/standby-mhz</property>
+        <factor>0.05</factor>
+        <min>108.00</min>
+        <max>118.00</max>                
+        <wrap>false</wrap>
+      </binding>
+
+      <binding>
+	<condition>
+	  <equals>
+	    <property>fdm/jsbsim/instruments/cnc-radio/display/config/status/nav2</property>
+	    <value>1</value>
+	  </equals>
+	</condition>
+        <command>property-adjust</command>
+        <property>/instrumentation/nav[3]/frequencies/standby-mhz</property>
+        <factor>0.05</factor>
+        <min>108.00</min>
+        <max>118.00</max>                
+        <wrap>false</wrap>
+      </binding>
+
+      <binding>
+	<condition>
+	  <equals>
+	    <property>fdm/jsbsim/instruments/cnc-radio/display/config/status/nav3</property>
+	    <value>1</value>
+	  </equals>
+	</condition>
+        <command>property-adjust</command>
+        <property>/instrumentation/nav[5]/frequencies/standby-mhz</property>
+        <factor>0.05</factor>
+        <min>108.00</min>
+        <max>118.00</max>                
+        <wrap>false</wrap>
+      </binding>
+
+      <binding>
+	<condition>
+	  <equals>
+	    <property>fdm/jsbsim/instruments/cnc-radio/display/config/status/tac1</property>
+	    <value>1</value>
+	  </equals>
+	</condition>
+        <command>property-adjust</command>
+        <property>/instrumentation/nav[2]/frequencies/standby-mhz</property>
+        <factor>0.05</factor>
+        <min>108.00</min>
+        <max>118.00</max>                
+        <wrap>false</wrap>
+      </binding>
+
+      <binding>
+	<condition>
+	  <equals>
+	    <property>fdm/jsbsim/instruments/cnc-radio/display/config/status/tac2</property>
+	    <value>1</value>
+	  </equals>
+	</condition>
+        <command>property-adjust</command>
+        <property>/instrumentation/nav[4]/frequencies/standby-mhz</property>
+        <factor>0.05</factor>
+        <min>108.00</min>
+        <max>118.00</max>                
+        <wrap>false</wrap>
+      </binding>
+
+      <binding>
+	<condition>
+	  <equals>
+	    <property>fdm/jsbsim/instruments/cnc-radio/display/config/status/tac3</property>
+	    <value>1</value>
+	  </equals>
+	</condition>
+        <command>property-adjust</command>
+        <property>/instrumentation/nav[6]/frequencies/standby-mhz</property>
+        <factor>0.05</factor>
+        <min>108.00</min>
+        <max>118.00</max>                
+        <wrap>false</wrap>
+      </binding>
+
+      <binding>
+	<condition>
+	  <equals>
+	    <property>fdm/jsbsim/instruments/cnc-radio/display/config/status/adf1</property>
+	    <value>1</value>
+	  </equals>
+	</condition>
+        <command>property-adjust</command>
+        <property>/instrumentation/adf/frequencies/standby-khz</property>
+        <factor>1</factor>
+        <min>190</min>
+        <max>535</max>                
+        <wrap>false</wrap>
+      </binding>
+
+      <binding>
+	<condition>
+	  <equals>
+	    <property>fdm/jsbsim/instruments/cnc-radio/display/config/status/adf2</property>
+	    <value>1</value>
+	  </equals>
+	</condition>
+        <command>property-adjust</command>
+        <property>/instrumentation/adf[1]/frequencies/standby-khz</property>
+        <factor>1</factor>
+        <min>190</min>
+        <max>535</max>                
+        <wrap>false</wrap>
+      </binding>
+
+      <binding>
+	<condition>
+	  <equals>
+	    <property>fdm/jsbsim/instruments/cnc-radio/display/config/status/adf3</property>
+	    <value>1</value>
+	  </equals>
+	</condition>
+        <command>property-adjust</command>
+        <property>/instrumentation/adf[2]/frequencies/standby-khz</property>
+        <factor>1</factor>
+        <min>190</min>
+        <max>535</max>                
+        <wrap>false</wrap>
+      </binding>
+      
+    </action>
+  </animation>
+
+  <!-- XFER -->
+  <animation>
+    <type>pick</type>
+    <object-name>button.xfer</object-name>
+    <action>
+      <button>0</button>
+      <repeatable>false</repeatable>
+      <interval-sec>0.2</interval-sec>
+      <binding>
+	<command>property-assign</command>
+	<property>fdm/jsbsim/instruments/cnc-radio/xfer/switch</property>
+	<value>1</value>
+      </binding>
+      <mod-up>
+	<binding>
+	  <command>property-assign</command>
+	  <property>fdm/jsbsim/instruments/cnc-radio/xfer/switch</property>
+	  <value>0</value>
+	</binding>
+
+	<binding>
+	  <condition>
+	    <equals>
+	      <property>fdm/jsbsim/instruments/cnc-radio/display/config/status/comm1</property>
+	      <value>1</value>
+	    </equals>
+	  </condition>
+	  <command>property-assign</command>
+	  <property>/instrumentation/comm[1]/frequencies/selected-mhz</property>
+	  <property>/fdm/jsbsim/instruments/cnc-radio/xfer/buffer-standby-mhz</property>
+	</binding>
+	<binding>
+	  <condition>
+	    <equals>
+	      <property>fdm/jsbsim/instruments/cnc-radio/display/config/status/comm1</property>
+	      <value>1</value>
+	    </equals>
+	  </condition>
+	  <command>property-assign</command>
+	  <property>/instrumentation/comm[1]/frequencies/standby-mhz</property>
+	  <property>/fdm/jsbsim/instruments/cnc-radio/xfer/buffer-selected-mhz</property>
+	</binding>
+
+	<binding>
+	  <condition>
+	    <equals>
+	      <property>fdm/jsbsim/instruments/cnc-radio/display/config/status/comm2</property>
+	      <value>1</value>
+	    </equals>
+	  </condition>
+	  <command>property-assign</command>
+	  <property>/instrumentation/comm[2]/frequencies/selected-mhz</property>
+	  <property>/fdm/jsbsim/instruments/cnc-radio/xfer/buffer-standby-mhz</property>
+	</binding>
+	<binding>
+	  <condition>
+	    <equals>
+	      <property>fdm/jsbsim/instruments/cnc-radio/display/config/status/comm2</property>
+	      <value>1</value>
+	    </equals>
+	  </condition>
+	  <command>property-assign</command>
+	  <property>/instrumentation/comm[2]/frequencies/standby-mhz</property>
+	  <property>/fdm/jsbsim/instruments/cnc-radio/xfer/buffer-selected-mhz</property>
+	</binding>
+
+	<binding>
+	  <condition>
+	    <equals>
+	      <property>fdm/jsbsim/instruments/cnc-radio/display/config/status/comm3</property>
+	      <value>1</value>
+	    </equals>
+	  </condition>
+	  <command>property-assign</command>
+	  <property>/instrumentation/comm[3]/frequencies/selected-mhz</property>
+	  <property>/fdm/jsbsim/instruments/cnc-radio/xfer/buffer-standby-mhz</property>
+	</binding>
+	<binding>
+	  <condition>
+	    <equals>
+	      <property>fdm/jsbsim/instruments/cnc-radio/display/config/status/comm3</property>
+	      <value>1</value>
+	    </equals>
+	  </condition>
+	  <command>property-assign</command>
+	  <property>/instrumentation/comm[3]/frequencies/standby-mhz</property>
+	  <property>/fdm/jsbsim/instruments/cnc-radio/xfer/buffer-selected-mhz</property>
+	</binding>
+	
+	<binding>
+	  <condition>
+	    <equals>
+	      <property>fdm/jsbsim/instruments/cnc-radio/display/config/status/uhf</property>
+	      <value>1</value>
+	    </equals>
+	  </condition>
+	  <command>property-assign</command>
+	  <property>/fdm/jsbsim/instruments/cnc-radio/uhf/frequencies/selected-mhz</property>
+	  <property>/fdm/jsbsim/instruments/cnc-radio/xfer/buffer-standby-mhz</property>
+	</binding>
+	<binding>
+	  <condition>
+	    <equals>
+	      <property>fdm/jsbsim/instruments/cnc-radio/display/config/status/uhf</property>
+	      <value>1</value>
+	    </equals>
+	  </condition>
+	  <command>property-assign</command>
+	  <property>/fdm/jsbsim/instruments/cnc-radio/uhf/frequencies/standby-mhz</property>
+	  <property>/fdm/jsbsim/instruments/cnc-radio/xfer/buffer-selected-mhz</property>
+	</binding>
+	
+	<binding>
+	  <condition>
+	    <equals>
+	      <property>fdm/jsbsim/instruments/cnc-radio/display/config/status/vhf</property>
+	      <value>1</value>
+	    </equals>
+	  </condition>
+	  <command>property-assign</command>
+	  <property>/fdm/jsbsim/instruments/cnc-radio/vhf/frequencies/selected-mhz</property>
+	  <property>/fdm/jsbsim/instruments/cnc-radio/xfer/buffer-standby-mhz</property>
+	</binding>
+	<binding>
+	  <condition>
+	    <equals>
+	      <property>fdm/jsbsim/instruments/cnc-radio/display/config/status/vhf</property>
+	      <value>1</value>
+	    </equals>
+	  </condition>
+	  <command>property-assign</command>
+	  <property>/fdm/jsbsim/instruments/cnc-radio/vhf/frequencies/standby-mhz</property>
+	  <property>/fdm/jsbsim/instruments/cnc-radio/xfer/buffer-selected-mhz</property>
+	</binding>
+	
+	<binding>
+	  <condition>
+	    <equals>
+	      <property>fdm/jsbsim/instruments/cnc-radio/display/config/status/hf</property>
+	      <value>1</value>
+	    </equals>
+	  </condition>
+	  <command>property-assign</command>
+	  <property>/fdm/jsbsim/instruments/cnc-radio/hf/frequencies/selected-mhz</property>
+	  <property>/fdm/jsbsim/instruments/cnc-radio/xfer/buffer-standby-mhz</property>
+	</binding>
+	<binding>
+	  <condition>
+	    <equals>
+	      <property>fdm/jsbsim/instruments/cnc-radio/display/config/status/hf</property>
+	      <value>1</value>
+	    </equals>
+	  </condition>
+	  <command>property-assign</command>
+	  <property>/fdm/jsbsim/instruments/cnc-radio/hf/frequencies/standby-mhz</property>
+	  <property>/fdm/jsbsim/instruments/cnc-radio/xfer/buffer-selected-mhz</property>
+	</binding>
+
+
+	<binding>
+	  <condition>
+	    <equals>
+	      <property>fdm/jsbsim/instruments/cnc-radio/display/config/status/nav1</property>
+	      <value>1</value>
+	    </equals>
+	  </condition>
+	  <command>property-assign</command>
+	  <property>/instrumentation/nav[1]/frequencies/selected-mhz</property>
+	  <property>/fdm/jsbsim/instruments/cnc-radio/xfer/buffer-standby-mhz</property>
+	</binding>
+	<binding>
+	  <condition>
+	    <equals>
+	      <property>fdm/jsbsim/instruments/cnc-radio/display/config/status/nav1</property>
+	      <value>1</value>
+	    </equals>
+	  </condition>
+	  <command>property-assign</command>
+	  <property>/instrumentation/nav[1]/frequencies/standby-mhz</property>
+	  <property>/fdm/jsbsim/instruments/cnc-radio/xfer/buffer-selected-mhz</property>
+	</binding>
+
+	<binding>
+	  <condition>
+	    <equals>
+	      <property>fdm/jsbsim/instruments/cnc-radio/display/config/status/nav2</property>
+	      <value>1</value>
+	    </equals>
+	  </condition>
+	  <command>property-assign</command>
+	  <property>/instrumentation/nav[3]/frequencies/selected-mhz</property>
+	  <property>/fdm/jsbsim/instruments/cnc-radio/xfer/buffer-standby-mhz</property>
+	</binding>
+	<binding>
+	  <condition>
+	    <equals>
+	      <property>fdm/jsbsim/instruments/cnc-radio/display/config/status/nav2</property>
+	      <value>1</value>
+	    </equals>
+	  </condition>
+	  <command>property-assign</command>
+	  <property>/instrumentation/nav[3]/frequencies/standby-mhz</property>
+	  <property>/fdm/jsbsim/instruments/cnc-radio/xfer/buffer-selected-mhz</property>
+	</binding>
+
+	<binding>
+	  <condition>
+	    <equals>
+	      <property>fdm/jsbsim/instruments/cnc-radio/display/config/status/nav3</property>
+	      <value>1</value>
+	    </equals>
+	  </condition>
+	  <command>property-assign</command>
+	  <property>/instrumentation/nav[5]/frequencies/selected-mhz</property>
+	  <property>/fdm/jsbsim/instruments/cnc-radio/xfer/buffer-standby-mhz</property>
+	</binding>
+	<binding>
+	  <condition>
+	    <equals>
+	      <property>fdm/jsbsim/instruments/cnc-radio/display/config/status/nav3</property>
+	      <value>1</value>
+	    </equals>
+	  </condition>
+	  <command>property-assign</command>
+	  <property>/instrumentation/nav[5]/frequencies/standby-mhz</property>
+	  <property>/fdm/jsbsim/instruments/cnc-radio/xfer/buffer-selected-mhz</property>
+	</binding>
+	
+	<binding>
+	  <condition>
+	    <equals>
+	      <property>fdm/jsbsim/instruments/cnc-radio/display/config/status/tac1</property>
+	      <value>1</value>
+	    </equals>
+	  </condition>
+	  <command>property-assign</command>
+	  <property>/instrumentation/nav[2]/frequencies/selected-mhz</property>
+	  <property>/fdm/jsbsim/instruments/cnc-radio/xfer/buffer-standby-mhz</property>
+	</binding>
+	<binding>
+	  <condition>
+	    <equals>
+	      <property>fdm/jsbsim/instruments/cnc-radio/display/config/status/tac1</property>
+	      <value>1</value>
+	    </equals>
+	  </condition>
+	  <command>property-assign</command>
+	  <property>/instrumentation/nav[2]/frequencies/standby-mhz</property>
+	  <property>/fdm/jsbsim/instruments/cnc-radio/xfer/buffer-selected-mhz</property>
+	</binding>
+
+	<binding>
+	  <condition>
+	    <equals>
+	      <property>fdm/jsbsim/instruments/cnc-radio/display/config/status/tac2</property>
+	      <value>1</value>
+	    </equals>
+	  </condition>
+	  <command>property-assign</command>
+	  <property>/instrumentation/nav[4]/frequencies/selected-mhz</property>
+	  <property>/fdm/jsbsim/instruments/cnc-radio/xfer/buffer-standby-mhz</property>
+	</binding>
+	<binding>
+	  <condition>
+	    <equals>
+	      <property>fdm/jsbsim/instruments/cnc-radio/display/config/status/tac2</property>
+	      <value>1</value>
+	    </equals>
+	  </condition>
+	  <command>property-assign</command>
+	  <property>/instrumentation/nav[4]/frequencies/standby-mhz</property>
+	  <property>/fdm/jsbsim/instruments/cnc-radio/xfer/buffer-selected-mhz</property>
+	</binding>
+
+	<binding>
+	  <condition>
+	    <equals>
+	      <property>fdm/jsbsim/instruments/cnc-radio/display/config/status/tac3</property>
+	      <value>1</value>
+	    </equals>
+	  </condition>
+	  <command>property-assign</command>
+	  <property>/instrumentation/nav[6]/frequencies/selected-mhz</property>
+	  <property>/fdm/jsbsim/instruments/cnc-radio/xfer/buffer-standby-mhz</property>
+	</binding>
+	<binding>
+	  <condition>
+	    <equals>
+	      <property>fdm/jsbsim/instruments/cnc-radio/display/config/status/tac3</property>
+	      <value>1</value>
+	    </equals>
+	  </condition>
+	  <command>property-assign</command>
+	  <property>/instrumentation/nav[6]/frequencies/standby-mhz</property>
+	  <property>/fdm/jsbsim/instruments/cnc-radio/xfer/buffer-selected-mhz</property>
+	</binding>
+
+	<binding>
+	  <condition>
+	    <equals>
+	      <property>fdm/jsbsim/instruments/cnc-radio/display/config/status/adf1</property>
+	      <value>1</value>
+	    </equals>
+	  </condition>
+	  <command>property-assign</command>
+	  <property>/instrumentation/adf/frequencies/selected-khz</property>
+	  <property>/fdm/jsbsim/instruments/cnc-radio/xfer/buffer-standby-khz</property>
+	</binding>
+	<binding>
+	  <condition>
+	    <equals>
+	      <property>fdm/jsbsim/instruments/cnc-radio/display/config/status/adf1</property>
+	      <value>1</value>
+	    </equals>
+	  </condition>
+	  <command>property-assign</command>
+	  <property>/instrumentation/adf/frequencies/standby-khz</property>
+	  <property>/fdm/jsbsim/instruments/cnc-radio/xfer/buffer-selected-khz</property>
+	</binding>
+
+	<binding>
+	  <condition>
+	    <equals>
+	      <property>fdm/jsbsim/instruments/cnc-radio/display/config/status/adf2</property>
+	      <value>1</value>
+	    </equals>
+	  </condition>
+	  <command>property-assign</command>
+	  <property>/instrumentation/adf[1]/frequencies/selected-khz</property>
+	  <property>/fdm/jsbsim/instruments/cnc-radio/xfer/buffer-standby-khz</property>
+	</binding>
+	<binding>
+	  <condition>
+	    <equals>
+	      <property>fdm/jsbsim/instruments/cnc-radio/display/config/status/adf2</property>
+	      <value>1</value>
+	    </equals>
+	  </condition>
+	  <command>property-assign</command>
+	  <property>/instrumentation/adf[1]/frequencies/standby-khz</property>
+	  <property>/fdm/jsbsim/instruments/cnc-radio/xfer/buffer-selected-khz</property>
+	</binding>
+
+	<binding>
+	  <condition>
+	    <equals>
+	      <property>fdm/jsbsim/instruments/cnc-radio/display/config/status/adf3</property>
+	      <value>1</value>
+	    </equals>
+	  </condition>
+	  <command>property-assign</command>
+	  <property>/instrumentation/adf[2]/frequencies/selected-khz</property>
+	  <property>/fdm/jsbsim/instruments/cnc-radio/xfer/buffer-standby-khz</property>
+	</binding>
+	<binding>
+	  <condition>
+	    <equals>
+	      <property>fdm/jsbsim/instruments/cnc-radio/display/config/status/adf3</property>
+	      <value>1</value>
+	    </equals>
+	  </condition>
+	  <command>property-assign</command>
+	  <property>/instrumentation/adf[2]/frequencies/standby-khz</property>
+	  <property>/fdm/jsbsim/instruments/cnc-radio/xfer/buffer-selected-khz</property>
+	</binding>
+
+      </mod-up>
+    </action>
+  </animation>
+  
+  
+  <!-- Lightmaps -->
+  <effect>
+    <inherits-from>floodlighting</inherits-from>
+    <object-name>frame</object-name>
+    <object-name>knob.crs.hi</object-name>
+    <object-name>knob.crs.lo</object-name>
+    <object-name>knob.freq.hi</object-name>
+    <object-name>knob.freq.lo</object-name>
+    <object-name>button.iden</object-name>
+    <object-name>button.xfer</object-name>
+    <object-name>button.b1</object-name>
+    <object-name>button.b2</object-name>
+    <object-name>button.b3</object-name>
+    <object-name>button.b4</object-name>
+    <object-name>button.b5</object-name>
+    <object-name>button.b6</object-name>
+    <object-name>button.l1</object-name>
+    <object-name>button.l2</object-name>
+    <object-name>button.l3</object-name>
+    <object-name>button.l4</object-name>
+    <object-name>button.l5</object-name>
+    <object-name>button.r1</object-name>
+    <object-name>button.r2</object-name>
+    <object-name>button.r3</object-name>
+    <object-name>button.r4</object-name>
+    <object-name>button.r5</object-name>
+    <object-name>button.t1</object-name>
+    <object-name>button.t2</object-name>
+    <object-name>button.t3</object-name>
+    <object-name>button.t4</object-name>
+    <object-name>button.t5</object-name>
+    <object-name>button.t6</object-name>
+    <object-name>button.t7</object-name>
+    <object-name>button.bright.low</object-name>
+    <object-name>button.bright.hi</object-name>
+  </effect>
+</PropertyList>

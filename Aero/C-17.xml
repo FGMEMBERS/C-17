@@ -63,6 +63,7 @@
   <system name="FUEL LEVELS: C-17" file="Models/Panels/Instruments/fuelLevel/fuelLevel-systems.xml" />
   <system name="FUEL LEVELS: C-17" file="Models/Panels/Instruments/digitalClock/digitalClock-systems.xml" />
   <system name="STBY RMIDME: C-17" file="Models/Panels/Instruments/RMIDME/RMIDME-systems.xml" />
+  <system name="CNC RADIO: C-17" file="Models/Panels/Instruments/cnc-radio/cnc-radio-systems.xml" />
   
   <!--Output-->
   <output name="C-17-jsbim-output.csv" type="CSV" rate="120">
