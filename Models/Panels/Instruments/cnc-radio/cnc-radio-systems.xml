@@ -306,12 +306,34 @@ shall keep this attribution information.
 
   <property value="0">instruments/cnc-radio/xfer/switch</property>
   <channel name="XFER buffer">
-    <switch name="instruments/cnc-radio/xfer/buffer-mhz">
-      <default value="instruments/cnc-radio/xfer/buffer-mhz"/>
+    <switch name="instruments/cnc-radio/xfer/buffer-selected-mhz">
+      <default value="instruments/cnc-radio/xfer/buffer-selected-mhz"/>
       <test value="instruments/cnc-radio/display/frequencies/selected-mhz">
 	instruments/cnc-radio/xfer/switch eq 1
       </test>
     </switch>
+
+    <switch name="instruments/cnc-radio/xfer/buffer-standby-mhz">
+      <default value="instruments/cnc-radio/xfer/buffer-standby-mhz"/>
+      <test value="instruments/cnc-radio/display/frequencies/standby-mhz">
+	instruments/cnc-radio/xfer/switch eq 1
+      </test>
+    </switch>
+
+    <switch name="instruments/cnc-radio/xfer/buffer-selected-khz">
+      <default value="instruments/cnc-radio/xfer/buffer-selected-khz"/>
+      <test value="instruments/cnc-radio/display/frequencies/selected-khz">
+	instruments/cnc-radio/xfer/switch eq 1
+      </test>
+    </switch>
+
+    <switch name="instruments/cnc-radio/xfer/buffer-standby-khz">
+      <default value="instruments/cnc-radio/xfer/buffer-standby-khz"/>
+      <test value="instruments/cnc-radio/display/frequencies/standby-khz">
+	instruments/cnc-radio/xfer/switch eq 1
+      </test>
+    </switch>
+    
   </channel>
 
   <!-- slaved modes com and nav -->
