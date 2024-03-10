@@ -3491,6 +3491,89 @@
 	  
         </action>
   </animation>
+
+  <!-- Status Leds -->
+  <animation>
+    <object-name>button.b1.led</object-name>
+    <object-name>button.b2.led</object-name>
+    <object-name>button.b3.led</object-name>
+    <object-name>button.b4.led</object-name>
+    <object-name>button.b5.led</object-name>
+    <object-name>button.b6.led</object-name>
+    <type>material</type>
+    <emission>
+      <factor-prop>fdm/jsbsim/instruments/cnc-radio/display/config/brt</factor-prop>
+      <red>1.0</red>
+      <green>1.0</green>
+      <blue>0.0</blue>
+    </emission>
+  </animation>
+
+  <animation>
+    <type>select</type>
+    <object-name>button.b1.led</object-name>
+    <condition>
+      <equals>
+	<property>fdm/jsbsim/instruments/cnc-radio/display/config/status/mode-led/button-b1</property>
+	<value>1</value>
+      </equals>
+    </condition>
+  </animation>
+
+  <animation>
+    <type>select</type>
+    <object-name>button.b2.led</object-name>
+    <condition>
+      <equals>
+	<property>fdm/jsbsim/instruments/cnc-radio/display/config/status/mode-led/button-b2</property>
+	<value>1</value>
+      </equals>
+    </condition>
+  </animation>
+
+  <animation>
+    <type>select</type>
+    <object-name>button.b3.led</object-name>
+    <condition>
+      <equals>
+	<property>fdm/jsbsim/instruments/cnc-radio/display/config/status/mode-led/button-b3</property>
+	<value>1</value>
+      </equals>
+    </condition>
+  </animation>
+
+  <animation>
+    <type>select</type>
+    <object-name>button.b4.led</object-name>
+    <condition>
+      <equals>
+	<property>fdm/jsbsim/instruments/cnc-radio/display/config/status/mode-led/button-b4</property>
+	<value>1</value>
+      </equals>
+    </condition>
+  </animation>
+
+  <animation>
+    <type>select</type>
+    <object-name>button.b5.led</object-name>
+    <condition>
+      <equals>
+	<property>fdm/jsbsim/instruments/cnc-radio/display/config/status/mode-led/button-b5</property>
+	<value>1</value>
+      </equals>
+    </condition>
+  </animation>
+
+  <animation>
+    <type>select</type>
+    <object-name>button.b6.led</object-name>
+    <condition>
+      <equals>
+	<property>fdm/jsbsim/instruments/cnc-radio/display/config/status/mode-led/button-b6</property>
+	<value>1</value>
+      </equals>
+    </condition>
+  </animation>
   
   <!-- Lightmaps -->
   <effect>
