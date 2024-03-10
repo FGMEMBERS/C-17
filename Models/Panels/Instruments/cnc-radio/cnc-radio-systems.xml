@@ -90,7 +90,7 @@ shall keep this attribution information.
 	instruments/cnc-radio/mode/mode eq 15
 	instruments/cnc-radio/mode/mode eq 25
 	instruments/cnc-radio/mode/mode eq 35
-	instruments/cnc-radio/mode/mode eq 15
+	instruments/cnc-radio/mode/mode eq 16
 	instruments/cnc-radio/mode/mode eq 26
 	instruments/cnc-radio/mode/mode eq 36
       </test>
@@ -244,8 +244,11 @@ shall keep this attribution information.
   </channel>
 
   <channel name="Radials">
-    <switch name="instruments/cnc-radio/display/radials/print">
+    <switch name="instruments/cnc-radio/display/radials/print-selected-deg">
       <default value="0"/>
+      <test value="0">
+	instruments/cnc-radio/display/radials/print-target-radial-deg eq 1
+      </test>
       <test logic="OR" value="1">
 	instruments/cnc-radio/mode/mode eq 15
 	instruments/cnc-radio/mode/mode eq 25
@@ -253,6 +256,13 @@ shall keep this attribution information.
 	instruments/cnc-radio/mode/mode eq 16
 	instruments/cnc-radio/mode/mode eq 26
 	instruments/cnc-radio/mode/mode eq 36
+      </test>
+    </switch>
+
+    <switch name="instruments/cnc-radio/display/radials/print-target-radial-deg">
+      <default value="0"/>
+      <test value="1">
+	instruments/cnc-radio/display/radials/is-ils-in-range eq 1
       </test>
     </switch>
     
@@ -277,6 +287,63 @@ shall keep this attribution information.
 	instruments/cnc-radio/mode/mode eq 36
       </test>
     </switch>
+
+    <switch name="instruments/cnc-radio/display/radials/target-radial-deg">
+      <default value="0"/>
+      <test value="/instrumentation/nav[1]/radials/target-radial-deg">
+	instruments/cnc-radio/mode/mode eq 15
+      </test>
+      <test value="/instrumentation/nav[2]/radials/target-radial-deg">
+	instruments/cnc-radio/mode/mode eq 16
+      </test>
+      <test value="/instrumentation/nav[3]/radials/target-radial-deg">
+	instruments/cnc-radio/mode/mode eq 25
+      </test>
+      <test value="/instrumentation/nav[4]/radials/target-radial-deg">
+	instruments/cnc-radio/mode/mode eq 26
+      </test>
+      <test value="/instrumentation/nav[5]/radials/target-radial-deg">
+	instruments/cnc-radio/mode/mode eq 35
+      </test>
+      <test value="/instrumentation/nav[6]/radials/target-radial-deg">
+	instruments/cnc-radio/mode/mode eq 36
+      </test>
+    </switch>
+    
+    <switch name="instruments/cnc-radio/display/radials/is-ils-in-range">
+      <default value="0"/>
+      <test logic="AND" value="1">
+	instruments/cnc-radio/mode/mode eq 15
+	/instrumentation/nav[1]/has-gs eq 1
+	/instrumentation/nav[1]/in-range eq 1
+      </test>
+      <test logic="AND" value="1">
+	instruments/cnc-radio/mode/mode eq 16
+	/instrumentation/nav[2]/has-gs eq 1
+	/instrumentation/nav[2]/in-range eq 1
+      </test>
+      <test logic="AND" value="1">
+	instruments/cnc-radio/mode/mode eq 25
+	/instrumentation/nav[3]/has-gs eq 1
+	/instrumentation/nav[3]/in-range eq 1
+      </test>
+      <test logic="AND" value="1">
+	instruments/cnc-radio/mode/mode eq 26
+	/instrumentation/nav[4]/has-gs eq 1
+	/instrumentation/nav[4]/in-range eq 1
+      </test>
+      <test logic="AND" value="1">
+	instruments/cnc-radio/mode/mode eq 35
+	/instrumentation/nav[5]/has-gs eq 1
+	/instrumentation/nav[5]/in-range eq 1
+      </test>
+      <test logic="AND" value="1">
+	instruments/cnc-radio/mode/mode eq 36
+	/instrumentation/nav[6]/has-gs eq 1
+	/instrumentation/nav[6]/in-range eq 1
+      </test>
+    </switch>
+    
   </channel>
 
   <property value="1">instruments/cnc-radio/display/nav-id/on</property>
@@ -295,11 +362,68 @@ shall keep this attribution information.
 	instruments/cnc-radio/mode/mode eq 37
       </test>
     </switch>
-    <switch name="instruments/cnc-radio/display/nav-id/print">
+    
+    <switch name="instruments/cnc-radio/display/nav-id/print-able">
       <default value="0"/>
       <test logic="AND" value="1">
 	instruments/cnc-radio/display/nav-id/on eq 1
 	instruments/cnc-radio/display/nav-id/print-mode eq 1
+      </test>
+    </switch>
+
+    <switch name="instruments/cnc-radio/display/nav-id/nav-in-range">
+      <default value="0"/>
+      <test logic="AND" value="1">
+	instruments/cnc-radio/mode/mode eq 15
+	/instrumentation/nav[1]/in-range eq 1
+      </test>
+      <test logic="AND" value="1">
+	instruments/cnc-radio/mode/mode eq 25
+	/instrumentation/nav[3]/in-range eq 1
+      </test>
+      <test logic="AND" value="1">
+	instruments/cnc-radio/mode/mode eq 35
+	/instrumentation/nav[5]/in-range eq 1
+      </test>
+      <test logic="AND" value="1">
+	instruments/cnc-radio/mode/mode eq 16
+	/instrumentation/nav[2]/in-range eq 1
+      </test>
+      <test logic="AND" value="1">
+	instruments/cnc-radio/mode/mode eq 26
+	/instrumentation/nav[4]/in-range eq 1
+      </test>
+      <test logic="AND" value="1">
+	instruments/cnc-radio/mode/mode eq 36
+	/instrumentation/nav[6]/in-range eq 1
+      </test>
+      <test logic="AND" value="1">
+	instruments/cnc-radio/mode/mode eq 17
+	/instrumentation/adf/in-range eq 1
+      </test>
+      <test logic="AND" value="1">
+	instruments/cnc-radio/mode/mode eq 27
+	/instrumentation/adf[1]/in-range eq 1
+      </test>
+      <test logic="AND" value="1">
+	instruments/cnc-radio/mode/mode eq 37
+	/instrumentation/adf[2]/in-range eq 1
+      </test>
+    </switch>
+
+    <switch name="instruments/cnc-radio/display/nav-id/print-nav-id">
+      <default value="0"/>
+      <test logic="AND" value="1">
+	instruments/cnc-radio/display/nav-id/print-able eq 1
+	instruments/cnc-radio/display/nav-id/nav-in-range eq 1
+      </test>
+    </switch>
+    
+    <switch name="instruments/cnc-radio/display/nav-id/print-dots">
+      <default value="0"/>
+      <test logic="AND" value="1">
+	instruments/cnc-radio/display/nav-id/print-able eq 1
+	instruments/cnc-radio/display/nav-id/nav-in-range eq 0
       </test>
     </switch>
   </channel>
