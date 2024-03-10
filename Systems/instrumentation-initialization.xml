@@ -1,6 +1,15 @@
 <?xml version="1.0"?>
 
 <PropertyList>
+
+  <adf n="2">
+    <mode type="string">adf</mode>
+    <frequencies>
+      <selected-khz type="int">392</selected-khz>
+      <standby-khz type="int">335</standby-khz>
+    </frequencies>
+  </adf>
+  
   <radar>
     <switch type="string" archive="y">on</switch>
     <mode-control type="int" archive="y">1</mode-control>

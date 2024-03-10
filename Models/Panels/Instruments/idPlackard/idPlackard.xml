@@ -48,7 +48,6 @@
   </text>
 
   <animation>
-    <object-name>squad</object-name>
     <object-name>callsign</object-name>
     <type>material</type>
     <emission>
@@ -59,6 +58,43 @@
     </emission>
   </animation>
 
+  <animation>
+    <object-name>squad</object-name>
+    <object-name>callsign</object-name>
+    <type>material</type>
+    <condition>
+      <equals>
+	<property>/sim/multiplay/online</property>
+	<value>0</value>
+      </equals>
+    </condition>
+    <emission>
+      <factor-prop>fdm/jsbsim/instruments/panel-lighting/ledlight-status</factor-prop>
+      <red>1.0</red>
+      <green>1.0</green>
+      <blue>1.0</blue>
+    </emission>
+  </animation>
+
+  <animation>
+    <object-name>squad</object-name>
+    <object-name>callsign</object-name>
+    <type>material</type>
+    <condition>
+      <equals>
+	<property>/sim/multiplay/online</property>
+	<value>1</value>
+      </equals>
+    </condition>
+    <emission>
+      <factor-prop>fdm/jsbsim/instruments/panel-lighting/ledlight-status</factor-prop>
+      <red>0.031372549</red>
+      <green>0.023529412</green>
+      <blue>0.5176</blue>
+    </emission>
+  </animation>
+
+  
   <animation>
     <type>textranslate</type>
     <object-name>id.placcard.top</object-name>

@@ -54,7 +54,7 @@
     <path>Models/Panels/Instruments/PanelLighting/PanelLighting.xml</path>
     <offsets>
       <x-m>0.475</x-m>
-      <y-m>-0.6385</y-m>
+      <y-m>-0.65843</y-m>
       <z-m>1.0685</z-m>
       <pitch-deg>0</pitch-deg>
     </offsets>
@@ -210,8 +210,8 @@
     <path>Models/Panels/Instruments/digitalClock/digitalClock.xml</path>
     <offsets>
       <x-m>0.40480</x-m>
-      <y-m>-0.60489</y-m>
-      <z-m>0.90685</z-m>
+      <y-m>-0.63752</y-m>
+      <z-m>0.93491</z-m>
       <pitch-deg>-6</pitch-deg>
     </offsets>
   </model>
@@ -220,8 +220,8 @@
     <path>Models/Panels/Instruments/digitalClock/digitalClock.xml</path>
     <offsets>
       <x-m>0.40316</x-m>
-      <y-m>0.52977</y-m>
-      <z-m>0.91038</z-m>
+      <y-m>0.56496</y-m>
+      <z-m>0.93419</z-m>
       <pitch-deg>-6</pitch-deg>
     </offsets>
   </model>
@@ -236,7 +236,98 @@
       <pitch-deg>-6</pitch-deg>
     </offsets>
   </model>
+
+  <!-- Standby RMI DMEs -->
+  <model>
+    <name>RMIDME captain</name>
+    <path>Models/Panels/Instruments/RMIDME/RMIDME.xml</path>
+    <offsets>
+      <x-m>0.41213</x-m>
+      <y-m>-0.61857</y-m>
+      <z-m>0.85967</z-m>
+      <pitch-deg>-6</pitch-deg>
+    </offsets>
+  </model>
   
+  <model>
+    <name>RMI Selector captain</name>
+    <path>Models/Panels/Instruments/RMIDME/RMISEL/RMISEL.xml</path>
+    <offsets>
+      <x-m>0.41729</x-m>
+      <y-m>-0.7007</y-m>
+      <z-m>0.82994</z-m>
+      <pitch-deg>-6</pitch-deg>
+    </offsets>
+  </model>
+  
+  <model>
+    <name>RMIDME first officer</name>
+    <path>Models/Panels/Instruments/RMIDME/RMIDME.xml</path>
+    <offsets>
+      <x-m>0.41091</x-m>
+      <y-m>0.54635</y-m>
+      <z-m>0.85891</z-m>
+      <pitch-deg>-6</pitch-deg>
+    </offsets>
+  </model>
+  
+  <model>
+    <name>RMI Selector first officer</name>
+    <path>Models/Panels/Instruments/RMIDME/RMISEL/RMISEL.xml</path>
+    <offsets>
+      <x-m>0.41453</x-m>
+      <y-m>0.63007</y-m>
+      <z-m>0.82937</z-m>
+      <pitch-deg>-6</pitch-deg>
+    </offsets>
+  </model>
+
+  <model>
+    <name>RMI Selector captain</name>
+    <path>Models/Panels/Instruments/RMIDME/RMICHSEL/RMICHSEL.xml</path>
+    <offsets>
+      <x-m>0.41981</x-m>
+      <y-m>-0.68043</y-m>
+      <z-m>0.78607</z-m>
+      <pitch-deg>-6</pitch-deg>
+    </offsets>
+  </model>
+
+  <model>
+    <name>RMI Selector first officer</name>
+    <path>Models/Panels/Instruments/RMIDME/RMICHSEL/RMICHSEL.xml</path>
+    <offsets>
+      <x-m>0.42142</x-m>
+      <y-m>0.6097</y-m>
+      <z-m>0.78607</z-m>
+      <pitch-deg>-6</pitch-deg>
+    </offsets>
+  </model>
+
+
+  <!-- CNC radios -->
+  <model>
+    <name>cnc radio captain</name>
+    <path>Models/Panels/Instruments/cnc-radio/cnc-radio.xml</path>
+    <offsets>
+      <x-m>0.5027</x-m>
+      <y-m>-0.36615</y-m>
+      <z-m>1.1022</z-m>
+      <pitch-deg>-6</pitch-deg>
+    </offsets>
+  </model>
+
+  <model>
+    <name>cnc radio first-officer</name>
+    <path>Models/Panels/Instruments/cnc-radio/cnc-radio.xml</path>
+    <offsets>
+      <x-m>0.50436</x-m>
+      <y-m>0.32884</y-m>
+      <z-m>1.1022</z-m>
+      <pitch-deg>-6</pitch-deg>
+    </offsets>
+  </model>
+
   
   <!--
   <model>
@@ -282,10 +373,10 @@
     <name>AUTOPILOT</name>
     <path>Models/Panels/Instruments/AP/autopilot-panel.xml</path>
     <offsets>
-      <x-m>0.45</x-m>
-      <y-m>-0.02</y-m>
-      <z-m>1.088</z-m>
-      <pitch-deg>0</pitch-deg>
+      <x-m>0.49046</x-m>
+      <y-m>-0.018363</y-m>
+      <z-m>1.05249</z-m>
+      <pitch-deg>-6</pitch-deg>
     </offsets>
   </model>
 
@@ -310,41 +401,7 @@
       <pitch-deg>294.6</pitch-deg>
     </offsets>
   </model>
-
-  <!--
-  <model>
-    <name>cap-CLOCK</name>
-    <path>Models/Panels/Instruments/Clock/chronometer.xml</path>
-    <offsets>
-      <x-m>0.423</x-m>
-      <y-m>0.1</y-m>
-      <z-m>0.73</z-m>
-      <pitch-deg>-6</pitch-deg>
-    </offsets>
-  </model>
-  -->
-
-  <model>
-    <name>STANDBY-VOR</name>
-    <path>Models/Panels/Instruments/STANDBY/vor.xml</path>
-    <offsets>
-      <x-m>0.3866</x-m>
-      <y-m>-0.61377</y-m>
-      <z-m>0.84657</z-m>
-      <pitch-deg>-6</pitch-deg>
-    </offsets>
-  </model>
   
-  <model>
-    <name>STANDBY-VOR2</name>
-    <path>Models/Panels/Instruments/STANDBY/vor.xml</path>
-    <offsets>
-      <x-m>0.3866</x-m>
-      <y-m>0.5374</y-m>
-      <z-m>0.8542</z-m>
-      <pitch-deg>-6</pitch-deg>
-    </offsets>
-  </model>
 
   <!--
   <model>

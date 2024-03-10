@@ -1,0 +1,752 @@
+<?xml version="1.0"?>
+<?xml-stylesheet href="JSBSim.xsl" type="application/xml"?>
+
+<!--
+:copyright: 2024, IAHM-COL
+License: GPLv3
+
+Redistribution, or reuse, with or without modifications
+shall keep this attribution information. 
+-->
+
+<system>
+  <property value="1">instruments/cnc-radio/mode/major-mode</property>
+  <property value="0">instruments/cnc-radio/mode/minor-mode</property>
+  <channel name="Mode selectors">
+    <!-- composite mode,
+	 digits-10:
+	 1: ch1
+	 2: ch2
+	 3: ch3
+	 digits-1:
+	 0: comm
+	 1: uhf
+	 2: vhf
+	 3: hf
+	 4: nil
+	 5: nav
+	 6: tac
+	 7: adf
+	 8: iff
+	 9: nil
+	 ie: 15: nav1, 27: adf2, 30: com3
+    -->
+    <fcs_function name="instruments/cnc-radio/mode/composite-mode">
+      <function>
+	<sum>
+	  <product>
+	    <property>instruments/cnc-radio/mode/major-mode</property>
+	    <value>10</value>
+	  </product>
+	  <property>instruments/cnc-radio/mode/minor-mode</property>
+	</sum>
+      </function>
+    </fcs_function>
+
+    <switch name="instruments/cnc-radio/mode/mode">
+      <default value="instruments/cnc-radio/mode/composite-mode"/>
+      <!-- modes without channels -->
+      <test logic="OR" value="11"> <!-- uhf -->
+	instruments/cnc-radio/mode/composite-mode eq 21
+	instruments/cnc-radio/mode/composite-mode eq 31
+      </test>
+      <test logic="OR" value="12"> <!-- vhf -->
+	instruments/cnc-radio/mode/composite-mode eq 22
+	instruments/cnc-radio/mode/composite-mode eq 32
+      </test>
+      <test logic="OR" value="13"> <!-- hf -->
+	instruments/cnc-radio/mode/composite-mode eq 23
+	instruments/cnc-radio/mode/composite-mode eq 33
+      </test>
+      <test logic="OR" value="14"> <!-- nil -->
+	instruments/cnc-radio/mode/composite-mode eq 24
+	instruments/cnc-radio/mode/composite-mode eq 34
+      </test>
+      <test logic="OR" value="18"> <!-- iff -->
+	instruments/cnc-radio/mode/composite-mode eq 28
+	instruments/cnc-radio/mode/composite-mode eq 38
+      </test>
+      <test logic="OR" value="19"> <!-- nil -->
+	instruments/cnc-radio/mode/composite-mode eq 29
+	instruments/cnc-radio/mode/composite-mode eq 39
+      </test>
+    </switch>
+
+    <switch name="instruments/cnc-radio/mode/comm-mode">
+      <default value="0"/>
+      <test logic="OR" value="1">
+	instruments/cnc-radio/mode/mode eq 10
+	instruments/cnc-radio/mode/mode eq 20
+	instruments/cnc-radio/mode/mode eq 30
+	instruments/cnc-radio/mode/mode eq 11
+	instruments/cnc-radio/mode/mode eq 12
+	instruments/cnc-radio/mode/mode eq 13
+      </test>
+    </switch>
+
+    <switch name="instruments/cnc-radio/mode/nav-mode">
+      <default value="0"/>
+      <test logic="OR" value="1">
+	instruments/cnc-radio/mode/mode eq 15
+	instruments/cnc-radio/mode/mode eq 25
+	instruments/cnc-radio/mode/mode eq 35
+	instruments/cnc-radio/mode/mode eq 16
+	instruments/cnc-radio/mode/mode eq 26
+	instruments/cnc-radio/mode/mode eq 36
+      </test>
+    </switch>
+  </channel>
+
+  <!-- uhf, vhf and hf frequencies -->
+  <property value="232.00">instruments/cnc-radio/uhf/frequencies/selected-mhz</property>
+  <property value="118.75">instruments/cnc-radio/vhf/frequencies/selected-mhz</property>
+  <property value="123.45">instruments/cnc-radio/hf/frequencies/selected-mhz</property>
+  <property value="345.00">instruments/cnc-radio/uhf/frequencies/standby-mhz</property>
+  <property value="128.50">instruments/cnc-radio/vhf/frequencies/standby-mhz</property>
+  <property value="122.75">instruments/cnc-radio/hf/frequencies/standby-mhz</property>
+  <property value="128.3">/instrumentation/comm[2]/frequencies/selected-mhz</property>
+  <property value="121.9">/instrumentation/comm[2]/frequencies/standby-mhz</property>
+  <property value="128.3">/instrumentation/comm[3]/frequencies/selected-mhz</property>
+  <property value="121.9">/instrumentation/comm[3]/frequencies/standby-mhz</property> 
+  <channel name="Frequencies">
+    <switch name="instruments/cnc-radio/display/frequencies/print-mhz">
+      <default value="0"/>
+      <test logic="OR" value="1">
+	instruments/cnc-radio/mode/mode eq 10
+	instruments/cnc-radio/mode/mode eq 20
+	instruments/cnc-radio/mode/mode eq 30
+	instruments/cnc-radio/mode/mode eq 11
+	instruments/cnc-radio/mode/mode eq 12
+	instruments/cnc-radio/mode/mode eq 13
+	instruments/cnc-radio/mode/mode eq 15
+	instruments/cnc-radio/mode/mode eq 25
+	instruments/cnc-radio/mode/mode eq 35
+	instruments/cnc-radio/mode/mode eq 16
+	instruments/cnc-radio/mode/mode eq 26
+	instruments/cnc-radio/mode/mode eq 36
+      </test>
+    </switch>
+
+    <switch name="instruments/cnc-radio/display/frequencies/print-khz">
+      <default value="0"/>
+      <test logic="OR" value="1">
+	instruments/cnc-radio/mode/mode eq 17
+	instruments/cnc-radio/mode/mode eq 27
+	instruments/cnc-radio/mode/mode eq 37
+      </test>
+    </switch>
+    
+    <switch name="instruments/cnc-radio/display/frequencies/standby-mhz">
+      <default value="0"/>
+      <test value="/instrumentation/comm[1]/frequencies/standby-mhz">
+	instruments/cnc-radio/mode/mode eq 10
+      </test>
+      <test value="/instrumentation/comm[2]/frequencies/standby-mhz">
+	instruments/cnc-radio/mode/mode eq 20
+      </test>
+      <test value="/instrumentation/comm[3]/frequencies/standby-mhz">
+	instruments/cnc-radio/mode/mode eq 30
+      </test>
+      <test value="instruments/cnc-radio/uhf/frequencies/standby-mhz">
+	instruments/cnc-radio/mode/mode eq 11
+      </test>
+      <test value="instruments/cnc-radio/vhf/frequencies/standby-mhz">
+	instruments/cnc-radio/mode/mode eq 12
+      </test>
+      <test value="instruments/cnc-radio/hf/frequencies/standby-mhz">
+	instruments/cnc-radio/mode/mode eq 13
+      </test>
+      <test value="/instrumentation/nav[1]/frequencies/standby-mhz">
+	instruments/cnc-radio/mode/mode eq 15
+      </test>
+      <test value="/instrumentation/nav[3]/frequencies/standby-mhz">
+	instruments/cnc-radio/mode/mode eq 25
+      </test>
+      <test value="/instrumentation/nav[5]/frequencies/standby-mhz">
+	instruments/cnc-radio/mode/mode eq 35
+      </test>
+      <test value="/instrumentation/nav[2]/frequencies/standby-mhz">
+	instruments/cnc-radio/mode/mode eq 16
+      </test>
+      <test value="/instrumentation/nav[4]/frequencies/standby-mhz">
+	instruments/cnc-radio/mode/mode eq 26
+      </test>
+      <test value="/instrumentation/nav[6]/frequencies/standby-mhz">
+	instruments/cnc-radio/mode/mode eq 36
+      </test>
+    </switch>
+
+    <switch name="instruments/cnc-radio/display/frequencies/standby-khz">
+      <default value="0"/>
+      <test value="/instrumentation/adf/frequencies/standby-khz">
+	instruments/cnc-radio/mode/mode eq 17
+      </test>
+      <test value="/instrumentation/adf[1]/frequencies/standby-khz">
+	instruments/cnc-radio/mode/mode eq 27
+      </test>
+      <test value="/instrumentation/adf[2]/frequencies/standby-khz">
+	instruments/cnc-radio/mode/mode eq 37
+      </test>
+    </switch>
+    
+    <switch name="instruments/cnc-radio/display/frequencies/selected-mhz">
+      <default value="0"/>
+      <test value="/instrumentation/comm[1]/frequencies/selected-mhz">
+	instruments/cnc-radio/mode/mode eq 10
+      </test>
+      <test value="/instrumentation/comm[2]/frequencies/selected-mhz">
+	instruments/cnc-radio/mode/mode eq 20
+      </test>
+      <test value="/instrumentation/comm[3]/frequencies/selected-mhz">
+	instruments/cnc-radio/mode/mode eq 30
+      </test>
+      <test value="instruments/cnc-radio/uhf/frequencies/selected-mhz">
+	instruments/cnc-radio/mode/mode eq 11
+      </test>
+      <test value="instruments/cnc-radio/vhf/frequencies/selected-mhz">
+	instruments/cnc-radio/mode/mode eq 12
+      </test>
+      <test value="instruments/cnc-radio/hf/frequencies/selected-mhz">
+	instruments/cnc-radio/mode/mode eq 13
+      </test>
+      <test value="/instrumentation/nav[1]/frequencies/selected-mhz">
+	instruments/cnc-radio/mode/mode eq 15
+      </test>
+      <test value="/instrumentation/nav[3]/frequencies/selected-mhz">
+	instruments/cnc-radio/mode/mode eq 25
+      </test>
+      <test value="/instrumentation/nav[5]/frequencies/selected-mhz">
+	instruments/cnc-radio/mode/mode eq 35
+      </test>
+      <test value="/instrumentation/nav[2]/frequencies/selected-mhz">
+	instruments/cnc-radio/mode/mode eq 16
+      </test>
+      <test value="/instrumentation/nav[4]/frequencies/selected-mhz">
+	instruments/cnc-radio/mode/mode eq 26
+      </test>
+      <test value="/instrumentation/nav[6]/frequencies/selected-mhz">
+	instruments/cnc-radio/mode/mode eq 36
+      </test>
+    </switch>
+
+    <switch name="instruments/cnc-radio/display/frequencies/selected-khz">
+      <default value="0"/>
+      <test value="/instrumentation/adf/frequencies/selected-khz">
+	instruments/cnc-radio/mode/mode eq 17
+      </test>
+      <test value="/instrumentation/adf[1]/frequencies/selected-khz">
+	instruments/cnc-radio/mode/mode eq 27
+      </test>
+      <test value="/instrumentation/adf[2]/frequencies/selected-khz">
+	instruments/cnc-radio/mode/mode eq 37
+      </test>
+    </switch>
+  </channel>
+
+  <channel name="Radials">
+    <switch name="instruments/cnc-radio/display/radials/print-selected-deg">
+      <default value="0"/>
+      <test value="0">
+	instruments/cnc-radio/display/radials/print-target-radial-deg eq 1
+      </test>
+      <test logic="OR" value="1">
+	instruments/cnc-radio/mode/mode eq 15
+	instruments/cnc-radio/mode/mode eq 25
+	instruments/cnc-radio/mode/mode eq 35
+	instruments/cnc-radio/mode/mode eq 16
+	instruments/cnc-radio/mode/mode eq 26
+	instruments/cnc-radio/mode/mode eq 36
+      </test>
+    </switch>
+
+    <switch name="instruments/cnc-radio/display/radials/print-target-radial-deg">
+      <default value="0"/>
+      <test value="1">
+	instruments/cnc-radio/display/radials/is-ils-in-range eq 1
+      </test>
+    </switch>
+    
+    <switch name="instruments/cnc-radio/display/radials/selected-deg">
+      <default value="0"/>
+      <test value="/instrumentation/nav[1]/radials/selected-deg">
+	instruments/cnc-radio/mode/mode eq 15
+      </test>
+      <test value="/instrumentation/nav[2]/radials/selected-deg">
+	instruments/cnc-radio/mode/mode eq 16
+      </test>
+      <test value="/instrumentation/nav[3]/radials/selected-deg">
+	instruments/cnc-radio/mode/mode eq 25
+      </test>
+      <test value="/instrumentation/nav[4]/radials/selected-deg">
+	instruments/cnc-radio/mode/mode eq 26
+      </test>
+      <test value="/instrumentation/nav[5]/radials/selected-deg">
+	instruments/cnc-radio/mode/mode eq 35
+      </test>
+      <test value="/instrumentation/nav[6]/radials/selected-deg">
+	instruments/cnc-radio/mode/mode eq 36
+      </test>
+    </switch>
+
+    <switch name="instruments/cnc-radio/display/radials/target-radial-deg">
+      <default value="0"/>
+      <test value="/instrumentation/nav[1]/radials/target-radial-deg">
+	instruments/cnc-radio/mode/mode eq 15
+      </test>
+      <test value="/instrumentation/nav[2]/radials/target-radial-deg">
+	instruments/cnc-radio/mode/mode eq 16
+      </test>
+      <test value="/instrumentation/nav[3]/radials/target-radial-deg">
+	instruments/cnc-radio/mode/mode eq 25
+      </test>
+      <test value="/instrumentation/nav[4]/radials/target-radial-deg">
+	instruments/cnc-radio/mode/mode eq 26
+      </test>
+      <test value="/instrumentation/nav[5]/radials/target-radial-deg">
+	instruments/cnc-radio/mode/mode eq 35
+      </test>
+      <test value="/instrumentation/nav[6]/radials/target-radial-deg">
+	instruments/cnc-radio/mode/mode eq 36
+      </test>
+    </switch>
+    
+    <switch name="instruments/cnc-radio/display/radials/is-ils-in-range">
+      <default value="0"/>
+      <test logic="AND" value="1">
+	instruments/cnc-radio/mode/mode eq 15
+	/instrumentation/nav[1]/has-gs eq 1
+	/instrumentation/nav[1]/in-range eq 1
+      </test>
+      <test logic="AND" value="1">
+	instruments/cnc-radio/mode/mode eq 16
+	/instrumentation/nav[2]/has-gs eq 1
+	/instrumentation/nav[2]/in-range eq 1
+      </test>
+      <test logic="AND" value="1">
+	instruments/cnc-radio/mode/mode eq 25
+	/instrumentation/nav[3]/has-gs eq 1
+	/instrumentation/nav[3]/in-range eq 1
+      </test>
+      <test logic="AND" value="1">
+	instruments/cnc-radio/mode/mode eq 26
+	/instrumentation/nav[4]/has-gs eq 1
+	/instrumentation/nav[4]/in-range eq 1
+      </test>
+      <test logic="AND" value="1">
+	instruments/cnc-radio/mode/mode eq 35
+	/instrumentation/nav[5]/has-gs eq 1
+	/instrumentation/nav[5]/in-range eq 1
+      </test>
+      <test logic="AND" value="1">
+	instruments/cnc-radio/mode/mode eq 36
+	/instrumentation/nav[6]/has-gs eq 1
+	/instrumentation/nav[6]/in-range eq 1
+      </test>
+    </switch>
+    
+  </channel>
+
+  <property value="1">instruments/cnc-radio/display/nav-id/on</property>
+  <channel name="Nav Ids">
+    <switch name="instruments/cnc-radio/display/nav-id/print-mode">
+      <default value="0"/>
+      <test logic="OR" value="1">
+	instruments/cnc-radio/mode/mode eq 15
+	instruments/cnc-radio/mode/mode eq 25
+	instruments/cnc-radio/mode/mode eq 35
+	instruments/cnc-radio/mode/mode eq 16
+	instruments/cnc-radio/mode/mode eq 26
+	instruments/cnc-radio/mode/mode eq 36
+	instruments/cnc-radio/mode/mode eq 17
+	instruments/cnc-radio/mode/mode eq 27
+	instruments/cnc-radio/mode/mode eq 37
+      </test>
+    </switch>
+    
+    <switch name="instruments/cnc-radio/display/nav-id/print-able">
+      <default value="0"/>
+      <test logic="AND" value="1">
+	instruments/cnc-radio/display/nav-id/on eq 1
+	instruments/cnc-radio/display/nav-id/print-mode eq 1
+      </test>
+    </switch>
+
+    <switch name="instruments/cnc-radio/display/nav-id/nav-in-range">
+      <default value="0"/>
+      <test logic="AND" value="1">
+	instruments/cnc-radio/mode/mode eq 15
+	/instrumentation/nav[1]/in-range eq 1
+      </test>
+      <test logic="AND" value="1">
+	instruments/cnc-radio/mode/mode eq 25
+	/instrumentation/nav[3]/in-range eq 1
+      </test>
+      <test logic="AND" value="1">
+	instruments/cnc-radio/mode/mode eq 35
+	/instrumentation/nav[5]/in-range eq 1
+      </test>
+      <test logic="AND" value="1">
+	instruments/cnc-radio/mode/mode eq 16
+	/instrumentation/nav[2]/in-range eq 1
+      </test>
+      <test logic="AND" value="1">
+	instruments/cnc-radio/mode/mode eq 26
+	/instrumentation/nav[4]/in-range eq 1
+      </test>
+      <test logic="AND" value="1">
+	instruments/cnc-radio/mode/mode eq 36
+	/instrumentation/nav[6]/in-range eq 1
+      </test>
+      <test logic="AND" value="1">
+	instruments/cnc-radio/mode/mode eq 17
+	/instrumentation/adf/in-range eq 1
+      </test>
+      <test logic="AND" value="1">
+	instruments/cnc-radio/mode/mode eq 27
+	/instrumentation/adf[1]/in-range eq 1
+      </test>
+      <test logic="AND" value="1">
+	instruments/cnc-radio/mode/mode eq 37
+	/instrumentation/adf[2]/in-range eq 1
+      </test>
+    </switch>
+
+    <switch name="instruments/cnc-radio/display/nav-id/print-nav-id">
+      <default value="0"/>
+      <test logic="AND" value="1">
+	instruments/cnc-radio/display/nav-id/print-able eq 1
+	instruments/cnc-radio/display/nav-id/nav-in-range eq 1
+      </test>
+    </switch>
+    
+    <switch name="instruments/cnc-radio/display/nav-id/print-dots">
+      <default value="0"/>
+      <test logic="AND" value="1">
+	instruments/cnc-radio/display/nav-id/print-able eq 1
+	instruments/cnc-radio/display/nav-id/nav-in-range eq 0
+      </test>
+    </switch>
+  </channel>
+
+  <property value="0">instruments/cnc-radio/xfer/switch</property>
+  <channel name="XFER buffer">
+    <switch name="instruments/cnc-radio/xfer/buffer-selected-mhz">
+      <default value="instruments/cnc-radio/xfer/buffer-selected-mhz"/>
+      <test value="instruments/cnc-radio/display/frequencies/selected-mhz">
+	instruments/cnc-radio/xfer/switch eq 1
+      </test>
+    </switch>
+
+    <switch name="instruments/cnc-radio/xfer/buffer-standby-mhz">
+      <default value="instruments/cnc-radio/xfer/buffer-standby-mhz"/>
+      <test value="instruments/cnc-radio/display/frequencies/standby-mhz">
+	instruments/cnc-radio/xfer/switch eq 1
+      </test>
+    </switch>
+
+    <switch name="instruments/cnc-radio/xfer/buffer-selected-khz">
+      <default value="instruments/cnc-radio/xfer/buffer-selected-khz"/>
+      <test value="instruments/cnc-radio/display/frequencies/selected-khz">
+	instruments/cnc-radio/xfer/switch eq 1
+      </test>
+    </switch>
+
+    <switch name="instruments/cnc-radio/xfer/buffer-standby-khz">
+      <default value="instruments/cnc-radio/xfer/buffer-standby-khz"/>
+      <test value="instruments/cnc-radio/display/frequencies/standby-khz">
+	instruments/cnc-radio/xfer/switch eq 1
+      </test>
+    </switch>
+    
+  </channel>
+
+  <!-- slaved modes com and nav -->
+  <property value="10">instruments/cnc-radio/mode/comm-slave</property>
+  <property value="15">instruments/cnc-radio/mode/nav-slave</property>
+  <channel name="Frequencies Slaving">
+    <switch name="/instrumentation/comm/frequencies/standby-mhz">
+      <default value="/instrumentation/comm/frequencies/standby-mhz"/>
+      <test value="/instrumentation/comm[1]/frequencies/standby-mhz">
+	instruments/cnc-radio/mode/comm-slave eq 10
+      </test>
+      <test value="/instrumentation/comm[2]/frequencies/standby-mhz">
+	instruments/cnc-radio/mode/comm-slave eq 20
+      </test>
+      <test value="/instrumentation/comm[3]/frequencies/standby-mhz">
+	instruments/cnc-radio/mode/comm-slave eq 30
+      </test>
+      <test value="instruments/cnc-radio/uhf/frequencies/standby-mhz">
+	instruments/cnc-radio/mode/comm-slave eq 11
+      </test>
+      <test value="instruments/cnc-radio/vhf/frequencies/standby-mhz">
+	instruments/cnc-radio/mode/comm-slave eq 12
+      </test>
+      <test value="instruments/cnc-radio/hf/frequencies/standby-mhz">
+	instruments/cnc-radio/mode/comm-slave eq 13
+      </test>
+    </switch>
+
+    <switch name="/instrumentation/comm/frequencies/selected-mhz">
+      <default value="/instrumentation/comm/frequencies/selected-mhz"/>
+      <test value="/instrumentation/comm[1]/frequencies/selected-mhz">
+	instruments/cnc-radio/mode/comm-slave eq 10
+      </test>
+      <test value="/instrumentation/comm[2]/frequencies/selected-mhz">
+	instruments/cnc-radio/mode/comm-slave eq 20
+      </test>
+      <test value="/instrumentation/comm[3]/frequencies/selected-mhz">
+	instruments/cnc-radio/mode/comm-slave eq 30
+      </test>
+      <test value="instruments/cnc-radio/uhf/frequencies/selected-mhz">
+	instruments/cnc-radio/mode/comm-slave eq 11
+      </test>
+      <test value="instruments/cnc-radio/vhf/frequencies/selected-mhz">
+	instruments/cnc-radio/mode/comm-slave eq 12
+      </test>
+      <test value="instruments/cnc-radio/hf/frequencies/selected-mhz">
+	instruments/cnc-radio/mode/comm-slave eq 13
+      </test>
+    </switch>
+
+    <switch name="/instrumentation/nav/frequencies/standby-mhz">
+      <default value="/instrumentation/nav/frequencies/standby-mhz"/>
+      <test value="/instrumentation/nav[1]/frequencies/standby-mhz">
+	instruments/cnc-radio/mode/nav-slave eq 15
+      </test>
+      <test value="/instrumentation/nav[3]/frequencies/standby-mhz">
+	instruments/cnc-radio/mode/nav-slave eq 25
+      </test>
+      <test value="/instrumentation/nav[5]/frequencies/standby-mhz">
+	instruments/cnc-radio/mode/nav-slave eq 35
+      </test>
+      <test value="/instrumentation/nav[2]/frequencies/standby-mhz">
+	instruments/cnc-radio/mode/nav-slave eq 16
+      </test>
+      <test value="/instrumentation/nav[4]/frequencies/standby-mhz">
+	instruments/cnc-radio/mode/nav-slave eq 26
+      </test>
+      <test value="/instrumentation/nav[6]/frequencies/standby-mhz">
+	instruments/cnc-radio/mode/nav-slave eq 36
+      </test>
+    </switch>
+
+    <switch name="/instrumentation/nav/frequencies/selected-mhz">
+      <default value="/instrumentation/nav/frequencies/selected-mhz"/>
+      <test value="/instrumentation/nav[1]/frequencies/selected-mhz">
+	instruments/cnc-radio/mode/nav-slave eq 15
+      </test>
+      <test value="/instrumentation/nav[3]/frequencies/selected-mhz">
+	instruments/cnc-radio/mode/nav-slave eq 25
+      </test>
+      <test value="/instrumentation/nav[5]/frequencies/selected-mhz">
+	instruments/cnc-radio/mode/nav-slave eq 35
+      </test>
+      <test value="/instrumentation/nav[2]/frequencies/selected-mhz">
+	instruments/cnc-radio/mode/nav-slave eq 16
+      </test>
+      <test value="/instrumentation/nav[4]/frequencies/selected-mhz">
+	instruments/cnc-radio/mode/nav-slave eq 26
+      </test>
+      <test value="/instrumentation/nav[6]/frequencies/selected-mhz">
+	instruments/cnc-radio/mode/nav-slave eq 36
+      </test>
+    </switch>
+
+    <switch name="/instrumentation/nav/radials/selected-deg">
+      <default value="/instrumentation/nav/radials/selected-deg"/>
+      <test value="/instrumentation/nav[1]/radials/selected-deg">
+	instruments/cnc-radio/mode/nav-slave eq 15
+      </test>
+      <test value="/instrumentation/nav[3]/radials/selected-deg">
+	instruments/cnc-radio/mode/nav-slave eq 25
+      </test>
+      <test value="/instrumentation/nav[5]/radials/selected-deg">
+	instruments/cnc-radio/mode/nav-slave eq 35
+      </test>
+      <test value="/instrumentation/nav[2]/radials/selected-deg">
+	instruments/cnc-radio/mode/nav-slave eq 16
+      </test>
+      <test value="/instrumentation/nav[4]/radials/selected-deg">
+	instruments/cnc-radio/mode/nav-slave eq 26
+      </test>
+      <test value="/instrumentation/nav[6]/radials/selected-deg">
+	instruments/cnc-radio/mode/nav-slave eq 36
+      </test>
+    </switch>
+  </channel>
+  
+  <channel name="menus">
+    <switch name="instruments/cnc-radio/display/menu/general-menu-print">
+      <default value="1"/>
+      <test logic="OR" value="0">
+	instruments/cnc-radio/mode/mode eq 14
+	instruments/cnc-radio/mode/mode eq 18
+	instruments/cnc-radio/mode/mode eq 19
+      </test>
+    </switch>
+
+    <switch name="instruments/cnc-radio/display/menu/iff-menu-print">
+      <default value="0"/>
+      <test logic="OR" value="1">
+	instruments/cnc-radio/mode/mode eq 18
+      </test>
+    </switch>
+  </channel>
+
+  <property value="0.8">instruments/cnc-radio/display/config/brt</property>
+  <property value="0">instruments/cnc-radio/display/config/offsets/y-m</property>
+  <property value="0">instruments/cnc-radio/display/config/offsets/z-m</property>
+  <property value="0">instruments/cnc-radio/display/config/offsets/scale-m</property>
+  <property value="0.0060">instruments/cnc-radio/display/config/offsets/font-size1-orig</property>
+  <property value="0.0086">instruments/cnc-radio/display/config/offsets/font-size2-orig</property>
+  <property value="0.012">instruments/cnc-radio/display/config/offsets/font-size3-orig</property>
+  <channel name="Display configuration">
+    <switch name="instruments/cnc-radio/display/config/lcd-on">
+      <default value="1"/>
+      <test value="0">
+	instruments/cnc-radio/display/config/brt eq 0
+      </test>
+    </switch>
+
+    <fcs_function name="instruments/cnc-radio/display/config/offsets/font-size1">
+      <function>
+	<sum>
+	  <property>instruments/cnc-radio/display/config/offsets/font-size1-orig</property>
+	  <property>instruments/cnc-radio/display/config/offsets/scale-m</property>
+	</sum>
+      </function>
+    </fcs_function>
+
+    <fcs_function name="instruments/cnc-radio/display/config/offsets/font-size2">
+      <function>
+	<sum>
+	  <property>instruments/cnc-radio/display/config/offsets/font-size2-orig</property>
+	  <property>instruments/cnc-radio/display/config/offsets/scale-m</property>
+	</sum>
+      </function>
+    </fcs_function>
+
+    <fcs_function name="instruments/cnc-radio/display/config/offsets/font-size3">
+      <function>
+	<sum>
+	  <property>instruments/cnc-radio/display/config/offsets/font-size3-orig</property>
+	  <property>instruments/cnc-radio/display/config/offsets/scale-m</property>
+	</sum>
+      </function>
+    </fcs_function>
+
+    <switch name="instruments/cnc-radio/display/config/status/comm1">
+      <default value="0"/>
+      <test value="1">
+	instruments/cnc-radio/mode/mode eq 10
+      </test>
+    </switch>
+
+    <switch name="instruments/cnc-radio/display/config/status/comm2">
+      <default value="0"/>
+      <test value="1">
+	instruments/cnc-radio/mode/mode eq 20
+      </test>
+    </switch>
+
+    <switch name="instruments/cnc-radio/display/config/status/comm3">
+      <default value="0"/>
+      <test value="1">
+	instruments/cnc-radio/mode/mode eq 30
+      </test>
+    </switch>
+
+    <switch name="instruments/cnc-radio/display/config/status/uhf">
+      <default value="0"/>
+      <test value="1">
+	instruments/cnc-radio/mode/mode eq 11
+      </test>
+    </switch>
+
+    <switch name="instruments/cnc-radio/display/config/status/vhf">
+      <default value="0"/>
+      <test value="1">
+	instruments/cnc-radio/mode/mode eq 12
+      </test>
+    </switch>
+
+    <switch name="instruments/cnc-radio/display/config/status/hf">
+      <default value="0"/>
+      <test value="1">
+	instruments/cnc-radio/mode/mode eq 13
+      </test>
+    </switch>
+
+    <switch name="instruments/cnc-radio/display/config/status/nav1">
+      <default value="0"/>
+      <test value="1">
+	instruments/cnc-radio/mode/mode eq 15
+      </test>
+    </switch>
+
+    <switch name="instruments/cnc-radio/display/config/status/nav2">
+      <default value="0"/>
+      <test value="1">
+	instruments/cnc-radio/mode/mode eq 25
+      </test>
+    </switch>
+
+    <switch name="instruments/cnc-radio/display/config/status/nav3">
+      <default value="0"/>
+      <test value="1">
+	instruments/cnc-radio/mode/mode eq 35
+      </test>
+    </switch>
+
+
+    <switch name="instruments/cnc-radio/display/config/status/tac1">
+      <default value="0"/>
+      <test value="1">
+	instruments/cnc-radio/mode/mode eq 16
+      </test>
+    </switch>
+
+    <switch name="instruments/cnc-radio/display/config/status/tac2">
+      <default value="0"/>
+      <test value="1">
+	instruments/cnc-radio/mode/mode eq 26
+      </test>
+    </switch>
+
+    <switch name="instruments/cnc-radio/display/config/status/tac3">
+      <default value="0"/>
+      <test value="1">
+	instruments/cnc-radio/mode/mode eq 36
+      </test>
+    </switch>
+
+    <switch name="instruments/cnc-radio/display/config/status/adf1">
+      <default value="0"/>
+      <test value="1">
+	instruments/cnc-radio/mode/mode eq 17
+      </test>
+    </switch>
+
+    <switch name="instruments/cnc-radio/display/config/status/adf2">
+      <default value="0"/>
+      <test value="1">
+	instruments/cnc-radio/mode/mode eq 27
+      </test>
+    </switch>
+
+    <switch name="instruments/cnc-radio/display/config/status/adf3">
+      <default value="0"/>
+      <test value="1">
+	instruments/cnc-radio/mode/mode eq 37
+      </test>
+    </switch>
+
+    <switch name="instruments/cnc-radio/display/config/status/iff">
+      <default value="0"/>
+      <test value="1">
+	instruments/cnc-radio/mode/mode eq 18
+      </test>
+    </switch>
+  </channel>
+  
+</system>

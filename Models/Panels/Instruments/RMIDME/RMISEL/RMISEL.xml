@@ -1,0 +1,75 @@
+<?xml version="1.0"?>
+
+<!--
+    :copyright: 2023, IAHM-COL
+    License: GPLv3
+    
+    Redistribution, or reuse, with or without modifications
+    shall keep this attribution information. 
+-->
+
+<PropertyList>
+  <path>RMISEL.ac</path>
+
+  <animation>
+    <type>knob</type>
+    <object-name>ch1.knob</object-name>
+    <property>fdm/jsbsim/instruments/RMIDME/ch1/select</property>
+    <factor>30</factor>
+    <center>
+      <x-m>0.005974</x-m>
+      <y-m>-0.019129</y-m>
+      <z-m>-0.005756</z-m>
+    </center>
+    <axis>
+      <x>-1</x><y>0</y><z>0</z>
+    </axis>
+    
+    <action>
+      <binding>
+        <command>property-cycle</command>
+        <property>fdm/jsbsim/instruments/RMIDME/ch1/select</property>
+	<value>0</value>
+	<value>1</value>
+	<value>2</value>
+        <wrap>false</wrap>
+      </binding>
+    </action>
+  </animation>
+
+  <animation>
+    <type>knob</type>
+    <object-name>ch2.knob</object-name>
+    <property>fdm/jsbsim/instruments/RMIDME/ch2/select</property>
+    <factor>30</factor>
+    <center>
+      <x-m>0.005974</x-m>
+      <y-m>0.019321</y-m>
+      <z-m>-0.005756</z-m>
+    </center>
+    <axis>
+      <x>-1</x><y>0</y><z>0</z>
+    </axis>
+    
+    <action>
+      <binding>
+        <command>property-cycle</command>
+        <property>fdm/jsbsim/instruments/RMIDME/ch2/select</property>
+	<value>0</value>
+	<value>1</value>
+	<value>2</value>
+        <wrap>false</wrap>
+      </binding>
+    </action>
+  </animation>
+
+  <!-- Lightmaps-->
+  <effect>
+    <inherits-from>floodlighting</inherits-from>
+    <object-name>frame</object-name>
+    <object-name>screw.hi.1</object-name>
+    <object-name>screw.hi.2</object-name>
+    <object-name>ch1.knob</object-name>
+    <object-name>ch2.knob</object-name>
+  </effect>
+</PropertyList>
