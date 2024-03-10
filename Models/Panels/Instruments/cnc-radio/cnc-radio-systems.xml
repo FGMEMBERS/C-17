@@ -698,7 +698,6 @@ shall keep this attribution information.
       </test>
     </switch>
 
-
     <switch name="instruments/cnc-radio/display/config/status/tac1">
       <default value="0"/>
       <test value="1">
@@ -745,6 +744,142 @@ shall keep this attribution information.
       <default value="0"/>
       <test value="1">
 	instruments/cnc-radio/mode/mode eq 18
+      </test>
+    </switch>
+
+    <switch name="instruments/cnc-radio/display/config/status/mode-led/button-b1">
+      <default value="0"/>
+      <test logic="AND" value="1">
+	instruments/cnc-radio/display/menu/iff-menu-print eq 1
+	instruments/cnc-radio/display/xpdr/status/off eq 1
+      </test>
+      <test logic="AND" value="1">
+	instruments/cnc-radio/display/menu/general-menu-print eq 1
+	instruments/cnc-radio/mode/major-mode eq 1
+      </test>
+    </switch>
+
+    <switch name="instruments/cnc-radio/display/config/status/mode-led/button-b2">
+      <default value="0"/>
+      <test logic="AND" value="1">
+	instruments/cnc-radio/display/menu/iff-menu-print eq 1
+	instruments/cnc-radio/display/xpdr/status/standby eq 1
+      </test>
+      <test logic="AND" value="1">
+	instruments/cnc-radio/display/menu/general-menu-print eq 1
+	instruments/cnc-radio/mode/major-mode eq 2
+      </test>
+    </switch>
+
+    <switch name="instruments/cnc-radio/display/config/status/mode-led/button-b3">
+      <default value="0"/>
+      <test logic="AND" value="1">
+	instruments/cnc-radio/display/menu/iff-menu-print eq 1
+	instruments/cnc-radio/display/xpdr/status/test eq 1
+      </test>
+      <test logic="AND" value="1">
+	instruments/cnc-radio/display/menu/general-menu-print eq 1
+	instruments/cnc-radio/mode/major-mode eq 3
+      </test>
+    </switch>
+
+    <switch name="instruments/cnc-radio/display/config/status/mode-led/button-b4">
+      <default value="0"/>
+      <test logic="AND" value="1">
+	instruments/cnc-radio/display/menu/iff-menu-print eq 1
+	instruments/cnc-radio/display/xpdr/status/ground eq 1
+      </test>
+      <test logic="AND" value="1">
+	instruments/cnc-radio/display/menu/general-menu-print eq 1
+	instruments/cnc-radio/mode/comm-slave eq instruments/cnc-radio/mode/mode
+      </test>
+      <test logic="AND" value="1">
+	instruments/cnc-radio/display/menu/general-menu-print eq 1
+	instruments/cnc-radio/mode/nav-slave eq instruments/cnc-radio/mode/mode
+      </test>
+    </switch>
+
+    <switch name="instruments/cnc-radio/display/config/status/mode-led/button-b5">
+      <default value="0"/>
+      <test logic="AND" value="1">
+	instruments/cnc-radio/display/menu/iff-menu-print eq 1
+	instruments/cnc-radio/display/xpdr/status/on eq 1
+      </test>
+      <test logic="AND" value="1">
+	instruments/cnc-radio/display/menu/general-menu-print eq 1
+	/sim/fgcom/enabled eq 1
+      </test>
+    </switch>
+
+    <switch name="instruments/cnc-radio/display/config/status/mode-led/button-b6">
+      <default value="0"/>
+      <test logic="AND" value="1">
+	instruments/cnc-radio/display/menu/iff-menu-print eq 1
+	instruments/cnc-radio/display/xpdr/status/altitude eq 1
+      </test>
+    </switch>
+  </channel>
+
+  <channel name="Transponder">
+    <switch name="instruments/cnc-radio/display/xpdr/digit">
+      <default value="/instrumentation/transponder/inputs/digit"/>
+    </switch>
+
+    <switch name="instruments/cnc-radio/display/xpdr/digit[1]">
+      <default value="/instrumentation/transponder/inputs/digit[1]"/>
+    </switch>
+
+    <switch name="instruments/cnc-radio/display/xpdr/digit[2]">
+      <default value="/instrumentation/transponder/inputs/digit[2]"/>
+    </switch>
+
+    <switch name="instruments/cnc-radio/display/xpdr/digit[3]">
+      <default value="/instrumentation/transponder/inputs/digit[3]"/>
+    </switch>
+
+    <switch name="instruments/cnc-radio/display/xpdr/status/knob-mode">
+      <default value="/instrumentation/transponder/inputs/knob-mode"/>
+    </switch>
+
+    <switch name="instruments/cnc-radio/display/xpdr/status/off">
+      <default value="0"/>
+      <test value="1">
+	instruments/cnc-radio/display/xpdr/status/knob-mode eq 0
+      </test>
+    </switch>
+
+    <switch name="instruments/cnc-radio/display/xpdr/status/standby">
+      <default value="0"/>
+      <test value="1">
+	instruments/cnc-radio/display/xpdr/status/knob-mode eq 1
+      </test>
+    </switch>
+
+    <switch name="instruments/cnc-radio/display/xpdr/status/test">
+      <default value="0"/>
+      <test value="1">
+	instruments/cnc-radio/display/xpdr/status/knob-mode eq 2
+      </test>
+    </switch>
+
+    <switch name="instruments/cnc-radio/display/xpdr/status/ground">
+      <default value="0"/>
+      <test value="1">
+	instruments/cnc-radio/display/xpdr/status/knob-mode eq 3
+      </test>
+    </switch>
+
+    <switch name="instruments/cnc-radio/display/xpdr/status/on">
+      <default value="0"/>
+      <test value="1">
+	instruments/cnc-radio/display/xpdr/status/knob-mode eq 4
+      </test>
+    </switch>
+
+    <switch name="instruments/cnc-radio/display/xpdr/status/altitude">
+      <default value="0"/>
+      <test value="1">
+	instruments/cnc-radio/display/xpdr/status/knob-mode eq 5
       </test>
     </switch>
   </channel>
