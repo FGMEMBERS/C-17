@@ -338,11 +338,11 @@ shall keep this attribution information.
 	    <value>3600</value>
 	  </quotient>
 	</integer>
-	<clipto>
-	  <min>0</min>
-	  <max>99</max>
-	</clipto>
       </function>
+      <clipto>
+	<min>0</min>
+	<max>99</max>
+      </clipto>
     </fcs_function>
 
     <fcs_function name="instruments/digitalClock/elapsed-time/min">
@@ -591,11 +591,11 @@ shall keep this attribution information.
 	    <value>3600</value>
 	  </quotient>
 	</integer>
-	<clipto>
-	  <min>0</min>
-	  <max>99</max>
-	</clipto>
       </function>
+      <clipto>
+	<min>0</min>
+	<max>99</max>
+      </clipto>
     </fcs_function>
 
     <fcs_function name="instruments/digitalClock/chrono/min">
