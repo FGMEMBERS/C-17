@@ -2924,8 +2924,8 @@
 	<value>1</value>
       </equals>
       <equals>
-	<property>fdm/jsbsim/instruments/cnc-radio/mode/mode</property>
-	<value>15</value>
+	<property>fdm/jsbsim/instruments/cnc-radio/display/config/status/nav1</property>
+	<value>1</value>
       </equals>
       </and>
     </condition>
@@ -2941,8 +2941,8 @@
 	<value>1</value>
       </equals>
       <equals>
-	<property>fdm/jsbsim/instruments/cnc-radio/mode/mode</property>
-	<value>25</value>
+	<property>fdm/jsbsim/instruments/cnc-radio/display/config/status/nav2</property>
+	<value>1</value>
       </equals>
       </and>
     </condition>
@@ -2958,8 +2958,8 @@
 	<value>1</value>
       </equals>
       <equals>
-	<property>fdm/jsbsim/instruments/cnc-radio/mode/mode</property>
-	<value>35</value>
+	<property>fdm/jsbsim/instruments/cnc-radio/display/config/status/nav3</property>
+	<value>1</value>
       </equals>
       </and>
     </condition>
@@ -2975,8 +2975,8 @@
 	<value>1</value>
       </equals>
       <equals>
-	<property>fdm/jsbsim/instruments/cnc-radio/mode/mode</property>
-	<value>16</value>
+	<property>fdm/jsbsim/instruments/cnc-radio/display/config/status/tac1</property>
+	<value>1</value>
       </equals>
       </and>
     </condition>
@@ -2992,8 +2992,8 @@
 	<value>1</value>
       </equals>
       <equals>
-	<property>fdm/jsbsim/instruments/cnc-radio/mode/mode</property>
-	<value>26</value>
+	<property>fdm/jsbsim/instruments/cnc-radio/display/config/status/tac2</property>
+	<value>1</value>
       </equals>
       </and>
     </condition>
@@ -3009,8 +3009,8 @@
 	<value>1</value>
       </equals>
       <equals>
-	<property>fdm/jsbsim/instruments/cnc-radio/mode/mode</property>
-	<value>36</value>
+	<property>fdm/jsbsim/instruments/cnc-radio/display/config/status/tac3</property>
+	<value>1</value>
       </equals>
       </and>
     </condition>
@@ -3026,8 +3026,8 @@
 	<value>1</value>
       </equals>
       <equals>
-	<property>fdm/jsbsim/instruments/cnc-radio/mode/mode</property>
-	<value>17</value>
+	<property>fdm/jsbsim/instruments/cnc-radio/display/config/status/adf1</property>
+	<value>1</value>
       </equals>
       </and>
     </condition>
@@ -3043,8 +3043,8 @@
 	<value>1</value>
       </equals>
       <equals>
-	<property>fdm/jsbsim/instruments/cnc-radio/mode/mode</property>
-	<value>27</value>
+	<property>fdm/jsbsim/instruments/cnc-radio/display/config/status/adf2</property>
+	<value>1</value>
       </equals>
       </and>
     </condition>
@@ -3060,8 +3060,8 @@
 	<value>1</value>
       </equals>
       <equals>
-	<property>fdm/jsbsim/instruments/cnc-radio/mode/mode</property>
-	<value>37</value>
+	<property>fdm/jsbsim/instruments/cnc-radio/display/config/status/adf3</property>
+	<value>1</value>
       </equals>
       </and>
     </condition>

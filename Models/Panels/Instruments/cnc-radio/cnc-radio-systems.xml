@@ -90,7 +90,7 @@ shall keep this attribution information.
 	instruments/cnc-radio/mode/mode eq 15
 	instruments/cnc-radio/mode/mode eq 25
 	instruments/cnc-radio/mode/mode eq 35
-	instruments/cnc-radio/mode/mode eq 15
+	instruments/cnc-radio/mode/mode eq 16
 	instruments/cnc-radio/mode/mode eq 26
 	instruments/cnc-radio/mode/mode eq 36
       </test>
