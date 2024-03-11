@@ -73,9 +73,23 @@
 	    <value>1</value>
 	  </equals>
 	</condition>
-	<command>property-toggle</command>
+	<command>property-assign</command>
 	<property>/instrumentation/transponder/inputs/ident-btn</property>
+	<value>1</value>
       </binding>
+      <mod-up>
+	<binding>
+	  <condition>
+	    <equals>
+	      <property>/fdm/jsbsim/instruments/cnc-radio/display/menu/iff-menu-print</property>
+	      <value>1</value>
+	    </equals>
+	  </condition>
+	  <command>property-assign</command>
+	  <property>/instrumentation/transponder/inputs/ident-btn</property>
+	  <value>0</value>
+	</binding>
+      </mod-up>
     </action>
   </animation>
 
