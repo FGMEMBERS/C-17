@@ -882,6 +882,55 @@ shall keep this attribution information.
 	instruments/cnc-radio/display/xpdr/status/knob-mode eq 5
       </test>
     </switch>
+
+    <switch name="instruments/cnc-radio/display/xpdr/print-ident">
+      <default value="/instrumentation/transponder/ident"/>
+    </switch>
+
+    <switch name="instruments/cnc-radio/display/xpdr/print-altitude">
+      <default value="/instrumentation/transponder/altitude-valid"/>
+    </switch>
+
+    <switch name="instruments/cnc-radio/display/xpdr/xpdr-alt-raw">
+      <default value="/instrumentation/transponder/altitude"/>
+    </switch>
+
+    <fcs_function name="instruments/cnc-radio/display/xpdr/FL">
+      <function>
+	<integer>
+	  <quotient>
+	    <property>instruments/cnc-radio/display/xpdr/xpdr-alt-raw</property>
+	    <value>100</value>
+	  </quotient>
+	</integer>
+      </function>
+    </fcs_function>
+
+    <switch name="instruments/cnc-radio/display/xpdr/print-FL00">
+      <default value="0"/>
+      <test logic="AND" value="1">
+	instruments/cnc-radio/display/xpdr/print-altitude eq 1
+	instruments/cnc-radio/display/xpdr/FL lt 10
+      </test>
+    </switch>
+
+    <switch name="instruments/cnc-radio/display/xpdr/print-FL0">
+      <default value="0"/>
+      <test logic="AND" value="1">
+	instruments/cnc-radio/display/xpdr/print-altitude eq 1
+	instruments/cnc-radio/display/xpdr/FL lt 100
+	instruments/cnc-radio/display/xpdr/FL ge 10
+      </test>
+    </switch>
+
+    <switch name="instruments/cnc-radio/display/xpdr/print-FL">
+      <default value="0"/>
+      <test logic="AND" value="1">
+	instruments/cnc-radio/display/xpdr/print-altitude eq 1
+	instruments/cnc-radio/display/xpdr/FL ge 100
+      </test>
+    </switch>
+    
   </channel>
   
 </system>
