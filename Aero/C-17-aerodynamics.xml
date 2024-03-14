@@ -418,7 +418,7 @@
 	<property>aero/qbar-psf</property>
 	<property>metrics/Sh-sqft</property>
 	<table>
-	  <independentVar lookup="row">aero/alpha-deg</independentVar>
+	  <independentVar lookup="row">fcs/trim-actuators/pitch/stab-aoa-deg</independentVar>
           <independentVar lookup="column">fcs/elevator-pos-rad</independentVar> <!--NACA 0012 -->
           <tableData>
 	                -0.5236	-0.2182	-0.0873	0.0000	0.0873	0.2182	0.5236
@@ -931,7 +931,7 @@
 	<property>aero/qbar-psf</property>
 	<property>metrics/Sh-sqft</property>
 	<table>
-	  <independentVar lookup="row">aero/alpha-deg</independentVar>
+	  <independentVar lookup="row">fcs/trim-actuators/pitch/stab-aoa-deg</independentVar>
           <independentVar lookup="column">fcs/elevator-pos-rad</independentVar> <!--NACA 0012 -->
           <tableData>
 	               -0.5236	-0.2182	-0.0873	0.0000	0.0873	0.2182	0.5236
@@ -2025,7 +2025,7 @@
 	<property>metrics/Sh-sqft</property>
 	<property>metrics/lh-ft</property>
 	<table>
-	  <independentVar lookup="row">aero/alpha-deg</independentVar>
+	  <independentVar lookup="row">fcs/trim-actuators/pitch/stab-aoa-deg</independentVar>
 	  <independentVar lookup="column">fcs/elevator-pos-rad</independentVar>
           <tableData>
 	                -0.5236	-0.2182	-0.0873	0.0000	0.0873	0.2182	0.5236
