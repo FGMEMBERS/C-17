@@ -563,6 +563,31 @@
     </axis>
   </animation>
 
+  <animation>
+    <name>HSTAB</name>
+    <object-name>Elevator1</object-name>
+    <object-name>Elevator2</object-name>
+    <object-name>Elevator3</object-name>
+    <object-name>Elevator4</object-name>
+    <object-name>HStabRight</object-name>
+    <object-name>HStabLeft</object-name>
+  </animation>
+
+  <animation>
+    <type>rotate</type>
+    <object-name>HSTAB</object-name>
+    <property>fdm/jsbsim/fcs/trim-actuators/pitch/stab-aoa-deg</property>
+    <factor>-1</factor>
+    <axis>   
+      <x1-m>50.19</x1-m>
+      <y1-m>-8.969</y1-m>
+      <z1-m>10.80</z1-m>
+      <x2-m>50.19</x2-m>
+      <y2-m>8.962</y2-m>
+      <z2-m>10.80</z2-m>
+    </axis>
+  </animation>
+  
   <!-- WINGS -->
   <!-- Ailerons -->
   <animation>
