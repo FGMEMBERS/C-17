@@ -331,7 +331,7 @@
   <!-- Trim Indicators -->
   <model>
     <name>Aileron Trim</name>
-    <path>Models/Panels/Instruments/trims-indicators/aileron-trim/aileron-trim.xml</path>
+    <path>Models/Panels/Instruments/trim-indicators/aileron-trim/aileron-trim.xml</path>
     <offsets>
       <x-m>0.42839</x-m>
       <y-m>-0.22754</y-m>
@@ -342,7 +342,7 @@
 
   <model>
     <name>HStab Trim</name>
-    <path>Models/Panels/Instruments/trims-indicators/stab-trim/stab-trim.xml</path>
+    <path>Models/Panels/Instruments/trim-indicators/stab-trim/stab-trim.xml</path>
     <offsets>
       <x-m>0.42839</x-m>
       <y-m>-0.15312</y-m>
@@ -353,7 +353,7 @@
 
   <model>
     <name>Rudder Trim</name>
-    <path>Models/Panels/Instruments/trims-indicators/rudder-trim/rudder-trim.xml</path>
+    <path>Models/Panels/Instruments/trim-indicators/rudder-trim/rudder-trim.xml</path>
     <offsets>
       <x-m>0.42839</x-m>
       <y-m>-0.18932</y-m>
