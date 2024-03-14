@@ -304,7 +304,6 @@
     </offsets>
   </model>
 
-
   <!-- CNC radios -->
   <model>
     <name>cnc radio captain</name>
@@ -334,7 +333,7 @@
     <path>Models/Panels/Instruments/trim-indicators/aileron-trim/aileron-trim.xml</path>
     <offsets>
       <x-m>0.42839</x-m>
-      <y-m>-0.22754</y-m>
+      <y-m>-0.22057</y-m>
       <z-m>0.74651</z-m>
       <pitch-deg>-6</pitch-deg>
     </offsets>
@@ -345,7 +344,7 @@
     <path>Models/Panels/Instruments/trim-indicators/stab-trim/stab-trim.xml</path>
     <offsets>
       <x-m>0.42839</x-m>
-      <y-m>-0.15312</y-m>
+      <y-m>-0.14615</y-m>
       <z-m>0.74651</z-m>
       <pitch-deg>-6</pitch-deg>
     </offsets>
@@ -356,7 +355,7 @@
     <path>Models/Panels/Instruments/trim-indicators/rudder-trim/rudder-trim.xml</path>
     <offsets>
       <x-m>0.42839</x-m>
-      <y-m>-0.18932</y-m>
+      <y-m>-0.18235</y-m>
       <z-m>0.70629</z-m>
       <pitch-deg>-6</pitch-deg>
     </offsets>
