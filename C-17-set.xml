@@ -344,7 +344,7 @@
     
   <controls>
     <flight>
-      <auto-coordination-factor type="double">0.525</auto-coordination-factor>
+      <auto-coordination-factor type="double">0.425</auto-coordination-factor>
     </flight>
     <gear>
       <brake-parking>1</brake-parking>
