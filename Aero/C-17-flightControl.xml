@@ -109,39 +109,7 @@
 	<max>15</max>
       </clipto>
     </fcs_function>
-
-    <summer name="Stab angle of attack after actuator">
-      <input>aero/alpha-deg</input>
-      <input>fcs/trim-actuators/pitch/cmd-deg</input>
-      <output>fcs/trim-actuators/pitch/stab-aoa-deg</output>
-    </summer>
     
-    <fcs_function name="fcs/trim-actuators/pitch/controls-norm">
-      <function>
-	<table>
-	  <independentVar>/controls/flight/elevator-trim</independentVar>
-	  <tableData>
-	    -1.0 -0.249332743
-	    0.0  0.0
-	    1.0  0.747998286
-	  </tableData>
-	</table>
-      </function>
-      <clipto>
-	<min>-0.249332743</min>
-	<max>0.747998286</max>
-      </clipto>
-    </fcs_function>
-    
-    <aerosurface_scale name="Pitch Trim Control Rads">
-      <input>fcs/trim-actuators/pitch/controls-norm</input>
-      <range>
-        <min>-0.35</min>
-        <max>0.35</max>
-      </range>
-      <output>fcs/trim-actuators/pitch/controls-rad</output>
-    </aerosurface_scale>
-
     <!-- Stabilator affects the STAB not the elevator -->
     <summer name="Pitch Trim Sum">
       <input>fcs/elevator-cmd-norm</input>

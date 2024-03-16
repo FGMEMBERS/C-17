@@ -14,7 +14,7 @@ shall keep this attribution information.
     <fcs_function name="instruments/trim-indicators/pitch/controls-deg">
       <function>
 	<product>
-	  <property>fcs/trim-actuators/pitch/controls-rad</property>
+	  <property>fcs/trim-actuators/pitch/cmd-rad</property>
 	  <value>57.29578</value>
 	</product>
       </function>

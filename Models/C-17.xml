@@ -576,7 +576,7 @@
   <animation>
     <type>rotate</type>
     <object-name>HSTAB</object-name>
-    <property>fdm/jsbsim/fcs/trim-actuators/pitch/stab-aoa-deg</property>
+    <property>fdm/jsbsim/fcs/trim-actuators/pitch/cmd-deg</property>
     <factor>-1</factor>
     <axis>   
       <x1-m>50.19</x1-m>
