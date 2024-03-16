@@ -351,7 +351,7 @@
       </test>
     </switch>
 
-    <fcs_function name="fcs/trim-actuators/yaw/cmd-norm">
+    <fcs_function name="fcs/trim-actuators/yaw/cmd-norm-actuator">
       <function>
 	<quotient>
 	  <property>fcs/trim-actuators/yaw/actuator</property>
@@ -364,12 +364,45 @@
       </clipto>
     </fcs_function>
 
-    <fcs_function name="fcs/trim-actuators/yaw/controls-norm">
+    <fcs_function name="fcs/trim-actuators/yaw/actuator-auto-coordination">
+      <function>
+	<product>
+	  <value>-1</value> <!-- auto-coordination rudder trim opposite direction to aileron trim-->
+	  <property>/controls/flight/aileron-trim</property>
+	  <property>/controls/flight/auto-coordination</property>
+	</product>
+      </function>
+      <clipto>
+	<min>-1</min>
+	<max>1</max>
+      </clipto>
+    </fcs_function>
+
+    <fcs_function name="fcs/trim-actuators/yaw/cmd-norm-auto-coordination">
       <function>
 	<quotient>
-	  <property>/controls/flight/rudder-trim</property>
+	  <property>fcs/trim-actuators/yaw/actuator-auto-coordination</property>
 	  <value>4.946459951</value>
 	</quotient>
+      </function>
+      <clipto>
+	<min>-0.208688535</min>
+	<max>0.208688535</max>
+      </clipto>
+    </fcs_function>
+
+    <fcs_function name="fcs/trim-actuators/yaw/controls-norm">
+      <function>
+	<sum>
+	  <quotient>
+	    <property>/controls/flight/rudder-trim</property>
+	    <value>4.946459951</value>
+	  </quotient>
+	  <quotient>
+	    <property>fcs/trim-actuators/yaw/actuator-auto-coordination</property>
+	    <value>4.946459951</value>
+	  </quotient>
+	</sum>
       </function>
       <clipto>
 	<min>-0.208688535</min>
@@ -388,7 +421,8 @@
 
     <summer name="Rudder Command Sum">
       <input>fcs/rudder-cmd-norm</input>
-      <input>fcs/trim-actuators/yaw/cmd-norm</input>
+      <input>fcs/trim-actuators/yaw/cmd-norm-actuator</input>
+      <input>fcs/trim-actuators/yaw/cmd-norm-auto-coordination</input>
       <clipto>
         <min>-0.836332</min>
         <max>0.836332</max>
