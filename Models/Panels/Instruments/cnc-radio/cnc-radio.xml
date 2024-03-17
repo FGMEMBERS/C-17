@@ -1539,7 +1539,6 @@
     <property>fdm/jsbsim/instruments/cnc-radio/display/frequencies/standby-mhz</property>    
     <alignment>left-top</alignment>
   </text>
-
   
   <animation>
     <name>frequency-labels</name>
@@ -3453,6 +3452,199 @@
 	  <property>fdm/jsbsim/instruments/cnc-radio/display/xpdr/print-FL</property>
 	  <value>1</value>
 	</equals>
+	<equals>
+	  <property>fdm/jsbsim/instruments/cnc-radio/display/menu/iff-menu-print</property>
+	  <value>1</value>
+	</equals>
+      </and>
+    </condition>
+  </animation>
+
+  <text>
+    <name>ft</name>
+    <font>Helvetica.txf</font>
+    <character-size type="double">0.0060</character-size>
+    <offsets>
+      <x-m>0.0103</x-m>
+      <y-m>-0.05119</y-m>
+      <z-m>0.0088</z-m>
+    </offsets>
+    <axis-alignment>yz-plane</axis-alignment>
+    <type type="string">literal</type>
+    <text type="string">Flight time</text>
+    <character-aspect-ratio type="double">1</character-aspect-ratio>
+    <alignment>left-top</alignment>
+  </text>
+
+  <text>
+    <name>hrmin-colon</name>
+    <font>Helvetica.txf</font>
+    <character-size type="double">0.0122</character-size>
+    <offsets>
+      <x-m>0.0103</x-m>
+      <y-m>-0.04519</y-m>
+      <z-m>0.002058</z-m>
+    </offsets>
+    <axis-alignment>yz-plane</axis-alignment>
+    <type type="string">literal</type>
+    <text type="string">:</text>
+    <character-aspect-ratio type="double">1</character-aspect-ratio>
+    <alignment>left-top</alignment>
+  </text>
+
+  <text>
+    <name>hrsec-colon</name>
+    <font>Helvetica.txf</font>
+    <character-size type="double">0.0122</character-size>
+    <offsets>
+      <x-m>0.0103</x-m>
+      <y-m>-0.03119</y-m>
+      <z-m>0.002058</z-m>
+    </offsets>
+    <axis-alignment>yz-plane</axis-alignment>
+    <type type="string">literal</type>
+    <text type="string">:</text>
+    <character-aspect-ratio type="double">1</character-aspect-ratio>
+    <alignment>left-top</alignment>
+  </text>
+
+  <text>
+    <name>et-hrs</name>
+    <font>Helvetica.txf</font>
+    <character-size type="double">0.0122</character-size>
+    <offsets>
+      <x-m>0.0103</x-m>
+      <y-m>-0.05619</y-m>
+      <z-m>0.002058</z-m>
+    </offsets>
+    <axis-alignment>yz-plane</axis-alignment>
+    <type type="string">number-value</type>
+    <format type="string">%02.0f</format>
+    <truncate type="bool">false</truncate>
+    <character-aspect-ratio type="double">1</character-aspect-ratio>
+    <property>fdm/jsbsim/instruments/digitalClock/elapsed-time/hrs</property>    
+    <alignment>left-top</alignment>
+  </text>
+
+  <text>
+    <name>et-min</name>
+    <font>Helvetica.txf</font>
+    <character-size type="double">0.0122</character-size>
+    <offsets>
+      <x-m>0.0103</x-m>
+      <y-m>-0.04219</y-m>
+      <z-m>0.002058</z-m>
+    </offsets>
+    <axis-alignment>yz-plane</axis-alignment>
+    <type type="string">number-value</type>
+    <format type="string">%02.0f</format>
+    <truncate type="bool">false</truncate>
+    <character-aspect-ratio type="double">1</character-aspect-ratio>
+    <property>fdm/jsbsim/instruments/digitalClock/elapsed-time/min</property>    
+    <alignment>left-top</alignment>
+  </text>
+
+  <text>
+    <name>et-sec</name>
+    <font>Helvetica.txf</font>
+    <character-size type="double">0.0122</character-size>
+    <offsets>
+      <x-m>0.0103</x-m>
+      <y-m>-0.02819</y-m>
+      <z-m>0.002058</z-m>
+    </offsets>
+    <axis-alignment>yz-plane</axis-alignment>
+    <type type="string">number-value</type>
+    <format type="string">%02.0f</format>
+    <truncate type="bool">false</truncate>
+    <character-aspect-ratio type="double">1</character-aspect-ratio>
+    <property>fdm/jsbsim/instruments/digitalClock/elapsed-time/sec</property>    
+    <alignment>left-top</alignment>
+  </text>
+  
+  <text>
+    <name>loc-lat</name>
+    <font>Helvetica.txf</font>
+    <character-size type="double">0.0086</character-size>
+    <offsets>
+      <x-m>0.0103</x-m>
+      <y-m>-0.05619</y-m>
+      <z-m>0.02456</z-m>
+    </offsets>
+    <axis-alignment>yz-plane</axis-alignment>
+    <type type="string">text-value</type>
+    <property type="string">/position/latitude-string</property>
+    <format type="string">%s</format>
+    <character-aspect-ratio type="double">1</character-aspect-ratio>
+    <alignment>left-top</alignment>
+  </text>
+
+  <text>
+    <name>loc-lon</name>
+    <font>Helvetica.txf</font>
+    <character-size type="double">0.0086</character-size>
+    <offsets>
+      <x-m>0.0103</x-m>
+      <y-m>-0.05619</y-m>
+      <z-m>0.01673</z-m>
+    </offsets>
+    <axis-alignment>yz-plane</axis-alignment>
+    <type type="string">text-value</type>
+    <property type="string">/position/longitude-string</property>
+    <format type="string">%s</format>
+    <character-aspect-ratio type="double">1</character-aspect-ratio>
+    <alignment>left-top</alignment>
+  </text>
+  
+  <animation>
+    <object-name>hrmin-colon</object-name>
+    <object-name>hrsec-colon</object-name>
+    <object-name>loc-lat</object-name>
+    <object-name>loc-lon</object-name>
+    <object-name>et-hrs</object-name>
+    <object-name>et-min</object-name>
+    <object-name>et-sec</object-name>
+    <type>material</type>
+    <emission>
+      <factor-prop>fdm/jsbsim/instruments/cnc-radio/display/config/brt</factor-prop>
+      <red>1.0</red>
+      <green>1.0</green>
+      <blue>0.0</blue>
+    </emission>
+  </animation>
+  
+  <animation>
+    <object-name>ft</object-name>
+    <type>material</type>
+    <emission>
+      <factor-prop>fdm/jsbsim/instruments/cnc-radio/display/config/brt</factor-prop>
+      <red>0.0</red>
+      <green>1.0</green>
+      <blue>0.0</blue>
+    </emission>
+  </animation>
+
+  <animation>
+    <name>xpdr-info</name>
+    <object-name>ft</object-name>
+    <object-name>hrmin-colon</object-name>
+    <object-name>hrsec-colon</object-name>
+    <object-name>loc-lat</object-name>
+    <object-name>loc-lon</object-name>
+    <object-name>et-hrs</object-name>
+    <object-name>et-min</object-name>
+    <object-name>et-sec</object-name>
+  </animation>
+  
+  <animation>
+    <type>select</type>
+    <object-name>xpdr-info</object-name>
+    <condition>
+      <and>
+	<not-equals>
+	  <property>fdm/jsbsim/instruments/cnc-radio/display/xpdr/status/knob-mode</property>
+	  <value>0</value>
+	</not-equals>
 	<equals>
 	  <property>fdm/jsbsim/instruments/cnc-radio/display/menu/iff-menu-print</property>
 	  <value>1</value>

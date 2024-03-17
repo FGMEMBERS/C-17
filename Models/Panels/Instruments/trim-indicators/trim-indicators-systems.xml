@@ -1,0 +1,96 @@
+<?xml version="1.0"?>
+<?xml-stylesheet href="JSBSim.xsl" type="application/xml"?>
+
+<!--
+:copyright: 2024, IAHM-COL
+License: GPLv3
+
+Redistribution, or reuse, with or without modifications
+shall keep this attribution information. 
+-->
+
+<system>
+  <channel name="Pitch">
+    <fcs_function name="instruments/trim-indicators/pitch/controls-deg">
+      <function>
+	<product>
+	  <property>fcs/trim-actuators/pitch/cmd-rad</property>
+	  <value>57.29578</value>
+	</product>
+      </function>
+      <clipto>
+	<min>-5</min>
+	<max>15</max>
+      </clipto>
+    </fcs_function>
+
+    <fcs_function name="instruments/trim-indicators/pitch/needle-rotation-deg">
+      <function>
+	<product>
+	  <property>instruments/trim-indicators/pitch/controls-deg</property>
+	  <value>9</value>
+	</product>
+      </function>
+      <clipto>
+	<min>-45</min>
+	<max>135</max>
+      </clipto>
+    </fcs_function>
+  </channel>
+
+  <channel name="Roll">
+    <fcs_function name="instruments/trim-indicators/roll/controls-deg">
+      <function>
+	<product>
+	  <property>fcs/trim-actuators/roll/controls-rad</property>
+	  <value>57.29578</value>
+	</product>
+      </function>
+      <clipto>
+	<min>-10</min>
+	<max>10</max>
+      </clipto>
+    </fcs_function>
+
+    <fcs_function name="instruments/trim-indicators/roll/needle-rotation-deg">
+      <function>
+	<product>
+	  <property>instruments/trim-indicators/roll/controls-deg</property>
+	  <value>15</value>
+	</product>
+      </function>
+      <clipto>
+	<min>-150</min>
+	<max>150</max>
+      </clipto>
+    </fcs_function>
+  </channel>
+
+  <channel name="Yaw">
+    <fcs_function name="instruments/trim-indicators/yaw/controls-deg">
+      <function>
+	<product>
+	  <property>fcs/trim-actuators/yaw/controls-rad</property>
+	  <value>57.29578</value>
+	</product>
+      </function>
+      <clipto>
+	<min>-10</min>
+	<max>10</max>
+      </clipto>
+    </fcs_function>
+    <fcs_function name="instruments/trim-indicators/yaw/needle-rotation-deg">
+      <function>
+	<product>
+	  <property>instruments/trim-indicators/yaw/controls-deg</property>
+	  <value>15</value>
+	</product>
+      </function>
+      <clipto>
+	<min>-150</min>
+	<max>150</max>
+      </clipto>
+    </fcs_function>
+  </channel>
+</system>
+

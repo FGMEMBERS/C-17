@@ -142,5 +142,154 @@
       </binding>
     </mod-alt>
   </key>
+
+  <!-- Keyboard configuration of trim adjustments -->
+  <key n="97">
+    <name>a</name> <!-- cancels binding for sim rate -->
+    <desc>Aileron Trim</desc>
+    <repeatable type="bool">true</repeatable>
+    <binding>
+      <command>property-adjust</command>
+      <property>/controls/flight/aileron-trim</property>
+      <step>-0.01</step>
+      <min>-1</min>
+      <max>1</max>
+      <wrap>false</wrap>      
+    </binding>
+    <mod-up>
+      <binding>
+	<command>property-assign</command>
+	<property>/controls/flight/aileron-trim</property>
+	<property>/fdm/jsbsim/fcs/trim-actuators/roll/actuator</property>
+      </binding>
+    </mod-up>
+    <mod-alt>
+      <binding>
+	<command>property-assign</command>
+	<property>/controls/flight/aileron-trim</property>
+	<value>0.0</value>
+      </binding>
+    </mod-alt>
+  </key>
+
+  <key n="65">
+    <name>A</name>
+    <desc>Aileron Trim</desc>
+    <repeatable type="bool">true</repeatable>
+    <binding>
+      <command>property-adjust</command>
+      <property>/controls/flight/aileron-trim</property>
+      <step>0.01</step>
+      <min>-1</min>
+      <max>1</max>
+      <wrap>false</wrap>      
+    </binding>
+    <mod-up>
+      <binding>
+	<command>property-assign</command>
+	<property>/controls/flight/aileron-trim</property>
+	<property>/fdm/jsbsim/fcs/trim-actuators/roll/actuator</property>
+      </binding>
+    </mod-up>
+  </key>
+  
+  <key n="114">
+    <name>r</name>
+    <desc>Rudder Trim</desc>
+    <repeatable type="bool">true</repeatable>
+    <binding>
+      <command>property-adjust</command>
+      <property>/controls/flight/rudder-trim</property>
+      <step>-0.01</step>
+      <min>-1</min>
+      <max>1</max>
+      <wrap>false</wrap>      
+    </binding>
+    <mod-up>
+      <binding>
+	<command>property-assign</command>
+	<property>/controls/flight/rudder-trim</property>
+	<property>/fdm/jsbsim/fcs/trim-actuators/yaw/actuator</property>
+      </binding>
+    </mod-up>
+    <mod-alt>
+      <binding>
+	<command>property-assign</command>
+	<property>/controls/flight/rudder-trim</property>
+	<value>0.0</value>
+      </binding>
+    </mod-alt>
+  </key>
+
+  <key n="82">
+    <name>R</name>
+    <desc>Rudder Trim</desc>
+    <repeatable type="bool">true</repeatable>
+    <binding>
+      <command>property-adjust</command>
+      <property>/controls/flight/rudder-trim</property>
+      <step>0.01</step>
+      <min>-1</min>
+      <max>1</max>
+      <wrap>false</wrap>      
+    </binding>
+    <mod-up>
+      <binding>
+	<command>property-assign</command>
+	<property>/controls/flight/rudder-trim</property>
+	<property>/fdm/jsbsim/fcs/trim-actuators/yaw/actuator</property>
+      </binding>
+    </mod-up>
+  </key>
+
+  <key n="110">
+    <name>n</name>
+    <desc>Elevator Trim</desc><!-- _n_ose up or down -->
+    <repeatable type="bool">true</repeatable>
+    <binding>
+      <command>property-adjust</command>
+      <property>/controls/flight/elevator-trim</property>
+      <step>-0.01</step>
+      <min>-1</min>
+      <max>1</max>
+      <wrap>false</wrap>      
+    </binding>
+    <mod-up>
+      <binding>
+	<command>property-assign</command>
+	<property>/controls/flight/elevator-trim</property>
+	<property>/fdm/jsbsim/fcs/trim-actuators/pitch/actuator</property>
+      </binding>
+    </mod-up>
+    <mod-alt>
+      <binding>
+	<command>property-assign</command>
+	<property>/controls/flight/elevator-trim</property>
+	<value>0.0</value>
+      </binding>
+    </mod-alt>
+  </key>
+
+  <key n="78">
+    <name>N</name>
+    <desc>Elevator Trim</desc>
+    <repeatable type="bool">true</repeatable>
+    <binding>
+      <command>property-adjust</command>
+      <property>/controls/flight/elevator-trim</property>
+      <step>0.01</step>
+      <min>-1</min>
+      <max>1</max>
+      <wrap>false</wrap>      
+    </binding>
+    <mod-up>
+      <binding>
+	<command>property-assign</command>
+	<property>/controls/flight/elevator-trim</property>
+	<property>/fdm/jsbsim/fcs/trim-actuators/pitch/actuator</property>
+      </binding>
+    </mod-up>
+  </key>
+
 </PropertyList>
 

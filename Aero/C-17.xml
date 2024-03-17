@@ -61,9 +61,10 @@
   <system name="GEARS LEVER: C-17" file="Models/Panels/Instruments/gearsLever/gearsLever-systems.xml" />
   <system name="BRAKES INDICATOR: C-17" file="Models/Panels/Instruments/brakesIndicator/brakesIndicator-systems.xml" />
   <system name="FUEL LEVELS: C-17" file="Models/Panels/Instruments/fuelLevel/fuelLevel-systems.xml" />
-  <system name="FUEL LEVELS: C-17" file="Models/Panels/Instruments/digitalClock/digitalClock-systems.xml" />
+  <system name="DIGITAL CLOCK: C-17" file="Models/Panels/Instruments/digitalClock/digitalClock-systems.xml" />
   <system name="STBY RMIDME: C-17" file="Models/Panels/Instruments/RMIDME/RMIDME-systems.xml" />
   <system name="CNC RADIO: C-17" file="Models/Panels/Instruments/cnc-radio/cnc-radio-systems.xml" />
+  <system name="TRIM INDICATORS: C-17" file="Models/Panels/Instruments/trim-indicators/trim-indicators-systems.xml" />
   
   <!--Output-->
   <output name="C-17-jsbim-output.csv" type="CSV" rate="120">

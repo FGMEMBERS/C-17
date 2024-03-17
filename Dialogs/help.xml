@@ -37,4 +37,16 @@
     <name>Delete</name>
     <desc>Reverse thrusters</desc>
   </key>
+  <key>
+    <name>A/a - Alt a</name>
+    <desc>Aileron trim. Alt for zeroing</desc>
+  </key>
+  <key>
+    <name>N/n - Alt n</name>
+    <desc>Stab trim. Alt for zeroing</desc>
+  </key>
+  <key>
+    <name>R/r - Alt r</name>
+    <desc>Rudder trim. Alt for zeroing</desc>
+  </key>
 </PropertyList>

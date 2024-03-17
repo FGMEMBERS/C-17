@@ -299,7 +299,7 @@ currently used, or work properly.
       <prop>/autopilot/settings/target-pitch-deg</prop>
     </reference>
     <output>
-      <prop>/controls/flight/elevator-trim</prop>
+      <prop>/controls/flight/elevator</prop>
     </output>
     <config>
       <Kp>-0.15</Kp>
@@ -373,7 +373,7 @@ currently used, or work properly.
       <prop>/autopilot/settings/target-aoa-deg</prop>
     </reference>
     <output>
-      <prop>/controls/flight/elevator-trim</prop>
+      <prop>/controls/flight/elevator</prop>
     </output>
     <config>
       <Kp>-0.05</Kp>
@@ -426,7 +426,7 @@ currently used, or work properly.
       <!-- maximum output clamp -->
     </config>
   </pi-simple-controller>
-  <!-- Stage #2 drives the elevator-trim to achieve the desired climb rate. -->
+  <!-- Stage #2 drives the elevator to achieve the desired climb rate. -->
   <pid-controller>
     <name>Altitude Hold (Altimeter based) Stage 2</name>
     <debug>false</debug>
@@ -441,7 +441,7 @@ currently used, or work properly.
       <prop>/autopilot/internal/target-climb-rate-fps</prop>
     </reference>
     <output>
-      <prop>/controls/flight/elevator-trim</prop>
+      <prop>/controls/flight/elevator</prop>
     </output>
     <config>
       <Kp>-0.002</Kp>
@@ -496,7 +496,7 @@ currently used, or work properly.
       <!-- maximum output clamp -->
     </config>
   </pid-controller>
-  <!-- Stage #2 drives the elevator-trim to achieve the desired climb rate. -->
+  <!-- Stage #2 drives the elevator to achieve the desired climb rate. -->
   <pid-controller>
     <name>Altitude Hold (Altimeter based) Stage 2</name>
     <debug>false</debug>
@@ -511,7 +511,7 @@ currently used, or work properly.
       <prop>/autopilot/internal/target-climb-rate-fps</prop>
     </reference>
     <output>
-      <prop>/controls/flight/elevator-trim</prop>
+      <prop>/controls/flight/elevator</prop>
     </output>
     <config>
       <Kp>-0.001</Kp>
@@ -549,7 +549,7 @@ currently used, or work properly.
       <prop>/instrumentation/nav[0]gs-rate-of-climb</prop>
     </reference>
     <output>
-      <prop>/controls/flight/elevator-trim</prop>
+      <prop>/controls/flight/elevator</prop>
     </output>
     <config>
       <Kp>-0.004</Kp>
@@ -668,7 +668,7 @@ currently used, or work properly.
       <prop>/autopilot/settings/target-pitch-deg</prop>
     </reference>
     <output>
-      <prop>/controls/flight/elevator-trim</prop>
+      <prop>/controls/flight/elevator</prop>
     </output>
     <config>
       <Kp>-0.05</Kp>
@@ -708,7 +708,7 @@ currently used, or work properly.
       <prop>/autopilot/settings/take-off-pitch-deg</prop>
     </reference>
     <output>
-      <prop>/controls/flight/elevator-trim</prop>
+      <prop>/controls/flight/elevator</prop>
     </output>
     <config>
       <Kp>-0.8</Kp>
@@ -745,7 +745,7 @@ currently used, or work properly.
       <prop>/autopilot/settings/climb-out-pitch-deg</prop>
     </reference>
     <output>
-      <prop>/controls/flight/elevator-trim</prop>
+      <prop>/controls/flight/elevator</prop>
     </output>
     <config>
       <Kp>-0.06</Kp>
@@ -851,7 +851,7 @@ currently used, or work properly.
       <!-- maximum output clamp -->
     </config>
   </pid-controller>
-  <!-- Stage #2 drives the elevator-trim to achieve the desired climb rate. -->
+  <!-- Stage #2 drives the elevator to achieve the desired climb rate. -->
   <pid-controller>
     <name>Mach lock Climb Stage 2</name>
     <debug>false</debug>
@@ -866,7 +866,7 @@ currently used, or work properly.
       <prop>/autopilot/internal/target-climb-rate-fps</prop>
     </reference>
     <output>
-      <prop>/controls/flight/elevator-trim</prop>
+      <prop>/controls/flight/elevator</prop>
     </output>
     <config>
       <Kp>-0.008</Kp>
@@ -929,7 +929,7 @@ currently used, or work properly.
       <!-- maximum output clamp -->
     </config>
   </pid-controller>
-  <!-- Stage #2 drives the elevator-trim to achieve the desired climb rate. -->
+  <!-- Stage #2 drives the elevator to achieve the desired climb rate. -->
   <pid-controller>
     <name>Auto Landing Stage 2</name>
     <debug>false</debug>
@@ -944,7 +944,7 @@ currently used, or work properly.
       <prop>/autopilot/internal/target-climb-rate-fps</prop>
     </reference>
     <output>
-      <prop>/controls/flight/elevator-trim</prop>
+      <prop>/controls/flight/elevator</prop>
     </output>
     <config>
       <Kp>-0.02</Kp>
@@ -1169,7 +1169,7 @@ currently used, or work properly.
       <prop>/autopilot/settings/target-vfps</prop>
     </reference>
     <output>
-      <prop>/controls/flight/elevator-trim</prop>
+      <prop>/controls/flight/elevator</prop>
     </output>
     <config>
       <Kp>-0.018</Kp>

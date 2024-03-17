@@ -1,0 +1,38 @@
+<?xml version="1.0"?>
+
+<!--
+    :copyright: 2023, IAHM-COL
+    License: GPLv3
+    
+    Redistribution, or reuse, with or without modifications
+    shall keep this attribution information. 
+-->
+
+<PropertyList>
+  <path>aileron-trim.ac</path>
+
+  <animation>
+    <type>rotate</type>
+    <object-name>needle.aileron-trim</object-name>
+    <property>fdm/jsbsim/instruments/trim-indicators/roll/needle-rotation-deg</property>
+    <center>
+      <x-m>0</x-m><y-m>0</y-m><z-m>0</z-m>
+    </center>
+    <axis>
+      <x>-1</x><y>0</y><z>0</z>
+    </axis>
+  </animation>
+  
+  <!-- Lightmaps-->
+  <effect>
+    <inherits-from>backlighting</inherits-from>
+    <object-name>disc.aileron-trim</object-name>
+    <object-name>needle.aileron-trim</object-name>
+  </effect>
+  <effect>
+    <inherits-from>floodlighting</inherits-from>
+    <object-name>frame</object-name>
+    <object-name>screw.bottomleft</object-name>
+    <object-name>scew.topright</object-name>
+  </effect>
+</PropertyList>

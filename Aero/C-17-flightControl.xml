@@ -2,8 +2,8 @@
 <?xml-stylesheet href="JSBSim.xsl" type="application/xml"?>
 
 <!--
-    :copyright: 2023, IAHM-COL
-    :copyright: 2023, David Waggoner
+    :copyright: 2023-2024, IAHM-COL
+    :copyright: 2023-2024, David Waggoner
     License: GPLv3
     
     Redistribution, or reuse, with or without modifications
@@ -11,10 +11,108 @@
 -->
 
 <flight_control>
-  <channel name="Pitch">
+  <channel>
+    <kinematic name="Pitch trim actuated Rate 1">
+      <input>/controls/flight/elevator-trim</input>
+      <traverse>
+	<setting>
+	  <position>-1</position>
+	  <time>4</time>
+	</setting>
+	<setting>
+	  <position>1</position>
+	  <time>4</time>
+	</setting>
+      </traverse>
+      <output>fcs/trim-actuators/pitch/r1</output>
+    </kinematic>
+
+    <kinematic name="Pitch trim actuated Rate 2">
+      <input>/controls/flight/elevator-trim</input>
+      <traverse>
+	<setting>
+	  <position>-1</position>
+	  <time>10</time>
+	</setting>
+	<setting>
+	  <position>1</position>
+	  <time>10</time>
+	</setting>
+      </traverse>
+      <output>fcs/trim-actuators/pitch/r2</output>
+    </kinematic>
+
+    <kinematic name="Pitch trim actuated Rate 3">
+      <input>/controls/flight/elevator-trim</input>
+      <traverse>
+	<setting>
+	  <position>-1</position>
+	  <time>12</time>
+	</setting>
+	<setting>
+	  <position>1</position>
+	  <time>12</time>
+	</setting>
+      </traverse>
+      <output>fcs/trim-actuators/pitch/r3</output>
+    </kinematic>
+
+    <switch name="fcs/trim-actuators/pitch/actuator">
+      <default value="fcs/trim-actuators/pitch/r1"/>
+      <test value="fcs/trim-actuators/pitch/r1">
+	/velocities/airspeed-kt le 120
+      </test>
+      <test logit="AND" value="fcs/trim-actuators/pitch/r2">
+	/velocities/airspeed-kt gt 120
+	/velocities/airspeed-kt le 220
+      </test>
+      <test value="fcs/trim-actuators/pitch/r3">
+	/velocities/airspeed-kt gt 220
+      </test>
+    </switch>
+
+    <fcs_function name="fcs/trim-actuators/pitch/cmd-norm">
+      <function>
+	<table>
+	  <independentVar>fcs/trim-actuators/pitch/actuator</independentVar>
+	  <tableData>
+	    -1.0 -0.249332743
+	    0.0  0.0
+	    1.0  0.747998286
+	  </tableData>
+	</table>
+      </function>
+      <clipto>
+	<min>-0.249332743</min>
+	<max>0.747998286</max>
+      </clipto>
+    </fcs_function>
+
+    <aerosurface_scale name="Pitch Trim commanded Rads">
+      <input>fcs/trim-actuators/pitch/cmd-norm</input>
+      <range>
+        <min>-0.35</min>
+        <max>0.35</max>
+      </range>
+      <output>fcs/trim-actuators/pitch/cmd-rad</output>
+    </aerosurface_scale>
+
+    <fcs_function name="fcs/trim-actuators/pitch/cmd-deg">
+      <function>
+	<product>
+	  <property>fcs/trim-actuators/pitch/cmd-rad</property>
+	  <value>57.29578</value>
+	</product>
+      </function>
+      <clipto>
+	<min>-5</min>
+	<max>15</max>
+      </clipto>
+    </fcs_function>
+    
+    <!-- Stabilator affects the STAB not the elevator -->
     <summer name="Pitch Trim Sum">
       <input>fcs/elevator-cmd-norm</input>
-      <input>fcs/pitch-trim-cmd-norm</input>
       <clipto>
         <min>-1</min>
         <max>1</max>
@@ -45,9 +143,103 @@
   </channel>
 
   <channel name="Roll">
+    <kinematic name="Roll trim actuated Rate 1">
+      <input>/controls/flight/aileron-trim</input>
+      <traverse>
+	<setting>
+	  <position>-1</position>
+	  <time>4</time>
+	</setting>
+	<setting>
+	  <position>1</position>
+	  <time>4</time>
+	</setting>
+      </traverse>
+      <output>fcs/trim-actuators/roll/r1</output>
+    </kinematic>
+
+    <kinematic name="Roll trim actuated Rate 2">
+      <input>/controls/flight/aileron-trim</input>
+      <traverse>
+	<setting>
+	  <position>-1</position>
+	  <time>10</time>
+	</setting>
+	<setting>
+	  <position>1</position>
+	  <time>10</time>
+	</setting>
+      </traverse>
+      <output>fcs/trim-actuators/roll/r2</output>
+    </kinematic>
+
+    <kinematic name="Roll trim actuated Rate 3">
+      <input>/controls/flight/aileron-trim</input>
+      <traverse>
+	<setting>
+	  <position>-1</position>
+	  <time>12</time>
+	</setting>
+	<setting>
+	  <position>1</position>
+	  <time>12</time>
+	</setting>
+      </traverse>
+      <output>fcs/trim-actuators/roll/r3</output>
+    </kinematic>
+
+    <switch name="fcs/trim-actuators/roll/actuator">
+      <default value="fcs/trim-actuators/roll/r1"/>
+      <test value="fcs/trim-actuators/roll/r1">
+	/velocities/airspeed-kt le 120
+      </test>
+      <test logit="AND" value="fcs/trim-actuators/roll/r2">
+	/velocities/airspeed-kt gt 120
+	/velocities/airspeed-kt le 220
+      </test>
+      <test value="fcs/trim-actuators/roll/r3">
+	/velocities/airspeed-kt gt 220
+      </test>
+    </switch>
+
+    <fcs_function name="fcs/trim-actuators/roll/cmd-norm">
+      <function>
+	<quotient>
+	  <property>fcs/trim-actuators/roll/actuator</property>
+	  <value>2.005282488</value>
+	</quotient>
+      </function>
+      <clipto>
+	<min>-0.498682857</min>
+	<max>0.498682857</max>
+      </clipto>
+    </fcs_function>
+
+    <fcs_function name="fcs/trim-actuators/roll/controls-norm">
+      <function>
+	<quotient>
+	  <property>/controls/flight/aileron-trim</property>
+	  <value>2.005282488</value>
+	</quotient>
+      </function>
+      <clipto>
+	<min>-0.498682857</min>
+	<max>0.498682857</max>
+      </clipto>
+    </fcs_function>
+    
+    <aerosurface_scale name="Roll Trim Control Rads">
+      <input>fcs/trim-actuators/roll/controls-norm</input>
+      <range>
+        <min>-0.35</min>
+        <max>0.35</max>
+      </range>
+      <output>fcs/trim-actuators/roll/controls-rad</output>
+    </aerosurface_scale>
+
     <summer name="Roll Trim Sum">
       <input>fcs/aileron-cmd-norm</input>
-      <input>fcs/roll-trim-cmd-norm</input>
+      <input>fcs/trim-actuators/roll/cmd-norm</input>
       <clipto>
         <min>-1</min>
         <max>1</max>
@@ -99,10 +291,138 @@
     </aerosurface_scale>
   </channel>
 
-  <channel name="Yaw">
+  <channel name="Yaw">    
+    <kinematic name="Yaw trim actuated Rate 1">
+      <input>/controls/flight/rudder-trim</input>
+      <traverse>
+	<setting>
+	  <position>-1</position>
+	  <time>4</time>
+	</setting>
+	<setting>
+	  <position>1</position>
+	  <time>4</time>
+	</setting>
+      </traverse>
+      <output>fcs/trim-actuators/yaw/r1</output>
+    </kinematic>
+
+    <kinematic name="Yaw trim actuated Rate 2">
+      <input>/controls/flight/rudder-trim</input>
+      <traverse>
+	<setting>
+	  <position>-1</position>
+	  <time>10</time>
+	</setting>
+	<setting>
+	  <position>1</position>
+	  <time>10</time>
+	</setting>
+      </traverse>
+      <output>fcs/trim-actuators/yaw/r2</output>
+    </kinematic>
+
+    <kinematic name="Yaw trim actuated Rate 3">
+      <input>/controls/flight/rudder-trim</input>
+      <traverse>
+	<setting>
+	  <position>-1</position>
+	  <time>12</time>
+	</setting>
+	<setting>
+	  <position>1</position>
+	  <time>12</time>
+	</setting>
+      </traverse>
+      <output>fcs/trim-actuators/yaw/r3</output>
+    </kinematic>
+
+    <switch name="fcs/trim-actuators/yaw/actuator">
+      <default value="fcs/trim-actuators/yaw/r1"/>
+      <test value="fcs/trim-actuators/yaw/r1">
+	/velocities/airspeed-kt le 120
+      </test>
+      <test logit="AND" value="fcs/trim-actuators/yaw/r2">
+	/velocities/airspeed-kt gt 120
+	/velocities/airspeed-kt le 220
+      </test>
+      <test value="fcs/trim-actuators/yaw/r3">
+	/velocities/airspeed-kt gt 220
+      </test>
+    </switch>
+
+    <fcs_function name="fcs/trim-actuators/yaw/cmd-norm-actuator">
+      <function>
+	<quotient>
+	  <property>fcs/trim-actuators/yaw/actuator</property>
+	  <value>4.946459951</value>
+	</quotient>
+      </function>
+      <clipto>
+	<min>-0.208688535</min>
+	<max>0.208688535</max>
+      </clipto>
+    </fcs_function>
+
+    <fcs_function name="fcs/trim-actuators/yaw/actuator-auto-coordination">
+      <function>
+	<product>
+	  <value>-1</value> <!-- auto-coordination rudder trim opposite direction to aileron trim-->
+	  <property>/controls/flight/aileron-trim</property>
+	  <property>/controls/flight/auto-coordination</property>
+	</product>
+      </function>
+      <clipto>
+	<min>-1</min>
+	<max>1</max>
+      </clipto>
+    </fcs_function>
+
+    <fcs_function name="fcs/trim-actuators/yaw/cmd-norm-auto-coordination">
+      <function>
+	<quotient>
+	  <property>fcs/trim-actuators/yaw/actuator-auto-coordination</property>
+	  <value>4.946459951</value>
+	</quotient>
+      </function>
+      <clipto>
+	<min>-0.208688535</min>
+	<max>0.208688535</max>
+      </clipto>
+    </fcs_function>
+
+    <fcs_function name="fcs/trim-actuators/yaw/controls-norm">
+      <function>
+	<sum>
+	  <quotient>
+	    <property>/controls/flight/rudder-trim</property>
+	    <value>4.946459951</value>
+	  </quotient>
+	  <quotient>
+	    <property>fcs/trim-actuators/yaw/actuator-auto-coordination</property>
+	    <value>4.946459951</value>
+	  </quotient>
+	</sum>
+      </function>
+      <clipto>
+	<min>-0.208688535</min>
+	<max>0.208688535</max>
+      </clipto>
+    </fcs_function>
+    
+    <aerosurface_scale name="Yaw Trim Control Rads">
+      <input>fcs/trim-actuators/yaw/controls-norm</input>
+      <range>
+        <min>-0.836332</min>
+        <max>0.836332</max>
+      </range>
+      <output>fcs/trim-actuators/yaw/controls-rad</output>
+    </aerosurface_scale>
+
     <summer name="Rudder Command Sum">
       <input>fcs/rudder-cmd-norm</input>
-      <input>fcs/yaw-trim-cmd-norm</input>
+      <input>fcs/trim-actuators/yaw/cmd-norm-actuator</input>
+      <input>fcs/trim-actuators/yaw/cmd-norm-auto-coordination</input>
       <clipto>
         <min>-0.836332</min>
         <max>0.836332</max>
