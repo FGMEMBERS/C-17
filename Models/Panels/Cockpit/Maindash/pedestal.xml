@@ -1,0 +1,20 @@
+<?xml version="1.0"?>
+
+<!--
+    :copyright: 2024, IAHM-COL
+    License: GPLv3
+    
+    Redistribution, or reuse, with or without modifications
+    shall keep this attribution information. 
+-->
+
+<PropertyList>
+  <path>pedestal.ac</path>
+
+  <!-- Lightmaps -->  
+  <effect>
+    <inherits-from>floodlighting</inherits-from>
+    <object-name>main.pedestal</object-name>
+  </effect>
+
+</PropertyList>
