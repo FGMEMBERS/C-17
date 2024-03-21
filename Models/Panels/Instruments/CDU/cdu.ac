@@ -1,7 +1,6 @@
 AC3Db
 MATERIAL "instr-lights.001" rgb 1.000 1.000 1.000  amb 0.800 0.800 0.800  emis 0.800 0.800 0.800  spec 0.000 0.000 0.000  shi 64 trans 0.000
 MATERIAL "Flatglow" rgb 1.000 1.000 1.000  amb 0.800 0.800 0.800  emis 0.100 0.100 0.100  spec 0.000 0.000 0.000  shi 64 trans 0.000
-MATERIAL "lettering" rgb 1.000 1.000 1.000  amb 0.800 0.800 0.800  emis 0.400 0.400 0.400  spec 0.000 0.000 0.000  shi 64 trans 0.000
 OBJECT world
 name "Blender_exporter_v3.3__old-cdu.ac"
 kids 62
@@ -6587,6 +6586,7 @@ name "CDuscreen"
 data 8
 Mesh.045
 crease 30.0
+texture "cdu.png"
 numvert 4
 0.00211 0.12126 -0.05113
 0.00191 0.01615 -0.05113
@@ -6594,12 +6594,12 @@ numvert 4
 0.00211 0.12126 0.05336
 numsurf 1
 SURF 0X0
-mat 2
+mat 1
 refs 4
-0 0 0
-3 1 0
-2 1 1
-1 0 1
+0 0.881723 0.930706
+3 0.484123 0.930706
+2 0.484123 0.583713
+1 0.881723 0.583713
 kids 0
 OBJECT poly
 name "Cylinder.038"
