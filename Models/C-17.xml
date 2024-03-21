@@ -318,6 +318,16 @@
     </offsets>
   </model>
 
+  <!-- Pedestal -->
+  <model>
+    <path>Models/Panels/Cockpit/Pedestal/pedestal.xml</path>
+    <offsets>
+      <x-m>1.2971</x-m>
+      <y-m>-0.029434</y-m>
+      <z-m>0.33719</z-m>
+    </offsets>
+  </model>
+
   <model>
     <path>Aircraft/C-17/Models/C-17-cargobay.xml</path>
     <offsets>
