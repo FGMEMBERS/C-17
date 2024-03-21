@@ -320,7 +320,7 @@
 
   <!-- Pedestal -->
   <model>
-    <path>Models/Panels/Cockpit/Maindash/pedestal.xml</path>
+    <path>Models/Panels/Cockpit/Pedestal/pedestal.xml</path>
     <offsets>
       <x-m>1.2971</x-m>
       <y-m>-0.029434</y-m>
