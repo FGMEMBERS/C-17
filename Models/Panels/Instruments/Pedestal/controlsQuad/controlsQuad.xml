@@ -11,6 +11,188 @@
 <PropertyList>
   <path>controlsQuad.ac</path>
 
+  <!-- Throttles -->
+  <animation>
+    <name>throttle-lever-1</name>
+    <object-name>throttle.lever.1</object-name>
+    <object-name>throttle.lever.1.led</object-name>
+    <object-name>speebrake.lever.left</object-name>
+  </animation>
+
+  <animation>
+    <name>throttle-lever-2</name>
+    <object-name>throttle.lever.2</object-name>
+    <object-name>throttle.lever.2.led</object-name>
+    <object-name>reverser.button.bottom.led</object-name>
+    <object-name>reverser.button.bottom</object-name>
+    <object-name>reverser.button.top.led</object-name>
+    <object-name>reverser.button.top</object-name>
+  </animation>
+
+  <animation>
+    <name>throttle-lever-3</name>
+    <object-name>throttle.lever.3</object-name>
+    <object-name>throttle.lever.3.led</object-name>
+  </animation>
+
+  <animation>
+    <name>throttle-lever-4</name>
+    <object-name>throttle.lever.4</object-name>
+    <object-name>throttle.lever.4.led</object-name>
+    <object-name>speebrake.lever.right</object-name>
+  </animation>
+
+  <animation>
+    <type>rotate</type>
+    <object-name>throttle-lever-1</object-name>
+    <property>fdm/jsbsim/instruments/controlsQuad/throttle-levers/lever/rotation</property>
+    <center>
+      <x-m>-0.055702</x-m>
+      <y-m>-0.045017</y-m>
+      <z-m>-0.044992</z-m>
+    </center>
+    <axis>
+      <x>0</x>
+      <y>-1</y>
+      <z>0</z>
+    </axis>
+  </animation>
+
+  <animation>
+    <type>rotate</type>
+    <object-name>throttle-lever-2</object-name>
+    <property>fdm/jsbsim/instruments/controlsQuad/throttle-levers/lever[1]/rotation</property>
+    <center>
+      <x-m>-0.055894</x-m>
+      <y-m>-0.016439</y-m>
+      <z-m>-0.044888</z-m>
+    </center>
+    <axis>
+      <x>0</x>
+      <y>-1</y>
+      <z>0</z>
+    </axis>
+  </animation>
+
+  <animation>
+    <type>rotate</type>
+    <object-name>throttle-lever-3</object-name>
+    <property>fdm/jsbsim/instruments/controlsQuad/throttle-levers/lever[2]/rotation</property>
+    <center>
+      <x-m>-0.056089</x-m>
+      <y-m>0.012637</y-m>
+      <z-m>-0.044782</z-m>
+    </center>
+    <axis>
+      <x>0</x>
+      <y>-1</y>
+      <z>0</z>
+    </axis>
+  </animation>
+
+  <animation>
+    <type>rotate</type>
+    <object-name>throttle-lever-4</object-name>
+    <property>fdm/jsbsim/instruments/controlsQuad/throttle-levers/lever[3]/rotation</property>
+    <center>
+      <x-m>-0.056272</x-m>
+      <y-m>0.039765</y-m>
+      <z-m>-0.044682</z-m>
+    </center>
+    <axis>
+      <x>0</x>
+      <y>-1</y>
+      <z>0</z>
+    </axis>
+  </animation>
+
+  <animation>
+    <type>textranslate</type>
+    <object-name>throttle.lever.1.led</object-name>
+    <property>fdm/jsbsim/instruments/controlsQuad/throttle-levers/lever/selected</property>
+    <factor>0.083007813</factor>
+    <axis>
+      <x>1</x>
+      <y>0</y>
+    </axis>
+  </animation>
+
+  <animation>
+    <type>textranslate</type>
+    <object-name>throttle.lever.2.led</object-name>
+    <property>fdm/jsbsim/instruments/controlsQuad/throttle-levers/lever[1]/selected</property>
+    <factor>0.083007813</factor>
+    <axis>
+      <x>1</x>
+      <y>0</y>
+    </axis>
+  </animation>
+
+  <animation>
+    <type>textranslate</type>
+    <object-name>throttle.lever.3.led</object-name>
+    <property>fdm/jsbsim/instruments/controlsQuad/throttle-levers/lever[2]/selected</property>
+    <factor>0.083007813</factor>
+    <axis>
+      <x>1</x>
+      <y>0</y>
+    </axis>
+  </animation>
+
+  <animation>
+    <type>textranslate</type>
+    <object-name>throttle.lever.4.led</object-name>
+    <property>fdm/jsbsim/instruments/controlsQuad/throttle-levers/lever[3]/selected</property>
+    <factor>0.083007813</factor>
+    <axis>
+      <x>1</x>
+      <y>0</y>
+    </axis>
+  </animation>
+
+  <animation>
+    <type>textranslate</type>
+    <object-name>reverser.button.top.led</object-name>
+    <object-name>reverser.button.bottom.led</object-name>
+    <property>fdm/jsbsim/instruments/controlsQuad/throttle-levers/reverser-all</property>
+    <factor>0.083007813</factor>
+    <axis>
+      <x>1</x>
+      <y>0</y>
+    </axis>
+  </animation>
+
+  <!-- Parking Brake -->
+  <animation>
+    <type>translate</type>
+    <object-name>parkingbreak.knob</object-name>
+    <property>fdm/jsbsim/instruments/controlsQuad/parking-lever/brake-parking</property>
+    <factor>0.060313</factor>
+    <axis>
+      <x>-1</x>
+      <y>0</y>
+      <z>0</z>
+    </axis>
+  </animation>
+
+  <!-- flaps lever -->
+  <animation>
+    <type>rotate</type>
+    <object-name>flap.knob</object-name>
+    <property>fdm/jsbsim/instruments/controlsQuad/flaps-lever/rotation</property>
+    <center>
+      <x-m>0.058984</x-m>
+      <y-m>0.04817</y-m>
+      <z-m>-0.045665</z-m>
+    </center>
+    <axis>
+      <x>0</x>
+      <y>1</y>
+      <z>0</z>
+    </axis>
+  </animation>
+  
+  
   <!-- Lightmaps -->
   <effect>
     <inherits-from>backlighting</inherits-from>

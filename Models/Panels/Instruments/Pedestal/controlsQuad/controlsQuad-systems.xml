@@ -1,0 +1,155 @@
+<?xml version="1.0"?>
+<?xml-stylesheet href="JSBSim.xsl" type="application/xml"?>
+
+<!--
+:copyright: 2024, IAHM-COL
+License: GPLv3
+
+Redistribution, or reuse, with or without modifications
+shall keep this attribution information. 
+-->
+
+<system name="Controls and Throttle Quadrant">
+  <property value="1">instruments/controlsQuad/throttle-levers/lever/selected</property>
+  <property value="1">instruments/controlsQuad/throttle-levers/lever[1]/selected</property>
+  <property value="1">instruments/controlsQuad/throttle-levers/lever[2]/selected</property>
+  <property value="1">instruments/controlsQuad/throttle-levers/lever[3]/selected</property>
+  <channel name="Throttle levers">
+    <switch name="instruments/controlsQuad/throttle-levers/lever/level">
+      <default value="/controls/engines/engine/throttle"/>
+    </switch>
+
+    <switch name="instruments/controlsQuad/throttle-levers/lever[1]/level">
+      <default value="/controls/engines/engine[1]/throttle"/>
+    </switch>
+
+    <switch name="instruments/controlsQuad/throttle-levers/lever[2]/level">
+      <default value="/controls/engines/engine[2]/throttle"/>
+    </switch>
+
+    <switch name="instruments/controlsQuad/throttle-levers/lever[3]/level">
+      <default value="/controls/engines/engine[3]/throttle"/>
+    </switch>
+
+    <fcs_function name="instruments/controlsQuad/throttle-levers/lever/rotation">
+      <function>
+	<product>
+	  <property>instruments/controlsQuad/throttle-levers/lever/level</property>
+	  <value>60</value>
+	</product>
+      </function>
+      <clipto>
+	<min>0</min>
+	<max>60</max>
+      </clipto>
+    </fcs_function>
+
+    <fcs_function name="instruments/controlsQuad/throttle-levers/lever[1]/rotation">
+      <function>
+	<product>
+	  <property>instruments/controlsQuad/throttle-levers/lever[1]/level</property>
+	  <value>60</value>
+	</product>
+      </function>
+      <clipto>
+	<min>0</min>
+	<max>60</max>
+      </clipto>
+    </fcs_function>
+
+    <fcs_function name="instruments/controlsQuad/throttle-levers/lever[2]/rotation">
+      <function>
+	<product>
+	  <property>instruments/controlsQuad/throttle-levers/lever[2]/level</property>
+	  <value>60</value>
+	</product>
+      </function>
+      <clipto>
+	<min>0</min>
+	<max>60</max>
+      </clipto>
+    </fcs_function>
+
+    <fcs_function name="instruments/controlsQuad/throttle-levers/lever[3]/rotation">
+      <function>
+	<product>
+	  <property>instruments/controlsQuad/throttle-levers/lever[3]/level</property>
+	  <value>60</value>
+	</product>
+      </function>
+      <clipto>
+	<min>0</min>
+	<max>60</max>
+      </clipto>
+    </fcs_function>
+
+    <switch name="instruments/controlsQuad/throttle-levers/lever/reverser">
+      <default value="/controls/engines/engine/reverser"/>
+    </switch>
+
+    <switch name="instruments/controlsQuad/throttle-levers/lever[1]/reverser">
+      <default value="/controls/engines/engine[1]/reverser"/>
+    </switch>
+
+    <switch name="instruments/controlsQuad/throttle-levers/lever[2]/reverser">
+      <default value="/controls/engines/engine[2]/reverser"/>
+    </switch>
+
+    <switch name="instruments/controlsQuad/throttle-levers/lever[3]/reverser">
+      <default value="/controls/engines/engine[3]/reverser"/>
+    </switch>
+
+    <switch name="instruments/controlsQuad/throttle-levers/reverser-all">
+      <default value="0"/>
+      <test logic="AND" value="1">
+	instruments/controlsQuad/throttle-levers/lever/reverser eq 1
+	instruments/controlsQuad/throttle-levers/lever[1]/reverser eq 1
+	instruments/controlsQuad/throttle-levers/lever[2]/reverser eq 1
+	instruments/controlsQuad/throttle-levers/lever[3]/reverser eq 1
+      </test>
+    </switch>
+  </channel>
+
+  <channel name="Parking Brake Lever">
+    <switch name="instruments/controlsQuad/parking-lever/brake-parking">
+      <default value="/controls/gear/brake-parking"/>
+    </switch>
+  </channel>
+
+  <channel name="Flaps Lever">
+    <switch name="instruments/controlsQuad/flaps-lever/flaps">
+      <default value="/controls/flight/flaps"/>
+    </switch>
+
+    <switch name="instruments/controlsQuad/flaps-lever/flaps-pos">
+      <default value="0"/>
+      <test value="1">
+	instruments/controlsQuad/flaps-lever/flaps eq 0.2
+      </test>
+      <test value="2">
+	instruments/controlsQuad/flaps-lever/flaps eq 0.4
+      </test>
+      <test value="3">
+	instruments/controlsQuad/flaps-lever/flaps eq 0.6
+      </test>
+      <test value="4">
+	instruments/controlsQuad/flaps-lever/flaps eq 1
+      </test>
+    </switch>
+
+    <fcs_function name="instruments/controlsQuad/flaps-lever/rotation">
+      <function>
+	<product>
+	  <property>instruments/controlsQuad/flaps-lever/flaps-pos</property>
+	  <value>13</value>
+	</product>
+      </function>
+      <clipto>
+	<min>0</min>
+	<max>52</max>
+      </clipto>
+    </fcs_function>
+    
+  </channel>
+  
+</system>
