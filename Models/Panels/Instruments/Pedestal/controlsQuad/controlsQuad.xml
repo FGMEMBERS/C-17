@@ -191,6 +191,32 @@
       <z>0</z>
     </axis>
   </animation>
+
+  <!-- Aural Silence -->
+  <animation>
+    <type>textranslate</type>
+    <object-name>aural.silence.button</object-name>
+    <property>fdm/jsbsim/instruments/controlsQuad/aural/silenced</property>
+    <factor>0.024414062</factor>
+    <axis>
+      <x>0</x>
+      <y>-1</y>
+    </axis>
+  </animation>
+
+  <animation>
+    <type>pick</type>
+    <object-name>aural.silence.button</object-name>
+    <action>
+      <button>0</button>
+      <repeatable>false</repeatable>
+      <binding>
+	<command>property-toggle</command>
+	<property>sim/sound/enabled</property>
+      </binding>
+    </action>
+  </animation>
+
   
   
   <!-- Lightmaps -->

@@ -151,5 +151,14 @@ shall keep this attribution information.
     </fcs_function>
     
   </channel>
+
+  <channel name="Aural silence">
+    <switch name="instruments/controlsQuad/aural/silenced">
+      <default value="0"/>
+      <test value="1">
+	/sim/sound/enabled eq 0
+      </test>
+    </switch>
+  </channel>
   
 </system>
