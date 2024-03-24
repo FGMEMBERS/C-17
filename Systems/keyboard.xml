@@ -16,7 +16,7 @@
     <desc>Toggle Reversers</desc>
     <binding>
       <command>nasal</command>
-      <script>reversethrust.togglereverser()</script>
+      <script>reversethrust.togglereverser();</script>
     </binding>
   </key>	
 

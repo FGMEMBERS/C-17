@@ -150,17 +150,6 @@
     </axis>
   </animation>
 
-  <animation>
-    <type>textranslate</type>
-    <object-name>reverser.button.top.led</object-name>
-    <object-name>reverser.button.bottom.led</object-name>
-    <property>fdm/jsbsim/instruments/controlsQuad/throttle-levers/reverser-all</property>
-    <factor>0.083007813</factor>
-    <axis>
-      <x>1</x>
-      <y>0</y>
-    </axis>
-  </animation>
 
   <!-- Parking Brake -->
   <animation>
@@ -217,7 +206,32 @@
     </action>
   </animation>
 
-  
+  <!-- Reverser toggles -->
+  <animation>
+    <type>textranslate</type>
+    <object-name>reverser.button.top.led</object-name>
+    <object-name>reverser.button.bottom.led</object-name>
+    <property>fdm/jsbsim/instruments/controlsQuad/throttle-levers/reverser-all</property>
+    <factor>0.083007813</factor>
+    <axis>
+      <x>1</x>
+      <y>0</y>
+    </axis>
+  </animation>
+
+  <animation>
+    <type>pick</type>
+    <object-name>reverser.button.top</object-name>
+    <object-name>reverser.button.bottom</object-name>
+    <action>
+      <button>0</button>
+      <repeatable>false</repeatable>
+      <binding>
+	<command>nasal</command>
+	<script>reversethrust.togglereverser();</script>
+      </binding>
+    </action>
+  </animation>
   
   <!-- Lightmaps -->
   <effect>
