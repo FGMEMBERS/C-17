@@ -1,0 +1,22 @@
+<?xml version="1.0"?>
+
+<!--
+    :copyright: 2024, IAHM-COL
+    License: GPLv3
+    
+    Redistribution, or reuse, with or without modifications
+    shall keep this attribution information. 
+-->
+
+<PropertyList>
+  <!-- Quadrant -->
+  <model>
+    <path>Models/Panels/Instruments/Pedestal/controlsQuad/controlsQuad.xml</path>
+    <offsets>
+      <x-m>0.88654</x-m>
+      <y-m>-0.043637</y-m>
+      <z-m>0.59227</z-m>
+      <pitch-deg>0</pitch-deg>
+    </offsets>
+  </model>
+</PropertyList>
