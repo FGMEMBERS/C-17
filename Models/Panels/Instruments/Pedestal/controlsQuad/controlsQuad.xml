@@ -11,13 +11,32 @@
 <PropertyList>
   <path>controlsQuad.ac</path>
 
-  <!-- Lightmaps
+  <!-- Lightmaps -->
   <effect>
     <inherits-from>backlighting</inherits-from>
     <object-name>quad.housing.skin</object-name>
+    <object-name>parkingbreak-stand</object-name>
+    <object-name>reverser.button.top.led</object-name>
+    <object-name>reverser.button.bottom.led</object-name>
+    <object-name>throttle.lever.1.led</object-name>
+    <object-name>throttle.lever.2.led</object-name>
+    <object-name>throttle.lever.3.led</object-name>
+    <object-name>throttle.lever.4.led</object-name>
   </effect>
   <effect>
     <inherits-from>floodlighting</inherits-from>
     <object-name>quad.housing</object-name>
-  </effect>-->
+    <object-name>throttle.lever.1</object-name>
+    <object-name>throttle.lever.2</object-name>
+    <object-name>throttle.lever.3</object-name>
+    <object-name>throttle.lever.4</object-name>
+    <object-name>reverser.button.top</object-name>
+    <object-name>reverser.button.bottom</object-name>
+    <object-name>speedbrake.lever.left</object-name>
+    <object-name>speedbrake.lever.right</object-name>
+    <object-name>parkingbreak.knob</object-name>
+    <object-name>stabTrim.knob</object-name>
+    <object-name>flap.knob</object-name>
+    <object-name>switch</object-name>
+  </effect>
 </PropertyList>
