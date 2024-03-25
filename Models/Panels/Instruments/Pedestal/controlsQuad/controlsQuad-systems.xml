@@ -167,6 +167,23 @@ shall keep this attribution information.
     </fcs_function>
   </channel>
 
+  <property value="0">instruments/controlsQuad/slats-dis/guard</property>
+  <channel name="Spoiler levers">
+    <fcs_function name="instruments/controlsQuad/slats-dis/rotation">
+      <function>
+	<product>
+	  <property>instruments/controlsQuad/slats-dis/guard</property>
+	  <value>45.0</value>
+	</product>
+	<clipto>
+	  <min>0</min>
+	  <max>45</max>
+	</clipto>
+      </function>
+    </fcs_function>
+  </channel>
+
+  
   <channel name="Stab Trim Lever">
     <switch name="instruments/controlsQuad/stabTrim-lever/actuator">
       <default value="fcs/trim-actuators/pitch/actuator"/>

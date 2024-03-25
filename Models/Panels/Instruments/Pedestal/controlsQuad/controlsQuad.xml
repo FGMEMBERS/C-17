@@ -428,6 +428,76 @@
       </binding>
     </action>
   </animation>
+
+  <!-- Slats Dis -->
+  <animation>
+    <object-name>slats.disable.guard</object-name>
+    <type>material</type>
+    <transparency>
+      <alpha>0.65</alpha>
+    </transparency>
+  </animation>
+
+  <animation>
+    <type>select</type>
+    <object-name>slats.dis.led</object-name>
+    <condition>
+      <equals>
+	<property>/sim/slats/enabled</property>
+	<value>false</value>
+      </equals>
+    </condition>
+  </animation>
+
+  <animation>
+    <type>pick</type>
+    <object-name>slats.dis.led</object-name>
+    <object-name>slats.dis.button</object-name>
+    <action>
+      <button>0</button>
+      <repeatable>false</repeatable>
+      <binding>
+	<!-- only pickable when guard is open -->
+	<condition>
+	  <equals>
+	    <property>fdm/jsbsim/instruments/controlsQuad/slats-dis/guard</property>
+	    <value>1</value>
+	  </equals>
+	</condition>
+	<command>property-toggle</command>
+	<property>/sim/slats/enabled</property>
+      </binding>
+    </action>
+  </animation>
+
+  <animation>
+    <type>pick</type>
+    <object-name>slats.disable.guard</object-name>
+    <action>
+      <button>0</button>
+      <repeatable>false</repeatable>
+      <binding>
+	<command>property-toggle</command>
+	<property>fdm/jsbsim/instruments/controlsQuad/slats-dis/guard</property>
+      </binding>
+    </action>
+  </animation>
+
+  <animation>
+    <type>rotate</type>
+    <object-name>slats.disable.guard</object-name>
+    <property>fdm/jsbsim/instruments/controlsQuad/slats-dis/rotation</property>
+    <center>
+      <x-m>0.016552</x-m>
+      <y-m>0.017197</y-m>
+      <z-m>0.118843</z-m>
+    </center>
+    <axis>
+      <x>0</x>
+      <y>-1</y>
+      <z>0</z>
+    </axis>
+  </animation>
   
   <!-- Lightmaps -->
   <effect>
