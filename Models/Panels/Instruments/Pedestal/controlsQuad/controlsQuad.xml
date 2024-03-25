@@ -400,6 +400,34 @@
       </binding>
     </action>
   </animation>
+
+  <!-- Stab Trim -->
+  <animation>
+    <type>knob</type>
+    <object-name>stabTrim.knob</object-name>
+    <property>fdm/jsbsim/instruments/controlsQuad/stabTrim-lever/rotation</property>
+    <center>
+      <x-m>0.058984</x-m>
+      <y-m>-0.011873</y-m>
+      <z-m>-0.045665</z-m>
+    </center>
+    <axis>
+      <x>0</x>
+      <y>1</y>
+      <z>0</z>
+    </axis>
+
+    <action>
+      <binding>
+	<command>property-adjust</command>
+	<property>/controls/flight/elevator-trim</property>
+	<factor>0.01</factor>
+	<min>-1</min>
+	<max>1</max>
+	<wrap>false</wrap>      
+      </binding>
+    </action>
+  </animation>
   
   <!-- Lightmaps -->
   <effect>

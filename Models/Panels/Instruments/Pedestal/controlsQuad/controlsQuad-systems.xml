@@ -166,6 +166,25 @@ shall keep this attribution information.
       </function>
     </fcs_function>
   </channel>
+
+  <channel name="Stab Trim Lever">
+    <switch name="instruments/controlsQuad/stabTrim-lever/actuator">
+      <default value="fcs/trim-actuators/pitch/actuator"/>
+    </switch>
+    
+    <fcs_function name="instruments/controlsQuad/stabTrim-lever/rotation">
+      <function>
+	<product>
+	  <property>instruments/controlsQuad/stabTrim-lever/actuator</property>
+	  <value>24</value>
+	</product>
+      </function>
+      <clipto>
+	<min>-24</min>
+	<max>24</max>
+      </clipto>
+    </fcs_function>
+  </channel>
   
   <channel name="Aural silence">
     <switch name="instruments/controlsQuad/aural/silenced">
