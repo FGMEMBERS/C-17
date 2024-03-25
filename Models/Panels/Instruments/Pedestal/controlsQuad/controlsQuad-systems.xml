@@ -14,6 +14,10 @@ shall keep this attribution information.
   <property value="1">instruments/controlsQuad/throttle-levers/lever[1]/selected</property>
   <property value="1">instruments/controlsQuad/throttle-levers/lever[2]/selected</property>
   <property value="1">instruments/controlsQuad/throttle-levers/lever[3]/selected</property>
+  <property value="0">/controls/engines/engine/throttle-buffer</property>
+  <property value="0">/controls/engines/engine[1]/throttle-buffer</property>
+  <property value="0">/controls/engines/engine[2]/throttle-buffer</property>
+  <property value="0">/controls/engines/engine[3]/throttle-buffer</property>
   <channel name="Throttle levers">
     <switch name="instruments/controlsQuad/throttle-levers/lever/level">
       <default value="/controls/engines/engine/throttle"/>
@@ -108,6 +112,64 @@ shall keep this attribution information.
 	instruments/controlsQuad/throttle-levers/lever[3]/reverser eq 1
       </test>
     </switch>
+
+    <!-- Buffering throtlle when lever unselected -->
+    <switch name="/controls/engines/engine/throttle">
+      <default value="/controls/engines/engine/throttle"/>
+      <test value="/controls/engines/engine/throttle-buffer">
+	instruments/controlsQuad/throttle-levers/lever/selected eq 0	
+      </test>
+    </switch>
+
+    <switch name="/controls/engines/engine/throttle-buffer">
+      <default value="/controls/engines/engine/throttle-buffer"/>
+      <test value="/controls/engines/engine/throttle">
+	instruments/controlsQuad/throttle-levers/lever/selected eq 1	
+      </test>
+    </switch>
+
+    <switch name="/controls/engines/engine[1]/throttle">
+      <default value="/controls/engines/engine[1]/throttle"/>
+      <test value="/controls/engines/engine[1]/throttle-buffer">
+	instruments/controlsQuad/throttle-levers/lever[1]/selected eq 0	
+      </test>
+    </switch>
+
+    <switch name="/controls/engines/engine[1]/throttle-buffer">
+      <default value="/controls/engines/engine[1]/throttle-buffer"/>
+      <test value="/controls/engines/engine[1]/throttle">
+	instruments/controlsQuad/throttle-levers/lever[1]/selected eq 1	
+      </test>
+    </switch>
+
+    <switch name="/controls/engines/engine[2]/throttle">
+      <default value="/controls/engines/engine[2]/throttle"/>
+      <test value="/controls/engines/engine[2]/throttle-buffer">
+	instruments/controlsQuad/throttle-levers/lever[2]/selected eq 0	
+      </test>
+    </switch>
+
+    <switch name="/controls/engines/engine[2]/throttle-buffer">
+      <default value="/controls/engines/engine[2]/throttle-buffer"/>
+      <test value="/controls/engines/engine[2]/throttle">
+	instruments/controlsQuad/throttle-levers/lever[2]/selected eq 1	
+      </test>
+    </switch>
+
+    <switch name="/controls/engines/engine[3]/throttle">
+      <default value="/controls/engines/engine[3]/throttle"/>
+      <test value="/controls/engines/engine[3]/throttle-buffer">
+	instruments/controlsQuad/throttle-levers/lever[3]/selected eq 0	
+      </test>
+    </switch>
+
+    <switch name="/controls/engines/engine[3]/throttle-buffer">
+      <default value="/controls/engines/engine[3]/throttle-buffer"/>
+      <test value="/controls/engines/engine[3]/throttle">
+	instruments/controlsQuad/throttle-levers/lever[3]/selected eq 1	
+      </test>
+    </switch>
+    
   </channel>
 
   <channel name="Parking Brake Lever">
