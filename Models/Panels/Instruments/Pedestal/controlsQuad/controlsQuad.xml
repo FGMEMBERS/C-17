@@ -297,6 +297,27 @@
     </axis>
   </animation>
 
+  <animation>
+    <type>knob</type>
+    <object-name>parkingbreak.knob</object-name>
+
+    <increase>
+      <binding>
+	<command>property-assign</command>
+	<property>/controls/gear/brake-parking</property>
+	<value>1</value>
+      </binding>
+    </increase>
+
+    <decrease>
+      <binding>
+	<command>property-assign</command>
+	<property>/controls/gear/brake-parking</property>
+	<value>0</value>
+      </binding>
+    </decrease>
+  </animation>
+  
   <!-- flaps lever -->
   <animation>
     <type>knob</type>
