@@ -149,9 +149,24 @@ shall keep this attribution information.
 	<max>52</max>
       </clipto>
     </fcs_function>
-    
   </channel>
 
+  <property value="0">instruments/controlsQuad/spoilers-lever/actioned</property>
+  <channel name="Spoiler levers">
+    <fcs_function name="instruments/controlsQuad/spoilers-lever/rotation">
+      <function>
+	<product>
+	  <property>instruments/controlsQuad/spoilers-lever/actioned</property>
+	  <value>45.0</value>
+	</product>
+	<clipto>
+	  <min>-45</min>
+	  <max>45</max>
+	</clipto>
+      </function>
+    </fcs_function>
+  </channel>
+  
   <channel name="Aural silence">
     <switch name="instruments/controlsQuad/aural/silenced">
       <default value="0"/>
