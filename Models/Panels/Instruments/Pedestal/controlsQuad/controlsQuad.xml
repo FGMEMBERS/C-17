@@ -299,7 +299,7 @@
 
   <!-- flaps lever -->
   <animation>
-    <type>rotate</type>
+    <type>knob</type>
     <object-name>flap.knob</object-name>
     <property>fdm/jsbsim/instruments/controlsQuad/flaps-lever/rotation</property>
     <center>
@@ -312,8 +312,22 @@
       <y>1</y>
       <z>0</z>
     </axis>
-  </animation>
 
+    <increase>
+      <binding>
+        <command>nasal</command>
+        <script>controls.flapsDown(-1);</script>
+      </binding>
+    </increase>
+
+    <decrease>
+      <binding>
+        <command>nasal</command>
+        <script>controls.flapsDown(1);</script>
+      </binding>
+    </decrease>
+  </animation>
+  
   <!-- Aural Silence -->
   <animation>
     <type>textranslate</type>
