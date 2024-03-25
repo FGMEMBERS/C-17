@@ -348,6 +348,78 @@
       </binding>
     </decrease>
   </animation>
+
+  <animation>
+    <type>pick</type>
+    <object-name>switch</object-name>
+    <action>
+      <button>0</button>
+      <repeatable>true</repeatable>
+      <interval-sec>0.2</interval-sec>
+      <binding>
+	<command>property-assign</command>
+	<property>fdm/jsbsim/instruments/controlsQuad/flaps-lever/index-switch/actioned</property>
+	<value>1</value>
+      </binding>
+      <binding>
+	<command>property-adjust</command>
+	<property>/sim/flaps/index</property>
+	<step>0.01</step>
+	<min>0.5</min>
+	<max>1</max>
+	<wrap>false</wrap>
+      </binding>
+      <mod-up>
+	<binding>
+	  <command>property-assign</command>
+	  <property>fdm/jsbsim/instruments/controlsQuad/flaps-lever/index-switch/actioned</property>
+	  <value>0</value>
+	</binding>
+      </mod-up>
+    </action>
+
+    <action>
+      <button>1</button>
+      <repeatable>true</repeatable>
+      <interval-sec>0.2</interval-sec>
+      <binding>
+	<command>property-assign</command>
+	<property>fdm/jsbsim/instruments/controlsQuad/flaps-lever/index-switch/actioned</property>
+	<value>-1</value>
+      </binding>
+      <binding>
+	<command>property-adjust</command>
+	<property>/sim/flaps/index</property>
+	<step>-0.01</step>
+	<min>0.5</min>
+	<max>1</max>
+	<wrap>false</wrap>
+      </binding>
+      <mod-up>
+	<binding>
+	  <command>property-assign</command>
+	  <property>fdm/jsbsim/instruments/controlsQuad/flaps-lever/index-switch/actioned</property>
+	  <value>0</value>
+	</binding>
+      </mod-up>
+    </action>
+  </animation>
+  
+  <animation>
+    <type>rotate</type>
+    <object-name>switch</object-name>
+    <property>fdm/jsbsim/instruments/controlsQuad/flaps-lever/index-switch/rotation</property>
+    <center>
+      <x-m>0.173491</x-m>
+      <y-m>0.020564</y-m>
+      <z-m>0.065786</z-m>
+    </center>
+    <axis>
+      <x>0</x>
+      <y>-1</y>
+      <z>0</z>
+    </axis>
+  </animation>
   
   <!-- Aural Silence -->
   <animation>
@@ -520,8 +592,8 @@
     <object-name>throttle.lever.4</object-name>
     <object-name>reverser.button.top</object-name>
     <object-name>reverser.button.bottom</object-name>
-    <object-name>speedbrake.lever.left</object-name>
-    <object-name>speedbrake.lever.right</object-name>
+    <object-name>speebrake.lever.left</object-name>
+    <object-name>speebrake.lever.right</object-name>
     <object-name>parkingbreak.knob</object-name>
     <object-name>stabTrim.knob</object-name>
     <object-name>flap.knob</object-name>

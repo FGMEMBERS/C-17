@@ -453,6 +453,7 @@
     </aerosurface_scale>
   </channel>
 
+  <property value="1">/sim/flaps/index</property>
   <channel name="Flaps and Slats">
     <switch name="/sim/slats/current-setting">
       <default value="0"/>
@@ -544,8 +545,21 @@
       </test>
     </switch>
 
+    <fcs_function name="fcs/flap-cmd-norm-indexed">
+      <function>
+	<product>
+	  <property>fcs/flap-cmd-norm</property>
+	  <property>/sim/flaps/index</property>
+	</product>
+      </function>
+      <clipto>
+	<min>0</min>
+	<max>1</max>
+      </clipto>
+    </fcs_function>
+    
     <kinematic name="flaps control">
-      <input>fcs/flap-cmd-norm</input>
+      <input>fcs/flap-cmd-norm-indexed</input>
       <traverse>
         <setting>
           <position>0</position>

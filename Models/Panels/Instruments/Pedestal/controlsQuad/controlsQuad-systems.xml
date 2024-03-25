@@ -116,6 +116,7 @@ shall keep this attribution information.
     </switch>
   </channel>
 
+  <property value="0">instruments/controlsQuad/flaps-lever/index-switch/actioned</property>
   <channel name="Flaps Lever">
     <switch name="instruments/controlsQuad/flaps-lever/flaps">
       <default value="/controls/flight/flaps"/>
@@ -148,6 +149,19 @@ shall keep this attribution information.
 	<min>0</min>
 	<max>52</max>
       </clipto>
+    </fcs_function>
+
+    <fcs_function name="instruments/controlsQuad/flaps-lever/index-switch/rotation">
+      <function>
+	<product>
+	  <property>instruments/controlsQuad/flaps-lever/index-switch/actioned</property>
+	  <value>55.0</value>
+	</product>
+	<clipto>
+	  <min>-55</min>
+	  <max>55</max>
+	</clipto>
+      </function>
     </fcs_function>
   </channel>
 

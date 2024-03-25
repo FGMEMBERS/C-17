@@ -28,5 +28,6 @@ shall keep this attribution information.
   <path>instrumentation/doors/passenger/position-norm</path>
   <path>instrumentation/doors/ramp/position-norm</path>
   <path>sim/controls/auto-coordination</path>
+  <path>sim/flaps/index</path>
   <path>sim/slats/enabled</path>
 </PropertyList>
