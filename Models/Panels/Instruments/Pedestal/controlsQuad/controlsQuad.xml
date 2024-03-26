@@ -515,7 +515,7 @@
       <binding>
 	<command>property-adjust</command>
 	<property>/controls/flight/elevator-trim</property>
-	<factor>0.01</factor>
+	<factor>-0.01</factor>
 	<min>-1</min>
 	<max>1</max>
 	<wrap>false</wrap>      
