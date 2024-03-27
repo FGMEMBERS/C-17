@@ -46,9 +46,19 @@ shall keep this attribution information.
       <gain>100</gain>
     </pure_gain>
 
-    <!-- Flap index 100 for now, until the instrument to adjust is built-->
-    <switch name="instruments/flap-indicator/flap-index-setting">
-      <default value="100" />
-    </switch>
+    <fcs_function name="instruments/flap-indicator/flap-index-setting">
+      <function>
+	<integer>
+	  <product>
+	    <property>/sim/flaps/index</property>
+	    <value>100</value>
+	  </product>
+	</integer>
+      </function>
+      <clipto>
+	<min>0</min>
+	<max>100</max>
+      </clipto>
+    </fcs_function>
   </channel>
 </system>

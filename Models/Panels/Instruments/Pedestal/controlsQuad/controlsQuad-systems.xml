@@ -1,0 +1,289 @@
+<?xml version="1.0"?>
+<?xml-stylesheet href="JSBSim.xsl" type="application/xml"?>
+
+<!--
+:copyright: 2024, IAHM-COL
+License: GPLv3
+
+Redistribution, or reuse, with or without modifications
+shall keep this attribution information. 
+-->
+
+<system name="Controls and Throttle Quadrant">
+  <property value="1">instruments/controlsQuad/throttle-levers/lever/selected</property>
+  <property value="1">instruments/controlsQuad/throttle-levers/lever[1]/selected</property>
+  <property value="1">instruments/controlsQuad/throttle-levers/lever[2]/selected</property>
+  <property value="1">instruments/controlsQuad/throttle-levers/lever[3]/selected</property>
+  <property value="0">/controls/engines/engine/throttle-buffer</property>
+  <property value="0">/controls/engines/engine[1]/throttle-buffer</property>
+  <property value="0">/controls/engines/engine[2]/throttle-buffer</property>
+  <property value="0">/controls/engines/engine[3]/throttle-buffer</property>
+  <channel name="Throttle levers">
+    <switch name="instruments/controlsQuad/throttle-levers/lever/level">
+      <default value="/controls/engines/engine/throttle"/>
+    </switch>
+
+    <switch name="instruments/controlsQuad/throttle-levers/lever[1]/level">
+      <default value="/controls/engines/engine[1]/throttle"/>
+    </switch>
+
+    <switch name="instruments/controlsQuad/throttle-levers/lever[2]/level">
+      <default value="/controls/engines/engine[2]/throttle"/>
+    </switch>
+
+    <switch name="instruments/controlsQuad/throttle-levers/lever[3]/level">
+      <default value="/controls/engines/engine[3]/throttle"/>
+    </switch>
+
+    <fcs_function name="instruments/controlsQuad/throttle-levers/lever/rotation">
+      <function>
+	<product>
+	  <property>instruments/controlsQuad/throttle-levers/lever/level</property>
+	  <value>60</value>
+	</product>
+      </function>
+      <clipto>
+	<min>0</min>
+	<max>60</max>
+      </clipto>
+    </fcs_function>
+
+    <fcs_function name="instruments/controlsQuad/throttle-levers/lever[1]/rotation">
+      <function>
+	<product>
+	  <property>instruments/controlsQuad/throttle-levers/lever[1]/level</property>
+	  <value>60</value>
+	</product>
+      </function>
+      <clipto>
+	<min>0</min>
+	<max>60</max>
+      </clipto>
+    </fcs_function>
+
+    <fcs_function name="instruments/controlsQuad/throttle-levers/lever[2]/rotation">
+      <function>
+	<product>
+	  <property>instruments/controlsQuad/throttle-levers/lever[2]/level</property>
+	  <value>60</value>
+	</product>
+      </function>
+      <clipto>
+	<min>0</min>
+	<max>60</max>
+      </clipto>
+    </fcs_function>
+
+    <fcs_function name="instruments/controlsQuad/throttle-levers/lever[3]/rotation">
+      <function>
+	<product>
+	  <property>instruments/controlsQuad/throttle-levers/lever[3]/level</property>
+	  <value>60</value>
+	</product>
+      </function>
+      <clipto>
+	<min>0</min>
+	<max>60</max>
+      </clipto>
+    </fcs_function>
+
+    <switch name="instruments/controlsQuad/throttle-levers/lever/reverser">
+      <default value="/controls/engines/engine/reverser"/>
+    </switch>
+
+    <switch name="instruments/controlsQuad/throttle-levers/lever[1]/reverser">
+      <default value="/controls/engines/engine[1]/reverser"/>
+    </switch>
+
+    <switch name="instruments/controlsQuad/throttle-levers/lever[2]/reverser">
+      <default value="/controls/engines/engine[2]/reverser"/>
+    </switch>
+
+    <switch name="instruments/controlsQuad/throttle-levers/lever[3]/reverser">
+      <default value="/controls/engines/engine[3]/reverser"/>
+    </switch>
+
+    <switch name="instruments/controlsQuad/throttle-levers/reverser-all">
+      <default value="0"/>
+      <test logic="AND" value="1">
+	instruments/controlsQuad/throttle-levers/lever/reverser eq 1
+	instruments/controlsQuad/throttle-levers/lever[1]/reverser eq 1
+	instruments/controlsQuad/throttle-levers/lever[2]/reverser eq 1
+	instruments/controlsQuad/throttle-levers/lever[3]/reverser eq 1
+      </test>
+    </switch>
+
+    <!-- Buffering throtlle when lever unselected -->
+    <switch name="/controls/engines/engine/throttle">
+      <default value="/controls/engines/engine/throttle"/>
+      <test value="/controls/engines/engine/throttle-buffer">
+	instruments/controlsQuad/throttle-levers/lever/selected eq 0	
+      </test>
+    </switch>
+
+    <switch name="/controls/engines/engine/throttle-buffer">
+      <default value="/controls/engines/engine/throttle-buffer"/>
+      <test value="/controls/engines/engine/throttle">
+	instruments/controlsQuad/throttle-levers/lever/selected eq 1	
+      </test>
+    </switch>
+
+    <switch name="/controls/engines/engine[1]/throttle">
+      <default value="/controls/engines/engine[1]/throttle"/>
+      <test value="/controls/engines/engine[1]/throttle-buffer">
+	instruments/controlsQuad/throttle-levers/lever[1]/selected eq 0	
+      </test>
+    </switch>
+
+    <switch name="/controls/engines/engine[1]/throttle-buffer">
+      <default value="/controls/engines/engine[1]/throttle-buffer"/>
+      <test value="/controls/engines/engine[1]/throttle">
+	instruments/controlsQuad/throttle-levers/lever[1]/selected eq 1	
+      </test>
+    </switch>
+
+    <switch name="/controls/engines/engine[2]/throttle">
+      <default value="/controls/engines/engine[2]/throttle"/>
+      <test value="/controls/engines/engine[2]/throttle-buffer">
+	instruments/controlsQuad/throttle-levers/lever[2]/selected eq 0	
+      </test>
+    </switch>
+
+    <switch name="/controls/engines/engine[2]/throttle-buffer">
+      <default value="/controls/engines/engine[2]/throttle-buffer"/>
+      <test value="/controls/engines/engine[2]/throttle">
+	instruments/controlsQuad/throttle-levers/lever[2]/selected eq 1	
+      </test>
+    </switch>
+
+    <switch name="/controls/engines/engine[3]/throttle">
+      <default value="/controls/engines/engine[3]/throttle"/>
+      <test value="/controls/engines/engine[3]/throttle-buffer">
+	instruments/controlsQuad/throttle-levers/lever[3]/selected eq 0	
+      </test>
+    </switch>
+
+    <switch name="/controls/engines/engine[3]/throttle-buffer">
+      <default value="/controls/engines/engine[3]/throttle-buffer"/>
+      <test value="/controls/engines/engine[3]/throttle">
+	instruments/controlsQuad/throttle-levers/lever[3]/selected eq 1	
+      </test>
+    </switch>
+  </channel>
+
+  <channel name="Parking Brake Lever">
+    <switch name="instruments/controlsQuad/parking-lever/brake-parking">
+      <default value="/controls/gear/brake-parking"/>
+    </switch>
+  </channel>
+
+  <property value="0">instruments/controlsQuad/flaps-lever/index-switch/actioned</property>
+  <channel name="Flaps Lever">
+    <switch name="instruments/controlsQuad/flaps-lever/flaps">
+      <default value="/controls/flight/flaps"/>
+    </switch>
+
+    <switch name="instruments/controlsQuad/flaps-lever/flaps-pos">
+      <default value="0"/>
+      <test value="1">
+	instruments/controlsQuad/flaps-lever/flaps eq 0.2
+      </test>
+      <test value="2">
+	instruments/controlsQuad/flaps-lever/flaps eq 0.4
+      </test>
+      <test value="3">
+	instruments/controlsQuad/flaps-lever/flaps eq 0.6
+      </test>
+      <test value="4">
+	instruments/controlsQuad/flaps-lever/flaps eq 1
+      </test>
+    </switch>
+
+    <fcs_function name="instruments/controlsQuad/flaps-lever/rotation">
+      <function>
+	<product>
+	  <property>instruments/controlsQuad/flaps-lever/flaps-pos</property>
+	  <value>13</value>
+	</product>
+      </function>
+      <clipto>
+	<min>0</min>
+	<max>52</max>
+      </clipto>
+    </fcs_function>
+
+    <fcs_function name="instruments/controlsQuad/flaps-lever/index-switch/rotation">
+      <function>
+	<product>
+	  <property>instruments/controlsQuad/flaps-lever/index-switch/actioned</property>
+	  <value>55.0</value>
+	</product>
+      </function>
+      <clipto>
+	<min>-55</min>
+	<max>55</max>
+      </clipto>
+    </fcs_function>
+  </channel>
+
+  <property value="0">instruments/controlsQuad/spoilers-lever/actioned</property>
+  <channel name="Spoiler levers">
+    <fcs_function name="instruments/controlsQuad/spoilers-lever/rotation">
+      <function>
+	<product>
+	  <property>instruments/controlsQuad/spoilers-lever/actioned</property>
+	  <value>45.0</value>
+	</product>
+      </function>
+      <clipto>
+	<min>-45</min>
+	<max>45</max>
+      </clipto>
+    </fcs_function>
+  </channel>
+
+  <property value="0">instruments/controlsQuad/slats-dis/guard</property>
+  <channel name="Spoiler levers">
+    <fcs_function name="instruments/controlsQuad/slats-dis/rotation">
+      <function>
+	<product>
+	  <property>instruments/controlsQuad/slats-dis/guard</property>
+	  <value>45.0</value>
+	</product>
+      </function>
+      <clipto>
+	<min>0</min>
+	<max>45</max>
+      </clipto>
+    </fcs_function>
+  </channel>
+
+  <channel name="Stab Trim Lever">
+    <switch name="instruments/controlsQuad/stabTrim-lever/actuator">
+      <default value="fcs/trim-actuators/pitch/actuator"/>
+    </switch>
+    
+    <fcs_function name="instruments/controlsQuad/stabTrim-lever/rotation">
+      <function>
+	<product>
+	  <property>instruments/controlsQuad/stabTrim-lever/actuator</property>
+	  <value>24</value>
+	</product>
+      </function>
+      <clipto>
+	<min>-24</min>
+	<max>24</max>
+      </clipto>
+    </fcs_function>
+  </channel>
+  
+  <channel name="Aural silence">
+    <switch name="instruments/controlsQuad/aural/silenced">
+      <default value="0"/>
+      <test value="1">
+	/sim/sound/enabled eq 0
+      </test>
+    </switch>
+  </channel>
+  
+</system>

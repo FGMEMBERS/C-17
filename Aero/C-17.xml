@@ -65,6 +65,7 @@
   <system name="STBY RMIDME: C-17" file="Models/Panels/Instruments/RMIDME/RMIDME-systems.xml" />
   <system name="CNC RADIO: C-17" file="Models/Panels/Instruments/cnc-radio/cnc-radio-systems.xml" />
   <system name="TRIM INDICATORS: C-17" file="Models/Panels/Instruments/trim-indicators/trim-indicators-systems.xml" />
+  <system name="CONTROLS QUAD: C-17" file="Models/Panels/Instruments/Pedestal/controlsQuad/controlsQuad-systems.xml" />
   
   <!--Output-->
   <output name="C-17-jsbim-output.csv" type="CSV" rate="120">

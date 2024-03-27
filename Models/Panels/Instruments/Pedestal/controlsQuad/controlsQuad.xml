@@ -1,0 +1,624 @@
+<?xml version="1.0"?>
+
+<!--
+    :copyright: 2024, IAHM-COL
+    License: GPLv3
+    
+    Redistribution, or reuse, with or without modifications
+    shall keep this attribution information. 
+-->
+
+<PropertyList>
+  <path>controlsQuad.ac</path>
+
+  <!-- Throttles -->
+  <animation>
+    <name>throttle-lever-1</name>
+    <object-name>throttle.lever.1</object-name>
+    <object-name>throttle.lever.1.led</object-name>
+    <object-name>speebrake.lever.left</object-name>
+  </animation>
+
+  <animation>
+    <name>throttle-lever-2</name>
+    <object-name>throttle.lever.2</object-name>
+    <object-name>throttle.lever.2.led</object-name>
+    <object-name>reverser.button.bottom.led</object-name>
+    <object-name>reverser.button.bottom</object-name>
+    <object-name>reverser.button.top.led</object-name>
+    <object-name>reverser.button.top</object-name>
+  </animation>
+
+  <animation>
+    <name>throttle-lever-3</name>
+    <object-name>throttle.lever.3</object-name>
+    <object-name>throttle.lever.3.led</object-name>
+  </animation>
+
+  <animation>
+    <name>throttle-lever-4</name>
+    <object-name>throttle.lever.4</object-name>
+    <object-name>throttle.lever.4.led</object-name>
+    <object-name>speebrake.lever.right</object-name>
+  </animation>
+
+  <animation>
+    <type>knob</type>
+    <object-name>throttle.lever.1</object-name>
+    <object-name>throttle.lever.2</object-name>
+    <object-name>throttle.lever.3</object-name>
+    <object-name>throttle.lever.4</object-name>
+
+    <increase>
+      <binding>                              
+        <command>nasal</command>
+        <script>_ = sprintf("Throttle = %.3f", controls.adjThrottle(0.25))</script>
+      </binding>
+    </increase>
+
+    <decrease>
+      <binding>                              
+        <command>nasal</command>
+        <script>_ = sprintf("Throttle = %.3f", controls.adjThrottle(-0.25))</script>
+      </binding>
+    </decrease>
+  </animation>
+  
+  <animation>
+    <type>rotate</type>
+    <object-name>throttle-lever-1</object-name>
+    <property>fdm/jsbsim/instruments/controlsQuad/throttle-levers/lever/rotation</property>
+    <center>
+      <x-m>-0.055702</x-m>
+      <y-m>-0.045017</y-m>
+      <z-m>-0.044992</z-m>
+    </center>
+    <axis>
+      <x>0</x>
+      <y>-1</y>
+      <z>0</z>
+    </axis>
+  </animation>
+
+  <animation>
+    <type>rotate</type>
+    <object-name>throttle-lever-2</object-name>
+    <property>fdm/jsbsim/instruments/controlsQuad/throttle-levers/lever[1]/rotation</property>
+    <center>
+      <x-m>-0.055894</x-m>
+      <y-m>-0.016439</y-m>
+      <z-m>-0.044888</z-m>
+    </center>
+    <axis>
+      <x>0</x>
+      <y>-1</y>
+      <z>0</z>
+    </axis>
+  </animation>
+
+  <animation>
+    <type>rotate</type>
+    <object-name>throttle-lever-3</object-name>
+    <property>fdm/jsbsim/instruments/controlsQuad/throttle-levers/lever[2]/rotation</property>
+    <center>
+      <x-m>-0.056089</x-m>
+      <y-m>0.012637</y-m>
+      <z-m>-0.044782</z-m>
+    </center>
+    <axis>
+      <x>0</x>
+      <y>-1</y>
+      <z>0</z>
+    </axis>
+  </animation>
+
+  <animation>
+    <type>rotate</type>
+    <object-name>throttle-lever-4</object-name>
+    <property>fdm/jsbsim/instruments/controlsQuad/throttle-levers/lever[3]/rotation</property>
+    <center>
+      <x-m>-0.056272</x-m>
+      <y-m>0.039765</y-m>
+      <z-m>-0.044682</z-m>
+    </center>
+    <axis>
+      <x>0</x>
+      <y>-1</y>
+      <z>0</z>
+    </axis>
+  </animation>
+
+  <animation>
+    <type>textranslate</type>
+    <object-name>throttle.lever.1.led</object-name>
+    <property>fdm/jsbsim/instruments/controlsQuad/throttle-levers/lever/selected</property>
+    <factor>0.083007813</factor>
+    <axis>
+      <x>1</x>
+      <y>0</y>
+    </axis>
+  </animation>
+
+  <animation>
+    <type>textranslate</type>
+    <object-name>throttle.lever.2.led</object-name>
+    <property>fdm/jsbsim/instruments/controlsQuad/throttle-levers/lever[1]/selected</property>
+    <factor>0.083007813</factor>
+    <axis>
+      <x>1</x>
+      <y>0</y>
+    </axis>
+  </animation>
+
+  <animation>
+    <type>textranslate</type>
+    <object-name>throttle.lever.3.led</object-name>
+    <property>fdm/jsbsim/instruments/controlsQuad/throttle-levers/lever[2]/selected</property>
+    <factor>0.083007813</factor>
+    <axis>
+      <x>1</x>
+      <y>0</y>
+    </axis>
+  </animation>
+
+  <animation>
+    <type>textranslate</type>
+    <object-name>throttle.lever.4.led</object-name>
+    <property>fdm/jsbsim/instruments/controlsQuad/throttle-levers/lever[3]/selected</property>
+    <factor>0.083007813</factor>
+    <axis>
+      <x>1</x>
+      <y>0</y>
+    </axis>
+  </animation>
+
+  <animation>
+    <type>pick</type>
+    <object-name>throttle.lever.1.led</object-name>
+    <action>
+      <button>0</button>
+      <repeatable>false</repeatable>
+      <binding>
+	<command>property-toggle</command>
+	<property>fdm/jsbsim/instruments/controlsQuad/throttle-levers/lever/selected</property>
+      </binding>
+    </action>
+  </animation>
+
+  <animation>
+    <type>pick</type>
+    <object-name>throttle.lever.2.led</object-name>
+    <action>
+      <button>0</button>
+      <repeatable>false</repeatable>
+      <binding>
+	<command>property-toggle</command>
+	<property>fdm/jsbsim/instruments/controlsQuad/throttle-levers/lever[1]/selected</property>
+      </binding>
+    </action>
+  </animation>
+
+  <animation>
+    <type>pick</type>
+    <object-name>throttle.lever.3.led</object-name>
+    <action>
+      <button>0</button>
+      <repeatable>false</repeatable>
+      <binding>
+	<command>property-toggle</command>
+	<property>fdm/jsbsim/instruments/controlsQuad/throttle-levers/lever[2]/selected</property>
+      </binding>
+    </action>
+  </animation>
+
+  <animation>
+    <type>pick</type>
+    <object-name>throttle.lever.4.led</object-name>
+    <action>
+      <button>0</button>
+      <repeatable>false</repeatable>
+      <binding>
+	<command>property-toggle</command>
+	<property>fdm/jsbsim/instruments/controlsQuad/throttle-levers/lever[3]/selected</property>
+      </binding>
+    </action>
+  </animation>
+
+  <!-- Spoilers levers -->  
+  <animation>
+    <type>pick</type>
+    <object-name>speebrake.lever.right</object-name>
+    <object-name>speebrake.lever.left</object-name>
+    <action>
+      <button>0</button>
+      <repeatable>true</repeatable>
+      <interval-sec>0.2</interval-sec>
+      <binding>
+	<command>property-assign</command>
+	<property>fdm/jsbsim/instruments/controlsQuad/spoilers-lever/actioned</property>
+	<value>1</value>
+      </binding>
+      <binding>
+	<command>nasal</command>
+	<script>controls.stepSpoilers(1);</script>
+      </binding>
+      <mod-up>
+	<binding>
+	  <command>property-assign</command>
+	  <property>fdm/jsbsim/instruments/controlsQuad/spoilers-lever/actioned</property>
+	  <value>0</value>
+	</binding>
+      </mod-up>
+    </action>
+
+    <action>
+      <button>1</button>
+      <repeatable>true</repeatable>
+      <interval-sec>0.2</interval-sec>
+      <binding>
+	<command>property-assign</command>
+	<property>fdm/jsbsim/instruments/controlsQuad/spoilers-lever/actioned</property>
+	<value>-1</value>
+      </binding>
+      <binding>
+	<command>nasal</command>
+	<script>controls.stepSpoilers(-1);</script>
+      </binding>
+      <mod-up>
+	<binding>
+	  <command>property-assign</command>
+	  <property>fdm/jsbsim/instruments/controlsQuad/spoilers-lever/actioned</property>
+	  <value>0</value>
+	</binding>
+      </mod-up>
+    </action>
+  </animation>
+
+  <animation>
+    <type>rotate</type>
+    <object-name>speebrake.lever.right</object-name>
+    <property>fdm/jsbsim/instruments/controlsQuad/spoilers-lever/rotation</property>
+    <center>
+      <x-m>0.183091</x-m>
+      <y-m>0.067441</y-m>
+      <z-m>0.219002</z-m>
+    </center>
+    <axis>
+      <x>0</x>
+      <y>0</y>
+      <z>1</z>
+    </axis>
+  </animation>
+  
+  <animation>
+    <type>rotate</type>
+    <object-name>speebrake.lever.left</object-name>
+    <property>fdm/jsbsim/instruments/controlsQuad/spoilers-lever/rotation</property>
+    <center>
+      <x-m>0.183091</x-m>
+      <y-m>-0.059186</y-m>
+      <z-m>0.219002</z-m>
+    </center>
+    <axis>
+      <x>0</x>
+      <y>0</y>
+      <z>-1</z>
+    </axis>
+  </animation>
+  
+  <!-- Parking Brake -->
+  <animation>
+    <type>translate</type>
+    <object-name>parkingbreak.knob</object-name>
+    <property>fdm/jsbsim/instruments/controlsQuad/parking-lever/brake-parking</property>
+    <factor>0.060313</factor>
+    <axis>
+      <x>-1</x>
+      <y>0</y>
+      <z>0</z>
+    </axis>
+  </animation>
+
+  <animation>
+    <type>knob</type>
+    <object-name>parkingbreak.knob</object-name>
+
+    <increase>
+      <binding>
+	<command>property-assign</command>
+	<property>/controls/gear/brake-parking</property>
+	<value>1</value>
+      </binding>
+    </increase>
+
+    <decrease>
+      <binding>
+	<command>property-assign</command>
+	<property>/controls/gear/brake-parking</property>
+	<value>0</value>
+      </binding>
+    </decrease>
+  </animation>
+  
+  <!-- flaps lever -->
+  <animation>
+    <type>knob</type>
+    <object-name>flap.knob</object-name>
+    <property>fdm/jsbsim/instruments/controlsQuad/flaps-lever/rotation</property>
+    <center>
+      <x-m>0.058984</x-m>
+      <y-m>0.04817</y-m>
+      <z-m>-0.045665</z-m>
+    </center>
+    <axis>
+      <x>0</x>
+      <y>1</y>
+      <z>0</z>
+    </axis>
+
+    <increase>
+      <binding>
+        <command>nasal</command>
+        <script>controls.flapsDown(-1);</script>
+      </binding>
+    </increase>
+
+    <decrease>
+      <binding>
+        <command>nasal</command>
+        <script>controls.flapsDown(1);</script>
+      </binding>
+    </decrease>
+  </animation>
+
+  <animation>
+    <type>pick</type>
+    <object-name>switch</object-name>
+    <action>
+      <button>0</button>
+      <repeatable>true</repeatable>
+      <interval-sec>0.2</interval-sec>
+      <binding>
+	<command>property-assign</command>
+	<property>fdm/jsbsim/instruments/controlsQuad/flaps-lever/index-switch/actioned</property>
+	<value>1</value>
+      </binding>
+      <binding>
+	<command>property-adjust</command>
+	<property>/sim/flaps/index</property>
+	<step>0.01</step>
+	<min>0.5</min>
+	<max>1</max>
+	<wrap>false</wrap>
+      </binding>
+      <mod-up>
+	<binding>
+	  <command>property-assign</command>
+	  <property>fdm/jsbsim/instruments/controlsQuad/flaps-lever/index-switch/actioned</property>
+	  <value>0</value>
+	</binding>
+      </mod-up>
+    </action>
+
+    <action>
+      <button>1</button>
+      <repeatable>true</repeatable>
+      <interval-sec>0.2</interval-sec>
+      <binding>
+	<command>property-assign</command>
+	<property>fdm/jsbsim/instruments/controlsQuad/flaps-lever/index-switch/actioned</property>
+	<value>-1</value>
+      </binding>
+      <binding>
+	<command>property-adjust</command>
+	<property>/sim/flaps/index</property>
+	<step>-0.01</step>
+	<min>0.5</min>
+	<max>1</max>
+	<wrap>false</wrap>
+      </binding>
+      <mod-up>
+	<binding>
+	  <command>property-assign</command>
+	  <property>fdm/jsbsim/instruments/controlsQuad/flaps-lever/index-switch/actioned</property>
+	  <value>0</value>
+	</binding>
+      </mod-up>
+    </action>
+  </animation>
+  
+  <animation>
+    <type>rotate</type>
+    <object-name>switch</object-name>
+    <property>fdm/jsbsim/instruments/controlsQuad/flaps-lever/index-switch/rotation</property>
+    <center>
+      <x-m>0.173491</x-m>
+      <y-m>0.020564</y-m>
+      <z-m>0.065786</z-m>
+    </center>
+    <axis>
+      <x>0</x>
+      <y>-1</y>
+      <z>0</z>
+    </axis>
+  </animation>
+  
+  <!-- Aural Silence -->
+  <animation>
+    <type>textranslate</type>
+    <object-name>aural.silence.button</object-name>
+    <property>fdm/jsbsim/instruments/controlsQuad/aural/silenced</property>
+    <factor>0.024414062</factor>
+    <axis>
+      <x>0</x>
+      <y>-1</y>
+    </axis>
+  </animation>
+
+  <animation>
+    <type>pick</type>
+    <object-name>aural.silence.button</object-name>
+    <action>
+      <button>0</button>
+      <repeatable>false</repeatable>
+      <binding>
+	<command>property-toggle</command>
+	<property>sim/sound/enabled</property>
+      </binding>
+    </action>
+  </animation>
+
+  <!-- Reverser toggles -->
+  <animation>
+    <type>textranslate</type>
+    <object-name>reverser.button.top.led</object-name>
+    <object-name>reverser.button.bottom.led</object-name>
+    <property>fdm/jsbsim/instruments/controlsQuad/throttle-levers/reverser-all</property>
+    <factor>0.083007813</factor>
+    <axis>
+      <x>1</x>
+      <y>0</y>
+    </axis>
+  </animation>
+
+  <animation>
+    <type>pick</type>
+    <object-name>reverser.button.top</object-name>
+    <object-name>reverser.button.bottom</object-name>
+    <action>
+      <button>0</button>
+      <repeatable>false</repeatable>
+      <binding>
+	<command>nasal</command>
+	<script>reversethrust.togglereverser();</script>
+      </binding>
+    </action>
+  </animation>
+
+  <!-- Stab Trim -->
+  <animation>
+    <type>knob</type>
+    <object-name>stabTrim.knob</object-name>
+    <property>fdm/jsbsim/instruments/controlsQuad/stabTrim-lever/rotation</property>
+    <center>
+      <x-m>0.058984</x-m>
+      <y-m>-0.011873</y-m>
+      <z-m>-0.045665</z-m>
+    </center>
+    <axis>
+      <x>0</x>
+      <y>1</y>
+      <z>0</z>
+    </axis>
+
+    <action>
+      <binding>
+	<command>property-adjust</command>
+	<property>/controls/flight/elevator-trim</property>
+	<factor>-0.01</factor>
+	<min>-1</min>
+	<max>1</max>
+	<wrap>false</wrap>      
+      </binding>
+    </action>
+  </animation>
+
+  <!-- Slats Dis -->
+  <animation>
+    <object-name>slats.disable.guard</object-name>
+    <type>material</type>
+    <transparency>
+      <alpha>0.65</alpha>
+    </transparency>
+  </animation>
+
+  <animation>
+    <type>select</type>
+    <object-name>slats.dis.led</object-name>
+    <condition>
+      <equals>
+	<property>/sim/slats/enabled</property>
+	<value>false</value>
+      </equals>
+    </condition>
+  </animation>
+
+  <animation>
+    <type>pick</type>
+    <object-name>slats.dis.led</object-name>
+    <object-name>slats.dis.button</object-name>
+    <action>
+      <button>0</button>
+      <repeatable>false</repeatable>
+      <binding>
+	<!-- only pickable when guard is open -->
+	<condition>
+	  <equals>
+	    <property>fdm/jsbsim/instruments/controlsQuad/slats-dis/guard</property>
+	    <value>1</value>
+	  </equals>
+	</condition>
+	<command>property-toggle</command>
+	<property>/sim/slats/enabled</property>
+      </binding>
+    </action>
+  </animation>
+
+  <animation>
+    <type>pick</type>
+    <object-name>slats.disable.guard</object-name>
+    <action>
+      <button>0</button>
+      <repeatable>false</repeatable>
+      <binding>
+	<command>property-toggle</command>
+	<property>fdm/jsbsim/instruments/controlsQuad/slats-dis/guard</property>
+      </binding>
+    </action>
+  </animation>
+
+  <animation>
+    <type>rotate</type>
+    <object-name>slats.disable.guard</object-name>
+    <property>fdm/jsbsim/instruments/controlsQuad/slats-dis/rotation</property>
+    <center>
+      <x-m>0.016552</x-m>
+      <y-m>0.017197</y-m>
+      <z-m>0.118843</z-m>
+    </center>
+    <axis>
+      <x>0</x>
+      <y>-1</y>
+      <z>0</z>
+    </axis>
+  </animation>
+  
+  <!-- Lightmaps -->
+  <effect>
+    <inherits-from>backlighting</inherits-from>
+    <object-name>quad.housing.skin</object-name>
+    <object-name>parkingbreak-stand</object-name>
+    <object-name>reverser.button.top.led</object-name>
+    <object-name>reverser.button.bottom.led</object-name>
+    <object-name>throttle.lever.1.led</object-name>
+    <object-name>throttle.lever.2.led</object-name>
+    <object-name>throttle.lever.3.led</object-name>
+    <object-name>throttle.lever.4.led</object-name>
+  </effect>
+  <effect>
+    <inherits-from>floodlighting</inherits-from>
+    <object-name>quad.housing</object-name>
+    <object-name>throttle.lever.1</object-name>
+    <object-name>throttle.lever.2</object-name>
+    <object-name>throttle.lever.3</object-name>
+    <object-name>throttle.lever.4</object-name>
+    <object-name>reverser.button.top</object-name>
+    <object-name>reverser.button.bottom</object-name>
+    <object-name>speebrake.lever.left</object-name>
+    <object-name>speebrake.lever.right</object-name>
+    <object-name>parkingbreak.knob</object-name>
+    <object-name>stabTrim.knob</object-name>
+    <object-name>flap.knob</object-name>
+    <object-name>switch</object-name>
+  </effect>
+</PropertyList>

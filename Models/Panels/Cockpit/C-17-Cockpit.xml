@@ -30,6 +30,17 @@
       <pitch-offset>-10</pitch-offset>
     </offsets>
   </model>
+  
+  <!-- Pedestal Instruments -->
+  <model>
+    <path>Models/Panels/Instruments/Pedestal/Instruments.xml</path> 
+    <offsets> 
+      <x-m> 1.28</x-m>
+      <y-m> 0.01</y-m>
+      <z-m> 0.39</z-m>
+      <pitch-offset>-10</pitch-offset>
+    </offsets>
+  </model>
 
   <!-- Lightmaps -->
   <effect>
