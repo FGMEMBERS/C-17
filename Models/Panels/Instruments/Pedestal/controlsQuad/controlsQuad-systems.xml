@@ -169,7 +169,6 @@ shall keep this attribution information.
 	instruments/controlsQuad/throttle-levers/lever[3]/selected eq 1	
       </test>
     </switch>
-    
   </channel>
 
   <channel name="Parking Brake Lever">
@@ -219,11 +218,11 @@ shall keep this attribution information.
 	  <property>instruments/controlsQuad/flaps-lever/index-switch/actioned</property>
 	  <value>55.0</value>
 	</product>
-	<clipto>
-	  <min>-55</min>
-	  <max>55</max>
-	</clipto>
       </function>
+      <clipto>
+	<min>-55</min>
+	<max>55</max>
+      </clipto>
     </fcs_function>
   </channel>
 
@@ -235,11 +234,11 @@ shall keep this attribution information.
 	  <property>instruments/controlsQuad/spoilers-lever/actioned</property>
 	  <value>45.0</value>
 	</product>
-	<clipto>
-	  <min>-45</min>
-	  <max>45</max>
-	</clipto>
       </function>
+      <clipto>
+	<min>-45</min>
+	<max>45</max>
+      </clipto>
     </fcs_function>
   </channel>
 
@@ -251,15 +250,14 @@ shall keep this attribution information.
 	  <property>instruments/controlsQuad/slats-dis/guard</property>
 	  <value>45.0</value>
 	</product>
-	<clipto>
-	  <min>0</min>
-	  <max>45</max>
-	</clipto>
       </function>
+      <clipto>
+	<min>0</min>
+	<max>45</max>
+      </clipto>
     </fcs_function>
   </channel>
 
-  
   <channel name="Stab Trim Lever">
     <switch name="instruments/controlsQuad/stabTrim-lever/actuator">
       <default value="fcs/trim-actuators/pitch/actuator"/>
