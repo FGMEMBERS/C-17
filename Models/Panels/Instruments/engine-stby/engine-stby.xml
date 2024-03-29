@@ -1,0 +1,86 @@
+<?xml version="1.0"?>
+
+<!--
+    :copyright: 2023, IAHM-COL
+    License: GPLv3
+    
+    Redistribution, or reuse, with or without modifications
+    shall keep this attribution information. 
+-->
+
+<PropertyList>
+  <path>engine-stby.ac</path>
+
+  <animation>
+    <type>knob</type>
+    <object-name>mode.knob</object-name>
+    <property>fdm/jsbsim/instruments/engine-stdby/display/knob-rotation</property>
+    <center>
+      <x-m>0.006241</x-m>
+      <y-m>-0.070358</y-m>
+      <z-m>-0.0188</z-m>
+    </center>
+    <axis>
+      <x>-1</x><y>0</y><z>0</z>
+    </axis>
+    
+    <action>
+      <binding>
+        <command>property-adjust</command>
+        <property>fdm/jsbsim/instruments/engine-stdby/display/mode</property>
+        <factor>1</factor>
+        <min>0</min>
+        <max>2</max>                
+        <wrap>false</wrap>
+      </binding>
+    </action>
+  </animation>
+  
+  <animation>
+    <type>knob</type>
+    <object-name>level.knob</object-name>
+    <property>fdm/jsbsim/instruments/engine-stdby/epr-rating/knob-rotation</property>
+    <center>
+      <x-m>0.006241</x-m>
+      <y-m>-0.070358</y-m>
+      <z-m>0.013846</z-m>
+    </center>
+    <axis>
+      <x>-1</x><y>0</y><z>0</z>
+    </axis>
+    
+    <action>
+      <binding>
+	<condition>
+	  <equals>
+	    <property>fdm/jsbsim/instruments/engine-stdby/display/mode</property>
+	    <value>2</value>
+	  </equals>
+	</condition>
+        <command>property-adjust</command>
+        <property>fdm/jsbsim/instruments/engine-stdby/epr-rating/man-rating</property>
+        <factor>0.01</factor>
+        <min>1.00</min>
+        <max>2.00</max>                
+        <wrap>false</wrap>
+      </binding>
+    </action>
+  </animation>
+
+  <!-- Lightmaps -->
+  <effect>
+    <inherits-from>backlighting</inherits-from>
+    <object-name>mode.1.button</object-name>
+    <object-name>mode.2.button</object-name>
+    <object-name>mode.3.button</object-name>
+    <object-name>mode.4.button</object-name>
+    <object-name>mode.5.button</object-name>
+    <object-name>level.knob</object-name>
+    <object-name>mode.knob</object-name>
+  </effect>
+  <effect>
+    <inherits-from>floodlighting</inherits-from>
+    <object-name>frame</object-name>
+    <object-name>screws</object-name>
+  </effect>
+</PropertyList>

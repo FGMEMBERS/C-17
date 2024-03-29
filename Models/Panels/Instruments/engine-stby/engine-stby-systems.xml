@@ -1,0 +1,54 @@
+<?xml version="1.0"?>
+<?xml-stylesheet href="JSBSim.xsl" type="application/xml"?>
+
+<!--
+:copyright: 2024, IAHM-COL
+License: GPLv3
+
+Redistribution, or reuse, with or without modifications
+shall keep this attribution information. 
+-->
+
+<system name="Engine Standby and EPR RTG">
+  <!-- MAX: 0, INT: 1, MCT: 2, DRT: 3 MAN: 4 -->
+  <property value="1">instruments/engine-stdby/display/epr-mode</property>
+  <!-- OFF: 0, N2: 1, EPR: 2 -->
+  <property value="0">instruments/engine-stdby/display/mode</property>
+  <property value="1.87">instruments/engine-stdby/epr-rating/man-rating</property>
+  <channel name="Knobs">
+    <fcs_function name="instruments/engine-stdby/epr-rating/knob-rotation">
+      <function>
+	<difference>
+	  <product>
+	    <property>instruments/engine-stdby/epr-rating/man-rating</property>
+	    <value>300</value>
+	  </product>
+	  <value>300</value>
+	</difference>
+      </function>
+      <clipto>
+	<min>0</min>
+	<max>300</max>
+      </clipto>
+    </fcs_function>
+
+    <fcs_function name="instruments/engine-stdby/display/knob-rotation">
+      <function>
+	<product>
+	  <property>instruments/engine-stdby/display/mode</property>
+	  <value>32</value>
+	</product>
+      </function>
+      <clipto>
+	<min>0</min>
+	<max>64</max>
+      </clipto>
+    </fcs_function>
+  </channel>
+
+  <channel name="EPR Rating modes">
+    <switch name="instruments/engine-stdby/epr-rating/rating">
+      <default value="instruments/engine-stdby/epr-rating/man-rating"/>
+    </switch>
+  </channel>
+</system>

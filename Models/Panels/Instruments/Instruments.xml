@@ -156,7 +156,7 @@
     <path>Models/Panels/Instruments/FlapIndicator/FlapIndicator.xml</path>
     <offsets>
       <x-m>0.423</x-m>
-      <y-m>0.08758</y-m>
+      <y-m>0.091189</y-m>
       <z-m>0.73823</z-m>
       <pitch-deg>-6</pitch-deg>
     </offsets>
@@ -357,6 +357,18 @@
       <x-m>0.42839</x-m>
       <y-m>-0.18235</y-m>
       <z-m>0.70629</z-m>
+      <pitch-deg>-6</pitch-deg>
+    </offsets>
+  </model>
+
+  <!-- Engine Standby -->
+  <model>
+    <name>STBY ENG</name>
+    <path>Models/Panels/Instruments/engine-stby/engine-stby.xml</path>
+    <offsets>
+      <x-m>0.422573</x-m>
+      <y-m>-0.033754</y-m>
+      <z-m>0.730356</z-m>
       <pitch-deg>-6</pitch-deg>
     </offsets>
   </model>
