@@ -67,6 +67,107 @@
     </action>
   </animation>
 
+  <!-- Mode selectors -->
+  <animation>
+    <type>pick</type>
+    <object-name>mode.1.button</object-name>
+    <action>
+      <button>0</button>
+      <repeatable>false</repeatable>
+      <binding>
+	<condition>
+	  <equals>
+	    <property>fdm/jsbsim/instruments/engine-stdby/display/mode</property>
+	    <value>2</value>
+	  </equals>
+	</condition>
+	<command>property-assign</command>
+	<property>fdm/jsbsim/instruments/engine-stdby/display/epr-mode</property>
+	<value>0</value>
+      </binding>
+    </action>
+  </animation>
+
+  <animation>
+    <type>pick</type>
+    <object-name>mode.2.button</object-name>
+    <action>
+      <button>0</button>
+      <repeatable>false</repeatable>
+      <binding>
+	<condition>
+	  <equals>
+	    <property>fdm/jsbsim/instruments/engine-stdby/display/mode</property>
+	    <value>2</value>
+	  </equals>
+	</condition>
+	<command>property-assign</command>
+	<property>fdm/jsbsim/instruments/engine-stdby/display/epr-mode</property>
+	<value>1</value>
+      </binding>
+    </action>
+  </animation>
+
+  <animation>
+    <type>pick</type>
+    <object-name>mode.3.button</object-name>
+    <action>
+      <button>0</button>
+      <repeatable>false</repeatable>
+      <binding>
+	<condition>
+	  <equals>
+	    <property>fdm/jsbsim/instruments/engine-stdby/display/mode</property>
+	    <value>2</value>
+	  </equals>
+	</condition>
+	<command>property-assign</command>
+	<property>fdm/jsbsim/instruments/engine-stdby/display/epr-mode</property>
+	<value>2</value>
+      </binding>
+    </action>
+  </animation>
+  
+  <animation>
+    <type>pick</type>
+    <object-name>mode.4.button</object-name>
+    <action>
+      <button>0</button>
+      <repeatable>false</repeatable>
+      <binding>
+	<condition>
+	  <equals>
+	    <property>fdm/jsbsim/instruments/engine-stdby/display/mode</property>
+	    <value>2</value>
+	  </equals>
+	</condition>
+	<command>property-assign</command>
+	<property>fdm/jsbsim/instruments/engine-stdby/display/epr-mode</property>
+	<value>3</value>
+      </binding>
+    </action>
+  </animation>
+
+  <animation>
+    <type>pick</type>
+    <object-name>mode.5.button</object-name>
+    <action>
+      <button>0</button>
+      <repeatable>false</repeatable>
+      <binding>
+	<condition>
+	  <equals>
+	    <property>fdm/jsbsim/instruments/engine-stdby/display/mode</property>
+	    <value>2</value>
+	  </equals>
+	</condition>
+	<command>property-assign</command>
+	<property>fdm/jsbsim/instruments/engine-stdby/display/epr-mode</property>
+	<value>4</value>
+      </binding>
+    </action>
+  </animation>
+
   <!-- Lightmaps -->
   <effect>
     <inherits-from>backlighting</inherits-from>

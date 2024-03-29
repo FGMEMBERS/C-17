@@ -14,7 +14,6 @@ shall keep this attribution information.
   <property value="1">instruments/engine-stdby/display/epr-mode</property>
   <!-- OFF: 0, N2: 1, EPR: 2 -->
   <property value="0">instruments/engine-stdby/display/mode</property>
-  <property value="1.87">instruments/engine-stdby/epr-rating/man-rating</property>
   <channel name="Knobs">
     <fcs_function name="instruments/engine-stdby/epr-rating/knob-rotation">
       <function>
@@ -46,9 +45,29 @@ shall keep this attribution information.
     </fcs_function>
   </channel>
 
+  <property value="2.00">instruments/engine-stdby/epr-rating/max-rating</property>
+  <property value="1.95">instruments/engine-stdby/epr-rating/int-rating</property>
+  <property value="1.92">instruments/engine-stdby/epr-rating/mct-rating</property>
+  <property value="1.65">instruments/engine-stdby/epr-rating/drt-rating</property>
+  <property value="1.87">instruments/engine-stdby/epr-rating/man-rating</property>
   <channel name="EPR Rating modes">
     <switch name="instruments/engine-stdby/epr-rating/rating">
       <default value="instruments/engine-stdby/epr-rating/man-rating"/>
+      <test value="instruments/engine-stdby/epr-rating/max-rating">
+	instruments/engine-stdby/display/epr-mode eq 0
+      </test>
+      <test value="instruments/engine-stdby/epr-rating/int-rating">
+	instruments/engine-stdby/display/epr-mode eq 1
+      </test>
+      <test value="instruments/engine-stdby/epr-rating/mct-rating">
+	instruments/engine-stdby/display/epr-mode eq 2
+      </test>
+      <test value="instruments/engine-stdby/epr-rating/drt-rating">
+	instruments/engine-stdby/display/epr-mode eq 3
+      </test>
+      <test value="instruments/engine-stdby/epr-rating/man-rating">
+	instruments/engine-stdby/display/epr-mode eq 4
+      </test>
     </switch>
   </channel>
 </system>
