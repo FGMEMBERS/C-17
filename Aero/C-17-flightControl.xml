@@ -598,8 +598,21 @@
       <output>fcs/flap-pos-norm</output>
     </aerosurface_scale>
 
+    <fcs_function name="fcs/slat-cmd-norm-indexed">
+      <function>
+	<product>
+	  <property>fcs/slat-cmd-norm</property>
+	  <property>/sim/flaps/index</property>
+	</product>
+      </function>
+      <clipto>
+	<min>0</min>
+	<max>1</max>
+      </clipto>
+    </fcs_function>
+    
     <kinematic name="slats control">
-      <input>fcs/slat-cmd-norm</input>
+      <input>fcs/slat-cmd-norm-indexed</input>
       <traverse>
         <setting>
           <position>0</position>
