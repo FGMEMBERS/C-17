@@ -212,5 +212,103 @@ shall keep this attribution information.
       </test>      
     </switch>
   </channel>
+
+  <channel name="Engines">    
+    <switch name="instruments/engine-stdby/engines/engine/n2">
+      <default value="/engines/engine/n2"/>
+    </switch>
+
+    <switch name="instruments/engine-stdby/engines/engine[1]/n2">
+      <default value="/engines/engine[1]/n2"/>
+    </switch>
+
+    <switch name="instruments/engine-stdby/engines/engine[2]/n2">
+      <default value="/engines/engine[2]/n2"/>
+    </switch>
+
+    <switch name="instruments/engine-stdby/engines/engine[3]/n2">
+      <default value="/engines/engine[3]/n2"/>
+    </switch>
+
+    <switch name="instruments/engine-stdby/engines/engine/egt-degf">
+      <default value="/engines/engine/egt-degf"/>
+    </switch>
+
+    <switch name="instruments/engine-stdby/engines/engine[1]/egt-degf">
+      <default value="/engines/engine[1]/egt-degf"/>
+    </switch>
+
+    <switch name="instruments/engine-stdby/engines/engine[2]/egt-degf">
+      <default value="/engines/engine[2]/egt-degf"/>
+    </switch>
+
+    <switch name="instruments/engine-stdby/engines/engine[3]/egt-degf">
+      <default value="/engines/engine[3]/egt-degf"/>
+    </switch>
+
+    <fcs_function name="instruments/engine-stdby/engines/engine/egt-degc">
+      <function>
+	<product>
+	  <difference>
+	    <property>instruments/engine-stdby/engines/engine/egt-degf</property>
+	    <value>32</value>
+	  </difference>
+	  <value>0.555555555556</value>
+	</product>
+      </function>
+    </fcs_function>
+
+    <fcs_function name="instruments/engine-stdby/engines/engine[1]/egt-degc">
+      <function>
+	<product>
+	  <difference>
+	    <property>instruments/engine-stdby/engines/engine[1]/egt-degf</property>
+	    <value>32</value>
+	  </difference>
+	  <value>0.555555555556</value>
+	</product>
+      </function>
+    </fcs_function>
+
+    <fcs_function name="instruments/engine-stdby/engines/engine[2]/egt-degc">
+      <function>
+	<product>
+	  <difference>
+	    <property>instruments/engine-stdby/engines/engine[2]/egt-degf</property>
+	    <value>32</value>
+	  </difference>
+	  <value>0.555555555556</value>
+	</product>
+      </function>
+    </fcs_function>
+    
+    <fcs_function name="instruments/engine-stdby/engines/engine[3]/egt-degc">
+      <function>
+	<product>
+	  <difference>
+	    <property>instruments/engine-stdby/engines/engine[3]/egt-degf</property>
+	    <value>32</value>
+	  </difference>
+	  <value>0.555555555556</value>
+	</product>
+      </function>
+    </fcs_function>
+    
+    <switch name="instruments/engine-stdby/engines/engine/n1">
+      <default value="/engines/engine/n1"/>
+    </switch>
+
+    <switch name="instruments/engine-stdby/engines/engine[1]/n1">
+      <default value="/engines/engine[1]/n1"/>
+    </switch>
+
+    <switch name="instruments/engine-stdby/engines/engine[2]/n1">
+      <default value="/engines/engine[2]/n1"/>
+    </switch>
+
+    <switch name="instruments/engine-stdby/engines/engine[3]/n1">
+      <default value="/engines/engine[3]/n1"/>
+    </switch>
+  </channel>
   
 </system>

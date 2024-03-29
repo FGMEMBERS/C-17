@@ -652,6 +652,294 @@
     <character-aspect-ratio type="double">1</character-aspect-ratio>
     <alignment>left-top</alignment>
   </text>
+
+  <text>
+    <name>epr1</name>
+    <font>Helvetica.txf</font>
+    <character-size type="double">0.00750</character-size>
+    <offsets>
+      <x-m>0.006241</x-m>
+      <y-m>-0.042388</y-m>
+      <z-m>0.007598</z-m>
+    </offsets>
+    <axis-alignment>yz-plane</axis-alignment>
+    <type type="string">number-value</type>
+    <format type="string">%0.2f</format>
+    <truncate type="bool">false</truncate>
+    <character-aspect-ratio type="double">1</character-aspect-ratio>
+    <property>engines/engine/epr</property>    
+    <alignment>left-top</alignment>
+  </text>
+
+  <text>
+    <name>epr2</name>
+    <font>Helvetica.txf</font>
+    <character-size type="double">0.00750</character-size>
+    <offsets>
+      <x-m>0.006241</x-m>
+      <y-m>-0.023747</y-m>
+      <z-m>0.007598</z-m>
+    </offsets>
+    <axis-alignment>yz-plane</axis-alignment>
+    <type type="string">number-value</type>
+    <format type="string">%0.2f</format>
+    <truncate type="bool">false</truncate>
+    <character-aspect-ratio type="double">1</character-aspect-ratio>
+    <property>engines/engine[1]/epr</property>    
+    <alignment>left-top</alignment>
+  </text>
+
+  <text>
+    <name>epr3</name>
+    <font>Helvetica.txf</font>
+    <character-size type="double">0.00750</character-size>
+    <offsets>
+      <x-m>0.006241</x-m>
+      <y-m>0.006811</y-m>
+      <z-m>0.007598</z-m>
+    </offsets>
+    <axis-alignment>yz-plane</axis-alignment>
+    <type type="string">number-value</type>
+    <format type="string">%0.2f</format>
+    <truncate type="bool">false</truncate>
+    <character-aspect-ratio type="double">1</character-aspect-ratio>
+    <property>engines/engine[2]/epr</property>    
+    <alignment>left-top</alignment>
+  </text>
+
+  <text>
+    <name>epr4</name>
+    <font>Helvetica.txf</font>
+    <character-size type="double">0.00750</character-size>
+    <offsets>
+      <x-m>0.006241</x-m>
+      <y-m>0.025453</y-m>
+      <z-m>0.007598</z-m>
+    </offsets>
+    <axis-alignment>yz-plane</axis-alignment>
+    <type type="string">number-value</type>
+    <format type="string">%0.2f</format>
+    <truncate type="bool">false</truncate>
+    <character-aspect-ratio type="double">1</character-aspect-ratio>
+    <property>engines/engine[3]/epr</property>    
+    <alignment>left-top</alignment>
+  </text>
+
+  <text>
+    <name>n2-1</name>
+    <font>Helvetica.txf</font>
+    <character-size type="double">0.00750</character-size>
+    <offsets>
+      <x-m>0.006241</x-m>
+      <y-m>-0.042388</y-m>
+      <z-m>0.007598</z-m>
+    </offsets>
+    <axis-alignment>yz-plane</axis-alignment>
+    <type type="string">number-value</type>
+    <format type="string">%0.0f</format>
+    <truncate type="bool">false</truncate>
+    <character-aspect-ratio type="double">1</character-aspect-ratio>
+    <property>fdm/jsbsim/instruments/engine-stdby/engines/engine/n2</property>    
+    <alignment>left-top</alignment>
+  </text>
+
+  <text>
+    <name>n2-2</name>
+    <font>Helvetica.txf</font>
+    <character-size type="double">0.00750</character-size>
+    <offsets>
+      <x-m>0.006241</x-m>
+      <y-m>-0.023747</y-m>
+      <z-m>0.007598</z-m>
+    </offsets>
+    <axis-alignment>yz-plane</axis-alignment>
+    <type type="string">number-value</type>
+    <format type="string">%0.0f</format>
+    <truncate type="bool">false</truncate>
+    <character-aspect-ratio type="double">1</character-aspect-ratio>
+    <property>fdm/jsbsim/instruments/engine-stdby/engines/engine[1]/n2</property>    
+    <alignment>left-top</alignment>
+  </text>
+
+  <text>
+    <name>n2-3</name>
+    <font>Helvetica.txf</font>
+    <character-size type="double">0.00750</character-size>
+    <offsets>
+      <x-m>0.006241</x-m>
+      <y-m>0.006811</y-m>
+      <z-m>0.007598</z-m>
+    </offsets>
+    <axis-alignment>yz-plane</axis-alignment>
+    <type type="string">number-value</type>
+    <format type="string">%0.0f</format>
+    <truncate type="bool">false</truncate>
+    <character-aspect-ratio type="double">1</character-aspect-ratio>
+    <property>fdm/jsbsim/instruments/engine-stdby/engines/engine[2]/n2</property>    
+    <alignment>left-top</alignment>
+  </text>
+
+  <text>
+    <name>n2-4</name>
+    <font>Helvetica.txf</font>
+    <character-size type="double">0.00750</character-size>
+    <offsets>
+      <x-m>0.006241</x-m>
+      <y-m>0.025453</y-m>
+      <z-m>0.007598</z-m>
+    </offsets>
+    <axis-alignment>yz-plane</axis-alignment>
+    <type type="string">number-value</type>
+    <format type="string">%0.0f</format>
+    <truncate type="bool">false</truncate>
+    <character-aspect-ratio type="double">1</character-aspect-ratio>
+    <property>fdm/jsbsim/instruments/engine-stdby/engines/engine[3]/n2</property>    
+    <alignment>left-top</alignment>
+  </text>
+
+  <text>
+    <name>egt1</name>
+    <font>Helvetica.txf</font>
+    <character-size type="double">0.00750</character-size>
+    <offsets>
+      <x-m>0.006241</x-m>
+      <y-m>-0.042388</y-m>
+      <z-m>-0.003947</z-m>
+    </offsets>
+    <axis-alignment>yz-plane</axis-alignment>
+    <type type="string">number-value</type>
+    <format type="string">%0.0f</format>
+    <truncate type="bool">false</truncate>
+    <character-aspect-ratio type="double">1</character-aspect-ratio>
+    <property>fdm/jsbsim/instruments/engine-stdby/engines/engine/egt-degc</property>    
+    <alignment>left-top</alignment>
+  </text>
+
+  <text>
+    <name>egt2</name>
+    <font>Helvetica.txf</font>
+    <character-size type="double">0.00750</character-size>
+    <offsets>
+      <x-m>0.006241</x-m>
+      <y-m>-0.023747</y-m>
+      <z-m>-0.003947</z-m>
+    </offsets>
+    <axis-alignment>yz-plane</axis-alignment>
+    <type type="string">number-value</type>
+    <format type="string">%0.0f</format>
+    <truncate type="bool">false</truncate>
+    <character-aspect-ratio type="double">1</character-aspect-ratio>
+    <property>fdm/jsbsim/instruments/engine-stdby/engines/engine[1]/egt-degc</property>    
+    <alignment>left-top</alignment>
+  </text>
+
+  <text>
+    <name>egt3</name>
+    <font>Helvetica.txf</font>
+    <character-size type="double">0.00750</character-size>
+    <offsets>
+      <x-m>0.006241</x-m>
+      <y-m>0.006811</y-m>
+      <z-m>-0.003947</z-m>
+    </offsets>
+    <axis-alignment>yz-plane</axis-alignment>
+    <type type="string">number-value</type>
+    <format type="string">%0.0f</format>
+    <truncate type="bool">false</truncate>
+    <character-aspect-ratio type="double">1</character-aspect-ratio>
+    <property>fdm/jsbsim/instruments/engine-stdby/engines/engine[2]/egt-degc</property>    
+    <alignment>left-top</alignment>
+  </text>
+
+  <text>
+    <name>egt4</name>
+    <font>Helvetica.txf</font>
+    <character-size type="double">0.00750</character-size>
+    <offsets>
+      <x-m>0.006241</x-m>
+      <y-m>0.025453</y-m>
+      <z-m>-0.003947</z-m>
+    </offsets>
+    <axis-alignment>yz-plane</axis-alignment>
+    <type type="string">number-value</type>
+    <format type="string">%0.0f</format>
+    <truncate type="bool">false</truncate>
+    <character-aspect-ratio type="double">1</character-aspect-ratio>
+    <property>fdm/jsbsim/instruments/engine-stdby/engines/engine[3]/egt-degc</property>    
+    <alignment>left-top</alignment>
+  </text>
+
+  <text>
+    <name>n1-1</name>
+    <font>Helvetica.txf</font>
+    <character-size type="double">0.00750</character-size>
+    <offsets>
+      <x-m>0.006241</x-m>
+      <y-m>-0.042388</y-m>
+      <z-m>-0.015624</z-m>
+    </offsets>
+    <axis-alignment>yz-plane</axis-alignment>
+    <type type="string">number-value</type>
+    <format type="string">%0.0f</format>
+    <truncate type="bool">false</truncate>
+    <character-aspect-ratio type="double">1</character-aspect-ratio>
+    <property>fdm/jsbsim/instruments/engine-stdby/engines/engine/n1</property>    
+    <alignment>left-top</alignment>
+  </text>
+
+  <text>
+    <name>n1-2</name>
+    <font>Helvetica.txf</font>
+    <character-size type="double">0.00750</character-size>
+    <offsets>
+      <x-m>0.006241</x-m>
+      <y-m>-0.023747</y-m>
+      <z-m>-0.015624</z-m>
+    </offsets>
+    <axis-alignment>yz-plane</axis-alignment>
+    <type type="string">number-value</type>
+    <format type="string">%0.0f</format>
+    <truncate type="bool">false</truncate>
+    <character-aspect-ratio type="double">1</character-aspect-ratio>
+    <property>fdm/jsbsim/instruments/engine-stdby/engines/engine[1]/n1</property>    
+    <alignment>left-top</alignment>
+  </text>
+
+  <text>
+    <name>n1-3</name>
+    <font>Helvetica.txf</font>
+    <character-size type="double">0.00750</character-size>
+    <offsets>
+      <x-m>0.006241</x-m>
+      <y-m>0.006811</y-m>
+      <z-m>-0.015624</z-m>
+    </offsets>
+    <axis-alignment>yz-plane</axis-alignment>
+    <type type="string">number-value</type>
+    <format type="string">%0.0f</format>
+    <truncate type="bool">false</truncate>
+    <character-aspect-ratio type="double">1</character-aspect-ratio>
+    <property>fdm/jsbsim/instruments/engine-stdby/engines/engine[2]/n1</property>    
+    <alignment>left-top</alignment>
+  </text>
+
+  <text>
+    <name>n1-4</name>
+    <font>Helvetica.txf</font>
+    <character-size type="double">0.00750</character-size>
+    <offsets>
+      <x-m>0.006241</x-m>
+      <y-m>0.025453</y-m>
+      <z-m>-0.015624</z-m>
+    </offsets>
+    <axis-alignment>yz-plane</axis-alignment>
+    <type type="string">number-value</type>
+    <format type="string">%0.0f</format>
+    <truncate type="bool">false</truncate>
+    <character-aspect-ratio type="double">1</character-aspect-ratio>
+    <property>fdm/jsbsim/instruments/engine-stdby/engines/engine[3]/n1</property>    
+    <alignment>left-top</alignment>
+  </text>
   
   <animation>
     <name>lcd-info</name>
@@ -685,6 +973,22 @@
     <object-name>n1-2-dots</object-name>
     <object-name>n1-3-dots</object-name>
     <object-name>n1-4-dots</object-name>
+    <object-name>epr1</object-name>
+    <object-name>epr2</object-name>
+    <object-name>epr3</object-name>
+    <object-name>epr4</object-name>
+    <object-name>n2-1</object-name>
+    <object-name>n2-2</object-name>
+    <object-name>n2-3</object-name>
+    <object-name>n2-4</object-name>
+    <object-name>egt1</object-name>
+    <object-name>egt2</object-name>
+    <object-name>egt3</object-name>
+    <object-name>egt4</object-name>
+    <object-name>n1-1</object-name>
+    <object-name>n1-2</object-name>
+    <object-name>n1-3</object-name>
+    <object-name>n1-4</object-name>
   </animation>
 
   <animation>
@@ -1025,6 +1329,206 @@
     <condition>
       <and>
 	<property>fdm/jsbsim/instruments/engine-stdby/display/status/engine[3]/print-dots</property>
+	<property>fdm/jsbsim/instruments/engine-stdby/display/status/on</property>
+      </and>
+    </condition>
+  </animation>
+
+  <animation>
+    <type>select</type>
+    <object-name>epr1</object-name>
+    <condition>
+      <and>
+	<property>fdm/jsbsim/instruments/engine-stdby/display/status/engine/print-value</property>
+	<equals>
+	  <property>fdm/jsbsim/instruments/engine-stdby/display/mode</property>
+	  <value>2</value>
+	</equals>
+      </and>
+    </condition>
+  </animation>
+
+  <animation>
+    <type>select</type>
+    <object-name>epr2</object-name>
+    <condition>
+      <and>
+	<property>fdm/jsbsim/instruments/engine-stdby/display/status/engine[1]/print-value</property>
+	<equals>
+	  <property>fdm/jsbsim/instruments/engine-stdby/display/mode</property>
+	  <value>2</value>
+	</equals>
+      </and>
+    </condition>
+  </animation>
+  
+  <animation>
+    <type>select</type>
+    <object-name>epr3</object-name>
+    <condition>
+      <and>
+	<property>fdm/jsbsim/instruments/engine-stdby/display/status/engine[2]/print-value</property>
+	<equals>
+	  <property>fdm/jsbsim/instruments/engine-stdby/display/mode</property>
+	  <value>2</value>
+	</equals>
+      </and>
+    </condition>
+  </animation>
+  
+  <animation>
+    <type>select</type>
+    <object-name>epr4</object-name>
+    <condition>
+      <and>
+	<property>fdm/jsbsim/instruments/engine-stdby/display/status/engine[3]/print-value</property>
+	<equals>
+	  <property>fdm/jsbsim/instruments/engine-stdby/display/mode</property>
+	  <value>2</value>
+	</equals>
+      </and>
+    </condition>
+  </animation>
+
+  <animation>
+    <type>select</type>
+    <object-name>n2-1</object-name>
+    <condition>
+      <and>
+	<property>fdm/jsbsim/instruments/engine-stdby/display/status/engine/print-value</property>
+	<equals>
+	  <property>fdm/jsbsim/instruments/engine-stdby/display/mode</property>
+	  <value>1</value>
+	</equals>
+      </and>
+    </condition>
+  </animation>
+
+  <animation>
+    <type>select</type>
+    <object-name>n2-2</object-name>
+    <condition>
+      <and>
+	<property>fdm/jsbsim/instruments/engine-stdby/display/status/engine[1]/print-value</property>
+	<equals>
+	  <property>fdm/jsbsim/instruments/engine-stdby/display/mode</property>
+	  <value>1</value>
+	</equals>
+      </and>
+    </condition>
+  </animation>
+  
+  <animation>
+    <type>select</type>
+    <object-name>n2-3</object-name>
+    <condition>
+      <and>
+	<property>fdm/jsbsim/instruments/engine-stdby/display/status/engine[2]/print-value</property>
+	<equals>
+	  <property>fdm/jsbsim/instruments/engine-stdby/display/mode</property>
+	  <value>1</value>
+	</equals>
+      </and>
+    </condition>
+  </animation>
+  
+  <animation>
+    <type>select</type>
+    <object-name>n2-4</object-name>
+    <condition>
+      <and>
+	<property>fdm/jsbsim/instruments/engine-stdby/display/status/engine[3]/print-value</property>
+	<equals>
+	  <property>fdm/jsbsim/instruments/engine-stdby/display/mode</property>
+	  <value>1</value>
+	</equals>
+      </and>
+    </condition>
+  </animation>
+
+  <animation>
+    <type>select</type>
+    <object-name>egt1</object-name>
+    <condition>
+      <and>
+	<property>fdm/jsbsim/instruments/engine-stdby/display/status/engine/print-value</property>
+	<property>fdm/jsbsim/instruments/engine-stdby/display/status/on</property>
+      </and>
+    </condition>
+  </animation>
+  
+  <animation>
+    <type>select</type>
+    <object-name>egt2</object-name>
+    <condition>
+      <and>
+	<property>fdm/jsbsim/instruments/engine-stdby/display/status/engine[1]/print-value</property>
+	<property>fdm/jsbsim/instruments/engine-stdby/display/status/on</property>
+      </and>
+    </condition>
+  </animation>
+  
+  <animation>
+    <type>select</type>
+    <object-name>egt3</object-name>
+    <condition>
+      <and>
+	<property>fdm/jsbsim/instruments/engine-stdby/display/status/engine[2]/print-value</property>
+	<property>fdm/jsbsim/instruments/engine-stdby/display/status/on</property>
+      </and>
+    </condition>
+  </animation>
+  
+  <animation>
+    <type>select</type>
+    <object-name>egt4</object-name>
+    <condition>
+      <and>
+	<property>fdm/jsbsim/instruments/engine-stdby/display/status/engine[3]/print-value</property>
+	<property>fdm/jsbsim/instruments/engine-stdby/display/status/on</property>
+      </and>
+    </condition>
+  </animation>
+
+  <animation>
+    <type>select</type>
+    <object-name>n1-1</object-name>
+    <condition>
+      <and>
+	<property>fdm/jsbsim/instruments/engine-stdby/display/status/engine/print-value</property>
+	<property>fdm/jsbsim/instruments/engine-stdby/display/status/on</property>
+      </and>
+    </condition>
+  </animation>
+
+  <animation>
+    <type>select</type>
+    <object-name>n1-2</object-name>
+    <condition>
+      <and>
+	<property>fdm/jsbsim/instruments/engine-stdby/display/status/engine[1]/print-value</property>
+	<property>fdm/jsbsim/instruments/engine-stdby/display/status/on</property>
+      </and>
+    </condition>
+  </animation>
+
+  <animation>
+    <type>select</type>
+    <object-name>n1-3</object-name>
+    <condition>
+      <and>
+	<property>fdm/jsbsim/instruments/engine-stdby/display/status/engine[2]/print-value</property>
+	<property>fdm/jsbsim/instruments/engine-stdby/display/status/on</property>
+      </and>
+    </condition>
+  </animation>
+
+  <animation>
+    <type>select</type>
+    <object-name>n1-4</object-name>
+    <condition>
+      <and>
+	<property>fdm/jsbsim/instruments/engine-stdby/display/status/engine[3]/print-value</property>
 	<property>fdm/jsbsim/instruments/engine-stdby/display/status/on</property>
       </and>
     </condition>
