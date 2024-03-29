@@ -70,4 +70,147 @@ shall keep this attribution information.
       </test>
     </switch>
   </channel>
+
+  <property value="1">instruments/engine-stdby/display/status/brt</property>
+  <channel name="Display status">
+    <switch name="instruments/engine-stdby/display/status/on">
+      <default value="0"/>
+      <test value="1">
+	instruments/engine-stdby/display/mode ne 0	
+      </test>      
+    </switch>
+
+    <switch name="instruments/engine-stdby/display/status/engine/on">
+      <default value="0"/>
+      <test value="1">
+	/engines/engine/running eq 1	
+      </test>      
+    </switch>
+
+    <switch name="instruments/engine-stdby/display/status/engine[1]/on">
+      <default value="0"/>
+      <test value="1">
+	/engines/engine[1]/running eq 1	
+      </test>      
+    </switch>
+
+    <switch name="instruments/engine-stdby/display/status/engine[2]/on">
+      <default value="0"/>
+      <test value="1">
+	/engines/engine[2]/running eq 1	
+      </test>      
+    </switch>
+
+    <switch name="instruments/engine-stdby/display/status/engine[3]/on">
+      <default value="0"/>
+      <test value="1">
+	/engines/engine[3]/running eq 1	
+      </test>      
+    </switch>
+
+    <switch name="instruments/engine-stdby/display/status/any-engine-on">
+      <default value="0"/>
+      <test logic="OR" value="1">
+	instruments/engine-stdby/display/status/engine/on eq 1
+	instruments/engine-stdby/display/status/engine[1]/on eq 1
+	instruments/engine-stdby/display/status/engine[2]/on eq 1
+	instruments/engine-stdby/display/status/engine[3]/on eq 1
+      </test>      
+    </switch>
+
+    <switch name="instruments/engine-stdby/display/status/print-rtg-value">
+      <default value="0"/>
+      <test logic="AND" value="1">
+	instruments/engine-stdby/display/status/any-engine-on eq 1	
+	instruments/engine-stdby/display/status/on eq 1
+      </test>      
+    </switch>
+
+    <switch name="instruments/engine-stdby/display/status/print-rtg-dots">
+      <default value="0"/>
+      <test logic="OR" value="1">
+	instruments/engine-stdby/display/status/any-engine-on eq 0
+	instruments/engine-stdby/display/status/on eq 0
+      </test>      
+    </switch>
+
+    <switch name="instruments/engine-stdby/display/status/print-mode-value">
+      <default value="0"/>
+      <test logic="AND" value="1">
+	instruments/engine-stdby/display/status/on eq 1
+      </test>      
+    </switch>
+
+    <switch name="instruments/engine-stdby/display/status/print-mode-dots">
+      <default value="0"/>
+      <test logic="AND" value="1">
+	instruments/engine-stdby/display/status/on eq 0
+      </test>      
+    </switch>
+
+    <switch name="instruments/engine-stdby/display/status/engine/print-value">
+      <default value="0"/>
+      <test logic="AND" value="1">
+	instruments/engine-stdby/display/status/engine/on eq 1
+	instruments/engine-stdby/display/status/on eq 1
+      </test>      
+    </switch>
+
+    <switch name="instruments/engine-stdby/display/status/engine/print-dots">
+      <default value="0"/>
+      <test logic="AND" value="1">
+	instruments/engine-stdby/display/status/engine/on eq 0
+	instruments/engine-stdby/display/status/on eq 1
+      </test>      
+    </switch>
+
+    <switch name="instruments/engine-stdby/display/status/engine[1]/print-value">
+      <default value="0"/>
+      <test logic="AND" value="1">
+	instruments/engine-stdby/display/status/engine[1]/on eq 1
+	instruments/engine-stdby/display/status/on eq 1
+      </test>      
+    </switch>
+
+    <switch name="instruments/engine-stdby/display/status/engine[1]/print-dots">
+      <default value="0"/>
+      <test logic="AND" value="1">
+	instruments/engine-stdby/display/status/engine[1]/on eq 0
+	instruments/engine-stdby/display/status/on eq 1
+      </test>      
+    </switch>
+
+    <switch name="instruments/engine-stdby/display/status/engine[2]/print-value">
+      <default value="0"/>
+      <test logic="AND" value="1">
+	instruments/engine-stdby/display/status/engine[2]/on eq 1
+	instruments/engine-stdby/display/status/on eq 1
+      </test>      
+    </switch>
+
+    <switch name="instruments/engine-stdby/display/status/engine[2]/print-dots">
+      <default value="0"/>
+      <test logic="AND" value="1">
+	instruments/engine-stdby/display/status/engine[2]/on eq 0
+	instruments/engine-stdby/display/status/on eq 1
+      </test>      
+    </switch>
+
+    <switch name="instruments/engine-stdby/display/status/engine[3]/print-value">
+      <default value="0"/>
+      <test logic="AND" value="1">
+	instruments/engine-stdby/display/status/engine[3]/on eq 1
+	instruments/engine-stdby/display/status/on eq 1
+      </test>      
+    </switch>
+
+    <switch name="instruments/engine-stdby/display/status/engine[3]/print-dots">
+      <default value="0"/>
+      <test logic="AND" value="1">
+	instruments/engine-stdby/display/status/engine[3]/on eq 0
+	instruments/engine-stdby/display/status/on eq 1
+      </test>      
+    </switch>
+  </channel>
+  
 </system>

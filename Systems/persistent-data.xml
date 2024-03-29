@@ -19,6 +19,9 @@ shall keep this attribution information.
   <path>fdm/jsbsim/instruments/digitalClock/temp-mode</path>
   <path>fdm/jsbsim/instruments/digitalClock/time-mode</path>
   <path>fdm/jsbsim/instruments/RMIDME/channel/inop</path>
+  <path>fdm/jsbsim/instruments/engine-stdby/epr-rating/man-rating</path>
+  <path>fdm/jsbsim/instruments/engine-stdby/display/epr-mode</path>
+  <path>fdm/jsbsim/instruments/engine-stdby/display/mode</path>
   <path>fdm/jsbsim/systems/livery/selected/id</path>
   <path>fdm/jsbsim/systems/livery/selected/name</path>
   <path>fdm/jsbsim/systems/livery/selected/texture</path>
