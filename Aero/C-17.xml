@@ -53,6 +53,7 @@
   <system name="LIVERY: C-17" file="Systems/livery-updating.xml" />
 
   <!--Instruments-->
+  <!-- Dash -->
   <system name="PANEL LIGHTS: C-17" file="Models/Panels/Instruments/PanelLighting/PanelLighting-systems.xml" />
   <system name="FLAP INDICATOR: C-17" file="Models/Panels/Instruments/FlapIndicator/FlapIndicator-systems.xml" />
   <system name="SPEEDBRAKE INDICATOR: C-17" file="Models/Panels/Instruments/SpeedbrakeIndicator/SpeedbrakeIndicator-systems.xml" />
@@ -65,6 +66,8 @@
   <system name="STBY RMIDME: C-17" file="Models/Panels/Instruments/RMIDME/RMIDME-systems.xml" />
   <system name="CNC RADIO: C-17" file="Models/Panels/Instruments/cnc-radio/cnc-radio-systems.xml" />
   <system name="TRIM INDICATORS: C-17" file="Models/Panels/Instruments/trim-indicators/trim-indicators-systems.xml" />
+  <system name="STANDBY ENGINE: C-17"  file="Models/Panels/Instruments/engine-stby/engine-stby-systems.xml"/>
+  <!-- Pedestal --> 
   <system name="CONTROLS QUAD: C-17" file="Models/Panels/Instruments/Pedestal/controlsQuad/controlsQuad-systems.xml" />
   
   <!--Output-->
