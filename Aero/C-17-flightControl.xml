@@ -469,97 +469,156 @@
       </test>
     </switch>
 
+    <fcs_function name="/sim/slats/setting-indexed[0]">
+      <function>
+	<product>
+	  <property>/sim/slats/setting[0]</property>
+	  <property>/sim/flaps/index</property>
+	</product>
+      </function>
+    </fcs_function>
+
+    <fcs_function name="/sim/slats/setting-indexed[1]">
+      <function>
+	<product>
+	  <property>/sim/slats/setting[1]</property>
+	  <property>/sim/flaps/index</property>
+	</product>
+      </function>
+    </fcs_function>
+
+    <fcs_function name="/sim/slats/setting-indexed[2]">
+      <function>
+	<product>
+	  <property>/sim/slats/setting[2]</property>
+	  <property>/sim/flaps/index</property>
+	</product>
+      </function>
+    </fcs_function>
+
+    <fcs_function name="/sim/flaps/setting-indexed[0]">
+      <function>
+	<product>
+	  <property>/sim/flaps/setting[0]</property>
+	  <property>/sim/flaps/index</property>
+	</product>
+      </function>
+    </fcs_function>
+
+    <fcs_function name="/sim/flaps/setting-indexed[1]">
+      <function>
+	<product>
+	  <property>/sim/flaps/setting[1]</property>
+	  <property>/sim/flaps/index</property>
+	</product>
+      </function>
+    </fcs_function>
+
+    <fcs_function name="/sim/flaps/setting-indexed[2]">
+      <function>
+	<product>
+	  <property>/sim/flaps/setting[2]</property>
+	  <property>/sim/flaps/index</property>
+	</product>
+      </function>
+    </fcs_function>
+
+    <fcs_function name="/sim/flaps/setting-indexed[3]">
+      <function>
+	<product>
+	  <property>/sim/flaps/setting[3]</property>
+	  <property>/sim/flaps/index</property>
+	</product>
+      </function>
+    </fcs_function>
+
+    <fcs_function name="/sim/flaps/setting-indexed[4]">
+      <function>
+	<product>
+	  <property>/sim/flaps/setting[4]</property>
+	  <property>/sim/flaps/index</property>
+	</product>
+      </function>
+    </fcs_function>
+    
     <switch name="fcs/slat-cmd-norm">
-      <default value="/sim/slats/setting[0]"/>
+      <default value="/sim/slats/setting-indexed[0]"/>
       <test value="0">
 	/sim/slats/enabled EQ 0
       </test>
-      <test logic="AND" value="/sim/slats/setting[0]">
+      <test logic="AND" value="/sim/slats/setting-indexed[0]">
 	/sim/slats/current-setting EQ 0
-	fcs/flap-pos-norm EQ /sim/flaps/setting[0]
+	fcs/flap-pos-norm EQ /sim/flaps/setting-indexed[0]
 	<!-- slat retraction happens after flap retraction -->
       </test>
-      <test value="/sim/slats/setting[1]">
+      <test value="/sim/slats/setting-indexed[1]">
 	/sim/slats/current-setting EQ 0
-	fcs/flap-pos-norm GT /sim/flaps/setting[0]
+	fcs/flap-pos-norm GT /sim/flaps/setting-indexed[0]
       </test>
-      <test value="/sim/slats/setting[1]">
+      <test value="/sim/slats/setting-indexed[1]">
 	/sim/slats/current-setting EQ 1
-	fcs/flap-pos-norm LE /sim/flaps/setting[3]
+	fcs/flap-pos-norm LE /sim/flaps/setting-indexed[3]
       </test>
-      <test value="/sim/slats/setting[2]">
-	fcs/flap-pos-norm GT /sim/flaps/setting[3]
+      <test value="/sim/slats/setting-indexed[2]">
+	fcs/flap-pos-norm GT /sim/flaps/setting-indexed[3]
       </test>
-      <test value="/sim/slats/setting[2]">
+      <test value="/sim/slats/setting-indexed[2]">
 	/sim/slats/current-setting EQ 2
       </test>
     </switch>
 
     <switch name="fcs/flap-cmd-norm">
-      <default value="/sim/flaps/setting[0]"/>
-      <test value="/sim/flaps/setting[0]">
+      <default value="/sim/flaps/setting-indexed[0]"/>
+      <test value="/sim/flaps/setting-indexed[0]">
 	/sim/flaps/current-setting EQ 0
       </test>
-      <test logic="AND" value="/sim/flaps/setting[1]">
+      <test logic="AND" value="/sim/flaps/setting-indexed[1]">
 	/sim/slats/enabled EQ 1
 	/sim/flaps/current-setting EQ 1
-	fcs/slat-pos-norm GE /sim/slats/setting[1]
+	fcs/slat-pos-norm GE /sim/slats/setting-indexed[1]
 	<!-- flap deflection happens after slat deflection -->
       </test>
-      <test logic="AND" value="/sim/flaps/setting[2]">
+      <test logic="AND" value="/sim/flaps/setting-indexed[2]">
 	/sim/slats/enabled EQ 1
 	/sim/flaps/current-setting EQ 2
-	fcs/slat-pos-norm GE /sim/slats/setting[1]
+	fcs/slat-pos-norm GE /sim/slats/setting-indexed[1]
       </test>
-      <test logic="AND" value="/sim/flaps/setting[3]">
+      <test logic="AND" value="/sim/flaps/setting-indexed[3]">
 	/sim/slats/enabled EQ 1
 	/sim/flaps/current-setting EQ 3
-	fcs/slat-pos-norm GE /sim/slats/setting[1]
+	fcs/slat-pos-norm GE /sim/slats/setting-indexed[1]
       </test>
-      <test logic="AND" value="/sim/flaps/setting[3]">
+      <test logic="AND" value="/sim/flaps/setting-indexed[3]">
 	/sim/slats/enabled EQ 1
 	/sim/flaps/current-setting EQ 4
-	fcs/slat-pos-norm LT /sim/slats/setting[2]
+	fcs/slat-pos-norm LT /sim/slats/setting-indexed[2]
       </test>
-      <test logic="AND" value="/sim/flaps/setting[4]">
+      <test logic="AND" value="/sim/flaps/setting-indexed[4]">
 	/sim/slats/enabled EQ 1
 	/sim/flaps/current-setting EQ 4
-	fcs/slat-pos-norm EQ /sim/slats/setting[2]
+	fcs/slat-pos-norm EQ /sim/slats/setting-indexed[2]
       </test>
       <!-- direct flap response if slats are not enabled -->
-      <test logic="AND" value="/sim/flaps/setting[1]">
+      <test logic="AND" value="/sim/flaps/setting-indexed[1]">
 	/sim/slats/enabled EQ 0
 	/sim/flaps/current-setting EQ 1
       </test>
-      <test logic="AND" value="/sim/flaps/setting[2]">
+      <test logic="AND" value="/sim/flaps/setting-indexed[2]">
 	/sim/slats/enabled EQ 0
 	/sim/flaps/current-setting EQ 2
       </test>
-      <test logic="AND" value="/sim/flaps/setting[3]">
+      <test logic="AND" value="/sim/flaps/setting-indexed[3]">
 	/sim/slats/enabled EQ 0
 	/sim/flaps/current-setting EQ 3
       </test>
-      <test logic="AND" value="/sim/flaps/setting[4]">
+      <test logic="AND" value="/sim/flaps/setting-indexed[4]">
 	/sim/slats/enabled EQ 0
 	/sim/flaps/current-setting EQ 4
       </test>
     </switch>
-
-    <fcs_function name="fcs/flap-cmd-norm-indexed">
-      <function>
-	<product>
-	  <property>fcs/flap-cmd-norm</property>
-	  <property>/sim/flaps/index</property>
-	</product>
-      </function>
-      <clipto>
-	<min>0</min>
-	<max>1</max>
-      </clipto>
-    </fcs_function>
     
     <kinematic name="flaps control">
-      <input>fcs/flap-cmd-norm-indexed</input>
+      <input>fcs/flap-cmd-norm</input>
       <traverse>
         <setting>
           <position>0</position>
