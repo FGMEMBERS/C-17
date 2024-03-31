@@ -21,6 +21,10 @@
   </payload>
 
   <multipliers>
+    <yaw-aileron-adverse type="double">0.000</yaw-aileron-adverse>
+    <yaw-rudder-strenght type="double">0.000</yaw-rudder-strenght>
+    <yaw-beta-offset type="double">0.000</yaw-beta-offset>
+    <yaw-rate-offset type="double">0.000</yaw-rate-offset>
     <drag type="double">1.000</drag>
     <lift type="double">1.000</lift>
   </multipliers>
