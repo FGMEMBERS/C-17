@@ -2499,7 +2499,7 @@
       <description>Yaw moment due to beta rudder deflection</description>
       <product>
 	<sum>
-	  <value>0.4476</value><!--rudder deflection power -->
+	  <value>0.3076</value><!--rudder deflection power -->
 	  <property>systems/multipliers/yaw-rudder-strenght</property>
 	</sum>
 	<property>aero/qbar-psf</property>
@@ -2724,7 +2724,7 @@
       <product>
 	<value>-1.000</value>
 	<sum>
-	  <value>2.000</value>
+	  <value>0.500</value>
 	  <property>systems/multipliers/yaw-beta-offset</property>
 	</sum>
 	<property>aero/qbar-psf</property>
@@ -2740,7 +2740,7 @@
       <product>
 	<value>-1.000</value>
 	<sum>
-	  <value>0.8321</value>
+	  <value>0.68321</value>
 	  <property>systems/multipliers/yaw-rate-offset</property>
 	</sum>
 	<property>aero/qbar-psf</property>

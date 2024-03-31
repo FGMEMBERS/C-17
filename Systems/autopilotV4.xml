@@ -46,6 +46,7 @@ currently used, or work properly.
       <!-- maximum output clamp -->
     </config>
   </pid-controller>
+
   <!--
       Heading Bug Hold.  2 stage cascade controller.
       Stage #1 sets target roll based on diff between current heading
@@ -81,12 +82,13 @@ currently used, or work properly.
       <!-- integrator time -->
       <Td>0.00001</Td>
       <!-- derivator time -->
-      <u_min>-30.0</u_min>
+      <u_min>-35.0</u_min>
       <!-- minimum output clamp -->
-      <u_max>30.0</u_max>
+      <u_max>35.0</u_max>
       <!-- maximum output clamp -->
     </config>
   </pid-controller>
+
   <!-- Stage #2 drives the ailerons to achieve the desired roll deg. -->
   <pid-controller>
     <name>Heading Bug Hold (DG based) Stage 2</name>
@@ -105,7 +107,7 @@ currently used, or work properly.
       <prop>/controls/flight/aileron</prop>
     </output>
     <config>
-      <Kp>0.2</Kp>
+      <Kp>0.8</Kp>
       <!-- proportional gain -->
       <beta>1.0</beta>
       <!-- input value weighing factor -->
