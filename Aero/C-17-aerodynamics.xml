@@ -2498,10 +2498,7 @@
     <function name="aero/coefficient/Cnb">
       <description>Yaw moment due to beta rudder deflection</description>
       <product>
-	<sum>
-	  <value>0.3076</value><!--rudder deflection power -->
-	  <property>systems/multipliers/yaw-rudder-strenght</property>
-	</sum>
+	<value>0.3076</value><!--rudder deflection power -->
 	<property>aero/qbar-psf</property>
 	<property>metrics/Sh-sqft</property>
 	<property>metrics/bw-ft</property>
@@ -2723,10 +2720,7 @@
       <description>Yaw moment due to beta rate</description>
       <product>
 	<value>-1.000</value>
-	<sum>
-	  <value>0.500</value>
-	  <property>systems/multipliers/yaw-beta-offset</property>
-	</sum>
+	<value>0.2500</value>
 	<property>aero/qbar-psf</property>
 	<property>metrics/Sv-sqft</property>
 	<property>metrics/bw-ft</property>
@@ -2739,10 +2733,7 @@
       <description>Yaw moment due to yaw rate</description>
       <product>
 	<value>-1.000</value>
-	<sum>
-	  <value>0.68321</value>
-	  <property>systems/multipliers/yaw-rate-offset</property>
-	</sum>
+	<value>0.341605</value>
 	<property>aero/qbar-psf</property>
 	<property>metrics/Sv-sqft</property>
 	<property>metrics/bw-ft</property>
@@ -2754,10 +2745,7 @@
     <function name="aero/coefficient/Cnda">
       <description>Adverse yaw moment due to aileron</description>
       <product>
-	<sum>
-	  <value>0.600</value> <!-- Adverse yaw power -->
-	  <property>systems/multipliers/yaw-aileron-adverse</property>
-	</sum>
+	<value>0.600</value> <!-- Adverse yaw power -->
 	<property>aero/qbar-psf</property>
 	<property>metrics/Sw-sqft</property>
 	<property>metrics/cbarw-ft</property>

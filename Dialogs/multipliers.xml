@@ -49,111 +49,6 @@ shall keep this attribution information.
     <text>
       <label>MMMMM</label>
       <halign>right</halign>
-      <property>fdm/jsbsim/systems/multipliers/yaw-rudder-strenght</property>
-      <live>true</live>
-    </text>
-    <slider>
-      <width>1000</width>
-      <height>20</height>
-      <min>-2</min>
-      <max>2</max>
-      <halign>left</halign>
-      <label>Yaw Rudder Offset</label>
-      <live>true</live>
-      <property>fdm/jsbsim/systems/multipliers/yaw-rudder-strenght</property>
-      <binding>
-	<command>dialog-apply</command>
-      </binding>
-    </slider>
-
-  </group>
-
-  <group>
-    <layout>hbox</layout>
-
-    <default-padding>5</default-padding>
-    <text>
-      <label>MMMMM</label>
-      <halign>right</halign>
-      <property>fdm/jsbsim/systems/multipliers/yaw-aileron-adverse</property>
-      <live>true</live>
-    </text>
-
-    <slider>
-      <width>1000</width>
-      <height>20</height>
-      <min>-2</min>
-      <max>2</max>
-      <halign>left</halign>
-      <label>Yaw Aileron Offset</label>
-      <property>fdm/jsbsim/systems/multipliers/yaw-aileron-adverse</property>
-      <live>true</live>
-      <binding>
-	<command>dialog-apply</command>
-      </binding>
-    </slider>
-  </group>  
-
-  <group>
-    <layout>hbox</layout>
-
-    <default-padding>5</default-padding>
-    <text>
-      <label>MMMMM</label>
-      <halign>right</halign>
-      <property>fdm/jsbsim/systems/multipliers/yaw-beta-offset</property>
-      <live>true</live>
-    </text>
-
-    <slider>
-      <width>1000</width>
-      <height>20</height>
-      <min>-2</min>
-      <max>2</max>
-      <halign>left</halign>
-      <label>Yaw Beta Rate Offset</label>
-      <property>fdm/jsbsim/systems/multipliers/yaw-beta-offset</property>
-      <live>true</live>
-      <binding>
-	<command>dialog-apply</command>
-      </binding>
-    </slider>
-  </group>  
-
-  <group>
-    <layout>hbox</layout>
-
-    <default-padding>5</default-padding>
-    <text>
-      <label>MMMMM</label>
-      <halign>right</halign>
-      <property>fdm/jsbsim/systems/multipliers/yaw-rate-offset</property>
-      <live>true</live>
-    </text>
-
-    <slider>
-      <width>1000</width>
-      <height>20</height>
-      <min>-2</min>
-      <max>2</max>
-      <halign>left</halign>
-      <label>Yaw Rate Offset</label>
-      <property>fdm/jsbsim/systems/multipliers/yaw-rate-offset</property>
-      <live>true</live>
-      <binding>
-	<command>dialog-apply</command>
-      </binding>
-    </slider>
-  </group>  
-
-
-  <!--
-  <group>
-    <layout>hbox</layout>
-    <default-padding>5</default-padding>
-    <text>
-      <label>MMMMM</label>
-      <halign>right</halign>
       <property>fdm/jsbsim/systems/multipliers/drag</property>
       <live>true</live>
     </text>
@@ -199,7 +94,6 @@ shall keep this attribution information.
     </slider>
   </group>
 
--->  
   <hrule/>
 
   <button>
