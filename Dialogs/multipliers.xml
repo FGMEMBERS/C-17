@@ -10,8 +10,8 @@ shall keep this attribution information.
 
 <PropertyList>
   <name>Multipliers adjustments</name>
-   <width>380</width>
-   <height>150</height>
+  <width>420</width>
+  <height>300</height>
 
   <layout>vbox</layout>
 
@@ -92,9 +92,10 @@ shall keep this attribution information.
 	<command>dialog-apply</command>
       </binding>
     </slider>
-  </group>  
+  </group>
+
   <hrule/>
-  
+
   <button>
     <legend>Close</legend>
     <default>true</default>

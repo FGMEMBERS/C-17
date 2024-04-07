@@ -2498,7 +2498,7 @@
     <function name="aero/coefficient/Cnb">
       <description>Yaw moment due to beta rudder deflection</description>
       <product>
-	<value>0.4476</value><!--rudder deflection power -->
+	<value>0.3076</value><!--rudder deflection power -->
 	<property>aero/qbar-psf</property>
 	<property>metrics/Sh-sqft</property>
 	<property>metrics/bw-ft</property>
@@ -2720,7 +2720,7 @@
       <description>Yaw moment due to beta rate</description>
       <product>
 	<value>-1.000</value>
-	<value>2.000</value>
+	<value>0.2500</value>
 	<property>aero/qbar-psf</property>
 	<property>metrics/Sv-sqft</property>
 	<property>metrics/bw-ft</property>
@@ -2733,7 +2733,7 @@
       <description>Yaw moment due to yaw rate</description>
       <product>
 	<value>-1.000</value>
-	<value>0.8321</value>
+	<value>0.341605</value>
 	<property>aero/qbar-psf</property>
 	<property>metrics/Sv-sqft</property>
 	<property>metrics/bw-ft</property>
