@@ -1,0 +1,357 @@
+<?xml version="1.0"?>
+<?xml-stylesheet href="JSBSim.xsl" type="application/xml"?>
+
+<!--
+    :copyright: 2024, IAHM-COL
+    License: GPLv3
+
+    Redistribution, or reuse, with or without modifications
+    shall keep this attribution information. 
+-->
+
+<system>
+  <property value="1.0">systems/fadec/pid-config/kp</property>
+  <property value="0.1">systems/fadec/pid-config/ki</property>
+  <property value="2.0">systems/fadec/pid-config/kd</property>
+  <channel name="Throttle EPR control">
+    <fcs_function name="systems/fadec/engine/throttle-lever-target-epr">
+      <function>
+	<table>
+	  <independentVar lookup="row">/controls/engines/engine/throttle</independentVar>
+	  <independentVar lookup="column">instruments/engine-stdby/epr-rating/rating</independentVar>
+	  <tableData>
+                	1.0464	1.3379	1.5862	1.8266	2.0180
+	    0.00	1.0464	1.0464	1.0464	1.0464	1.0464
+	    0.05	1.0464	1.0471	1.0477	1.0483	1.0488
+	    0.10	1.0464	1.0493	1.0517	1.0540	1.0559
+	    0.15	1.0464	1.0529	1.0583	1.0637	1.0679
+	    0.20	1.0464	1.0579	1.0676	1.0771	1.0846
+	    0.25	1.0464	1.0643	1.0796	1.0943	1.1061
+	    0.30	1.0464	1.0722	1.0942	1.1155	1.1324
+	    0.35	1.0464	1.0815	1.1115	1.1404	1.1635
+	    0.40	1.0464	1.0922	1.1313	1.1691	1.1992
+	    0.45	1.0464	1.1045	1.1539	1.2018	1.2399
+	    0.50	1.0464	1.1181	1.1791	1.2382	1.2853
+	    0.55	1.0464	1.1331	1.2070	1.2785	1.3354
+	    0.60	1.0464	1.1496	1.2375	1.3226	1.3904
+	    0.65	1.0464	1.1675	1.2707	1.3706	1.4501
+	    0.70	1.0464	1.1869	1.3065	1.4224	1.5146
+	    0.75	1.0464	1.2076	1.3450	1.4779	1.5838
+	    0.80	1.0464	1.2304	1.3871	1.5389	1.6597
+	    0.85	1.0464	1.2535	1.4299	1.6007	1.7367
+	    0.90	1.0464	1.2786	1.4763	1.6678	1.8203
+	    0.95	1.0464	1.3051	1.5255	1.7388	1.9087
+	    1.00	1.0464	1.3379	1.5862	1.8266	2.0180
+	  </tableData>
+	</table>
+      </function>
+    </fcs_function>
+
+    
+    <fcs_function name="systems/fadec/engine[1]/throttle-lever-target-epr">
+      <function>
+	<table>
+	  <independentVar lookup="row">/controls/engines/engine[1]/throttle</independentVar>
+	  <independentVar lookup="column">instruments/engine-stdby/epr-rating/rating</independentVar>
+	  <tableData>
+	                1.0464	1.3379	1.5862	1.8266	2.0180
+	    0.00	1.0464	1.0464	1.0464	1.0464	1.0464
+	    0.05	1.0464	1.0471	1.0477	1.0483	1.0488
+	    0.10	1.0464	1.0493	1.0517	1.0540	1.0559
+	    0.15	1.0464	1.0529	1.0583	1.0637	1.0679
+	    0.20	1.0464	1.0579	1.0676	1.0771	1.0846
+	    0.25	1.0464	1.0643	1.0796	1.0943	1.1061
+	    0.30	1.0464	1.0722	1.0942	1.1155	1.1324
+	    0.35	1.0464	1.0815	1.1115	1.1404	1.1635
+	    0.40	1.0464	1.0922	1.1313	1.1691	1.1992
+	    0.45	1.0464	1.1045	1.1539	1.2018	1.2399
+	    0.50	1.0464	1.1181	1.1791	1.2382	1.2853
+	    0.55	1.0464	1.1331	1.2070	1.2785	1.3354
+	    0.60	1.0464	1.1496	1.2375	1.3226	1.3904
+	    0.65	1.0464	1.1675	1.2707	1.3706	1.4501
+	    0.70	1.0464	1.1869	1.3065	1.4224	1.5146
+	    0.75	1.0464	1.2076	1.3450	1.4779	1.5838
+	    0.80	1.0464	1.2304	1.3871	1.5389	1.6597
+	    0.85	1.0464	1.2535	1.4299	1.6007	1.7367
+	    0.90	1.0464	1.2786	1.4763	1.6678	1.8203
+	    0.95	1.0464	1.3051	1.5255	1.7388	1.9087
+	    1.00	1.0464	1.3379	1.5862	1.8266	2.0180
+	  </tableData>
+	</table>
+      </function>
+    </fcs_function>
+
+    <fcs_function name="systems/fadec/engine[2]/throttle-lever-target-epr">
+      <function>
+	<table>
+	  <independentVar lookup="row">/controls/engines/engine[2]/throttle</independentVar>
+	  <independentVar lookup="column">instruments/engine-stdby/epr-rating/rating</independentVar>
+	  <tableData>
+	                1.0464	1.3379	1.5862	1.8266	2.0180
+	    0.00	1.0464	1.0464	1.0464	1.0464	1.0464
+	    0.05	1.0464	1.0471	1.0477	1.0483	1.0488
+	    0.10	1.0464	1.0493	1.0517	1.0540	1.0559
+	    0.15	1.0464	1.0529	1.0583	1.0637	1.0679
+	    0.20	1.0464	1.0579	1.0676	1.0771	1.0846
+	    0.25	1.0464	1.0643	1.0796	1.0943	1.1061
+	    0.30	1.0464	1.0722	1.0942	1.1155	1.1324
+	    0.35	1.0464	1.0815	1.1115	1.1404	1.1635
+	    0.40	1.0464	1.0922	1.1313	1.1691	1.1992
+	    0.45	1.0464	1.1045	1.1539	1.2018	1.2399
+	    0.50	1.0464	1.1181	1.1791	1.2382	1.2853
+	    0.55	1.0464	1.1331	1.2070	1.2785	1.3354
+	    0.60	1.0464	1.1496	1.2375	1.3226	1.3904
+	    0.65	1.0464	1.1675	1.2707	1.3706	1.4501
+	    0.70	1.0464	1.1869	1.3065	1.4224	1.5146
+	    0.75	1.0464	1.2076	1.3450	1.4779	1.5838
+	    0.80	1.0464	1.2304	1.3871	1.5389	1.6597
+	    0.85	1.0464	1.2535	1.4299	1.6007	1.7367
+	    0.90	1.0464	1.2786	1.4763	1.6678	1.8203
+	    0.95	1.0464	1.3051	1.5255	1.7388	1.9087
+	    1.00	1.0464	1.3379	1.5862	1.8266	2.0180
+	  </tableData>
+	</table>
+      </function>
+    </fcs_function>
+
+    <fcs_function name="systems/fadec/engine[3]/throttle-lever-target-epr">
+      <function>
+	<table>
+	  <independentVar lookup="row">/controls/engines/engine[3]/throttle</independentVar>
+	  <independentVar lookup="column">instruments/engine-stdby/epr-rating/rating</independentVar>
+	  <tableData>
+	    1.0464	1.3379	1.5862	1.8266	2.0180
+	    0.00	1.0464	1.0464	1.0464	1.0464	1.0464
+	    0.05	1.0464	1.0471	1.0477	1.0483	1.0488
+	    0.10	1.0464	1.0493	1.0517	1.0540	1.0559
+	    0.15	1.0464	1.0529	1.0583	1.0637	1.0679
+	    0.20	1.0464	1.0579	1.0676	1.0771	1.0846
+	    0.25	1.0464	1.0643	1.0796	1.0943	1.1061
+	    0.30	1.0464	1.0722	1.0942	1.1155	1.1324
+	    0.35	1.0464	1.0815	1.1115	1.1404	1.1635
+	    0.40	1.0464	1.0922	1.1313	1.1691	1.1992
+	    0.45	1.0464	1.1045	1.1539	1.2018	1.2399
+	    0.50	1.0464	1.1181	1.1791	1.2382	1.2853
+	    0.55	1.0464	1.1331	1.2070	1.2785	1.3354
+	    0.60	1.0464	1.1496	1.2375	1.3226	1.3904
+	    0.65	1.0464	1.1675	1.2707	1.3706	1.4501
+	    0.70	1.0464	1.1869	1.3065	1.4224	1.5146
+	    0.75	1.0464	1.2076	1.3450	1.4779	1.5838
+	    0.80	1.0464	1.2304	1.3871	1.5389	1.6597
+	    0.85	1.0464	1.2535	1.4299	1.6007	1.7367
+	    0.90	1.0464	1.2786	1.4763	1.6678	1.8203
+	    0.95	1.0464	1.3051	1.5255	1.7388	1.9087
+	    1.00	1.0464	1.3379	1.5862	1.8266	2.0180
+	  </tableData>
+	</table>
+      </function>
+    </fcs_function>
+
+    <switch name="systems/fadec/engine/running">
+      <default value="/engines/engine/running"/>
+    </switch>
+
+    <switch name="systems/fadec/engine[1]/running">
+      <default value="/engines/engine[1]/running"/>
+    </switch>
+
+    <switch name="systems/fadec/engine[2]/running">
+      <default value="/engines/engine[2]/running"/>
+    </switch>
+
+    <switch name="systems/fadec/engine[3]/running">
+      <default value="/engines/engine[3]/running"/>
+    </switch>
+
+    <switch name="systems/fadec/engine/epr">
+      <default value="/engines/engine/epr"/>
+    </switch>
+
+    <switch name="systems/fadec/engine[1]/epr">
+      <default value="/engines/engine[1]/epr"/>
+    </switch>
+
+    <switch name="systems/fadec/engine[2]/epr">
+      <default value="/engines/engine[2]/epr"/>
+    </switch>
+
+    <switch name="systems/fadec/engine[3]/epr">
+      <default value="/engines/engine[3]/epr"/>
+    </switch>
+
+    <fcs_function name="systems/fadec/engine/epr-err">
+      <function>
+	<difference>
+	  <property>systems/fadec/engine/epr</property>
+	  <property>systems/fadec/engine/throttle-lever-target-epr</property>
+	</difference>
+      </function>
+    </fcs_function>
+
+    <fcs_function name="systems/fadec/engine[1]/epr-err">
+      <function>
+	<difference>
+	  <property>systems/fadec/engine[1]/epr</property>
+	  <property>systems/fadec/engine[1]/throttle-lever-target-epr</property>
+	</difference>
+      </function>
+    </fcs_function>
+
+    <fcs_function name="systems/fadec/engine[2]/epr-err">
+      <function>
+	<difference>
+	  <property>systems/fadec/engine[2]/epr</property>
+	  <property>systems/fadec/engine[2]/throttle-lever-target-epr</property>
+	</difference>
+      </function>
+    </fcs_function>
+
+    <fcs_function name="systems/fadec/engine[3]/epr-err">
+      <function>
+	<difference>
+	  <property>systems/fadec/engine[3]/epr</property>
+	  <property>systems/fadec/engine[3]/throttle-lever-target-epr</property>
+	</difference>
+      </function>
+    </fcs_function>
+  </channel>
+
+  <channel name="PID throttle control">
+
+    <!-- Winding logic -->
+    <switch name="systems/fadec/engine/pid/pid-trigger">
+      <default value="-1"/>
+      <test value="0">
+	systems/fadec/engine/running eq 1
+      </test>
+      <test logic="OR" value="1">
+	systems/fadec/engine/pid/output lt -0.999
+	systems/fadec/engine/pid/output gt -0.001
+      </test>
+    </switch>
+
+    <switch name="systems/fadec/engine[1]/pid/pid-trigger">
+      <default value="-1"/>
+      <test value="0">
+	systems/fadec/engine[1]/running eq 1
+      </test>
+      <test logic="OR" value="1">
+	systems/fadec/engine[1]/pid/output lt -0.999
+	systems/fadec/engine[1]/pid/output gt -0.001
+      </test>
+    </switch>
+    
+    <switch name="systems/fadec/engine[2]/pid/pid-trigger">
+      <default value="-1"/>
+      <test value="0">
+	systems/fadec/engine[2]/running eq 1
+      </test>
+      <test logic="OR" value="1">
+	systems/fadec/engine[2]/pid/output lt -0.999
+	systems/fadec/engine[2]/pid/output gt -0.001
+      </test>
+    </switch>
+    
+    <switch name="systems/fadec/engine[3]/pid/pid-trigger">
+      <default value="-1"/>
+      <test value="0">
+	systems/fadec/engine[3]/running eq 1
+      </test>
+      <test logic="OR" value="1">
+	systems/fadec/engine[3]/pid/output lt -0.999
+	systems/fadec/engine[3]/pid/output gt -0.001
+      </test>
+    </switch>
+    
+    <!-- PIDs-->
+    <pid name="systems/fadec/engine/pid/output">
+      <input>systems/fadec/engine/epr-err</input>
+      <kp>24</kp>
+      <ki>10</ki>
+      <kd>0</kd>
+      <clipto>
+	<min>-1</min>
+	<max>0</max>
+      </clipto>
+      <trigger>systems/fadec/engine/pid/pid-trigger</trigger>
+    </pid>
+
+    <pid name="systems/fadec/engine[1]/pid/output">
+      <input>systems/fadec/engine[1]/epr-err</input>
+      <kp>24</kp>
+      <ki>10</ki>
+      <kd>0</kd>
+      <clipto>
+	<min>-1</min>
+	<max>0</max>
+      </clipto>
+      <trigger>systems/fadec/engine[1]/pid/pid-trigger</trigger>
+    </pid>
+    
+    <pid name="systems/fadec/engine[2]/pid/output">
+      <input>systems/fadec/engine[2]/epr-err</input>
+      <kp>24</kp>
+      <ki>10</ki>
+      <kd>0</kd>
+      <clipto>
+	<min>-1</min>
+	<max>0</max>
+      </clipto>
+      <trigger>systems/fadec/engine[2]/pid/pid-trigger</trigger>
+    </pid>
+    
+    <pid name="systems/fadec/engine[3]/pid/output">
+      <input>systems/fadec/engine[3]/epr-err</input>
+      <kp>24</kp>
+      <ki>10</ki>
+      <kd>0</kd>
+      <clipto>
+	<min>-1</min>
+	<max>0</max>
+      </clipto>
+      <trigger>systems/fadec/engine[3]/pid/pid-trigger</trigger>
+    </pid>
+
+    <!-- outputs -->
+    <pure_gain name="fcs/throttle-pos-norm">
+      <input>systems/fadec/engine/pid/output</input>
+      <gain>-1</gain>
+      <output>systems/fadec/engine/pid/throttle-pos-norm</output>
+      <clipto>
+	<min>0</min>
+	<max>1</max>
+      </clipto>
+    </pure_gain>    
+
+    <pure_gain name="fcs/throttle-pos-norm[1]">
+      <input>systems/fadec/engine[1]/pid/output</input>
+      <gain>-1</gain>
+      <output>systems/fadec/engine[1]/pid/throttle-pos-norm</output>
+      <clipto>
+	<min>0</min>
+	<max>1</max>
+      </clipto>
+    </pure_gain>
+    
+    <pure_gain name="fcs/throttle-pos-norm[2]">
+      <input>systems/fadec/engine[2]/pid/output</input>
+      <gain>-1</gain>
+      <output>systems/fadec/engine[2]/pid/throttle-pos-norm</output>
+      <clipto>
+	<min>0</min>
+	<max>1</max>
+      </clipto>
+    </pure_gain>
+    
+    <pure_gain name="fcs/throttle-pos-norm[3]">
+      <input>systems/fadec/engine[3]/pid/output</input>
+      <gain>-1</gain>
+      <output>systems/fadec/engine[3]/pid/throttle-pos-norm</output>
+      <clipto>
+	<min>0</min>
+	<max>1</max>
+      </clipto>
+    </pure_gain>    
+  </channel>
+  
+</system>

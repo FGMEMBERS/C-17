@@ -50,6 +50,7 @@
 
   <!--Systems-->
   <system name="PAYLOAD: C-17" file="Systems/cargobay-loading.xml" />
+  <system name="FADEC: C-17" file="Systems/fadec.xml" />
   <system name="LIVERY: C-17" file="Systems/livery-updating.xml" />
 
   <!--Instruments-->
