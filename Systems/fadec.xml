@@ -10,9 +10,6 @@
 -->
 
 <system>
-  <property value="1.0">systems/fadec/pid-config/kp</property>
-  <property value="0.1">systems/fadec/pid-config/ki</property>
-  <property value="2.0">systems/fadec/pid-config/kd</property>
   <channel name="Throttle EPR control">
     <fcs_function name="systems/fadec/engine/throttle-lever-target-epr">
       <function>
@@ -216,6 +213,10 @@
     </fcs_function>
   </channel>
 
+
+  <property value="24">systems/fadec/config/pid/kp</property>
+  <property value="10">systems/fadec/config/pid/ki</property>
+  <property value="0.5">systems/fadec/config/pid/kd</property>
   <channel name="PID throttle control">
 
     <!-- Winding logic -->
@@ -225,8 +226,8 @@
 	systems/fadec/engine/running eq 1
       </test>
       <test logic="OR" value="1">
-	systems/fadec/engine/pid/output lt -0.999
-	systems/fadec/engine/pid/output gt -0.001
+	systems/fadec/engine/pid/output lt -1
+	systems/fadec/engine/pid/output gt 0
       </test>
     </switch>
 
@@ -236,8 +237,8 @@
 	systems/fadec/engine[1]/running eq 1
       </test>
       <test logic="OR" value="1">
-	systems/fadec/engine[1]/pid/output lt -0.999
-	systems/fadec/engine[1]/pid/output gt -0.001
+	systems/fadec/engine[1]/pid/output lt -1
+	systems/fadec/engine[1]/pid/output gt 0
       </test>
     </switch>
     
@@ -247,8 +248,8 @@
 	systems/fadec/engine[2]/running eq 1
       </test>
       <test logic="OR" value="1">
-	systems/fadec/engine[2]/pid/output lt -0.999
-	systems/fadec/engine[2]/pid/output gt -0.001
+	systems/fadec/engine[2]/pid/output lt -1
+	systems/fadec/engine[2]/pid/output gt 0
       </test>
     </switch>
     
@@ -258,17 +259,17 @@
 	systems/fadec/engine[3]/running eq 1
       </test>
       <test logic="OR" value="1">
-	systems/fadec/engine[3]/pid/output lt -0.999
-	systems/fadec/engine[3]/pid/output gt -0.001
+	systems/fadec/engine[3]/pid/output lt -1
+	systems/fadec/engine[3]/pid/output gt 0
       </test>
     </switch>
     
     <!-- PIDs-->
     <pid name="systems/fadec/engine/pid/output">
       <input>systems/fadec/engine/epr-err</input>
-      <kp>24</kp>
-      <ki>10</ki>
-      <kd>0</kd>
+      <kp>systems/fadec/config/pid/kp</kp>
+      <ki>systems/fadec/config/pid/ki</ki>
+      <kd>systems/fadec/config/pid/kd</kd>
       <clipto>
 	<min>-1</min>
 	<max>0</max>
@@ -278,9 +279,9 @@
 
     <pid name="systems/fadec/engine[1]/pid/output">
       <input>systems/fadec/engine[1]/epr-err</input>
-      <kp>24</kp>
-      <ki>10</ki>
-      <kd>0</kd>
+      <kp>systems/fadec/config/pid/kp</kp>
+      <ki>systems/fadec/config/pid/ki</ki>
+      <kd>systems/fadec/config/pid/kd</kd>
       <clipto>
 	<min>-1</min>
 	<max>0</max>
@@ -290,9 +291,9 @@
     
     <pid name="systems/fadec/engine[2]/pid/output">
       <input>systems/fadec/engine[2]/epr-err</input>
-      <kp>24</kp>
-      <ki>10</ki>
-      <kd>0</kd>
+      <kp>systems/fadec/config/pid/kp</kp>
+      <ki>systems/fadec/config/pid/ki</ki>
+      <kd>systems/fadec/config/pid/kd</kd>
       <clipto>
 	<min>-1</min>
 	<max>0</max>
@@ -302,9 +303,9 @@
     
     <pid name="systems/fadec/engine[3]/pid/output">
       <input>systems/fadec/engine[3]/epr-err</input>
-      <kp>24</kp>
-      <ki>10</ki>
-      <kd>0</kd>
+      <kp>systems/fadec/config/pid/kp</kp>
+      <ki>systems/fadec/config/pid/ki</ki>
+      <kd>systems/fadec/config/pid/kd</kd>
       <clipto>
 	<min>-1</min>
 	<max>0</max>
@@ -313,40 +314,40 @@
     </pid>
 
     <!-- outputs -->
-    <pure_gain name="fcs/throttle-pos-norm">
+    <pure_gain name="systems/fadec/engine/pid/throttle-pos-norm">
       <input>systems/fadec/engine/pid/output</input>
+      <output>fcs/throttle-pos-norm</output>
       <gain>-1</gain>
-      <output>systems/fadec/engine/pid/throttle-pos-norm</output>
       <clipto>
 	<min>0</min>
 	<max>1</max>
       </clipto>
     </pure_gain>    
 
-    <pure_gain name="fcs/throttle-pos-norm[1]">
+    <pure_gain name="systems/fadec/engine[1]/pid/throttle-pos-norm">
       <input>systems/fadec/engine[1]/pid/output</input>
+      <output>fcs/throttle-pos-norm[1]</output>
       <gain>-1</gain>
-      <output>systems/fadec/engine[1]/pid/throttle-pos-norm</output>
       <clipto>
 	<min>0</min>
 	<max>1</max>
       </clipto>
     </pure_gain>
     
-    <pure_gain name="fcs/throttle-pos-norm[2]">
+    <pure_gain name="systems/fadec/engine[2]/pid/throttle-pos-norm">
       <input>systems/fadec/engine[2]/pid/output</input>
+      <output>fcs/throttle-pos-norm[2]</output>
       <gain>-1</gain>
-      <output>systems/fadec/engine[2]/pid/throttle-pos-norm</output>
       <clipto>
 	<min>0</min>
 	<max>1</max>
       </clipto>
     </pure_gain>
     
-    <pure_gain name="fcs/throttle-pos-norm[3]">
+    <pure_gain name="systems/fadec/engine[3]/pid/throttle-pos-norm">
       <input>systems/fadec/engine[3]/pid/output</input>
+      <output>fcs/throttle-pos-norm[3]</output>
       <gain>-1</gain>
-      <output>systems/fadec/engine[3]/pid/throttle-pos-norm</output>
       <clipto>
 	<min>0</min>
 	<max>1</max>
