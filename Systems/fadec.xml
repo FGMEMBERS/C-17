@@ -43,7 +43,6 @@
 	</table>
       </function>
     </fcs_function>
-
     
     <fcs_function name="systems/fadec/engine[1]/throttle-lever-target-epr">
       <function>
@@ -117,7 +116,7 @@
 	  <independentVar lookup="row">/controls/engines/engine[3]/throttle</independentVar>
 	  <independentVar lookup="column">instruments/engine-stdby/epr-rating/rating</independentVar>
 	  <tableData>
-	    1.0464	1.3379	1.5862	1.8266	2.0180
+	                1.0464	1.3379	1.5862	1.8266	2.0180
 	    0.00	1.0464	1.0464	1.0464	1.0464	1.0464
 	    0.05	1.0464	1.0471	1.0477	1.0483	1.0488
 	    0.10	1.0464	1.0493	1.0517	1.0540	1.0559
@@ -316,8 +315,8 @@
     <!-- outputs -->
     <pure_gain name="systems/fadec/engine/pid/throttle-pos-norm">
       <input>systems/fadec/engine/pid/output</input>
+      <gain>systems/fadec/engine/warnings/safe</gain>
       <output>fcs/throttle-pos-norm</output>
-      <gain>-1</gain>
       <clipto>
 	<min>0</min>
 	<max>1</max>
@@ -326,8 +325,8 @@
 
     <pure_gain name="systems/fadec/engine[1]/pid/throttle-pos-norm">
       <input>systems/fadec/engine[1]/pid/output</input>
+      <gain>systems/fadec/engine[1]/warnings/safe</gain>
       <output>fcs/throttle-pos-norm[1]</output>
-      <gain>-1</gain>
       <clipto>
 	<min>0</min>
 	<max>1</max>
@@ -336,8 +335,8 @@
     
     <pure_gain name="systems/fadec/engine[2]/pid/throttle-pos-norm">
       <input>systems/fadec/engine[2]/pid/output</input>
+      <gain>systems/fadec/engine[2]/warnings/safe</gain>
       <output>fcs/throttle-pos-norm[2]</output>
-      <gain>-1</gain>
       <clipto>
 	<min>0</min>
 	<max>1</max>
@@ -346,13 +345,415 @@
     
     <pure_gain name="systems/fadec/engine[3]/pid/throttle-pos-norm">
       <input>systems/fadec/engine[3]/pid/output</input>
+      <gain>systems/fadec/engine[3]/warnings/safe</gain>
       <output>fcs/throttle-pos-norm[3]</output>
-      <gain>-1</gain>
       <clipto>
 	<min>0</min>
 	<max>1</max>
       </clipto>
     </pure_gain>    
+  </channel>
+
+  <property value="0">systems/fadec/engine/warnings/extinguished</property>
+  <property value="0">systems/fadec/engine[1]/warnings/extinguished</property>
+  <property value="0">systems/fadec/engine[2]/warnings/extinguished</property>
+  <property value="0">systems/fadec/engine[3]/warnings/extinguished</property>
+  <channel name="Engines Warnings and failures">
+    <switch name="systems/fadec/engine/warnings/eicas-warning">
+      <default value="0"/>
+      <test logic="OR" value="1">
+	/engines/engine/n1 gt 99.80
+      </test>
+    </switch>
+
+    <switch name="systems/fadec/engine[1]/warnings/eicas-warning">
+      <default value="0"/>
+      <test logic="OR" value="1">
+	/engines/engine/n1 gt 99.80
+      </test>
+    </switch>
+
+    <switch name="systems/fadec/engine[2]/warnings/eicas-warning">
+      <default value="0"/>
+      <test logic="OR" value="1">
+	/engines/engine/n1 gt 99.80
+      </test>
+    </switch>
+
+    <switch name="systems/fadec/engine[3]/warnings/eicas-warning">
+      <default value="0"/>
+      <test logic="OR" value="1">
+	/engines/engine/n1 gt 99.80
+      </test>
+    </switch>
+    
+    <switch name="systems/fadec/engine/warnings/alert">
+      <default value="0"/>
+      <test logic="OR" value="1">
+	systems/fadec/engine/warnings/eicas-warning eq 1
+	/engines/engine/epr gt 1.9250
+      </test>
+    </switch>
+    
+    <switch name="systems/fadec/engine[1]/warnings/alert">
+      <default value="0"/>
+      <test logic="OR" value="1">
+	systems/fadec/engine[1]/warnings/eicas-warning eq 1
+	/engines/engine[1]/epr gt 1.9250
+      </test>
+    </switch>
+
+    <switch name="systems/fadec/engine[2]/warnings/alert">
+      <default value="0"/>
+      <test logic="OR" value="1">
+	systems/fadec/engine[2]/warnings/eicas-warning eq 1
+	/engines/engine[2]/epr gt 1.9250
+      </test>
+    </switch>
+
+    <switch name="systems/fadec/engine[3]/warnings/alert">
+      <default value="0"/>
+      <test logic="OR" value="1">
+	systems/fadec/engine[3]/warnings/eicas-warning eq 1
+	/engines/engine[3]/epr gt 1.9250
+      </test>
+    </switch>
+    
+    <kinematic name="Engine 1 warning timer">
+      <input>systems/fadec/engine/warnings/alert</input>
+      <traverse>
+	<setting>
+	  <position>0</position>
+	  <time>600</time>
+	</setting>
+	<setting>
+	  <position>1</position>
+	  <time>1200</time>
+	</setting>
+      </traverse>
+      <output>systems/fadec/engine/warnings/alert-timer</output>
+    </kinematic>
+
+    <kinematic name="Engine 2 warning timer">
+      <input>systems/fadec/engine[1]/warnings/alert</input>
+      <traverse>
+	<setting>
+	  <position>0</position>
+	  <time>600</time>
+	</setting>
+	<setting>
+	  <position>1</position>
+	  <time>1200</time>
+	</setting>
+      </traverse>
+      <output>systems/fadec/engine[1]/warnings/alert-timer</output>
+    </kinematic>
+    
+    <kinematic name="Engine 3 warning timer">
+      <input>systems/fadec/engine[2]/warnings/alert</input>
+      <traverse>
+	<setting>
+	  <position>0</position>
+	  <time>600</time>
+	</setting>
+	<setting>
+	  <position>1</position>
+	  <time>1200</time>
+	</setting>
+      </traverse>
+      <output>systems/fadec/engine[2]/warnings/alert-timer</output>
+    </kinematic>
+    
+    <kinematic name="Engine 4 warning timer">
+      <input>systems/fadec/engine[3]/warnings/alert</input>
+      <traverse>
+	<setting>
+	  <position>0</position>
+	  <time>600</time>
+	</setting>
+	<setting>
+	  <position>1</position>
+	  <time>1200</time>
+	</setting>
+      </traverse>
+      <output>systems/fadec/engine[3]/warnings/alert-timer</output>
+    </kinematic>
+    
+    <switch name="systems/fadec/engine/warnings/failure-fire">
+      <default value="0"/>
+      <test value="0">
+	systems/fadec/engine/warnings/extinguished eq 1
+      </test>
+      <test value="1">
+	systems/fadec/engine/warnings/failure-fire eq 1
+      </test>
+      <test value="1">
+	systems/fadec/engine/warnings/failure-fire-all eq 1
+      </test>
+      <test value="1">
+	systems/fadec/engine/warnings/alert-timer ge 0.9980
+      </test>
+      <test value="0">
+	systems/fadec/engine/warnings/alert-timer lt 0.9980
+      </test>
+    </switch>
+
+    <switch name="systems/fadec/engine[1]/warnings/failure-fire">
+      <default value="0"/>
+      <test value="0">
+	systems/fadec/engine[1]/warnings/extinguished eq 1
+      </test>
+      <test value="1">
+	systems/fadec/engine[1]/warnings/failure-fire eq 1
+      </test>
+      <test value="1">
+	systems/fadec/engine/warnings/failure-fire-all eq 1
+      </test>
+      <test value="1">
+	systems/fadec/engine[1]/warnings/alert-timer ge 0.9980
+      </test>
+      <test value="0">
+	systems/fadec/engine[1]/warnings/alert-timer lt 0.9980
+      </test>
+    </switch>
+
+    <switch name="systems/fadec/engine[2]/warnings/failure-fire">
+      <default value="0"/>
+      <test value="0">
+	systems/fadec/engine[2]/warnings/extinguished eq 1
+      </test>
+      <test value="1">
+	systems/fadec/engine[2]/warnings/failure-fire eq 1
+      </test>
+      <test value="1">
+	systems/fadec/engine/warnings/failure-fire-all eq 1
+      </test>
+      <test value="1">
+	systems/fadec/engine[2]/warnings/alert-timer ge 0.9980
+      </test>
+      <test value="0">
+	systems/fadec/engine[2]/warnings/alert-timer lt 0.9980
+      </test>
+    </switch>
+
+    <switch name="systems/fadec/engine[3]/warnings/failure-fire">
+      <default value="0"/>
+      <test value="0">
+	systems/fadec/engine[3]/warnings/extinguished eq 1
+      </test>
+      <test value="1">
+	systems/fadec/engine[3]/warnings/failure-fire eq 1
+      </test>
+      <test value="1">
+	systems/fadec/engine/warnings/failure-fire-all eq 1
+      </test>
+      <test value="1">
+	systems/fadec/engine[3]/warnings/alert-timer ge 0.9980
+      </test>
+      <test value="0">
+	systems/fadec/engine[3]/warnings/alert-timer lt 0.9980
+      </test>
+    </switch>
+    
+    <switch name="systems/fadec/engine/warnings/failure-warning">
+      <default value="0"/>
+      <test value="0">
+	systems/fadec/engine/warnings/extinguished eq 1
+      </test>
+      <test value="0">
+	systems/fadec/engine/warnings/alert-timer lt 0.250
+      </test>
+      <test logic="AND" value="1">
+	systems/fadec/engine/warnings/failure-fire ne 1
+	systems/fadec/engine/warnings/alert-timer ge 0.250
+      </test>
+    </switch>
+    
+    <switch name="systems/fadec/engine[1]/warnings/failure-warning">
+      <default value="0"/>
+      <test value="0">
+	systems/fadec/engine/warnings/extinguished eq 1
+      </test>
+      <test value="0">
+	systems/fadec/engine[1]/warnings/alert-timer lt 0.250
+      </test>
+      <test logic="AND" value="1">
+	systems/fadec/engine[1]/warnings/failure-fire ne 1
+	systems/fadec/engine[1]/warnings/alert-timer ge 0.250
+      </test>
+    </switch>
+    
+    <switch name="systems/fadec/engine[2]/warnings/failure-warning">
+      <default value="0"/>
+      <test value="0">
+	systems/fadec/engine/warnings/extinguished eq 1
+      </test>
+      <test value="0">
+	systems/fadec/engine[2]/warnings/alert-timer lt 0.250
+      </test>
+      <test logic="AND" value="1">
+	systems/fadec/engine[2]/warnings/failure-fire ne 1
+	systems/fadec/engine[2]/warnings/alert-timer ge 0.250
+      </test>
+    </switch>
+    
+    <switch name="systems/fadec/engine[3]/warnings/failure-warning">
+      <default value="0"/>
+      <test value="0">
+	systems/fadec/engine/warnings/extinguished eq 1
+      </test>
+      <test value="0">
+	systems/fadec/engine[3]/warnings/alert-timer lt 0.250
+      </test>
+      <test logic="AND" value="1">
+	systems/fadec/engine[3]/warnings/failure-fire ne 1
+	systems/fadec/engine[3]/warnings/alert-timer ge 0.250
+      </test>
+    </switch>
+    
+    <kinematic name="Engine 1 fire all engines fire timer">
+      <input>systems/fadec/engine/warnings/failure-fire</input>
+      <traverse>
+	<setting>
+	  <position>0</position>
+	  <time>180</time>
+	</setting>
+	<setting>
+	  <position>1</position>
+	  <time>180</time>
+	</setting>
+      </traverse>
+      <output>systems/fadec/engine/warnings/all-fire-timer</output>
+    </kinematic>
+
+    <kinematic name="Engine 2 fire all engines fire timer">
+      <input>systems/fadec/engine[1]/warnings/failure-fire</input>
+      <traverse>
+	<setting>
+	  <position>0</position>
+	  <time>180</time>
+	</setting>
+	<setting>
+	  <position>1</position>
+	  <time>180</time>
+	</setting>
+      </traverse>
+      <output>systems/fadec/engine[1]/warnings/all-fire-timer</output>
+    </kinematic>
+    
+    <kinematic name="Engine 3 fire all engines fire timer">
+      <input>systems/fadec/engine[2]/warnings/failure-fire</input>
+      <traverse>
+	<setting>
+	  <position>0</position>
+	  <time>180</time>
+	</setting>
+	<setting>
+	  <position>1</position>
+	  <time>180</time>
+	</setting>
+      </traverse>
+      <output>systems/fadec/engine[2]/warnings/all-fire-timer</output>
+    </kinematic>
+    
+    <kinematic name="Engine 4 fire all engines fire timer">
+      <input>systems/fadec/engine[3]/warnings/failure-fire</input>
+      <traverse>
+	<setting>
+	  <position>0</position>
+	  <time>180</time>
+	</setting>
+	<setting>
+	  <position>1</position>
+	  <time>180</time>
+	</setting>
+      </traverse>
+      <output>systems/fadec/engine[3]/warnings/all-fire-timer</output>
+    </kinematic>
+    
+    <switch name="systems/fadec/engine/warnings/failure-fire-all">
+      <default value="0"/>
+      <test value="1">
+	systems/fadec/engine/warnings/failure-fire-all eq 1
+      </test>
+      <test logic="OR" value="1">
+	systems/fadec/engine/warnings/all-fire-timer eq 1
+	systems/fadec/engine[1]/warnings/all-fire-timer eq 1
+	systems/fadec/engine[2]/warnings/all-fire-timer eq 1
+	systems/fadec/engine[3]/warnings/all-fire-timer eq 1
+      </test>
+      <test logic="OR" value="0">
+	systems/fadec/engine/warnings/all-fire-timer lt 1
+	systems/fadec/engine[1]/warnings/all-fire-timer lt 1
+	systems/fadec/engine[2]/warnings/all-fire-timer lt 1
+	systems/fadec/engine[3]/warnings/all-fire-timer lt 1
+      </test>
+    </switch>
+
+    <!-- Engine failure -->
+    <switch name="/engines/engine/running">
+      <default value="/engines/engine/running"/>
+      <test logic="OR" value="0">
+	systems/fadec/engine/warnings/failure-fire eq 1	
+	systems/fadec/engine/warnings/extinguished eq 1
+      </test>
+    </switch>
+
+    <switch name="systems/fadec/engine/warnings/safe">
+      <default value="-1"/>
+      <test  logic="OR" value="0">
+	systems/fadec/engine/warnings/failure-fire eq 1	
+	systems/fadec/engine/warnings/extinguished eq 1
+      </test>
+    </switch>
+
+    <switch name="/engines/engine[1]/running">
+      <default value="/engines/engine[1]/running"/>
+      <test  logic="OR" value="0">
+	systems/fadec/engine[1]/warnings/failure-fire eq 1	
+	systems/fadec/engine[1]/warnings/extinguished eq 1
+      </test>
+    </switch>
+
+    <switch name="systems/fadec/engine[1]/warnings/safe">
+      <default value="-1"/>
+      <test  logic="OR" value="0">
+	systems/fadec/engine[1]/warnings/failure-fire eq 1	
+	systems/fadec/engine[1]/warnings/extinguished eq 1
+      </test>
+    </switch>
+
+    <switch name="/engines/engine[2]/running">
+      <default value="/engines/engine[2]/running"/>
+      <test  logic="OR" value="0">
+	systems/fadec/engine[2]/warnings/failure-fire eq 1	
+	systems/fadec/engine[2]/warnings/extinguished eq 1
+      </test>
+    </switch>
+
+    <switch name="systems/fadec/engine[2]/warnings/safe">
+      <default value="-1"/>
+      <test  logic="OR" value="0">
+	systems/fadec/engine[2]/warnings/failure-fire eq 1	
+	systems/fadec/engine[2]/warnings/extinguished eq 1
+      </test>
+    </switch>
+
+    <switch name="/engines/engine[3]/running">
+      <default value="/engines/engine[3]/running"/>
+      <test  logic="OR" value="0">
+	systems/fadec/engine[3]/warnings/failure-fire eq 1	
+	systems/fadec/engine[3]/warnings/extinguished eq 1
+      </test>
+    </switch>
+
+    <switch name="systems/fadec/engine[3]/warnings/safe">
+      <default value="-1"/>
+      <test  logic="OR" value="0">
+	systems/fadec/engine[3]/warnings/failure-fire eq 1	
+	systems/fadec/engine[3]/warnings/extinguished eq 1
+      </test>
+    </switch>
   </channel>
   
 </system>
