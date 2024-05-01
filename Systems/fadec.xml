@@ -755,5 +755,143 @@
       </test>
     </switch>
   </channel>
-  
+
+  <channel name="EPR rating protection">
+    <!-- MCT and DRT with overspeed rating protection -->
+    <fcs_function name="systems/fadec/engine/RTGCap/n1-1-err">
+      <function>
+	<difference>
+	  <property>/engines/engine/n1</property>
+	  <value>99.65</value>
+	</difference>
+      </function>
+    </fcs_function>
+    
+    <fcs_function name="systems/fadec/engine/RTGCap/n1-2-err">
+      <function>
+	<difference>
+	  <property>/engines/engine[1]/n1</property>
+	  <value>99.65</value>
+	</difference>
+      </function>
+    </fcs_function>
+    
+    <fcs_function name="systems/fadec/engine/RTGCap/n1-3-err">
+      <function>
+	<difference>
+	  <property>/engines/engine[2]/n1</property>
+	  <value>99.65</value>
+	</difference>
+      </function>
+    </fcs_function>
+    
+    <fcs_function name="systems/fadec/engine/RTGCap/n1-4-err">
+      <function>
+	<difference>
+	  <property>/engines/engine[3]/n1</property>
+	  <value>99.65</value>
+	</difference>
+      </function>
+    </fcs_function>
+
+    <fcs_function name="systems/fadec/engine/RTGCap/n1-top-err">
+      <function>
+	<max>
+	  <property>systems/fadec/engine/RTGCap/n1-1-err</property>
+	  <property>systems/fadec/engine/RTGCap/n1-2-err</property>
+	  <property>systems/fadec/engine/RTGCap/n1-3-err</property>
+	  <property>systems/fadec/engine/RTGCap/n1-4-err</property>
+	</max>
+      </function>
+    </fcs_function>
+
+    <switch name="systems/fadec/engine/RTGCap/n1-excess">
+      <!-- Is any N1 greater than 99.65? -->
+      <default value="0"/>
+      <test value="1">
+	systems/fadec/engine/RTGCap/n1-top-err gt 0
+      </test>
+    </switch>
+
+    <switch name="systems/fadec/engine/RTGCap/n1-safe">
+      <!-- Are all N1 lower than 95.0? -->
+      <default value="0"/>
+      <test logic="AND" value="1">
+	/engines/engine/n1 lt 95.0
+	/engines/engine[1]/n1 lt 95.0
+	/engines/engine[2]/n1 lt 95.0
+	/engines/engine[3]/n1 lt 95.0
+      </test>
+    </switch>
+
+    <switch name="systems/fadec/engine/RTGCap/mct-rating-tgt">
+      <default value="instruments/engine-stdby/epr-rating/mct-rating"/>
+      <test logic="AND" value="1.04">
+	instruments/engine-stdby/display/epr-mode eq 2
+	systems/fadec/engine/RTGCap/n1-excess eq 1
+      </test>
+      <test logic="AND"
+	    value="instruments/engine-stdby/epr-rating/mct-rating">
+	instruments/engine-stdby/display/epr-mode eq 2
+	systems/fadec/engine/RTGCap/n1-safe eq 1
+      </test>
+      <test logic="AND"
+	    value="systems/fadec/engine/RTGCap/mct-rating-capped">
+	instruments/engine-stdby/display/epr-mode eq 2
+	systems/fadec/engine/RTGCap/n1-safe eq 0
+	systems/fadec/engine/RTGCap/n1-excess eq 0
+      </test>
+    </switch>
+
+    <switch name="systems/fadec/engine/RTGCap/drt-rating-tgt">
+      <default value="instruments/engine-stdby/epr-rating/drt-rating"/>
+      <test logic="AND" value="1.04">
+	instruments/engine-stdby/display/epr-mode eq 3
+	systems/fadec/engine/RTGCap/n1-excess eq 1
+      </test>
+      <test logic="AND"
+	    value="instruments/engine-stdby/epr-rating/drt-rating">
+	instruments/engine-stdby/display/epr-mode eq 3
+	systems/fadec/engine/RTGCap/n1-safe eq 1
+      </test>
+      <test logic="AND"
+	    value="systems/fadec/engine/RTGCap/drt-rating-capped">
+	instruments/engine-stdby/display/epr-mode eq 3
+	systems/fadec/engine/RTGCap/n1-safe eq 0
+	systems/fadec/engine/RTGCap/n1-excess eq 0
+      </test>
+    </switch>
+
+    <kinematic name="MCT rating cap protection">
+      <input>systems/fadec/engine/RTGCap/mct-rating-tgt</input>
+      <noscale/>
+      <traverse>
+	<setting>
+	  <position>1.04</position>
+	  <time>12</time>
+	</setting>
+	<setting>
+	  <position>2.04</position>
+	  <time>12</time>
+	</setting>
+      </traverse>
+      <output>systems/fadec/engine/RTGCap/mct-rating-capped</output>
+    </kinematic>
+
+    <kinematic name="DRT rating cap protection">
+      <input>systems/fadec/engine/RTGCap/drt-rating-tgt</input>
+      <noscale/>
+      <traverse>
+	<setting>
+	  <position>1.04</position>
+	  <time>12</time>
+	</setting>
+	<setting>
+	  <position>2.04</position>
+	  <time>12</time>
+	</setting>
+      </traverse>
+      <output>systems/fadec/engine/RTGCap/drt-rating-capped</output>
+    </kinematic>
+  </channel>
 </system>
