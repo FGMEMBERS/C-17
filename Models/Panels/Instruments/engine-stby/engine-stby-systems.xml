@@ -59,10 +59,10 @@ shall keep this attribution information.
       <test value="instruments/engine-stdby/epr-rating/int-rating">
 	instruments/engine-stdby/display/epr-mode eq 1
       </test>
-      <test value="systems/fadec/engine/RTGCap/mct-rating-capped">
+      <test value="systems/fadec/RTGCap/mct-rating-capped">
 	instruments/engine-stdby/display/epr-mode eq 2
       </test>
-      <test value="systems/fadec/engine/RTGCap/drt-rating-capped">
+      <test value="systems/fadec/RTGCap/drt-rating-capped">
 	instruments/engine-stdby/display/epr-mode eq 3
       </test>
       <test value="instruments/engine-stdby/epr-rating/man-rating">

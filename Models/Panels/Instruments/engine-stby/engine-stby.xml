@@ -75,6 +75,11 @@
       <button>0</button>
       <repeatable>false</repeatable>
       <binding>
+	<command>property-assign</command>
+	<property>fdm/jsbsim/systems/fadec/RTGRed/primed</property>
+	<value>0</value>
+      </binding>
+      <binding>
 	<condition>
 	  <equals>
 	    <property>fdm/jsbsim/instruments/engine-stdby/display/mode</property>
@@ -94,6 +99,11 @@
     <action>
       <button>0</button>
       <repeatable>false</repeatable>
+      <binding>
+	<command>property-assign</command>
+	<property>fdm/jsbsim/systems/fadec/RTGRed/primed</property>
+	<value>0</value>
+      </binding>
       <binding>
 	<condition>
 	  <equals>

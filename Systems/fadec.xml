@@ -758,7 +758,7 @@
 
   <channel name="EPR rating protection">
     <!-- MCT and DRT with overspeed rating protection -->
-    <fcs_function name="systems/fadec/engine/RTGCap/n1-1-err">
+    <fcs_function name="systems/fadec/RTGCap/n1-1-err">
       <function>
 	<difference>
 	  <property>/engines/engine/n1</property>
@@ -767,7 +767,7 @@
       </function>
     </fcs_function>
     
-    <fcs_function name="systems/fadec/engine/RTGCap/n1-2-err">
+    <fcs_function name="systems/fadec/RTGCap/n1-2-err">
       <function>
 	<difference>
 	  <property>/engines/engine[1]/n1</property>
@@ -776,7 +776,7 @@
       </function>
     </fcs_function>
     
-    <fcs_function name="systems/fadec/engine/RTGCap/n1-3-err">
+    <fcs_function name="systems/fadec/RTGCap/n1-3-err">
       <function>
 	<difference>
 	  <property>/engines/engine[2]/n1</property>
@@ -785,7 +785,7 @@
       </function>
     </fcs_function>
     
-    <fcs_function name="systems/fadec/engine/RTGCap/n1-4-err">
+    <fcs_function name="systems/fadec/RTGCap/n1-4-err">
       <function>
 	<difference>
 	  <property>/engines/engine[3]/n1</property>
@@ -794,26 +794,26 @@
       </function>
     </fcs_function>
 
-    <fcs_function name="systems/fadec/engine/RTGCap/n1-top-err">
+    <fcs_function name="systems/fadec/RTGCap/n1-top-err">
       <function>
 	<max>
-	  <property>systems/fadec/engine/RTGCap/n1-1-err</property>
-	  <property>systems/fadec/engine/RTGCap/n1-2-err</property>
-	  <property>systems/fadec/engine/RTGCap/n1-3-err</property>
-	  <property>systems/fadec/engine/RTGCap/n1-4-err</property>
+	  <property>systems/fadec/RTGCap/n1-1-err</property>
+	  <property>systems/fadec/RTGCap/n1-2-err</property>
+	  <property>systems/fadec/RTGCap/n1-3-err</property>
+	  <property>systems/fadec/RTGCap/n1-4-err</property>
 	</max>
       </function>
     </fcs_function>
 
-    <switch name="systems/fadec/engine/RTGCap/n1-excess">
+    <switch name="systems/fadec/RTGCap/n1-excess">
       <!-- Is any N1 greater than 99.65? -->
       <default value="0"/>
       <test value="1">
-	systems/fadec/engine/RTGCap/n1-top-err gt 0
+	systems/fadec/RTGCap/n1-top-err gt 0
       </test>
     </switch>
 
-    <switch name="systems/fadec/engine/RTGCap/n1-safe">
+    <switch name="systems/fadec/RTGCap/n1-safe">
       <!-- Are all N1 lower than 95.0? -->
       <default value="0"/>
       <test logic="AND" value="1">
@@ -824,46 +824,46 @@
       </test>
     </switch>
 
-    <switch name="systems/fadec/engine/RTGCap/mct-rating-tgt">
+    <switch name="systems/fadec/RTGCap/mct-rating-tgt">
       <default value="instruments/engine-stdby/epr-rating/mct-rating"/>
       <test logic="AND" value="1.04">
 	instruments/engine-stdby/display/epr-mode eq 2
-	systems/fadec/engine/RTGCap/n1-excess eq 1
+	systems/fadec/RTGCap/n1-excess eq 1
       </test>
       <test logic="AND"
 	    value="instruments/engine-stdby/epr-rating/mct-rating">
 	instruments/engine-stdby/display/epr-mode eq 2
-	systems/fadec/engine/RTGCap/n1-safe eq 1
+	systems/fadec/RTGCap/n1-safe eq 1
       </test>
       <test logic="AND"
-	    value="systems/fadec/engine/RTGCap/mct-rating-capped">
+	    value="systems/fadec/RTGCap/mct-rating-capped">
 	instruments/engine-stdby/display/epr-mode eq 2
-	systems/fadec/engine/RTGCap/n1-safe eq 0
-	systems/fadec/engine/RTGCap/n1-excess eq 0
+	systems/fadec/RTGCap/n1-safe eq 0
+	systems/fadec/RTGCap/n1-excess eq 0
       </test>
     </switch>
 
-    <switch name="systems/fadec/engine/RTGCap/drt-rating-tgt">
+    <switch name="systems/fadec/RTGCap/drt-rating-tgt">
       <default value="instruments/engine-stdby/epr-rating/drt-rating"/>
       <test logic="AND" value="1.04">
 	instruments/engine-stdby/display/epr-mode eq 3
-	systems/fadec/engine/RTGCap/n1-excess eq 1
+	systems/fadec/RTGCap/n1-excess eq 1
       </test>
       <test logic="AND"
 	    value="instruments/engine-stdby/epr-rating/drt-rating">
 	instruments/engine-stdby/display/epr-mode eq 3
-	systems/fadec/engine/RTGCap/n1-safe eq 1
+	systems/fadec/RTGCap/n1-safe eq 1
       </test>
       <test logic="AND"
-	    value="systems/fadec/engine/RTGCap/drt-rating-capped">
+	    value="systems/fadec/RTGCap/drt-rating-capped">
 	instruments/engine-stdby/display/epr-mode eq 3
-	systems/fadec/engine/RTGCap/n1-safe eq 0
-	systems/fadec/engine/RTGCap/n1-excess eq 0
+	systems/fadec/RTGCap/n1-safe eq 0
+	systems/fadec/RTGCap/n1-excess eq 0
       </test>
     </switch>
 
     <kinematic name="MCT rating cap protection">
-      <input>systems/fadec/engine/RTGCap/mct-rating-tgt</input>
+      <input>systems/fadec/RTGCap/mct-rating-tgt</input>
       <noscale/>
       <traverse>
 	<setting>
@@ -875,11 +875,11 @@
 	  <time>12</time>
 	</setting>
       </traverse>
-      <output>systems/fadec/engine/RTGCap/mct-rating-capped</output>
+      <output>systems/fadec/RTGCap/mct-rating-capped</output>
     </kinematic>
 
     <kinematic name="DRT rating cap protection">
-      <input>systems/fadec/engine/RTGCap/drt-rating-tgt</input>
+      <input>systems/fadec/RTGCap/drt-rating-tgt</input>
       <noscale/>
       <traverse>
 	<setting>
@@ -891,7 +891,54 @@
 	  <time>12</time>
 	</setting>
       </traverse>
-      <output>systems/fadec/engine/RTGCap/drt-rating-capped</output>
+      <output>systems/fadec/RTGCap/drt-rating-capped</output>
     </kinematic>
+  </channel>
+
+  <channel name="EPR mode Reduction in modes MAX and INT">
+    <!-- 
+	 In modes MAX and INT, if throttle is brought up to maximum,
+	 it primes the reduction. Throttle reduction to 95% shifts down to
+	 protected MCT mode. 
+    -->
+
+    <fcs_function name="systems/fadec/RTGRed/max-throttle">
+      <function>
+	<max>
+	  <property>/controls/engines/engine/throttle</property>
+	  <property>/controls/engines/engine[1]/throttle</property>
+	  <property>/controls/engines/engine[2]/throttle</property>
+	  <property>/controls/engines/engine[3]/throttle</property>
+	</max>
+      </function>
+    </fcs_function>
+
+    <switch name="systems/fadec/RTGRed/reduceable-mode">
+      <default value="0"/>
+      <test logic="OR" value="1">
+	instruments/engine-stdby/display/epr-mode eq 0
+	instruments/engine-stdby/display/epr-mode eq 1
+      </test>
+    </switch>
+    
+    <switch name="systems/fadec/RTGRed/primed">
+      <default value="0"/>
+      <test value="1">
+	systems/fadec/RTGRed/primed eq 1
+      </test>
+      <test value="1">
+	systems/fadec/RTGRed/reduceable-mode eq 1
+	systems/fadec/RTGRed/max-throttle eq 1
+      </test>
+    </switch>
+
+    <switch name="instruments/engine-stdby/display/epr-mode">
+      <default value="instruments/engine-stdby/display/epr-mode"/>
+      <test logic="AND" value="2">
+	systems/fadec/RTGRed/max-throttle le 0.95
+	systems/fadec/RTGRed/reduceable-mode eq 1
+	systems/fadec/RTGRed/primed eq 1
+      </test>
+    </switch>
   </channel>
 </system>
