@@ -3,10 +3,16 @@
 
 <!--
     :copyright: 2024, IAHM-COL
+    :copyright: 2024, David Waggoner (Skyboat)
     License: GPLv3
 
+    Acknowlegments:
+
+    We thank Joshua Davidson (Octal540) for his critical discussion and his
+    assistant drafting and optimizing pids.
+
     Redistribution, or reuse, with or without modifications
-    shall keep this attribution information. 
+    shall keep this attribution information.
 -->
 
 <system>
